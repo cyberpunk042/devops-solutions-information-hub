@@ -284,16 +284,27 @@ def _fetch_via_firecrawl(url: str) -> Tuple[str, str]:
 def _fetch_web_page(url: str) -> Tuple[str, str]:
     """Fetch a web page and extract main text content. Returns (content, title).
 
-    Two-tier strategy:
-      1. Standard urllib fetch + HTML strip (free, fast, works for most URLs).
-      2. On HTTP 403 (anti-bot block) or 429 (rate limit), fall through to
+    Three-tier strategy:
+      1. Standard urllib fetch with `Accept: text/markdown, text/html` content-
+         negotiation header. Sites with Cloudflare Markdown for Agents enabled
+         (or equivalent server-side conversion) return Markdown directly — 80%
+         token reduction at source per the synthesis at
+         wiki/sources/tools-integration/src-cloudflare-markdown-for-agents-*.md
+         For sites without the feature, the Accept header is just a preference
+         (no risk); response stays HTML and falls through to the strip pipeline.
+      2. HTML response → strip to clean text (existing default path).
+      3. On HTTP 403 (anti-bot block) or 429 (rate limit), fall through to
          Firecrawl cloud API if FIRECRAWL_API_KEY is set (handles JS + anti-bot
          via Fire-Engine; returns clean markdown). Otherwise re-raise original.
     """
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        req = urllib.request.Request(url, headers={
+            "User-Agent": "Mozilla/5.0",
+            "Accept": "text/markdown, text/html;q=0.9, */*;q=0.5",
+        })
         with urllib.request.urlopen(req, timeout=15) as resp:
-            html = resp.read().decode("utf-8", errors="ignore")
+            content_type = (resp.headers.get("Content-Type") or "").lower()
+            body = resp.read().decode("utf-8", errors="ignore")
     except urllib.error.HTTPError as e:
         if e.code in (403, 429) and os.environ.get("FIRECRAWL_API_KEY"):
             print(
@@ -302,6 +313,25 @@ def _fetch_web_page(url: str) -> Tuple[str, str]:
             )
             return _fetch_via_firecrawl(url)
         raise
+
+    # Tier 1 hit: source returned Markdown (Cloudflare Markdown for Agents or
+    # equivalent server-side conversion). Use directly. Title from YAML
+    # frontmatter if present (per Cloudflare's deterministic output structure:
+    # YAML frontmatter + Markdown body + JSON-LD code block).
+    if "text/markdown" in content_type:
+        # Try to extract title from YAML frontmatter
+        title = url
+        fm_match = re.match(r"^---\s*\n(.*?)\n---\s*\n", body, re.DOTALL)
+        if fm_match:
+            title_in_fm = re.search(r"^title:\s*(.+)$", fm_match.group(1), re.MULTILINE)
+            if title_in_fm:
+                title = title_in_fm.group(1).strip().strip('"\'')
+        # Token-count savings header (set by Cloudflare; nice-to-have for logs)
+        # Note: not using yet, but available via resp.headers.get("x-markdown-tokens")
+        return body, title
+
+    # Tier 2: HTML response — existing strip pipeline
+    html = body
 
     # Extract title
     title_match = re.search(r"<title>(.*?)</title>", html, re.DOTALL)

@@ -413,6 +413,7 @@ Track BOTH dimensions independently. Readiness = is it defined? Progress = is it
 [[when-to-use-milestone-vs-epic-vs-module-vs-task|Decision — When to Use Milestone vs Epic vs Module vs Task]]
 [[defense-layer-progression-is-expensive|Defense Layer Progression Is Expensive — Prevention Is Cheap, Detection and Correction Are Milestones]]
 [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+[[end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers|End-to-End Compression Across the AI Stack Composes Multiplicatively — 6+ Independent Mechanisms at 6 Distinct Layers, Each Substitutable Per Anti-Vendor-Lock-In]]
 [[enforcement-hook-patterns|Enforcement Hook Patterns]]
 [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
 [[frontmatter-field-reference|Frontmatter Field Reference — Complete Parameter Documentation]]

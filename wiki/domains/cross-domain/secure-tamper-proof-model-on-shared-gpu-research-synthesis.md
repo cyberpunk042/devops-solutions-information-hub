@@ -132,6 +132,22 @@ Operator-authored concept 2026-04-30: a model that runs on a shared GPU but cann
 >
 > Stacked across large-context workloads, the **end-to-end space envelope reaches the operator's 80–90% target** — and on large-context the savings compound (cache and prompt dominate footprint; both compress hard; the encryption layer rides on the compressed form). Net I/O after compression < compute overhead of decypher → **performance-positive on large context**, not just neutral. The operator's "blazing fast" + "even increase performance" framing is the predicted outcome of this composition, not aspirational.
 
+> [!success] **2026-05-06 cross-reference — Cloudflare Mesh adds the networking-layer trust dimension (private networks for agent-to-private-resource access without VPN setup).**
+>
+> Per [Cloudflare Mesh Synthesis](../../sources/tools-integration/src-cloudflare-mesh-private-networking-for-users-nodes-agents-workers-2026-04-14.md): Mesh provides secure private network access for users + nodes + agents + Workers; integrates with Workers VPC; 50 nodes + 50 users free; routes through 330+ Cloudflare cities (NAT traversal solved); future: identity-aware routing with Principal/Sponsor/Agent/Scope model. **For this trust-layer concept's L0–L4 opt-ins — adds networking dimension**: connection-level trust composes with weight-level + KV-cache-level + attestation-level trust. Each L-tier extends:
+>
+> - L0 + Mesh-private connection
+> - L1 + Mesh-only access (no public exposure)
+> - L2 + Mesh-only model inference endpoint
+> - L3 + Mesh + identity-aware routing per agent (when Mesh ships the future identity-aware-routing capability)
+> - L4 + Mesh-private network for FHE workloads (no public traversal)
+>
+> **Direct overlap with operator's [root-ghostproxy](../../config/sister-projects.yaml) mission** (operator 2026-05-04: *"its aiming to secure an OS and configure claude code and opencode at the root with all the safety needed"*) — Mesh provides the networking-layer of "all the safety needed." Operator-decision: build root-ghostproxy ON Mesh (lower engineering cost, integrates with existing harness ecosystem) vs independently (preserves anti-vendor-lock-in posture).
+
+> [!success] **2026-05-06 cross-reference — the 80-90% combined-envelope claim is now empirically anchored at 6 distinct compression layers, each independently substitutable.**
+>
+> Per the new sibling [End-to-End Compression Layer-4 Lesson](../../lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers.md) and [Cloudflare Markdown for Agents Synthesis](../../sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02.md): the operator's 80–90% combined-envelope claim is now supported by **6+ independent compression mechanisms** at 6 distinct layers (content source · prompt · tool I/O · inter-agent · weights · KV-cache + internal representation), with RLM as a cross-cutting paradigm-level expander. The composition is multiplicatively bounded (theoretical ceiling ~160,000× for full stack) but realistically delivers the 80–90% combined-envelope target the operator named. **Each compression layer is independently operator-substitutable** per the [Anti-Vendor-Lock-In Lesson Evidence 13](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evitence.md) — preserving the mission's anti-vendor-lock-in posture across compression dimensions.
+
 > [!success] **Caveman — operator-confirmed reference: [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman).**
 >
 > Four compression modes (Lite / Full / Ultra / Wenyan), ~75% token reduction at the prompt layer. Caveman is the operator's reference model for compression — applied at the prompt/context layer first, then extended (in this concept) to the weight + KV-cache layers with cypher/decypher composed in end-to-end. Caveman is the empirical anchor for the 80-90% claim's prompt-layer slice.

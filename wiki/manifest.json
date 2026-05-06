@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-06T21:34:52.356619+00:00",
+  "generated": "2026-05-06T22:13:13.680504+00:00",
   "stats": {
-    "pages": 597,
+    "pages": 603,
     "domains": 12,
-    "sources": 98,
+    "sources": 103,
     "comparisons": 9,
-    "relationships": 3682,
-    "tags_unique": 2183,
+    "relationships": 3739,
+    "tags_unique": 2256,
     "layers": {
       "3": 4,
       "5": 37,
       "6": 26,
       "2": 74,
-      "4": 66,
+      "4": 67,
       "0": 1,
-      "1": 69,
+      "1": 74,
       "spine": 78
     },
     "maturity": {
-      "seed": 83,
+      "seed": 89,
       "growing": 326,
       "mature": 23
     }
@@ -17934,6 +17934,162 @@
       ]
     },
     {
+      "path": "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers.md",
+      "slug": "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
+      "title": "End-to-End Compression Across the AI Stack Composes Multiplicatively \u2014 6+ Independent Mechanisms at 6 Distinct Layers, Each Substitutable Per Anti-Vendor-Lock-In",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-06",
+      "updated": "2026-05-06",
+      "last_reviewed": "2026-05-06",
+      "tags": [
+        "lesson",
+        "layer-4",
+        "compression",
+        "multi-layer",
+        "convergence",
+        "anti-vendor-lock-in",
+        "prompt-compression",
+        "content-source-compression",
+        "tool-compression",
+        "inter-agent-compression",
+        "weight-quantization",
+        "kv-cache-compression",
+        "sparse-autoencoders",
+        "recursive-language-models",
+        "mission-2026-05-06",
+        "stack-wide-composition"
+      ],
+      "sources": [
+        {
+          "id": "caveman-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee.md",
+          "description": "Layer 1 \u2014 Caveman by Julius Brussee \u2014 operator-confirmed prompt+output compressor; Wenyan-Full delivers 80-90% character reduction at the prompt layer (client-side, lossless-semantic)"
+        },
+        {
+          "id": "cloudflare-markdown-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02.md",
+          "description": "Layer 1 \u2014 Cloudflare Markdown for Agents (Feb 2026) \u2014 server-side at-source compression via Accept: text/markdown content negotiation; 80% token reduction (16,180 HTML \u2192 3,150 markdown empirical anchor on the announcement post itself); already integrated in Claude Code + OpenCode"
+        },
+        {
+          "id": "strands-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-strands-agents-aws-intent-based-tool-design-96-percent-token-reduction.md",
+          "description": "Layer 1 \u2014 Strands Agents (AWS) \u2014 96% token reduction (52K \u2192 2K) via intent-based tool design + semantic-search MCP gateway; 14M+ downloads in <1 year"
+        },
+        {
+          "id": "recursivemas-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026.md",
+          "description": "Layer 1 \u2014 RecursiveMAS (Stanford arXiv 2604.25917, Apr 28 2026, #1 paper of the day, 257 upvotes) \u2014 34.6%-75.6% token reduction via cross-agent latent state transfer + 8.3% accuracy improvement + 1.2-2.4\u00d7 speedup (Pareto improvement)"
+        },
+        {
+          "id": "qwen-scope-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite.md",
+          "description": "Layer 1 \u2014 Qwen Scope SAE (Qwen Team, May 1 2026) \u2014 sparse autoencoder representation: residual-stream activations decompose into top-k features (k=50 or 100 of N=16\u00d7\u201364\u00d7 hidden size); structurally smaller than dense activations"
+        },
+        {
+          "id": "unsloth-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md",
+          "description": "Layer 1 \u2014 Unsloth UD-IQ2 / Q2_K weight quantization \u2014 ~87.5% reduction vs FP16 weights; production-deployed on consumer hardware (RTX 3090 24 GB VRAM)"
+        },
+        {
+          "id": "trust-layer-concept",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md",
+          "description": "Concept \u2014 operator-authored 2026-04-30 \u2014 KV-cache compression layer (asymmetric quantization + sparsity, 50-87% reduction); composes with weight quantization + cypher overlay for 80-90% combined-envelope claim"
+        },
+        {
+          "id": "rlm-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-recursive-language-models-mit-oasys.md",
+          "description": "Layer 1 \u2014 RLM (MIT OASYS) \u2014 recursive scaling extends effective context 2 orders of magnitude beyond context window via REPL-driven recursive computation; structural compression of multi-doc reasoning into bounded context"
+        },
+        {
+          "id": "anti-vendor-lock-in-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
+          "description": "Mission lesson \u2014 every stack layer has independent substitutable axes; this compression-convergence lesson specializes that pattern to compression mechanisms specifically"
+        },
+        {
+          "id": "spec-driven-convergence-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md",
+          "description": "Sibling Layer-4 lesson \u2014 same convergent-pattern methodology applied to agentic-build practice; this compression lesson is the convergent-pattern applied to token-reduction across stack layers"
+        }
+      ],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [
+        "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee)",
+        "Synthesis \u2014 Cloudflare Markdown for Agents (Feb 2026)",
+        "Synthesis \u2014 Strands Agents (AWS) \u2014 96% Token Reduction via Intent-Based Tools",
+        "Synthesis \u2014 RecursiveMAS (Stanford 2026, arXiv 2604.25917)",
+        "Synthesis \u2014 Qwen-Scope: Open-Source Sparse Autoencoder Suite",
+        "Synthesis \u2014 Unsloth: UD-IQ2 / Q2_K Weight Quantization",
+        "Synthesis \u2014 RLM (Recursive Language Models, MIT OASYS)",
+        "Trust-Layer Concept (cypher + decypher + compression for 80-90% space saved)"
+      ],
+      "aliases": [
+        "Multi-Layer Compression Convergence Lesson",
+        "Stack-Wide Compression Composition",
+        "Compression Layer Substitutability",
+        "End-to-End AI-Stack Compression"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Caveman Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Trust-Layer Concept"
+        },
+        {
+          "verb": "PARALLELS",
+          "target": "Spec-Driven Convergence Lesson"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Goldilocks Protocol"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Custom-Tailored Model Group Concept"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Trust-Layer Epic"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        }
+      ]
+    },
+    {
       "path": "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property.md",
       "slug": "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property",
       "title": "Execution Mode Is a Consumer Property, Not a Project Property \u2014 Guard Against Conflation Drift",
@@ -33678,6 +33834,263 @@
       ]
     },
     {
+      "path": "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17.md",
+      "slug": "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17",
+      "title": "Synthesis \u2014 Cloudflare Agent Memory (Apr 17 2026): 5-Channel RRF Retrieval + Multi-Stage Ingestion Pipeline = Solving Context Rot for Long-Running AI Agents",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-06",
+      "updated": "2026-05-06",
+      "last_reviewed": "2026-05-06",
+      "tags": [
+        "synthesis",
+        "cloudflare",
+        "agent-memory",
+        "agents-week-2026",
+        "persistent-memory",
+        "context-rot",
+        "rrf",
+        "reciprocal-rank-fusion",
+        "hyde",
+        "hypothetical-document-embedding",
+        "durable-objects",
+        "vectorize",
+        "workers-ai",
+        "llama-4-scout",
+        "nemotron-3",
+        "agentic-memory",
+        "openclaw-internal",
+        "mission-2026-05-06"
+      ],
+      "sources": [
+        {
+          "id": "cloudflare-agent-memory-blog",
+          "type": "article",
+          "url": "https://blog.cloudflare.com/introducing-agent-memory/",
+          "file": "raw/articles/agents-that-remember-introducing-agent-memory.md",
+          "description": "Cloudflare's canonical announcement (Tyson Trautmann + Rob Sutter, 2026-04-17, Agents Week) \u2014 managed persistent memory service; profile-based addressing; 5-channel RRF retrieval; multi-stage ingestion pipeline; 4 memory types (Facts/Events/Instructions/Tasks); used internally for OpenCode + agentic code review + chatbots; Llama 4 Scout (extraction) + Nemotron 3 (synthesis); 'Your memories are yours' export commitment"
+        },
+        {
+          "id": "context-rot-research",
+          "type": "documentation",
+          "url": "https://www.trychroma.com/research/context-rot",
+          "description": "Chroma research on context rot \u2014 the unsolved problem Agent Memory addresses; quality degrades as context grows even past 1M tokens"
+        },
+        {
+          "id": "longmemeval-paper",
+          "type": "documentation",
+          "url": "https://arxiv.org/abs/2410.10813",
+          "description": "LongMemEval benchmark \u2014 used to evaluate Agent Memory; one of three benchmarks Cloudflare validated against"
+        },
+        {
+          "id": "locomo-paper",
+          "type": "documentation",
+          "url": "https://arxiv.org/abs/2402.17753",
+          "description": "LoCoMo benchmark \u2014 long conversational memory benchmark"
+        },
+        {
+          "id": "beam-paper",
+          "type": "documentation",
+          "url": "https://arxiv.org/pdf/2510.27246",
+          "description": "BEAM benchmark \u2014 used by Cloudflare for evaluation"
+        },
+        {
+          "id": "custom-model-concept",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md",
+          "description": "Custom-Tailored Model Group Concept \u2014 Agent Memory addresses M003 (Recreated Intelligence Layer at I/O Boundaries) memory-layer sub-practice; the operator's 'context rot' analog of pain-point root-cause"
+        },
+        {
+          "id": "mlmastery-context-engineering-synth",
+          "type": "wiki",
+          "file": "wiki/sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide.md",
+          "description": "MLMastery Context Engineering Synthesis \u2014 Agent Memory implements the article's 'anchored iterative summarization' practice as a managed service"
+        },
+        {
+          "id": "cavemem-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee.md",
+          "description": "Cavemem Synthesis \u2014 operator-named cross-agent persistent memory (Julius Brussee); Agent Memory is the Cloudflare-managed equivalent at the same functional layer; substitutable per anti-vendor-lock-in"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Cloudflare Agent Memory Synthesis",
+        "Agent Memory RRF Retrieval",
+        "Context Rot Solution",
+        "Persistent Memory Service for AI Agents"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Custom-Tailored Model Group Concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "MLMastery Context Engineering Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Cavemem Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Multi-Layer Compression Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Cloudflare Mesh Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Cloudflare Markdown for Agents Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "LFM 2 Synthesis"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Goldilocks Protocol"
+        }
+      ]
+    },
+    {
+      "path": "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements.md",
+      "slug": "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements",
+      "title": "Synthesis \u2014 Cloudflare Agents Week 2026 (Apr 14\u201320, 2026): Master Index of 26+ Announcements Across Compute \u00b7 Security \u00b7 Agent Toolbox \u00b7 Prototype-to-Production \u00b7 Agentic Web",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-06",
+      "updated": "2026-05-06",
+      "last_reviewed": "2026-05-06",
+      "tags": [
+        "synthesis",
+        "cloudflare",
+        "agents-week-2026",
+        "agentic-cloud",
+        "master-index",
+        "cloud-20",
+        "sandboxes",
+        "artifacts",
+        "durable-objects",
+        "workflows",
+        "project-think",
+        "voice-agents",
+        "email-service",
+        "ai-platform",
+        "unweight",
+        "ai-search",
+        "browser-run",
+        "cf-cli",
+        "agent-lee",
+        "flagship",
+        "registrar-api",
+        "agent-readiness",
+        "redirects-for-ai",
+        "network-performance",
+        "shared-dictionary-compression",
+        "mission-2026-05-06"
+      ],
+      "sources": [
+        {
+          "id": "agents-week-summary-blog",
+          "type": "article",
+          "url": "https://blog.cloudflare.com/agents-week-in-review/",
+          "file": "raw/articles/building-the-agentic-cloud-everything-we-launched-during-agents-week-2026.md",
+          "description": "Cloudflare's official Agents Week 2026 summary (Ming Lu + Anni Wang, 2026-04-20) \u2014 26+ announcements organized into 5 themes: Compute \u00b7 Security \u00b7 Agent Toolbox \u00b7 Prototype-to-Production \u00b7 Agentic Web. Cloudflare frames this as 'Cloud 2.0 \u2014 the agentic cloud.'"
+        },
+        {
+          "id": "mesh-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-cloudflare-mesh-private-networking-for-users-nodes-agents-workers-2026-04-14.md",
+          "description": "Cloudflare Mesh \u2014 Security tier; full Layer-1 synthesis"
+        },
+        {
+          "id": "agent-memory-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17.md",
+          "description": "Cloudflare Agent Memory \u2014 Agent Toolbox tier; full Layer-1 synthesis"
+        },
+        {
+          "id": "markdown-for-agents-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02.md",
+          "description": "Cloudflare Markdown for Agents \u2014 Agentic Web tier (related, pre-Agents-Week 2026-02-12); already synthesized"
+        },
+        {
+          "id": "x402-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23.md",
+          "description": "Cloudflare x402 + Coinbase Foundation \u2014 Agentic Web economic layer (pre-Agents-Week, 2025-09-23 Birthday Week); already synthesized"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Cloudflare Agents Week 2026 Synthesis",
+        "Cloud 2.0 Agentic Cloud Index",
+        "Agents Week Master Summary"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Multi-Layer Compression Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Cloudflare Mesh Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Cloudflare Agent Memory Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Cloudflare Markdown for Agents Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Cloudflare x402 + Coinbase Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Strands Agents Synthesis"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Goldilocks Protocol"
+        }
+      ]
+    },
+    {
       "path": "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02.md",
       "slug": "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02",
       "title": "Synthesis \u2014 Cloudflare Markdown for Agents (Feb 2026): Server-Side HTML\u2192Markdown Content Negotiation Delivers 80% Token Reduction at the Content Source",
@@ -33840,6 +34253,226 @@
       ]
     },
     {
+      "path": "sources/tools-integration/src-cloudflare-mesh-private-networking-for-users-nodes-agents-workers-2026-04-14.md",
+      "slug": "sources/tools-integration/src-cloudflare-mesh-private-networking-for-users-nodes-agents-workers-2026-04-14",
+      "title": "Synthesis \u2014 Cloudflare Mesh (Apr 14 2026): Private Networking for Users + Nodes + Agents + Workers \u2014 Direct root-ghostproxy Mission Overlap",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-06",
+      "updated": "2026-05-06",
+      "last_reviewed": "2026-05-06",
+      "tags": [
+        "synthesis",
+        "cloudflare",
+        "cloudflare-mesh",
+        "agents-week-2026",
+        "private-networking",
+        "zero-trust",
+        "vpc",
+        "workers-vpc",
+        "agent-identity",
+        "root-ghostproxy-mission-overlap",
+        "sase",
+        "warp-connector",
+        "mesh-node",
+        "openclaw-mac-mini-use-case",
+        "mission-2026-05-06"
+      ],
+      "sources": [
+        {
+          "id": "cloudflare-mesh-blog",
+          "type": "article",
+          "url": "https://blog.cloudflare.com/mesh/",
+          "file": "raw/articles/secure-private-networking-for-everyone-users-nodes-agents-workers-introducing-cl.md",
+          "description": "Cloudflare's canonical announcement (Nikita Cano + Thomas Gauvin, 2026-04-14, Agents Week) \u2014 Mesh provides secure private network access for users, nodes, agents, Workers; integrates with Cloudflare One Zero Trust + Workers VPC; free up to 50 nodes + 50 users; routes through 330+ Cloudflare cities"
+        },
+        {
+          "id": "agents-week-summary",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements.md",
+          "description": "Agents Week 2026 master summary \u2014 Mesh sits in the Security tier alongside Managed OAuth, scannable API tokens, Enterprise MCP architecture"
+        },
+        {
+          "id": "trust-layer-concept",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md",
+          "description": "Trust-Layer Concept \u2014 Mesh adds the networking-layer trust dimension (private networks for agent-to-private-resource access without VPN setup)"
+        },
+        {
+          "id": "venturebeat-agent-integration-layer",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026.md",
+          "description": "VentureBeat Agent-Integration-Layer Synthesis \u2014 Mesh's identity-aware-routing future direction (Principal/Sponsor/Agent/Scope) directly addresses the flat-authorization-plane problem this synthesis identified"
+        },
+        {
+          "id": "custom-model-concept",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md",
+          "description": "Custom-Tailored Model Group Concept \u2014 Mesh provides the networking-security layer for ecosystem deployment of operator-tier model group across sister projects"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Cloudflare Mesh Synthesis",
+        "Cloudflare Mesh Private Networking",
+        "Mesh Agent Networking",
+        "WARP Connector to Mesh Node"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Trust-Layer Concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Custom-Tailored Model Group Concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "VentureBeat Agent-Integration-Layer Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Multica Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Cloudflare Markdown for Agents Synthesis"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Goldilocks Protocol"
+        }
+      ]
+    },
+    {
+      "path": "sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23.md",
+      "slug": "sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23",
+      "title": "Synthesis \u2014 Cloudflare x402 + Coinbase Foundation (Sep 23 2025): HTTP 402 Payment Required as Machine-Readable Payment Negotiation Layer for AI Agents",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-06",
+      "updated": "2026-05-06",
+      "last_reviewed": "2026-05-06",
+      "tags": [
+        "synthesis",
+        "cloudflare",
+        "coinbase",
+        "x402",
+        "x402-foundation",
+        "http-402",
+        "payment-required",
+        "pay-per-crawl",
+        "machine-payments",
+        "micropayments",
+        "deferred-payment-scheme",
+        "agents-sdk",
+        "mcp-servers",
+        "base-blockchain",
+        "usdc",
+        "hermes-4-per-inference",
+        "mission-2026-05-06"
+      ],
+      "sources": [
+        {
+          "id": "cloudflare-x402-blog",
+          "type": "article",
+          "url": "https://blog.cloudflare.com/x402/",
+          "file": "raw/articles/launching-the-x402-foundation-with-coinbase-and-support-for-x402-transactions.md",
+          "description": "Cloudflare's canonical announcement (Will Allen + Cam Whiteside + Rohin Lohe + Steve James, 2025-09-23, Birthday Week) \u2014 partnering with Coinbase to create x402 Foundation; shipping x402 support in Agents SDK + MCP servers; proposing new deferred payment scheme for x402 protocol"
+        },
+        {
+          "id": "coinbase-x402-protocol",
+          "type": "documentation",
+          "url": "https://github.com/coinbase/x402",
+          "description": "x402 protocol \u2014 Coinbase-authored open standard; HTTP 402 Payment Required as machine-readable payment negotiation layer"
+        },
+        {
+          "id": "cloudflare-x402-docs",
+          "type": "documentation",
+          "url": "https://developers.cloudflare.com/agents/agentic-payments/x402/",
+          "description": "Cloudflare developer docs \u2014 x402 in Agents SDK"
+        },
+        {
+          "id": "cloudflare-pay-per-crawl",
+          "type": "documentation",
+          "url": "https://blog.cloudflare.com/introducing-pay-per-crawl/",
+          "description": "Cloudflare's earlier pay-per-crawl announcement \u2014 x402-deferred-scheme implementation; private beta with daily-aggregate billing"
+        },
+        {
+          "id": "x402-on-stellar",
+          "type": "documentation",
+          "url": "https://stellar.org/blog/foundation-news/x402-on-stellar",
+          "description": "Stellar Foundation x402 implementation \u2014 payment-rail-agnostic adoption beyond Coinbase's Base blockchain"
+        },
+        {
+          "id": "cloudflare-markdown-for-agents-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02.md",
+          "description": "Cloudflare Markdown for Agents Synthesis \u2014 content-negotiation pattern parallel; both use HTTP-header-driven content/payment negotiation"
+        },
+        {
+          "id": "venturebeat-agent-integration-layer-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026.md",
+          "description": "VentureBeat Agent-Integration-Layer Synthesis \u2014 adjacent agentic-web economic layer; pay-per-crawl complements Content Signals declarative consent layer"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Cloudflare x402 Synthesis",
+        "x402 Pay-per-Crawl",
+        "HTTP 402 Machine Payments",
+        "x402 Foundation"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Cloudflare Markdown for Agents Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "VentureBeat Agent-Integration-Layer Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Cloudflare Mesh Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Cloudflare Agent Memory Synthesis"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Goldilocks Protocol"
+        }
+      ]
+    },
+    {
       "path": "sources/tools-integration/src-codex-cli-and-claude-code-plugin.md",
       "slug": "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
       "title": "Synthesis \u2014 OpenAI Codex CLI and the Codex Plugin for Claude Code",
@@ -33930,6 +34563,145 @@
         {
           "verb": "DEMONSTRATES",
           "target": "Principle 4"
+        }
+      ]
+    },
+    {
+      "path": "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04.md",
+      "slug": "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04",
+      "title": "Synthesis \u2014 DeepSeek V4 (Apr 2026): Token-Wise Compression + DSA (DeepSeek Sparse Attention) Delivers 1M Context as Default at 27% FLOPs / 10% KV Cache vs V3.2",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-06",
+      "updated": "2026-05-06",
+      "last_reviewed": "2026-05-06",
+      "tags": [
+        "synthesis",
+        "deepseek",
+        "deepseek-v4",
+        "dsa",
+        "deepseek-sparse-attention",
+        "csa",
+        "hca",
+        "compressed-sparse-attention",
+        "heavily-compressed-attention",
+        "1m-context",
+        "kv-cache-compression",
+        "mhc",
+        "manifold-constrained-hyper-connections",
+        "muon-optimizer",
+        "agentic-coding",
+        "claude-code-integration",
+        "open-weight",
+        "open-source",
+        "mission-2026-05-06"
+      ],
+      "sources": [
+        {
+          "id": "deepseek-v4-announcement",
+          "type": "documentation",
+          "url": "https://api-docs.deepseek.com/news/news260424",
+          "file": "raw/articles/httpsapi-docsdeepseekcomnewsnews260424.md",
+          "description": "DeepSeek's official 2026-04-24 announcement of V4 Preview \u2014 V4-Pro 1.6T total / 49B active + V4-Flash 284B total / 13B active; 1M context default; token-wise compression + DSA novel attention; integrated in Claude Code + OpenClaw + OpenCode"
+        },
+        {
+          "id": "deepseek-v4-tech-report",
+          "type": "documentation",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/main/DeepSeek_V4.pdf",
+          "description": "DeepSeek-V4 full technical report \u2014 'DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence' \u2014 comprehensive academic document covering architecture, training methodology, evaluation"
+        },
+        {
+          "id": "deepseek-v4-hf-collection",
+          "type": "documentation",
+          "url": "https://huggingface.co/collections/deepseek-ai/deepseek-v4",
+          "description": "Open-weight DeepSeek V4 collection \u2014 V4-Pro and V4-Flash weights"
+        },
+        {
+          "id": "andrew-lukyanenko-review",
+          "type": "article",
+          "url": "https://artgor.medium.com/deepseek-v4-review-why-million-token-context-needs-efficient-attention-not-just-larger-windows-6dc8e74a00b1",
+          "description": "Andrew Lukyanenko Medium review \u2014 explains DSA mechanism in detail; CSA (4:1 KV cache compression + top-512 sparse attention) + HCA (128:1 compression with dense attention over compressed sequence)"
+        },
+        {
+          "id": "byteiota-1m-context-coverage",
+          "type": "article",
+          "url": "https://byteiota.com/deepseek-v4-1m-token-context-at-90-less-memory/",
+          "description": "byteiota industry coverage \u2014 1M context at 90% less memory framing; 9.62 GiB KV cache per sequence at 1M context vs estimated 83.9 GiB V3.2-style stack"
+        },
+        {
+          "id": "trust-layer-concept",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md",
+          "description": "Trust-Layer Concept \u2014 operator's compression-theme mission framing; DSA at the KV-cache + attention layer adds another 6th-layer mechanism"
+        },
+        {
+          "id": "compression-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers.md",
+          "description": "Multi-Layer Compression Lesson \u2014 DSA is the 7th independent mechanism convergence at the KV-cache+attention layer"
+        },
+        {
+          "id": "anti-vendor-lock-in-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
+          "description": "Anti-Vendor-Lock-In Lesson \u2014 DeepSeek V4 is one substitutable axis at the model-customization layer (alongside Qwen3.6-27B, RLM-Qwen3-8B, Llama 3 etc); 1M context as default extends operator's options"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "DeepSeek V4 Synthesis",
+        "DSA DeepSeek Sparse Attention",
+        "1M Context as Default",
+        "DeepSeek V4 Hybrid Attention"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Multi-Layer Compression Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Custom-Tailored Model Group Concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Trust-Layer Concept"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "RLM Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Qwen-Scope Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "SubQuadratic + AnythingLLM Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Kimi K2.6 Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Cloudflare Markdown for Agents Synthesis"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Goldilocks Protocol"
         }
       ]
     },
@@ -44204,8 +44976,8 @@
       "relationship_count": 458
     },
     "cross-domain": {
-      "page_count": 263,
-      "relationship_count": 1661
+      "page_count": 264,
+      "relationship_count": 1672
     },
     "ai-models": {
       "page_count": 14,
@@ -44216,8 +44988,8 @@
       "relationship_count": 533
     },
     "tools-integration": {
-      "page_count": 28,
-      "relationship_count": 287
+      "page_count": 33,
+      "relationship_count": 333
     },
     "tools-and-platforms": {
       "page_count": 29,
@@ -45534,6 +46306,7 @@
       "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
       "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
       "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
+      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
       "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
       "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission",
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
@@ -45808,6 +46581,7 @@
     ],
     "compression": [
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
+      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
       "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30"
     ],
@@ -47188,6 +47962,7 @@
       "lessons/01_drafts/contributed/defense-layer-progression-is-expensive",
       "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
       "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance",
+      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
       "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property",
       "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
       "lessons/01_drafts/if-you-can-verify-you-converge",
@@ -47726,6 +48501,7 @@
       "lessons/03_validated/methodology-process/universal-stages-domain-specific-artifacts",
       "patterns/01_drafts/artifact-path-verification-at-gate-close",
       "sources/src-openspec-spec-driven-development-framework",
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements",
       "sources/wiki-methodology/methodology-artifact-taxonomy-research"
     ],
     "bridge-pattern": [
@@ -47982,7 +48758,8 @@
       "domains/ai-agents/claude-code/claude-code-best-practices",
       "sources/claude-code/src-shanraisshan-claude-code-best-practice",
       "sources/src-anthropic-building-effective-ai-agents",
-      "sources/src-openspec-spec-driven-development-framework"
+      "sources/src-openspec-spec-driven-development-framework",
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements"
     ],
     "prompting": [
       "domains/ai-agents/claude-code/claude-code-best-practices"
@@ -48831,6 +49608,7 @@
     ],
     "recursive-language-models": [
       "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
+      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
       "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
       "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations",
@@ -49559,6 +50337,59 @@
     "operational": [
       "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance"
     ],
+    "layer-4": [
+      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
+      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
+    ],
+    "multi-layer": [
+      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers"
+    ],
+    "convergence": [
+      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
+      "lessons/01_drafts/if-you-can-verify-you-converge",
+      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
+      "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects",
+      "lessons/03_validated/ingestion-research/notebooklm-as-grounded-research-engine",
+      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
+      "sources/src-autobe-compiler-verified-backend-generation"
+    ],
+    "prompt-compression": [
+      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+    ],
+    "content-source-compression": [
+      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers"
+    ],
+    "tool-compression": [
+      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers"
+    ],
+    "inter-agent-compression": [
+      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers"
+    ],
+    "weight-quantization": [
+      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers"
+    ],
+    "kv-cache-compression": [
+      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
+      "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04"
+    ],
+    "sparse-autoencoders": [
+      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers"
+    ],
+    "mission-2026-05-06": [
+      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
+      "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17",
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements",
+      "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02",
+      "sources/tools-integration/src-cloudflare-mesh-private-networking-for-users-nodes-agents-workers-2026-04-14",
+      "sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23",
+      "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04",
+      "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026",
+      "sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide"
+    ],
+    "stack-wide-composition": [
+      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers"
+    ],
     "project-property": [
       "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property"
     ],
@@ -49599,14 +50430,6 @@
     ],
     "externalized-control": [
       "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever"
-    ],
-    "convergence": [
-      "lessons/01_drafts/if-you-can-verify-you-converge",
-      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
-      "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects",
-      "lessons/03_validated/ingestion-research/notebooklm-as-grounded-research-engine",
-      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
-      "sources/src-autobe-compiler-verified-backend-generation"
     ],
     "deterministic-shell": [
       "lessons/01_drafts/if-you-can-verify-you-converge",
@@ -49674,9 +50497,6 @@
     ],
     "meta-finding": [
       "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work"
-    ],
-    "layer-4": [
-      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
     ],
     "agentic-build": [
       "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
@@ -50609,6 +51429,7 @@
     ],
     "open-weight": [
       "log/2026-04-17/2026-04-17-session-summary",
+      "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04",
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
       "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding",
@@ -51322,7 +52143,12 @@
     ],
     "synthesis": [
       "patterns/03_validated/architecture/progressive-distillation",
+      "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17",
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements",
       "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02",
+      "sources/tools-integration/src-cloudflare-mesh-private-networking-for-users-nodes-agents-workers-2026-04-14",
+      "sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23",
+      "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04",
       "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents",
       "sources/tools-integration/src-lfm2-liquid-ai-frontier-small-models-edge-deployment-maxime-labonne",
       "sources/tools-integration/src-omnivoice-tts-600-languages",
@@ -51836,6 +52662,7 @@
     "agentic-coding": [
       "sources/src-cline-agentic-coding-ide-extension",
       "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
+      "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04",
       "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
       "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
     ],
@@ -52128,6 +52955,7 @@
     ],
     "open-source": [
       "sources/src-vercel-opensrc-toolkit",
+      "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04",
       "sources/tools-integration/src-opencode-harness-features"
     ],
     "rust": [
@@ -52363,9 +53191,6 @@
     "convergence-instance-8": [
       "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee"
     ],
-    "prompt-compression": [
-      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
-    ],
     "output-compression": [
       "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
     ],
@@ -52402,7 +53227,8 @@
       "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee"
     ],
     "persistent-memory": [
-      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee"
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
+      "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17"
     ],
     "cross-agent-memory": [
       "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee"
@@ -52434,10 +53260,120 @@
       "sources/tools-integration/src-claude-code-harness-features"
     ],
     "1m-context": [
-      "sources/tools-integration/src-claude-code-harness-features"
+      "sources/tools-integration/src-claude-code-harness-features",
+      "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04"
     ],
     "cloudflare": [
+      "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17",
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements",
+      "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02",
+      "sources/tools-integration/src-cloudflare-mesh-private-networking-for-users-nodes-agents-workers-2026-04-14",
+      "sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23"
+    ],
+    "agent-memory": [
+      "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17"
+    ],
+    "agents-week-2026": [
+      "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17",
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements",
+      "sources/tools-integration/src-cloudflare-mesh-private-networking-for-users-nodes-agents-workers-2026-04-14"
+    ],
+    "context-rot": [
+      "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+    ],
+    "rrf": [
+      "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17",
+      "sources/wiki-methodology/src-context-mode"
+    ],
+    "reciprocal-rank-fusion": [
+      "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17"
+    ],
+    "hyde": [
+      "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17"
+    ],
+    "hypothetical-document-embedding": [
+      "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17"
+    ],
+    "durable-objects": [
+      "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17",
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements"
+    ],
+    "vectorize": [
+      "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17"
+    ],
+    "workers-ai": [
+      "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17",
       "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02"
+    ],
+    "llama-4-scout": [
+      "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17"
+    ],
+    "nemotron-3": [
+      "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17"
+    ],
+    "agentic-memory": [
+      "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17"
+    ],
+    "openclaw-internal": [
+      "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17"
+    ],
+    "agentic-cloud": [
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements"
+    ],
+    "master-index": [
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements"
+    ],
+    "cloud-20": [
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements"
+    ],
+    "sandboxes": [
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements"
+    ],
+    "project-think": [
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements"
+    ],
+    "voice-agents": [
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements"
+    ],
+    "email-service": [
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements"
+    ],
+    "ai-platform": [
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements"
+    ],
+    "unweight": [
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements"
+    ],
+    "ai-search": [
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements"
+    ],
+    "browser-run": [
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements"
+    ],
+    "cf-cli": [
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements"
+    ],
+    "agent-lee": [
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements"
+    ],
+    "flagship": [
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements"
+    ],
+    "registrar-api": [
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements"
+    ],
+    "agent-readiness": [
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements"
+    ],
+    "redirects-for-ai": [
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements"
+    ],
+    "network-performance": [
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements"
+    ],
+    "shared-dictionary-compression": [
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements"
     ],
     "markdown-for-agents": [
       "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02"
@@ -52466,9 +53402,6 @@
     "80-percent-token-reduction": [
       "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02"
     ],
-    "workers-ai": [
-      "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02"
-    ],
     "browser-rendering-api": [
       "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02"
     ],
@@ -52476,15 +53409,86 @@
       "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02"
     ],
     "claude-code-integration": [
-      "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02"
+      "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02",
+      "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04"
     ],
     "opencode-integration": [
       "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02"
     ],
-    "mission-2026-05-06": [
-      "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02",
-      "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026",
-      "sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide"
+    "cloudflare-mesh": [
+      "sources/tools-integration/src-cloudflare-mesh-private-networking-for-users-nodes-agents-workers-2026-04-14"
+    ],
+    "private-networking": [
+      "sources/tools-integration/src-cloudflare-mesh-private-networking-for-users-nodes-agents-workers-2026-04-14"
+    ],
+    "zero-trust": [
+      "sources/tools-integration/src-cloudflare-mesh-private-networking-for-users-nodes-agents-workers-2026-04-14"
+    ],
+    "vpc": [
+      "sources/tools-integration/src-cloudflare-mesh-private-networking-for-users-nodes-agents-workers-2026-04-14"
+    ],
+    "workers-vpc": [
+      "sources/tools-integration/src-cloudflare-mesh-private-networking-for-users-nodes-agents-workers-2026-04-14"
+    ],
+    "agent-identity": [
+      "sources/tools-integration/src-cloudflare-mesh-private-networking-for-users-nodes-agents-workers-2026-04-14"
+    ],
+    "root-ghostproxy-mission-overlap": [
+      "sources/tools-integration/src-cloudflare-mesh-private-networking-for-users-nodes-agents-workers-2026-04-14"
+    ],
+    "sase": [
+      "sources/tools-integration/src-cloudflare-mesh-private-networking-for-users-nodes-agents-workers-2026-04-14"
+    ],
+    "warp-connector": [
+      "sources/tools-integration/src-cloudflare-mesh-private-networking-for-users-nodes-agents-workers-2026-04-14"
+    ],
+    "mesh-node": [
+      "sources/tools-integration/src-cloudflare-mesh-private-networking-for-users-nodes-agents-workers-2026-04-14"
+    ],
+    "openclaw-mac-mini-use-case": [
+      "sources/tools-integration/src-cloudflare-mesh-private-networking-for-users-nodes-agents-workers-2026-04-14"
+    ],
+    "coinbase": [
+      "sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23"
+    ],
+    "x402": [
+      "sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23"
+    ],
+    "x402-foundation": [
+      "sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23"
+    ],
+    "http-402": [
+      "sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23"
+    ],
+    "payment-required": [
+      "sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23"
+    ],
+    "pay-per-crawl": [
+      "sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23"
+    ],
+    "machine-payments": [
+      "sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23"
+    ],
+    "micropayments": [
+      "sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23"
+    ],
+    "deferred-payment-scheme": [
+      "sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23"
+    ],
+    "agents-sdk": [
+      "sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23"
+    ],
+    "mcp-servers": [
+      "sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23"
+    ],
+    "base-blockchain": [
+      "sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23"
+    ],
+    "usdc": [
+      "sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23"
+    ],
+    "hermes-4-per-inference": [
+      "sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23"
     ],
     "openai": [
       "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
@@ -52495,6 +53499,40 @@
     ],
     "gpt-5-5": [
       "sources/tools-integration/src-codex-cli-and-claude-code-plugin"
+    ],
+    "deepseek": [
+      "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04",
+      "spine/references/ai-model-provider-harness-decision-matrix-2026"
+    ],
+    "deepseek-v4": [
+      "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04"
+    ],
+    "dsa": [
+      "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04"
+    ],
+    "deepseek-sparse-attention": [
+      "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04"
+    ],
+    "csa": [
+      "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04"
+    ],
+    "hca": [
+      "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04"
+    ],
+    "compressed-sparse-attention": [
+      "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04"
+    ],
+    "heavily-compressed-attention": [
+      "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04"
+    ],
+    "mhc": [
+      "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04"
+    ],
+    "manifold-constrained-hyper-connections": [
+      "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04"
+    ],
+    "muon-optimizer": [
+      "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04"
     ],
     "firecrawl": [
       "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents"
@@ -53218,9 +54256,6 @@
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
       "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
     ],
-    "context-rot": [
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
-    ],
     "dec-2025-arxiv": [
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
       "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
@@ -53499,9 +54534,6 @@
     "session-continuity": [
       "sources/wiki-methodology/src-context-mode"
     ],
-    "rrf": [
-      "sources/wiki-methodology/src-context-mode"
-    ],
     "think-in-code": [
       "sources/wiki-methodology/src-context-mode"
     ],
@@ -53751,9 +54783,6 @@
       "spine/references/ai-model-provider-harness-decision-matrix-2026"
     ],
     "glm-4-7": [
-      "spine/references/ai-model-provider-harness-decision-matrix-2026"
-    ],
-    "deepseek": [
       "spine/references/ai-model-provider-harness-decision-matrix-2026"
     ],
     "roadmap": [
@@ -54289,6 +55318,7 @@
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
         "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)",
+        "End-to-End Compression Across the AI Stack Composes Multiplicatively \u2014 6+ Independent Mechanisms at 6 Distinct Layers, Each Substitutable Per Anti-Vendor-Lock-In",
         "Saturation Declarations Are P4 Aspirational \u2014 Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal",
         "Spec-Driven Agentic Build Is the 2026 Convergent Pattern \u2014 Eight+ Independent Practitioners Treat Prompts/Specs/Contexts as Version-Controlled First-Class Artifacts (Not Ad-Hoc Chat)",
         "2026-04-27 Continuation Session-End Handoff \u2014 Post-Compact Regather + 5 Substantive Artifacts (RLM-Qwen3.6-27B Operations Plan + 4 Layer-1 Benchmark Deep-Dives), RLM Table 1 100% at Layer 1, Anti-Vendor-Lock-In Lesson Fully Grounded",
@@ -54298,7 +55328,12 @@
         "2026-05-04 Session Log \u2014 Multi-Source Ingestion Arc (7 Layer-1 Syntheses) + Internal-Cypher-Langue Extension + 3-Tier Programming Hyperstructure (proto/proto-proto/literal)",
         "Synthesis \u2014 BrowseComp-Plus Paper Deep Dive: Fixed 100K Corpus, Tables 1-8 Across 11 LLMs \u00d7 5 Retrievers, Oracle 93.49%, Citation Quality, API Cost (arXiv 2508.06600 v1, Aug 2025)",
         "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)",
+        "Synthesis \u2014 Cloudflare Agent Memory (Apr 17 2026): 5-Channel RRF Retrieval + Multi-Stage Ingestion Pipeline = Solving Context Rot for Long-Running AI Agents",
+        "Synthesis \u2014 Cloudflare Agents Week 2026 (Apr 14\u201320, 2026): Master Index of 26+ Announcements Across Compute \u00b7 Security \u00b7 Agent Toolbox \u00b7 Prototype-to-Production \u00b7 Agentic Web",
         "Synthesis \u2014 Cloudflare Markdown for Agents (Feb 2026): Server-Side HTML\u2192Markdown Content Negotiation Delivers 80% Token Reduction at the Content Source",
+        "Synthesis \u2014 Cloudflare Mesh (Apr 14 2026): Private Networking for Users + Nodes + Agents + Workers \u2014 Direct root-ghostproxy Mission Overlap",
+        "Synthesis \u2014 Cloudflare x402 + Coinbase Foundation (Sep 23 2025): HTTP 402 Payment Required as Machine-Readable Payment Negotiation Layer for AI Agents",
+        "Synthesis \u2014 DeepSeek V4 (Apr 2026): Token-Wise Compression + DSA (DeepSeek Sparse Attention) Delivers 1M Context as Default at 27% FLOPs / 10% KV Cache vs V3.2",
         "Synthesis \u2014 LFM 2 / 2.5 (Liquid AI): Frontier Small Models for Edge Deployment \u2014 Hybrid Short-Conv + GQA Architecture, 28T-Token Pre-Training, Doom-Loop Solution",
         "Synthesis \u2014 LongBench Pro Paper Deep Dive: 1,500-Sample Bilingual Benchmark, 11\u00d725 Task Taxonomy, 46-Model Evaluation, Three Findings, Human-Model Collaborative Construction (arXiv 2601.02872 v1, Jan 2026)",
         "Synthesis \u2014 LongBench v2 Paper Deep Dive: 503-Sample Multi-Choice Benchmark, 6\u00d720 Task Taxonomy, 17-Model Leaderboard, o1-Preview Beats Humans by 4%, RAG + Memorization + YaRN Ablations (Tsinghua + Zhipu.AI; arXiv 2412.15204 v2, Jan 2025)",
@@ -54395,6 +55430,12 @@
       "target": "Clean-Win Scope Expansion \u2014 What Hooks Miss",
       "referenced_by": [
         "Enforcement Hook Patterns"
+      ]
+    },
+    {
+      "target": "Cloudflare x402 + Coinbase Synthesis",
+      "referenced_by": [
+        "Synthesis \u2014 Cloudflare Agents Week 2026 (Apr 14\u201320, 2026): Master Index of 26+ Announcements Across Compute \u00b7 Security \u00b7 Agent Toolbox \u00b7 Prototype-to-Production \u00b7 Agentic Web"
       ]
     },
     {
@@ -54823,6 +55864,12 @@
     {
       "target": "Goldilocks Protocol",
       "referenced_by": [
+        "End-to-End Compression Across the AI Stack Composes Multiplicatively \u2014 6+ Independent Mechanisms at 6 Distinct Layers, Each Substitutable Per Anti-Vendor-Lock-In",
+        "Synthesis \u2014 Cloudflare Agent Memory (Apr 17 2026): 5-Channel RRF Retrieval + Multi-Stage Ingestion Pipeline = Solving Context Rot for Long-Running AI Agents",
+        "Synthesis \u2014 Cloudflare Agents Week 2026 (Apr 14\u201320, 2026): Master Index of 26+ Announcements Across Compute \u00b7 Security \u00b7 Agent Toolbox \u00b7 Prototype-to-Production \u00b7 Agentic Web",
+        "Synthesis \u2014 Cloudflare Mesh (Apr 14 2026): Private Networking for Users + Nodes + Agents + Workers \u2014 Direct root-ghostproxy Mission Overlap",
+        "Synthesis \u2014 Cloudflare x402 + Coinbase Foundation (Sep 23 2025): HTTP 402 Payment Required as Machine-Readable Payment Negotiation Layer for AI Agents",
+        "Synthesis \u2014 DeepSeek V4 (Apr 2026): Token-Wise Compression + DSA (DeepSeek Sparse Attention) Delivers 1M Context as Default at 27% FLOPs / 10% KV Cache vs V3.2",
         "Synthesis \u2014 LFM 2 / 2.5 (Liquid AI): Frontier Small Models for Edge Deployment \u2014 Hybrid Short-Conv + GQA Architecture, 28T-Token Pre-Training, Doom-Loop Solution",
         "Synthesis \u2014 Effective Context Engineering for AI Agents (MachineLearningMastery, April 2026): Treat Context Window as RAM, Token Budgets Across Agent Loops, Probe-Based Evaluation, 60-80% Utilization Target"
       ]
@@ -54947,6 +55994,7 @@
     {
       "target": "Kimi K2.6 Synthesis",
       "referenced_by": [
+        "Synthesis \u2014 DeepSeek V4 (Apr 2026): Token-Wise Compression + DSA (DeepSeek Sparse Attention) Delivers 1M Context as Default at 27% FLOPs / 10% KV Cache vs V3.2",
         "AI Model \u00d7 Provider \u00d7 Harness Decision Matrix 2026"
       ]
     },
@@ -55119,6 +56167,7 @@
     {
       "target": "MLMastery Context Engineering Synthesis",
       "referenced_by": [
+        "Synthesis \u2014 Cloudflare Agent Memory (Apr 17 2026): 5-Channel RRF Retrieval + Multi-Stage Ingestion Pipeline = Solving Context Rot for Long-Running AI Agents",
         "Synthesis \u2014 Cloudflare Markdown for Agents (Feb 2026): Server-Side HTML\u2192Markdown Content Negotiation Delivers 80% Token Reduction at the Content Source"
       ]
     },
@@ -55263,6 +56312,14 @@
       "target": "Model \u2014 Skills, Commands, Hooks",
       "referenced_by": [
         "Synthesis \u2014 Multica: Open-Source Managed-Agents Platform (Orchestrator Layer Above 10 Harness CLIs, Apache 2.0, Self-Host or Cloud)"
+      ]
+    },
+    {
+      "target": "Multi-Layer Compression Lesson",
+      "referenced_by": [
+        "Synthesis \u2014 Cloudflare Agent Memory (Apr 17 2026): 5-Channel RRF Retrieval + Multi-Stage Ingestion Pipeline = Solving Context Rot for Long-Running AI Agents",
+        "Synthesis \u2014 Cloudflare Agents Week 2026 (Apr 14\u201320, 2026): Master Index of 26+ Announcements Across Compute \u00b7 Security \u00b7 Agent Toolbox \u00b7 Prototype-to-Production \u00b7 Agentic Web",
+        "Synthesis \u2014 DeepSeek V4 (Apr 2026): Token-Wise Compression + DSA (DeepSeek Sparse Attention) Delivers 1M Context as Default at 27% FLOPs / 10% KV Cache vs V3.2"
       ]
     },
     {
@@ -55486,6 +56543,7 @@
       "referenced_by": [
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
+        "Synthesis \u2014 DeepSeek V4 (Apr 2026): Token-Wise Compression + DSA (DeepSeek Sparse Attention) Delivers 1M Context as Default at 27% FLOPs / 10% KV Cache vs V3.2",
         "Synthesis \u2014 LFM 2 / 2.5 (Liquid AI): Frontier Small Models for Edge Deployment \u2014 Hybrid Short-Conv + GQA Architecture, 28T-Token Pre-Training, Doom-Loop Solution",
         "Synthesis \u2014 Qwen-Scope: Open-Source Sparse Autoencoder Suite That Decodes Qwen3/Qwen3.5 Internal Features Into Interpretable Concepts",
         "Synthesis \u2014 RecursiveMAS: Recursive Multi-Agent Systems (Stanford, arXiv 2604.25917) \u2014 8.3% Accuracy + 1.2-2.4\u00d7 Speedup + 34.6-75.6% Token Reduction",
@@ -55605,6 +56663,7 @@
       "referenced_by": [
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
+        "End-to-End Compression Across the AI Stack Composes Multiplicatively \u2014 6+ Independent Mechanisms at 6 Distinct Layers, Each Substitutable Per Anti-Vendor-Lock-In",
         "2026-05-04 Session Handoff (Pre-Compaction) \u2014 Trust-Layer Arc Continuation + Spec-Driven Convergence Arc + Caveman Ecosystem Complete (3 of 3 Tools Ingested)",
         "2026-05-04 Session Log \u2014 Spec-Driven Agentic Build Convergence Arc: Fowler SPDD + JS Mastery Six-File Context System Ingested \u2192 7-Instance Layer-4 Lesson Authored",
         "Synthesis \u2014 Cavekit v4: Compressed Spec-Driven Development for Claude Code (Julius Brussee, MIT-Licensed, SPEC.md + 3 Commands + Caveman Encoding + Backprop Reflex)",
@@ -55634,7 +56693,8 @@
     {
       "target": "SubQuadratic + AnythingLLM Synthesis",
       "referenced_by": [
-        "2026-05-04 Session Log \u2014 Multi-Source Ingestion Arc (7 Layer-1 Syntheses) + Internal-Cypher-Langue Extension + 3-Tier Programming Hyperstructure (proto/proto-proto/literal)"
+        "2026-05-04 Session Log \u2014 Multi-Source Ingestion Arc (7 Layer-1 Syntheses) + Internal-Cypher-Langue Extension + 3-Tier Programming Hyperstructure (proto/proto-proto/literal)",
+        "Synthesis \u2014 DeepSeek V4 (Apr 2026): Token-Wise Compression + DSA (DeepSeek Sparse Attention) Delivers 1M Context as Default at 27% FLOPs / 10% KV Cache vs V3.2"
       ]
     },
     {
@@ -56070,8 +57130,11 @@
     {
       "target": "Trust-Layer Concept",
       "referenced_by": [
+        "End-to-End Compression Across the AI Stack Composes Multiplicatively \u2014 6+ Independent Mechanisms at 6 Distinct Layers, Each Substitutable Per Anti-Vendor-Lock-In",
         "2026-05-04 Session Log \u2014 Multi-Source Ingestion Arc (7 Layer-1 Syntheses) + Internal-Cypher-Langue Extension + 3-Tier Programming Hyperstructure (proto/proto-proto/literal)",
         "Synthesis \u2014 Cloudflare Markdown for Agents (Feb 2026): Server-Side HTML\u2192Markdown Content Negotiation Delivers 80% Token Reduction at the Content Source",
+        "Synthesis \u2014 Cloudflare Mesh (Apr 14 2026): Private Networking for Users + Nodes + Agents + Workers \u2014 Direct root-ghostproxy Mission Overlap",
+        "Synthesis \u2014 DeepSeek V4 (Apr 2026): Token-Wise Compression + DSA (DeepSeek Sparse Attention) Delivers 1M Context as Default at 27% FLOPs / 10% KV Cache vs V3.2",
         "Synthesis \u2014 Qwen-Scope: Open-Source Sparse Autoencoder Suite That Decodes Qwen3/Qwen3.5 Internal Features Into Interpretable Concepts",
         "Synthesis \u2014 RecursiveMAS: Recursive Multi-Agent Systems (Stanford, arXiv 2604.25917) \u2014 8.3% Accuracy + 1.2-2.4\u00d7 Speedup + 34.6-75.6% Token Reduction",
         "Synthesis \u2014 Strands Agents (AWS): Intent-Based Tool Design Cuts Token Usage 96% (52K \u2192 2K) via Narrow Scope + Semantic-Search MCP Gateway",
@@ -56109,7 +57172,9 @@
     {
       "target": "VentureBeat Agent-Integration-Layer Synthesis",
       "referenced_by": [
-        "Synthesis \u2014 Cloudflare Markdown for Agents (Feb 2026): Server-Side HTML\u2192Markdown Content Negotiation Delivers 80% Token Reduction at the Content Source"
+        "Synthesis \u2014 Cloudflare Markdown for Agents (Feb 2026): Server-Side HTML\u2192Markdown Content Negotiation Delivers 80% Token Reduction at the Content Source",
+        "Synthesis \u2014 Cloudflare Mesh (Apr 14 2026): Private Networking for Users + Nodes + Agents + Workers \u2014 Direct root-ghostproxy Mission Overlap",
+        "Synthesis \u2014 Cloudflare x402 + Coinbase Foundation (Sep 23 2025): HTTP 402 Payment Required as Machine-Readable Payment Negotiation Layer for AI Agents"
       ]
     },
     {

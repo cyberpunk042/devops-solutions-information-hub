@@ -176,6 +176,22 @@ The wiki's mission ([feedback_mission_framing.md](file:///home/jfortin/.claude/p
 >
 > The pain-point anchor (operator-named 2026-05-04, verbatim): *"on this machine I have the system level config and so many things including the project(s) itself but as much as I can configure the harness more and ecosystem and the project itself.. it takes time before getting started... THE pain point must be itentified with their root."* The custom-model layer's empirical justification is the **root-cause solution to the per-session alignment overhead**: when operator's standards are external to the model, every fresh environment pays alignment cost; when operator's standards are in the weights, alignment is a one-time training cost.
 
+> [!success]- **Evidence 13 — Compression-layer convergence: 6+ independent mechanisms at 6 distinct stack layers, each independently substitutable (cross-cutting axis, 2026-05-06)**
+>
+> Per the new sibling Layer-4 lesson [End-to-End Compression Across the AI Stack Composes Multiplicatively](end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers.md): the operator's compression-theme mission acquires its **cross-cutting empirical-substitutability evidence** — six structurally distinct compression mechanisms at six distinct stack layers, each independently substitutable per this lesson's per-layer discipline. This Evidence item is **not a 13th layer of the mission claim** (the mission claim layer count remains 4 + 1 candidate per Evidence 11–12); it is the **cross-cutting demonstration that compression as a substitutable practice has convergent paper evidence at every active stack layer**:
+>
+> | Compression layer | Operator-substitutable mechanisms (alphabetical, not exhaustive) |
+> |---|---|
+> | **Content source** | Browser Rendering `/markdown` REST API · Cloudflare Markdown for Agents (server-side opt-in, 80%) · Firecrawl (client-side scraper) · manual scrape · Workers AI `AI.toMarkdown()` |
+> | **Prompt / context** | Caveman (Lite/Full/Ultra/Wenyan-Full 80-90%) · GPT-4-summarize-then-prompt · LLMLingua · Microsoft GPT-Lingua |
+> | **Tool I/O** | LangGraph similar pattern · LlamaIndex · operator-built · Strands Agents intent-based (96%) |
+> | **Inter-agent / multi-agent** | Attention-based routing · MoE expert gating · RecursiveMAS cross-agent latent transfer (34.6-75.6%) |
+> | **Model weights** | BF16 baseline · FP8 · GGUF Q4_K_M · MXFP4 (gpt-oss-style) · Unsloth UD-IQ2 / Q2_K (87.5%) |
+> | **KV-cache + internal representation** | Attention sparsity · KV-cache asymmetric quantization (50-87%) · Qwen-Scope SAE sparse-feature representation · sliding-window attention |
+> | **Inference paradigm (cross-cutting)** | RLM (Recursive Language Models) — 2 orders-of-magnitude effective context expansion |
+>
+> **Key implication for the mission claim**: every compression layer has independently-substitutable mechanisms; **no single vendor controls multiple layers' compression simultaneously**. The mission's empirical-substitutability claim now has cross-cutting evidence beyond the 4-layer-+-1-candidate vertical structure (orchestrator × harness × provider × trust × custom-model-candidate) — compression as a horizontal axis cuts across vertical layers, each layer presenting its own substitutability. **For any production AI build, anti-vendor-lock-in compounds across both the vertical mission layers AND the horizontal compression layers.**
+
 ## Applicability
 
 > [!info] **When this lesson applies (decision matrix)**

@@ -78,6 +78,7 @@ Lessons that synthesize an entire domain's structural position.
 - [The pre-write hook prevents operator-Claude from racing the running agent on backlog files](01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-.md) — During an active `pnpm openarms agent run`, the methodology enforcement hooks (`pre-bash
 - [Three-layer autocomplete chain validated in production fleet operation](01_drafts/contributed/three-layer-autocomplete-chain-validated-in-production-fleet.md) — Context Engineering Standards' 8-step autocomplete chain maps cleanly to a three-layer runtime composition deployed i...
 - [Verify Before Contributing to External Knowledge Systems](01_drafts/contributed/verify-before-contributing-to-external-knowledge-systems.md) — When an agent writes to an external knowledge system via `gateway contribute` (lesson, correction, remark) or any equ...
+- [End-to-End Compression Across the AI Stack Composes Multiplicatively — 6+ Independent Mechanisms at 6 Distinct Layers, Each Substitutable Per Anti-Vendor-Lock-In](01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers.md) — By mid-2026, **at least six independent practitioners** — spanning open-source tool authors (Julius Brussee / Caveman...
 - [Execution Mode Is a Consumer Property, Not a Project Property — Guard Against Conflation Drift](01_drafts/execution-mode-is-consumer-property-not-project-property.md) — Execution mode (solo vs harness vs fleet) is a property of the **CONSUMER'S runtime**, not a property of the project
 - [Harness Engineering Is the Dominant Performance Lever](01_drafts/harness-engineering-is-the-dominant-performance-lever.md) — For LLM-based agentic systems, **the harness — not the model — is now the dominant performance lever**
 - [If You Can Verify, You Converge](01_drafts/if-you-can-verify-you-converge.md) — When a deterministic verification mechanism exists — a compiler, a schema validator, a test runner, a halting conditi...
@@ -163,4 +164,4 @@ Lessons that synthesize an entire domain's structural position.
 
 ## Tags
 
-`lesson`, `sister-project-applicable`, `layer-2`, `contributed`, `inbox`, `methodology`, `quality`, `failure-lesson`, `openarms`, `enforcement`, `agent-failure`, `second-brain`, `cross-domain`, `lesson-learned`, `llm-wiki`, `claude-code`, `skills`, `infrastructure`, `aspirational`, `compliance`
+`lesson`, `sister-project-applicable`, `layer-2`, `contributed`, `inbox`, `methodology`, `quality`, `failure-lesson`, `openarms`, `enforcement`, `agent-failure`, `second-brain`, `convergence`, `cross-domain`, `lesson-learned`, `llm-wiki`, `claude-code`, `skills`, `infrastructure`, `aspirational`
