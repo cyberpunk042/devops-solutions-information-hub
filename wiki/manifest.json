@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-06T23:01:31.468437+00:00",
+  "generated": "2026-05-08T23:25:37.072848+00:00",
   "stats": {
-    "pages": 605,
+    "pages": 611,
     "domains": 12,
-    "sources": 104,
+    "sources": 109,
     "comparisons": 9,
-    "relationships": 3759,
-    "tags_unique": 2275,
+    "relationships": 3811,
+    "tags_unique": 2342,
     "layers": {
       "3": 4,
       "5": 37,
       "6": 26,
-      "2": 74,
+      "2": 75,
       "4": 67,
       "0": 1,
-      "1": 75,
+      "1": 80,
       "spine": 78
     },
     "maturity": {
-      "seed": 90,
+      "seed": 96,
       "growing": 326,
       "mature": 23
     }
@@ -18471,6 +18471,117 @@
       ]
     },
     {
+      "path": "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths.md",
+      "slug": "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths",
+      "title": "Lesson \u2014 Path-versatility doctrine: configs must work across machines via metadata-driven indirection (env vars, relative paths, parameters), not hardcoded absolute paths",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-06",
+      "updated": "2026-05-06",
+      "last_reviewed": "2026-05-06",
+      "tags": [
+        "lesson",
+        "path-versatility",
+        "metadata-driven-configs",
+        "env-indirection",
+        "hardcoded-paths-anti-pattern",
+        "cross-machine-portability",
+        "sister-project-applicable",
+        "layer-2",
+        "p1-application",
+        "p4-application",
+        "infrastructure-not-instructions",
+        "mission-2026-05-06",
+        "${CLAUDE_PROJECT_DIR}",
+        "$HOME"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive-2026-05-05-versatility",
+          "type": "file",
+          "file": "raw/notes/2026-05-05-thorough-review-context-engineering-versatility-and-network-spec-note.md",
+          "description": "Operator-explicit 2026-05-05 directive \u2014 versatility / metadata-driven-configs / *'we do configs smart with proper metadata and parameters and relatives info and logic'*; named at least 1 lesson at /opt/.../wiki/lessons/ as the deliverable"
+        },
+        {
+          "id": "operator-directive-2026-05-06-fix-now",
+          "type": "file",
+          "file": "wiki/log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring.md",
+          "description": "Operator-explicit 2026-05-06 \u2014 *'we are coming from another system that the second-brain is inside /opt... we should just support it.. we have a relative / flexible strategy.. we need to fix this now. usualy there is the $HOME variable for example'*; triggered Stop hook fix using ${CLAUDE_PROJECT_DIR} env-indirection"
+        },
+        {
+          "id": "empirical-stop-hook-fix",
+          "type": "wiki",
+          "file": ".claude/hooks/end-of-cycle-stamp.sh",
+          "description": "Empirical anchor \u2014 line 35 changed from `Path('/opt/devops-solutions-information-hub')` to `Path(os.environ.get('CLAUDE_PROJECT_DIR', '/opt/devops-solutions-information-hub'))`; settings.json line 164 updated in parallel; loop bug ended"
+        },
+        {
+          "id": "empirical-six-hook-completion",
+          "type": "wiki",
+          "file": ".claude/settings.json",
+          "description": "Empirical anchor \u2014 6 additional hook command paths (PreWebFetch, PreBash, SessionStart\u00d72, PostCompact\u00d72) swapped to ${CLAUDE_PROJECT_DIR}; PostCompact failure on /compact event revealed the gap; pre-bash hook live-fired post-fix proving env-indirection works"
+        },
+        {
+          "id": "principle-1",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement.md",
+          "description": "P1 \u2014 env-indirection IS infrastructure (resolved by harness/shell deterministically); 'remember to fix paths' would be prose at ~25% compliance"
+        },
+        {
+          "id": "principle-4",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md",
+          "description": "P4 \u2014 the Stop hook fix declared 'use env-indirection' but didn't verify all hooks did; PostCompact failure was the verification gap; completing the fix verified P4"
+        },
+        {
+          "id": "feedback-root-propagates",
+          "type": "notes",
+          "file": "~/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/feedback_root_propagates_agent_config_dont_author_project_local.md",
+          "description": "Companion memory \u2014 when root-ghostproxy propagates agent-config across machines, the propagated configs themselves need path-flexibility; this lesson is the doctrine that propagated configs must implement"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Path-Versatility Doctrine",
+        "Metadata-Driven Path Indirection",
+        "Configs Across Machines Lesson",
+        "Hardcoded Absolute Paths Anti-Pattern"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Lesson \u2014 Fake Blockers Vs Real Blockers"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Lesson \u2014 Broken-and-Idle"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Pattern \u2014 Agent Modes"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Project Self-Identification Protocol"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "root-ghostproxy SFIF Rollout Epic"
+        }
+      ]
+    },
+    {
       "path": "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work.md",
       "slug": "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work",
       "title": "Saturation Declarations Are P4 Aspirational \u2014 Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal",
@@ -33952,6 +34063,138 @@
       ]
     },
     {
+      "path": "sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context.md",
+      "slug": "sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context",
+      "title": "Synthesis \u2014 Claude Code Skill Chaining (YouTube, 2026): Three Layers (Context Fork \u00b7 File Handoff \u00b7 ! Commands) Achieve 85% Less Context Burn \u2014 51K \u2192 5-8K Tokens",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-08",
+      "updated": "2026-05-08",
+      "last_reviewed": "2026-05-08",
+      "tags": [
+        "synthesis",
+        "claude-code",
+        "skills",
+        "skill-chaining",
+        "context-fork",
+        "file-handoff",
+        "exclamation-commands",
+        "parse-time-substitution",
+        "85-percent-context-reduction",
+        "lead-research-pipeline-example",
+        "mission-2026-05-08",
+        "layer-1",
+        "m003-input-boundary-practice",
+        "sub-agent-fork-yaml",
+        "layer-3-tool-io-compression",
+        "layer-4-inter-agent-isolation"
+      ],
+      "sources": [
+        {
+          "id": "youtube-skill-chaining-85-percent",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=JdqJ2ekWt8M",
+          "file": "raw/transcripts/i-finally-solved-claude-code-skill-chaining-85-less-context.txt",
+          "description": "YouTube video \u2014 'I Finally Solved Claude Code Skill Chaining (85% Less Context)' \u2014 three-layer pattern: (1) context fork in YAML frontmatter; (2) file handoff via temp directory + JSON dumps between sub-skills; (3) ! exclamation commands for programmatic file substitution at parse time (zero tokens). Empirical: V1 monolith skill burned 51K tokens; V2 chained version burned 5-8K \u2014 85% reduction on a lead-research pipeline."
+        },
+        {
+          "id": "anthropic-skills-docs",
+          "type": "documentation",
+          "url": "https://docs.anthropic.com/en/docs/build-with-claude/agent-skills",
+          "description": "Anthropic Agent Skills documentation \u2014 official source for skill YAML frontmatter spec, subagent invocation patterns, fork settings"
+        },
+        {
+          "id": "philschmid-subagent-patterns-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams.md",
+          "description": "Phil Schmid Four Subagent Patterns \u2014 this skill-chaining technique IS Pattern 1 (Inline Tool with isolated context) operationally; provides empirical 85% reduction anchor"
+        },
+        {
+          "id": "multi-layer-compression-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers.md",
+          "description": "Multi-Layer Compression Lesson \u2014 this technique operates at Layer 4 (Inter-agent / multi-agent \u2014 context isolation) AND Layer 3 (Tool I/O \u2014 minimal payload between sub-skills) AND Layer 2 (Prompt \u2014 programmatic substitution); cross-layer Claude-Code-specific implementation"
+        },
+        {
+          "id": "strands-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-strands-agents-aws-intent-based-tool-design-96-percent-token-reduction.md",
+          "description": "Strands Agents Synthesis \u2014 sister Layer-3 (Tool I/O) compression technique; intent-based tool design = 96% reduction at the tool definition level; this skill chaining = 85% reduction at the workflow orchestration level"
+        },
+        {
+          "id": "custom-model-concept",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md",
+          "description": "Custom-Tailored Model Group Concept \u2014 M003 (Recreated Intelligence Layer at I/O Boundaries) input-boundary practices include workflow orchestration; this technique is one input-boundary substrate"
+        },
+        {
+          "id": "agent-modes-pattern",
+          "type": "wiki",
+          "file": "wiki/patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles.md",
+          "description": "Agent Modes Pattern \u2014 modes are persona-overlay; this skill-chaining technique is workflow-level (within a mode); compose orthogonally"
+        },
+        {
+          "id": "anti-vendor-lock-in-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
+          "description": "Anti-Vendor-Lock-In Lesson \u2014 Claude Code skill chaining is one of multiple workflow-orchestration substrates (alongside LangGraph, AutoGen, CrewAI, operator-built); operator-substitutable per harness"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Claude Code Skill Chaining Synthesis",
+        "85% Context Reduction via Fork+Files+Commands",
+        "Three-Layer Skill Chaining Pattern",
+        "Subagent Fork Pattern in Claude Code"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Phil Schmid Four Subagent Patterns"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Multi-Layer Compression Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Custom-Tailored Model Group Concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Path-Versatility Doctrine"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Strands Agents Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Agent Modes Pattern"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Goldilocks Protocol"
+        }
+      ]
+    },
+    {
       "path": "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17.md",
       "slug": "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17",
       "title": "Synthesis \u2014 Cloudflare Agent Memory (Apr 17 2026): 5-Channel RRF Retrieval + Multi-Stage Ingestion Pipeline = Solving Context Rot for Long-Running AI Agents",
@@ -35089,6 +35332,143 @@
         {
           "verb": "RELATES TO",
           "target": "LightRAG"
+        }
+      ]
+    },
+    {
+      "path": "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04.md",
+      "slug": "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04",
+      "title": "Synthesis \u2014 Google TPU + UCSD DFlash (May 4 2026): Diffusion-Style Speculative Decoding Achieves 3.13\u00d7 Average / 6\u00d7 Peak Speedup on TPU v5p \u2014 O(1) Block Drafting Replaces O(K) Sequential",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-08",
+      "updated": "2026-05-08",
+      "last_reviewed": "2026-05-08",
+      "tags": [
+        "synthesis",
+        "dflash",
+        "diffusion-style-speculative-decoding",
+        "tpu",
+        "google-tpu",
+        "ucsd",
+        "z-lab",
+        "block-diffusion",
+        "vllm",
+        "eagle-3-comparison",
+        "k-flat-verification",
+        "draft-quality-over-quantity",
+        "mission-2026-05-08",
+        "layer-1",
+        "mission-relevant-compression-mechanism",
+        "inference-paradigm-layer",
+        "open-source",
+        "paper-grade-evidence"
+      ],
+      "sources": [
+        {
+          "id": "google-developers-blog-2026-05-04",
+          "type": "article",
+          "url": "https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/",
+          "file": "raw/articles/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion.md",
+          "description": "Google Developers Blog 2026-05-04 \u2014 Weiren Yu (PM) + Yarong Mu + Lihao Ran (Google Cloud) + Zhaoxiang Feng + Yiming Zhao + Hao Zhang (UCSD) \u2014 TPU Builder Program partnership; integration of UCSD's DFlash (Zhijian Liu, Jian Chen et al, Z Lab @ UCSD) into vLLM tpu-inference. 3.13\u00d7 average / 6\u00d7 peak math speedup on TPU v5p. 2.29\u00d7 end-to-end vs 1.30\u00d7 for EAGLE-3 on Llama-3.1-8B."
+        },
+        {
+          "id": "vllm-tpu-prs",
+          "type": "documentation",
+          "url": "https://github.com/vllm-project/vllm/",
+          "description": "Open-source PRs: #1868 (DFlash Model + Proposer) \u00b7 #1869 (E2E pipeline integration) \u00b7 #1870 (CI + E2E testing). Public, mergeable, reviewable."
+        },
+        {
+          "id": "dflash-paper-z-lab",
+          "type": "documentation",
+          "url": "https://huggingface.co/z-lab",
+          "description": "Z Lab @ UCSD HuggingFace \u2014 z-lab/LLaMA3.1-8B-Instruct-DFlash-UltraChat (DFlash draft K=10), z-lab/Qwen3-4B-DFlash-b16 (DFlash draft K=16) \u2014 open-weight checkpoints"
+        },
+        {
+          "id": "trust-layer-concept",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md",
+          "description": "Trust-Layer Concept \u2014 DFlash adds another mechanism at the inference-architecture layer; composes with operator's compression-theme mission"
+        },
+        {
+          "id": "multi-layer-compression-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers.md",
+          "description": "Multi-Layer Compression Lesson \u2014 DFlash is the 12th mechanism; operates at the inference-paradigm cross-cutting layer (similar to RLM); represents a substantive new mechanism class \u2014 drafting-time compression via parallel block diffusion"
+        },
+        {
+          "id": "anti-vendor-lock-in-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
+          "description": "Anti-Vendor-Lock-In Lesson \u2014 TPU v5p adds another hardware-vendor option (alongside NVIDIA H100/H200, AMD, Intel); DFlash is open-source via vLLM; cross-cutting reduces hardware lock-in for inference-speed-critical workloads"
+        },
+        {
+          "id": "deepseek-v4-dsa-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04.md",
+          "description": "DeepSeek V4 DSA Synthesis \u2014 sibling speculative-decoding-adjacent compression mechanism (KV-cache + attention layer); together with DFlash they cover both directions: DSA reduces target-model verification cost; DFlash reduces drafter cost"
+        },
+        {
+          "id": "rlm-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-recursive-language-models-mit-oasys.md",
+          "description": "RLM Synthesis \u2014 paradigm-level compression (recursive context expansion); DFlash is paradigm-level compression at the drafting layer (parallel block instead of sequential); both are structural, not parametric, compression"
+        },
+        {
+          "id": "custom-model-concept",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md",
+          "description": "Custom-Tailored Model Group Concept \u2014 M003 Recreated Intelligence Layer needs inference-speed primitives at the I/O boundary; DFlash + DSA + RLM + AI Gateway failover compose into the M003 inference-speed substrate"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "DFlash TPU Synthesis",
+        "Diffusion-Style Speculative Decoding",
+        "Block-Diffusion Drafting",
+        "K-Flat Verification",
+        "Quality-Over-Quantity Speculation Theory"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Multi-Layer Compression Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Custom-Tailored Model Group Concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Trust-Layer Concept"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "DeepSeek V4 DSA Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "RLM Synthesis"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Goldilocks Protocol"
         }
       ]
     },
@@ -36487,6 +36867,129 @@
       ]
     },
     {
+      "path": "sources/tools-integration/src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams.md",
+      "slug": "sources/tools-integration/src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams",
+      "title": "Synthesis \u2014 Phil Schmid (May 5 2026): Four Subagents Patterns in 2026 \u2014 Inline Tool \u00b7 Fan-Out \u00b7 Agent Pool \u00b7 Teams (Ordered by Main-Agent Control over Subagent Lifecycle)",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-08",
+      "updated": "2026-05-08",
+      "last_reviewed": "2026-05-08",
+      "tags": [
+        "synthesis",
+        "philschmid",
+        "subagents",
+        "agent-orchestration",
+        "inline-tool",
+        "fan-out",
+        "agent-pool",
+        "teams",
+        "multi-agent-systems",
+        "mission-2026-05-08",
+        "m003-recreated-intelligence-layer",
+        "model-capability-tiered",
+        "layer-1"
+      ],
+      "sources": [
+        {
+          "id": "philschmid-blog-2026-05-05",
+          "type": "article",
+          "url": "https://www.philschmid.de/subagent-patterns-2026",
+          "file": "raw/articles/how-agents-manage-other-agents-four-subagents-patterns-in-2026.md",
+          "description": "Phil Schmid's 2026-05-05 follow-up to his prior subagents post \u2014 four patterns ordered by main-agent control over subagent lifecycle: (1) Inline Tool (call_agent), (2) Fan-Out (spawn_agent + wait_agent), (3) Agent Pool (spawn + send_message + wait + list + kill), (4) Teams (cross-agent send_message; agents talk to each other). Each step up requires a more capable model."
+        },
+        {
+          "id": "custom-model-concept",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md",
+          "description": "Custom-Tailored Model Group Concept \u2014 M003 Recreated Intelligence Layer at I/O Boundaries explicitly named subagent dispatch + inter-agent latent transfer as substantive practices; Phil Schmid's quartet maps onto M003's operator-substitutable orchestration choices"
+        },
+        {
+          "id": "recursivemas-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026.md",
+          "description": "RecursiveMAS Synthesis \u2014 paper-grade evidence for Pattern 4 (Teams) substitutable; cross-agent latent transfer is RecursiveMAS's contribution; Phil Schmid's pattern names are the practitioner-ready vocabulary"
+        },
+        {
+          "id": "agent-modes-pattern",
+          "type": "wiki",
+          "file": "wiki/patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles.md",
+          "description": "Agent Modes Pattern \u2014 agent modes are PERSONA overlay on the SAME agent; subagent patterns are SEPARATE agents. Sister structurally; modes pick lens, subagents fan-out work"
+        },
+        {
+          "id": "anti-vendor-lock-in-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
+          "description": "Anti-Vendor-Lock-In Lesson \u2014 orchestrator-layer substitutability now has 4 named patterns within a single vendor's surface; pattern choice is operator-controllable per workload"
+        },
+        {
+          "id": "multi-layer-compression-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers.md",
+          "description": "Multi-Layer Compression Lesson \u2014 Pattern 1 (Inline Tool with isolated context) and Pattern 4 (Teams with main-agent context staying clean) are Layer 4 (Inter-agent) compression mechanisms; subagent isolation reduces main-agent context pressure"
+        },
+        {
+          "id": "claude-code-skill-chaining-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context.md",
+          "description": "Claude Code Skill Chaining Synthesis \u2014 operationally implements Pattern 1 (Inline Tool \u2014 context fork) + file-handoff between sub-skills; concrete instantiation of Phil Schmid's Pattern 1 with empirical 85% context reduction"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Four Subagents Patterns 2026",
+        "Phil Schmid Subagent Patterns Synthesis",
+        "Inline Fan-Out Pool Teams Pattern Quartet",
+        "Subagent Lifecycle Patterns"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Custom-Tailored Model Group Concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Multi-Layer Compression Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "RecursiveMAS Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Agent Modes Pattern"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Claude Code Skill Chaining Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Strands Agents Synthesis"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Goldilocks Protocol"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        }
+      ]
+    },
+    {
       "path": "sources/tools-integration/src-playwright-cli-vs-mcp.md",
       "slug": "sources/tools-integration/src-playwright-cli-vs-mcp",
       "title": "Synthesis \u2014 Playwright CLI vs MCP \u2014 Automate QA with Less Tokens",
@@ -36877,6 +37380,159 @@
         {
           "verb": "FEEDS INTO",
           "target": "2026 Consumer Hardware AI Stack"
+        }
+      ]
+    },
+    {
+      "path": "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms.md",
+      "slug": "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms",
+      "title": "Synthesis \u2014 Quantization (YouTube, 2026): How a 280GB Model Runs on Your Laptop \u2014 Outliers as Central Villain \u00b7 5 Algorithms \u00b7 Bell-Curve Per-Group Scaling \u00b7 NF4 Smart Grid",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-08",
+      "updated": "2026-05-08",
+      "last_reviewed": "2026-05-08",
+      "tags": [
+        "synthesis",
+        "quantization",
+        "outliers",
+        "llm-int8",
+        "smoothquant",
+        "gptq",
+        "awq",
+        "gguf",
+        "k-quants",
+        "nf4",
+        "q4km",
+        "q2k",
+        "ud-iq2",
+        "weight-compression",
+        "layer-5-compression",
+        "mission-2026-05-08",
+        "layer-1",
+        "paper-grade",
+        "dettmers",
+        "consumer-hardware",
+        "rtx-3090-substrate",
+        "anti-vendor-lock-in-evidence"
+      ],
+      "sources": [
+        {
+          "id": "youtube-quantization-280gb",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=Quj3M5gqxT8",
+          "file": "raw/transcripts/how-your-laptop-can-run-a-280-gb-ai-model-quantization.txt",
+          "description": "YouTube video \u2014 pedagogical synthesis of LLM quantization: Tim Dettmers' 6.7B-param outlier-emergence threshold; bell-curve weight distributions; per-group scaling; NF4 quantile-based grid; 5 production algorithms (LLM.int8 / SmoothQuant / GPTQ / AWQ / GGUF K-quants) all addressing outliers; concrete Llama-3 8B benchmarks; Q4KM format decoded character-by-character"
+        },
+        {
+          "id": "dettmers-llm-int8-paper",
+          "type": "documentation",
+          "url": "https://arxiv.org/abs/2208.07339",
+          "description": "Tim Dettmers et al \u2014 LLM.int8() \u2014 8-bit matrix multiplication for transformers at scale (the paper that surfaced outlier emergence at 6.7B parameters)"
+        },
+        {
+          "id": "nf4-qlora-paper",
+          "type": "documentation",
+          "url": "https://arxiv.org/abs/2305.14314",
+          "description": "Dettmers et al \u2014 QLoRA \u2014 NF4 (NormalFloat4) quantization with quantile-based grid placement for normal-distribution weights"
+        },
+        {
+          "id": "smoothquant-paper",
+          "type": "documentation",
+          "url": "https://arxiv.org/abs/2211.10438",
+          "description": "Xiao et al \u2014 SmoothQuant \u2014 algebraic identity to migrate outliers from activations to weights (X\u00b7W = (X/s)\u00b7(s\u00b7W))"
+        },
+        {
+          "id": "gptq-paper",
+          "type": "documentation",
+          "url": "https://arxiv.org/abs/2210.17323",
+          "description": "Frantar et al \u2014 GPTQ \u2014 column-wise quantization with rounding-error redistribution"
+        },
+        {
+          "id": "awq-paper",
+          "type": "documentation",
+          "url": "https://arxiv.org/abs/2306.00978",
+          "description": "Lin et al \u2014 AWQ \u2014 activation-weighted quantization; identifies salient weight channels (1%) and scales them up before rounding"
+        },
+        {
+          "id": "ggml-gguf-spec",
+          "type": "documentation",
+          "url": "https://github.com/ggerganov/llama.cpp",
+          "description": "GGUF / llama.cpp \u2014 K-quants format; per-group scaling with two-level block structure"
+        },
+        {
+          "id": "unsloth-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md",
+          "description": "Unsloth Synthesis \u2014 production deployment of UD-IQ2 / Q2_K weight quantization on consumer hardware (RTX 3090 24GB); this synthesis documents the algorithmic foundation Unsloth implements"
+        },
+        {
+          "id": "multi-layer-compression-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers.md",
+          "description": "Multi-Layer Compression Lesson \u2014 quantization is Layer 5 (Model weights); this synthesis enriches Layer 5 with 5-algorithm-convergence evidence (all addressing the same outlier root-cause through different mechanisms)"
+        },
+        {
+          "id": "anti-vendor-lock-in-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
+          "description": "Anti-Vendor-Lock-In Lesson \u2014 Layer 5 weight-quantization substitutability axis: 5 production algorithms + multiple format families (BF16 / FP8 / INT8 / GGUF Q4 / GPTQ / AWQ / NF4 / Q2_K / UD-IQ2 / FP4 microscaling / Bitnet ternary)"
+        },
+        {
+          "id": "custom-model-concept",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md",
+          "description": "Custom-Tailored Model Group Concept \u2014 M002 specialist LoRA on RTX 3090 needs Q4KM-class quantization to fit 27B-class bases; this synthesis documents the substrate"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Quantization Outliers Central Villain",
+        "5 Quantization Algorithms Synthesis",
+        "NF4 Smart Grid",
+        "Q4KM Format Decoded",
+        "GGUF K-Quants Per-Group"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Multi-Layer Compression Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Custom-Tailored Model Group Concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Unsloth Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "DFlash TPU Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "DeepSeek V4 DSA Synthesis"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Goldilocks Protocol"
         }
       ]
     },
@@ -38766,6 +39422,123 @@
         {
           "verb": "FEEDS INTO",
           "target": "Model \u2014 Methodology"
+        }
+      ]
+    },
+    {
+      "path": "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing.md",
+      "slug": "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing",
+      "title": "Synthesis \u2014 The Hidden Physics of LLMs: Retrieval as Thermodynamics (YouTube, 2026) \u2014 Phase-Space Mental Model + Softmax-as-Partition-Function Framing for Context Engineering Doctrine",
+      "type": "source-synthesis",
+      "domain": "wiki-methodology",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-05-08",
+      "updated": "2026-05-08",
+      "last_reviewed": "2026-05-08",
+      "tags": [
+        "synthesis",
+        "llm-pedagogy",
+        "mental-model",
+        "statistical-physics",
+        "phase-space",
+        "partition-function",
+        "softmax",
+        "temperature",
+        "attention",
+        "retrieval",
+        "rag",
+        "hallucination",
+        "context-engineering",
+        "doctrine",
+        "mission-2026-05-08",
+        "layer-1",
+        "pedagogical-substrate",
+        "cross-domain-applicable"
+      ],
+      "sources": [
+        {
+          "id": "youtube-hidden-physics-llms",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=ppCZfjLdSY8",
+          "file": "raw/transcripts/the-hidden-physics-of-llms-retrieval-as-thermodynamics.txt",
+          "description": "YouTube video \u2014 pedagogical framing of LLMs through statistical-physics analogies: weights as landscape topology, prompts as drop-points, generation as ball-rolling, attention as steering, softmax as partition function, temperature as thermal wiggle, retrieval as external magnetic field, hallucinations as flat-terrain phenomena"
+        },
+        {
+          "id": "broken-and-idle-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading.md",
+          "description": "Broken-and-idle lesson \u2014 fresh sessions need active orientation; the physics framing here gives the WHY: passive context = ball at flat plateau; active orientation = ball placed in a deep valley by structural prompt"
+        },
+        {
+          "id": "context-engineering-mlmastery-synth",
+          "type": "wiki",
+          "file": "wiki/sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide.md",
+          "description": "MLMastery Context Engineering Synthesis \u2014 companion practitioner reference; together with this physics framing, gives both the WHAT (anchored iterative summarization, retrieval, etc.) and the WHY (landscape shaping, external field, partition function)"
+        },
+        {
+          "id": "structured-context-principle",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/context-engineering/structured-context-is-proto-programming-for-ai-agents.md",
+          "description": "Structured-Context principle (Layer 3 validated) \u2014 structured context governs behavior more than content; the physics framing explains WHY: structured context is a deeper valley; ad-hoc prose is a flat plateau"
+        },
+        {
+          "id": "custom-model-concept",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md",
+          "description": "Custom-Tailored Model Group Concept \u2014 M003 (Recreated Intelligence Layer) + M004 (Behavioral Preference Fine-Tune) operate by reshaping the landscape; this physics framing is the doctrinal mental-model basis"
+        },
+        {
+          "id": "principle-2",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content.md",
+          "description": "P2 (Structured Context Governs Agent Behavior) \u2014 explained through the physics frame: structured context narrows the phase-space cloud; prose-only leaves a wide cloud"
+        },
+        {
+          "id": "trust-layer-concept",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md",
+          "description": "Trust-Layer Concept \u2014 the cypher / decypher / compression overlay is operator-substrate that deepens specific valleys (operator-controlled, behavioral-aligned regions) while maintaining anti-tamper isolation"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Hidden Physics of LLMs",
+        "LLM Phase Space Mental Model",
+        "Softmax as Partition Function",
+        "Retrieval as External Magnetic Field",
+        "Temperature as Thermal Wiggle"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Broken-and-Idle Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Structured-Context Layer-3 Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "MLMastery Context Engineering Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Custom-Tailored Model Group Concept"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Goldilocks Protocol"
         }
       ]
     },
@@ -45220,8 +45993,8 @@
       "relationship_count": 458
     },
     "cross-domain": {
-      "page_count": 265,
-      "relationship_count": 1682
+      "page_count": 266,
+      "relationship_count": 1689
     },
     "ai-models": {
       "page_count": 14,
@@ -45232,8 +46005,8 @@
       "relationship_count": 533
     },
     "tools-integration": {
-      "page_count": 34,
-      "relationship_count": 343
+      "page_count": 38,
+      "relationship_count": 381
     },
     "tools-and-platforms": {
       "page_count": 29,
@@ -45260,8 +46033,8 @@
       "relationship_count": 21
     },
     "wiki-methodology": {
-      "page_count": 4,
-      "relationship_count": 38
+      "page_count": 5,
+      "relationship_count": 45
     }
   },
   "tags": {
@@ -46121,6 +46894,7 @@
       "sources/obsidian-notebooklm/src-obsidian-claude-code-second-brain",
       "sources/src-cline-agentic-coding-ide-extension",
       "sources/tools-integration/src-claude-code-harness-features",
+      "sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
       "spine/models/agent-config/model-claude-code",
       "spine/models/agent-config/model-skills-commands-hooks",
@@ -46284,6 +47058,7 @@
       "log/2026-04-23-k2-6-q2-download-complete",
       "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
+      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms",
       "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion"
     ],
     "moe": [
@@ -46840,6 +47615,7 @@
       "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
       "domains/ai-models/local-llm-quantization",
       "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
+      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms",
       "sources/tools-integration/src-turboquant-122b-macbook",
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
     ],
@@ -47174,7 +47950,8 @@
     ],
     "doctrine": [
       "backlog/modules/e009-m004-harness-contract-document",
-      "lessons/03_validated/knowledge-systems/second-brain-and-projects-co-evolve-never-finished-doctrine"
+      "lessons/03_validated/knowledge-systems/second-brain-and-projects-co-evolve-never-finished-doctrine",
+      "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing"
     ],
     "e010": [
       "backlog/modules/e010-m001-64gb-ram-install-and-verify",
@@ -47514,6 +48291,7 @@
       "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee",
       "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
       "sources/tools-integration/src-claude-code-harness-features",
+      "sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context",
       "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
       "sources/tools-integration/src-multica-managed-agents-platform",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
@@ -47981,7 +48759,8 @@
       "decisions/02_validated/knowledge/wiki-first-with-lightrag-upgrade-path",
       "domains/knowledge-systems/wiki-core/lightrag",
       "lessons/03_validated/knowledge-systems/graph-enhanced-retrieval-bridges-wiki-and-vector-search",
-      "sources/src-7-levels-claude-code-rag"
+      "sources/src-7-levels-claude-code-rag",
+      "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing"
     ],
     "hybrid-search": [
       "comparisons/agentic-search-vs-vector-search",
@@ -48211,6 +48990,7 @@
       "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
       "lessons/01_drafts/if-you-can-verify-you-converge",
       "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
+      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths",
       "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work",
       "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
@@ -48629,6 +49409,7 @@
     ],
     "vllm": [
       "decisions/01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration",
+      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04",
       "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
     ],
     "infrastructure": [
@@ -48996,6 +49777,7 @@
       "sources/claude-code/src-shanraisshan-claude-code-best-practice",
       "sources/claude-code/src-superpowers-end-of-vibe-coding",
       "sources/tools-integration/src-claude-code-harness-features",
+      "sources/tools-integration/src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams",
       "sources/tools-integration/src-playwright-mcp-visual-testing"
     ],
     "workflows": [
@@ -49056,6 +49838,7 @@
       "sources/src-bmad-method-agile-ai-development-framework",
       "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
       "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys",
+      "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing",
       "sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide",
       "spine/models/depth/model-context-engineering",
       "spine/standards/model-standards/model-context-engineering-standards"
@@ -49186,7 +49969,8 @@
       "sources/claude-code/src-harness-engineering"
     ],
     "agent-orchestration": [
-      "domains/ai-agents/orchestration/harness-engineering"
+      "domains/ai-agents/orchestration/harness-engineering",
+      "sources/tools-integration/src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams"
     ],
     "spec-driven": [
       "domains/ai-agents/orchestration/harness-engineering",
@@ -49473,6 +50257,7 @@
       "domains/ai-models/local-llm-quantization",
       "log/2026-04-17/2026-04-17-session-summary",
       "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
+      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms",
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
       "spine/references/2026-consumer-hardware-ai-stack"
     ],
@@ -50501,7 +51286,8 @@
       "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
     ],
     "p4-application": [
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
+      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths"
     ],
     "rlm-thread": [
       "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
@@ -50622,6 +51408,7 @@
     ],
     "mission-2026-05-06": [
       "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
+      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths",
       "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17",
       "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements",
       "sources/tools-integration/src-cloudflare-ai-platform-unified-inference-layer-12-providers-automatic-failover-2026-04-16",
@@ -50706,6 +51493,85 @@
     ],
     "self": [
       "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability"
+    ],
+    "path-versatility": [
+      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths"
+    ],
+    "metadata-driven-configs": [
+      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths"
+    ],
+    "env-indirection": [
+      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths"
+    ],
+    "hardcoded-paths-anti-pattern": [
+      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths"
+    ],
+    "cross-machine-portability": [
+      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths"
+    ],
+    "sister-project-applicable": [
+      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths",
+      "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed",
+      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading",
+      "lessons/03_validated/enforcement-compliance/correction-as-calibration-not-swing-the-going-to-extremes-anti-pattern",
+      "lessons/03_validated/enforcement-compliance/refine-triggers-not-revoke-permissions-when-fixing-overzealous-rules",
+      "lessons/03_validated/enforcement-compliance/second-brain-agent-must-respect-sister-project-boundaries-no-direct-cross-project-file-edits",
+      "lessons/03_validated/enforcement-compliance/verbal-acknowledgment-is-not-a-fix-bug-fix-requires-structural-artefact",
+      "lessons/03_validated/knowledge-systems/second-brain-and-projects-co-evolve-never-finished-doctrine",
+      "lessons/03_validated/methodology-process/agent-bug-fix-flow-must-be-mechanical-log-analyze-identify-fix-verify-confirm",
+      "lessons/03_validated/methodology-process/autopilot-loop-batch-accumulator-pattern-empirically-validated",
+      "lessons/03_validated/methodology-process/compound-waterfall-input-retention-rule-cumulative-not-discarded",
+      "lessons/03_validated/methodology-process/decision-presentation-discipline-context-guidance-recommendation",
+      "lessons/03_validated/methodology-process/multi-branch-parallel-driving-options-mean-evaluate-not-freeze",
+      "lessons/03_validated/methodology-process/sidetrack-detection-and-recovery-when-agent-loses-the-original-task",
+      "lessons/03_validated/methodology-process/structural-but-not-surfaced-failure-mode-fix-must-reach-the-operator-at-use-time",
+      "lessons/03_validated/methodology-process/systemic-bugs-tracker-as-dedicated-governance-register-distinct-from-blockers-decisions-findings",
+      "lessons/03_validated/methodology-quality/anti-minimizing-systemic-bug-counts-and-blocker-filter-discipline",
+      "lessons/03_validated/methodology-quality/bug-vs-systemic-bug-nuance-systemic-bugs-live-at-the-meta-level-harness-ecosystem-brain-files",
+      "lessons/03_validated/methodology-quality/fake-blockers-vs-real-blockers-empirical-verification-required",
+      "lessons/03_validated/tools-architecture/hook-scope-machine-vs-project-level-cross-firing-anti-pattern",
+      "lessons/04_principles/hypothesis/spec-driven-evolution-the-project-evolves-its-own-spec-to-fix-bugs-it-exhibits",
+      "patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles",
+      "patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report"
+    ],
+    "layer-2": [
+      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths",
+      "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed",
+      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading",
+      "lessons/03_validated/enforcement-compliance/correction-as-calibration-not-swing-the-going-to-extremes-anti-pattern",
+      "lessons/03_validated/enforcement-compliance/refine-triggers-not-revoke-permissions-when-fixing-overzealous-rules",
+      "lessons/03_validated/enforcement-compliance/second-brain-agent-must-respect-sister-project-boundaries-no-direct-cross-project-file-edits",
+      "lessons/03_validated/enforcement-compliance/verbal-acknowledgment-is-not-a-fix-bug-fix-requires-structural-artefact",
+      "lessons/03_validated/knowledge-systems/second-brain-and-projects-co-evolve-never-finished-doctrine",
+      "lessons/03_validated/methodology-process/agent-bug-fix-flow-must-be-mechanical-log-analyze-identify-fix-verify-confirm",
+      "lessons/03_validated/methodology-process/autopilot-loop-batch-accumulator-pattern-empirically-validated",
+      "lessons/03_validated/methodology-process/compound-waterfall-input-retention-rule-cumulative-not-discarded",
+      "lessons/03_validated/methodology-process/decision-presentation-discipline-context-guidance-recommendation",
+      "lessons/03_validated/methodology-process/multi-branch-parallel-driving-options-mean-evaluate-not-freeze",
+      "lessons/03_validated/methodology-process/sidetrack-detection-and-recovery-when-agent-loses-the-original-task",
+      "lessons/03_validated/methodology-process/structural-but-not-surfaced-failure-mode-fix-must-reach-the-operator-at-use-time",
+      "lessons/03_validated/methodology-process/systemic-bugs-tracker-as-dedicated-governance-register-distinct-from-blockers-decisions-findings",
+      "lessons/03_validated/methodology-quality/anti-minimizing-systemic-bug-counts-and-blocker-filter-discipline",
+      "lessons/03_validated/methodology-quality/bug-vs-systemic-bug-nuance-systemic-bugs-live-at-the-meta-level-harness-ecosystem-brain-files",
+      "lessons/03_validated/methodology-quality/fake-blockers-vs-real-blockers-empirical-verification-required",
+      "lessons/03_validated/tools-architecture/hook-scope-machine-vs-project-level-cross-firing-anti-pattern",
+      "lessons/04_principles/hypothesis/spec-driven-evolution-the-project-evolves-its-own-spec-to-fix-bugs-it-exhibits",
+      "log/2026-05-05-handoff-to-root-session",
+      "log/2026-05-05-orient-pair-adoption-decision",
+      "patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles",
+      "patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report"
+    ],
+    "p1-application": [
+      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths"
+    ],
+    "infrastructure-not-instructions": [
+      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths"
+    ],
+    "${CLAUDE_PROJECT_DIR}": [
+      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths"
+    ],
+    "$HOME": [
+      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths"
     ],
     "saturation": [
       "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work"
@@ -50820,56 +51686,6 @@
     ],
     "self-blocking": [
       "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed"
-    ],
-    "sister-project-applicable": [
-      "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed",
-      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading",
-      "lessons/03_validated/enforcement-compliance/correction-as-calibration-not-swing-the-going-to-extremes-anti-pattern",
-      "lessons/03_validated/enforcement-compliance/refine-triggers-not-revoke-permissions-when-fixing-overzealous-rules",
-      "lessons/03_validated/enforcement-compliance/second-brain-agent-must-respect-sister-project-boundaries-no-direct-cross-project-file-edits",
-      "lessons/03_validated/enforcement-compliance/verbal-acknowledgment-is-not-a-fix-bug-fix-requires-structural-artefact",
-      "lessons/03_validated/knowledge-systems/second-brain-and-projects-co-evolve-never-finished-doctrine",
-      "lessons/03_validated/methodology-process/agent-bug-fix-flow-must-be-mechanical-log-analyze-identify-fix-verify-confirm",
-      "lessons/03_validated/methodology-process/autopilot-loop-batch-accumulator-pattern-empirically-validated",
-      "lessons/03_validated/methodology-process/compound-waterfall-input-retention-rule-cumulative-not-discarded",
-      "lessons/03_validated/methodology-process/decision-presentation-discipline-context-guidance-recommendation",
-      "lessons/03_validated/methodology-process/multi-branch-parallel-driving-options-mean-evaluate-not-freeze",
-      "lessons/03_validated/methodology-process/sidetrack-detection-and-recovery-when-agent-loses-the-original-task",
-      "lessons/03_validated/methodology-process/structural-but-not-surfaced-failure-mode-fix-must-reach-the-operator-at-use-time",
-      "lessons/03_validated/methodology-process/systemic-bugs-tracker-as-dedicated-governance-register-distinct-from-blockers-decisions-findings",
-      "lessons/03_validated/methodology-quality/anti-minimizing-systemic-bug-counts-and-blocker-filter-discipline",
-      "lessons/03_validated/methodology-quality/bug-vs-systemic-bug-nuance-systemic-bugs-live-at-the-meta-level-harness-ecosystem-brain-files",
-      "lessons/03_validated/methodology-quality/fake-blockers-vs-real-blockers-empirical-verification-required",
-      "lessons/03_validated/tools-architecture/hook-scope-machine-vs-project-level-cross-firing-anti-pattern",
-      "lessons/04_principles/hypothesis/spec-driven-evolution-the-project-evolves-its-own-spec-to-fix-bugs-it-exhibits",
-      "patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles",
-      "patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report"
-    ],
-    "layer-2": [
-      "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed",
-      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading",
-      "lessons/03_validated/enforcement-compliance/correction-as-calibration-not-swing-the-going-to-extremes-anti-pattern",
-      "lessons/03_validated/enforcement-compliance/refine-triggers-not-revoke-permissions-when-fixing-overzealous-rules",
-      "lessons/03_validated/enforcement-compliance/second-brain-agent-must-respect-sister-project-boundaries-no-direct-cross-project-file-edits",
-      "lessons/03_validated/enforcement-compliance/verbal-acknowledgment-is-not-a-fix-bug-fix-requires-structural-artefact",
-      "lessons/03_validated/knowledge-systems/second-brain-and-projects-co-evolve-never-finished-doctrine",
-      "lessons/03_validated/methodology-process/agent-bug-fix-flow-must-be-mechanical-log-analyze-identify-fix-verify-confirm",
-      "lessons/03_validated/methodology-process/autopilot-loop-batch-accumulator-pattern-empirically-validated",
-      "lessons/03_validated/methodology-process/compound-waterfall-input-retention-rule-cumulative-not-discarded",
-      "lessons/03_validated/methodology-process/decision-presentation-discipline-context-guidance-recommendation",
-      "lessons/03_validated/methodology-process/multi-branch-parallel-driving-options-mean-evaluate-not-freeze",
-      "lessons/03_validated/methodology-process/sidetrack-detection-and-recovery-when-agent-loses-the-original-task",
-      "lessons/03_validated/methodology-process/structural-but-not-surfaced-failure-mode-fix-must-reach-the-operator-at-use-time",
-      "lessons/03_validated/methodology-process/systemic-bugs-tracker-as-dedicated-governance-register-distinct-from-blockers-decisions-findings",
-      "lessons/03_validated/methodology-quality/anti-minimizing-systemic-bug-counts-and-blocker-filter-discipline",
-      "lessons/03_validated/methodology-quality/bug-vs-systemic-bug-nuance-systemic-bugs-live-at-the-meta-level-harness-ecosystem-brain-files",
-      "lessons/03_validated/methodology-quality/fake-blockers-vs-real-blockers-empirical-verification-required",
-      "lessons/03_validated/tools-architecture/hook-scope-machine-vs-project-level-cross-firing-anti-pattern",
-      "lessons/04_principles/hypothesis/spec-driven-evolution-the-project-evolves-its-own-spec-to-fix-bugs-it-exhibits",
-      "log/2026-05-05-handoff-to-root-session",
-      "log/2026-05-05-orient-pair-adoption-decision",
-      "patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles",
-      "patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report"
     ],
     "fresh-session": [
       "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
@@ -51074,7 +51890,12 @@
       "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee",
       "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
       "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
+      "sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context",
+      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04",
+      "sources/tools-integration/src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams",
+      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms",
       "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd",
+      "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing",
       "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
     ],
     "research-engine": [
@@ -52422,6 +53243,7 @@
     ],
     "synthesis": [
       "patterns/03_validated/architecture/progressive-distillation",
+      "sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context",
       "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17",
       "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements",
       "sources/tools-integration/src-cloudflare-ai-platform-unified-inference-layer-12-providers-automatic-failover-2026-04-16",
@@ -52430,8 +53252,11 @@
       "sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23",
       "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04",
       "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents",
+      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04",
       "sources/tools-integration/src-lfm2-liquid-ai-frontier-small-models-edge-deployment-maxime-labonne",
       "sources/tools-integration/src-omnivoice-tts-600-languages",
+      "sources/tools-integration/src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams",
+      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms",
       "sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite",
       "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
       "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding",
@@ -52442,6 +53267,7 @@
       "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026",
       "sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle",
       "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port",
+      "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing",
       "sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy",
       "sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide"
     ],
@@ -53237,6 +54063,7 @@
     "open-source": [
       "sources/src-vercel-opensrc-toolkit",
       "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04",
+      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04",
       "sources/tools-integration/src-opencode-harness-features"
     ],
     "rust": [
@@ -53377,6 +54204,7 @@
     "retrieval": [
       "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing",
       "sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide"
     ],
     "deep-research-agents": [
@@ -53543,6 +54371,46 @@
     "1m-context": [
       "sources/tools-integration/src-claude-code-harness-features",
       "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04"
+    ],
+    "skill-chaining": [
+      "sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context"
+    ],
+    "context-fork": [
+      "sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context"
+    ],
+    "file-handoff": [
+      "sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context"
+    ],
+    "exclamation-commands": [
+      "sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context"
+    ],
+    "parse-time-substitution": [
+      "sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context"
+    ],
+    "85-percent-context-reduction": [
+      "sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context"
+    ],
+    "lead-research-pipeline-example": [
+      "sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context"
+    ],
+    "mission-2026-05-08": [
+      "sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context",
+      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04",
+      "sources/tools-integration/src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams",
+      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms",
+      "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing"
+    ],
+    "m003-input-boundary-practice": [
+      "sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context"
+    ],
+    "sub-agent-fork-yaml": [
+      "sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context"
+    ],
+    "layer-3-tool-io-compression": [
+      "sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context"
+    ],
+    "layer-4-inter-agent-isolation": [
+      "sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context"
     ],
     "cloudflare": [
       "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17",
@@ -53893,6 +54761,45 @@
     ],
     "tool-calling": [
       "sources/tools-integration/src-gemma4-searxng-openclaw"
+    ],
+    "dflash": [
+      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
+    ],
+    "diffusion-style-speculative-decoding": [
+      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
+    ],
+    "tpu": [
+      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
+    ],
+    "google-tpu": [
+      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
+    ],
+    "ucsd": [
+      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
+    ],
+    "z-lab": [
+      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
+    ],
+    "block-diffusion": [
+      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
+    ],
+    "eagle-3-comparison": [
+      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
+    ],
+    "k-flat-verification": [
+      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
+    ],
+    "draft-quality-over-quantity": [
+      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
+    ],
+    "mission-relevant-compression-mechanism": [
+      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
+    ],
+    "inference-paradigm-layer": [
+      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
+    ],
+    "paper-grade-evidence": [
+      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
     ],
     "apache-2-0": [
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
@@ -54327,6 +55234,31 @@
     "75-providers": [
       "sources/tools-integration/src-opencode-harness-features"
     ],
+    "philschmid": [
+      "sources/tools-integration/src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams"
+    ],
+    "inline-tool": [
+      "sources/tools-integration/src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams"
+    ],
+    "fan-out": [
+      "sources/tools-integration/src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams"
+    ],
+    "agent-pool": [
+      "sources/tools-integration/src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams"
+    ],
+    "teams": [
+      "sources/tools-integration/src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams"
+    ],
+    "multi-agent-systems": [
+      "sources/tools-integration/src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams",
+      "sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026"
+    ],
+    "m003-recreated-intelligence-layer": [
+      "sources/tools-integration/src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams"
+    ],
+    "model-capability-tiered": [
+      "sources/tools-integration/src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams"
+    ],
     "qa-automation": [
       "sources/tools-integration/src-playwright-cli-vs-mcp"
     ],
@@ -54456,6 +55388,55 @@
     "stateful-tool-env": [
       "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
     ],
+    "outliers": [
+      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms"
+    ],
+    "llm-int8": [
+      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms"
+    ],
+    "smoothquant": [
+      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms"
+    ],
+    "gptq": [
+      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms"
+    ],
+    "awq": [
+      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms"
+    ],
+    "k-quants": [
+      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms"
+    ],
+    "nf4": [
+      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms"
+    ],
+    "q4km": [
+      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms"
+    ],
+    "q2k": [
+      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms"
+    ],
+    "ud-iq2": [
+      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms",
+      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion"
+    ],
+    "weight-compression": [
+      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms"
+    ],
+    "layer-5-compression": [
+      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms"
+    ],
+    "paper-grade": [
+      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms"
+    ],
+    "dettmers": [
+      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms"
+    ],
+    "rtx-3090-substrate": [
+      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms"
+    ],
+    "anti-vendor-lock-in-evidence": [
+      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms"
+    ],
     "qwen3-5": [
       "sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite"
     ],
@@ -54486,9 +55467,6 @@
       "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
     ],
     "2-bit": [
-      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion"
-    ],
-    "ud-iq2": [
       "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion"
     ],
     "tool-calls": [
@@ -54541,9 +55519,6 @@
       "sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026"
     ],
     "mas": [
-      "sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026"
-    ],
-    "multi-agent-systems": [
       "sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026"
     ],
     "rlm-extension": [
@@ -54863,6 +55838,39 @@
     ],
     "ai-assisted-delivery": [
       "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd"
+    ],
+    "llm-pedagogy": [
+      "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing"
+    ],
+    "mental-model": [
+      "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing"
+    ],
+    "statistical-physics": [
+      "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing"
+    ],
+    "phase-space": [
+      "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing"
+    ],
+    "partition-function": [
+      "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing"
+    ],
+    "softmax": [
+      "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing"
+    ],
+    "temperature": [
+      "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing"
+    ],
+    "attention": [
+      "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing"
+    ],
+    "hallucination": [
+      "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing"
+    ],
+    "pedagogical-substrate": [
+      "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing"
+    ],
+    "cross-domain-applicable": [
+      "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing"
     ],
     "pedagogy": [
       "sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy"
@@ -55627,6 +56635,13 @@
       ]
     },
     {
+      "target": "Agent Modes Pattern",
+      "referenced_by": [
+        "Synthesis \u2014 Claude Code Skill Chaining (YouTube, 2026): Three Layers (Context Fork \u00b7 File Handoff \u00b7 ! Commands) Achieve 85% Less Context Burn \u2014 51K \u2192 5-8K Tokens",
+        "Synthesis \u2014 Phil Schmid (May 5 2026): Four Subagents Patterns in 2026 \u2014 Inline Tool \u00b7 Fan-Out \u00b7 Agent Pool \u00b7 Teams (Ordered by Main-Agent Control over Subagent Lifecycle)"
+      ]
+    },
+    {
       "target": "Agentic Search vs Vector Search Comparison",
       "referenced_by": [
         "Synthesis \u2014 Cavemem: Cross-Agent Persistent Memory for AI Coding Assistants (Julius Brussee, MIT-Licensed, Compressed-at-Rest SQLite + FTS5 + Vector Index + MCP Progressive Disclosure)"
@@ -55654,6 +56669,7 @@
         "2026-05-06 Session Handoff (Pre-Compaction) \u2014 Multi-Arc Research Sweep + Infrastructure Wiring (Stop Hook Fix \u00b7 root-ghostproxy Registration \u00b7 Firecrawl + Accept-Header Fallback Chain \u00b7 14+ Layer-1 Syntheses \u00b7 Layer-4 Compression Lesson \u00b7 Anti-Vendor-Lock-In Evidence 12-14)",
         "Synthesis \u2014 BrowseComp-Plus Paper Deep Dive: Fixed 100K Corpus, Tables 1-8 Across 11 LLMs \u00d7 5 Retrievers, Oracle 93.49%, Citation Quality, API Cost (arXiv 2508.06600 v1, Aug 2025)",
         "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)",
+        "Synthesis \u2014 Claude Code Skill Chaining (YouTube, 2026): Three Layers (Context Fork \u00b7 File Handoff \u00b7 ! Commands) Achieve 85% Less Context Burn \u2014 51K \u2192 5-8K Tokens",
         "Synthesis \u2014 Cloudflare Agent Memory (Apr 17 2026): 5-Channel RRF Retrieval + Multi-Stage Ingestion Pipeline = Solving Context Rot for Long-Running AI Agents",
         "Synthesis \u2014 Cloudflare Agents Week 2026 (Apr 14\u201320, 2026): Master Index of 26+ Announcements Across Compute \u00b7 Security \u00b7 Agent Toolbox \u00b7 Prototype-to-Production \u00b7 Agentic Web",
         "Synthesis \u2014 Cloudflare AI Platform (Apr 16 2026): Unified Inference Layer for 12+ Providers + 70+ Models with Automatic Failover + Bring-Your-Own-Model via Replicate Cog",
@@ -55661,11 +56677,14 @@
         "Synthesis \u2014 Cloudflare Mesh (Apr 14 2026): Private Networking for Users + Nodes + Agents + Workers \u2014 Direct root-ghostproxy Mission Overlap",
         "Synthesis \u2014 Cloudflare x402 + Coinbase Foundation (Sep 23 2025): HTTP 402 Payment Required as Machine-Readable Payment Negotiation Layer for AI Agents",
         "Synthesis \u2014 DeepSeek V4 (Apr 2026): Token-Wise Compression + DSA (DeepSeek Sparse Attention) Delivers 1M Context as Default at 27% FLOPs / 10% KV Cache vs V3.2",
+        "Synthesis \u2014 Google TPU + UCSD DFlash (May 4 2026): Diffusion-Style Speculative Decoding Achieves 3.13\u00d7 Average / 6\u00d7 Peak Speedup on TPU v5p \u2014 O(1) Block Drafting Replaces O(K) Sequential",
         "Synthesis \u2014 LFM 2 / 2.5 (Liquid AI): Frontier Small Models for Edge Deployment \u2014 Hybrid Short-Conv + GQA Architecture, 28T-Token Pre-Training, Doom-Loop Solution",
         "Synthesis \u2014 LongBench Pro Paper Deep Dive: 1,500-Sample Bilingual Benchmark, 11\u00d725 Task Taxonomy, 46-Model Evaluation, Three Findings, Human-Model Collaborative Construction (arXiv 2601.02872 v1, Jan 2026)",
         "Synthesis \u2014 LongBench v2 Paper Deep Dive: 503-Sample Multi-Choice Benchmark, 6\u00d720 Task Taxonomy, 17-Model Leaderboard, o1-Preview Beats Humans by 4%, RAG + Memorization + YaRN Ablations (Tsinghua + Zhipu.AI; arXiv 2412.15204 v2, Jan 2025)",
         "Synthesis \u2014 Multica: Open-Source Managed-Agents Platform (Orchestrator Layer Above 10 Harness CLIs, Apache 2.0, Self-Host or Cloud)",
         "Synthesis \u2014 OOLONG Paper Deep Dive: 2-Split Aggregation Benchmark, 9-Model Leaderboard, Frontier Models Fail Below 50% at 128K, DeepSeek-R1 Pathology, Reasoning-Effort Counter-Intuition (CMU; arXiv 2511.02817 v1, Nov 2025)",
+        "Synthesis \u2014 Phil Schmid (May 5 2026): Four Subagents Patterns in 2026 \u2014 Inline Tool \u00b7 Fan-Out \u00b7 Agent Pool \u00b7 Teams (Ordered by Main-Agent Control over Subagent Lifecycle)",
+        "Synthesis \u2014 Quantization (YouTube, 2026): How a 280GB Model Runs on Your Laptop \u2014 Outliers as Central Villain \u00b7 5 Algorithms \u00b7 Bell-Curve Per-Group Scaling \u00b7 NF4 Smart Grid",
         "Synthesis \u2014 Qwen-Scope: Open-Source Sparse Autoencoder Suite That Decodes Qwen3/Qwen3.5 Internal Features Into Interpretable Concepts",
         "Synthesis \u2014 RecursiveMAS: Recursive Multi-Agent Systems (Stanford, arXiv 2604.25917) \u2014 8.3% Accuracy + 1.2-2.4\u00d7 Speedup + 34.6-75.6% Token Reduction",
         "Synthesis \u2014 Strands Agents (AWS): Intent-Based Tool Design Cuts Token Usage 96% (52K \u2192 2K) via Narrow Scope + Semantic-Search MCP Gateway",
@@ -55697,6 +56716,12 @@
       "referenced_by": [
         "Decision \u2014 Skills as the Primary Extension Pattern (over MCP-everywhere or hooks-only)",
         "Profile as Coordination Bundle"
+      ]
+    },
+    {
+      "target": "Broken-and-Idle Lesson",
+      "referenced_by": [
+        "Synthesis \u2014 The Hidden Physics of LLMs: Retrieval as Thermodynamics (YouTube, 2026) \u2014 Phase-Space Mental Model + Softmax-as-Partition-Function Framing for Context Engineering Doctrine"
       ]
     },
     {
@@ -55917,6 +56942,13 @@
       "target": "Decision: Adopt Multica",
       "referenced_by": [
         "Learning Path \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica + Harness + AICP, Session Arc 2026-04-28)"
+      ]
+    },
+    {
+      "target": "DeepSeek V4 DSA Synthesis",
+      "referenced_by": [
+        "Synthesis \u2014 Google TPU + UCSD DFlash (May 4 2026): Diffusion-Style Speculative Decoding Achieves 3.13\u00d7 Average / 6\u00d7 Peak Speedup on TPU v5p \u2014 O(1) Block Drafting Replaces O(K) Sequential",
+        "Synthesis \u2014 Quantization (YouTube, 2026): How a 280GB Model Runs on Your Laptop \u2014 Outliers as Central Villain \u00b7 5 Algorithms \u00b7 Bell-Curve Per-Group Scaling \u00b7 NF4 Smart Grid"
       ]
     },
     {
@@ -56198,13 +57230,18 @@
       "target": "Goldilocks Protocol",
       "referenced_by": [
         "End-to-End Compression Across the AI Stack Composes Multiplicatively \u2014 6+ Independent Mechanisms at 6 Distinct Layers, Each Substitutable Per Anti-Vendor-Lock-In",
+        "Synthesis \u2014 Claude Code Skill Chaining (YouTube, 2026): Three Layers (Context Fork \u00b7 File Handoff \u00b7 ! Commands) Achieve 85% Less Context Burn \u2014 51K \u2192 5-8K Tokens",
         "Synthesis \u2014 Cloudflare Agent Memory (Apr 17 2026): 5-Channel RRF Retrieval + Multi-Stage Ingestion Pipeline = Solving Context Rot for Long-Running AI Agents",
         "Synthesis \u2014 Cloudflare Agents Week 2026 (Apr 14\u201320, 2026): Master Index of 26+ Announcements Across Compute \u00b7 Security \u00b7 Agent Toolbox \u00b7 Prototype-to-Production \u00b7 Agentic Web",
         "Synthesis \u2014 Cloudflare AI Platform (Apr 16 2026): Unified Inference Layer for 12+ Providers + 70+ Models with Automatic Failover + Bring-Your-Own-Model via Replicate Cog",
         "Synthesis \u2014 Cloudflare Mesh (Apr 14 2026): Private Networking for Users + Nodes + Agents + Workers \u2014 Direct root-ghostproxy Mission Overlap",
         "Synthesis \u2014 Cloudflare x402 + Coinbase Foundation (Sep 23 2025): HTTP 402 Payment Required as Machine-Readable Payment Negotiation Layer for AI Agents",
         "Synthesis \u2014 DeepSeek V4 (Apr 2026): Token-Wise Compression + DSA (DeepSeek Sparse Attention) Delivers 1M Context as Default at 27% FLOPs / 10% KV Cache vs V3.2",
+        "Synthesis \u2014 Google TPU + UCSD DFlash (May 4 2026): Diffusion-Style Speculative Decoding Achieves 3.13\u00d7 Average / 6\u00d7 Peak Speedup on TPU v5p \u2014 O(1) Block Drafting Replaces O(K) Sequential",
         "Synthesis \u2014 LFM 2 / 2.5 (Liquid AI): Frontier Small Models for Edge Deployment \u2014 Hybrid Short-Conv + GQA Architecture, 28T-Token Pre-Training, Doom-Loop Solution",
+        "Synthesis \u2014 Phil Schmid (May 5 2026): Four Subagents Patterns in 2026 \u2014 Inline Tool \u00b7 Fan-Out \u00b7 Agent Pool \u00b7 Teams (Ordered by Main-Agent Control over Subagent Lifecycle)",
+        "Synthesis \u2014 Quantization (YouTube, 2026): How a 280GB Model Runs on Your Laptop \u2014 Outliers as Central Villain \u00b7 5 Algorithms \u00b7 Bell-Curve Per-Group Scaling \u00b7 NF4 Smart Grid",
+        "Synthesis \u2014 The Hidden Physics of LLMs: Retrieval as Thermodynamics (YouTube, 2026) \u2014 Phase-Space Mental Model + Softmax-as-Partition-Function Framing for Context Engineering Doctrine",
         "Synthesis \u2014 Effective Context Engineering for AI Agents (MachineLearningMastery, April 2026): Treat Context Window as RAM, Token Budgets Across Agent Loops, Probe-Based Evaluation, 60-80% Utilization Target"
       ]
     },
@@ -56363,6 +57400,18 @@
       ]
     },
     {
+      "target": "Lesson \u2014 Broken-and-Idle",
+      "referenced_by": [
+        "Lesson \u2014 Path-versatility doctrine: configs must work across machines via metadata-driven indirection (env vars, relative paths, parameters), not hardcoded absolute paths"
+      ]
+    },
+    {
+      "target": "Lesson \u2014 Fake Blockers Vs Real Blockers",
+      "referenced_by": [
+        "Lesson \u2014 Path-versatility doctrine: configs must work across machines via metadata-driven indirection (env vars, relative paths, parameters), not hardcoded absolute paths"
+      ]
+    },
+    {
       "target": "Lesson \u2014 Harness Engineering Is the Dominant Performance Lever",
       "referenced_by": [
         "Synthesis \u2014 Anthropic \u2014 Building Effective AI Agents \u2014 5 Canonical Workflow Patterns",
@@ -56502,7 +57551,8 @@
       "target": "MLMastery Context Engineering Synthesis",
       "referenced_by": [
         "Synthesis \u2014 Cloudflare Agent Memory (Apr 17 2026): 5-Channel RRF Retrieval + Multi-Stage Ingestion Pipeline = Solving Context Rot for Long-Running AI Agents",
-        "Synthesis \u2014 Cloudflare Markdown for Agents (Feb 2026): Server-Side HTML\u2192Markdown Content Negotiation Delivers 80% Token Reduction at the Content Source"
+        "Synthesis \u2014 Cloudflare Markdown for Agents (Feb 2026): Server-Side HTML\u2192Markdown Content Negotiation Delivers 80% Token Reduction at the Content Source",
+        "Synthesis \u2014 The Hidden Physics of LLMs: Retrieval as Thermodynamics (YouTube, 2026) \u2014 Phase-Space Mental Model + Softmax-as-Partition-Function Framing for Context Engineering Doctrine"
       ]
     },
     {
@@ -56653,9 +57703,13 @@
       "target": "Multi-Layer Compression Lesson",
       "referenced_by": [
         "2026-05-06 Session Handoff (Pre-Compaction) \u2014 Multi-Arc Research Sweep + Infrastructure Wiring (Stop Hook Fix \u00b7 root-ghostproxy Registration \u00b7 Firecrawl + Accept-Header Fallback Chain \u00b7 14+ Layer-1 Syntheses \u00b7 Layer-4 Compression Lesson \u00b7 Anti-Vendor-Lock-In Evidence 12-14)",
+        "Synthesis \u2014 Claude Code Skill Chaining (YouTube, 2026): Three Layers (Context Fork \u00b7 File Handoff \u00b7 ! Commands) Achieve 85% Less Context Burn \u2014 51K \u2192 5-8K Tokens",
         "Synthesis \u2014 Cloudflare Agent Memory (Apr 17 2026): 5-Channel RRF Retrieval + Multi-Stage Ingestion Pipeline = Solving Context Rot for Long-Running AI Agents",
         "Synthesis \u2014 Cloudflare Agents Week 2026 (Apr 14\u201320, 2026): Master Index of 26+ Announcements Across Compute \u00b7 Security \u00b7 Agent Toolbox \u00b7 Prototype-to-Production \u00b7 Agentic Web",
-        "Synthesis \u2014 DeepSeek V4 (Apr 2026): Token-Wise Compression + DSA (DeepSeek Sparse Attention) Delivers 1M Context as Default at 27% FLOPs / 10% KV Cache vs V3.2"
+        "Synthesis \u2014 DeepSeek V4 (Apr 2026): Token-Wise Compression + DSA (DeepSeek Sparse Attention) Delivers 1M Context as Default at 27% FLOPs / 10% KV Cache vs V3.2",
+        "Synthesis \u2014 Google TPU + UCSD DFlash (May 4 2026): Diffusion-Style Speculative Decoding Achieves 3.13\u00d7 Average / 6\u00d7 Peak Speedup on TPU v5p \u2014 O(1) Block Drafting Replaces O(K) Sequential",
+        "Synthesis \u2014 Phil Schmid (May 5 2026): Four Subagents Patterns in 2026 \u2014 Inline Tool \u00b7 Fan-Out \u00b7 Agent Pool \u00b7 Teams (Ordered by Main-Agent Control over Subagent Lifecycle)",
+        "Synthesis \u2014 Quantization (YouTube, 2026): How a 280GB Model Runs on Your Laptop \u2014 Outliers as Central Villain \u00b7 5 Algorithms \u00b7 Bell-Curve Per-Group Scaling \u00b7 NF4 Smart Grid"
       ]
     },
     {
@@ -56727,6 +57781,12 @@
       ]
     },
     {
+      "target": "Pattern \u2014 Agent Modes",
+      "referenced_by": [
+        "Lesson \u2014 Path-versatility doctrine: configs must work across machines via metadata-driven indirection (env vars, relative paths, parameters), not hardcoded absolute paths"
+      ]
+    },
+    {
       "target": "Per-Task Cost Growth",
       "referenced_by": [
         "The harness 'turnCount' variable counts streaming events, not conversational turns",
@@ -56743,6 +57803,12 @@
       "target": "Per-Task Cost Growth \u2014 OpenArms Evidence",
       "referenced_by": [
         "Agent Execution Cost Optimization Stack"
+      ]
+    },
+    {
+      "target": "Phil Schmid Four Subagent Patterns",
+      "referenced_by": [
+        "Synthesis \u2014 Claude Code Skill Chaining (YouTube, 2026): Three Layers (Context Fork \u00b7 File Handoff \u00b7 ! Commands) Achieve 85% Less Context Burn \u2014 51K \u2192 5-8K Tokens"
       ]
     },
     {
@@ -56819,7 +57885,8 @@
     {
       "target": "Project Self-Identification Protocol",
       "referenced_by": [
-        "root-ghostproxy M002 \u2014 Methodology Layer Decision"
+        "root-ghostproxy M002 \u2014 Methodology Layer Decision",
+        "Lesson \u2014 Path-versatility doctrine: configs must work across machines via metadata-driven indirection (env vars, relative paths, parameters), not hardcoded absolute paths"
       ]
     },
     {
@@ -56880,6 +57947,7 @@
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
         "Synthesis \u2014 DeepSeek V4 (Apr 2026): Token-Wise Compression + DSA (DeepSeek Sparse Attention) Delivers 1M Context as Default at 27% FLOPs / 10% KV Cache vs V3.2",
+        "Synthesis \u2014 Google TPU + UCSD DFlash (May 4 2026): Diffusion-Style Speculative Decoding Achieves 3.13\u00d7 Average / 6\u00d7 Peak Speedup on TPU v5p \u2014 O(1) Block Drafting Replaces O(K) Sequential",
         "Synthesis \u2014 LFM 2 / 2.5 (Liquid AI): Frontier Small Models for Edge Deployment \u2014 Hybrid Short-Conv + GQA Architecture, 28T-Token Pre-Training, Doom-Loop Solution",
         "Synthesis \u2014 Qwen-Scope: Open-Source Sparse Autoencoder Suite That Decodes Qwen3/Qwen3.5 Internal Features Into Interpretable Concepts",
         "Synthesis \u2014 RecursiveMAS: Recursive Multi-Agent Systems (Stanford, arXiv 2604.25917) \u2014 8.3% Accuracy + 1.2-2.4\u00d7 Speedup + 34.6-75.6% Token Reduction",
@@ -57019,6 +58087,12 @@
       "referenced_by": [
         "Harness Engineering Is the Dominant Performance Lever",
         "Synthesis \u2014 Anthropic \u2014 Effective Harnesses for Long-Running Agents"
+      ]
+    },
+    {
+      "target": "Structured-Context Layer-3 Lesson",
+      "referenced_by": [
+        "Synthesis \u2014 The Hidden Physics of LLMs: Retrieval as Thermodynamics (YouTube, 2026) \u2014 Phase-Space Mental Model + Softmax-as-Partition-Function Framing for Context Engineering Doctrine"
       ]
     },
     {
@@ -57473,6 +58547,7 @@
         "Synthesis \u2014 Cloudflare Markdown for Agents (Feb 2026): Server-Side HTML\u2192Markdown Content Negotiation Delivers 80% Token Reduction at the Content Source",
         "Synthesis \u2014 Cloudflare Mesh (Apr 14 2026): Private Networking for Users + Nodes + Agents + Workers \u2014 Direct root-ghostproxy Mission Overlap",
         "Synthesis \u2014 DeepSeek V4 (Apr 2026): Token-Wise Compression + DSA (DeepSeek Sparse Attention) Delivers 1M Context as Default at 27% FLOPs / 10% KV Cache vs V3.2",
+        "Synthesis \u2014 Google TPU + UCSD DFlash (May 4 2026): Diffusion-Style Speculative Decoding Achieves 3.13\u00d7 Average / 6\u00d7 Peak Speedup on TPU v5p \u2014 O(1) Block Drafting Replaces O(K) Sequential",
         "Synthesis \u2014 Qwen-Scope: Open-Source Sparse Autoencoder Suite That Decodes Qwen3/Qwen3.5 Internal Features Into Interpretable Concepts",
         "Synthesis \u2014 RecursiveMAS: Recursive Multi-Agent Systems (Stanford, arXiv 2604.25917) \u2014 8.3% Accuracy + 1.2-2.4\u00d7 Speedup + 34.6-75.6% Token Reduction",
         "Synthesis \u2014 Strands Agents (AWS): Intent-Based Tool Design Cuts Token Usage 96% (52K \u2192 2K) via Narrow Scope + Semantic-Search MCP Gateway",
@@ -57503,6 +58578,7 @@
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
         "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)",
         "Synthesis \u2014 LFM 2 / 2.5 (Liquid AI): Frontier Small Models for Edge Deployment \u2014 Hybrid Short-Conv + GQA Architecture, 28T-Token Pre-Training, Doom-Loop Solution",
+        "Synthesis \u2014 Quantization (YouTube, 2026): How a 280GB Model Runs on Your Laptop \u2014 Outliers as Central Villain \u00b7 5 Algorithms \u00b7 Bell-Curve Per-Group Scaling \u00b7 NF4 Smart Grid",
         "Synthesis \u2014 Qwen-Scope: Open-Source Sparse Autoencoder Suite That Decodes Qwen3/Qwen3.5 Internal Features Into Interpretable Concepts",
         "Synthesis \u2014 How To Train Your GPT (Raiyan Yahya): 12-Chapter Pedagogical Guide to Building a LLaMA-3-Style 124M GPT From Scratch"
       ]
@@ -57810,6 +58886,12 @@
       "referenced_by": [
         "root-ghostproxy M001 \u2014 Author CLAUDE.md + AGENTS.md",
         "root-ghostproxy M002 \u2014 Methodology Layer Decision"
+      ]
+    },
+    {
+      "target": "root-ghostproxy SFIF Rollout Epic",
+      "referenced_by": [
+        "Lesson \u2014 Path-versatility doctrine: configs must work across machines via metadata-driven indirection (env vars, relative paths, parameters), not hardcoded absolute paths"
       ]
     },
     {
