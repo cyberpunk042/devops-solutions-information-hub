@@ -142,6 +142,9 @@ The two principles form a family: Infrastructure > Instructions is the SEED; thi
 - RELATES TO: [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context]]
 - FEEDS INTO: [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
 - FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
+- RELATES TO: [[path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths|Path-Versatility Doctrine Lesson]] — Stop hook fix declared "use env-indirection" but didn't verify all sibling hooks did so; PostCompact failure on `/compact` was the verification gap revealing P4
+- RELATES TO: [[mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive|MCP Discipline Lesson]] — declaring "we have MCP X" is aspirational until referenced + routed-to-intent + actually-used (3-predicate verification gate); phantom catalog entries are P4 violations
+- RELATES TO: [[quality-per-position-compounds-quantity-per-position-diminishes-convergent-pattern|Quality-per-Position Lesson]] — claims about per-position quality improvement need empirical measurement on the actual workload; "we improved K-quality" is aspirational until measured
 
 ## Backlinks
 
@@ -156,6 +159,9 @@ The two principles form a family: Infrastructure > Instructions is the SEED; thi
 [[Principle — Right Process for Right Context]]
 [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
+[[Path-Versatility Doctrine Lesson]]
+[[mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive|MCP Discipline Lesson]]
+[[Quality-per-Position Lesson]]
 [[src-airllm-layer-wise-inference-nvme-ssd-offload|Synthesis — AirLLM: Layer-Wise Inference with NVMe SSD Offload]]
 [[2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis|Top-Layer Routing Refactor — Gap Analysis (CLAUDE.md + Loading + Hook Enforcement)]]
 [[2026-04-22-last-reviewed-frontmatter-field-evolve-mark-reviewed-cli|last_reviewed frontmatter field + evolve mark-reviewed CLI]]

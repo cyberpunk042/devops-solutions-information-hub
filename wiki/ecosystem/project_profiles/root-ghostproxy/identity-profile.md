@@ -180,3 +180,4 @@ Per [[model-sfif-architecture|Model — SFIF and Architecture]] — the four sta
 [[model-claude-code|Model — Claude Code]]
 [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
 [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
+[[post-anthropic-self-autonomous-stack|Milestone: Post-Anthropic Self-Autonomous AI Stack]]

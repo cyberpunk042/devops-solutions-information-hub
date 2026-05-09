@@ -175,3 +175,4 @@ If integrated with skills:
 [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
 [[three-permission-modes-think-edit-act|Three Permission Modes]]
 [[profile-as-coordination-bundle|Profile as Coordination Bundle]]
+[[pretooluse-hooks-layered-approach|Decision — Layered PreToolUse Hooks: Universal R01-R04 Baseline First, Stage-Gate Enforcement Later]]

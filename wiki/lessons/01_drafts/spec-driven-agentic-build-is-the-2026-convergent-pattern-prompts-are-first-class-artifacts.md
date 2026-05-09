@@ -96,6 +96,30 @@ By mid-2026, **at least eight independent practitioners** — spanning enterpris
 >
 > **Closed-loop sync rule** — when reality diverges, *fix the prompt/spec first, then update the code*. This rule (named explicitly in SPDD, implemented as `progress-tracker.md` updates in Six-File, and present in different vocabulary across the other 5 instances) prevents the artifact and the code from silently diverging across iterations.
 
+> [!success] **Operator's 2026-05-05 doctrine denotation — 11 named impact areas (sacrosanct, verbatim)**
+>
+> Per [`raw/notes/2026-05-05-gitignore-audit-vendor-mapping-spec-driven-development.md`](../../../raw/notes/2026-05-05-gitignore-audit-vendor-mapping-spec-driven-development.md), operator-explicit Directive E (verbatim):
+>
+> > *"Its imporant to denote too if you had not already realized that we prone spec driven development and a strong methodology and standards. this make a huge difference in the executions and the outputs and the quality and reliability and tracability and operability and observability and project management and progress tracking and LLM Wiki enforment and compatibility exploitation."*
+>
+> Spec-driven development + strong methodology + standards is the project's **doctrine**, not just a preferred practice. Operator-named impact areas — each spec-driven discipline materially improves:
+>
+> | # | Impact area | Why spec-driven discipline materially improves this |
+> |---|---|---|
+> | 1 | **Executions** | Agent runs against an implementation boundary, not improvisation; predictable behavior per spec |
+> | 2 | **Outputs** | Structured artifact constrains output shape; less drift, less rework |
+> | 3 | **Quality** | Verification checklist per spec catches drift early; iterative review converges to spec |
+> | 4 | **Reliability** | Closed-loop sync prevents spec/code divergence; same spec → same behavior across runs |
+> | 5 | **Traceability** | Spec is version-controlled artifact; every behavior change has a spec change in git history |
+> | 6 | **Operability** | Spec-realizers (install.sh, methodology engine, pipeline tooling) operationalize the spec deterministically |
+> | 7 | **Observability** | Spec defines expected state; deviations from spec are observable signals |
+> | 8 | **Project management** | Spec is the source of truth for scope; PM artifacts derive from spec, not vice-versa |
+> | 9 | **Progress tracking** | Progress = "delivered against spec"; specs split workstreams, naturally tracked per artifact |
+> | 10 | **LLM Wiki enforcement** | The wiki itself IS spec (methodology.yaml + wiki-schema.yaml + identity profiles); spec-discipline at the wiki layer makes the wiki authoritative for agent behavior |
+> | 11 | **Compatibility exploitation** | Specs are vendor-neutral primitives; structured Markdown specs work across 40+ agents per Six-File evidence; anti-vendor-lock-in flows naturally from spec-discipline |
+>
+> **The doctrine compounds**: each impact area reinforces the others. Skipping spec-discipline at any layer reduces leverage at every layer. **This is why all 8+ practitioner instances converged on the same pattern** — the convergence is not stylistic; it's structurally driven by the impact-area compounding.
+
 ## Context
 
 > [!info] **When this lesson applies — decision matrix**
@@ -165,8 +189,9 @@ The pattern is **scale-adaptive**: the same core mechanism works at solo/freelan
 > | **Spec-first lightweight independence** | [OpenSpec](../../sources/src-openspec-spec-driven-development-framework.md) | Minimum-viable spec-driven framework · solves agent-context-loss directly |
 > | **Foundational schema-as-product** | [Karpathy LLM Wiki Pattern](../../sources/wiki-methodology/src-karpathy-llm-wiki-idea-file.md) | The underlying pattern: schema/agent-config IS the durable product |
 > | **Minimum viable shape — solo Claude Code projects** | [Cavekit v4 (Julius Brussee)](../../sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee.md) | One file (SPEC.md) · 3 commands · 2 skills · §-addressable sections · backprop reflex. The most distilled instance documented; carries an empirical lesson on what's load-bearing vs ceremony (v3 → v4 distillation). |
+> | **Skill-as-spec evolution — Claude Code workflows** *(NEW 2026-05-08, 9th instance)* | [Claude Code Skill Chaining V1→V2 (2026)](../../sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context.md) | Skill markdown IS the spec; V1 monolith refactored into V2 (orchestrator + sub-skills + temp-directory file handoff + `!` parse-time substitution) per the same closed-loop discipline. The author treated the skill spec as the durable artifact and refactored toward token efficiency — empirical 85% reduction (51K → 5-8K). Demonstrates the convergent pattern at the **skill / workflow** layer (sister to Cavekit's command/skill layer). |
 >
-> All instances are interchangeable in core constraint; they're optimized for different team sizes, governance needs, and tooling preferences. **Pick by workload fit, not by vendor preference.** The structural insight is invariant.
+> All 9 instances are interchangeable in core constraint; they're optimized for different team sizes, governance needs, and tooling preferences. **Pick by workload fit, not by vendor preference.** The structural insight is invariant.
 
 ## How to Apply
 

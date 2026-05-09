@@ -221,6 +221,7 @@ The integration exposed that the tools were built for self-use, not consumer use
 - RELATES TO: [[openarms-vs-openfleet-enforcement|OpenArms vs OpenFleet Enforcement Architecture]]
 - RELATES TO: [[model-methodology|Model — Methodology]]
 - FEEDS INTO: [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+- RELATES TO: [[src-omnivoice-tts-600-languages|Synthesis — OmniVoice: Open-Source TTS Supporting 600+ Languages]] — operator-flagged 2026-04-24 as candidate for TTS-with-wiki integration via openclaw / openarms agent; future ecosystem extension
 
 ## Backlinks
 
@@ -229,4 +230,5 @@ The integration exposed that the tools were built for self-use, not consumer use
 [[openarms-vs-openfleet-enforcement|OpenArms vs OpenFleet Enforcement Architecture]]
 [[model-methodology|Model — Methodology]]
 [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+[[src-omnivoice-tts-600-languages|Synthesis — OmniVoice: Open-Source TTS Supporting 600+ Languages]]
 [[consumer-integration-roadmap-exemplar|Consumer Integration Roadmap — OpenArms Exemplar (First Full Plan)]]

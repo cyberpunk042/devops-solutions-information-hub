@@ -121,6 +121,7 @@ Process must adapt to context. Too much process kills POC velocity. Too little p
 - FEEDS INTO: [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
 - FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
 - FEEDS INTO: [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
+- RELATES TO: [[quality-per-position-compounds-quantity-per-position-diminishes-convergent-pattern|Quality-per-Position Lesson]] — pick the constraint layer per workload; don't apply quality-per-position discipline to layers where the actual constraint isn't the encoding budget; same Goldilocks judgment
 
 ## Backlinks
 
@@ -136,6 +137,7 @@ Process must adapt to context. Too much process kills POC velocity. Too little p
 [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
+[[Quality-per-Position Lesson]]
 [[e014-goldilocks-navigable-system-identity-to-action-in-continuous-flow|E014 — Goldilocks Navigable System — Identity to Action in Continuous Flow]]
 [[e022-context-aware-gateway-orientation-and-routing|E022 — Context-Aware Gateway Orientation and Task Routing]]
 [[execution-mode-is-consumer-property-not-project-property|Execution Mode Is a Consumer Property, Not a Project Property — Guard Against Conflation Drift]]

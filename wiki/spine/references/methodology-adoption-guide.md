@@ -384,6 +384,9 @@ Track BOTH dimensions independently. Readiness = is it defined? Progress = is it
 - RELATES TO: [[stage-gate-methodology|Stage-Gate Methodology]]
 - RELATES TO: [[four-project-ecosystem|Four-Project Ecosystem]]
 - RELATES TO: [[model-markdown-as-iac|Model — Markdown as IaC]] (the substrate the 7+ convergent instances all instantiate)
+- RELATES TO: [[path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths|Path-Versatility Doctrine Lesson]] — adopting agent-config across machines requires `${CLAUDE_PROJECT_DIR}` / `$HOME` env-indirection
+- RELATES TO: [[mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive|MCP Discipline Lesson]] — adopting MCPs requires the 3-predicate test (referenced + routes-to-intent + actually-used)
+- RELATES TO: [[quality-per-position-compounds-quantity-per-position-diminishes-convergent-pattern|Quality-per-Position Lesson]] — adoption favors quality-per-position over quantity-per-position
 - FEEDS INTO: [[model-ecosystem|Model — Ecosystem Architecture]]
 - FEEDS INTO: [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
 
@@ -397,6 +400,9 @@ Track BOTH dimensions independently. Readiness = is it defined? Progress = is it
 [[stage-gate-methodology|Stage-Gate Methodology]]
 [[four-project-ecosystem|Four-Project Ecosystem]]
 [[Model — Markdown as IaC]]
+[[Path-Versatility Doctrine Lesson]]
+[[mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive|MCP Discipline Lesson]]
+[[Quality-per-Position Lesson]]
 [[model-ecosystem|Model — Ecosystem Architecture]]
 [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
 [[2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson|2026-05-04 Session Log — Spec-Driven Agentic Build Convergence Arc: Fowler SPDD + JS Mastery Six-File Context System Ingested → 7-Instance Layer-4 Lesson Authored]]

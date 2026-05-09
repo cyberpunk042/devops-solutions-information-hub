@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-08T23:25:37.072848+00:00",
+  "generated": "2026-05-09T00:44:12.856042+00:00",
   "stats": {
-    "pages": 611,
+    "pages": 614,
     "domains": 12,
     "sources": 109,
     "comparisons": 9,
-    "relationships": 3811,
-    "tags_unique": 2342,
+    "relationships": 3875,
+    "tags_unique": 2362,
     "layers": {
       "3": 4,
       "5": 37,
       "6": 26,
-      "2": 75,
+      "2": 77,
       "4": 67,
       "0": 1,
       "1": 80,
       "spine": 78
     },
     "maturity": {
-      "seed": 96,
+      "seed": 98,
       "growing": 326,
       "mature": 23
     }
@@ -1833,6 +1833,38 @@
         {
           "verb": "RELATES TO",
           "target": "Decision \u2014 Adopt Multica"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Multi-Layer Compression Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Quality-per-Position Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "MCP Discipline Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Path-Versatility Doctrine Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "DFlash TPU Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Phil Schmid Subagent Patterns Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Claude Code Skill Chaining Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Quantization Synthesis"
         }
       ]
     },
@@ -2490,6 +2522,30 @@
         {
           "verb": "BUILDS ON",
           "target": "Second-Brain Custom Model Strategy"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Custom-Tailored Senior-Engineer-Tier Model Group Concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Multi-Layer Compression Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Quality-per-Position Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Trust-Layer Concept"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "root-ghostproxy \u2014 Identity Profile"
         },
         {
           "verb": "DEMONSTRATES",
@@ -8007,6 +8063,10 @@
         {
           "verb": "COMPLEMENTS",
           "target": "Three Permission Modes"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision \u2014 AICP Active-State Mechanism: `.aicp/state.yaml` Per-Repo with Git-Branch Fallback"
         }
       ]
     },
@@ -11299,6 +11359,26 @@
           "target": "2026 Consumer Hardware AI Stack"
         },
         {
+          "verb": "BUILDS ON",
+          "target": "Phil Schmid Four Subagent Patterns Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Claude Code Skill Chaining Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "DFlash TPU Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Quantization Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Hidden Physics of LLMs Synthesis"
+        },
+        {
           "verb": "RELATES TO",
           "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack"
         },
@@ -13996,6 +14076,22 @@
         {
           "verb": "RELATES TO",
           "target": "Qwopus Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "DFlash TPU Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Quantization Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Claude Code Skill Chaining Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "MCP Discipline Lesson"
         },
         {
           "verb": "DEMONSTRATES",
@@ -16711,6 +16807,10 @@
         {
           "verb": "FEEDS INTO",
           "target": "Artifact Chains by Methodology Model"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 OmniVoice: Open-Source TTS Supporting 600+ Languages"
         }
       ]
     },
@@ -18471,6 +18571,107 @@
       ]
     },
     {
+      "path": "lessons/01_drafts/mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive.md",
+      "slug": "lessons/01_drafts/mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive",
+      "title": "Lesson \u2014 MCP discipline: register only what's referenced and actually used; useless MCPs eat context budget and confuse, never pre-emptive",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-08",
+      "updated": "2026-05-08",
+      "last_reviewed": "2026-05-08",
+      "tags": [
+        "lesson",
+        "mcp",
+        "mcp-discipline",
+        "no-overflow",
+        "no-pre-emptive-registration",
+        "referenced-and-used-rule",
+        "context-budget",
+        "signal-to-noise",
+        "sister-project-applicable",
+        "layer-2",
+        "agent-config-discipline",
+        "mission-2026-05-08"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive-2026-05-05-mcp-discipline",
+          "type": "file",
+          "file": "raw/notes/2026-05-05-blockers-channel-progress-tracker-decisions-logbook-tools-mcp-discipline.md",
+          "description": "Operator-explicit 2026-05-05 directive (verbatim, sacrosanct): *'MCP we must not overflow especially with things that are useless or confusing or useless or we dont even refer to anywhere so will never be used...'* \u2014 note 'useless' repeated; emphasis intentional. Directive E of the governance + tools/MCP discipline directive."
+        },
+        {
+          "id": "learnings-rule-5",
+          "type": "wiki",
+          "file": ".claude/rules/learnings.md",
+          "description": "Hard Rule #5 \u2014 Don't conflate skills, commands, and hooks; sister doctrine \u2014 MCPs are at a different mechanism layer (programmatic, AI-invoked) but the no-overflow rule applies similarly"
+        },
+        {
+          "id": "routing-rules",
+          "type": "wiki",
+          "file": ".claude/rules/routing.md",
+          "description": "30-tool MCP catalog \u2014 defines what MCPs ARE registered + their mapping to operator intents; this lesson governs WHEN to add a new MCP (only when the catalog entry is referenced and actually used)"
+        },
+        {
+          "id": "skills-commands-hooks-model",
+          "type": "wiki",
+          "file": "wiki/spine/models/agent-config/model-skills-commands-hooks.md",
+          "description": "5-mechanism determinism ladder \u2014 MCPs are programmatic / AI-invoked / deferred-load via ToolSearch; useless MCPs occupy the catalog without contributing to the determinism ladder"
+        },
+        {
+          "id": "structured-context-principle",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content.md",
+          "description": "P2 \u2014 Structured Context Governs Agent Behavior; useless MCPs in the catalog are unstructured noise that contributes nothing to behavior \u2014 violates P2's signal-to-noise discipline"
+        },
+        {
+          "id": "declarations-aspirational-principle",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md",
+          "description": "P4 \u2014 Declarations Aspirational Until Verified; declaring 'we have MCP X' is aspirational until an actual operator-intent route references X AND the route is actually used"
+        },
+        {
+          "id": "feedback-research-not-abstract",
+          "type": "notes",
+          "file": "~/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/feedback_research_not_abstract.md",
+          "description": "Operator memory \u2014 research concrete products, don't abstract; sister discipline \u2014 register concrete used MCPs, don't pre-author hypothetical ones"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "MCP Discipline Lesson",
+        "Don't Overflow MCPs",
+        "MCP Anti-Pre-Emption",
+        "Referenced-and-Used Rule for MCPs"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Multi-Layer Compression Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Goldilocks Protocol"
+        }
+      ]
+    },
+    {
       "path": "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths.md",
       "slug": "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths",
       "title": "Lesson \u2014 Path-versatility doctrine: configs must work across machines via metadata-driven indirection (env vars, relative paths, parameters), not hardcoded absolute paths",
@@ -18578,6 +18779,161 @@
         {
           "verb": "FEEDS INTO",
           "target": "root-ghostproxy SFIF Rollout Epic"
+        }
+      ]
+    },
+    {
+      "path": "lessons/01_drafts/quality-per-position-compounds-quantity-per-position-diminishes-convergent-pattern.md",
+      "slug": "lessons/01_drafts/quality-per-position-compounds-quantity-per-position-diminishes-convergent-pattern",
+      "title": "Lesson \u2014 Quality-per-position compounds; quantity-per-position diminishes \u2014 convergent pattern across speculation, quantization, context, orchestration, and model customization",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-08",
+      "updated": "2026-05-08",
+      "last_reviewed": "2026-05-08",
+      "tags": [
+        "lesson",
+        "quality-over-quantity",
+        "per-position-compounds",
+        "k-flat-generalization",
+        "smart-encoding",
+        "cross-cutting-pattern",
+        "mission-2026-05-08",
+        "layer-2",
+        "convergent-pattern",
+        "sister-project-applicable",
+        "m004-relevant",
+        "operator-mission-aligned"
+      ],
+      "sources": [
+        {
+          "id": "dflash-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04.md",
+          "description": "Instance 1 (speculation layer) \u2014 DFlash K-Flat insight: 'verification cost is constant; per-position acceptance probability is 2-3\u00d7 more valuable than block size K.' Empirical: scaling K from 16 \u2192 128 nets <1 additional accepted token per step."
+        },
+        {
+          "id": "quantization-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms.md",
+          "description": "Instance 2 (model-weights layer) \u2014 NF4 quantile-based grid placement (smart) outperforms naive 16-evenly-spaced (uniform) at the same 4-bit budget. Quality-per-grid-point > quantity-of-grid-points."
+        },
+        {
+          "id": "hidden-physics-synth",
+          "type": "wiki",
+          "file": "wiki/sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing.md",
+          "description": "Instance 3 (context layer) \u2014 structured context creates DEEPER VALLEYS than equivalent prose; the agent (ball) settles into deeper valleys more reliably under any temperature. Per-token quality > per-token quantity."
+        },
+        {
+          "id": "skill-chaining-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context.md",
+          "description": "Instance 4 (workflow / tool I/O layer) \u2014 minimal-payload JSON file handoff between sub-skills; only the relevant ~200 tokens flow forward, not the full upstream output. Per-payload quality > per-payload quantity. 85% empirical context reduction."
+        },
+        {
+          "id": "philschmid-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams.md",
+          "description": "Instance 5 (orchestration layer) \u2014 model capability (per-agent quality) > pattern sophistication (per-orchestration quantity). 'A task that takes 4 coordinated agents today may be solvable by a single agent with a better model tomorrow.' Frontier-class capability is the lever, not Pattern 4 ceremony."
+        },
+        {
+          "id": "custom-model-concept",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md",
+          "description": "Instance 6 (operator's mission, M004) \u2014 operator-stated bias: behavioral preference fine-tune via curated hack-vs-right pairs (per-pair quality) > larger base-model parameter count (per-model quantity). The Custom-Tailored Senior-Engineer-Tier Model Group strategy is structurally aligned with this convergent pattern."
+        },
+        {
+          "id": "multi-layer-compression-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers.md",
+          "description": "Sibling Layer-4 lesson \u2014 the multi-layer convergence at the COMPRESSION-MECHANISMS dimension; this lesson is the convergence at the QUALITY-VS-QUANTITY-OF-ENCODING dimension; together they cover orthogonal axes of the same root-cause structural pattern"
+        },
+        {
+          "id": "spec-driven-convergence-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md",
+          "description": "Sibling Layer-4 lesson \u2014 convergent-pattern at the agentic-build layer (9 instances); same convergent-pattern methodology applied to a different dimension"
+        },
+        {
+          "id": "anti-vendor-lock-in-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
+          "description": "Mission lesson \u2014 quality-per-position discipline is one cross-cutting axis where every stack layer benefits independently"
+        },
+        {
+          "id": "principle-2",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content.md",
+          "description": "P2 \u2014 Structured Context Governs Agent Behavior; this lesson generalizes P2's 'tables/MUST-lists/YAML > prose' framing to per-position quality across more than just context"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Quality-Quantity Inversion Lesson",
+        "Per-Position Quality Compounds",
+        "Smarter Encoding Beats More Bits",
+        "K-Flat Generalization"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "DFlash TPU Synthesis"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Quantization Synthesis"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Hidden Physics of LLMs Synthesis"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Claude Code Skill Chaining Synthesis"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Phil Schmid Subagent Patterns Synthesis"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Custom-Tailored Model Group Concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "PARALLELS",
+          "target": "Multi-Layer Compression Lesson"
+        },
+        {
+          "verb": "PARALLELS",
+          "target": "Spec-Driven Convergence Lesson"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Goldilocks Protocol"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Custom-Tailored Model Group Concept"
         }
       ]
     },
@@ -23128,6 +23484,18 @@
         {
           "verb": "FEEDS INTO",
           "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Path-Versatility Doctrine Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "MCP Discipline Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Quality-per-Position Lesson"
         }
       ]
     },
@@ -23228,6 +23596,14 @@
         {
           "verb": "FEEDS INTO",
           "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Path-Versatility Doctrine Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Quality-per-Position Lesson"
         }
       ]
     },
@@ -23336,6 +23712,10 @@
         {
           "verb": "FEEDS INTO",
           "target": "Super-Model \u2014 Research Wiki as Ecosystem Intelligence Hub"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Quality-per-Position Lesson"
         }
       ]
     },
@@ -23478,6 +23858,14 @@
         {
           "verb": "FEEDS INTO",
           "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "MCP Discipline Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Quality-per-Position Lesson"
         }
       ]
     },
@@ -27155,6 +27543,97 @@
         {
           "verb": "FEEDS INTO",
           "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack"
+        }
+      ]
+    },
+    {
+      "path": "log/2026-05-08-strong-loop-arc-ingest-synthesize-propagate-distill-and-operator-decisions-pending.md",
+      "slug": "log/2026-05-08-strong-loop-arc-ingest-synthesize-propagate-distill-and-operator-decisions-pending",
+      "title": "2026-05-08 Strong-Loop Arc \u2014 Ingest \u2192 Synthesize \u2192 Propagate \u2192 Distill (5 raws \u00b7 5 syntheses \u00b7 3 NEW Layer-2 lessons \u00b7 8 propagation passes \u00b7 1 operator-doctrine denotation \u00b7 1 cross-cutting Layer-2 lesson distilled \u00b7 operator-decisions surfaced)",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-08",
+      "updated": "2026-05-08",
+      "last_reviewed": "2026-05-08",
+      "tags": [
+        "session",
+        "log",
+        "2026-05-08",
+        "strong-loop-arc",
+        "ingest-synthesize-propagate-distill",
+        "multi-source-ingestion",
+        "layer-2-lessons-authored",
+        "operator-decisions-pending",
+        "decision-presentation-discipline"
+      ],
+      "sources": [
+        {
+          "id": "ingest-directive",
+          "type": "file",
+          "file": "raw/notes/2026-05-08-ingest-5-urls-subagent-patterns-tpu-speculative-decoding-3-videos-and-continue.md",
+          "description": "Operator directive 2026-05-08 \u2014 verbatim 'ingest: 5 URLs ... and continue' triggering this arc"
+        },
+        {
+          "id": "prior-handoff",
+          "type": "wiki",
+          "file": "wiki/log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring.md",
+          "description": "Prior 2026-05-06 handoff \u2014 entry-point context for this arc"
+        },
+        {
+          "id": "decision-presentation-directive",
+          "type": "file",
+          "file": "raw/notes/2026-05-05-blockers-channel-progress-tracker-decisions-logbook-tools-mcp-discipline.md",
+          "description": "Operator's 2026-05-05 decision-presentation discipline directive \u2014 'every operator-pending decision needs CONTEXT + GUIDANCE + RECOMMENDATION'; this log applies it to my own batched surface"
+        },
+        {
+          "id": "thorough-review-directive",
+          "type": "file",
+          "file": "raw/notes/2026-05-05-thorough-review-context-engineering-versatility-and-network-spec-note.md",
+          "description": "Operator's 2026-05-05 doctrine \u2014 second-brain retains learnings; comprehensive logging prevents 'pass through all over again from scratch'"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-05-06 Pre-Compaction Handoff"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-05-04 Multi-Source Ingestion Session Log"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-05-04 Custom-Tailored Model Mission Session Log"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "The Agent Must Practice What It Documents"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Custom-Tailored Senior-Engineer-Tier Model Group Concept"
         }
       ]
     },
@@ -43618,6 +44097,18 @@
           "target": "Model \u2014 Markdown as IaC"
         },
         {
+          "verb": "RELATES TO",
+          "target": "Path-Versatility Doctrine Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "MCP Discipline Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Quality-per-Position Lesson"
+        },
+        {
           "verb": "FEEDS INTO",
           "target": "Model \u2014 Ecosystem Architecture"
         },
@@ -45990,11 +46481,11 @@
   "domains": {
     "backlog": {
       "page_count": 105,
-      "relationship_count": 458
+      "relationship_count": 472
     },
     "cross-domain": {
-      "page_count": 266,
-      "relationship_count": 1689
+      "page_count": 269,
+      "relationship_count": 1739
     },
     "ai-models": {
       "page_count": 14,
@@ -46358,6 +46849,7 @@
       "domains/knowledge-systems/wiki-core/lightrag",
       "domains/tools-and-platforms/notebooklm-skills",
       "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
+      "lessons/01_drafts/mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive",
       "lessons/03_validated/tools-architecture/automation-is-bridge-between-knowledge-and-action",
       "lessons/03_validated/tools-architecture/cli-tools-beat-mcp-for-token-efficiency",
       "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis",
@@ -47934,6 +48426,7 @@
       "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
       "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming",
       "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
+      "log/2026-05-08-strong-loop-arc-ingest-synthesize-propagate-distill-and-operator-decisions-pending",
       "spine/standards/note-page-standards"
     ],
     "contract": [
@@ -48990,7 +49483,9 @@
       "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
       "lessons/01_drafts/if-you-can-verify-you-converge",
       "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
+      "lessons/01_drafts/mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive",
       "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths",
+      "lessons/01_drafts/quality-per-position-compounds-quantity-per-position-diminishes-convergent-pattern",
       "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work",
       "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
@@ -51494,23 +51989,29 @@
     "self": [
       "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability"
     ],
-    "path-versatility": [
-      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths"
+    "mcp-discipline": [
+      "lessons/01_drafts/mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive"
     ],
-    "metadata-driven-configs": [
-      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths"
+    "no-overflow": [
+      "lessons/01_drafts/mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive"
     ],
-    "env-indirection": [
-      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths"
+    "no-pre-emptive-registration": [
+      "lessons/01_drafts/mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive"
     ],
-    "hardcoded-paths-anti-pattern": [
-      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths"
+    "referenced-and-used-rule": [
+      "lessons/01_drafts/mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive"
     ],
-    "cross-machine-portability": [
-      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths"
+    "context-budget": [
+      "lessons/01_drafts/mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive"
+    ],
+    "signal-to-noise": [
+      "lessons/01_drafts/mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive",
+      "lessons/03_validated/methodology-process/decision-presentation-discipline-context-guidance-recommendation"
     ],
     "sister-project-applicable": [
+      "lessons/01_drafts/mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive",
       "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths",
+      "lessons/01_drafts/quality-per-position-compounds-quantity-per-position-diminishes-convergent-pattern",
       "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed",
       "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading",
       "lessons/03_validated/enforcement-compliance/correction-as-calibration-not-swing-the-going-to-extremes-anti-pattern",
@@ -51535,7 +52036,9 @@
       "patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report"
     ],
     "layer-2": [
+      "lessons/01_drafts/mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive",
       "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths",
+      "lessons/01_drafts/quality-per-position-compounds-quantity-per-position-diminishes-convergent-pattern",
       "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed",
       "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading",
       "lessons/03_validated/enforcement-compliance/correction-as-calibration-not-swing-the-going-to-extremes-anti-pattern",
@@ -51561,6 +52064,33 @@
       "patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles",
       "patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report"
     ],
+    "agent-config-discipline": [
+      "lessons/01_drafts/mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive"
+    ],
+    "mission-2026-05-08": [
+      "lessons/01_drafts/mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive",
+      "lessons/01_drafts/quality-per-position-compounds-quantity-per-position-diminishes-convergent-pattern",
+      "sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context",
+      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04",
+      "sources/tools-integration/src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams",
+      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms",
+      "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing"
+    ],
+    "path-versatility": [
+      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths"
+    ],
+    "metadata-driven-configs": [
+      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths"
+    ],
+    "env-indirection": [
+      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths"
+    ],
+    "hardcoded-paths-anti-pattern": [
+      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths"
+    ],
+    "cross-machine-portability": [
+      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths"
+    ],
     "p1-application": [
       "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths"
     ],
@@ -51572,6 +52102,30 @@
     ],
     "$HOME": [
       "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths"
+    ],
+    "quality-over-quantity": [
+      "lessons/01_drafts/quality-per-position-compounds-quantity-per-position-diminishes-convergent-pattern"
+    ],
+    "per-position-compounds": [
+      "lessons/01_drafts/quality-per-position-compounds-quantity-per-position-diminishes-convergent-pattern"
+    ],
+    "k-flat-generalization": [
+      "lessons/01_drafts/quality-per-position-compounds-quantity-per-position-diminishes-convergent-pattern"
+    ],
+    "smart-encoding": [
+      "lessons/01_drafts/quality-per-position-compounds-quantity-per-position-diminishes-convergent-pattern"
+    ],
+    "cross-cutting-pattern": [
+      "lessons/01_drafts/quality-per-position-compounds-quantity-per-position-diminishes-convergent-pattern"
+    ],
+    "convergent-pattern": [
+      "lessons/01_drafts/quality-per-position-compounds-quantity-per-position-diminishes-convergent-pattern"
+    ],
+    "m004-relevant": [
+      "lessons/01_drafts/quality-per-position-compounds-quantity-per-position-diminishes-convergent-pattern"
+    ],
+    "operator-mission-aligned": [
+      "lessons/01_drafts/quality-per-position-compounds-quantity-per-position-diminishes-convergent-pattern"
     ],
     "saturation": [
       "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work"
@@ -52071,9 +52625,6 @@
     "anti-question-wall": [
       "lessons/03_validated/methodology-process/decision-presentation-discipline-context-guidance-recommendation"
     ],
-    "signal-to-noise": [
-      "lessons/03_validated/methodology-process/decision-presentation-discipline-context-guidance-recommendation"
-    ],
     "pm-lens": [
       "lessons/03_validated/methodology-process/decision-presentation-discipline-context-guidance-recommendation"
     ],
@@ -52473,7 +53024,8 @@
       "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
       "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming",
       "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
-      "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring"
+      "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring",
+      "log/2026-05-08-strong-loop-arc-ingest-synthesize-propagate-distill-and-operator-decisions-pending"
     ],
     "summary": [
       "log/2026-04-09/system/2026-04-09-session-summary",
@@ -52920,7 +53472,8 @@
       "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point"
     ],
     "multi-source-ingestion": [
-      "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming"
+      "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming",
+      "log/2026-05-08-strong-loop-arc-ingest-synthesize-propagate-distill-and-operator-decisions-pending"
     ],
     "strands": [
       "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming",
@@ -53032,6 +53585,24 @@
     ],
     "cloudflare-agents-week": [
       "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring"
+    ],
+    "2026-05-08": [
+      "log/2026-05-08-strong-loop-arc-ingest-synthesize-propagate-distill-and-operator-decisions-pending"
+    ],
+    "strong-loop-arc": [
+      "log/2026-05-08-strong-loop-arc-ingest-synthesize-propagate-distill-and-operator-decisions-pending"
+    ],
+    "ingest-synthesize-propagate-distill": [
+      "log/2026-05-08-strong-loop-arc-ingest-synthesize-propagate-distill-and-operator-decisions-pending"
+    ],
+    "layer-2-lessons-authored": [
+      "log/2026-05-08-strong-loop-arc-ingest-synthesize-propagate-distill-and-operator-decisions-pending"
+    ],
+    "operator-decisions-pending": [
+      "log/2026-05-08-strong-loop-arc-ingest-synthesize-propagate-distill-and-operator-decisions-pending"
+    ],
+    "decision-presentation-discipline": [
+      "log/2026-05-08-strong-loop-arc-ingest-synthesize-propagate-distill-and-operator-decisions-pending"
     ],
     "correction": [
       "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
@@ -54392,13 +54963,6 @@
     ],
     "lead-research-pipeline-example": [
       "sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context"
-    ],
-    "mission-2026-05-08": [
-      "sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context",
-      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04",
-      "sources/tools-integration/src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams",
-      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms",
-      "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing"
     ],
     "m003-input-boundary-practice": [
       "sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context"
@@ -56556,13 +57120,15 @@
     {
       "target": "2026-05-04 Custom-Tailored Model Mission Session Log",
       "referenced_by": [
-        "2026-05-04 Session Log \u2014 Multi-Source Ingestion Arc (7 Layer-1 Syntheses) + Internal-Cypher-Langue Extension + 3-Tier Programming Hyperstructure (proto/proto-proto/literal)"
+        "2026-05-04 Session Log \u2014 Multi-Source Ingestion Arc (7 Layer-1 Syntheses) + Internal-Cypher-Langue Extension + 3-Tier Programming Hyperstructure (proto/proto-proto/literal)",
+        "2026-05-08 Strong-Loop Arc \u2014 Ingest \u2192 Synthesize \u2192 Propagate \u2192 Distill (5 raws \u00b7 5 syntheses \u00b7 3 NEW Layer-2 lessons \u00b7 8 propagation passes \u00b7 1 operator-doctrine denotation \u00b7 1 cross-cutting Layer-2 lesson distilled \u00b7 operator-decisions surfaced)"
       ]
     },
     {
       "target": "2026-05-04 Multi-Source Ingestion Session Log",
       "referenced_by": [
-        "2026-05-06 Session Handoff (Pre-Compaction) \u2014 Multi-Arc Research Sweep + Infrastructure Wiring (Stop Hook Fix \u00b7 root-ghostproxy Registration \u00b7 Firecrawl + Accept-Header Fallback Chain \u00b7 14+ Layer-1 Syntheses \u00b7 Layer-4 Compression Lesson \u00b7 Anti-Vendor-Lock-In Evidence 12-14)"
+        "2026-05-06 Session Handoff (Pre-Compaction) \u2014 Multi-Arc Research Sweep + Infrastructure Wiring (Stop Hook Fix \u00b7 root-ghostproxy Registration \u00b7 Firecrawl + Accept-Header Fallback Chain \u00b7 14+ Layer-1 Syntheses \u00b7 Layer-4 Compression Lesson \u00b7 Anti-Vendor-Lock-In Evidence 12-14)",
+        "2026-05-08 Strong-Loop Arc \u2014 Ingest \u2192 Synthesize \u2192 Propagate \u2192 Distill (5 raws \u00b7 5 syntheses \u00b7 3 NEW Layer-2 lessons \u00b7 8 propagation passes \u00b7 1 operator-doctrine denotation \u00b7 1 cross-cutting Layer-2 lesson distilled \u00b7 operator-decisions surfaced)"
       ]
     },
     {
@@ -56583,6 +57149,12 @@
       "referenced_by": [
         "2026-05-04 Session Handoff (Pre-Compaction) \u2014 Trust-Layer Arc Continuation + Spec-Driven Convergence Arc + Caveman Ecosystem Complete (3 of 3 Tools Ingested)",
         "2026-05-04 Session Log \u2014 Custom-Tailored Senior-Engineer-Tier Model Group Mission Initiated (Root-Cause Pain Point Identified via root-ghostproxy Bootstrap)"
+      ]
+    },
+    {
+      "target": "2026-05-06 Pre-Compaction Handoff",
+      "referenced_by": [
+        "2026-05-08 Strong-Loop Arc \u2014 Ingest \u2192 Synthesize \u2192 Propagate \u2192 Distill (5 raws \u00b7 5 syntheses \u00b7 3 NEW Layer-2 lessons \u00b7 8 propagation passes \u00b7 1 operator-doctrine denotation \u00b7 1 cross-cutting Layer-2 lesson distilled \u00b7 operator-decisions surfaced)"
       ]
     },
     {
@@ -56653,12 +57225,15 @@
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
         "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
         "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
+        "Milestone: Post-Anthropic Self-Autonomous AI Stack",
         "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook",
         "Decision: Adopt Multica as Orchestrator Layer in the Post-Anthropic Stack (2026-04-28)",
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
         "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)",
         "End-to-End Compression Across the AI Stack Composes Multiplicatively \u2014 6+ Independent Mechanisms at 6 Distinct Layers, Each Substitutable Per Anti-Vendor-Lock-In",
+        "Lesson \u2014 MCP discipline: register only what's referenced and actually used; useless MCPs eat context budget and confuse, never pre-emptive",
+        "Lesson \u2014 Quality-per-position compounds; quantity-per-position diminishes \u2014 convergent pattern across speculation, quantization, context, orchestration, and model customization",
         "Saturation Declarations Are P4 Aspirational \u2014 Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal",
         "Spec-Driven Agentic Build Is the 2026 Convergent Pattern \u2014 Eight+ Independent Practitioners Treat Prompts/Specs/Contexts as Version-Controlled First-Class Artifacts (Not Ad-Hoc Chat)",
         "2026-04-27 Continuation Session-End Handoff \u2014 Post-Compact Regather + 5 Substantive Artifacts (RLM-Qwen3.6-27B Operations Plan + 4 Layer-1 Benchmark Deep-Dives), RLM Table 1 100% at Layer 1, Anti-Vendor-Lock-In Lesson Fully Grounded",
@@ -56848,6 +57423,8 @@
     {
       "target": "Custom-Tailored Senior-Engineer-Tier Model Group Concept",
       "referenced_by": [
+        "Milestone: Post-Anthropic Self-Autonomous AI Stack",
+        "2026-05-08 Strong-Loop Arc \u2014 Ingest \u2192 Synthesize \u2192 Propagate \u2192 Distill (5 raws \u00b7 5 syntheses \u00b7 3 NEW Layer-2 lessons \u00b7 8 propagation passes \u00b7 1 operator-doctrine denotation \u00b7 1 cross-cutting Layer-2 lesson distilled \u00b7 operator-decisions surfaced)",
         "Synthesis \u2014 Strands Agents (AWS): Intent-Based Tool Design Cuts Token Usage 96% (52K \u2192 2K) via Narrow Scope + Semantic-Search MCP Gateway"
       ]
     },
@@ -57230,6 +57807,8 @@
       "target": "Goldilocks Protocol",
       "referenced_by": [
         "End-to-End Compression Across the AI Stack Composes Multiplicatively \u2014 6+ Independent Mechanisms at 6 Distinct Layers, Each Substitutable Per Anti-Vendor-Lock-In",
+        "Lesson \u2014 MCP discipline: register only what's referenced and actually used; useless MCPs eat context budget and confuse, never pre-emptive",
+        "Lesson \u2014 Quality-per-position compounds; quantity-per-position diminishes \u2014 convergent pattern across speculation, quantization, context, orchestration, and model customization",
         "Synthesis \u2014 Claude Code Skill Chaining (YouTube, 2026): Three Layers (Context Fork \u00b7 File Handoff \u00b7 ! Commands) Achieve 85% Less Context Burn \u2014 51K \u2192 5-8K Tokens",
         "Synthesis \u2014 Cloudflare Agent Memory (Apr 17 2026): 5-Channel RRF Retrieval + Multi-Stage Ingestion Pipeline = Solving Context Rot for Long-Running AI Agents",
         "Synthesis \u2014 Cloudflare Agents Week 2026 (Apr 14\u201320, 2026): Master Index of 26+ Announcements Across Compute \u00b7 Security \u00b7 Agent Toolbox \u00b7 Prototype-to-Production \u00b7 Agentic Web",
@@ -57307,6 +57886,13 @@
       "target": "Harness turnCount Bug \u2014 OpenArms Evidence",
       "referenced_by": [
         "Aspirational Naming in Lifecycle Code"
+      ]
+    },
+    {
+      "target": "Hidden Physics of LLMs Synthesis",
+      "referenced_by": [
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
+        "Lesson \u2014 Quality-per-position compounds; quantity-per-position diminishes \u2014 convergent pattern across speculation, quantization, context, orchestration, and model customization"
       ]
     },
     {
@@ -57612,6 +58198,7 @@
         "2026-05-04 Session Handoff (Pre-Compaction) \u2014 Trust-Layer Arc Continuation + Spec-Driven Convergence Arc + Caveman Ecosystem Complete (3 of 3 Tools Ingested)",
         "2026-05-04 Session Log \u2014 Custom-Tailored Senior-Engineer-Tier Model Group Mission Initiated (Root-Cause Pain Point Identified via root-ghostproxy Bootstrap)",
         "2026-05-06 Session Handoff (Pre-Compaction) \u2014 Multi-Arc Research Sweep + Infrastructure Wiring (Stop Hook Fix \u00b7 root-ghostproxy Registration \u00b7 Firecrawl + Accept-Header Fallback Chain \u00b7 14+ Layer-1 Syntheses \u00b7 Layer-4 Compression Lesson \u00b7 Anti-Vendor-Lock-In Evidence 12-14)",
+        "2026-05-08 Strong-Loop Arc \u2014 Ingest \u2192 Synthesize \u2192 Propagate \u2192 Distill (5 raws \u00b7 5 syntheses \u00b7 3 NEW Layer-2 lessons \u00b7 8 propagation passes \u00b7 1 operator-doctrine denotation \u00b7 1 cross-cutting Layer-2 lesson distilled \u00b7 operator-decisions surfaced)",
         "Learning Path \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer (Mission Arc 2026-05-04)",
         "Learning Path \u2014 Trust Layer: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context, Session Arc 2026-04-30)"
       ]
@@ -57702,6 +58289,10 @@
     {
       "target": "Multi-Layer Compression Lesson",
       "referenced_by": [
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
+        "Milestone: Post-Anthropic Self-Autonomous AI Stack",
+        "Lesson \u2014 MCP discipline: register only what's referenced and actually used; useless MCPs eat context budget and confuse, never pre-emptive",
+        "Lesson \u2014 Quality-per-position compounds; quantity-per-position diminishes \u2014 convergent pattern across speculation, quantization, context, orchestration, and model customization",
         "2026-05-06 Session Handoff (Pre-Compaction) \u2014 Multi-Arc Research Sweep + Infrastructure Wiring (Stop Hook Fix \u00b7 root-ghostproxy Registration \u00b7 Firecrawl + Accept-Header Fallback Chain \u00b7 14+ Layer-1 Syntheses \u00b7 Layer-4 Compression Lesson \u00b7 Anti-Vendor-Lock-In Evidence 12-14)",
         "Synthesis \u2014 Claude Code Skill Chaining (YouTube, 2026): Three Layers (Context Fork \u00b7 File Handoff \u00b7 ! Commands) Achieve 85% Less Context Burn \u2014 51K \u2192 5-8K Tokens",
         "Synthesis \u2014 Cloudflare Agent Memory (Apr 17 2026): 5-Channel RRF Retrieval + Multi-Stage Ingestion Pipeline = Solving Context Rot for Long-Running AI Agents",
@@ -57781,6 +58372,15 @@
       ]
     },
     {
+      "target": "Path-Versatility Doctrine Lesson",
+      "referenced_by": [
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
+        "Principle \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them",
+        "Principle \u2014 Infrastructure Over Instructions for Process Enforcement",
+        "Methodology Adoption Guide"
+      ]
+    },
+    {
       "target": "Pattern \u2014 Agent Modes",
       "referenced_by": [
         "Lesson \u2014 Path-versatility doctrine: configs must work across machines via metadata-driven indirection (env vars, relative paths, parameters), not hardcoded absolute paths"
@@ -57809,6 +58409,12 @@
       "target": "Phil Schmid Four Subagent Patterns",
       "referenced_by": [
         "Synthesis \u2014 Claude Code Skill Chaining (YouTube, 2026): Three Layers (Context Fork \u00b7 File Handoff \u00b7 ! Commands) Achieve 85% Less Context Burn \u2014 51K \u2192 5-8K Tokens"
+      ]
+    },
+    {
+      "target": "Phil Schmid Four Subagent Patterns Synthesis",
+      "referenced_by": [
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)"
       ]
     },
     {
@@ -57900,6 +58506,27 @@
       "referenced_by": [
         "Defense Layer Progression Is Expensive \u2014 Prevention Is Cheap, Detection and Correction Are Milestones",
         "Aspirational Declaration Produces False Confidence at Every Layer"
+      ]
+    },
+    {
+      "target": "Quality-per-Position Lesson",
+      "referenced_by": [
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
+        "Milestone: Post-Anthropic Self-Autonomous AI Stack",
+        "Principle \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them",
+        "Principle \u2014 Infrastructure Over Instructions for Process Enforcement",
+        "Principle \u2014 Right Process for Right Context \u2014 The Goldilocks Imperative",
+        "Principle \u2014 Structured Context Governs Agent Behavior More Than Content",
+        "Methodology Adoption Guide"
+      ]
+    },
+    {
+      "target": "Quantization Synthesis",
+      "referenced_by": [
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
+        "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)",
+        "Lesson \u2014 Quality-per-position compounds; quantity-per-position diminishes \u2014 convergent pattern across speculation, quantization, context, orchestration, and model customization"
       ]
     },
     {
@@ -58069,6 +58696,7 @@
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
         "End-to-End Compression Across the AI Stack Composes Multiplicatively \u2014 6+ Independent Mechanisms at 6 Distinct Layers, Each Substitutable Per Anti-Vendor-Lock-In",
+        "Lesson \u2014 Quality-per-position compounds; quantity-per-position diminishes \u2014 convergent pattern across speculation, quantization, context, orchestration, and model customization",
         "2026-05-04 Session Handoff (Pre-Compaction) \u2014 Trust-Layer Arc Continuation + Spec-Driven Convergence Arc + Caveman Ecosystem Complete (3 of 3 Tools Ingested)",
         "2026-05-04 Session Log \u2014 Spec-Driven Agentic Build Convergence Arc: Fowler SPDD + JS Mastery Six-File Context System Ingested \u2192 7-Instance Layer-4 Lesson Authored",
         "Synthesis \u2014 Cavekit v4: Compressed Spec-Driven Development for Claude Code (Julius Brussee, MIT-Licensed, SPEC.md + 3 Commands + Caveman Encoding + Backprop Reflex)",
@@ -58541,6 +59169,7 @@
     {
       "target": "Trust-Layer Concept",
       "referenced_by": [
+        "Milestone: Post-Anthropic Self-Autonomous AI Stack",
         "End-to-End Compression Across the AI Stack Composes Multiplicatively \u2014 6+ Independent Mechanisms at 6 Distinct Layers, Each Substitutable Per Anti-Vendor-Lock-In",
         "2026-05-04 Session Log \u2014 Multi-Source Ingestion Arc (7 Layer-1 Syntheses) + Internal-Cypher-Langue Extension + 3-Tier Programming Hyperstructure (proto/proto-proto/literal)",
         "Synthesis \u2014 Cloudflare AI Platform (Apr 16 2026): Unified Inference Layer for 12+ Providers + 70+ Models with Automatic Failover + Bring-Your-Own-Model via Replicate Cog",

@@ -155,6 +155,7 @@ If extended (add Layer B):
 - BUILDS ON: [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]] (Extension Standards hook patterns)
 - COMPLEMENTS: [[skills-as-primary-extension-pattern|Decision — Skills as Primary Extension Pattern]] (skills teach 60%; this decision adds the 38% hook layer)
 - COMPLEMENTS: [[three-permission-modes-think-edit-act|Three Permission Modes]] (both Layer 2 enforcement — hooks universal; modes per-session)
+- RELATES TO: [[aicp-active-state-mechanism-for-hooks|Decision — AICP Active-State Mechanism: `.aicp/state.yaml` Per-Repo with Git-Branch Fallback]] — child decision selecting among the 3 candidate state mechanisms enumerated by this Layer A decision
 
 ## Backlinks
 
@@ -162,3 +163,4 @@ If extended (add Layer B):
 [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
 [[Decision — Skills as Primary Extension Pattern]]
 [[three-permission-modes-think-edit-act|Three Permission Modes]]
+[[aicp-active-state-mechanism-for-hooks|Decision — AICP Active-State Mechanism: `.aicp/state.yaml` Per-Repo with Git-Branch Fallback]]

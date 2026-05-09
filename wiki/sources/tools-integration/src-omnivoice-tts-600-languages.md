@@ -140,3 +140,4 @@ OmniVoice's claim-to-fame within this set is **language coverage breadth** (600+
 [[Synthesis — Qwen3.6-27B: Dense 27B Beats 397B MoE]]
 [[model-local-ai|Model — Local AI ($0 Target)]]
 [[model-ecosystem|Model — Ecosystem Architecture]]
+[[identity-profile|OpenArms — Identity Profile]]

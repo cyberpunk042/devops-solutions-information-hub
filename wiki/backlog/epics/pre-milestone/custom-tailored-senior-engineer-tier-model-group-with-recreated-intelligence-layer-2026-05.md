@@ -254,6 +254,14 @@ The wiki's [Anti-Vendor-Lock-In Lesson](../../../lessons/01_drafts/anti-vendor-l
 - DEMONSTRATES: [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]] — wiki methodology applied to model-creation workflow
 - FEEDS INTO: [[ai-infrastructure-decision-framework-2026|AI Infrastructure Decision Framework 2026]] — adds custom-model dimension as a structural decision axis
 - RELATES TO: [[adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04|Decision — Adopt Multica]] — Multica routes to the custom model group
+- BUILDS ON: [[end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers|Multi-Layer Compression Lesson]] — 14 mechanisms across 6 layers; M005 (Trust + Compression Composition) realizes the multi-layer compounding empirically
+- BUILDS ON: [[quality-per-position-compounds-quantity-per-position-diminishes-convergent-pattern|Quality-per-Position Lesson]] — M004 (Behavioral Preference Fine-Tune) operator strategy is the 6th instance of this convergent pattern; better preference-pair quality > larger base-model parameter count
+- BUILDS ON: [[mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive|MCP Discipline Lesson]] — M003 (Recreated Intelligence Layer) MCP catalog must satisfy 3-predicate test; pre-emptive MCP registration violates the discipline
+- BUILDS ON: [[path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths|Path-Versatility Doctrine Lesson]] — M001 (Toolchain) configs must use env-indirection; cross-machine portability for the model-customization workflow
+- RELATES TO: [[src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04|DFlash TPU Synthesis]] — M003 inference-speed substrate option (when NVIDIA torchax port lands)
+- RELATES TO: [[src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams|Phil Schmid Subagent Patterns Synthesis]] — M003 orchestration-pattern substitutability quartet (P1 → P4)
+- RELATES TO: [[src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context|Claude Code Skill Chaining Synthesis]] — production-validated implementation of Pattern 1 (Inline Tool with isolated context)
+- RELATES TO: [[src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms|Quantization Synthesis]] — M002 specialist LoRA algorithmic foundation
 
 ## Backlinks
 
@@ -277,3 +285,11 @@ The wiki's [Anti-Vendor-Lock-In Lesson](../../../lessons/01_drafts/anti-vendor-l
 [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
 [[ai-infrastructure-decision-framework-2026|AI Infrastructure Decision Framework 2026]]
 [[Decision — Adopt Multica]]
+[[Multi-Layer Compression Lesson]]
+[[Quality-per-Position Lesson]]
+[[mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive|MCP Discipline Lesson]]
+[[Path-Versatility Doctrine Lesson]]
+[[src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04|DFlash TPU Synthesis]]
+[[src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams|Phil Schmid Subagent Patterns Synthesis]]
+[[src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context|Claude Code Skill Chaining Synthesis]]
+[[Quantization Synthesis]]

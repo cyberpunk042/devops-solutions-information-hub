@@ -133,6 +133,7 @@ The wiki's mission ([feedback_mission_framing.md](file:///home/jfortin/.claude/p
 > | Layer | Empirical substitute(s) | Lock-in risk after substitution |
 > |---|---|---|
 > | **Orchestrator (NEW)** | Multica (Apache 2.0 + self-host) · operator-built · alternative is direct CLI use without orchestration | Low — open-source + 10 harnesses |
+> | **Orchestration pattern (within orchestrator)** *(NEW 2026-05-08)* | 4 named patterns ordered by main-agent control over subagent lifecycle: **Inline Tool** (call_agent — any tool-capable model) · **Fan-Out** (spawn_agent + wait_agent — needs interleaving reasoning) · **Agent Pool** (spawn + send + wait + list + kill — needs multi-agent state tracking) · **Teams** (cross-agent send_message — frontier-class for every agent). Per [Phil Schmid Subagent Patterns Synthesis](../../sources/tools-integration/src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams.md). Pattern 1 is **production-validated** by [Claude Code Skill Chaining V2](../../sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context.md) at 85% empirical context reduction. | Low — patterns are vendor-neutral; operator picks per workload class |
 > | Harness | Claude Code · OpenCode · Codex · Cursor · etc. (per Evidence 1) | Low — operator already runs 2 (CC + OpenCode) |
 > | Provider × Model | Per Evidence 1 (Qwen3.6-27B), Evidence 2 (Qwen3-Embedding-8B), Evidence 8 (RLM-Qwen3-8B) — all open-weight; AICP routing per Evidence 9 | Variable per layer — see prior Evidence items |
 >
@@ -144,7 +145,7 @@ The wiki's mission ([feedback_mission_framing.md](file:///home/jfortin/.claude/p
 >
 > | Substitution axis | Empirical substitutes |
 > |---|---|
-> | **Hardware vendor** | NVIDIA (H100/H200/Blackwell CC mode, GA today via [NVIDIA Secure AI](https://developer.nvidia.com/blog/announcing-nvidia-secure-ai-general-availability/)) · AMD (SEV-SNP CPU + GPU passthrough) · Intel (TDX) · open-hardware (RISC-V Keystone, when production-ready) |
+> | **Hardware vendor** | NVIDIA (H100/H200/Blackwell CC mode, GA today via [NVIDIA Secure AI](https://developer.nvidia.com/blog/announcing-nvidia-secure-ai-general-availability/)) · AMD (SEV-SNP CPU + GPU passthrough) · Intel (TDX) · **Google TPU v5p** *(NEW 2026-05-08 — open-source DFlash via [vLLM TPU](../../sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04.md); 3.13× avg / 6× peak math speedup; TPU Builder Program academic+open-source partnership)* · open-hardware (RISC-V Keystone, when production-ready) |
 > | **TEE / confidential-compute provider** | NVIDIA Secure AI · AWS Nitro Enclaves · Azure Confidential VMs · GCP Confidential Computing · self-hosted on operator hardware |
 > | **Key management** | operator-held key file · passphrase-derived · certificate-bound · HSM-managed (YubiHSM · AWS CloudHSM · Azure Key Vault HSM) |
 > | **Compression substrate** | [Caveman](https://github.com/JuliusBrussee/caveman) (operator-confirmed) · [Unsloth UD-IQ2/Q2_K](../../sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md) · KV-cache compression (asymmetric quantization, sparsity) |

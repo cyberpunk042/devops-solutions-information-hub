@@ -294,6 +294,10 @@ The operator's [Custom-Tailored Senior-Engineer-Tier Model Group Concept](custom
 - RELATES TO: [[rlm-qwen3-6-27b-fine-tune-operations-plan|RLM-Qwen3.6-27B Fine-Tune Operations Plan]] — Phase-1 vs Phase-2 framing precedent
 - RELATES TO: [[src-unsloth-fast-lora-consumer-hardware|Unsloth Synthesis]] — compression / distillation precedent
 - RELATES TO: [[src-qwopus-claude-opus-reasoning-distilled-qwen-27b|Qwopus Synthesis]] — distillation pipeline precedent
+- RELATES TO: [[src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04|DFlash TPU Synthesis]] — inference-paradigm compression composes orthogonally with L0-L4 trust opt-ins; DFlash dual-cache architecture (target paged + draft static JAX arrays) needs operator-design call when wiring at L2+ (compressed-encrypted weights + on-GPU decypher)
+- RELATES TO: [[src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms|Quantization Synthesis]] — Layer-5 weight quantization (Q4_K_M / NF4 / 5-algorithm convergence) is the substrate compressed-encrypted weights operate on; the encrypted form contains the quantized representation; decypher kernel decompresses + decrypts at runtime
+- RELATES TO: [[src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context|Claude Code Skill Chaining Synthesis]] — context fork + file handoff at L2+ trust requires operator-design call: plaintext temp-directory JSON files violate at-rest encryption; tmpfs-only OR encrypt-temp-handoff are operator-substrate options when composing skill chaining with cypher overlay
+- RELATES TO: [[mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive|MCP Discipline Lesson]] — sister discipline; trust-layer cypher overlay + MCP discipline both prevent leakage (cypher prevents data leakage; MCP discipline prevents context-budget leakage)
 - DEMONSTRATES: [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4 — Declarations Aspirational Until Verified]] — security claims need verification gates (attestation reports), not just declarations
 - DEMONSTRATES: [[infrastructure-over-instructions-for-process-enforcement|Principle 1 — Infrastructure Over Instructions]] — tamper-resistance must be infrastructure (CC mode + key release gating), not prose policy
 
@@ -307,5 +311,9 @@ The operator's [Custom-Tailored Senior-Engineer-Tier Model Group Concept](custom
 [[RLM-Qwen3.6-27B Fine-Tune Operations Plan]]
 [[Unsloth Synthesis]]
 [[Qwopus Synthesis]]
+[[src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04|DFlash TPU Synthesis]]
+[[Quantization Synthesis]]
+[[src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context|Claude Code Skill Chaining Synthesis]]
+[[mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive|MCP Discipline Lesson]]
 [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4 — Declarations Aspirational Until Verified]]
 [[infrastructure-over-instructions-for-process-enforcement|Principle 1 — Infrastructure Over Instructions]]

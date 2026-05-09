@@ -159,6 +159,12 @@ This milestone delivers the *deadline-absorbed* state. The next natural phase ta
 - BUILDS ON: [[2026-consumer-hardware-ai-stack|The 2026 Consumer-Hardware AI Stack]]
 - BUILDS ON: [[model-local-ai|Model — Local AI ($0 Target)]]
 - BUILDS ON: [[second-brain-custom-model-strategy|Second-Brain Custom Model Strategy]]
+- BUILDS ON: [[custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis|Custom-Tailored Senior-Engineer-Tier Model Group Concept]] — operator's 2026-05-04 strategic-tier mission; M001-M006 phases extend the milestone with operator-authored model-customization layer + recreated intelligence layer at I/O boundaries
+- BUILDS ON: [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Anti-Vendor-Lock-In Lesson]] — milestone's empirical-claim verification gate; 14 Evidence items covering 4-layer + 1-candidate substitutability + 3 cross-cutting axes
+- BUILDS ON: [[end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers|Multi-Layer Compression Lesson]] — 14 mechanisms across 6 layers; the operator's 80-90% combined-envelope mission claim is empirically defensible
+- BUILDS ON: [[quality-per-position-compounds-quantity-per-position-diminishes-convergent-pattern|Quality-per-Position Lesson]] — operator's M004 strategy (preference-pair quality > base-model parameter count) is convergent-pattern-validated across 6 stack layers
+- RELATES TO: [[secure-tamper-proof-model-on-shared-gpu-research-synthesis|Trust-Layer Concept]] — adds 4th substitutable layer (trust / confidential-compute) to the milestone's stack composability
+- RELATES TO: [[identity-profile|root-ghostproxy — Identity Profile]] — sister project type=root, group=operating-system-setup; named in EXTENDED 2026-05-04 acceptance criterion as M006 (Multi-Version + Ecosystem Propagation) target
 - DEMONSTRATES: [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4 — Declarations Aspirational Until Verified]]
 
 ## Backlinks
@@ -173,6 +179,12 @@ This milestone delivers the *deadline-absorbed* state. The next natural phase ta
 [[The 2026 Consumer-Hardware AI Stack]]
 [[model-local-ai|Model — Local AI ($0 Target)]]
 [[second-brain-custom-model-strategy|Second-Brain Custom Model Strategy]]
+[[Custom-Tailored Senior-Engineer-Tier Model Group Concept]]
+[[Anti-Vendor-Lock-In Lesson]]
+[[Multi-Layer Compression Lesson]]
+[[Quality-per-Position Lesson]]
+[[Trust-Layer Concept]]
+[[identity-profile|root-ghostproxy — Identity Profile]]
 [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4 — Declarations Aspirational Until Verified]]
 [[E007-openrouter-deadline-de-risk|E007 — OpenRouter Deadline De-Risk (Claude Code CLI → K2.6)]]
 [[E008-local-k2-6-offline-frontier-tier|E008 — Local K2.6 Offline Frontier Tier (KTransformers on /dev/sdd)]]

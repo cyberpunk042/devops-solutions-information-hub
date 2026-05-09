@@ -116,6 +116,8 @@ For any process rule that can be checked at the tool-call level, infrastructure 
 - RELATES TO: [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
 - FEEDS INTO: [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
 - FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
+- RELATES TO: [[path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths|Path-Versatility Doctrine Lesson]] — env-indirection (`${CLAUDE_PROJECT_DIR}` / `$HOME`) IS infrastructure (resolved by harness/shell deterministically); not "remember to fix paths" prose
+- RELATES TO: [[quality-per-position-compounds-quantity-per-position-diminishes-convergent-pattern|Quality-per-Position Lesson]] — smart encoding (NF4 grid placement, structured context, intent-based tools) IS infrastructure; not "remember to encode well" instruction
 
 ## Backlinks
 
@@ -130,6 +132,8 @@ For any process rule that can be checked at the tool-call level, infrastructure 
 [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
 [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
+[[Path-Versatility Doctrine Lesson]]
+[[Quality-per-Position Lesson]]
 [[adapters-never-raise-failure-as-data-at-integration-boundaries|Adapters Never Raise — Failure As Data at Integration Boundaries]]
 [[artifact-path-verification-at-gate-close|Artifact Path Verification at Gate Close]]
 [[block-with-reason-and-justified-escalation|Block With Reason and Justified Escalation — The Bypass Mechanism for Mindful Enforcement]]

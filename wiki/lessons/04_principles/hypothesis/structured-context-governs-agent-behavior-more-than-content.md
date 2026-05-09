@@ -115,6 +115,8 @@ When instructing AI agents, the SHAPE of information (headers, tables, YAML bloc
 - RELATES TO: [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
 - FEEDS INTO: [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
 - FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
+- RELATES TO: [[mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive|MCP Discipline Lesson]] — useless MCPs in the catalog are structured context the agent can't act on (no operator-intent route); violates this principle's signal-to-noise discipline at the agent-config layer
+- RELATES TO: [[quality-per-position-compounds-quantity-per-position-diminishes-convergent-pattern|Quality-per-Position Lesson]] — generalizes this principle from context-layer specialization to a 6-layer cross-cutting pattern; structured context is the context-layer instance of "quality-per-position compounds"
 
 ## Backlinks
 
@@ -128,6 +130,8 @@ When instructing AI agents, the SHAPE of information (headers, tables, YAML bloc
 [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
 [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
+[[mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive|MCP Discipline Lesson]]
+[[Quality-per-Position Lesson]]
 [[adapters-never-raise-failure-as-data-at-integration-boundaries|Adapters Never Raise — Failure As Data at Integration Boundaries]]
 [[block-with-reason-and-justified-escalation|Block With Reason and Justified Escalation — The Bypass Mechanism for Mindful Enforcement]]
 [[model-context-engineering-standards|Context Engineering Standards — What Good Structured Context Looks Like]]
