@@ -44,9 +44,13 @@ Does NOT apply to: ephemeral or one-shot artifacts (e.g., a single session log) 
 
 ## Insight
 
-Co-evolution is a **doctrine**, not an architecture choice. It informs every other decision: documentation framing, hook design, methodology stage choice, lesson maturity, pattern abstraction. The principle is **continuous evolution** — neither the second brain nor the projects are ever finished, and the relationship is bidirectional (project experience → second brain learnings → future-project standards → refinement back to second brain).
+> [!success] **Co-evolution is a doctrine, not an architecture choice**
+>
+> Co-evolution is a **doctrine**, not an architecture choice. It informs every other decision: documentation framing, hook design, methodology stage choice, lesson maturity, pattern abstraction. The principle is **continuous evolution** — neither the second brain nor the projects are ever finished, and the relationship is bidirectional (project experience → second brain learnings → future-project standards → refinement back to second brain).
 
-The deeper insight: failures are inputs to learning, not events to prevent perfectly. Designing every layer with a **bypass + remediation + reason** triplet is the doctrine's operational shape. Strict where strictness is warranted (and declared); advisory where judgment is required (and declared); aspirational where the target isn't reachable today (and tracked as future-decision).
+> [!tip] **Failures are inputs to learning, not events to prevent perfectly**
+>
+> Designing every layer with a **bypass + remediation + reason** triplet is the doctrine's operational shape. Strict where strictness is warranted (and declared); advisory where judgment is required (and declared); aspirational where the target isn't reachable today (and tracked as future-decision).
 
 ## Evidence
 

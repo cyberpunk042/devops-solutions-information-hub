@@ -50,11 +50,17 @@ Does NOT apply to: short one-shot projects, projects without autonomous-agent ac
 
 ## Insight
 
-The four governance registers (blockers, decisions, findings, systemic-bugs) form a complementary set with distinct **single-responsibility-principles (SRP)**. Conflating them produces dumping-ground anti-patterns: blockers becomes a list of "things to do later," findings becomes random observations, decisions never gets used.
+> [!success] **The four registers form a complementary set with distinct SRPs**
+>
+> The four governance registers (blockers, decisions, findings, systemic-bugs) form a complementary set with distinct **single-responsibility-principles (SRP)**. Conflating them produces dumping-ground anti-patterns: blockers becomes a list of *"things to do later,"* findings becomes random observations, decisions never gets used.
 
-Systemic-bugs deserve their own register because they have characteristics no other register handles cleanly: recurring across cycles (not per-cycle like findings), structural-fix required (not just choices like decisions), agent-side resolution possible (not gated on operator like blockers), multi-status lifecycle (open/in-progress/structurally-fixed/verified/recurring), workblock-priority gating (per agent-bug-fix-flow).
+> [!info] **Why systemic-bugs deserves its own register**
+>
+> Systemic-bugs deserve their own register because they have characteristics no other register handles cleanly: recurring across cycles (not per-cycle like findings), structural-fix required (not just choices like decisions), agent-side resolution possible (not gated on operator like blockers), multi-status lifecycle (open/in-progress/structurally-fixed/verified/recurring), workblock-priority gating (per agent-bug-fix-flow).
 
-The deeper insight: a register's value comes from its discipline. Each register's SRP is a constraint that keeps it useful. Adding a fourth register is the right answer when the new SRP can't be served by the existing three.
+> [!tip] **A register's value comes from its discipline**
+>
+> Each register's SRP is a constraint that keeps it useful. Adding a fourth register is the right answer when the new SRP can't be served by the existing three.
 
 ## Evidence
 

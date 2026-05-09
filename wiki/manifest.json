@@ -1,12 +1,12 @@
 {
-  "generated": "2026-05-09T12:21:36.800231+00:00",
+  "generated": "2026-05-09T13:01:56.155825+00:00",
   "stats": {
-    "pages": 842,
+    "pages": 843,
     "domains": 14,
     "sources": 109,
     "comparisons": 9,
-    "relationships": 3918,
-    "tags_unique": 3089,
+    "relationships": 3925,
+    "tags_unique": 3097,
     "layers": {
       "3": 4,
       "5": 38,
@@ -35487,6 +35487,90 @@
       "relationships": []
     },
     {
+      "path": "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension.md",
+      "slug": "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension",
+      "title": "2026-05-09 Session Log \u2014 9 Pending Decisions Resolved (5 Executed \u00b7 3 Defer-Track \u00b7 1 Boundary-Correction) + 5-Channel RRF Retrieval Landed + Schema Extension + AVX512 Machine Plan Captured",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-09",
+      "updated": "2026-05-09",
+      "last_reviewed": "2026-05-09",
+      "tags": [
+        "session",
+        "log",
+        "2026-05-09",
+        "decisions-executed",
+        "boundary-correction-root-vs-opt",
+        "5-channel-rrf-retrieval-landed",
+        "schema-extension",
+        "avx512-machine-plan-noted",
+        "hardware-pending-flag",
+        "post-compact-pickup-runbook"
+      ],
+      "sources": [
+        {
+          "id": "prior-session-log",
+          "type": "wiki",
+          "file": "wiki/log/2026-05-08-strong-loop-arc-ingest-synthesize-propagate-distill-and-operator-decisions-pending.md",
+          "description": "Prior 2026-05-08 session log \u2014 9 pending operator-decisions surfaced; this log records the resolutions"
+        },
+        {
+          "id": "root-ghostproxy-readme",
+          "type": "directive",
+          "file": "/tmp/rgp-readme.md",
+          "description": "Operator-explicit transient lookup of root-ghostproxy README (https://github.com/cyberpunk042/root-ghostproxy) confirming /opt-vs-root boundary: root = harness/ecosystem at $HOME/global level (hooks/skills/commands/statusline/IPS); /opt = knowledge (lessons/patterns/principles/syntheses)"
+        },
+        {
+          "id": "5-channel-rrf-impl",
+          "type": "file",
+          "file": "tools/wiki_search.py",
+          "description": "NEW pure-Python 5-channel RRF retrieval module (~340 LOC) wired into mcp_server.py:wiki_search"
+        },
+        {
+          "id": "schema-extension",
+          "type": "file",
+          "file": "wiki/config/wiki-schema.yaml",
+          "description": "Extended source_type whitelist (+7) and relationship_verbs whitelist (+6) per schema-follows-usage 2026-05-09"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-05-08 Strong-Loop Arc Session Log"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-05-06 Pre-Compaction Handoff"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "The Agent Must Practice What It Documents"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Custom-Tailored Senior-Engineer-Tier Model Group Concept"
+        }
+      ]
+    },
+    {
       "path": "log/5-candidate-behavioral-failure-detection-rules-from-openflee.md",
       "slug": "log/5-candidate-behavioral-failure-detection-rules-from-openflee",
       "title": "5 candidate behavioral-failure detection rules from OpenFleet doctor.py (2026-04-18)",
@@ -59026,8 +59110,8 @@
       "relationship_count": 472
     },
     "cross-domain": {
-      "page_count": 288,
-      "relationship_count": 1745
+      "page_count": 289,
+      "relationship_count": 1752
     },
     "ai-models": {
       "page_count": 14,
@@ -60987,6 +61071,7 @@
       "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming",
       "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
       "log/2026-05-08-strong-loop-arc-ingest-synthesize-propagate-distill-and-operator-decisions-pending",
+      "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension",
       "spine/standards/note-page-standards"
     ],
     "contract": [
@@ -66284,7 +66369,8 @@
       "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming",
       "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
       "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring",
-      "log/2026-05-08-strong-loop-arc-ingest-synthesize-propagate-distill-and-operator-decisions-pending"
+      "log/2026-05-08-strong-loop-arc-ingest-synthesize-propagate-distill-and-operator-decisions-pending",
+      "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension"
     ],
     "summary": [
       "log/2026-04-09/system/2026-04-09-session-summary",
@@ -68431,6 +68517,30 @@
     ],
     "fire-102": [
       "log/2026-05-08-worked-example-4-post-compact-detection-failure-real-session-empirical-evidence-impl-spec-10-stress-test"
+    ],
+    "2026-05-09": [
+      "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension"
+    ],
+    "decisions-executed": [
+      "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension"
+    ],
+    "boundary-correction-root-vs-opt": [
+      "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension"
+    ],
+    "5-channel-rrf-retrieval-landed": [
+      "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension"
+    ],
+    "schema-extension": [
+      "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension"
+    ],
+    "avx512-machine-plan-noted": [
+      "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension"
+    ],
+    "hardware-pending-flag": [
+      "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension"
+    ],
+    "post-compact-pickup-runbook": [
+      "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension"
     ],
     "correction": [
       "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
@@ -72632,7 +72742,14 @@
     {
       "target": "2026-05-06 Pre-Compaction Handoff",
       "referenced_by": [
-        "2026-05-08 Strong-Loop Arc \u2014 Ingest \u2192 Synthesize \u2192 Propagate \u2192 Distill (5 raws \u00b7 5 syntheses \u00b7 3 NEW Layer-2 lessons \u00b7 8 propagation passes \u00b7 1 operator-doctrine denotation \u00b7 1 cross-cutting Layer-2 lesson distilled \u00b7 operator-decisions surfaced)"
+        "2026-05-08 Strong-Loop Arc \u2014 Ingest \u2192 Synthesize \u2192 Propagate \u2192 Distill (5 raws \u00b7 5 syntheses \u00b7 3 NEW Layer-2 lessons \u00b7 8 propagation passes \u00b7 1 operator-doctrine denotation \u00b7 1 cross-cutting Layer-2 lesson distilled \u00b7 operator-decisions surfaced)",
+        "2026-05-09 Session Log \u2014 9 Pending Decisions Resolved (5 Executed \u00b7 3 Defer-Track \u00b7 1 Boundary-Correction) + 5-Channel RRF Retrieval Landed + Schema Extension + AVX512 Machine Plan Captured"
+      ]
+    },
+    {
+      "target": "2026-05-08 Strong-Loop Arc Session Log",
+      "referenced_by": [
+        "2026-05-09 Session Log \u2014 9 Pending Decisions Resolved (5 Executed \u00b7 3 Defer-Track \u00b7 1 Boundary-Correction) + 5-Channel RRF Retrieval Landed + Schema Extension + AVX512 Machine Plan Captured"
       ]
     },
     {
@@ -72909,6 +73026,7 @@
       "referenced_by": [
         "Milestone: Post-Anthropic Self-Autonomous AI Stack",
         "2026-05-08 Strong-Loop Arc \u2014 Ingest \u2192 Synthesize \u2192 Propagate \u2192 Distill (5 raws \u00b7 5 syntheses \u00b7 3 NEW Layer-2 lessons \u00b7 8 propagation passes \u00b7 1 operator-doctrine denotation \u00b7 1 cross-cutting Layer-2 lesson distilled \u00b7 operator-decisions surfaced)",
+        "2026-05-09 Session Log \u2014 9 Pending Decisions Resolved (5 Executed \u00b7 3 Defer-Track \u00b7 1 Boundary-Correction) + 5-Channel RRF Retrieval Landed + Schema Extension + AVX512 Machine Plan Captured",
         "Synthesis \u2014 Strands Agents (AWS): Intent-Based Tool Design Cuts Token Usage 96% (52K \u2192 2K) via Narrow Scope + Semantic-Search MCP Gateway"
       ]
     },

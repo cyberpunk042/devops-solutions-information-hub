@@ -41,9 +41,13 @@ Does NOT apply to: pure conversational moves the operator made (e.g., asking a c
 
 ## Insight
 
-The bug exists in the **project's state** (rules, files, code, config). Verbal acknowledgment changes only the **agent's current turn**. Once the conversation moves on or the session ends, the bug is still in the project. A future agent re-reading the project files will encounter the same bug because nothing structural changed.
+> [!success] **The bug exists in project state, not in agent's turn**
+>
+> The bug exists in the **project's state** (rules, files, code, config). Verbal acknowledgment changes only the **agent's current turn**. Once the conversation moves on or the session ends, the bug is still in the project. A future agent re-reading the project files will encounter the same bug because nothing structural changed.
 
-The discipline: an agent's response IS the work, not the description of the work. When responding to a bug report, the next file change should be the response itself — surfaced inline in the conversation so the operator can audit ("citing path + change applied"). Don't end with "what should I do next" — the next step is in the bug-fix sequence; do it.
+> [!tip] **The discipline: an agent's response IS the work, not the description of the work**
+>
+> When responding to a bug report, the next file change should be the response itself — surfaced inline in the conversation so the operator can audit (*"citing path + change applied"*). Don't end with *"what should I do next"* — the next step is in the bug-fix sequence; do it.
 
 ## Evidence
 

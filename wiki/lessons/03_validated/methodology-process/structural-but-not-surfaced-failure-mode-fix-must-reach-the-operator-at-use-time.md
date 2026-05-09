@@ -41,17 +41,19 @@ Does NOT apply to: cases where the structural fix wasn't actually authored (thos
 
 ## Insight
 
-There are now **three distinct failure-variants** of the fix-shape spectrum:
+> [!success] **Three distinct failure-variants of the fix-shape spectrum**
+>
+> | Variant | Structural artefact? | Surfaced at use-time? | Shape of recurrence |
+> |---|---|---|---|
+> | **Verbal-only fix** | No | No | Operator: *"you didn't fix it"* — bug stays in state |
+> | **Structural-but-not-surfaced** | Yes | No | Operator: *"this AGAIN"* — fix exists but invisible at use-time |
+> | **Genuine fix** | Yes | Yes | Operator sees the fix in cycle output → no recurrence |
+>
+> The structural-but-not-surfaced variant is subtle because the agent CAN truthfully say *"I authored the fix."* But the operator's experience hasn't changed — the symptom presents identically. The bug is in the SURFACE layer, not the structural layer.
 
-| Variant | Structural artefact? | Surfaced at use-time? | Shape of recurrence |
-|---|---|---|---|
-| **Verbal-only fix** | No | No | Operator: "you didn't fix it" — bug stays in state |
-| **Structural-but-not-surfaced** | Yes | No | Operator: "this AGAIN" — fix exists but invisible at use-time |
-| **Genuine fix** | Yes | Yes | Operator sees the fix in cycle output → no recurrence |
-
-The structural-but-not-surfaced variant is subtle because the agent CAN truthfully say "I authored the fix." But the operator's experience hasn't changed — the symptom presents identically. The bug is in the SURFACE layer, not the structural layer.
-
-The deeper insight: structural artefacts have **two reach modes** — findable (operator can navigate to it via file path / search) and inline (visible at the moment of relevant interaction). Findable-only is sufficient for some content (reference material, deep technical detail). Inline is required for content the operator needs at decision-time (current state, pending blockers, journey position). Decide PER ARTEFACT which reach mode matters.
+> [!tip] **Structural artefacts have two reach modes**
+>
+> Structural artefacts have **two reach modes** — findable (operator can navigate to it via file path / search) and inline (visible at the moment of relevant interaction). Findable-only is sufficient for some content (reference material, deep technical detail). Inline is required for content the operator needs at decision-time (current state, pending blockers, journey position). Decide PER ARTEFACT which reach mode matters.
 
 ## Evidence
 

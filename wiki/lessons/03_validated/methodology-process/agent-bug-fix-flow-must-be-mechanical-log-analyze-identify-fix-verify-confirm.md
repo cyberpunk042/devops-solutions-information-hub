@@ -47,9 +47,13 @@ This lesson applies when:
 
 ## Insight
 
-The agent's default response shape is `parse user message → respond`. There is no built-in "is this a bug report?" gate that fires before responding. So when a bug is reported, the reflex is verbal acknowledgment, not workblock entry. The six-step sequence is the **structural override** — when in a bug-fix workblock, follow the sequence mechanically; do not generatively decide what the response shape should be. The sequence has to be load-bearing (auto-injected at session start), not reference-only — if it loads on-demand AFTER the bug is reported, the agent already responded and skipped step 1.
+> [!success] **The six-step sequence is the structural override**
+>
+> The agent's default response shape is `parse user message → respond`. There is no built-in *"is this a bug report?"* gate that fires before responding. So when a bug is reported, the reflex is verbal acknowledgment, not workblock entry. The six-step sequence is the **structural override** — when in a bug-fix workblock, follow the sequence mechanically; do not generatively decide what the response shape should be. The sequence has to be load-bearing (auto-injected at session start), not reference-only — if it loads on-demand AFTER the bug is reported, the agent already responded and skipped step 1.
 
-Deeper insight: each step has its own anti-pattern (verbal-only fix, wrong-layer log, stop-at-analysis, fix-in-wrong-order, skip-verify, self-confirm). Knowing the steps isn't enough — each step needs its own discipline.
+> [!warning] **Each step has its own anti-pattern**
+>
+> Verbal-only fix, wrong-layer log, stop-at-analysis, fix-in-wrong-order, skip-verify, self-confirm. Knowing the steps isn't enough — each step needs its own discipline.
 
 ## Evidence
 

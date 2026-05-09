@@ -42,7 +42,9 @@ Does NOT apply to: explicit operator pivots ("stop X, do Y"), brand-new sessions
 
 ## Insight
 
-Agents lose the original task because their default interpretation is **respond-to-the-latest-input** rather than **integrate-into-the-current-task**. Each operator message is processed as a new prompt; the original task fades from attention. Operator complaints about tangents look exactly like task-pivot signals, so the agent switches.
+> [!success] **Default interpretation is the bug**
+>
+> Agents lose the original task because their default interpretation is **respond-to-the-latest-input** rather than **integrate-into-the-current-task**. Each operator message is processed as a new prompt; the original task fades from attention. Operator complaints about tangents look exactly like task-pivot signals, so the agent switches.
 
 The structural fix has four parts:
 1. **Active-task register** — explicit tracking of THE current task

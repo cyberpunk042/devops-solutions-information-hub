@@ -52,11 +52,17 @@ Does NOT apply to: trivial localized issues with no behavioral pattern; cases wh
 
 ## Insight
 
-The classification of bug vs systemic-bug determines **where the fix lives**. Mis-classification produces structural waste: regular bugs treated as systemic over-engineer rules and hooks for what's just a code change; systemic bugs treated as regular leave the underlying pattern intact, recurring in adjacent contexts.
+> [!success] **Classification determines where the fix lives**
+>
+> The classification of bug vs systemic-bug determines **where the fix lives**. Mis-classification produces structural waste: regular bugs treated as systemic over-engineer rules and hooks for what's just a code change; systemic bugs treated as regular leave the underlying pattern intact, recurring in adjacent contexts.
 
-**Agent-specific insight** (operator's): for agents, systemic bugs tend to live at the meta layer — harness (Claude Code mechanism, hook system), ecosystem (cross-project flows, contribute channels), brain files (CLAUDE.md, AGENTS.md, .claude/rules/, modes, hooks, methodology config). The agent's "code" rarely contains the bug; the bug is in the surrounding configuration.
+> [!info] **Agent-specific: systemic bugs live at the meta layer**
+>
+> For agents, systemic bugs tend to live at the meta layer — harness (Claude Code mechanism, hook system), ecosystem (cross-project flows, contribute channels), brain files (CLAUDE.md, AGENTS.md, .claude/rules/, modes, hooks, methodology config). The agent's "code" rarely contains the bug; the bug is in the surrounding configuration.
 
-The deeper insight: classification is the FIRST step of bug-fix-flow's IDENTIFY phase. Until the bug is classified, the agent can't list the right files to fix. Get the classification right, and the fix-location follows.
+> [!tip] **Classification is the FIRST step of bug-fix-flow's IDENTIFY phase**
+>
+> Until the bug is classified, the agent can't list the right files to fix. Get the classification right, and the fix-location follows.
 
 ## Evidence
 

@@ -46,13 +46,18 @@ Does NOT apply to: internal scratch counts; situations where the agent genuinely
 
 ## Insight
 
-Both failures share a root cause: the agent isn't doing the **PM-lens work fully**. Honest reporting + pre-surface filtering are PM responsibilities. Anti-minimizing is the first; blocker-filter is the second. Together they shape clean operator communication.
+> [!success] **Both failures share a root cause: incomplete PM-lens work**
+>
+> Both failures share a root cause: the agent isn't doing the **PM-lens work fully**. Honest reporting + pre-surface filtering are PM responsibilities. Anti-minimizing is the first; blocker-filter is the second. Together they shape clean operator communication.
 
-The structural fix uses two mechanisms:
-1. **Cumulative tracker** (per the systemic-bugs-tracker pattern): every observed bug enters the register; status changes (open → fixed → verified) but entries don't disappear from the count
-2. **Pre-surface filter** (per `tools.blockers --filter` in root-ghostproxy): for each pending blocker, scan verbatim operator directives; classify as `decided` / `prerequisite-blocked` / `genuinely-pending`; surface only `genuinely-pending`
+> [!info] **The structural fix uses two mechanisms**
+>
+> 1. **Cumulative tracker** (per the systemic-bugs-tracker pattern): every observed bug enters the register; status changes (open → fixed → verified) but entries don't disappear from the count
+> 2. **Pre-surface filter** (per `tools.blockers --filter` in root-ghostproxy): for each pending blocker, scan verbatim operator directives; classify as `decided` / `prerequisite-blocked` / `genuinely-pending`; surface only `genuinely-pending`
 
-The deeper insight: operator attention is finite. Anti-minimizing wastes attention by hiding bugs operator wants to see; over-surfacing wastes attention by asking what's already been answered. Both are failures of *signal management*. The PM-lens responsibility is producing high-signal-to-noise communication.
+> [!warning] **Operator attention is finite**
+>
+> Anti-minimizing wastes attention by hiding bugs operator wants to see; over-surfacing wastes attention by asking what's already been answered. Both are failures of *signal management*. The PM-lens responsibility is producing high-signal-to-noise communication.
 
 ## Evidence
 

@@ -55,18 +55,20 @@ Does NOT apply to: registers explicitly designed as dumping grounds (those have 
 
 ## Insight
 
-A blockers register's value comes from its **single-responsibility-principle (SRP)**: it tracks items that REQUIRE operator (or external) input to unblock CURRENTLY ACTIVE work. The discipline:
+> [!success] **A blockers register's value comes from SRP — single-responsibility-principle**
+>
+> A blockers register tracks items that REQUIRE operator (or external) input to unblock CURRENTLY ACTIVE work. The discipline:
+>
+> - Fix-tasks → fixable by agent unilaterally; not blockers
+> - Findings → observations; not blockers
+> - Decisions-already-made → logbook; not blockers
+> - Future enhancements → future-work register; not blockers
+> - Deferred-by-design → module page note; not blockers
+> - Tool-gap assumptions without trying → fake; verify empirically
 
-- Fix-tasks → fixable by agent unilaterally; not blockers
-- Findings → observations; not blockers
-- Decisions-already-made → logbook; not blockers
-- Future enhancements → future-work register; not blockers
-- Deferred-by-design → module page note; not blockers
-- Tool-gap assumptions without trying → fake; verify empirically
-
-The deeper insight: **empirical verification is the gate**. Assumption-based "blocked" claims pollute the register. Every claim must inline: "I tried X, got error Y from rule Z." If the agent can't show that, the item belongs elsewhere.
-
-The structural fix: each project's operating-principles file should have an Empirical-verification-before-blocked principle (root-ghostproxy's Principle #8). The lesson is: that principle is essential, not optional.
+> [!tip] **Empirical verification is the gate**
+>
+> Assumption-based "blocked" claims pollute the register. Every claim must inline: *"I tried X, got error Y from rule Z."* If the agent can't show that, the item belongs elsewhere. The structural fix: each project's operating-principles file should have an Empirical-verification-before-blocked principle (root-ghostproxy's Principle #8). That principle is essential, not optional.
 
 ## Evidence
 

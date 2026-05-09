@@ -43,11 +43,17 @@ Does NOT apply to: universal safety hooks (credential blocking, malware blocking
 
 ## Insight
 
-Hook scope is a design decision: **machine-level** (fires for all sessions of that user, every project) vs **project-level** (fires only for sessions in that project's cwd). The two-layer architecture is the structural pattern; cross-firing is the anti-pattern.
+> [!success] **Hook scope is a design decision: machine-level vs project-level**
+>
+> Hook scope is a design decision: **machine-level** (fires for all sessions of that user, every project) vs **project-level** (fires only for sessions in that project's cwd). The two-layer architecture is the structural pattern; cross-firing is the anti-pattern.
 
-The key heuristic: if the rule is universal (safety floor that should always hold), hook goes at machine-level. If the rule is project-specific (e.g., "this project's agent must not write to that path"), hook goes at project-level. Putting a project-specific rule at machine-level produces spurious blocks against legitimate sibling-project operations.
+> [!tip] **The key heuristic — universal vs project-specific**
+>
+> If the rule is universal (safety floor that should always hold), hook goes at machine-level. If the rule is project-specific (e.g., *"this project's agent must not write to that path"*), hook goes at project-level. Putting a project-specific rule at machine-level produces spurious blocks against legitimate sibling-project operations.
 
-The deeper insight: hook diagnostic messages should be **honest about what's being enforced**. A hook that says "X agent must not write to Y" but fires regardless of agent context is lying about what it's checking. The diagnostic message must match the enforcement scope, or the hook is misleading.
+> [!warning] **Hook diagnostic messages must match enforcement scope**
+>
+> Hook diagnostic messages should be **honest about what's being enforced**. A hook that says *"X agent must not write to Y"* but fires regardless of agent context is lying about what it's checking. The diagnostic message must match the enforcement scope, or the hook is misleading.
 
 ## Evidence
 

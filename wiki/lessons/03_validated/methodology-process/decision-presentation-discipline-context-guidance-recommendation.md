@@ -47,11 +47,15 @@ Does NOT apply to: single-question moments where context is fresh in conversatio
 
 ## Insight
 
-A decision package is a **self-contained unit** — operator reads it once and can decide. A wall of questions is **incomplete units** — operator has to do the work of completing each.
+> [!success] **A decision package is a self-contained unit; a wall of questions is incomplete units**
+>
+> A decision package is a **self-contained unit** — operator reads it once and can decide. A wall of questions is **incomplete units** — operator has to do the work of completing each.
 
-The deeper insight: this is the **PM-lens signal-to-noise discipline** applied to the surfacing format. The blocker-filter discipline (don't over-surface) handles WHICH decisions reach the operator; the decision-presentation discipline handles HOW each one is shaped. Both are facets of "operator attention is precious; respect it."
-
-The agent has more context than the operator does at the moment of surfacing — agent has just been working on the issue; operator may have stepped away. The package format transfers that context, plus an opinionated recommendation. The operator either accepts the recommendation (fast path) or overrides with their own answer (slower path, but informed by the package's GUIDANCE). Either way, faster than wall-of-questions.
+> [!tip] **PM-lens signal-to-noise applied to surfacing format**
+>
+> This is the **PM-lens signal-to-noise discipline** applied to the surfacing format. The blocker-filter discipline (don't over-surface) handles WHICH decisions reach the operator; the decision-presentation discipline handles HOW each one is shaped. Both are facets of *"operator attention is precious; respect it."*
+>
+> The agent has more context than the operator does at the moment of surfacing — agent has just been working on the issue; operator may have stepped away. The package format transfers that context, plus an opinionated recommendation. The operator either accepts the recommendation (fast path) or overrides with their own answer (slower path, but informed by the package's GUIDANCE). Either way, faster than wall-of-questions.
 
 ## Evidence
 

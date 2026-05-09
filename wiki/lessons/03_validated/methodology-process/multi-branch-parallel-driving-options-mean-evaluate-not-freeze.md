@@ -42,15 +42,19 @@ Does NOT apply to: situations where the agent IS genuinely blocked (one path nee
 
 ## Insight
 
-There is a distinct freeze-pattern variant beyond freeze-when-corrected: **freeze-when-options-exist**. The agent perceives "multiple choices = decision needed" instead of "multiple choices = optionality + parallelizable advance." This is over-interpretation of choice as gate.
+> [!success] **Freeze-when-options-exist is a freeze-pattern variant**
+>
+> There is a distinct freeze-pattern variant beyond freeze-when-corrected: **freeze-when-options-exist**. The agent perceives *"multiple choices = decision needed"* instead of *"multiple choices = optionality + parallelizable advance."* This is over-interpretation of choice as gate.
 
-The deeper insight: solo + AI configurations benefit from agent demonstrating **multi-branch handling capability**. Per operator's framing, surfacing options is "supposed to just open more option and possibility for evaluating order and such and proving you can handle multiple branches at the same time and just keep track in general." The act of advancing in parallel IS the value — not the act of surfacing for choice.
-
-When an agent advances on multiple branches simultaneously and tracks them in a structured status block, the operator gets:
-- Cumulative progress on N fronts (instead of zero progress until one is picked)
-- Empirical signal about which branch is more productive (operator can re-direct based on observed advance)
-- Demonstrated agent capability for parallel/branched work
-- Better signal-to-noise (one big status report vs N "I'm stuck on option choice" pings)
+> [!tip] **Multi-branch handling capability is the value**
+>
+> Solo + AI configurations benefit from agent demonstrating **multi-branch handling capability**. Per operator's framing, surfacing options is *"supposed to just open more option and possibility for evaluating order and such and proving you can handle multiple branches at the same time and just keep track in general."* The act of advancing in parallel IS the value — not the act of surfacing for choice.
+>
+> When an agent advances on multiple branches simultaneously and tracks them in a structured status block, the operator gets:
+> - Cumulative progress on N fronts (instead of zero progress until one is picked)
+> - Empirical signal about which branch is more productive (operator can re-direct based on observed advance)
+> - Demonstrated agent capability for parallel/branched work
+> - Better signal-to-noise (one big status report vs N *"I'm stuck on option choice"* pings)
 
 ## Evidence
 

@@ -47,9 +47,13 @@ Does NOT apply to: scratch workspaces, projects intentionally generic, or contex
 
 ## Insight
 
-Auto-loaded brain text is **passive context** — it's available for retrieval but doesn't drive behavior. Behavior requires **active direction**: a hook that fires at session start and pushes a structured imperative into the agent's first-turn context, which then chains to a deterministic command for the actual intel load.
+> [!success] **Active orientation, not passive context loading**
+>
+> Auto-loaded brain text is **passive context** — it's available for retrieval but doesn't drive behavior. Behavior requires **active direction**: a hook that fires at session start and pushes a structured imperative into the agent's first-turn context, which then chains to a deterministic command for the actual intel load.
 
-The deeper insight: the determinism ladder (text in CLAUDE.md → hook stdout → hook `additionalContext` JSON → slash command → skill auto-trigger) has gradients of reliability. Pairing two layers (hook ~85% + command 100% on invoke) is more reliable than trusting any single layer alone. Auto-loaded text is at the bottom of the ladder for behavioral influence.
+> [!info] **The determinism ladder**
+>
+> Text in CLAUDE.md → hook stdout → hook `additionalContext` JSON → slash command → skill auto-trigger. Each layer has gradients of reliability. Pairing two layers (hook ~85% + command 100% on invoke) is more reliable than trusting any single layer alone. Auto-loaded text is at the bottom of the ladder for behavioral influence.
 
 ## Evidence
 

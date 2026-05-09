@@ -50,11 +50,15 @@ Does NOT apply to: projects with frozen specs (e.g., regulated environments wher
 
 ## Insight
 
-A spec-driven project's spec is not a static description. It's a **living artifact** that evolves when bugs are exhibited. Each bug becomes an INPUT to evolution. The structural answer to a bug is: update the spec so the bug doesn't recur. The project gets exponentially stronger because the spec ABSORBS each learning permanently.
+> [!success] **The spec is a LIVING artifact that evolves when bugs are exhibited**
+>
+> A spec-driven project's spec is not a static description. It's a **living artifact** that evolves when bugs are exhibited. Each bug becomes an INPUT to evolution. The structural answer to a bug is: update the spec so the bug doesn't recur. The project gets exponentially stronger because the spec ABSORBS each learning permanently.
 
-The deeper insight: the doctrine is **the WHY behind everything else**. Bug-fix flow is the mechanics; operating principles are the rules; modes/autopilot are the cadence; co-evolution is the ecosystem layer — all are operationalizations of "evolve the spec to fix bugs." None is the doctrine itself.
-
-A project without spec evolution sees the same bugs recur indefinitely. A project WITH spec evolution gets exponentially better at the kinds of bugs it has already seen — low-hanging fruit gets fixed; new bugs emerge in deeper territory.
+> [!tip] **The WHY behind everything else**
+>
+> The doctrine is **the WHY behind everything else**. Bug-fix flow is the mechanics; operating principles are the rules; modes/autopilot are the cadence; co-evolution is the ecosystem layer — all are operationalizations of *"evolve the spec to fix bugs."* None is the doctrine itself.
+>
+> A project without spec evolution sees the same bugs recur indefinitely. A project WITH spec evolution gets exponentially better at the kinds of bugs it has already seen — low-hanging fruit gets fixed; new bugs emerge in deeper territory.
 
 ## Evidence
 

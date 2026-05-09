@@ -37,12 +37,16 @@ Does NOT apply to: pure single-input one-shot sessions; cases where the operator
 
 ## Insight
 
-The agent's default response shape is **respond-to-latest** — process the most recent input and ignore prior context unless it's still in the conversation buffer. Under context pressure or compaction, prior unresolved inputs silently disappear. The compound-waterfall pattern is the structural override:
+> [!success] **Compound + Waterfall are the structural override of respond-to-latest**
+>
+> The agent's default response shape is **respond-to-latest** — process the most recent input and ignore prior context unless it's still in the conversation buffer. Under context pressure or compaction, prior unresolved inputs silently disappear. The compound-waterfall pattern is the structural override:
+>
+> - **Compound**: every input ADDS to a working set; the latest input doesn't replace prior ones
+> - **Waterfall**: each input cascades through stages (enqueued → analyzed → identified → in-progress → structurally-fixed → verified → archived) — none jumps backward (except `recurring`)
 
-- **Compound**: every input ADDS to a working set; the latest input doesn't replace prior ones
-- **Waterfall**: each input cascades through stages (enqueued → analyzed → identified → in-progress → structurally-fixed → verified → archived) — none jumps backward (except `recurring`)
-
-The deeper insight: this realizes the operator's additive doctrine (2026-04-24: *"its not because I add something that you can discard everything I asked you before"*). Words → behavior → structure. The lesson is the structural realization of the standing rule.
+> [!info] **Realizes the operator's additive doctrine**
+>
+> Operator 2026-04-24: *"its not because I add something that you can discard everything I asked you before."* Words → behavior → structure. The lesson is the structural realization of the standing rule.
 
 ## Evidence
 

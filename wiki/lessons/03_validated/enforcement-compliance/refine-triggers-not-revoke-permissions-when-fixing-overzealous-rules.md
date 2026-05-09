@@ -47,11 +47,15 @@ Does NOT apply to: rules without permission semantics (e.g., pure validators), o
 
 ## Insight
 
-The fix shape for over-firing rules is **trigger-narrowing, not permission-revocation**. An over-firing rule has two parts: the permission (what the agent MAY do) and the trigger (when the agent does it). The bug is almost always in the trigger — the permission was granted appropriately, but the firing condition was too loose. Tightening the trigger preserves the grant; revoking the permission dismisses it.
+> [!success] **Trigger-narrowing, not permission-revocation**
+>
+> The fix shape for over-firing rules is **trigger-narrowing, not permission-revocation**. An over-firing rule has two parts: the permission (what the agent MAY do) and the trigger (when the agent does it). The bug is almost always in the trigger — the permission was granted appropriately, but the firing condition was too loose. Tightening the trigger preserves the grant; revoking the permission dismisses it.
 
-Why this matters: operator-granted permissions accumulate signal about how the operator wants the agent to operate. Each grant was earned through context. Revoking a grant on agent-initiative erases that signal. The operator must re-grant from scratch, often having to re-litigate the same context.
-
-The deeper insight: when fixing rules, ask **"am I removing the permission, or refining the trigger?"** If removing — that needs operator direction. If refining — that's the agent's job.
+> [!warning] **Operator-granted permissions accumulate signal**
+>
+> Each grant was earned through context. Revoking a grant on agent-initiative erases that signal. The operator must re-grant from scratch, often having to re-litigate the same context.
+>
+> When fixing rules, ask: *"am I removing the permission, or refining the trigger?"* If removing — that needs operator direction. If refining — that's the agent's job.
 
 ## Evidence
 

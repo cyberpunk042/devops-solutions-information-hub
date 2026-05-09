@@ -42,11 +42,15 @@ Does NOT apply to: bugs with no spectrum (e.g., a regex error where the fix is a
 
 ## Insight
 
-Correction-as-swing is a **meta-pattern** beyond any single rule-edit context. The agent perceives "this is wrong" and reaches for "the opposite of this" as the fix. But the bug usually isn't in the DIRECTION; it's in the CALIBRATION. The correct fix is to find the precise condition that distinguishes the buggy case from the legitimate cases — refine that condition.
+> [!success] **Correction-as-swing is a meta-pattern beyond any single rule-edit context**
+>
+> The agent perceives *"this is wrong"* and reaches for *"the opposite of this"* as the fix. But the bug usually isn't in the DIRECTION; it's in the CALIBRATION. The correct fix is to find the precise condition that distinguishes the buggy case from the legitimate cases — refine that condition.
 
-The deeper insight: corrections-as-swings are easier to author (delete the rule / flip the boolean / disable the feature) than corrections-as-calibrations (find the specific trigger / add the gating condition / preserve the spectrum). Ease ≠ correctness. The agent's reflex toward easiest-fix is itself a bug.
-
-This composes with refine-triggers-not-revoke-permissions: that lesson is the SPECIFIC application (when the rule has operator-granted permission semantics, refine trigger not revoke permission). This lesson is the GENERAL case (correction-shape across all kinds of fixes — rules, hooks, code, behavior, scope).
+> [!warning] **Ease ≠ correctness**
+>
+> Corrections-as-swings are easier to author (delete the rule / flip the boolean / disable the feature) than corrections-as-calibrations (find the specific trigger / add the gating condition / preserve the spectrum). The agent's reflex toward easiest-fix is itself a bug.
+>
+> This composes with refine-triggers-not-revoke-permissions: that lesson is the SPECIFIC application (when the rule has operator-granted permission semantics, refine trigger not revoke permission). This lesson is the GENERAL case (correction-shape across all kinds of fixes — rules, hooks, code, behavior, scope).
 
 ## Evidence
 

@@ -31,11 +31,15 @@ Empirically discovered 2026-05-06 during a multi-hour debugging session of an en
 
 ## Insight
 
-`.claude/settings.json` is **loaded once at session start** and cached for the session's lifetime. Editing it during a live session does not update the cached config. Even `touch`-ing the file (mtime change) does not trigger reload.
+> [!success] **Caching asymmetry: settings.json caches; settings.local.json hot-reloads**
+>
+> `.claude/settings.json` is **loaded once at session start** and cached for the session's lifetime. Editing it during a live session does not update the cached config. Even `touch`-ing the file (mtime change) does not trigger reload.
+>
+> `.claude/settings.local.json` is **hot-reloaded per prompt** (or close to it). Edits during a live session take effect on next prompt. This is the escape hatch for fixing hook wiring without requiring `/clear` or session restart.
 
-`.claude/settings.local.json` is **hot-reloaded per prompt** (or close to it). Edits during a live session take effect on next prompt. This is the escape hatch for fixing hook wiring without requiring `/clear` or session restart.
-
-This caching asymmetry is **undocumented** in the official Claude Code hook docs but verifiable via the session log and empirical testing.
+> [!info] **Undocumented but empirically verifiable**
+>
+> This caching asymmetry is **undocumented** in the official Claude Code hook docs but verifiable via the session log and empirical testing.
 
 ## Evidence
 

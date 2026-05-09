@@ -47,11 +47,17 @@ Does NOT apply to: project-level settings.json (`<project>/.claude/settings.json
 
 ## Insight
 
-**User-level vs project-level settings.json have different path-resolution semantics.** A common mistake is treating them interchangeably: working in project-level config makes relative paths feel safe; copying that mental model to user-level config produces silent breakage when sessions diverge from the home cwd.
+> [!success] **User-level vs project-level settings.json have different path-resolution semantics**
+>
+> A common mistake is treating them interchangeably: working in project-level config makes relative paths feel safe; copying that mental model to user-level config produces silent breakage when sessions diverge from the home cwd.
 
-The DEEPER insight: when settings.json applies CROSS-PROJECT (user-level), its hook commands run in WHATEVER cwd the session is in — which is often NOT $HOME. Relative paths are calibrated for $HOME-as-cwd but execute from arbitrary cwd, so they fail.
+> [!warning] **Hook commands run in WHATEVER cwd the session is in — often not $HOME**
+>
+> When settings.json applies CROSS-PROJECT (user-level), its hook commands run in WHATEVER cwd the session is in — which is often NOT $HOME. Relative paths are calibrated for $HOME-as-cwd but execute from arbitrary cwd, so they fail.
 
-The portability fix is `$HOME` shell-expansion, not relative paths. `$HOME` resolves correctly per-user (different users have different $HOME values), and the path is unambiguous regardless of cwd.
+> [!tip] **The portability fix is `$HOME` shell-expansion, not relative paths**
+>
+> `$HOME` resolves correctly per-user (different users have different $HOME values), and the path is unambiguous regardless of cwd.
 
 ## Evidence
 

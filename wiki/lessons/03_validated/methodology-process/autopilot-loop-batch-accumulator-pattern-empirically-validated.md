@@ -53,11 +53,15 @@ Does NOT apply to: short-burst work, high-risk operations, active design phases 
 
 ## Insight
 
-The pattern's load-bearing component is the **batch accumulator** — the log file where each cycle's findings append. Without it, autopilot becomes either: (a) silent (findings discarded), or (b) spam (each cycle interrupts operator). The accumulator decouples agent's iteration cadence from operator's review cadence.
+> [!success] **The batch accumulator is the load-bearing component**
+>
+> The pattern's load-bearing component is the **batch accumulator** — the log file where each cycle's findings append. Without it, autopilot becomes either: (a) silent (findings discarded), or (b) spam (each cycle interrupts operator). The accumulator decouples agent's iteration cadence from operator's review cadence.
 
-The deeper insight: combining mode (persona overlay) + /loop (cadence) + batch-accumulator (delayed-review) gives a 3-axis productivity boost. Mode shapes WHAT gets done; /loop shapes WHEN it gets done; accumulator shapes HOW operator processes results. Each axis is operator-controllable.
-
-The pattern also implements **operator-in-the-loop preserved** — agent surfaces and accumulates; operator processes batch when appropriate. The autopilot is autonomous on observation, not on decisions.
+> [!tip] **3-axis productivity boost: mode + /loop + accumulator**
+>
+> Combining mode (persona overlay) + /loop (cadence) + batch-accumulator (delayed-review) gives a 3-axis productivity boost. Mode shapes WHAT gets done; /loop shapes WHEN it gets done; accumulator shapes HOW operator processes results. Each axis is operator-controllable.
+>
+> The pattern also implements **operator-in-the-loop preserved** — agent surfaces and accumulates; operator processes batch when appropriate. The autopilot is autonomous on observation, not on decisions.
 
 ## Evidence
 

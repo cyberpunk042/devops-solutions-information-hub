@@ -52,7 +52,13 @@ The /opt body of work has 4 governing principles (per CONTEXT.md). 100+ pieces h
 
 ## Insight
 
-Cross-cutting failures (where multiple cluster-axis-failures stack simultaneously) cannot be reliably caught by single-axis enforcement (one hook covering one rule). The structural pattern observed: every cross-cutting failure (Fire 115 C18 instances) had its failure-attribution map to 3-4 cluster axes; if any one axis had been enforced, the failure might have surfaced earlier — but no single layer caught it. Defense-in-depth (multiple enforcement layers stacked, each catching different failure modes) is the structural complement: each layer fails independently; combined, the layers maximize prevention coverage. The auto-compact priority (Fires 105+106+107) operationalizes this for one specific cross-cutting failure (post-compact detection failure). P5 generalizes the pattern: cross-cutting failures REQUIRE multi-layer enforcement, not just single-axis.
+> [!success] **Cross-cutting failures cannot be reliably caught by single-axis enforcement**
+>
+> Cross-cutting failures (where multiple cluster-axis-failures stack simultaneously) cannot be reliably caught by single-axis enforcement (one hook covering one rule). The structural pattern observed: every cross-cutting failure (Fire 115 C18 instances) had its failure-attribution map to 3-4 cluster axes; if any one axis had been enforced, the failure might have surfaced earlier — but no single layer caught it.
+
+> [!tip] **Defense-in-depth is the structural complement**
+>
+> Multiple enforcement layers stacked, each catching different failure modes — each layer fails independently; combined, the layers maximize prevention coverage. The auto-compact priority (Fires 105+106+107) operationalizes this for one specific cross-cutting failure (post-compact detection failure). P5 generalizes the pattern: cross-cutting failures REQUIRE multi-layer enforcement, not just single-axis.
 
 ## P5 Candidate Statement
 

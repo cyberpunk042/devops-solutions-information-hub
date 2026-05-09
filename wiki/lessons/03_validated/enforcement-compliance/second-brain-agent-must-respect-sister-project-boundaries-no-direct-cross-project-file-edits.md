@@ -42,9 +42,13 @@ Does NOT apply to: read-only inspection of sister-project files for cross-projec
 
 ## Insight
 
-Each project owns its own authoring layer. The second-brain agent's authority is bounded by /opt — even when the second-brain is the central knowledge hub for the ecosystem, that does NOT grant it write authority into sister projects. The boundary is structural, symmetric to the /root-side rule "LET THE SECOND-BRAIN BE ITS OWN": each project's agent is the authority on its own files.
+> [!success] **Each project owns its own authoring layer**
+>
+> The second-brain agent's authority is bounded by /opt — even when the second-brain is the central knowledge hub for the ecosystem, that does NOT grant it write authority into sister projects. The boundary is structural, symmetric to the /root-side rule *"LET THE SECOND-BRAIN BE ITS OWN"*: each project's agent is the authority on its own files.
 
-The deeper insight: cross-project communication is via **proper channels** (contribute feature, MCP queries, sister-projects.yaml registry, operator-mediated transfer), NOT direct file edits. Direct edits bypass the receiving project's quality gates, erode its agent's authorial intent, create maintenance debt, and violate the "behave FROM the project, not OVER it" doctrine.
+> [!warning] **Cross-project communication = proper channels, never direct file edits**
+>
+> Cross-project communication is via **proper channels** (contribute feature, MCP queries, sister-projects.yaml registry, operator-mediated transfer), NOT direct file edits. Direct edits bypass the receiving project's quality gates, erode its agent's authorial intent, create maintenance debt, and violate the *"behave FROM the project, not OVER it"* doctrine.
 
 ## Evidence
 
