@@ -1,12 +1,12 @@
 {
-  "generated": "2026-05-09T01:53:51.775529+00:00",
+  "generated": "2026-05-09T11:22:47.681371+00:00",
   "stats": {
-    "pages": 840,
-    "domains": 13,
+    "pages": 842,
+    "domains": 14,
     "sources": 109,
     "comparisons": 9,
-    "relationships": 3914,
-    "tags_unique": 3072,
+    "relationships": 3920,
+    "tags_unique": 3089,
     "layers": {
       "3": 4,
       "5": 38,
@@ -18,8 +18,8 @@
       "spine": 80
     },
     "maturity": {
-      "seed": 175,
-      "growing": 326,
+      "seed": 171,
+      "growing": 331,
       "mature": 23
     }
   },
@@ -17088,60 +17088,6 @@
       "relationships": []
     },
     {
-      "path": "lessons/00_inbox/audit-numbers-age-fast-rebaseline-before-execute.md",
-      "slug": "lessons/00_inbox/audit-numbers-age-fast-rebaseline-before-execute",
-      "title": "audit-numbers-age-fast-rebaseline-before-execute",
-      "type": "lesson",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "medium",
-      "created": "2026-04-27",
-      "updated": "2026-04-27",
-      "last_reviewed": "",
-      "tags": [
-        "contributed",
-        "inbox"
-      ],
-      "sources": [],
-      "layer": 4,
-      "maturity": "seed",
-      "derived_from": [],
-      "aliases": [],
-      "relationships": [
-        {
-          "verb": "RELATES TO",
-          "target": "Model Registry"
-        }
-      ]
-    },
-    {
-      "path": "lessons/00_inbox/sunk-cost-in-technical-paths-prefer-root-switching.md",
-      "slug": "lessons/00_inbox/sunk-cost-in-technical-paths-prefer-root-switching",
-      "title": "sunk-cost-in-technical-paths-prefer-root-switching",
-      "type": "lesson",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "medium",
-      "created": "2026-04-27",
-      "updated": "2026-04-27",
-      "last_reviewed": "",
-      "tags": [
-        "contributed",
-        "inbox"
-      ],
-      "sources": [],
-      "layer": 4,
-      "maturity": "seed",
-      "derived_from": [],
-      "aliases": [],
-      "relationships": [
-        {
-          "verb": "RELATES TO",
-          "target": "Model Registry"
-        }
-      ]
-    },
-    {
       "path": "lessons/01_drafts/agent-authored-content-must-be-flagged-vs-operator-canonical-the-fabrication-cure.md",
       "slug": "lessons/01_drafts/agent-authored-content-must-be-flagged-vs-operator-canonical-the-fabrication-cure",
       "title": "Agent-Authored Content Must Be Flagged vs Operator-Canonical \u2014 The Fabrication Cure via Frontmatter Discipline + Promotion Gate",
@@ -17466,126 +17412,73 @@
       "relationships": []
     },
     {
-      "path": "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
-      "slug": "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
-      "title": "Anti-Vendor-Lock-In Is an Empirical Claim, Not an Aspirational One \u2014 When Every Layer of the Open-Source Stack Has Paper Evidence",
+      "path": "lessons/01_drafts/audit-numbers-age-fast-rebaseline-before-execute.md",
+      "slug": "lessons/01_drafts/audit-numbers-age-fast-rebaseline-before-execute",
+      "title": "Lesson \u2014 Audit numbers age fast: rebaseline before executing against an old audit",
       "type": "lesson",
       "domain": "cross-domain",
       "status": "synthesized",
-      "confidence": "high",
+      "confidence": "medium",
       "created": "2026-04-27",
-      "updated": "2026-04-28",
-      "last_reviewed": "2026-04-28",
+      "updated": "2026-05-09",
+      "last_reviewed": "2026-05-09",
       "tags": [
+        "contributed",
         "lesson",
-        "anti-vendor-lock-in",
-        "empirical-claim",
-        "paper-evidence",
-        "open-source-stack",
-        "post-anthropic-mission",
-        "layered-validation",
-        "end-to-end-traceability",
-        "mission-2026-04-27",
-        "p4-application",
-        "sovereignty-tier",
-        "rlm-thread",
-        "qwen3",
-        "prime-intellect",
-        "mit-oasys",
-        "tools-integration",
-        "claim-vs-aspiration"
+        "audit",
+        "rebaseline",
+        "stale-data",
+        "planning",
+        "layer-4",
+        "contributed-from-aicp",
+        "p4-application"
       ],
       "sources": [
         {
-          "id": "rlm-paper-deep-dive",
-          "type": "wiki",
-          "file": "wiki/sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations.md",
-          "description": "Paper-level deep-dive \u2014 primary empirical anchor for inference-paradigm + training-recipe layers"
+          "id": "aicp-skills-audit-2026-04-17",
+          "type": "project",
+          "project": "aicp",
+          "path": "docs/retros/RETRO-post-anthropic-2026-04-27.md",
+          "description": "AICP Post-Anthropic mission retrospective (2026-04-27); original audit at decisions/00_inbox/skills-audit-2026-04-17.md"
         },
         {
-          "id": "tier-0-comparison",
-          "type": "wiki",
-          "file": "wiki/comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate.md",
-          "description": "Cross-synthesis demonstrating the actionable use of layered paper evidence"
-        },
-        {
-          "id": "browsecomp-longbench-v2",
-          "type": "wiki",
-          "file": "wiki/sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks.md",
-          "description": "Retriever-layer empirical anchor \u2014 Qwen3-Embedding-8B +14pts over BM25 (open-source retriever competitive with closed-source generation)"
-        },
-        {
-          "id": "prime-rl-synth",
-          "type": "wiki",
-          "file": "wiki/sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale.md",
-          "description": "Training-layer empirical anchor \u2014 Apache 2.0 training framework, 48 H100 hours for RLM-Qwen3-8B"
-        },
-        {
-          "id": "oolong-longbench-pro",
-          "type": "wiki",
-          "file": "wiki/sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors.md",
-          "description": "Evaluation-layer empirical anchor \u2014 public benchmarks defining the task class"
+          "id": "aicp-handoff-skills-phase-2",
+          "type": "project",
+          "project": "aicp",
+          "path": "HANDOFF-SKILLS-PHASE-2-2026-04-27.md",
+          "description": "Re-baseline discovery \u2014 original 47% no longer right unit by execution time"
         },
         {
           "id": "principle-4",
           "type": "wiki",
           "file": "wiki/lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md",
-          "description": "Direct parent principle \u2014 this lesson specializes P4 to mission-class claims about open-source viability"
-        },
-        {
-          "id": "feedback-mission-framing",
-          "type": "notes",
-          "file": "~/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/feedback_mission_framing.md",
-          "description": "Operator's mission framing memory \u2014 anti-vendor-lock-in NOT anti-closed-weight"
+          "description": "P4 \u2014 sister discipline; numbers are aspirational until re-measured"
         }
       ],
       "layer": 4,
-      "maturity": "seed",
-      "derived_from": [
-        "RLM Paper Deep Dive (Table 1, Training Recipe)",
-        "RLM Empirical Findings (OOLONG 114% improvement)",
-        "BrowseComp+ + LongBench v2 (retriever +14pts)",
-        "Tier-0 Candidate Comparison",
-        "Prime Intellect Verifiers + prime-rl (Apache 2.0 training stack)",
-        "Declarations Are Aspirational Until Infrastructure Verifies Them"
-      ],
+      "maturity": "growing",
+      "derived_from": [],
       "aliases": [
-        "Anti-Vendor-Lock-In as Empirical Claim",
-        "Open-Source Stack Needs Paper Evidence at Every Layer",
-        "Lesson \u2014 Anti-Vendor-Lock-In Empirical"
+        "Audit Numbers Age Fast",
+        "Rebaseline Before Execute",
+        "Stale-Audit Anti-Pattern"
       ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "Principle 4 \u2014 Declarations Aspirational Until Infrastructure Verifies Them"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "Principle 1"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Never Synthesize from Descriptions Alone"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "The Agent Must Practice What It Documents"
-        },
-        {
-          "verb": "DEMONSTRATED BY",
-          "target": "Tier-0 Candidate Comparison"
-        },
-        {
-          "verb": "DEMONSTRATED BY",
-          "target": "2026-04-27 Session Handoff"
+          "target": "AICP Post-Anthropic mission retrospective 2026-04-27 (contributed-from-AICP)"
         },
         {
           "verb": "RELATES TO",
-          "target": "2026 Consumer Hardware AI Stack"
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
         },
         {
           "verb": "RELATES TO",
-          "target": "AI Infrastructure Decision Framework 2026"
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Fake Blockers vs Real Blockers"
         }
       ]
     },
@@ -18568,162 +18461,6 @@
         "Lesson \u2014 Substitution Pattern"
       ],
       "relationships": []
-    },
-    {
-      "path": "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers.md",
-      "slug": "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
-      "title": "End-to-End Compression Across the AI Stack Composes Multiplicatively \u2014 6+ Independent Mechanisms at 6 Distinct Layers, Each Substitutable Per Anti-Vendor-Lock-In",
-      "type": "lesson",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "high",
-      "created": "2026-05-06",
-      "updated": "2026-05-06",
-      "last_reviewed": "2026-05-06",
-      "tags": [
-        "lesson",
-        "layer-4",
-        "compression",
-        "multi-layer",
-        "convergence",
-        "anti-vendor-lock-in",
-        "prompt-compression",
-        "content-source-compression",
-        "tool-compression",
-        "inter-agent-compression",
-        "weight-quantization",
-        "kv-cache-compression",
-        "sparse-autoencoders",
-        "recursive-language-models",
-        "mission-2026-05-06",
-        "stack-wide-composition"
-      ],
-      "sources": [
-        {
-          "id": "caveman-synth",
-          "type": "wiki",
-          "file": "wiki/sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee.md",
-          "description": "Layer 1 \u2014 Caveman by Julius Brussee \u2014 operator-confirmed prompt+output compressor; Wenyan-Full delivers 80-90% character reduction at the prompt layer (client-side, lossless-semantic)"
-        },
-        {
-          "id": "cloudflare-markdown-synth",
-          "type": "wiki",
-          "file": "wiki/sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02.md",
-          "description": "Layer 1 \u2014 Cloudflare Markdown for Agents (Feb 2026) \u2014 server-side at-source compression via Accept: text/markdown content negotiation; 80% token reduction (16,180 HTML \u2192 3,150 markdown empirical anchor on the announcement post itself); already integrated in Claude Code + OpenCode"
-        },
-        {
-          "id": "strands-synth",
-          "type": "wiki",
-          "file": "wiki/sources/tools-integration/src-strands-agents-aws-intent-based-tool-design-96-percent-token-reduction.md",
-          "description": "Layer 1 \u2014 Strands Agents (AWS) \u2014 96% token reduction (52K \u2192 2K) via intent-based tool design + semantic-search MCP gateway; 14M+ downloads in <1 year"
-        },
-        {
-          "id": "recursivemas-synth",
-          "type": "wiki",
-          "file": "wiki/sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026.md",
-          "description": "Layer 1 \u2014 RecursiveMAS (Stanford arXiv 2604.25917, Apr 28 2026, #1 paper of the day, 257 upvotes) \u2014 34.6%-75.6% token reduction via cross-agent latent state transfer + 8.3% accuracy improvement + 1.2-2.4\u00d7 speedup (Pareto improvement)"
-        },
-        {
-          "id": "qwen-scope-synth",
-          "type": "wiki",
-          "file": "wiki/sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite.md",
-          "description": "Layer 1 \u2014 Qwen Scope SAE (Qwen Team, May 1 2026) \u2014 sparse autoencoder representation: residual-stream activations decompose into top-k features (k=50 or 100 of N=16\u00d7\u201364\u00d7 hidden size); structurally smaller than dense activations"
-        },
-        {
-          "id": "unsloth-synth",
-          "type": "wiki",
-          "file": "wiki/sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md",
-          "description": "Layer 1 \u2014 Unsloth UD-IQ2 / Q2_K weight quantization \u2014 ~87.5% reduction vs FP16 weights; production-deployed on consumer hardware (RTX 3090 24 GB VRAM)"
-        },
-        {
-          "id": "trust-layer-concept",
-          "type": "wiki",
-          "file": "wiki/domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md",
-          "description": "Concept \u2014 operator-authored 2026-04-30 \u2014 KV-cache compression layer (asymmetric quantization + sparsity, 50-87% reduction); composes with weight quantization + cypher overlay for 80-90% combined-envelope claim"
-        },
-        {
-          "id": "rlm-synth",
-          "type": "wiki",
-          "file": "wiki/sources/tools-integration/src-rlm-recursive-language-models-mit-oasys.md",
-          "description": "Layer 1 \u2014 RLM (MIT OASYS) \u2014 recursive scaling extends effective context 2 orders of magnitude beyond context window via REPL-driven recursive computation; structural compression of multi-doc reasoning into bounded context"
-        },
-        {
-          "id": "anti-vendor-lock-in-lesson",
-          "type": "wiki",
-          "file": "wiki/lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
-          "description": "Mission lesson \u2014 every stack layer has independent substitutable axes; this compression-convergence lesson specializes that pattern to compression mechanisms specifically"
-        },
-        {
-          "id": "spec-driven-convergence-lesson",
-          "type": "wiki",
-          "file": "wiki/lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md",
-          "description": "Sibling Layer-4 lesson \u2014 same convergent-pattern methodology applied to agentic-build practice; this compression lesson is the convergent-pattern applied to token-reduction across stack layers"
-        }
-      ],
-      "layer": 4,
-      "maturity": "seed",
-      "derived_from": [
-        "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee)",
-        "Synthesis \u2014 Cloudflare Markdown for Agents (Feb 2026)",
-        "Synthesis \u2014 Strands Agents (AWS) \u2014 96% Token Reduction via Intent-Based Tools",
-        "Synthesis \u2014 RecursiveMAS (Stanford 2026, arXiv 2604.25917)",
-        "Synthesis \u2014 Qwen-Scope: Open-Source Sparse Autoencoder Suite",
-        "Synthesis \u2014 Unsloth: UD-IQ2 / Q2_K Weight Quantization",
-        "Synthesis \u2014 RLM (Recursive Language Models, MIT OASYS)",
-        "Trust-Layer Concept (cypher + decypher + compression for 80-90% space saved)"
-      ],
-      "aliases": [
-        "Multi-Layer Compression Convergence Lesson",
-        "Stack-Wide Compression Composition",
-        "Compression Layer Substitutability",
-        "End-to-End AI-Stack Compression"
-      ],
-      "relationships": [
-        {
-          "verb": "DERIVED FROM",
-          "target": "Anti-Vendor-Lock-In Lesson"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Caveman Synthesis"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Trust-Layer Concept"
-        },
-        {
-          "verb": "PARALLELS",
-          "target": "Spec-Driven Convergence Lesson"
-        },
-        {
-          "verb": "DEMONSTRATES",
-          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
-        },
-        {
-          "verb": "DEMONSTRATES",
-          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
-        },
-        {
-          "verb": "DEMONSTRATES",
-          "target": "Goldilocks Protocol"
-        },
-        {
-          "verb": "DEMONSTRATES",
-          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "Custom-Tailored Model Group Concept"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "Trust-Layer Epic"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "Methodology Adoption Guide"
-        }
-      ]
     },
     {
       "path": "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property.md",
@@ -19779,184 +19516,6 @@
       ]
     },
     {
-      "path": "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md",
-      "slug": "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
-      "title": "Spec-Driven Agentic Build Is the 2026 Convergent Pattern \u2014 Eight+ Independent Practitioners Treat Prompts/Specs/Contexts as Version-Controlled First-Class Artifacts (Not Ad-Hoc Chat)",
-      "type": "lesson",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "high",
-      "created": "2026-05-04",
-      "updated": "2026-05-04",
-      "last_reviewed": "2026-05-04",
-      "tags": [
-        "lesson",
-        "layer-4",
-        "spec-driven",
-        "agentic-build",
-        "prompts-as-artifacts",
-        "version-controlled-specs",
-        "abstraction-first",
-        "alignment",
-        "iterative-review",
-        "closed-loop",
-        "fix-prompt-first",
-        "six-file-context",
-        "reasons-canvas",
-        "bmad",
-        "openspec",
-        "spec-kit",
-        "ai-dlc",
-        "karpathy",
-        "convergence",
-        "mission-2026-05-04",
-        "methodology-process"
-      ],
-      "sources": [
-        {
-          "id": "fowler-spdd-synth",
-          "type": "wiki",
-          "file": "wiki/sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd.md",
-          "description": "Evidence 1 \u2014 Thoughtworks enterprise-IT instance: REASONS Canvas + workflow + closed-loop. Authored at Thoughtworks Global IT Services, used in production before public release 2026-04-28."
-        },
-        {
-          "id": "jsmastery-six-file-synth",
-          "type": "wiki",
-          "file": "wiki/sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build.md",
-          "description": "Evidence 2 \u2014 solo/freelance teaching instance: six context files + per-feature numbered specs. Demonstrated end-to-end in a 29-feature Ghost AI build (2026)."
-        },
-        {
-          "id": "bmad-synth",
-          "type": "wiki",
-          "file": "wiki/sources/src-bmad-method-agile-ai-development-framework.md",
-          "description": "Evidence 3 \u2014 BMAD-METHOD framework instance: agile AI-driven development with personas + party mode + structured story-spec progression."
-        },
-        {
-          "id": "openspec-synth",
-          "type": "wiki",
-          "file": "wiki/sources/src-openspec-spec-driven-development-framework.md",
-          "description": "Evidence 4 \u2014 OpenSpec lightweight spec-driven framework instance: solves the fundamental problem of agents losing context across sessions via specs as the persisted artifact."
-        },
-        {
-          "id": "spec-kit-synth",
-          "type": "wiki",
-          "file": "wiki/sources/src-github-spec-kit-specification-driven-development.md",
-          "description": "Evidence 5 \u2014 GitHub's Spec Kit instance: Specification-Driven Development from the platform-vendor side; toolkit that operationalizes spec-first workflow."
-        },
-        {
-          "id": "aidlc-synth",
-          "type": "wiki",
-          "file": "wiki/sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle.md",
-          "description": "Evidence 6 \u2014 AWS AI-DLC instance: AI-Driven Development Lifecycle methodology (not a tool, not a framework \u2014 a methodology). Cloud-vendor articulation of the same core."
-        },
-        {
-          "id": "karpathy-llm-wiki-synth",
-          "type": "wiki",
-          "file": "wiki/sources/wiki-methodology/src-karpathy-llm-wiki-idea-file.md",
-          "description": "Evidence 7 \u2014 Karpathy's LLM Wiki Pattern: schema-as-the-real-product framing; the schema/spec is the durable artifact, content is generated from it. Foundational to the convergence."
-        },
-        {
-          "id": "cavekit-synth",
-          "type": "wiki",
-          "file": "wiki/sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee.md",
-          "description": "Evidence 8 (added 2026-05-04) \u2014 Cavekit v4 (Julius Brussee): the most distilled instance documented. SPEC.md + 3 commands + 2 skills \u00b7 caveman-encoded with mathematical-symbol vocabulary (\u2192 \u2234 \u2200 \u2203 ! ? \u22a5 \u2260 \u2208 \u2209 \u2264 \u2265 & |) \u00b7 backprop reflex turns bugs into permanent \u00a7V invariants. The convergent pattern's minimum viable shape."
-        },
-        {
-          "id": "schema-is-the-real-product-lesson",
-          "type": "wiki",
-          "file": "wiki/lessons/03_validated/knowledge-systems/schema-is-the-real-product.md",
-          "description": "Adjacent validated lesson \u2014 same structural insight applied to wiki construction; the schema file is the real product, content is generated from it"
-        },
-        {
-          "id": "structured-context-principle",
-          "type": "wiki",
-          "file": "wiki/lessons/04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content.md",
-          "description": "Parent principle (P2) \u2014 this lesson specializes P2 to the AI-assisted build context; the structured spec/prompt/canvas IS the structured context that programs agent behavior more reliably than ad-hoc chat"
-        },
-        {
-          "id": "markdown-as-iac-model",
-          "type": "wiki",
-          "file": "wiki/spine/models/agent-config/model-markdown-as-iac.md",
-          "description": "Wiki model \u2014 the 7 evidence instances are all instantiations of Markdown-as-IaC at the project-build scale"
-        },
-        {
-          "id": "agent-must-practice-lesson",
-          "type": "wiki",
-          "file": "wiki/lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents.md",
-          "description": "Adjacent \u2014 this lesson is about the wiki itself instantiating the same convergent pattern (CLAUDE.md + AGENTS.md + .claude/rules/ + per-module specs in wiki/backlog/modules/ = the wiki's own version of Six-File + per-feature specs)"
-        }
-      ],
-      "layer": 4,
-      "maturity": "seed",
-      "derived_from": [
-        "Synthesis \u2014 Structured Prompt-Driven Development (SPDD) \u2014 Thoughtworks (Fowler)",
-        "Synthesis \u2014 JS Mastery Six-File Context System",
-        "Synthesis \u2014 BMAD-METHOD",
-        "Synthesis \u2014 OpenSpec Spec-Driven Development Framework",
-        "Synthesis \u2014 GitHub Spec Kit Specification-Driven Development",
-        "Synthesis \u2014 AWS AI-DLC AI-Driven Development Lifecycle",
-        "Synthesis \u2014 Karpathy's LLM Wiki Idea File (schema-as-product framing)",
-        "Synthesis \u2014 Cavekit v4 (Julius Brussee) \u2014 most distilled instance: 1 file + 3 commands + 2 skills"
-      ],
-      "aliases": [
-        "Spec-Driven Agentic Build Convergence",
-        "Prompts as Version-Controlled Artifacts",
-        "2026 Convergent Build Pattern",
-        "Structured Specs Beat Ad-Hoc Chat",
-        "First-Class Prompt Artifacts Lesson"
-      ],
-      "relationships": [
-        {
-          "verb": "DERIVED FROM",
-          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior More Than Content"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Fowler SPDD Synthesis"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Model \u2014 Markdown as IaC"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Schema Is the Real Product"
-        },
-        {
-          "verb": "PARALLELS",
-          "target": "Anti-Vendor-Lock-In Lesson"
-        },
-        {
-          "verb": "DEMONSTRATES",
-          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
-        },
-        {
-          "verb": "DEMONSTRATES",
-          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "The Agent Must Practice What It Documents"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Trust-Layer Epic"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Caveman Synthesis"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "Methodology Adoption Guide"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "Methodology Framework"
-        }
-      ]
-    },
-    {
       "path": "lessons/01_drafts/specs-as-code-source-inverts-hierarchy.md",
       "slug": "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
       "title": "Specs-as-Code-Source Inverts the Traditional Hierarchy",
@@ -20135,6 +19694,77 @@
       "relationships": []
     },
     {
+      "path": "lessons/01_drafts/sunk-cost-in-technical-paths-prefer-root-switching.md",
+      "slug": "lessons/01_drafts/sunk-cost-in-technical-paths-prefer-root-switching",
+      "title": "Lesson \u2014 Sunk-cost in technical paths: prefer root switching to adjacent switching when recovering from failure",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-27",
+      "updated": "2026-05-09",
+      "last_reviewed": "2026-05-09",
+      "tags": [
+        "contributed",
+        "lesson",
+        "recovery",
+        "sunk-cost",
+        "root-switching",
+        "decision-making",
+        "multi-component-pipeline",
+        "layer-4",
+        "contributed-from-aicp"
+      ],
+      "sources": [
+        {
+          "id": "aicp-postmortem-k2-6-wrong-path",
+          "type": "project",
+          "project": "aicp",
+          "path": "docs/POSTMORTEM-2026-04-24-k26-local-wrong-path.md",
+          "description": "AICP postmortem documenting the sglang+kt-kernel adjacent switch that crashed Windows; 929GB cumulative bandwidth waste"
+        },
+        {
+          "id": "aicp-retrospective-2026-04-27",
+          "type": "project",
+          "project": "aicp",
+          "path": "docs/retros/RETRO-post-anthropic-2026-04-27.md",
+          "description": "AICP Post-Anthropic mission retrospective"
+        },
+        {
+          "id": "principle-4",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md",
+          "description": "P4 \u2014 the prior infrastructure's fit-for-purpose was aspirational until the dead-end empirically verified its off-spec status"
+        }
+      ],
+      "layer": 4,
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "Sunk-Cost Root vs Adjacent Switching",
+        "Recovery: Root Switch over Adjacent Switch",
+        "Sunk-Cost in Technical Paths"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "AICP Post-Anthropic mission postmortem 2026-04-24 + retrospective 2026-04-27 (contributed-from-AICP)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Fake Blockers vs Real Blockers"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "The Agent Must Practice What It Documents"
+        }
+      ]
+    },
+    {
       "path": "lessons/01_drafts/task-shape-vs-response-shape-calibration-the-thin-output-cure.md",
       "slug": "lessons/01_drafts/task-shape-vs-response-shape-calibration-the-thin-output-cure",
       "title": "Task-Shape vs Response-Shape Calibration \u2014 The Thin-Output Cure that Distinguishes Per-Task Quality from Global Volume",
@@ -20276,6 +19906,130 @@
       "derived_from": [],
       "aliases": [],
       "relationships": []
+    },
+    {
+      "path": "lessons/02_synthesized/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
+      "slug": "lessons/02_synthesized/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
+      "title": "Anti-Vendor-Lock-In Is an Empirical Claim, Not an Aspirational One \u2014 When Every Layer of the Open-Source Stack Has Paper Evidence",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-27",
+      "updated": "2026-05-09",
+      "last_reviewed": "2026-05-09",
+      "tags": [
+        "lesson",
+        "anti-vendor-lock-in",
+        "empirical-claim",
+        "paper-evidence",
+        "open-source-stack",
+        "post-anthropic-mission",
+        "layered-validation",
+        "end-to-end-traceability",
+        "mission-2026-04-27",
+        "p4-application",
+        "sovereignty-tier",
+        "rlm-thread",
+        "qwen3",
+        "prime-intellect",
+        "mit-oasys",
+        "tools-integration",
+        "claim-vs-aspiration"
+      ],
+      "sources": [
+        {
+          "id": "rlm-paper-deep-dive",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations.md",
+          "description": "Paper-level deep-dive \u2014 primary empirical anchor for inference-paradigm + training-recipe layers"
+        },
+        {
+          "id": "tier-0-comparison",
+          "type": "wiki",
+          "file": "wiki/comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate.md",
+          "description": "Cross-synthesis demonstrating the actionable use of layered paper evidence"
+        },
+        {
+          "id": "browsecomp-longbench-v2",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks.md",
+          "description": "Retriever-layer empirical anchor \u2014 Qwen3-Embedding-8B +14pts over BM25 (open-source retriever competitive with closed-source generation)"
+        },
+        {
+          "id": "prime-rl-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale.md",
+          "description": "Training-layer empirical anchor \u2014 Apache 2.0 training framework, 48 H100 hours for RLM-Qwen3-8B"
+        },
+        {
+          "id": "oolong-longbench-pro",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors.md",
+          "description": "Evaluation-layer empirical anchor \u2014 public benchmarks defining the task class"
+        },
+        {
+          "id": "principle-4",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md",
+          "description": "Direct parent principle \u2014 this lesson specializes P4 to mission-class claims about open-source viability"
+        },
+        {
+          "id": "feedback-mission-framing",
+          "type": "notes",
+          "file": "~/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/feedback_mission_framing.md",
+          "description": "Operator's mission framing memory \u2014 anti-vendor-lock-in NOT anti-closed-weight"
+        }
+      ],
+      "layer": 4,
+      "maturity": "growing",
+      "derived_from": [
+        "RLM Paper Deep Dive (Table 1, Training Recipe)",
+        "RLM Empirical Findings (OOLONG 114% improvement)",
+        "BrowseComp+ + LongBench v2 (retriever +14pts)",
+        "Tier-0 Candidate Comparison",
+        "Prime Intellect Verifiers + prime-rl (Apache 2.0 training stack)",
+        "Declarations Are Aspirational Until Infrastructure Verifies Them"
+      ],
+      "aliases": [
+        "Anti-Vendor-Lock-In as Empirical Claim",
+        "Open-Source Stack Needs Paper Evidence at Every Layer",
+        "Lesson \u2014 Anti-Vendor-Lock-In Empirical"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Infrastructure Verifies Them"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle 1"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Never Synthesize from Descriptions Alone"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "The Agent Must Practice What It Documents"
+        },
+        {
+          "verb": "DEMONSTRATED BY",
+          "target": "Tier-0 Candidate Comparison"
+        },
+        {
+          "verb": "DEMONSTRATED BY",
+          "target": "2026-04-27 Session Handoff"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "2026 Consumer Hardware AI Stack"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "AI Infrastructure Decision Framework 2026"
+        }
+      ]
     },
     {
       "path": "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha.md",
@@ -20431,6 +20185,340 @@
         {
           "verb": "PRODUCED BY",
           "target": "validated by T117"
+        }
+      ]
+    },
+    {
+      "path": "lessons/02_synthesized/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers.md",
+      "slug": "lessons/02_synthesized/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
+      "title": "End-to-End Compression Across the AI Stack Composes Multiplicatively \u2014 6+ Independent Mechanisms at 6 Distinct Layers, Each Substitutable Per Anti-Vendor-Lock-In",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-06",
+      "updated": "2026-05-09",
+      "last_reviewed": "2026-05-09",
+      "tags": [
+        "lesson",
+        "layer-4",
+        "compression",
+        "multi-layer",
+        "convergence",
+        "anti-vendor-lock-in",
+        "prompt-compression",
+        "content-source-compression",
+        "tool-compression",
+        "inter-agent-compression",
+        "weight-quantization",
+        "kv-cache-compression",
+        "sparse-autoencoders",
+        "recursive-language-models",
+        "mission-2026-05-06",
+        "stack-wide-composition"
+      ],
+      "sources": [
+        {
+          "id": "caveman-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee.md",
+          "description": "Layer 1 \u2014 Caveman by Julius Brussee \u2014 operator-confirmed prompt+output compressor; Wenyan-Full delivers 80-90% character reduction at the prompt layer (client-side, lossless-semantic)"
+        },
+        {
+          "id": "cloudflare-markdown-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02.md",
+          "description": "Layer 1 \u2014 Cloudflare Markdown for Agents (Feb 2026) \u2014 server-side at-source compression via Accept: text/markdown content negotiation; 80% token reduction (16,180 HTML \u2192 3,150 markdown empirical anchor on the announcement post itself); already integrated in Claude Code + OpenCode"
+        },
+        {
+          "id": "strands-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-strands-agents-aws-intent-based-tool-design-96-percent-token-reduction.md",
+          "description": "Layer 1 \u2014 Strands Agents (AWS) \u2014 96% token reduction (52K \u2192 2K) via intent-based tool design + semantic-search MCP gateway; 14M+ downloads in <1 year"
+        },
+        {
+          "id": "recursivemas-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026.md",
+          "description": "Layer 1 \u2014 RecursiveMAS (Stanford arXiv 2604.25917, Apr 28 2026, #1 paper of the day, 257 upvotes) \u2014 34.6%-75.6% token reduction via cross-agent latent state transfer + 8.3% accuracy improvement + 1.2-2.4\u00d7 speedup (Pareto improvement)"
+        },
+        {
+          "id": "qwen-scope-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite.md",
+          "description": "Layer 1 \u2014 Qwen Scope SAE (Qwen Team, May 1 2026) \u2014 sparse autoencoder representation: residual-stream activations decompose into top-k features (k=50 or 100 of N=16\u00d7\u201364\u00d7 hidden size); structurally smaller than dense activations"
+        },
+        {
+          "id": "unsloth-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md",
+          "description": "Layer 1 \u2014 Unsloth UD-IQ2 / Q2_K weight quantization \u2014 ~87.5% reduction vs FP16 weights; production-deployed on consumer hardware (RTX 3090 24 GB VRAM)"
+        },
+        {
+          "id": "trust-layer-concept",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md",
+          "description": "Concept \u2014 operator-authored 2026-04-30 \u2014 KV-cache compression layer (asymmetric quantization + sparsity, 50-87% reduction); composes with weight quantization + cypher overlay for 80-90% combined-envelope claim"
+        },
+        {
+          "id": "rlm-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-recursive-language-models-mit-oasys.md",
+          "description": "Layer 1 \u2014 RLM (MIT OASYS) \u2014 recursive scaling extends effective context 2 orders of magnitude beyond context window via REPL-driven recursive computation; structural compression of multi-doc reasoning into bounded context"
+        },
+        {
+          "id": "anti-vendor-lock-in-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
+          "description": "Mission lesson \u2014 every stack layer has independent substitutable axes; this compression-convergence lesson specializes that pattern to compression mechanisms specifically"
+        },
+        {
+          "id": "spec-driven-convergence-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md",
+          "description": "Sibling Layer-4 lesson \u2014 same convergent-pattern methodology applied to agentic-build practice; this compression lesson is the convergent-pattern applied to token-reduction across stack layers"
+        }
+      ],
+      "layer": 4,
+      "maturity": "growing",
+      "derived_from": [
+        "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee)",
+        "Synthesis \u2014 Cloudflare Markdown for Agents (Feb 2026)",
+        "Synthesis \u2014 Strands Agents (AWS) \u2014 96% Token Reduction via Intent-Based Tools",
+        "Synthesis \u2014 RecursiveMAS (Stanford 2026, arXiv 2604.25917)",
+        "Synthesis \u2014 Qwen-Scope: Open-Source Sparse Autoencoder Suite",
+        "Synthesis \u2014 Unsloth: UD-IQ2 / Q2_K Weight Quantization",
+        "Synthesis \u2014 RLM (Recursive Language Models, MIT OASYS)",
+        "Trust-Layer Concept (cypher + decypher + compression for 80-90% space saved)"
+      ],
+      "aliases": [
+        "Multi-Layer Compression Convergence Lesson",
+        "Stack-Wide Compression Composition",
+        "Compression Layer Substitutability",
+        "End-to-End AI-Stack Compression"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Caveman Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Trust-Layer Concept"
+        },
+        {
+          "verb": "PARALLELS",
+          "target": "Spec-Driven Convergence Lesson"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Goldilocks Protocol"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Custom-Tailored Model Group Concept"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Trust-Layer Epic"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        }
+      ]
+    },
+    {
+      "path": "lessons/02_synthesized/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md",
+      "slug": "lessons/02_synthesized/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
+      "title": "Spec-Driven Agentic Build Is the 2026 Convergent Pattern \u2014 Eight+ Independent Practitioners Treat Prompts/Specs/Contexts as Version-Controlled First-Class Artifacts (Not Ad-Hoc Chat)",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-09",
+      "last_reviewed": "2026-05-09",
+      "tags": [
+        "lesson",
+        "layer-4",
+        "spec-driven",
+        "agentic-build",
+        "prompts-as-artifacts",
+        "version-controlled-specs",
+        "abstraction-first",
+        "alignment",
+        "iterative-review",
+        "closed-loop",
+        "fix-prompt-first",
+        "six-file-context",
+        "reasons-canvas",
+        "bmad",
+        "openspec",
+        "spec-kit",
+        "ai-dlc",
+        "karpathy",
+        "convergence",
+        "mission-2026-05-04",
+        "methodology-process"
+      ],
+      "sources": [
+        {
+          "id": "fowler-spdd-synth",
+          "type": "wiki",
+          "file": "wiki/sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd.md",
+          "description": "Evidence 1 \u2014 Thoughtworks enterprise-IT instance: REASONS Canvas + workflow + closed-loop. Authored at Thoughtworks Global IT Services, used in production before public release 2026-04-28."
+        },
+        {
+          "id": "jsmastery-six-file-synth",
+          "type": "wiki",
+          "file": "wiki/sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build.md",
+          "description": "Evidence 2 \u2014 solo/freelance teaching instance: six context files + per-feature numbered specs. Demonstrated end-to-end in a 29-feature Ghost AI build (2026)."
+        },
+        {
+          "id": "bmad-synth",
+          "type": "wiki",
+          "file": "wiki/sources/src-bmad-method-agile-ai-development-framework.md",
+          "description": "Evidence 3 \u2014 BMAD-METHOD framework instance: agile AI-driven development with personas + party mode + structured story-spec progression."
+        },
+        {
+          "id": "openspec-synth",
+          "type": "wiki",
+          "file": "wiki/sources/src-openspec-spec-driven-development-framework.md",
+          "description": "Evidence 4 \u2014 OpenSpec lightweight spec-driven framework instance: solves the fundamental problem of agents losing context across sessions via specs as the persisted artifact."
+        },
+        {
+          "id": "spec-kit-synth",
+          "type": "wiki",
+          "file": "wiki/sources/src-github-spec-kit-specification-driven-development.md",
+          "description": "Evidence 5 \u2014 GitHub's Spec Kit instance: Specification-Driven Development from the platform-vendor side; toolkit that operationalizes spec-first workflow."
+        },
+        {
+          "id": "aidlc-synth",
+          "type": "wiki",
+          "file": "wiki/sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle.md",
+          "description": "Evidence 6 \u2014 AWS AI-DLC instance: AI-Driven Development Lifecycle methodology (not a tool, not a framework \u2014 a methodology). Cloud-vendor articulation of the same core."
+        },
+        {
+          "id": "karpathy-llm-wiki-synth",
+          "type": "wiki",
+          "file": "wiki/sources/wiki-methodology/src-karpathy-llm-wiki-idea-file.md",
+          "description": "Evidence 7 \u2014 Karpathy's LLM Wiki Pattern: schema-as-the-real-product framing; the schema/spec is the durable artifact, content is generated from it. Foundational to the convergence."
+        },
+        {
+          "id": "cavekit-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee.md",
+          "description": "Evidence 8 (added 2026-05-04) \u2014 Cavekit v4 (Julius Brussee): the most distilled instance documented. SPEC.md + 3 commands + 2 skills \u00b7 caveman-encoded with mathematical-symbol vocabulary (\u2192 \u2234 \u2200 \u2203 ! ? \u22a5 \u2260 \u2208 \u2209 \u2264 \u2265 & |) \u00b7 backprop reflex turns bugs into permanent \u00a7V invariants. The convergent pattern's minimum viable shape."
+        },
+        {
+          "id": "schema-is-the-real-product-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/knowledge-systems/schema-is-the-real-product.md",
+          "description": "Adjacent validated lesson \u2014 same structural insight applied to wiki construction; the schema file is the real product, content is generated from it"
+        },
+        {
+          "id": "structured-context-principle",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content.md",
+          "description": "Parent principle (P2) \u2014 this lesson specializes P2 to the AI-assisted build context; the structured spec/prompt/canvas IS the structured context that programs agent behavior more reliably than ad-hoc chat"
+        },
+        {
+          "id": "markdown-as-iac-model",
+          "type": "wiki",
+          "file": "wiki/spine/models/agent-config/model-markdown-as-iac.md",
+          "description": "Wiki model \u2014 the 7 evidence instances are all instantiations of Markdown-as-IaC at the project-build scale"
+        },
+        {
+          "id": "agent-must-practice-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents.md",
+          "description": "Adjacent \u2014 this lesson is about the wiki itself instantiating the same convergent pattern (CLAUDE.md + AGENTS.md + .claude/rules/ + per-module specs in wiki/backlog/modules/ = the wiki's own version of Six-File + per-feature specs)"
+        }
+      ],
+      "layer": 4,
+      "maturity": "growing",
+      "derived_from": [
+        "Synthesis \u2014 Structured Prompt-Driven Development (SPDD) \u2014 Thoughtworks (Fowler)",
+        "Synthesis \u2014 JS Mastery Six-File Context System",
+        "Synthesis \u2014 BMAD-METHOD",
+        "Synthesis \u2014 OpenSpec Spec-Driven Development Framework",
+        "Synthesis \u2014 GitHub Spec Kit Specification-Driven Development",
+        "Synthesis \u2014 AWS AI-DLC AI-Driven Development Lifecycle",
+        "Synthesis \u2014 Karpathy's LLM Wiki Idea File (schema-as-product framing)",
+        "Synthesis \u2014 Cavekit v4 (Julius Brussee) \u2014 most distilled instance: 1 file + 3 commands + 2 skills"
+      ],
+      "aliases": [
+        "Spec-Driven Agentic Build Convergence",
+        "Prompts as Version-Controlled Artifacts",
+        "2026 Convergent Build Pattern",
+        "Structured Specs Beat Ad-Hoc Chat",
+        "First-Class Prompt Artifacts Lesson"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior More Than Content"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Fowler SPDD Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Markdown as IaC"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Schema Is the Real Product"
+        },
+        {
+          "verb": "PARALLELS",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "The Agent Must Practice What It Documents"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Trust-Layer Epic"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Caveman Synthesis"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Framework"
         }
       ]
     },
@@ -29014,6 +29102,43 @@
           "type": "wiki",
           "file": "wiki/log/2026-05-08-190-piece-milestone-closing-arc-summary-90-fires-post-compact.md",
           "description": "PRIOR (Fire 191)"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "log/2026-05-08-PRE-COMPACT-HANDOFF-MANUAL-imminent-compaction-state-snapshot.md",
+      "slug": "log/2026-05-08-PRE-COMPACT-HANDOFF-MANUAL-imminent-compaction-state-snapshot",
+      "title": "PRE-COMPACT HANDOFF MANUAL \u2014 Imminent Compaction State Snapshot 2026-05-08",
+      "type": "note",
+      "domain": "log",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-08",
+      "updated": "2026-05-08",
+      "last_reviewed": "",
+      "tags": [
+        "pre-compact-handoff-manual",
+        "imminent-compaction",
+        "2026-05-08",
+        "post-compact-recovery-mandatory"
+      ],
+      "sources": [
+        {
+          "id": "pre-compact-spec-fire-105",
+          "type": "wiki",
+          "file": "wiki/patterns/01_drafts/pre-compact-handoff-hook-implementation-spec-for-opt-path-to-tier-4-for-impl-spec-10.md",
+          "description": "Spec applied manually since hook not wired"
+        },
+        {
+          "id": "operator-pre-compact-directive",
+          "type": "file",
+          "file": "raw/notes/2026-05-08-pre-compact-imminent-validate-adjust-auto-compact-auto-dream-finish-smoothly-directive.md",
+          "description": "PRIMARY operator directive at 5%"
         }
       ],
       "layer": "",
@@ -37940,6 +38065,69 @@
           "type": "wiki",
           "file": "wiki/lessons/01_drafts/documentation-as-substitute-for-discipline-the-meta-pattern.md",
           "description": "Meta-frame \u2014 body without feature-flag control IS substitution at runtime-control layer"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "patterns/01_drafts/finish-smoothly-custom-idempotent-pre-compact-handoff-with-existing-doc-detection.md",
+      "slug": "patterns/01_drafts/finish-smoothly-custom-idempotent-pre-compact-handoff-with-existing-doc-detection",
+      "title": "/finish-smoothly Custom Idempotent \u2014 Pre-Compact Handoff with Existing-Doc Detection",
+      "type": "pattern",
+      "domain": "patterns",
+      "status": "draft",
+      "confidence": "medium",
+      "created": "2026-05-08",
+      "updated": "2026-05-08",
+      "last_reviewed": "",
+      "tags": [
+        "finish-smoothly",
+        "idempotent",
+        "pre-compact",
+        "handoff",
+        "custom-variant",
+        "agent-draft",
+        "fire-226"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive-pre-compact-finish-smoothly",
+          "type": "file",
+          "file": "raw/notes/2026-05-08-pre-compact-imminent-validate-adjust-auto-compact-auto-dream-finish-smoothly-directive.md",
+          "description": "Operator verbatim \u2014 pre-compact directive at 5%"
+        },
+        {
+          "id": "operator-directive-finish-smoothly-idempotent",
+          "type": "conversation",
+          "description": "Operator verbatim 2026-05-08 (this turn): force finsih smoothly if there is not already a defined handoff document or whatnot so that we dont double when there is already a handoff lol or we make it smart / idempotent and whatnot... we work on this now"
+        },
+        {
+          "id": "fire-105-pre-compact-handoff-spec",
+          "type": "wiki",
+          "file": "wiki/patterns/01_drafts/pre-compact-handoff-hook-implementation-spec-for-opt-path-to-tier-4-for-impl-spec-10.md",
+          "description": "PreCompact handoff hook implementation spec \u2014 composes with this pattern"
+        },
+        {
+          "id": "fire-157-pre-compact-python-draft",
+          "type": "wiki",
+          "file": "wiki/patterns/01_drafts/pre-compact-handoff-hook-python-draft-agent-authored-deterministic-state-snapshot.md",
+          "description": "Python hook draft that drops sentinel"
+        },
+        {
+          "id": "fire-158-pretooluse-blocker-draft",
+          "type": "wiki",
+          "file": "wiki/patterns/01_drafts/post-compact-pretooluse-blocker-hook-python-draft-agent-authored-tier-4-enforcement.md",
+          "description": "PreToolUse blocker that consumes sentinel"
+        },
+        {
+          "id": "pre-compact-handoff-test-case",
+          "type": "wiki",
+          "file": "wiki/log/2026-05-08-PRE-COMPACT-HANDOFF-MANUAL-imminent-compaction-state-snapshot.md",
+          "description": "Existing manual handoff doc \u2014 IS the test case for idempotency"
         }
       ],
       "layer": "",
@@ -58847,7 +59035,7 @@
     },
     "cross-domain": {
       "page_count": 288,
-      "relationship_count": 1741
+      "relationship_count": 1747
     },
     "ai-models": {
       "page_count": 14,
@@ -58878,12 +59066,16 @@
       "relationship_count": 195
     },
     "log": {
-      "page_count": 183,
+      "page_count": 184,
       "relationship_count": 58
     },
     "agent-config": {
       "page_count": 57,
       "relationship_count": 37
+    },
+    "patterns": {
+      "page_count": 1,
+      "relationship_count": 0
     },
     "infrastructure": {
       "page_count": 6,
@@ -59378,6 +59570,7 @@
       "backlog/tasks/T051-audit-opencode-skill-and-agent-format",
       "backlog/tasks/T060-audit-wiki-corpus-training-readiness",
       "domains/devops/devops-control-plane",
+      "lessons/01_drafts/audit-numbers-age-fast-rebaseline-before-execute",
       "lessons/03_validated/ingestion-research/shallow-ingestion-is-systemic-not-isolated",
       "log/2026-04-23-corpus-training-readiness-audit",
       "log/2026-05-08-strategic-coverage-validation-180-pain-points-to-17-solution-pieces"
@@ -60190,8 +60383,8 @@
       "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
       "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
       "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
-      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
+      "lessons/02_synthesized/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
+      "lessons/02_synthesized/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
       "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
       "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission",
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
@@ -60213,7 +60406,7 @@
     "mission-2026-05-04": [
       "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
       "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
-      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
+      "lessons/02_synthesized/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
       "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
       "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming",
       "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
@@ -60467,7 +60660,7 @@
     ],
     "compression": [
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
-      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
+      "lessons/02_synthesized/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
       "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30"
     ],
@@ -61852,7 +62045,7 @@
       "lessons/01_drafts/agent-authored-content-must-be-flagged-vs-operator-canonical-the-fabrication-cure",
       "lessons/01_drafts/agent-context-discipline-is-aspirational-without-enforcement-gates-not-reading-what-exists",
       "lessons/01_drafts/agent-decision-vs-operator-decision-boundary-discrimination-pre-action-gate",
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
+      "lessons/01_drafts/audit-numbers-age-fast-rebaseline-before-execute",
       "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache",
       "lessons/01_drafts/conflation-detection-at-hook-layer-the-rename-strategy-generalized",
       "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
@@ -61860,7 +62053,6 @@
       "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
       "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance",
       "lessons/01_drafts/documentation-as-substitute-for-discipline-the-meta-pattern",
-      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
       "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property",
       "lessons/01_drafts/freeze-after-correction-is-class-9-of-agent-failure-taxonomy-abdication-as-freeze",
       "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
@@ -61870,11 +62062,14 @@
       "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths",
       "lessons/01_drafts/quality-per-position-compounds-quantity-per-position-diminishes-convergent-pattern",
       "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work",
-      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
       "lessons/01_drafts/stress-testing-as-validation-the-only-way-to-surface-aspirational-vs-operational-gaps",
+      "lessons/01_drafts/sunk-cost-in-technical-paths-prefer-root-switching",
       "lessons/01_drafts/task-shape-vs-response-shape-calibration-the-thin-output-cure",
       "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed",
+      "lessons/02_synthesized/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
+      "lessons/02_synthesized/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
+      "lessons/02_synthesized/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
       "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading",
       "lessons/03_validated/enforcement-compliance/correction-as-calibration-not-swing-the-going-to-extremes-anti-pattern",
       "lessons/03_validated/enforcement-compliance/refine-triggers-not-revoke-permissions-when-fixing-overzealous-rules",
@@ -62009,13 +62204,13 @@
     "post-anthropic-mission": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
       "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+      "lessons/02_synthesized/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
     ],
     "mission-2026-04-27": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
       "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
       "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work",
+      "lessons/02_synthesized/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
       "log/2026-04-24-handoff-pickup-cold-forward",
       "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
       "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis",
@@ -62044,7 +62239,7 @@
     ],
     "mit-oasys": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
+      "lessons/02_synthesized/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
       "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations",
       "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
@@ -62054,7 +62249,7 @@
     ],
     "prime-intellect": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
+      "lessons/02_synthesized/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
       "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
       "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
       "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
@@ -62062,7 +62257,7 @@
     "sovereignty-tier": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
       "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
+      "lessons/02_synthesized/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
       "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
       "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
       "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
@@ -62081,7 +62276,7 @@
     ],
     "tools-integration": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
+      "lessons/02_synthesized/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
       "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
       "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
       "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
@@ -62231,7 +62426,7 @@
     "qwen3": [
       "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
       "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
+      "lessons/02_synthesized/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
       "sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite",
       "spine/references/local-training-playbook-2026"
     ],
@@ -62866,7 +63061,7 @@
     ],
     "spec-driven": [
       "domains/ai-agents/orchestration/harness-engineering",
-      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
+      "lessons/02_synthesized/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
       "lessons/03_validated/tools-architecture/always-plan-before-executing",
       "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
       "sources/claude-code/src-harness-engineering",
@@ -63030,6 +63225,7 @@
       "domains/ai-agents/patterns/rework-prevention",
       "domains/ai-agents/patterns/spec-driven-development",
       "domains/cross-domain/methodology-artifacts/categories/initiation-and-planning-artifacts",
+      "lessons/01_drafts/audit-numbers-age-fast-rebaseline-before-execute",
       "lessons/03_validated/context-engineering/context-management-is-primary-productivity-lever",
       "lessons/03_validated/tools-architecture/always-plan-before-executing",
       "sources/claude-code/src-shanraisshan-claude-code-best-practice",
@@ -63060,11 +63256,11 @@
     ],
     "bmad": [
       "domains/ai-agents/patterns/spec-driven-development",
-      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
+      "lessons/02_synthesized/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
     ],
     "spec-kit": [
       "domains/ai-agents/patterns/spec-driven-development",
-      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
+      "lessons/02_synthesized/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
     ],
     "superpowers": [
       "domains/ai-agents/patterns/spec-driven-development",
@@ -63092,7 +63288,7 @@
     ],
     "openspec": [
       "domains/ai-agents/patterns/spec-driven-development",
-      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
+      "lessons/02_synthesized/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
     ],
     "task-lifecycle": [
       "domains/ai-agents/patterns/task-lifecycle-stage-gating"
@@ -63530,7 +63726,7 @@
     ],
     "recursive-language-models": [
       "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
-      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
+      "lessons/02_synthesized/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
       "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
       "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations",
@@ -63887,7 +64083,7 @@
     ],
     "karpathy": [
       "domains/knowledge-systems/wiki-core/llm-wiki-pattern",
-      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
+      "lessons/02_synthesized/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
       "lessons/03_validated/knowledge-systems/schema-is-the-real-product",
       "lessons/03_validated/knowledge-systems/wiki-maintenance-problem-solved-by-llm-automation",
       "sources/wiki-methodology/src-karpathy-claude-code-10x",
@@ -64108,56 +64304,6 @@
     "sfif-pre-infrastructure": [
       "ecosystem/project_profiles/root-ghostproxy/identity-profile"
     ],
-    "contributed": [
-      "lessons/00_inbox/audit-numbers-age-fast-rebaseline-before-execute",
-      "lessons/00_inbox/sunk-cost-in-technical-paths-prefer-root-switching",
-      "lessons/01_drafts/contributed/boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski",
-      "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
-      "lessons/01_drafts/contributed/defense-layer-progression-is-expensive",
-      "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
-      "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
-      "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs",
-      "lessons/01_drafts/contributed/schema-aspirationalism-defining-required-sections-you-neve",
-      "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance",
-      "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events-not",
-      "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
-      "lessons/01_drafts/contributed/three-layer-autocomplete-chain-validated-in-production-fleet",
-      "lessons/01_drafts/contributed/verify-before-contributing-to-external-knowledge-systems",
-      "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
-      "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
-      "lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
-      "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work-not-the",
-      "log/5-candidate-behavioral-failure-detection-rules-from-openflee",
-      "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
-      "log/aicp-stage-3-hardware-unlocked-2026-04-17-19gb-vram-dual-g",
-      "log/amendment-to-prior-compliance-checker-correction-root-depth",
-      "log/compliance-checker-agents-md-match-by-filename-regardless-o",
-      "log/e008-epic-\u2014-internal-stack-vs-format-inconsistency-caused-2-",
-      "log/gateway-identity-parser-fragility-forwarder-contribute-tar",
-      "log/openfleet-identity-profile-agents-md-layer-1-upgrade-compl",
-      "log/rlm-qwen3-8b-v0-1-released-on-huggingface-mit-license",
-      "log/walkthrough-c-openfleet-ground-truth-verification-2026-04",
-      "patterns/01_drafts/agent-execution-cost-optimization-stack",
-      "patterns/01_drafts/aspirational-declaration-without-enforcement",
-      "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
-      "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage",
-      "patterns/01_drafts/progressive-structural-enrichment-in-agent-config"
-    ],
-    "inbox": [
-      "lessons/00_inbox/audit-numbers-age-fast-rebaseline-before-execute",
-      "lessons/00_inbox/sunk-cost-in-technical-paths-prefer-root-switching",
-      "lessons/01_drafts/contributed/boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski",
-      "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
-      "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs",
-      "lessons/01_drafts/contributed/schema-aspirationalism-defining-required-sections-you-neve",
-      "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events-not",
-      "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
-      "lessons/01_drafts/contributed/three-layer-autocomplete-chain-validated-in-production-fleet",
-      "lessons/01_drafts/contributed/verify-before-contributing-to-external-knowledge-systems",
-      "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
-      "lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
-      "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work-not-the"
-    ],
     "p4-specialization": [
       "lessons/01_drafts/agent-authored-content-must-be-flagged-vs-operator-canonical-the-fabrication-cure",
       "lessons/01_drafts/agent-context-discipline-is-aspirational-without-enforcement-gates-not-reading-what-exists",
@@ -64206,11 +64352,11 @@
       "lessons/01_drafts/agent-decision-vs-operator-decision-boundary-discrimination-pre-action-gate",
       "lessons/01_drafts/conflation-detection-at-hook-layer-the-rename-strategy-generalized",
       "lessons/01_drafts/documentation-as-substitute-for-discipline-the-meta-pattern",
-      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
       "lessons/01_drafts/freeze-after-correction-is-class-9-of-agent-failure-taxonomy-abdication-as-freeze",
       "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths",
       "lessons/01_drafts/stress-testing-as-validation-the-only-way-to-surface-aspirational-vs-operational-gaps",
       "lessons/01_drafts/task-shape-vs-response-shape-calibration-the-thin-output-cure",
+      "lessons/02_synthesized/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
       "log/2026-05-08-100-piece-milestone-closing-arc-summary-pre-compact-preservation",
       "log/2026-05-08-80-piece-milestone-closing-arc-summary-upper-bound-reached",
       "log/2026-05-08-final-arc-narrative-v2-75-fire-arc-with-operator-empirical-handoff-framing",
@@ -64695,37 +64841,61 @@
     "c02-cluster": [
       "lessons/01_drafts/agent-decision-vs-operator-decision-boundary-discrimination-pre-action-gate"
     ],
-    "empirical-claim": [
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+    "contributed": [
+      "lessons/01_drafts/audit-numbers-age-fast-rebaseline-before-execute",
+      "lessons/01_drafts/contributed/boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski",
+      "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
+      "lessons/01_drafts/contributed/defense-layer-progression-is-expensive",
+      "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
+      "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
+      "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs",
+      "lessons/01_drafts/contributed/schema-aspirationalism-defining-required-sections-you-neve",
+      "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance",
+      "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events-not",
+      "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
+      "lessons/01_drafts/contributed/three-layer-autocomplete-chain-validated-in-production-fleet",
+      "lessons/01_drafts/contributed/verify-before-contributing-to-external-knowledge-systems",
+      "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
+      "lessons/01_drafts/sunk-cost-in-technical-paths-prefer-root-switching",
+      "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
+      "lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
+      "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work-not-the",
+      "log/5-candidate-behavioral-failure-detection-rules-from-openflee",
+      "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
+      "log/aicp-stage-3-hardware-unlocked-2026-04-17-19gb-vram-dual-g",
+      "log/amendment-to-prior-compliance-checker-correction-root-depth",
+      "log/compliance-checker-agents-md-match-by-filename-regardless-o",
+      "log/e008-epic-\u2014-internal-stack-vs-format-inconsistency-caused-2-",
+      "log/gateway-identity-parser-fragility-forwarder-contribute-tar",
+      "log/openfleet-identity-profile-agents-md-layer-1-upgrade-compl",
+      "log/rlm-qwen3-8b-v0-1-released-on-huggingface-mit-license",
+      "log/walkthrough-c-openfleet-ground-truth-verification-2026-04",
+      "patterns/01_drafts/agent-execution-cost-optimization-stack",
+      "patterns/01_drafts/aspirational-declaration-without-enforcement",
+      "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
+      "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage",
+      "patterns/01_drafts/progressive-structural-enrichment-in-agent-config"
     ],
-    "paper-evidence": [
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
-      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee",
-      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
-      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
-      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd",
-      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
+    "rebaseline": [
+      "lessons/01_drafts/audit-numbers-age-fast-rebaseline-before-execute"
     ],
-    "open-source-stack": [
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+    "stale-data": [
+      "lessons/01_drafts/audit-numbers-age-fast-rebaseline-before-execute"
     ],
-    "layered-validation": [
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+    "layer-4": [
+      "lessons/01_drafts/audit-numbers-age-fast-rebaseline-before-execute",
+      "lessons/01_drafts/sunk-cost-in-technical-paths-prefer-root-switching",
+      "lessons/02_synthesized/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
+      "lessons/02_synthesized/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
     ],
-    "end-to-end-traceability": [
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+    "contributed-from-aicp": [
+      "lessons/01_drafts/audit-numbers-age-fast-rebaseline-before-execute",
+      "lessons/01_drafts/sunk-cost-in-technical-paths-prefer-root-switching"
     ],
     "p4-application": [
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
-      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths"
-    ],
-    "rlm-thread": [
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
-      "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
-      "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission"
-    ],
-    "claim-vs-aspiration": [
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+      "lessons/01_drafts/audit-numbers-age-fast-rebaseline-before-execute",
+      "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths",
+      "lessons/02_synthesized/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
     ],
     "settings": [
       "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache"
@@ -64761,6 +64931,19 @@
     ],
     "c07-cluster": [
       "lessons/01_drafts/conflation-detection-at-hook-layer-the-rename-strategy-generalized"
+    ],
+    "inbox": [
+      "lessons/01_drafts/contributed/boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski",
+      "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
+      "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs",
+      "lessons/01_drafts/contributed/schema-aspirationalism-defining-required-sections-you-neve",
+      "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events-not",
+      "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
+      "lessons/01_drafts/contributed/three-layer-autocomplete-chain-validated-in-production-fleet",
+      "lessons/01_drafts/contributed/verify-before-contributing-to-external-knowledge-systems",
+      "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
+      "lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
+      "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work-not-the"
     ],
     "tier-selection": [
       "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project"
@@ -64853,48 +65036,6 @@
       "lessons/01_drafts/documentation-as-substitute-for-discipline-the-meta-pattern",
       "log/2026-05-08-standardize-extension-proposal-operating-principles-16th-principle-infrastructure-must-be-used"
     ],
-    "layer-4": [
-      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
-      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
-    ],
-    "multi-layer": [
-      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers"
-    ],
-    "convergence": [
-      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
-      "lessons/01_drafts/if-you-can-verify-you-converge",
-      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
-      "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects",
-      "lessons/03_validated/ingestion-research/notebooklm-as-grounded-research-engine",
-      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
-      "sources/src-autobe-compiler-verified-backend-generation"
-    ],
-    "prompt-compression": [
-      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
-      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
-    ],
-    "content-source-compression": [
-      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers"
-    ],
-    "tool-compression": [
-      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers"
-    ],
-    "inter-agent-compression": [
-      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers"
-    ],
-    "weight-quantization": [
-      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers"
-    ],
-    "kv-cache-compression": [
-      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
-      "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04"
-    ],
-    "sparse-autoencoders": [
-      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers"
-    ],
-    "stack-wide-composition": [
-      "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers"
-    ],
     "project-property": [
       "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property"
     ],
@@ -64960,6 +65101,15 @@
     ],
     "externalized-control": [
       "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever"
+    ],
+    "convergence": [
+      "lessons/01_drafts/if-you-can-verify-you-converge",
+      "lessons/02_synthesized/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
+      "lessons/02_synthesized/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
+      "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects",
+      "lessons/03_validated/ingestion-research/notebooklm-as-grounded-research-engine",
+      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
+      "sources/src-autobe-compiler-verified-backend-generation"
     ],
     "deterministic-shell": [
       "lessons/01_drafts/if-you-can-verify-you-converge",
@@ -65182,52 +65332,6 @@
     "meta-finding": [
       "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work"
     ],
-    "agentic-build": [
-      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
-      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
-      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
-    ],
-    "prompts-as-artifacts": [
-      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
-      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd",
-      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
-    ],
-    "version-controlled-specs": [
-      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
-    ],
-    "abstraction-first": [
-      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
-    ],
-    "alignment": [
-      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
-      "log/2026-04-09/methodology/2026-04-09-directive-docs-layers-old-models"
-    ],
-    "iterative-review": [
-      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
-    ],
-    "closed-loop": [
-      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
-    ],
-    "fix-prompt-first": [
-      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
-    ],
-    "six-file-context": [
-      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
-      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
-      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
-    ],
-    "reasons-canvas": [
-      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
-      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd"
-    ],
-    "ai-dlc": [
-      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
-    ],
-    "methodology-process": [
-      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
-      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
-      "patterns/01_drafts/observe-fix-verify-loop"
-    ],
     "sdd": [
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
       "sources/src-github-spec-kit-specification-driven-development",
@@ -65253,6 +65357,21 @@
     ],
     "aspirational-vs-operational": [
       "lessons/01_drafts/stress-testing-as-validation-the-only-way-to-surface-aspirational-vs-operational-gaps"
+    ],
+    "recovery": [
+      "lessons/01_drafts/sunk-cost-in-technical-paths-prefer-root-switching"
+    ],
+    "sunk-cost": [
+      "lessons/01_drafts/sunk-cost-in-technical-paths-prefer-root-switching"
+    ],
+    "root-switching": [
+      "lessons/01_drafts/sunk-cost-in-technical-paths-prefer-root-switching"
+    ],
+    "decision-making": [
+      "lessons/01_drafts/sunk-cost-in-technical-paths-prefer-root-switching"
+    ],
+    "multi-component-pipeline": [
+      "lessons/01_drafts/sunk-cost-in-technical-paths-prefer-root-switching"
     ],
     "task-shape-vs-response-shape": [
       "lessons/01_drafts/task-shape-vs-response-shape-calibration-the-thin-output-cure"
@@ -65283,6 +65402,109 @@
     ],
     "self-blocking": [
       "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed"
+    ],
+    "empirical-claim": [
+      "lessons/02_synthesized/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+    ],
+    "paper-evidence": [
+      "lessons/02_synthesized/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
+      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee",
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
+      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd",
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
+    ],
+    "open-source-stack": [
+      "lessons/02_synthesized/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+    ],
+    "layered-validation": [
+      "lessons/02_synthesized/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+    ],
+    "end-to-end-traceability": [
+      "lessons/02_synthesized/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+    ],
+    "rlm-thread": [
+      "lessons/02_synthesized/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
+      "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
+      "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission"
+    ],
+    "claim-vs-aspiration": [
+      "lessons/02_synthesized/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+    ],
+    "multi-layer": [
+      "lessons/02_synthesized/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers"
+    ],
+    "prompt-compression": [
+      "lessons/02_synthesized/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+    ],
+    "content-source-compression": [
+      "lessons/02_synthesized/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers"
+    ],
+    "tool-compression": [
+      "lessons/02_synthesized/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers"
+    ],
+    "inter-agent-compression": [
+      "lessons/02_synthesized/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers"
+    ],
+    "weight-quantization": [
+      "lessons/02_synthesized/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers"
+    ],
+    "kv-cache-compression": [
+      "lessons/02_synthesized/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
+      "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04"
+    ],
+    "sparse-autoencoders": [
+      "lessons/02_synthesized/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers"
+    ],
+    "stack-wide-composition": [
+      "lessons/02_synthesized/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers"
+    ],
+    "agentic-build": [
+      "lessons/02_synthesized/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
+      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
+    ],
+    "prompts-as-artifacts": [
+      "lessons/02_synthesized/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
+      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd",
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
+    ],
+    "version-controlled-specs": [
+      "lessons/02_synthesized/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
+    ],
+    "abstraction-first": [
+      "lessons/02_synthesized/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
+    ],
+    "alignment": [
+      "lessons/02_synthesized/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
+      "log/2026-04-09/methodology/2026-04-09-directive-docs-layers-old-models"
+    ],
+    "iterative-review": [
+      "lessons/02_synthesized/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
+    ],
+    "closed-loop": [
+      "lessons/02_synthesized/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
+    ],
+    "fix-prompt-first": [
+      "lessons/02_synthesized/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
+    ],
+    "six-file-context": [
+      "lessons/02_synthesized/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
+      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
+    ],
+    "reasons-canvas": [
+      "lessons/02_synthesized/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
+      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd"
+    ],
+    "ai-dlc": [
+      "lessons/02_synthesized/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
+    ],
+    "methodology-process": [
+      "lessons/02_synthesized/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
+      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
+      "patterns/01_drafts/observe-fix-verify-loop"
     ],
     "fresh-session": [
       "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
@@ -66153,6 +66375,7 @@
       "log/2026-05-04-session-handoff-pre-compaction",
       "log/2026-05-05-handoff-to-root-session",
       "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring",
+      "patterns/01_drafts/finish-smoothly-custom-idempotent-pre-compact-handoff-with-existing-doc-detection",
       "spine/references/wsl-ubuntu-migration-handoff"
     ],
     "t060": [
@@ -66771,6 +66994,19 @@
     ],
     "fire-194": [
       "log/2026-05-08-800-pages-milestone-observation-body-of-work-substantial-substantive-substrate"
+    ],
+    "pre-compact-handoff-manual": [
+      "log/2026-05-08-PRE-COMPACT-HANDOFF-MANUAL-imminent-compaction-state-snapshot"
+    ],
+    "imminent-compaction": [
+      "log/2026-05-08-PRE-COMPACT-HANDOFF-MANUAL-imminent-compaction-state-snapshot"
+    ],
+    "2026-05-08": [
+      "log/2026-05-08-PRE-COMPACT-HANDOFF-MANUAL-imminent-compaction-state-snapshot",
+      "log/2026-05-08-strong-loop-arc-ingest-synthesize-propagate-distill-and-operator-decisions-pending"
+    ],
+    "post-compact-recovery-mandatory": [
+      "log/2026-05-08-PRE-COMPACT-HANDOFF-MANUAL-imminent-compaction-state-snapshot"
     ],
     "anticipated-questions": [
       "log/2026-05-08-anticipated-operator-questions-log-pre-empts-review-session-with-ready-answers"
@@ -68020,9 +68256,6 @@
     "ready-for-review-evidence": [
       "log/2026-05-08-strategic-coverage-validation-180-pain-points-to-17-solution-pieces"
     ],
-    "2026-05-08": [
-      "log/2026-05-08-strong-loop-arc-ingest-synthesize-propagate-distill-and-operator-decisions-pending"
-    ],
     "strong-loop-arc": [
       "log/2026-05-08-strong-loop-arc-ingest-synthesize-propagate-distill-and-operator-decisions-pending"
     ],
@@ -68578,6 +68811,24 @@
     ],
     "profile-management": [
       "patterns/01_drafts/feature-flag-system-for-mode-conditional-context-injection-with-auto-manual-profile-management"
+    ],
+    "finish-smoothly": [
+      "patterns/01_drafts/finish-smoothly-custom-idempotent-pre-compact-handoff-with-existing-doc-detection"
+    ],
+    "idempotent": [
+      "patterns/01_drafts/finish-smoothly-custom-idempotent-pre-compact-handoff-with-existing-doc-detection"
+    ],
+    "pre-compact": [
+      "patterns/01_drafts/finish-smoothly-custom-idempotent-pre-compact-handoff-with-existing-doc-detection"
+    ],
+    "custom-variant": [
+      "patterns/01_drafts/finish-smoothly-custom-idempotent-pre-compact-handoff-with-existing-doc-detection"
+    ],
+    "agent-draft": [
+      "patterns/01_drafts/finish-smoothly-custom-idempotent-pre-compact-handoff-with-existing-doc-detection"
+    ],
+    "fire-226": [
+      "patterns/01_drafts/finish-smoothly-custom-idempotent-pre-compact-handoff-with-existing-doc-detection"
     ],
     "enforcement-layer-strategy": [
       "patterns/01_drafts/foundational-cluster-prioritized-enforcement-layer-pattern-c04-c02-coverage-maximizes-cross-cutting-prevention"
@@ -72412,6 +72663,18 @@
       ]
     },
     {
+      "target": "AICP Post-Anthropic mission postmortem 2026-04-24 + retrospective 2026-04-27",
+      "referenced_by": [
+        "Lesson \u2014 Sunk-cost in technical paths: prefer root switching to adjacent switching when recovering from failure"
+      ]
+    },
+    {
+      "target": "AICP Post-Anthropic mission retrospective 2026-04-27",
+      "referenced_by": [
+        "Lesson \u2014 Audit numbers age fast: rebaseline before executing against an old audit"
+      ]
+    },
+    {
       "target": "AICP's $0 target on consumer hardware",
       "referenced_by": [
         "Single-Active Backend with LRU Eviction"
@@ -72472,10 +72735,10 @@
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
         "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)",
-        "End-to-End Compression Across the AI Stack Composes Multiplicatively \u2014 6+ Independent Mechanisms at 6 Distinct Layers, Each Substitutable Per Anti-Vendor-Lock-In",
         "Lesson \u2014 MCP discipline: register only what's referenced and actually used; useless MCPs eat context budget and confuse, never pre-emptive",
         "Lesson \u2014 Quality-per-position compounds; quantity-per-position diminishes \u2014 convergent pattern across speculation, quantization, context, orchestration, and model customization",
         "Saturation Declarations Are P4 Aspirational \u2014 Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal",
+        "End-to-End Compression Across the AI Stack Composes Multiplicatively \u2014 6+ Independent Mechanisms at 6 Distinct Layers, Each Substitutable Per Anti-Vendor-Lock-In",
         "Spec-Driven Agentic Build Is the 2026 Convergent Pattern \u2014 Eight+ Independent Practitioners Treat Prompts/Specs/Contexts as Version-Controlled First-Class Artifacts (Not Ad-Hoc Chat)",
         "2026-04-27 Continuation Session-End Handoff \u2014 Post-Compact Regather + 5 Substantive Artifacts (RLM-Qwen3.6-27B Operations Plan + 4 Layer-1 Benchmark Deep-Dives), RLM Table 1 100% at Layer 1, Anti-Vendor-Lock-In Lesson Fully Grounded",
         "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done",
@@ -73018,6 +73281,13 @@
       ]
     },
     {
+      "target": "Fake Blockers vs Real Blockers",
+      "referenced_by": [
+        "Lesson \u2014 Audit numbers age fast: rebaseline before executing against an old audit",
+        "Lesson \u2014 Sunk-cost in technical paths: prefer root switching to adjacent switching when recovering from failure"
+      ]
+    },
+    {
       "target": "Fire 102 Worked example",
       "referenced_by": [
         "Pre-Compact Handoff Hook Python Draft (Agent-Authored) \u2014 Deterministic State Snapshot"
@@ -73210,9 +73480,9 @@
     {
       "target": "Goldilocks Protocol",
       "referenced_by": [
-        "End-to-End Compression Across the AI Stack Composes Multiplicatively \u2014 6+ Independent Mechanisms at 6 Distinct Layers, Each Substitutable Per Anti-Vendor-Lock-In",
         "Lesson \u2014 MCP discipline: register only what's referenced and actually used; useless MCPs eat context budget and confuse, never pre-emptive",
         "Lesson \u2014 Quality-per-position compounds; quantity-per-position diminishes \u2014 convergent pattern across speculation, quantization, context, orchestration, and model customization",
+        "End-to-End Compression Across the AI Stack Composes Multiplicatively \u2014 6+ Independent Mechanisms at 6 Distinct Layers, Each Substitutable Per Anti-Vendor-Lock-In",
         "Synthesis \u2014 Claude Code Skill Chaining (YouTube, 2026): Three Layers (Context Fork \u00b7 File Handoff \u00b7 ! Commands) Achieve 85% Less Context Burn \u2014 51K \u2192 5-8K Tokens",
         "Synthesis \u2014 Cloudflare Agent Memory (Apr 17 2026): 5-Channel RRF Retrieval + Multi-Stage Ingestion Pipeline = Solving Context Rot for Long-Running AI Agents",
         "Synthesis \u2014 Cloudflare Agents Week 2026 (Apr 14\u201320, 2026): Master Index of 26+ Announcements Across Compute \u00b7 Security \u00b7 Agent Toolbox \u00b7 Prototype-to-Production \u00b7 Agentic Web",
@@ -74141,8 +74411,8 @@
       "referenced_by": [
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
-        "End-to-End Compression Across the AI Stack Composes Multiplicatively \u2014 6+ Independent Mechanisms at 6 Distinct Layers, Each Substitutable Per Anti-Vendor-Lock-In",
         "Lesson \u2014 Quality-per-position compounds; quantity-per-position diminishes \u2014 convergent pattern across speculation, quantization, context, orchestration, and model customization",
+        "End-to-End Compression Across the AI Stack Composes Multiplicatively \u2014 6+ Independent Mechanisms at 6 Distinct Layers, Each Substitutable Per Anti-Vendor-Lock-In",
         "2026-05-04 Session Handoff (Pre-Compaction) \u2014 Trust-Layer Arc Continuation + Spec-Driven Convergence Arc + Caveman Ecosystem Complete (3 of 3 Tools Ingested)",
         "2026-05-04 Session Log \u2014 Spec-Driven Agentic Build Convergence Arc: Fowler SPDD + JS Mastery Six-File Context System Ingested \u2192 7-Instance Layer-4 Lesson Authored",
         "Synthesis \u2014 Cavekit v4: Compressed Spec-Driven Development for Claude Code (Julius Brussee, MIT-Licensed, SPEC.md + 3 Commands + Caveman Encoding + Backprop Reflex)",

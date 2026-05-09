@@ -16,7 +16,7 @@ sources:
     type: file
     file: raw/notes/2026-05-08-pre-compact-imminent-validate-adjust-auto-compact-auto-dream-finish-smoothly-directive.md
     description: "PRIMARY operator directive at 5%"
-tags: [pre-compact-handoff-manual, imminent-compaction, 2026-05-08, post-compact-recovery-mandatory]
+tags: [pre-compact-handoff-manual, imminent-compaction, "2026-05-08", post-compact-recovery-mandatory]
 ---
 
 # PRE-COMPACT HANDOFF MANUAL — Imminent Compaction State Snapshot 2026-05-08

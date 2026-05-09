@@ -9,10 +9,10 @@ domain: cross-domain
 layer: 4
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 created: 2026-04-27
-updated: 2026-04-28
-last_reviewed: 2026-04-28
+updated: "2026-05-09"
+last_reviewed: "2026-05-09"
 derived_from:
   - "RLM Paper Deep Dive (Table 1, Training Recipe)"
   - "RLM Empirical Findings (OOLONG 114% improvement)"

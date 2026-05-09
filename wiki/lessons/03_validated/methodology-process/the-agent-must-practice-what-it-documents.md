@@ -154,6 +154,7 @@ This lesson applies to any system that both produces and consumes its own method
 [[custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis|Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer — Research Synthesis (Operator-Authored 2026-05-04)]]
 [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
 [[custom-tailored-senior-engineer-tier-model-group-2026-05-04|Learning Path — Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer (Mission Arc 2026-05-04)]]
+[[sunk-cost-in-technical-paths-prefer-root-switching|Lesson — Sunk-cost in technical paths: prefer root switching to adjacent switching when recovering from failure]]
 [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
 [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]

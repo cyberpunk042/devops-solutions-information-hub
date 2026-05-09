@@ -5,7 +5,7 @@ domain: log
 status: active
 confidence: high
 created: 2026-04-09
-updated: 2026-05-08
+updated: 2026-05-09
 sources: []
 tags: [log, directives, sessions]
 ---
@@ -165,6 +165,7 @@ Operator directives, session summaries, and task completion notes.
 | 2026-05-08 | [Auto-Dream Definition Question — Surfaced Formally for Operator-Empirical Resolution](2026-05-08-auto-dream-definition-question-surfaced-formally-for-operator-empirical-resolution.md) | completion | `auto-dream-question`, `operator-pending-q1`, `task-29`, `day-arc-2026-05-08`, `multi-day-pain-point-resolution`, `fire-128` |
 | 2026-05-08 | [Auto-Compact Priority Backlog Decomposition — Epic + 4 Modules + 15 Tasks (Fire 97 Pattern Application)](2026-05-08-auto-compact-priority-backlog-decomposition-epic-4-modules-15-tasks-fire-97-pattern-application.md) | completion | `backlog-decomposition`, `auto-compact-priority`, `epic-module-task`, `day-arc-2026-05-08`, `multi-day-pain-point-resolution`, `fire-108` |
 | 2026-05-08 | [Anticipated Operator Questions Log — Pre-Empts Review Session with Ready Answers](2026-05-08-anticipated-operator-questions-log-pre-empts-review-session-with-ready-answers.md) | session | `anticipated-questions`, `operator-review-prep`, `ready-answers`, `day-arc-2026-05-08`, `multi-day-pain-point-resolution` |
+| 2026-05-08 | [PRE-COMPACT HANDOFF MANUAL — Imminent Compaction State Snapshot 2026-05-08](2026-05-08-PRE-COMPACT-HANDOFF-MANUAL-imminent-compaction-state-snapshot.md) | completion | `pre-compact-handoff-manual`, `imminent-compaction`, `2026-05-08`, `post-compact-recovery-mandatory` |
 | 2026-05-08 | [800 Pages Milestone Observation — Body-of-Work Substantial Substantive Substrate](2026-05-08-800-pages-milestone-observation-body-of-work-substantial-substantive-substrate.md) | completion | `800-pages-milestone`, `body-of-work-observation`, `day-arc-2026-05-08`, `fire-194` |
 | 2026-05-08 | [80-Piece Milestone Closing-Arc Summary — Upper-Bound Reached](2026-05-08-80-piece-milestone-closing-arc-summary-upper-bound-reached.md) | completion | `80-piece-milestone`, `closing-arc-summary`, `upper-bound-reached`, `day-arc-2026-05-08`, `multi-day-pain-point-resolution`, `mission-2026-05-06` |
 | 2026-05-08 | [220-Piece Milestone Closing-Arc Summary — 120 Fires Post-Compact](2026-05-08-220-piece-milestone-closing-arc-summary-120-fires-post-compact.md) | completion | `220-piece-milestone`, `120-fires-post-compact`, `day-arc-2026-05-08`, `fire-221` |
