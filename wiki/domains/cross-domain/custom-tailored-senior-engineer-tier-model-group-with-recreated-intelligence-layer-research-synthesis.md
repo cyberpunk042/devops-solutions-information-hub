@@ -336,9 +336,20 @@ Operator's *"like we teach"* names this directly: apply the wiki's methodology t
 
 ## Path on Operator's Stack
 
+> [!warning] **HARDWARE-PENDING — As of 2026-05-09 (operator-confirmed)**
+>
+> All M001-M006 phase execution is **hardware-pending**. The operator has confirmed:
+> - **RTX 3090** ordered, not yet delivered (was originally ETA mid-May 2026; revisit estimate)
+> - **NEW: AVX512 machine plan with custom strategy** under exploration (operator-stated 2026-05-09; details discussed later) — may shift the hardware-tier framing below
+>
+> Do NOT pre-execute M001-M006 phase decisions before hardware lands. Operator will tell this project when ready. The 8 open design questions (mission-claim layer count, base-model choice, MoE-vs-Mixture-of-LoRAs, etc.) stay deferred until operator-trigger.
+>
+> Hardware-tier table below is the **2026-05-04-authored projection**; AVX512 strategy may add a row or shift the framing. Re-validate when AVX512 plan crystallizes.
+
 | Hardware | Realistic capability | First deliverable |
 |---|---|---|
-| **RTX 3090 (incoming mid-May 2026)** | LoRA fine-tune at rank 32–64 on bases up to ~30B at Q4 / UD-IQ2; DPO/IPO behavioral preference fine-tune; LoRA composition; on-device inference at L2 trust default | First `v0.1-seed` operator-tier specialist LoRA on Qwen3.6-27B at UD-IQ2 OR RLM-Qwen3-8B base |
+| **RTX 3090 (ordered; not delivered as of 2026-05-09)** | LoRA fine-tune at rank 32–64 on bases up to ~30B at Q4 / UD-IQ2; DPO/IPO behavioral preference fine-tune; LoRA composition; on-device inference at L2 trust default | First `v0.1-seed` operator-tier specialist LoRA on Qwen3.6-27B at UD-IQ2 OR RLM-Qwen3-8B base |
+| **AVX512 machine** *(NEW 2026-05-09 — operator's custom-strategy plan; details discussed later)* | TBD per operator's custom strategy; AVX512 instruction set unlocks specific quantization/inference paths (e.g., llama.cpp AVX512 kernels, INT8 SIMD acceleration, per-op CPU vectorization) | TBD per operator's strategy |
 | **Cloud H100 (rental, optional)** | Larger-base full fine-tunes (~30B–120B); larger preference-data RL training; per RLM-Qwen3-8B precedent: 48 H100 hours / ~$48–100 for a frontier-approaching post-train | When operator opts in for a larger-base experiment; not date-bound |
 | **Any future hardware** | All Phases compose forward; operator's *core* is the durable artifact, not the hardware | Anti-vendor-lock-in extends to model-customization stance |
 

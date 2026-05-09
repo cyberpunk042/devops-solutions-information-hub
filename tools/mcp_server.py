@@ -86,21 +86,21 @@ def wiki_status() -> str:
 
 
 @server.tool()
-def wiki_search(query: str) -> str:
-    """Search wiki pages for a query string. Returns matching file paths and titles."""
-    results = []
-    for page in find_wiki_pages(WIKI_DIR):
-        text = page.read_text(encoding="utf-8", errors="ignore")
-        if query.lower() in text.lower():
-            meta, _ = parse_frontmatter(text)
-            results.append({
-                "title": meta.get("title", page.stem),
-                "path": str(page.relative_to(ROOT)),
-                "domain": meta.get("domain", ""),
-                "type": meta.get("type", ""),
-            })
+def wiki_search(query: str, k: int = 10, diagnostics: bool = False) -> str:
+    """5-channel RRF retrieval over wiki pages.
 
-    return json.dumps({"query": query, "matches": len(results), "results": results}, indent=2)
+    Channels: FTS-with-stemming + Exact-fact-key + Raw-body-substring +
+    TF-IDF-vector + HyDE-expansion. Reciprocal Rank Fusion merges with
+    Cloudflare-pattern weights (exact-key strongest, raw-body lowest).
+
+    Args:
+        query: search string.
+        k: top-k results to return (default 10).
+        diagnostics: include per-channel ranks per result (default False).
+    """
+    from tools.wiki_search import search as _v2_search
+    out = _v2_search(query, WIKI_DIR, k=k, return_diagnostics=diagnostics)
+    return json.dumps(out, indent=2, default=str)
 
 
 @server.tool()

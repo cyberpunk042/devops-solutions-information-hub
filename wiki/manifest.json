@@ -1,11 +1,11 @@
 {
-  "generated": "2026-05-09T11:22:47.681371+00:00",
+  "generated": "2026-05-09T12:21:36.800231+00:00",
   "stats": {
     "pages": 842,
     "domains": 14,
     "sources": 109,
     "comparisons": 9,
-    "relationships": 3920,
+    "relationships": 3918,
     "tags_unique": 3089,
     "layers": {
       "3": 4,
@@ -17465,10 +17465,6 @@
       ],
       "relationships": [
         {
-          "verb": "DERIVED FROM",
-          "target": "AICP Post-Anthropic mission retrospective 2026-04-27 (contributed-from-AICP)"
-        },
-        {
           "verb": "RELATES TO",
           "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
         },
@@ -19746,10 +19742,6 @@
         "Sunk-Cost in Technical Paths"
       ],
       "relationships": [
-        {
-          "verb": "DERIVED FROM",
-          "target": "AICP Post-Anthropic mission postmortem 2026-04-24 + retrospective 2026-04-27 (contributed-from-AICP)"
-        },
         {
           "verb": "RELATES TO",
           "target": "Fake Blockers vs Real Blockers"
@@ -59035,7 +59027,7 @@
     },
     "cross-domain": {
       "page_count": 288,
-      "relationship_count": 1747
+      "relationship_count": 1745
     },
     "ai-models": {
       "page_count": 14,
@@ -72660,18 +72652,6 @@
         "Synthesis \u2014 Prime Intellect PRIME-RL: Async RL Training at Scale (1000+ GPUs, FSDP2 + vLLM, Used to Train RLM-Qwen3-8B)",
         "Synthesis \u2014 RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)",
         "Synthesis \u2014 RLM Paper Deep Dive: Table 1 Across 4 Tasks, RLM-Qwen3-8B Training Recipe (48 H100 hrs / prime-rl / 1000 trajectories), and Six Observations (arXiv 2512.24601 v2 Jan 2026)"
-      ]
-    },
-    {
-      "target": "AICP Post-Anthropic mission postmortem 2026-04-24 + retrospective 2026-04-27",
-      "referenced_by": [
-        "Lesson \u2014 Sunk-cost in technical paths: prefer root switching to adjacent switching when recovering from failure"
-      ]
-    },
-    {
-      "target": "AICP Post-Anthropic mission retrospective 2026-04-27",
-      "referenced_by": [
-        "Lesson \u2014 Audit numbers age fast: rebaseline before executing against an old audit"
       ]
     },
     {

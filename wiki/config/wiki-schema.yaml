@@ -172,6 +172,16 @@ enums:
     - paste
     - book
     - podcast-transcript
+    # Extended 2026-05-09 (operator-authorized) — schema-follows-usage:
+    # widespread use of these types in operator-authored + sister-synced pages
+    # warranted whitelisting them rather than touching 100+ pages.
+    - file              # local file reference (raw/notes/, raw/articles/, project files)
+    - directive         # operator directive (typically a raw/notes/ verbatim log)
+    - wiki              # wiki self-reference (another wiki page)
+    - project           # sister-project reference (paired with `path` field)
+    - empirical         # observation / measurement
+    - video             # video reference (when not a youtube-transcript)
+    - rule              # rule file (`.claude/rules/*.md` or analogous)
 
 required_sections:
   concept:
@@ -302,6 +312,14 @@ relationship_verbs:
   - SYNTHESIZES
   - ENABLED BY
   - CONTRASTS WITH
+  # Extended 2026-05-09 (operator-authorized) — schema-follows-usage:
+  # widespread use in epic/milestone relationships warranted whitelisting.
+  - PART OF             # epic/module/task containment relationship
+  - CONTAINS            # inverse of PART OF (milestone CONTAINS epics)
+  - DEPENDS ON          # epic/task dependency
+  - COMPLEMENTS         # decisions that work together (sister-decisions)
+  - DEMONSTRATES        # lesson/principle demonstrated by an instance
+  - DEMONSTRATED BY     # inverse of DEMONSTRATES
 
 source_required_fields:
   - id
