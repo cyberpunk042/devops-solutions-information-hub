@@ -110,6 +110,8 @@ This shows the literal `hookEvent` Claude Code assigned to each hook output and 
 ## Relationships
 
 - BUILDS ON Claude Code Hooks Reference (https://code.claude.com/docs/en/hooks)
+- COMPLEMENTS [[claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it|Lesson — Hook output channel is event-specific (`additionalContext` only valid for 6 events)]] — sister lesson from the same 2026-05-06 arc covering the output-channel-validity half (this one covers the caching half)
+- COMPLEMENTS [[user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed|Lesson — User-level settings.json hook paths must be `$HOME`-prefixed or absolute]] — sister lesson covering the path-resolution half of the same arc family
 - ENABLES rapid hook iteration without session restart
 - USED BY any project authoring custom Claude Code hooks during active development
 - CONSTRAINS the "edit settings.json during dev" workflow — must use settings.local.json instead

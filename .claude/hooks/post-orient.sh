@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 # PostCompact hook (second of two on this event) — direct the agent to re-invoke
-# /orient after compaction to restore behavioral state. Uses additionalContext
-# JSON for ~85% reliability.
+# /orient after compaction to restore behavioral state.
 #
 # Insertion: PostCompact
 # Reason: Compaction loses behavioral corrections, sacrosanct directives, Hard Rules,
 #         and current project intel. The plain-text post-compact.sh re-prints rules;
 #         this companion directs the agent to re-load fresh state via /orient.
+# Output channel: systemMessage. PostCompact does NOT accept
+#         hookSpecificOutput.additionalContext (only SessionStart / UserPromptSubmit /
+#         PreToolUse / PostToolUse / PostToolBatch / SubagentStart accept that).
+#         See: wiki/lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it.md
 # Remediation: agent re-invokes /orient → re-reads brain, recent directives,
 #              maturity flow, pipeline health, sister-project pulse → emits fresh
 #              ORIENT REPORT.
-# Adopted: 2026-05-05 with the SessionStart pair.
 
 import json
 import sys
@@ -45,9 +47,6 @@ event; same recovery mechanism.
 """
 
 print(json.dumps({
-    "hookSpecificOutput": {
-        "hookEventName": "PostCompact",
-        "additionalContext": DIRECTIVE
-    }
+    "systemMessage": DIRECTIVE
 }))
 sys.exit(0)

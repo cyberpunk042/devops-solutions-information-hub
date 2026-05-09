@@ -154,3 +154,10 @@ Universal. Any Claude Code project with user-level settings.json hooks has this 
 
 ## Relationships
 
+- BUILDS ON [[claude-code-hooks-reference|Claude Code Hooks Reference]] — canonical 26-event lifecycle + 4 handler types + output channel reference
+- COMPLEMENTS [[claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it|Lesson — Hook output channel is event-specific (`additionalContext` only valid for 6 events)]] — sister lesson covering the output-channel-validity half of the same arc family (this lesson covers the path-resolution half)
+- COMPLEMENTS [[claude-code-settings-local-hot-reload-vs-settings-cache|Lesson — settings.local.json hot-reloads; settings.json caches]] — sister lesson covering the caching half
+- DEMONSTRATES [[correction-as-calibration-not-swing-the-going-to-extremes-anti-pattern|Lesson — Correction-as-calibration not swing]] — the agent batch-changed all 9 hook paths instead of test-one-then-propagate (going-to-extremes instance)
+- DEMONSTRATES [[decision-presentation-discipline-context-guidance-recommendation|Lesson — Decision-presentation discipline]] — the change should have been surfaced as CONTEXT/GUIDANCE/RECOMMENDATION/TO-ANSWER before applying
+- USED BY any project with user-level Claude Code hooks
+- CONSTRAINS the "relative paths feel portable" intuition for user-level settings.json — they break across cwds

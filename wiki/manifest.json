@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-09T13:01:56.155825+00:00",
+  "generated": "2026-05-09T23:31:10.318930+00:00",
   "stats": {
-    "pages": 843,
+    "pages": 845,
     "domains": 14,
     "sources": 109,
     "comparisons": 9,
-    "relationships": 3925,
-    "tags_unique": 3097,
+    "relationships": 3942,
+    "tags_unique": 3110,
     "layers": {
       "3": 4,
       "5": 38,
       "6": 26,
-      "2": 77,
+      "2": 78,
       "4": 83,
       "0": 1,
       "1": 80,
       "spine": 80
     },
     "maturity": {
-      "seed": 171,
+      "seed": 172,
       "growing": 331,
       "mature": 23
     }
@@ -17475,6 +17475,104 @@
         {
           "verb": "RELATES TO",
           "target": "Fake Blockers vs Real Blockers"
+        }
+      ]
+    },
+    {
+      "path": "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it.md",
+      "slug": "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
+      "title": "Lesson \u2014 Claude Code hook output channel is event-specific; `hookSpecificOutput.additionalContext` is valid for only 6 events (PostCompact / Stop / SessionEnd / others reject it)",
+      "type": "lesson",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-09",
+      "updated": "2026-05-09",
+      "last_reviewed": "",
+      "tags": [
+        "claude-code",
+        "hooks",
+        "hookSpecificOutput",
+        "additionalContext",
+        "systemMessage",
+        "schema-validation",
+        "event-output-validity",
+        "postcompact",
+        "stop-hook",
+        "lesson",
+        "draft",
+        "ai-agents",
+        "2026-05-09"
+      ],
+      "sources": [
+        {
+          "id": "claude-code-hooks-reference",
+          "type": "file",
+          "file": "raw/articles/claude-code-hooks-reference.md",
+          "description": "Official Claude Code hooks reference compiled 2026-04-09 \u2014 line 23 enumerates the 5 documented events that accept additionalContext (SessionStart / UserPromptSubmit / PreToolUse / PostToolUse / SubagentStart). PostToolBatch added later, also accepts additionalContext (verified empirically 2026-05-09 via schema-rejection error)."
+        },
+        {
+          "id": "empirical-2026-05-06-stamp-bug",
+          "type": "empirical",
+          "file": "raw/notes/2026-05-06-claude-code-hook-stamp-bug-cached-config-vs-settings-local-hot-reload.md",
+          "description": "Operator's 10x debugging arc on /root: Stop hook miswire to UserPromptSubmit + cached settings.json + the schema validity table at lines 122-128. Operator-stated 10x synthesis directive line 42 verbatim: \"its a lot of little details.. lets make sure we properly ingest and digest and synthesize all the knowledge about this an the 10x level of it.\""
+        },
+        {
+          "id": "empirical-2026-05-09-postcompact-orient",
+          "type": "empirical",
+          "project": "devops-solutions-information-hub",
+          "path": ".claude/hooks/post-orient.sh",
+          "description": "Same class of bug re-encountered 2026-05-09: post-orient.sh wires PostCompact event to use hookSpecificOutput.additionalContext \u2014 fails with 'Hook JSON output validation failed \u2014 (root): Invalid input' because PostCompact is not in the whitelist of events that accept additionalContext."
+        },
+        {
+          "id": "companion-settings-local-hot-reload",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache.md",
+          "description": "Sister lesson \u2014 same 2026-05-06 arc, caching half (settings.json caches at session start; settings.local.json hot-reloads per prompt)"
+        },
+        {
+          "id": "companion-user-level-path-resolution",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed.md",
+          "description": "Sister lesson \u2014 same arc family, path-resolution half (user-level hook commands must use $HOME-prefixed or absolute paths, never relative)"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Claude Code Hooks Reference"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-05-06 Stamp Bug Empirical Note"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Lesson \u2014 settings.local.json hot-reloads; settings.json caches"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Lesson \u2014 User-level settings.json hook paths must be `$HOME`-prefixed or absolute"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "USED BY",
+          "target": "any project authoring custom Claude Code hooks"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "operator-stated 10x synthesis directive 2026-05-06 (sacrosanct verbatim) \u2014 *\"lets make sure we properly ingest and digest and synthesize all the knowledge about this an the 10x level of it\"*"
         }
       ]
     },
@@ -35485,6 +35583,107 @@
       "derived_from": [],
       "aliases": [],
       "relationships": []
+    },
+    {
+      "path": "log/2026-05-09-PRE-COMPACT-STRONG-HANDOFF-decisions-executed-boundary-correction-freeze-memory-rrf-and-23-lessons-reformatted.md",
+      "slug": "log/2026-05-09-PRE-COMPACT-STRONG-HANDOFF-decisions-executed-boundary-correction-freeze-memory-rrf-and-23-lessons-reformatted",
+      "title": "2026-05-09 PRE-COMPACT STRONG HANDOFF \u2014 Post-Compact Pickup Artifact (Decisions Executed \u00b7 Boundary Correction \u00b7 Freeze-Pattern Memory \u00b7 5-Channel RRF Live \u00b7 23 Lessons Reformatted \u00b7 AVX512 Machine Plan Captured \u00b7 Operator Forward Direction Signaled)",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-09",
+      "updated": "2026-05-09",
+      "last_reviewed": "2026-05-09",
+      "tags": [
+        "pre-compact",
+        "handoff",
+        "2026-05-09",
+        "post-compact-pickup",
+        "decisions-executed",
+        "boundary-correction-root-vs-opt",
+        "freeze-pattern-corrected",
+        "5-channel-rrf-live",
+        "schema-extended",
+        "23-lessons-reformatted",
+        "avx512-machine-plan",
+        "hardware-pending-flag",
+        "operator-forward-direction-signaled"
+      ],
+      "sources": [
+        {
+          "id": "prior-handoff-2026-05-06",
+          "type": "wiki",
+          "file": "wiki/log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring.md",
+          "description": "Prior multi-arc pre-compaction handoff \u2014 6 arcs + infrastructure wiring + Ollama Cloud empirical observation"
+        },
+        {
+          "id": "session-log-2026-05-08",
+          "type": "wiki",
+          "file": "wiki/log/2026-05-08-strong-loop-arc-ingest-synthesize-propagate-distill-and-operator-decisions-pending.md",
+          "description": "2026-05-08 strong-loop arc \u2014 5 syntheses + 3 NEW Layer-2 lessons + 9 operator-decisions surfaced"
+        },
+        {
+          "id": "session-log-2026-05-09",
+          "type": "wiki",
+          "file": "wiki/log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension.md",
+          "description": "2026-05-09 session log \u2014 same-day decision-resolution + 5-channel RRF + schema extension"
+        },
+        {
+          "id": "freeze-pattern-memory",
+          "type": "notes",
+          "file": "~/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/feedback_context_pressure_does_not_authorize_freeze.md",
+          "description": "NEW memory entry 2026-05-09 \u2014 context-pressure mentions don't authorize freeze; default to executing"
+        },
+        {
+          "id": "root-ghostproxy-readme",
+          "type": "directive",
+          "file": "/tmp/rgp-readme.md",
+          "description": "Operator-explicit transient lookup of root-ghostproxy README confirming the boundary: root = harness/ecosystem at $HOME; /opt = knowledge"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-05-09 Session Log"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-05-08 Strong-Loop Arc Session Log"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-05-06 Pre-Compaction Handoff"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "The Agent Must Practice What It Documents"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Custom-Tailored Senior-Engineer-Tier Model Group Concept"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack"
+        }
+      ]
     },
     {
       "path": "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension.md",
@@ -59110,16 +59309,16 @@
       "relationship_count": 472
     },
     "cross-domain": {
-      "page_count": 289,
-      "relationship_count": 1752
+      "page_count": 290,
+      "relationship_count": 1761
     },
     "ai-models": {
       "page_count": 14,
       "relationship_count": 82
     },
     "ai-agents": {
-      "page_count": 70,
-      "relationship_count": 533
+      "page_count": 71,
+      "relationship_count": 541
     },
     "tools-integration": {
       "page_count": 38,
@@ -59962,6 +60161,7 @@
       "domains/ai-agents/patterns/per-role-command-architecture",
       "domains/automation/wiki-event-driven-automation",
       "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts",
+      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
       "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache",
       "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed",
       "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
@@ -61400,6 +61600,7 @@
       "domains/knowledge-systems/wiki-core/wiki-ingestion-pipeline",
       "domains/tools-and-platforms/notebooklm-skills",
       "domains/tools-and-platforms/obsidian-skills-ecosystem",
+      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
       "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache",
       "lessons/03_validated/context-engineering/context-management-is-primary-productivity-lever",
       "lessons/03_validated/tools-architecture/always-plan-before-executing",
@@ -62005,6 +62206,7 @@
       "domains/ai-agents/patterns/design-md-pattern",
       "domains/cross-domain/integration/ai-methodology-consumption-guide",
       "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts",
+      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
       "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
       "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
       "patterns/01_drafts/three-layer-agent-context-architecture",
@@ -62123,6 +62325,7 @@
       "lessons/01_drafts/agent-context-discipline-is-aspirational-without-enforcement-gates-not-reading-what-exists",
       "lessons/01_drafts/agent-decision-vs-operator-decision-boundary-discrimination-pre-action-gate",
       "lessons/01_drafts/audit-numbers-age-fast-rebaseline-before-execute",
+      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
       "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache",
       "lessons/01_drafts/conflation-detection-at-hook-layer-the-rename-strategy-generalized",
       "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
@@ -64974,6 +65177,37 @@
       "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths",
       "lessons/02_synthesized/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
     ],
+    "hookSpecificOutput": [
+      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it"
+    ],
+    "additionalContext": [
+      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
+      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
+    ],
+    "systemMessage": [
+      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it"
+    ],
+    "schema-validation": [
+      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it"
+    ],
+    "event-output-validity": [
+      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it"
+    ],
+    "postcompact": [
+      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it"
+    ],
+    "stop-hook": [
+      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it"
+    ],
+    "draft": [
+      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
+      "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache"
+    ],
+    "2026-05-09": [
+      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
+      "log/2026-05-09-PRE-COMPACT-STRONG-HANDOFF-decisions-executed-boundary-correction-freeze-memory-rrf-and-23-lessons-reformatted",
+      "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension"
+    ],
     "settings": [
       "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache"
     ],
@@ -64981,9 +65215,6 @@
       "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache"
     ],
     "caching": [
-      "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache"
-    ],
-    "draft": [
       "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache"
     ],
     "conflation-detection-at-hook": [
@@ -65596,9 +65827,6 @@
       "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
     ],
     "determinism": [
-      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
-    ],
-    "additionalContext": [
       "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
     ],
     "validated": [
@@ -66453,6 +66681,7 @@
       "log/2026-05-04-session-handoff-pre-compaction",
       "log/2026-05-05-handoff-to-root-session",
       "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring",
+      "log/2026-05-09-PRE-COMPACT-STRONG-HANDOFF-decisions-executed-boundary-correction-freeze-memory-rrf-and-23-lessons-reformatted",
       "patterns/01_drafts/finish-smoothly-custom-idempotent-pre-compact-handoff-with-existing-doc-detection",
       "spine/references/wsl-ubuntu-migration-handoff"
     ],
@@ -68518,14 +68747,42 @@
     "fire-102": [
       "log/2026-05-08-worked-example-4-post-compact-detection-failure-real-session-empirical-evidence-impl-spec-10-stress-test"
     ],
-    "2026-05-09": [
-      "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension"
+    "pre-compact": [
+      "log/2026-05-09-PRE-COMPACT-STRONG-HANDOFF-decisions-executed-boundary-correction-freeze-memory-rrf-and-23-lessons-reformatted",
+      "patterns/01_drafts/finish-smoothly-custom-idempotent-pre-compact-handoff-with-existing-doc-detection"
+    ],
+    "post-compact-pickup": [
+      "log/2026-05-09-PRE-COMPACT-STRONG-HANDOFF-decisions-executed-boundary-correction-freeze-memory-rrf-and-23-lessons-reformatted"
     ],
     "decisions-executed": [
+      "log/2026-05-09-PRE-COMPACT-STRONG-HANDOFF-decisions-executed-boundary-correction-freeze-memory-rrf-and-23-lessons-reformatted",
       "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension"
     ],
     "boundary-correction-root-vs-opt": [
+      "log/2026-05-09-PRE-COMPACT-STRONG-HANDOFF-decisions-executed-boundary-correction-freeze-memory-rrf-and-23-lessons-reformatted",
       "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension"
+    ],
+    "freeze-pattern-corrected": [
+      "log/2026-05-09-PRE-COMPACT-STRONG-HANDOFF-decisions-executed-boundary-correction-freeze-memory-rrf-and-23-lessons-reformatted"
+    ],
+    "5-channel-rrf-live": [
+      "log/2026-05-09-PRE-COMPACT-STRONG-HANDOFF-decisions-executed-boundary-correction-freeze-memory-rrf-and-23-lessons-reformatted"
+    ],
+    "schema-extended": [
+      "log/2026-05-09-PRE-COMPACT-STRONG-HANDOFF-decisions-executed-boundary-correction-freeze-memory-rrf-and-23-lessons-reformatted"
+    ],
+    "23-lessons-reformatted": [
+      "log/2026-05-09-PRE-COMPACT-STRONG-HANDOFF-decisions-executed-boundary-correction-freeze-memory-rrf-and-23-lessons-reformatted"
+    ],
+    "avx512-machine-plan": [
+      "log/2026-05-09-PRE-COMPACT-STRONG-HANDOFF-decisions-executed-boundary-correction-freeze-memory-rrf-and-23-lessons-reformatted"
+    ],
+    "hardware-pending-flag": [
+      "log/2026-05-09-PRE-COMPACT-STRONG-HANDOFF-decisions-executed-boundary-correction-freeze-memory-rrf-and-23-lessons-reformatted",
+      "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension"
+    ],
+    "operator-forward-direction-signaled": [
+      "log/2026-05-09-PRE-COMPACT-STRONG-HANDOFF-decisions-executed-boundary-correction-freeze-memory-rrf-and-23-lessons-reformatted"
     ],
     "5-channel-rrf-retrieval-landed": [
       "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension"
@@ -68534,9 +68791,6 @@
       "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension"
     ],
     "avx512-machine-plan-noted": [
-      "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension"
-    ],
-    "hardware-pending-flag": [
       "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension"
     ],
     "post-compact-pickup-runbook": [
@@ -68918,9 +69172,6 @@
       "patterns/01_drafts/finish-smoothly-custom-idempotent-pre-compact-handoff-with-existing-doc-detection"
     ],
     "idempotent": [
-      "patterns/01_drafts/finish-smoothly-custom-idempotent-pre-compact-handoff-with-existing-doc-detection"
-    ],
-    "pre-compact": [
       "patterns/01_drafts/finish-smoothly-custom-idempotent-pre-compact-handoff-with-existing-doc-detection"
     ],
     "custom-variant": [
@@ -72743,13 +72994,27 @@
       "target": "2026-05-06 Pre-Compaction Handoff",
       "referenced_by": [
         "2026-05-08 Strong-Loop Arc \u2014 Ingest \u2192 Synthesize \u2192 Propagate \u2192 Distill (5 raws \u00b7 5 syntheses \u00b7 3 NEW Layer-2 lessons \u00b7 8 propagation passes \u00b7 1 operator-doctrine denotation \u00b7 1 cross-cutting Layer-2 lesson distilled \u00b7 operator-decisions surfaced)",
+        "2026-05-09 PRE-COMPACT STRONG HANDOFF \u2014 Post-Compact Pickup Artifact (Decisions Executed \u00b7 Boundary Correction \u00b7 Freeze-Pattern Memory \u00b7 5-Channel RRF Live \u00b7 23 Lessons Reformatted \u00b7 AVX512 Machine Plan Captured \u00b7 Operator Forward Direction Signaled)",
         "2026-05-09 Session Log \u2014 9 Pending Decisions Resolved (5 Executed \u00b7 3 Defer-Track \u00b7 1 Boundary-Correction) + 5-Channel RRF Retrieval Landed + Schema Extension + AVX512 Machine Plan Captured"
+      ]
+    },
+    {
+      "target": "2026-05-06 Stamp Bug Empirical Note",
+      "referenced_by": [
+        "Lesson \u2014 Claude Code hook output channel is event-specific; `hookSpecificOutput.additionalContext` is valid for only 6 events (PostCompact / Stop / SessionEnd / others reject it)"
       ]
     },
     {
       "target": "2026-05-08 Strong-Loop Arc Session Log",
       "referenced_by": [
+        "2026-05-09 PRE-COMPACT STRONG HANDOFF \u2014 Post-Compact Pickup Artifact (Decisions Executed \u00b7 Boundary Correction \u00b7 Freeze-Pattern Memory \u00b7 5-Channel RRF Live \u00b7 23 Lessons Reformatted \u00b7 AVX512 Machine Plan Captured \u00b7 Operator Forward Direction Signaled)",
         "2026-05-09 Session Log \u2014 9 Pending Decisions Resolved (5 Executed \u00b7 3 Defer-Track \u00b7 1 Boundary-Correction) + 5-Channel RRF Retrieval Landed + Schema Extension + AVX512 Machine Plan Captured"
+      ]
+    },
+    {
+      "target": "2026-05-09 Session Log",
+      "referenced_by": [
+        "2026-05-09 PRE-COMPACT STRONG HANDOFF \u2014 Post-Compact Pickup Artifact (Decisions Executed \u00b7 Boundary Correction \u00b7 Freeze-Pattern Memory \u00b7 5-Channel RRF Live \u00b7 23 Lessons Reformatted \u00b7 AVX512 Machine Plan Captured \u00b7 Operator Forward Direction Signaled)"
       ]
     },
     {
@@ -72937,6 +73202,12 @@
       ]
     },
     {
+      "target": "Claude Code Hooks Reference",
+      "referenced_by": [
+        "Lesson \u2014 Claude Code hook output channel is event-specific; `hookSpecificOutput.additionalContext` is valid for only 6 events (PostCompact / Stop / SessionEnd / others reject it)"
+      ]
+    },
+    {
       "target": "Claude Code Slash Commands",
       "referenced_by": [
         "Per-Role Command Architecture"
@@ -73026,6 +73297,7 @@
       "referenced_by": [
         "Milestone: Post-Anthropic Self-Autonomous AI Stack",
         "2026-05-08 Strong-Loop Arc \u2014 Ingest \u2192 Synthesize \u2192 Propagate \u2192 Distill (5 raws \u00b7 5 syntheses \u00b7 3 NEW Layer-2 lessons \u00b7 8 propagation passes \u00b7 1 operator-doctrine denotation \u00b7 1 cross-cutting Layer-2 lesson distilled \u00b7 operator-decisions surfaced)",
+        "2026-05-09 PRE-COMPACT STRONG HANDOFF \u2014 Post-Compact Pickup Artifact (Decisions Executed \u00b7 Boundary Correction \u00b7 Freeze-Pattern Memory \u00b7 5-Channel RRF Live \u00b7 23 Lessons Reformatted \u00b7 AVX512 Machine Plan Captured \u00b7 Operator Forward Direction Signaled)",
         "2026-05-09 Session Log \u2014 9 Pending Decisions Resolved (5 Executed \u00b7 3 Defer-Track \u00b7 1 Boundary-Correction) + 5-Channel RRF Retrieval Landed + Schema Extension + AVX512 Machine Plan Captured",
         "Synthesis \u2014 Strands Agents (AWS): Intent-Based Tool Design Cuts Token Usage 96% (52K \u2192 2K) via Narrow Scope + Semantic-Search MCP Gateway"
       ]
@@ -73780,6 +74052,18 @@
       ]
     },
     {
+      "target": "Lesson \u2014 User-level settings.json hook paths must be `$HOME`-prefixed or absolute",
+      "referenced_by": [
+        "Lesson \u2014 Claude Code hook output channel is event-specific; `hookSpecificOutput.additionalContext` is valid for only 6 events (PostCompact / Stop / SessionEnd / others reject it)"
+      ]
+    },
+    {
+      "target": "Lesson \u2014 settings.local.json hot-reloads; settings.json caches",
+      "referenced_by": [
+        "Lesson \u2014 Claude Code hook output channel is event-specific; `hookSpecificOutput.additionalContext` is valid for only 6 events (PostCompact / Stop / SessionEnd / others reject it)"
+      ]
+    },
+    {
       "target": "M-C02 task completion",
       "referenced_by": [
         "C02 Decision-Territory Hook Python Draft (Agent-Authored) \u2014 PreToolUse Pattern-Match Detection"
@@ -73989,6 +74273,7 @@
         "2026-05-04 Session Log \u2014 Custom-Tailored Senior-Engineer-Tier Model Group Mission Initiated (Root-Cause Pain Point Identified via root-ghostproxy Bootstrap)",
         "2026-05-06 Session Handoff (Pre-Compaction) \u2014 Multi-Arc Research Sweep + Infrastructure Wiring (Stop Hook Fix \u00b7 root-ghostproxy Registration \u00b7 Firecrawl + Accept-Header Fallback Chain \u00b7 14+ Layer-1 Syntheses \u00b7 Layer-4 Compression Lesson \u00b7 Anti-Vendor-Lock-In Evidence 12-14)",
         "2026-05-08 Strong-Loop Arc \u2014 Ingest \u2192 Synthesize \u2192 Propagate \u2192 Distill (5 raws \u00b7 5 syntheses \u00b7 3 NEW Layer-2 lessons \u00b7 8 propagation passes \u00b7 1 operator-doctrine denotation \u00b7 1 cross-cutting Layer-2 lesson distilled \u00b7 operator-decisions surfaced)",
+        "2026-05-09 PRE-COMPACT STRONG HANDOFF \u2014 Post-Compact Pickup Artifact (Decisions Executed \u00b7 Boundary Correction \u00b7 Freeze-Pattern Memory \u00b7 5-Channel RRF Live \u00b7 23 Lessons Reformatted \u00b7 AVX512 Machine Plan Captured \u00b7 Operator Forward Direction Signaled)",
         "Learning Path \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer (Mission Arc 2026-05-04)",
         "Learning Path \u2014 Trust Layer: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context, Session Arc 2026-04-30)"
       ]
@@ -75083,6 +75368,12 @@
       ]
     },
     {
+      "target": "any project authoring custom Claude Code hooks",
+      "referenced_by": [
+        "Lesson \u2014 Claude Code hook output channel is event-specific; `hookSpecificOutput.additionalContext` is valid for only 6 events (PostCompact / Stop / SessionEnd / others reject it)"
+      ]
+    },
+    {
       "target": "awslabs/aidlc-workflows GitHub Repository",
       "referenced_by": [
         "Synthesis \u2014 AWS AI-DLC: AI-Driven Development Lifecycle (Methodology, Not a Tool)"
@@ -75321,6 +75612,12 @@
       "target": "not the label",
       "referenced_by": [
         "Right-size the methodology model to the actual work, not the structural category"
+      ]
+    },
+    {
+      "target": "operator-stated 10x synthesis directive 2026-05-06 (sacrosanct verbatim) \u2014 *\"lets make sure we properly ingest and digest and synthesize all the knowledge about this an the 10x level of it\"*",
+      "referenced_by": [
+        "Lesson \u2014 Claude Code hook output channel is event-specific; `hookSpecificOutput.additionalContext` is valid for only 6 events (PostCompact / Stop / SessionEnd / others reject it)"
       ]
     },
     {
