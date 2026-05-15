@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-09T23:31:10.318930+00:00",
+  "generated": "2026-05-15T13:42:22.425936+00:00",
   "stats": {
-    "pages": 845,
+    "pages": 846,
     "domains": 14,
     "sources": 109,
     "comparisons": 9,
-    "relationships": 3942,
-    "tags_unique": 3110,
+    "relationships": 3950,
+    "tags_unique": 3114,
     "layers": {
       "3": 4,
       "5": 38,
       "6": 26,
-      "2": 78,
+      "2": 79,
       "4": 83,
       "0": 1,
       "1": 80,
       "spine": 80
     },
     "maturity": {
-      "seed": 172,
+      "seed": 173,
       "growing": 331,
       "mature": 23
     }
@@ -17479,6 +17479,107 @@
       ]
     },
     {
+      "path": "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately.md",
+      "slug": "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately",
+      "title": "Lesson \u2014 Audit-on-distillation discipline: when promoting a bug-class to the lesson layer, audit the codebase for other instances immediately while knowledge is fresh",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-09",
+      "updated": "2026-05-09",
+      "last_reviewed": "",
+      "tags": [
+        "discipline",
+        "audit",
+        "distillation",
+        "lesson-promotion",
+        "bug-class",
+        "knowledge-loop-closure",
+        "fresh-knowledge-window",
+        "self-enforcement",
+        "ai-agents",
+        "2026-05-09",
+        "lesson",
+        "draft"
+      ],
+      "sources": [
+        {
+          "id": "empirical-2026-05-09-hook-schema-validity-audit",
+          "type": "empirical",
+          "project": "devops-solutions-information-hub",
+          "path": ".claude/hooks/",
+          "description": "This very session 2026-05-09: authored hook-output-channel-schema-validity lesson; immediately audited 7 hooks in .claude/hooks/; found post-orient.sh had the same bug class; fixed it. Lesson + audit + fix landed in one arc. Discipline demonstrated by example."
+        },
+        {
+          "id": "companion-documentation-as-substitute-for-discipline",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/documentation-as-substitute-for-discipline-the-meta-pattern.md",
+          "description": "Sister lesson \u2014 the meta-pattern this discipline prevents: documenting a rule without applying it leaves the failure in place. Audit-on-distillation is the operational mechanism that closes that gap."
+        },
+        {
+          "id": "companion-agent-context-discipline-aspirational",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/agent-context-discipline-is-aspirational-without-enforcement-gates-not-reading-what-exists.md",
+          "description": "Sister lesson \u2014 context-discipline is aspirational without enforcement. Audit-on-distillation is a self-enforcement step (immediate, scoped) for the agent authoring the lesson."
+        },
+        {
+          "id": "companion-verbal-acknowledgment-not-a-fix",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/enforcement-compliance/verbal-acknowledgment-is-not-a-fix-bug-fix-requires-structural-artefact.md",
+          "description": "Sister lesson \u2014 bug-fix requires a structural artefact, not just acknowledgment. Audit-on-distillation produces the structural artefact: code fixes that close the bug-class across instances."
+        },
+        {
+          "id": "principle-declarations-aspirational",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md",
+          "description": "Demonstrates P4 \u2014 a lesson is a declaration; until the audit verifies the rule holds in actual code, the lesson is aspirational"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Lesson \u2014 Documentation-as-Substitute-for-Discipline meta-pattern"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Lesson \u2014 Verbal acknowledgment is not a fix"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Lesson \u2014 Agent-context-discipline is aspirational"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Lesson \u2014 Claude Code hook output channel is event-specific"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "knowledge-loop closure between raw/ \u2192 lesson layer \u2192 codebase"
+        },
+        {
+          "verb": "USED BY",
+          "target": "any project maintaining a knowledge layer + codebase"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "operator-stated 10x synthesis discipline 2026-05-06 (sacrosanct) \u2014 *\"lets make sure we properly ingest and digest and synthesize all the knowledge about this an the 10x level of it\"* \u2014 the 10x discipline demands not just synthesis but also application to codebase"
+        }
+      ]
+    },
+    {
       "path": "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it.md",
       "slug": "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
       "title": "Lesson \u2014 Claude Code hook output channel is event-specific; `hookSpecificOutput.additionalContext` is valid for only 6 events (PostCompact / Stop / SessionEnd / others reject it)",
@@ -17551,6 +17652,10 @@
           "target": "2026-05-06 Stamp Bug Empirical Note"
         },
         {
+          "verb": "DEMONSTRATED BY",
+          "target": "Lesson \u2014 Audit-on-distillation discipline"
+        },
+        {
           "verb": "COMPLEMENTS",
           "target": "Lesson \u2014 settings.local.json hot-reloads; settings.json caches"
         },
@@ -17565,14 +17670,6 @@
         {
           "verb": "DEMONSTRATES",
           "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
-        },
-        {
-          "verb": "USED BY",
-          "target": "any project authoring custom Claude Code hooks"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "operator-stated 10x synthesis directive 2026-05-06 (sacrosanct verbatim) \u2014 *\"lets make sure we properly ingest and digest and synthesize all the knowledge about this an the 10x level of it\"*"
         }
       ]
     },
@@ -59309,8 +59406,8 @@
       "relationship_count": 472
     },
     "cross-domain": {
-      "page_count": 290,
-      "relationship_count": 1761
+      "page_count": 291,
+      "relationship_count": 1770
     },
     "ai-models": {
       "page_count": 14,
@@ -59318,7 +59415,7 @@
     },
     "ai-agents": {
       "page_count": 71,
-      "relationship_count": 541
+      "relationship_count": 540
     },
     "tools-integration": {
       "page_count": 38,
@@ -59846,6 +59943,7 @@
       "backlog/tasks/T060-audit-wiki-corpus-training-readiness",
       "domains/devops/devops-control-plane",
       "lessons/01_drafts/audit-numbers-age-fast-rebaseline-before-execute",
+      "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately",
       "lessons/03_validated/ingestion-research/shallow-ingestion-is-systemic-not-isolated",
       "log/2026-04-23-corpus-training-readiness-audit",
       "log/2026-05-08-strategic-coverage-validation-180-pain-points-to-17-solution-pieces"
@@ -62206,6 +62304,7 @@
       "domains/ai-agents/patterns/design-md-pattern",
       "domains/cross-domain/integration/ai-methodology-consumption-guide",
       "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts",
+      "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately",
       "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
       "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
       "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
@@ -62325,6 +62424,7 @@
       "lessons/01_drafts/agent-context-discipline-is-aspirational-without-enforcement-gates-not-reading-what-exists",
       "lessons/01_drafts/agent-decision-vs-operator-decision-boundary-discrimination-pre-action-gate",
       "lessons/01_drafts/audit-numbers-age-fast-rebaseline-before-execute",
+      "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately",
       "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
       "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache",
       "lessons/01_drafts/conflation-detection-at-hook-layer-the-rename-strategy-generalized",
@@ -65177,6 +65277,43 @@
       "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths",
       "lessons/02_synthesized/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
     ],
+    "discipline": [
+      "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately",
+      "log/2026-04-09/methodology/2026-04-09-directive-FOLLOW-THE-WORKFLOW"
+    ],
+    "distillation": [
+      "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately",
+      "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings",
+      "patterns/03_validated/architecture/progressive-distillation",
+      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b"
+    ],
+    "lesson-promotion": [
+      "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately"
+    ],
+    "bug-class": [
+      "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately"
+    ],
+    "knowledge-loop-closure": [
+      "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately"
+    ],
+    "fresh-knowledge-window": [
+      "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately"
+    ],
+    "self-enforcement": [
+      "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately",
+      "lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents"
+    ],
+    "2026-05-09": [
+      "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately",
+      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
+      "log/2026-05-09-PRE-COMPACT-STRONG-HANDOFF-decisions-executed-boundary-correction-freeze-memory-rrf-and-23-lessons-reformatted",
+      "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension"
+    ],
+    "draft": [
+      "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately",
+      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
+      "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache"
+    ],
     "hookSpecificOutput": [
       "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it"
     ],
@@ -65198,15 +65335,6 @@
     ],
     "stop-hook": [
       "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it"
-    ],
-    "draft": [
-      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
-      "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache"
-    ],
-    "2026-05-09": [
-      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
-      "log/2026-05-09-PRE-COMPACT-STRONG-HANDOFF-decisions-executed-boundary-correction-freeze-memory-rrf-and-23-lessons-reformatted",
-      "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension"
     ],
     "settings": [
       "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache"
@@ -66256,11 +66384,6 @@
       "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings",
       "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks"
     ],
-    "distillation": [
-      "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings",
-      "patterns/03_validated/architecture/progressive-distillation",
-      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b"
-    ],
     "predictability": [
       "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings"
     ],
@@ -66313,9 +66436,6 @@
     ],
     "agent-behavioral-bugs": [
       "lessons/03_validated/methodology-process/systemic-bugs-tracker-as-dedicated-governance-register-distinct-from-blockers-decisions-findings"
-    ],
-    "self-enforcement": [
-      "lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents"
     ],
     "practice-what-you-preach": [
       "lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents"
@@ -66511,9 +66631,6 @@
       "log/2026-04-10/2026-04-10-directive-quality-evolution-epic"
     ],
     "critical-failure": [
-      "log/2026-04-09/methodology/2026-04-09-directive-FOLLOW-THE-WORKFLOW"
-    ],
-    "discipline": [
       "log/2026-04-09/methodology/2026-04-09-directive-FOLLOW-THE-WORKFLOW"
     ],
     "code-docs": [
@@ -74030,9 +74147,33 @@
       ]
     },
     {
+      "target": "Lesson \u2014 Agent-context-discipline is aspirational",
+      "referenced_by": [
+        "Lesson \u2014 Audit-on-distillation discipline: when promoting a bug-class to the lesson layer, audit the codebase for other instances immediately while knowledge is fresh"
+      ]
+    },
+    {
+      "target": "Lesson \u2014 Audit-on-distillation discipline",
+      "referenced_by": [
+        "Lesson \u2014 Claude Code hook output channel is event-specific; `hookSpecificOutput.additionalContext` is valid for only 6 events (PostCompact / Stop / SessionEnd / others reject it)"
+      ]
+    },
+    {
       "target": "Lesson \u2014 Broken-and-Idle",
       "referenced_by": [
         "Lesson \u2014 Path-versatility doctrine: configs must work across machines via metadata-driven indirection (env vars, relative paths, parameters), not hardcoded absolute paths"
+      ]
+    },
+    {
+      "target": "Lesson \u2014 Claude Code hook output channel is event-specific",
+      "referenced_by": [
+        "Lesson \u2014 Audit-on-distillation discipline: when promoting a bug-class to the lesson layer, audit the codebase for other instances immediately while knowledge is fresh"
+      ]
+    },
+    {
+      "target": "Lesson \u2014 Documentation-as-Substitute-for-Discipline meta-pattern",
+      "referenced_by": [
+        "Lesson \u2014 Audit-on-distillation discipline: when promoting a bug-class to the lesson layer, audit the codebase for other instances immediately while knowledge is fresh"
       ]
     },
     {
@@ -74055,6 +74196,12 @@
       "target": "Lesson \u2014 User-level settings.json hook paths must be `$HOME`-prefixed or absolute",
       "referenced_by": [
         "Lesson \u2014 Claude Code hook output channel is event-specific; `hookSpecificOutput.additionalContext` is valid for only 6 events (PostCompact / Stop / SessionEnd / others reject it)"
+      ]
+    },
+    {
+      "target": "Lesson \u2014 Verbal acknowledgment is not a fix",
+      "referenced_by": [
+        "Lesson \u2014 Audit-on-distillation discipline: when promoting a bug-class to the lesson layer, audit the codebase for other instances immediately while knowledge is fresh"
       ]
     },
     {
@@ -75368,9 +75515,9 @@
       ]
     },
     {
-      "target": "any project authoring custom Claude Code hooks",
+      "target": "any project maintaining a knowledge layer + codebase",
       "referenced_by": [
-        "Lesson \u2014 Claude Code hook output channel is event-specific; `hookSpecificOutput.additionalContext` is valid for only 6 events (PostCompact / Stop / SessionEnd / others reject it)"
+        "Lesson \u2014 Audit-on-distillation discipline: when promoting a bug-class to the lesson layer, audit the codebase for other instances immediately while knowledge is fresh"
       ]
     },
     {
@@ -75603,6 +75750,12 @@
       ]
     },
     {
+      "target": "knowledge-loop closure between raw/ \u2192 lesson layer \u2192 codebase",
+      "referenced_by": [
+        "Lesson \u2014 Audit-on-distillation discipline: when promoting a bug-class to the lesson layer, audit the codebase for other instances immediately while knowledge is fresh"
+      ]
+    },
+    {
       "target": "not rigidly apply one model",
       "referenced_by": [
         "Right-size the methodology model to the actual work, not the structural category"
@@ -75615,9 +75768,9 @@
       ]
     },
     {
-      "target": "operator-stated 10x synthesis directive 2026-05-06 (sacrosanct verbatim) \u2014 *\"lets make sure we properly ingest and digest and synthesize all the knowledge about this an the 10x level of it\"*",
+      "target": "operator-stated 10x synthesis discipline 2026-05-06 (sacrosanct) \u2014 *\"lets make sure we properly ingest and digest and synthesize all the knowledge about this an the 10x level of it\"* \u2014 the 10x discipline demands not just synthesis but also application to codebase",
       "referenced_by": [
-        "Lesson \u2014 Claude Code hook output channel is event-specific; `hookSpecificOutput.additionalContext` is valid for only 6 events (PostCompact / Stop / SessionEnd / others reject it)"
+        "Lesson \u2014 Audit-on-distillation discipline: when promoting a bug-class to the lesson layer, audit the codebase for other instances immediately while knowledge is fresh"
       ]
     },
     {

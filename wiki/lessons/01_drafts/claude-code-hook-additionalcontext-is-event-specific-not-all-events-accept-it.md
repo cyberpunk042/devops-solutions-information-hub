@@ -186,6 +186,7 @@ Universal across any project using Claude Code hooks:
 
 - BUILDS ON: [[claude-code-hooks-reference|Claude Code Hooks Reference]] — the canonical 26-event lifecycle + 4 handler types + output channel reference
 - BUILDS ON: [[2026-05-06-claude-code-hook-stamp-bug-cached-config-vs-settings-local-hot-reload|2026-05-06 Stamp Bug Empirical Note]] — primary empirical source; the schema validity table at lines 122-128 is distilled here as the core artifact
+- DEMONSTRATED BY: [[audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately|Lesson — Audit-on-distillation discipline]] — this lesson's authoring 2026-05-09 was the empirical demonstration of the audit-on-distillation discipline (lesson + audit + fix in one arc, 1 instance found out of 7 hooks scanned)
 - COMPLEMENTS: [[claude-code-settings-local-hot-reload-vs-settings-cache|Lesson — settings.local.json hot-reloads; settings.json caches]] — sister lesson covering the caching half of the same arc; pair when iterating hooks during a live session
 - COMPLEMENTS: [[user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed|Lesson — User-level settings.json hook paths must be `$HOME`-prefixed or absolute]] — sister lesson covering the path-resolution half of the same arc family
 - DEMONSTRATES: [[infrastructure-over-instructions-for-process-enforcement|Principle 1 — Infrastructure Over Instructions]] — schema-validity is structural enforcement; learning the table is necessary infrastructure for hook design
@@ -204,6 +205,7 @@ Universal across any project using Claude Code hooks:
 
 [[Claude Code Hooks Reference]]
 [[2026-05-06 Stamp Bug Empirical Note]]
+[[Lesson — Audit-on-distillation discipline]]
 [[Lesson — settings.local.json hot-reloads; settings.json caches]]
 [[Lesson — User-level settings.json hook paths must be `$HOME`-prefixed or absolute]]
 [[infrastructure-over-instructions-for-process-enforcement|Principle 1 — Infrastructure Over Instructions]]
