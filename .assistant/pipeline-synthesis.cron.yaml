@@ -1,0 +1,150 @@
+# =============================================================================
+# .assistant/pipeline-synthesis.cron.yaml
+# =============================================================================
+# Per-profile CRON jobs for the Pipeline Synthesis assistant.
+# Per operator 2026-05-09 turn 7 (sacrosanct, verbatim):
+#   "list of CRON jobs that can be enabled or disabled and configured by AI
+#   assistant profile to enable other per-profile specific or even other global
+#   CRON jobs which can enable for example noticing certain delta and stuff like
+#   that or morning or evening tasks or start of week and end of week tasks and
+#   so on."
+#
+# Each job: enabled (toggle) · schedule (systemd-timer OnCalendar syntax) ·
+# trigger (what the assistant DOES when fired) · description (what + why).
+#
+# Enable a job:   `tools/assistant cron enable pipeline-synthesis <job-name>`
+# Disable a job:  `tools/assistant cron disable pipeline-synthesis <job-name>`
+# List jobs:      `tools/assistant cron list pipeline-synthesis`
+# Install timers: `tools/assistant cron install pipeline-synthesis`
+#                 (creates systemd .timer units that fire the agent's
+#                  scheduled-task entry point)
+# =============================================================================
+
+profile: pipeline-synthesis
+
+jobs:
+
+  # ─── Hourly: process top-of-backlog ───────────────────────────────────
+  - name: backlog-process-top
+    enabled: false                # operator-controlled; start disabled
+    schedule: "hourly"            # systemd OnCalendar: hourly
+    trigger:
+      type: openclaw-task
+      prompt: |
+        Process the top item of the unsynthesized-raw backlog. Scan raw/articles/,
+        raw/transcripts/, raw/papers/, raw/dumps/ for files that have NO
+        corresponding wiki/sources/<domain>/src-*.md page. Pick the OLDEST
+        unsynthesized raw (FIFO discipline). Read it in FULL (Hard Rule 1).
+        Author source-synthesis at wiki/sources/<domain>/src-<slug>.md per
+        template + schema (≥0.25 ratio, all 9 frontmatter fields, required
+        sections). Run pipeline crossref + pipeline post. Verify 0 errors
+        before claiming completion. Budget cap: process 1 raw per hourly tick
+        (avoid backing up the queue with heavy multi-raw batches).
+
+        SKIP raw/notes/ files (forbidden_inputs — sacrosanct operator directives).
+    description: "Hourly backlog-FIFO — process the oldest unsynthesized raw. Drains the backlog steadily."
+
+  # ─── Morning: daily batch process ─────────────────────────────────────
+  - name: morning-batch-process
+    enabled: false
+    schedule: "*-*-* 07:00:00"    # daily at 07:00 (before morning-scan of Continuous Research)
+    trigger:
+      type: openclaw-task
+      prompt: |
+        Daily morning batch. Process raws ingested by Continuous Research
+        Profile during the past 16 hours (since yesterday evening). Targets
+        the freshest batch first (LIFO for newly-fetched, FIFO for the rest
+        of the backlog). Author syntheses + cross-references. Pipeline post.
+        Write a wiki/log/<date>-pipeline-synthesis-morning.md summary:
+          - raws processed (count + slugs)
+          - syntheses authored (count + ratios)
+          - cross-references added (count)
+          - pipeline post status (must be 0 errors)
+          - promotion candidates surfaced (count + slugs)
+          - deduplication candidates surfaced (count + slugs)
+    description: "Daily morning batch — process overnight-fetched raws + summary log."
+
+  # ─── Evening: backlog status report ───────────────────────────────────
+  - name: evening-backlog-report
+    enabled: false
+    schedule: "*-*-* 21:00:00"    # daily at 21:00 (after Continuous Research's evening-report)
+    trigger:
+      type: openclaw-task
+      prompt: |
+        End-of-day backlog status report. Compute:
+          - Total unsynthesized raws (by domain: articles / transcripts / papers / dumps)
+          - Oldest unsynthesized raw age (days)
+          - Net change vs yesterday (+N new ingested, -N synthesized = -delta)
+          - Anti-signals (backlog GROWING is a failure_signal)
+        Write to wiki/log/<date>-pipeline-synthesis-evening-backlog.md. If the
+        backlog is growing instead of shrinking, surface as anti-signal in
+        operator-decision-queue.md.
+    description: "Daily evening backlog metrics — drain rate + anti-signal surfacing."
+
+  # ─── Weekly Monday: backlog deep-audit ────────────────────────────────
+  - name: start-of-week-backlog-audit
+    enabled: false
+    schedule: "Mon *-*-* 10:00:00"  # Monday at 10:00
+    trigger:
+      type: openclaw-task
+      prompt: |
+        Weekly start-of-week backlog deep-audit:
+          1. Identify STALE raws (unsynthesized >14 days) — may be deprioritizable
+             (operator-decision) or may indicate Profile is failing
+          2. Identify DEDUPLICATION candidates (multiple raws covering same topic)
+             — surface to operator-decision-queue with suggested merge plan
+          3. Identify PROMOTION candidates (raws suggesting higher-layer content:
+             lesson, pattern, decision) — surface to operator-decision-queue
+          4. Identify SCHEMA-failing raws (cannot satisfy ≥0.25 ratio because raw
+             too thin) — surface as quality-floor candidates (drop or augment)
+        Write wiki/log/<date>-pipeline-synthesis-weekly-audit.md.
+    description: "Weekly Monday deep-audit — stale / dedup / promotion / schema-failing surfacing."
+
+  # ─── Weekly Friday: synthesis output digest ───────────────────────────
+  - name: end-of-week-synthesis-digest
+    enabled: false
+    schedule: "Fri *-*-* 17:30:00"  # Friday at 17:30
+    trigger:
+      type: openclaw-task
+      prompt: |
+        End-of-week synthesis output digest:
+          - Total syntheses authored this week (count)
+          - Average line ratio (target ≥0.25; report distribution)
+          - Cross-references added (count + per-page average)
+          - Pipeline post error count (target = 0)
+          - Promotion candidates surfaced + operator accept-rate
+          - Deduplication candidates surfaced + operator accept-rate
+          - Backlog drain rate (raws processed / raws ingested this week)
+        Write to wiki/log/<date>-pipeline-synthesis-weekly-digest.md. Flag any
+        anti-signals from Profile.success_criteria.anti_signals_to_watch.
+    description: "Weekly Friday digest — synthesis output metrics + anti-signal surfacing."
+
+  # ─── Monthly: budget audit ────────────────────────────────────────────
+  - name: monthly-budget-audit
+    enabled: false
+    schedule: "*-*-01 13:00:00"   # 1st of each month at 13:00
+    trigger:
+      type: openclaw-task
+      prompt: |
+        Monthly budget audit. Estimate this Profile's value-output for the month
+        vs Profile.model_routing.cost_ceilings.target_monthly_value_output_usd_equivalent
+        ($30-60 target; $100 hard-stop). Compare actual spend to
+        synthesis-count value-equivalent. If over hard_stop, alert. Report to
+        wiki/log/<date>-pipeline-synthesis-monthly-budget.md.
+    description: "Monthly cost/value audit per Profile.success_criteria.measurable_value_per_month."
+
+# =============================================================================
+# Job-design rules
+# =============================================================================
+# 1. Each job is OFF by default (`enabled: false`) — operator opts in.
+# 2. Schedules use systemd OnCalendar syntax (man systemd.time).
+# 3. Triggers are abstract; the consuming runtime (OpenClaw / Multica / etc.)
+#    translates `type` + `prompt` into its native invocation.
+# 4. Heavy jobs (deep-audit, weekly-digest) should respect the Profile's cost ceiling.
+# 5. Per Profile.action_surface, jobs may NOT auto-promote maturity tiers or
+#    write to operator-territory files. They surface; operator decides.
+# 6. Coordination with Continuous Research Profile: morning-batch-process runs
+#    BEFORE Continuous Research's morning-scan (07:00 vs 08:00), so fresh raws
+#    from yesterday's evening-fetches get synthesized before today's research
+#    surfaces new ones. Evening-backlog-report runs AFTER Continuous Research's
+#    evening-report (21:00 vs 20:00) so the day's full picture is captured.

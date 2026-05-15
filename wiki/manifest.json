@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-15T17:52:16.114308+00:00",
+  "generated": "2026-05-15T18:14:02.330769+00:00",
   "stats": {
     "pages": 867,
     "domains": 14,
@@ -14600,7 +14600,7 @@
       "last_reviewed": "",
       "tags": [
         "concept",
-        "opt-profile",
+        "per-project-profile",
         "continuous-research",
         "focused-assistant-job",
         "24-7-agent-runnable",
@@ -14799,7 +14799,7 @@
       "last_reviewed": "",
       "tags": [
         "concept",
-        "opt-profile",
+        "per-project-profile",
         "pipeline-synthesis",
         "ingestion-synthesis",
         "focused-assistant-job",
@@ -66244,7 +66244,7 @@
     "infrastructure-analysis": [
       "domains/cross-domain/methodology-initiative/methodology-standards-initiative-infrastructure"
     ],
-    "opt-profile": [
+    "per-project-profile": [
       "domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current",
       "domains/cross-domain/profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline"
     ],

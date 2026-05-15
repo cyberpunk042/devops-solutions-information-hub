@@ -28,7 +28,7 @@ sources:
     type: wiki
     file: wiki/domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md
     description: "Mission center for the operator's stack vision — Continuous Research Profile monitors the technology landscape to keep this concept current"
-tags: [concept, opt-profile, continuous-research, focused-assistant-job, 24-7-agent-runnable, openclaw-runnable, model-monitoring, tech-vision-currency, frontier-tracking, tool-agnostic, "2026-05-09", profiles-plural-per-project, cross-domain, synthesized]
+tags: [concept, per-project-profile, continuous-research, focused-assistant-job, 24-7-agent-runnable, openclaw-runnable, model-monitoring, tech-vision-currency, frontier-tracking, tool-agnostic, "2026-05-09", profiles-plural-per-project, cross-domain, synthesized]
 ---
 
 # Profile — this project Continuous Research
@@ -45,7 +45,7 @@ The **Continuous Research** Profile is a focused assistant definition for ONE sp
 
 ```yaml
 profile_version: 1
-profile_name: opt-continuous-research
+profile_name: continuous-research
 project: devops-solutions-information-hub
 project_role: "Knowledge curation — research substrate"
 job: "Continuous Research"

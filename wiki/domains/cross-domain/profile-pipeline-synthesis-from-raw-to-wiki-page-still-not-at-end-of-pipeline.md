@@ -32,7 +32,7 @@ sources:
     type: file
     file: .claude/rules/ingestion.md
     description: "Ingestion routing detail (pipeline fetch, YouTube → transcript API, GitHub → README scrape, etc.) — this Profile downstream of fetch"
-tags: [concept, opt-profile, pipeline-synthesis, ingestion-synthesis, focused-assistant-job, 24-7-agent-runnable, openclaw-runnable, raw-to-wiki, tool-agnostic, "2026-05-09", profiles-plural-per-project, cross-domain, synthesized]
+tags: [concept, per-project-profile, pipeline-synthesis, ingestion-synthesis, focused-assistant-job, 24-7-agent-runnable, openclaw-runnable, raw-to-wiki, tool-agnostic, "2026-05-09", profiles-plural-per-project, cross-domain, synthesized]
 ---
 
 # Profile — this project Pipeline Synthesis
@@ -49,7 +49,7 @@ The **Pipeline Synthesis** Profile is a focused assistant definition for ONE spe
 
 ```yaml
 profile_version: 1
-profile_name: opt-pipeline-synthesis
+profile_name: pipeline-synthesis
 project: devops-solutions-information-hub
 project_role: "Knowledge curation — pipeline synthesis substrate"
 job: "Pipeline Synthesis: raw → wiki page (still not at end of pipeline)"

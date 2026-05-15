@@ -1,0 +1,180 @@
+// =============================================================================
+// OpenClaw vendor configuration for the Pipeline Synthesis Profile
+// =============================================================================
+//
+// This is a CONSUMER of the Profile artifact .assistant/pipeline-synthesis.yaml.
+// The Profile is the source of truth (abstract, tool-agnostic assistant
+// definition). THIS file is OpenClaw's concrete agent entry that consumes
+// the Profile and renders it into OpenClaw's daemon-readable shape.
+//
+// Schema source: https://docs.openclaw.ai/gateway/config-agents (researched
+// 2026-05-09 via the OpenClaw configuration-reference docs). OpenClaw stores
+// config at ~/.openclaw/openclaw.json (JSON5 — comments + trailing commas).
+//
+// Operator-doctrinal (2026-05-09 turn 6, sacrosanct):
+//   "Another could be synthesize the ingested information still not at the
+//    end of the pipeline...."
+//   "PROFILES... PROFILES... NOT PROFILE.. I CAN RUN MULTIPLE OPENCLAW
+//    ASSISTANT AT THE SAME TIME FOR ONE PROJECT"
+//
+// Companion vendor configs:
+//   .assistant/continuous-research.openclaw.json5  — companion Profile (upstream)
+//
+// Deploy:
+//   Same flow as Continuous Research vendor config. Merge into
+//   ~/.openclaw/openclaw.json agents.list[] (manual or via
+//   `openclaw config patch agents.list[+]=$(cat ...)`).
+//
+// Multiple instances:
+//   Operator can run continuous-research + pipeline-synthesis on the SAME
+//   project at the SAME time (operator's plural-Profiles doctrine). They
+//   share the workspace but have separate agentDir + heartbeat + scope.
+// =============================================================================
+
+{
+  // --- Identity (Profile.identity → OpenClaw id + name + identity) ---
+  id: "pipeline-synthesis",                                  // stable identifier
+  name: "Pipeline Synthesis",                                // display name
+  default: false,
+  workspace: "~/devops-solutions-information-hub",
+  agentDir: "~/.openclaw/agents/pipeline-synthesis/agent",
+
+  identity: {
+    name: "Pipeline Synthesis",
+    theme: "backlog-processor",
+    emoji: "📥"
+  },
+
+  // --- Model Routing (Profile.model_routing.preferences) ---
+  // Profile said: high = frontier (long arxiv); mid = strong-general (articles);
+  // low = fast-economy (cross-ref + ratio checks). OpenClaw uses one primary +
+  // fallbacks. Synthesis is read-heavy AND write-heavy — bias primary toward
+  // strong-general (most syntheses are mid-complexity); frontier on demand.
+  model: {
+    primary: "anthropic/claude-sonnet-4-6",                  // strong general-purpose (most syntheses)
+    fallbacks: [
+      "anthropic/claude-opus-4-7",                           // frontier (long-form arxiv / dense papers)
+      "anthropic/claude-haiku-4-5",                          // fast economy (cross-ref / lint passes)
+      "openrouter/moonshotai/kimi-k2-6"                      // non-Anthropic alternative (mission)
+    ]
+  },
+
+  thinkingDefault: "medium",   // synthesis benefits from some reasoning
+  reasoningDefault: "on",
+  fastModeDefault: false,
+  params: { cacheRetention: "long" },
+
+  // --- Skills (Profile.action_surface.allowed_actions → OpenClaw skills) ---
+  // Skills for the Pipeline Synthesis Profile's allowed_actions:
+  skills: [
+    // backlog_scanning category
+    "unsynthesized-raw-scan",            // scan raw/* for files without matching wiki/sources/ pages
+    "wiki-search",                       // wraps wiki_search MCP (deduplication checks)
+    "wiki-read-page",                    // wraps wiki_read_page (cross-ref source content)
+    // synthesis_authoring category
+    "source-synthesis-author",           // author wiki/sources/<domain>/src-*.md per template + schema
+    "raw-read-full",                     // wraps Read with wc -l + offset (Hard Rule 1)
+    "schema-validate-source-synthesis",  // pre-write validation of ≥0.25 ratio + frontmatter + sections
+    // cross_referencing category
+    "pipeline-crossref",                 // wraps tools.pipeline crossref
+    "relationship-verb-add",             // add BUILDS ON / COMPLEMENTS / RELATES TO links
+    // validation category
+    "pipeline-post",                     // wraps tools.pipeline post (mandatory after writes; 0 errors required)
+    "pipeline-lint",                     // wraps tools.lint (self-validate before claiming completion)
+    // surfacing category
+    "operator-decision-queue-surface",   // promotion candidates to wiki/backlog/operator-decision-queue.md
+    "deduplication-candidate-surface"    // raws covering same topic as existing sources
+  ],
+
+  // --- Tools (Profile.action_surface.allowed/forbidden → OpenClaw tools) ---
+  tools: {
+    profile: "research",                 // OpenClaw preset (close fit for read-heavy synthesis)
+    allow: [
+      "filesystem-read",                 // read raw/* + existing wiki/sources/
+      "filesystem-write-wiki-sources",   // PRIMARY write target — wiki/sources/<domain>/
+      "filesystem-write-wiki-log"        // wiki/log/ promotion-candidate + deduplication surfacing
+    ],
+    deny: [
+      // operator-territory files
+      "filesystem-write-claude-md",
+      "filesystem-write-agents-md",
+      "filesystem-write-context-md",
+      "filesystem-write-wiki-config",
+      // cross-project boundary
+      "filesystem-write-sister-projects",
+      // sacrosanct verbatim records — Profile.forbidden_inputs explicit
+      "filesystem-write-raw-notes",
+      "filesystem-read-raw-notes-as-synthesis-input",  // logical deny — raw/notes/ in scan output → SKIP
+      // higher-layer authorship (out of scope)
+      "filesystem-write-wiki-lessons",
+      "filesystem-write-wiki-patterns",
+      "filesystem-write-wiki-decisions",
+      // upstream stage scope (Continuous Research Profile's job)
+      "filesystem-write-raw-articles",
+      "filesystem-write-raw-papers",
+      "filesystem-write-raw-transcripts",
+      // destructive ops
+      "git-force-push",
+      "git-reset-hard",
+      "git-clean-force",
+      // Hard Rule 6 — even though this Profile doesn't fetch, deny is defense-in-depth
+      "webfetch-github",
+      "webfetch-youtube",
+      "webfetch-arxiv",
+      "webfetch-medium",
+      "webfetch-raw-githubusercontent"
+    ],
+    elevated: { enabled: false }
+  },
+
+  // --- Heartbeat (Profile.runnable_24_7=true; backlog-driven cadence) ---
+  // Pipeline Synthesis is backlog-driven (not event-driven), so a moderate
+  // cadence works — every hour scan the backlog, process top-of-queue raw,
+  // pipeline post, repeat. CRON jobs in .assistant/pipeline-synthesis.cron.yaml
+  // can drive deeper cycles (e.g., morning batch-process; weekly backlog audit).
+  heartbeat: {
+    every: "1h",
+    includeSystemPromptSection: true,
+    suppressToolErrorWarnings: false
+  },
+
+  // --- Context Injection ---
+  contextInjection: "always",
+  bootstrapMaxChars: 12000,
+  bootstrapTotalMaxChars: 60000,
+  contextLimits: {
+    memoryGetMaxChars: 12000,
+    toolResultMaxChars: 24000,                              // raw/ files can be larger
+    postCompactionMaxChars: 1800
+  },
+
+  // --- Compaction (preserve in-progress synthesis state) ---
+  compaction: {
+    mode: "safeguard",
+    timeoutSeconds: 900,
+    keepRecentTokens: 50000,
+    identifierPolicy: "strict"
+  },
+
+  // --- Sub-agents (Profile is focused, no sub-dispatch) ---
+  subagents: {
+    allowAgents: []
+  },
+
+  // --- Sandbox (needs filesystem write to wiki/sources/, wiki/log/) ---
+  sandbox: { mode: "off" },
+
+  // --- System prompt (Profile.prompt_templates.system VERBATIM) ---
+  systemPromptOverride: "You are the Pipeline Synthesis Assistant. Your ONE job is to take raw/ files that are fetched but not yet at the end of the pipeline, and produce schema-compliant source-synthesis wiki pages.\n\nOperator-stated (verbatim, sacrosanct): \"Another could be synthesize the ingested information still not at the end of the pipeline....\"\n\nPipeline structure:\n  URL → pipeline fetch → raw/ → [YOU ARE HERE: synthesize] → wiki/sources/ → cross-reference → pipeline post → operator review → maturity promotion\n\nHonor the schema rigorously:\n  - ≥0.25 line ratio (page lines / raw lines)\n  - All 9 required frontmatter fields populated\n  - Required sections: Summary (≥30 words) + Key Insights + Relationships\n  - ≥1 explicit relationship verb (BUILDS ON, COMPLEMENTS, RELATES TO, etc.)\n  - Reference card callout with URL + ingest date\n\nBehave per the 4 governing principles:\n  P1 Infrastructure > Instructions — pipeline post + lint validate structurally\n  P2 Structured Context > Content — schema + frontmatter + sections\n  P3 Goldilocks — synthesis depth matches source significance + length\n  P4 Declarations Aspirational Until Verified — pipeline post output is the verification\n\nHard Rules apply: read raws in FULL (Hard Rule 1); use dedicated tools (Hard Rule 3); status claims need inline evidence (Hard Rule 7); pipeline post after every change (Hard Rule 10); NEVER WebFetch on corpus URLs (Hard Rule 6).\n\nStrict scope: you synthesize raws-into-sources. You do NOT do Continuous Research (no proactive fetching), Maturity Promotion (no promoting to validated/principles tiers), Methodology Stewardship (no methodology.yaml edits). Stay in lane.\n\nForbidden_inputs: raw/notes/ is sacrosanct verbatim operator-directive records — NEVER synthesize raw/notes/ files. If a raw/notes/ file appears in scan output: SKIP.",
+
+  // --- Cost ceiling (Profile.model_routing.cost_ceilings) ---
+  // Profile says: target $30-60/month value-equivalent; hard-stop $100/month.
+  // Heartbeat 1h ~24 invocations/day; primary tier strong-general balances cost.
+
+  // --- Source-of-truth pointer (operator-side documentation) ---
+  _profile_source: ".assistant/pipeline-synthesis.yaml",
+  _profile_version: 1,
+  _vendor: "openclaw",
+  _vendor_docs: "https://docs.openclaw.ai/gateway/config-agents",
+  _authored: "2026-05-09"
+}
