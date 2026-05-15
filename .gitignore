@@ -58,3 +58,5 @@ scheduled_tasks.lock
 # .assistant/_state/ — Per-Project Assistant runtime state (not the Profile YAMLs
 #                     which ARE tracked; just the runtime state subdir).
 .assistant/_state/
+
+.openclaw/

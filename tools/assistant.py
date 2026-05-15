@@ -94,22 +94,28 @@ OPENCLAW_CONFIG = Path.home() / ".openclaw" / "openclaw.json"
 VENDORS = ("openclaw", "multica", "claude-code-cli-p", "hermes", "opencode", "claude-os")
 
 # Workspace modes — declared in Profile YAML as `workspace_mode: <mode>`.
-# Determines where the assistant operates relative to the project tree.
+#
+# CRITICAL safety note (2026-05-15): the OpenClaw `workspace` field is the dir where
+# the runtime scaffolds files (IDENTITY.md/HEARTBEAT.md/SOUL.md/USER.md) AND is the
+# dir `openclaw agents delete` tries to delete. Workspace MUST NEVER be the project
+# root. All three modes use an isolated workspace dir under ~/.openclaw/agents/<name>/.
+# Difference between modes is WHERE the agent's TOOLS target their work — NOT where
+# the workspace dir lives.
 WORKSPACE_MODES = {
     "shared": {
-        "description": "Assistant works directly in the project folder (same files, same git tree, same branch as operator).",
+        "description": "Workspace dir is isolated under ~/.openclaw/agents/<name>/workspace/ — but the agent's tools target the operator's project (cwd=PROJECT_ROOT). Writes land in the project, visible to operator immediately.",
         "writes_visible_immediately": True,
         "git_isolation": False,
         "best_for": "Live observable work — synthesis, research surfacing, ingestion — where operator wants to see + correct in real time.",
     },
     "worktree": {
-        "description": "Assistant works in a `git worktree add` directory under ~/.openclaw/agents/<profile>/worktree — shared .git, separate working tree, separate branch.",
+        "description": "Workspace dir is a `git worktree add` checkout under ~/.openclaw/agents/<name>/worktree/ on its own branch `assistant/<name>`. Tools target the worktree; operator merges the branch back when ready.",
         "writes_visible_immediately": False,
         "git_isolation": True,
         "best_for": "Longer autonomous runs without interleaving operator's work; merge back when ready.",
     },
     "own-workspace": {
-        "description": "Assistant works in a fully separate clone at ~/.openclaw/agents/<profile>/workspace. Sync via git push/pull.",
+        "description": "Workspace dir is a separate clone at ~/.openclaw/agents/<name>/own-workspace/. Sync via git push/pull.",
         "writes_visible_immediately": False,
         "git_isolation": True,
         "best_for": "Remote / sandboxed / untrusted contexts where full isolation is required.",
@@ -160,33 +166,47 @@ def translate_schedule(schedule: str) -> tuple[str, str] | None:
 
 
 def compute_workspace_path(name: str, mode: str) -> Path:
-    """Return the absolute workspace path for the given Profile + mode."""
+    """Return the absolute OpenClaw workspace path (NEVER the project root — see safety note)."""
+    base = Path.home() / ".openclaw" / "agents" / name
     if mode == "shared":
-        return PROJECT_ROOT
+        return base / "workspace"
     elif mode == "worktree":
-        return Path.home() / ".openclaw" / "agents" / name / "worktree"
+        return base / "worktree"
     elif mode == "own-workspace":
-        return Path.home() / ".openclaw" / "agents" / name / "workspace"
+        return base / "own-workspace"
     else:
         raise ValueError(f"Unknown workspace_mode: {mode}. Valid: {sorted(WORKSPACE_MODES.keys())}")
+
+
+def compute_operating_root(mode: str) -> Path:
+    """Return the dir the agent's tools target (cwd for shell commands, MCP cwd, etc.).
+
+    `shared` mode → PROJECT_ROOT (writes land in the project, visible to operator).
+    `worktree` / `own-workspace` → the workspace dir itself (writes stay isolated).
+    """
+    if mode == "shared":
+        return PROJECT_ROOT
+    # Worktree / own-workspace: operating root is the workspace dir itself
+    return None  # caller substitutes compute_workspace_path(name, mode)
 
 
 def ensure_workspace(name: str, mode: str, dry_run: bool = False) -> Path:
     """Materialize the workspace per mode. Idempotent. Returns the absolute path."""
     path = compute_workspace_path(name, mode)
-    if mode == "shared":
-        return path  # project folder already exists
     if path.exists():
         ok(f"workspace already exists at {path}")
         return path
     if dry_run:
         info(f"DRY RUN — would create workspace at {path} ({mode} mode)")
         return path
-    if mode == "worktree":
+    if mode == "shared":
+        # Isolated empty workspace dir — OpenClaw will scaffold its own behavioral files here
+        path.mkdir(parents=True, exist_ok=True)
+        ok(f"isolated workspace dir created at {path}")
+    elif mode == "worktree":
         path.parent.mkdir(parents=True, exist_ok=True)
         branch = f"assistant/{name}"
         info(f"Creating git worktree at {path} on branch {branch}")
-        # Check if branch exists; if not, create from HEAD
         proc = run(["git", "-C", str(PROJECT_ROOT), "rev-parse", "--verify", branch], check=False)
         if proc.returncode != 0:
             info(f"Branch {branch} does not exist; creating from HEAD")
