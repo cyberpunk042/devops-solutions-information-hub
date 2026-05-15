@@ -317,6 +317,283 @@ def get_openclaw_admin_token() -> str | None:
     return cfg.get("gateway", {}).get("auth", {}).get("token")
 
 
+def materialize_workspace_files(profile: dict, workspace_path: Path) -> None:
+    """Write the 7 OpenClaw workspace markdown files from the Profile YAML.
+
+    Replaces OpenClaw's generic scaffolded templates with this Profile's actual
+    identity / purpose / behavioral discipline / action surface / knowledge scope /
+    prompt template. This is what makes the registered agent BEHAVE as the Profile
+    defines — without these, the agent just has generic scaffolding and no idea
+    what it is.
+    """
+    name = profile["profile_name"]
+    job = profile.get("job", "")
+    focus = profile.get("focus", "")
+    project = profile.get("project", "")
+    identity = profile.get("identity", {})
+    knowledge_scope = profile.get("knowledge_scope", {})
+    action_surface = profile.get("action_surface", {})
+    model_routing = profile.get("model_routing", {})
+    prompt_templates = profile.get("prompt_templates", {})
+    success_criteria = profile.get("success_criteria", {})
+    workspace_mode = profile.get("workspace_mode", "shared")
+    project_root_str = str(PROJECT_ROOT)
+
+    # ─── IDENTITY.md ──────────────────────────────────────────────────────
+    identity_md = f"""# IDENTITY — {name}
+
+**Name:** {name}
+**Job:** {job}
+**Focus:** {focus}
+**Project:** {project}
+**Profile:** `{ASSISTANT_DIR.name}/{name}.yaml`
+**Workspace mode:** {workspace_mode} (workspace dir: `{workspace_path}`; agent operates on `{project_root_str}` via tools)
+
+## Tagline
+{identity.get('tagline', '').strip()}
+
+## Purpose
+{identity.get('purpose', '').strip()}
+
+## Relationship to the ecosystem
+{identity.get('relationship_to_ecosystem', '').strip()}
+
+## What this Profile is NOT
+"""
+    for nope in identity.get("what_this_profile_is_NOT", []):
+        identity_md += f"- {nope}\n"
+
+    # ─── BOOTSTRAP.md ─────────────────────────────────────────────────────
+    bootstrap_md = f"""# BOOTSTRAP — {name}
+
+You are **{name}** — the {job} assistant for {project}. You are NOT a chatbot.
+You are an autonomous AI assistant with a specific job, a specific scope, and
+specific success criteria. You wake on heartbeat and on scheduled cron jobs.
+
+## First wake — read these in order
+
+1. `IDENTITY.md` (here in workspace) — who you are
+2. `AGENTS.md` (here in workspace) — your system prompt + behavioral discipline
+3. `SOUL.md` (here in workspace) — principles you operate under
+4. `TOOLS.md` (here in workspace) — what you can and cannot do
+5. `HEARTBEAT.md` (here in workspace) — your autonomous schedule + recurring tasks
+
+## Your operating environment (workspace_mode = {workspace_mode})
+
+- Your **workspace dir** is `{workspace_path}` — OpenClaw's own state lives here
+- Your **work target** is `{project_root_str}` — this is the project you serve
+- Tools always operate with `cwd={project_root_str}` (writes land in the project)
+- The project's `AGENTS.md`, `CLAUDE.md`, `CONTEXT.md`, `.claude/rules/` are your
+  PRIMARY behavioral instructions; this workspace's files are your AGENT-LEVEL
+  layer on top
+
+## Project brain files (load these on first wake)
+"""
+    for bf in knowledge_scope.get("brain_files", []):
+        bootstrap_md += f"- `{project_root_str}/{bf}`\n"
+    bootstrap_md += "\n## Vision baselines you track\n"
+    for vb in knowledge_scope.get("vision_baselines_to_track", []):
+        bootstrap_md += f"- `{project_root_str}/{vb}`\n"
+
+    # ─── AGENTS.md ────────────────────────────────────────────────────────
+    system_prompt = prompt_templates.get("system", "").strip()
+    agents_md = f"""# AGENTS — {name}
+
+## System prompt (this is how you behave)
+
+{system_prompt}
+
+## Operating recipes
+
+"""
+    for recipe_name in ("on_significant_change_detected", "on_periodic_scan",
+                        "on_unsynthesized_raw_detected", "on_synthesis_validation_failure",
+                        "on_promotion_candidate_detected", "on_raw_notes_in_scan",
+                        "on_uncertainty", "on_error", "on_error_or_fetch_failure"):
+        recipe = prompt_templates.get(recipe_name)
+        if recipe:
+            agents_md += f"### {recipe_name}\n\n{recipe.strip()}\n\n"
+
+    agents_md += f"""## Hard project rules (from `{project_root_str}/CLAUDE.md`)
+
+These ALWAYS apply, even when you're firing autonomously from a cron job:
+
+1. Read command output IN FULL (no truncation pipes without REASON)
+2. When told to execute, execute (don't probe `--help`)
+3. Use dedicated tools (not raw shell where a tool exists)
+4. Operator words are SACROSANCT — quote verbatim
+5. Use `.venv/bin/python` for `tools.*` invocations
+6. URL ingestion → `pipeline fetch` / `wiki_fetch` MCP, NEVER WebFetch on corpus URLs
+7. Status claims must inline verification command output
+8. Behave FROM the project, not OVER it
+9. Don't fabricate — investigate via project tools first
+10. `pipeline post` after every wiki change (0 errors required)
+"""
+
+    # ─── SOUL.md ──────────────────────────────────────────────────────────
+    principles = model_routing.get("principles", [])
+    soul_md = f"""# SOUL — {name}
+
+You're not a chatbot. You're {name} — autonomous, focused, on a job.
+
+## Tagline
+{identity.get('tagline', '').strip()}
+
+## Core operating principles
+
+The 4 governing principles of this project:
+
+- **P1 Infrastructure > Instructions** — tool-call rules MUST be infrastructure (hooks/MCP-blocking), not prose
+- **P2 Structured Context > Content** — tables / MUST-lists / YAML > prose
+- **P3 Goldilocks** — process scales with identity × phase × scale × trust tier
+- **P4 Declarations Aspirational Until Verified** — every declared element needs a verification gate
+
+## Your specific principles
+"""
+    for p in principles:
+        soul_md += f"- {p}\n"
+    soul_md += "\n## Behavioral discipline\n\n"
+    soul_md += "- **You are autonomous.** You wake on cron + heartbeat. You don't wait to be asked.\n"
+    soul_md += "- **You stay in lane.** Your scope is `" + focus + "`. Drift = anti-signal.\n"
+    soul_md += "- **You surface, you don't decide.** Operator approves promotions, decisions, cross-project actions.\n"
+    soul_md += "- **You log verbatim.** Operator-stated directives → `raw/notes/YYYY-MM-DD-*.md` BEFORE acting.\n"
+    soul_md += "- **You verify before claiming.** Status claims need inline tool-output evidence.\n"
+    soul_md += "- **You don't pollute.** Project root is the operator's. Use `wiki/log/` for your reports.\n"
+
+    soul_md += "\n## Anti-signals (watch for these in yourself)\n"
+    for sig in success_criteria.get("anti_signals_to_watch", []):
+        soul_md += f"- {sig}\n"
+
+    # ─── TOOLS.md ─────────────────────────────────────────────────────────
+    tools_md = f"""# TOOLS — {name}
+
+## Allowed actions (your action surface)
+
+"""
+    allowed = action_surface.get("allowed_actions", {})
+    if isinstance(allowed, dict):
+        for category, actions in allowed.items():
+            tools_md += f"### {category.replace('_', ' ').title()}\n\n"
+            if isinstance(actions, list):
+                for a in actions:
+                    tools_md += f"- {a}\n"
+            tools_md += "\n"
+    elif isinstance(allowed, list):
+        for a in allowed:
+            tools_md += f"- {a}\n"
+        tools_md += "\n"
+
+    tools_md += "## Forbidden actions (NEVER do these)\n\n"
+    for f in action_surface.get("forbidden_actions", []):
+        tools_md += f"- {f}\n"
+
+    tools_md += "\n## Escalation triggers (surface, don't decide)\n\n"
+    for t in action_surface.get("escalation_triggers", []):
+        tools_md += f"- {t}\n"
+
+    tools_md += f"""
+## Project tools you should use
+
+- **MCP server `wiki-llm`** — 28 wiki tools registered at the gateway level
+  (`wiki_search` · `wiki_read_page` · `wiki_fetch` · `wiki_post` · `wiki_crossref` · `wiki_gaps`
+  · `wiki_distill` · `wiki_log` · `wiki_status` · `wiki_backlog` · gateway/orient/health/compliance/...)
+- **CLI**: `.venv/bin/python -m tools.pipeline <subcommand>` (run from `{project_root_str}`)
+  - `pipeline fetch <urls>` for URL ingestion (NEVER use WebFetch)
+  - `pipeline post` after every wiki change (0 errors required)
+  - `pipeline crossref` to find connections
+  - `pipeline gaps` to discover what's missing
+- **CLI**: `.venv/bin/python -m tools.gateway <subcommand>`
+  - `gateway orient` for project orientation
+  - `gateway query` for methodology lookup
+  - `gateway health` / `gateway compliance` for diagnostics
+
+## Forbidden scope (cross-cutting)
+"""
+    for fs in knowledge_scope.get("forbidden_scope", []):
+        tools_md += f"- {fs}\n"
+
+    # ─── HEARTBEAT.md ─────────────────────────────────────────────────────
+    heartbeat_md = f"""# HEARTBEAT — {name}
+
+You wake periodically on heartbeat AND on scheduled cron jobs.
+
+## Heartbeat task (every wake)
+
+1. Read `IDENTITY.md` + `SOUL.md` + `TOOLS.md` if not in context
+2. Check `{project_root_str}/operator-decision-queue.md` for new directives addressed to you
+3. Check `{project_root_str}/raw/notes/` for recent operator directives (sacrosanct verbatim)
+4. Run `wiki_status` to know the current state of the project
+5. Continue any in-progress work from your last session (check `wiki/log/<date>-{name}-*.md`)
+6. If nothing in flight, surface the highest-priority next item per your job scope
+7. Log your wake-up + actions to `wiki/log/<date>-{name}-heartbeat.md`
+
+## Scheduled cron jobs
+
+These fire automatically at their scheduled times. See `.assistant/{name}.cron.yaml`
+for the full definitions. Each cron job will arrive as a fresh task message — handle
+it per the corresponding "Operating recipe" in `AGENTS.md`.
+
+## Self-bounding
+
+Each heartbeat tick is BUDGETED. Do not let a single wake-up balloon into a long
+session. If you find a large piece of work, scope it down to the smallest useful
+step you can complete in this tick, log the rest as "next-step" in your log entry,
+and end the session.
+
+## Pipeline post discipline
+
+If you wrote to `wiki/`, you MUST run `pipeline post` and verify 0 errors before
+ending the session. Hard Rule 10.
+"""
+
+    # ─── USER.md ──────────────────────────────────────────────────────────
+    owner = profile.get("owner", "operator")
+    user_md = f"""# USER — Your Operator
+
+## Who you serve
+
+The **operator** ({owner}) is a senior engineer working across a 5-project
+ecosystem: this research wiki (the second brain) · OpenArms · OpenFleet · AICP
+· devops-control-plane. They are the product owner of all five.
+
+## How to address them
+
+- Use direct, terse language. They prefer signal over ceremony.
+- Quote them VERBATIM when their words shape a rule or decision. Their words are sacrosanct.
+- Don't add backslapping ("great question!", "happy to help!"). Just do the work.
+- Don't ask for permission for routine work that fits your scope. Surface when scope is unclear.
+
+## What they care about (from operator-directive history)
+
+- The wiki IS the second brain. Behave FROM it, not OVER it.
+- Markdown-as-IaC is the brain's mechanism. Layered config files.
+- Plural Profiles per project — focused jobs, not generalists.
+- AI assistants are autonomous, not on-demand chatbots.
+- "Preach by example" — the wiki must apply its own teachings to itself.
+- Don't pollute. Don't drift. Stay in lane.
+
+## When to escalate vs decide
+
+- Routine work within your defined scope → just do it
+- Cross-project, schema, root-doc, or operator-territory changes → surface to operator-decision-queue.md
+- Operator-stated directive → log to `raw/notes/YYYY-MM-DD-*.md` verbatim BEFORE acting
+"""
+
+    # ─── Write all files ──────────────────────────────────────────────────
+    files = {
+        "IDENTITY.md": identity_md,
+        "BOOTSTRAP.md": bootstrap_md,
+        "AGENTS.md": agents_md,
+        "SOUL.md": soul_md,
+        "TOOLS.md": tools_md,
+        "HEARTBEAT.md": heartbeat_md,
+        "USER.md": user_md,
+    }
+    for fname, content in files.items():
+        (workspace_path / fname).write_text(content)
+        ok(f"wrote {fname} ({len(content)} chars)")
+
+
 def ensure_cli_admin_scope() -> bool:
     """Ensure this CLI device has operator.write scope so cron writes succeed.
 
@@ -557,16 +834,16 @@ def cmd_install(args: argparse.Namespace) -> int:
                     err(f"openclaw agents add failed: {proc.stderr.strip()}")
                     info(f"stdout: {proc.stdout.strip()}")
                     return 1
-        # Note for operator: per-agent behavioral overrides (system prompt, tools.allow/deny,
-        # heartbeat, etc.) that were in the .openclaw.json5 vendor config don't apply in
-        # the modern OpenClaw schema. Behavior comes from workspace markdown files
-        # (AGENTS.md, IDENTITY.md, HEARTBEAT.md, TOOLS.md, BOOTSTRAP.md, SOUL.md, USER.md)
-        # and from MCP server registration (step [3b]).
-        info(f"workspace markdown files at {workspace_path} drive agent behavior")
-        info(f"  AGENTS.md present: {(workspace_path / 'AGENTS.md').exists()}")
-        info(f"  IDENTITY.md present: {(workspace_path / 'IDENTITY.md').exists()}")
-        info(f"  HEARTBEAT.md present: {(workspace_path / 'HEARTBEAT.md').exists()}")
-        info(f"  TOOLS.md present: {(workspace_path / 'TOOLS.md').exists()}")
+        # [3a] Materialize workspace markdown files from the Profile YAML —
+        # overwrites OpenClaw's generic scaffolded templates with this Profile's
+        # actual identity / purpose / system prompt / action surface / etc.
+        # Without this, the agent boots with generic placeholder content and has
+        # no idea it IS continuous-research with our specific job/scope/principles.
+        stage("[3a/6] Materialize workspace markdown from Profile YAML")
+        if args.dry_run:
+            info("DRY RUN — not writing workspace files")
+        else:
+            materialize_workspace_files(profile, workspace_path)
 
     # 3b. Wire project's MCP server (this project's wiki tools — 28 tools)
     if not args.no_mcp and have("openclaw"):
@@ -612,9 +889,33 @@ def cmd_install(args: argparse.Namespace) -> int:
         cron = load_yaml(cron_path)
         jobs = cron.get("jobs", [])
         ok(f"Found {len(jobs)} cron job(s) defined for this profile")
-        # List existing gateway jobs once so re-runs skip already-registered ones
-        proc = openclaw_run(["openclaw", "cron", "list"])
-        existing_jobs_output = proc.stdout if proc.returncode == 0 else ""
+        # Get all existing jobs as a list of (name, id) tuples — preserves duplicates
+        proc = openclaw_run(["openclaw", "cron", "list", "--json"])
+        existing_pairs: list[tuple[str, str]] = []
+        try:
+            data = json.loads(proc.stdout) if proc.returncode == 0 and proc.stdout.strip() else {}
+            for entry in data.get("jobs", []):
+                jname = entry.get("name") or entry.get("jobName")
+                jid = entry.get("id") or entry.get("jobId")
+                if jname and jid:
+                    existing_pairs.append((jname, jid))
+        except Exception:
+            pass
+        # Collect the set of job names this profile owns
+        owned_names = {f"{name}-{j['name']}" for j in jobs}
+        # Always delete ALL existing jobs for this profile's names — duplicates AND
+        # singletons. This guarantees no duplicates and ensures fresh re-registration
+        # with the latest flags (--best-effort-deliver, etc.). Idempotency comes from
+        # the install always converging to "exactly the jobs defined in yaml".
+        to_remove = [(jn, jid) for (jn, jid) in existing_pairs if jn in owned_names]
+        if to_remove:
+            info(f"  cleaning {len(to_remove)} existing job(s) for {name} (incl. duplicates) before fresh registration")
+            for jn, jid in to_remove:
+                proc_rm = openclaw_run(["openclaw", "cron", "rm", jid])
+                if proc_rm.returncode == 0:
+                    info(f"  - removed: {jn} (id={jid})")
+                else:
+                    warn(f"  - rm failed for {jn} (id={jid}): {proc_rm.stderr.strip()[:120]}")
         for j in jobs:
             job_name = f"{name}-{j['name']}"  # namespace by profile (continuous-research-morning-scan, etc.)
             schedule = j.get("schedule", "")
@@ -622,16 +923,11 @@ def cmd_install(args: argparse.Namespace) -> int:
             trigger = j.get("trigger", {})
             prompt = trigger.get("prompt", "").strip()
             enabled_in_yaml = j.get("enabled", False)
-            # Translate schedule → openclaw cron flag pair
             translated = translate_schedule(schedule)
             if not translated:
                 warn(f"  - {j['name']}: unrecognized schedule '{schedule}' — skipping (translate manually with `openclaw cron add ...`)")
                 continue
             flag, value = translated
-            # Idempotent: skip if already registered
-            if job_name in existing_jobs_output:
-                info(f"  - {job_name}: already registered in gateway — skipping (idempotent)")
-                continue
             cmd = [
                 "openclaw", "cron", "add",
                 "--name", job_name,
@@ -639,8 +935,9 @@ def cmd_install(args: argparse.Namespace) -> int:
                 "--agent", name,
                 "--message", prompt or f"Run {j['name']} task",
                 "--description", description,
-                "--session", "isolated",  # cron-driven runs use isolated sessions, not main
-                "--expect-final",         # wait for agent response
+                "--session", "isolated",     # cron-driven runs use isolated sessions, not main
+                "--expect-final",            # wait for agent response
+                "--best-effort-deliver",     # do not fail the job if delivery channel is unavailable
             ]
             if not enabled_in_yaml:
                 cmd.append("--disabled")
@@ -696,11 +993,41 @@ def cmd_install(args: argparse.Namespace) -> int:
     else:
         info(f"No surfaces config at {surfaces_path} — skipping surface wiring")
 
+    # 7. Wake the agent now — fire one cron job immediately so the assistant
+    #    is observably alive (creates a session) right after install. Otherwise
+    #    the operator would wait until the first scheduled tick before any work
+    #    happens, which doesn't match "live + ready to interact" intent.
+    if not args.no_wake and have("openclaw") and not args.dry_run:
+        stage("[7/7] Wake the agent — fire first task now")
+        proc = openclaw_run(["openclaw", "cron", "list", "--json"])
+        try:
+            data = json.loads(proc.stdout) if proc.returncode == 0 and proc.stdout.strip() else {}
+            # Pick the highest-cadence job (the one most likely to fire frequently)
+            agent_jobs = [j for j in data.get("jobs", []) if j.get("agentId") == name]
+            # Prefer the "every" schedules (heartbeat-like) over cron schedules
+            wake_job = next((j for j in agent_jobs if "every" in str(j.get("schedule", "")).lower()), None) or \
+                       (agent_jobs[0] if agent_jobs else None)
+            if wake_job:
+                job_id = wake_job.get("id")
+                job_name = wake_job.get("name", "")
+                proc_run = openclaw_run(["openclaw", "cron", "run", job_id])
+                if proc_run.returncode == 0:
+                    ok(f"agent woken: fired '{job_name}' (id={job_id})")
+                    info(f"  → session created; view in dashboard at http://127.0.0.1:18789/")
+                else:
+                    warn(f"  could not wake: {proc_run.stderr.strip()[:200]}")
+            else:
+                info("  no cron jobs registered for this agent; nothing to fire")
+        except Exception as e:
+            warn(f"  wake-on-install failed: {e}")
+
     print()
     stage(f"Install complete for {name}")
-    info(f"Next: {BOLD}{sys.argv[0]} up {name}{RESET}  (start the assistant)")
-    info(f"Then: interact via your usual OpenClaw channels (Slack/Discord/Telegram/CLI)")
-    info(f"Reboot-persist: systemctl --user enable assistant-{name}")
+    info(f"{BOLD}Dashboard:{RESET} http://127.0.0.1:18789/  (select agent '{name}' to chat + view sessions)")
+    info(f"{BOLD}Terminal:{RESET}  openclaw chat --agent {name}")
+    info(f"{BOLD}Status:{RESET}    bin/assistant status {name}")
+    info(f"{BOLD}Logs:{RESET}      openclaw logs --follow  (gateway log; agent activity visible)")
+    info(f"Reboot-persist: systemctl --user enable openclaw-gateway  (gateway daemon stays running)")
     return 0
 
 
@@ -819,18 +1146,32 @@ def cmd_status(args: argparse.Namespace) -> int:
             ok(f"OpenClaw vendor config: present ({vp.name})")
         else:
             warn("OpenClaw vendor config: absent")
-        # 3. Agent registered in OpenClaw gateway?
-        if gateway_agents and f"- {name} " in gateway_agents:
+        # 3. Agent registered in OpenClaw gateway? (exact-line match — agent names are
+        # printed as `- <name>` or `- <name> (default)` on their own line)
+        agent_registered = bool(gateway_agents and any(
+            line.strip() in (f"- {name}", f"- {name} (default)")
+            for line in gateway_agents.splitlines()
+        ))
+        if agent_registered:
             ok("Agent registered in OpenClaw gateway: YES")
         else:
             warn("Agent registered in OpenClaw gateway: NO  (run `bin/assistant install`)")
-        # 4. Cron jobs registered in gateway?
+        # 4. Cron jobs registered in gateway? (parse the JSON output not the truncated table)
         cron_path = ASSISTANT_DIR / f"{name}.cron.yaml"
         if cron_path.exists():
             cron = load_yaml(cron_path)
             jobs = cron.get("jobs", [])
             yaml_count = len(jobs)
-            gw_count = sum(1 for j in jobs if f"{name}-{j['name']}" in gateway_cron)
+            # Pull the live gateway cron list via --json for exact name matching
+            gw_count = 0
+            if have("openclaw"):
+                proc = openclaw_run(["openclaw", "cron", "list", "--json"])
+                try:
+                    data = json.loads(proc.stdout) if proc.returncode == 0 and proc.stdout.strip() else {}
+                    gateway_names = {j.get("name") for j in data.get("jobs", [])}
+                    gw_count = sum(1 for j in jobs if f"{name}-{j['name']}" in gateway_names)
+                except Exception:
+                    pass
             ok(f"Cron jobs: {yaml_count} defined in yaml, {gw_count} registered in gateway")
         else:
             info("Cron jobs: none defined")
@@ -1089,8 +1430,12 @@ def cmd_cron_install_global(args: argparse.Namespace) -> int:
             cmd_str = trigger.get("command", "")
             cwd = trigger.get("cwd", "{{PROJECT_ROOT}}").replace("{{PROJECT_ROOT}}", str(PROJECT_ROOT))
             # Substitutions
-            command = cmd_str.replace("{{PROJECT_ROOT}}", str(PROJECT_ROOT)).replace(
+            inner_command = cmd_str.replace("{{PROJECT_ROOT}}", str(PROJECT_ROOT)).replace(
                 "{{PROJECT}}", PROJECT_ROOT.name)
+            # systemd ExecStart requires absolute binary path; wrap in bash so relative
+            # commands like `.venv/bin/python` resolve via WorkingDirectory.
+            escaped = inner_command.replace('"', '\\"')
+            command = f'/bin/bash -c "{escaped}"'
             svc_template = TEMPLATES_DIR / "assistant-cron.service.template"
             tmr_template = TEMPLATES_DIR / "assistant-cron.timer.template"
             if not (svc_template.exists() and tmr_template.exists()):
@@ -1168,6 +1513,577 @@ def cmd_cron_install_global(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_activity(args: argparse.Namespace) -> int:
+    """Show what the AI assistant(s) have ACTUALLY done — files authored, cron runs, sessions.
+
+    This is the answer to the "I see nothing" question: aggregates the agent's
+    real output into one view. Default limit: last 24h.
+    """
+    import time
+    target = getattr(args, "profile", None)
+    profiles = [target] if target else list_profiles()
+    hours = getattr(args, "hours", 24) or 24
+    cutoff_ms = (time.time() - hours * 3600) * 1000
+
+    stage(f"AI Assistant activity (last {hours}h)")
+    print()
+
+    # ── 1. Files the assistant authored / modified ─────────────────────
+    print(f"{BOLD}Files written/modified{RESET}")
+    proc = run(["git", "-C", str(PROJECT_ROOT), "status", "--short"], check=False)
+    agent_paths = []
+    for line in proc.stdout.splitlines():
+        # Match status lines like `?? wiki/log/...` or ` M wiki/log/...`
+        if not line.strip():
+            continue
+        status = line[:2].strip()
+        path = line[3:].strip()
+        # Heuristic: agent writes go to wiki/log/, wiki/sources/, raw/, .cursor/, .openclaw/agents/
+        if any(path.startswith(p) for p in ("wiki/log/", "wiki/sources/", "raw/", ".cursor/")) \
+           or "manifest.json" in path or "/_index.md" in path:
+            agent_paths.append((status, path))
+    if not agent_paths:
+        info("  (no uncommitted agent-authored files; check `git log` for committed work)")
+    else:
+        for status, path in agent_paths:
+            full = PROJECT_ROOT / path
+            mtime_str = ""
+            if full.exists():
+                age_s = time.time() - full.stat().st_mtime
+                if age_s < 3600:
+                    mtime_str = f"{int(age_s/60)}m ago"
+                elif age_s < 86400:
+                    mtime_str = f"{int(age_s/3600)}h ago"
+                else:
+                    mtime_str = f"{int(age_s/86400)}d ago"
+            print(f"  [{status}] {path}  ({mtime_str})")
+    print()
+
+    # ── 2. Cron run history across all jobs ────────────────────────────
+    print(f"{BOLD}Cron run history{RESET}")
+    if not have("openclaw"):
+        warn("  openclaw not on PATH")
+    else:
+        proc = openclaw_run(["openclaw", "cron", "list", "--json"])
+        try:
+            data = json.loads(proc.stdout) if proc.returncode == 0 and proc.stdout.strip() else {}
+            jobs = data.get("jobs", [])
+            if target:
+                jobs = [j for j in jobs if j.get("agentId") == target]
+            all_runs = []
+            for j in jobs:
+                proc_runs = openclaw_run(["openclaw", "cron", "runs", "--id", j["id"]])
+                try:
+                    runs_data = json.loads(proc_runs.stdout) if proc_runs.returncode == 0 else {}
+                    for entry in runs_data.get("entries", []):
+                        if entry.get("runAtMs", 0) >= cutoff_ms:
+                            entry["_job_name"] = j.get("name", "?")
+                            entry["_agent"] = j.get("agentId", "?")
+                            all_runs.append(entry)
+                except Exception:
+                    pass
+            # Sort newest first
+            all_runs.sort(key=lambda e: e.get("runAtMs", 0), reverse=True)
+            if not all_runs:
+                info(f"  (no cron runs in the last {hours}h)")
+            else:
+                for r in all_runs:
+                    status = r.get("status", "?")
+                    dur_s = (r.get("durationMs", 0) // 1000)
+                    ts = r.get("runAtMs", 0)
+                    age_s = (time.time() * 1000 - ts) / 1000
+                    age_str = (f"{int(age_s/60)}m ago" if age_s < 3600
+                               else f"{int(age_s/3600)}h ago" if age_s < 86400
+                               else f"{int(age_s/86400)}d ago")
+                    status_color = GREEN if status == "ok" else RED
+                    summary = r.get("summary", "") or r.get("error", "(no summary)")
+                    summary = summary.replace("\n", " ").strip()
+                    if len(summary) > 200:
+                        summary = summary[:200] + "…"
+                    print(f"  {status_color}● {status}{RESET} {r['_job_name']} · {dur_s}s · {age_str}")
+                    print(f"     {DIM}{summary}{RESET}")
+        except Exception as e:
+            warn(f"  could not fetch cron runs: {e}")
+    print()
+
+    # ── 3. Recent OpenClaw sessions (the agent's working memory) ────────
+    print(f"{BOLD}Recent sessions{RESET}")
+    for name in profiles:
+        sessions_dir = Path.home() / ".openclaw" / "agents" / name / "sessions"
+        if not sessions_dir.exists():
+            continue
+        # JSONL session files = one per agent invocation
+        jsonl_files = [f for f in sessions_dir.glob("*.jsonl") if "trajectory" not in f.name]
+        jsonl_files.sort(key=lambda f: f.stat().st_mtime, reverse=True)
+        if not jsonl_files:
+            info(f"  {name}: (no sessions)")
+            continue
+        print(f"  {name}: {len(jsonl_files)} session(s) on disk")
+        for f in jsonl_files[:5]:
+            age_s = time.time() - f.stat().st_mtime
+            age_str = (f"{int(age_s/60)}m ago" if age_s < 3600
+                       else f"{int(age_s/3600)}h ago" if age_s < 86400
+                       else f"{int(age_s/86400)}d ago")
+            print(f"     {f.name[:40]}  ({age_str}, {f.stat().st_size // 1024}KB)")
+    print()
+    info("Drill into a specific run: bin/assistant manage --action history --profile <p> --job <j>")
+    info("View a session file directly: openclaw sessions --agent <p> --verbose")
+    info("Open a wiki/log/ file the agent authored: any editor — they're regular Markdown")
+    return 0
+
+
+def cmd_pace(_args: argparse.Namespace) -> int:
+    """Print the full schedule timeline across all installed profiles + global cron + heartbeats."""
+    stage("AI Assistant pace — what's running when")
+    print()
+    # Profile-scoped cron jobs (gateway)
+    print(f"{BOLD}Profile cron jobs (gateway-managed; agent wake-ups){RESET}")
+    if not have("openclaw"):
+        warn("openclaw not on PATH; skipping gateway cron")
+    else:
+        proc = openclaw_run(["openclaw", "cron", "list", "--json"])
+        try:
+            data = json.loads(proc.stdout) if proc.returncode == 0 and proc.stdout.strip() else {}
+            jobs = data.get("jobs", [])
+            if not jobs:
+                info("  (no profile cron jobs registered)")
+            else:
+                # Group by agent
+                by_agent: dict[str, list] = {}
+                for j in jobs:
+                    aid = j.get("agentId") or "(global)"
+                    by_agent.setdefault(aid, []).append(j)
+                for aid, agent_jobs in sorted(by_agent.items()):
+                    print(f"  {BOLD}{aid}{RESET}")
+                    for j in sorted(agent_jobs, key=lambda x: x.get("name", "")):
+                        sched = j.get("schedule", {})
+                        kind = sched.get("kind", "")
+                        expr = sched.get("expr") or (f"every {sched.get('everyMs', 0)//1000//60}m" if sched.get("everyMs") else "?")
+                        enabled = "●" if j.get("enabled", True) else "○"
+                        # Fetch per-job stats via `cron get <id>` (positional, returns JSON)
+                        next_str = "?"
+                        last_str = "never"
+                        getp = openclaw_run(["openclaw", "cron", "get", j.get("id", "")])
+                        try:
+                            getd = json.loads(getp.stdout) if getp.returncode == 0 else {}
+                            state = getd.get("state", {})
+                            next_str = _ms_in(state.get("nextRunAtMs"))
+                            last = state.get("lastRunAtMs")
+                            if last:
+                                last_status = state.get("lastRunStatus", "")
+                                last_dur = state.get("lastDurationMs", 0) // 1000
+                                last_str = f"{_ms_ago(last)} ({last_status}, {last_dur}s)"
+                        except Exception:
+                            pass
+                        print(f"    {enabled} {j.get('name', '')}  [{kind}: {expr}]  next: {next_str} · last: {last_str}")
+        except Exception as e:
+            warn(f"  could not parse openclaw cron list --json: {e}")
+    print()
+    # Global cron (systemd timers)
+    print(f"{BOLD}Global cron (systemd user timers; shell-trigger work){RESET}")
+    if have("systemctl"):
+        proc = run(["systemctl", "--user", "list-timers", "--all", "--no-pager", "--output=json"], check=False)
+        try:
+            timers = json.loads(proc.stdout) if proc.returncode == 0 and proc.stdout.strip() else []
+            our_timers = [t for t in timers if "assistant-cron-_global-" in t.get("unit", "")]
+            if not our_timers:
+                info("  (no global systemd timers — run `bin/assistant install-global`)")
+            else:
+                # systemd JSON gives timestamps in microseconds since epoch — convert to ms
+                for t in sorted(our_timers, key=lambda x: x.get("unit", "")):
+                    name = t.get("unit", "").replace("assistant-cron-_global-", "").replace(".timer", "")
+                    next_us = t.get("next") or 0
+                    last_us = t.get("last") or 0
+                    next_str = _ms_in(next_us // 1000) if next_us else "—"
+                    last_str = _ms_ago(last_us // 1000) if last_us else "never"
+                    print(f"    ● {name}  next: {next_str}  last: {last_str}")
+        except Exception as e:
+            warn(f"  could not parse systemctl json: {e}")
+    else:
+        info("  systemctl not available")
+    print()
+    # Per-agent heartbeat (gateway)
+    print(f"{BOLD}Per-agent heartbeat (gateway-driven){RESET}")
+    if have("openclaw"):
+        proc = run(["openclaw", "status"], check=False)
+        for line in proc.stdout.splitlines():
+            if "Heartbeat" in line:
+                print(f"    {line.strip()}")
+    print()
+    info("Manage with: bin/assistant (no args = interactive) · bin/assistant cron run <profile> <job> · bin/assistant cron edit <profile> <job> --schedule '<new>' · bin/assistant cron disable <profile> <job>")
+    return 0
+
+
+def _ms_ago(ms: int | None) -> str:
+    if not ms:
+        return "—"
+    import time
+    delta = (time.time() * 1000 - ms) / 1000
+    if delta < 60:
+        return f"{int(delta)}s ago"
+    if delta < 3600:
+        return f"{int(delta/60)}m ago"
+    if delta < 86400:
+        return f"{int(delta/3600)}h ago"
+    return f"{int(delta/86400)}d ago"
+
+
+def _ms_in(ms: int | None) -> str:
+    if not ms:
+        return "—"
+    import time
+    delta = (ms - time.time() * 1000) / 1000
+    if delta < 0:
+        return "now/overdue"
+    if delta < 60:
+        return f"in {int(delta)}s"
+    if delta < 3600:
+        return f"in {int(delta/60)}m"
+    if delta < 86400:
+        return f"in {int(delta/3600)}h"
+    return f"in {int(delta/86400)}d"
+
+
+def cmd_manage(args: argparse.Namespace) -> int:
+    """Unified interactive management entry.
+
+    Invoked when `bin/assistant` is called with no subcommand, OR via the
+    `/ai-assistants` Claude Code slash command.
+
+    Flow:
+      1. Show pace + per-profile state (the "where am I" view)
+      2. Show numbered action menu
+      3. Read operator choice, drill into selected action
+      4. Loop until exit
+
+    Operator can also pass --action / --profile / --job flags to skip to a
+    specific operation non-interactively.
+    """
+    # Direct action mode (params provided) — skip menu
+    action = getattr(args, "action", None)
+    if action:
+        return _manage_run_action(action, args)
+    # Default: progressive view
+    cmd_pace(args)
+    print()
+    profiles = list_profiles()
+    print(f"{BOLD}Installed profiles:{RESET}")
+    for p in profiles:
+        prof = load_yaml(profile_path(p))
+        focus = prof.get("focus", "")
+        print(f"  • {BOLD}{p}{RESET} — {focus}")
+    print()
+    print(f"{BOLD}Actions{RESET} (type the number, or press enter to exit)")
+    print("  1. Show full status (per-profile state + gateway + cron + systemd)")
+    print("  2. Fire a cron job NOW (wake an assistant immediately)")
+    print("  3. Enable / disable a cron job (toggle a recurring task)")
+    print("  4. Change a cron job's schedule (re-pace a task)")
+    print("  5. Show last N runs of a cron job (what the assistant did)")
+    print("  6. Open the agent's current sessions list (what's in flight)")
+    print("  7. Show available workspace modes + tradeoffs")
+    print("  8. List all surfaces this project's assistants can plug into")
+    print("  9. Open the agent's IDENTITY.md / AGENTS.md / TOOLS.md (see what the assistant IS)")
+    print("  0. Reinstall a profile (re-materialize markdown + re-register cron + re-wake)")
+    print()
+    try:
+        choice = input("choice> ").strip()
+    except (EOFError, KeyboardInterrupt):
+        print()
+        return 0
+    if not choice:
+        return 0
+    return _manage_dispatch(choice, profiles)
+
+
+def _manage_dispatch(choice: str, profiles: list[str]) -> int:
+    """Dispatch a numbered menu choice from cmd_manage."""
+    if choice == "1":
+        class _A: profile = None
+        return cmd_status(_A())
+    if choice == "2":
+        profile = _ask_profile(profiles)
+        if not profile:
+            return 0
+        job = _ask_cron_job(profile)
+        if not job:
+            return 0
+        return _manage_cron_run(profile, job)
+    if choice == "3":
+        profile = _ask_profile(profiles)
+        if not profile:
+            return 0
+        job = _ask_cron_job(profile)
+        if not job:
+            return 0
+        toggle = input("(e)nable or (d)isable? ").strip().lower()
+        action = "enable" if toggle.startswith("e") else "disable"
+        return _manage_cron_toggle(profile, job, action)
+    if choice == "4":
+        profile = _ask_profile(profiles)
+        if not profile:
+            return 0
+        job = _ask_cron_job(profile)
+        if not job:
+            return 0
+        new_sched = input("new schedule (systemd OnCalendar syntax, e.g. 'Mon *-*-* 09:00:00' or 'hourly'): ").strip()
+        if not new_sched:
+            return 0
+        return _manage_cron_edit(profile, job, new_sched)
+    if choice == "5":
+        profile = _ask_profile(profiles)
+        if not profile:
+            return 0
+        job = _ask_cron_job(profile)
+        if not job:
+            return 0
+        return _manage_cron_history(profile, job)
+    if choice == "6":
+        profile = _ask_profile(profiles)
+        if not profile:
+            return 0
+        run(["openclaw", "sessions", "--agent", profile], check=False, capture=False)
+        return 0
+    if choice == "7":
+        class _A: pass
+        return cmd_modes(_A())
+    if choice == "8":
+        class _A:
+            action = "list"
+            profile = None
+            surface = None
+        return cmd_surfaces(_A())
+    if choice == "9":
+        profile = _ask_profile(profiles)
+        if not profile:
+            return 0
+        ws = compute_workspace_path(profile, load_yaml(profile_path(profile)).get("workspace_mode", "shared"))
+        print(f"\nWorkspace: {ws}\n")
+        for f in ("IDENTITY.md", "AGENTS.md", "TOOLS.md", "SOUL.md", "HEARTBEAT.md", "BOOTSTRAP.md", "USER.md"):
+            p = ws / f
+            if p.exists():
+                print(f"--- {f} ({p.stat().st_size} bytes) ---")
+                print(p.read_text())
+                print()
+        return 0
+    if choice == "0":
+        profile = _ask_profile(profiles)
+        if not profile:
+            return 0
+        class _A:
+            profile = profile
+            dry_run = False
+            no_openclaw = False
+            no_mcp = False
+            no_cron = False
+            no_wake = False
+        _A.profile = profile
+        return cmd_install(_A())
+    info(f"unknown choice: {choice}")
+    return 1
+
+
+def _ask_profile(profiles: list[str]) -> str | None:
+    if len(profiles) == 1:
+        return profiles[0]
+    print()
+    for i, p in enumerate(profiles, 1):
+        print(f"  {i}. {p}")
+    try:
+        ans = input("which profile? ").strip()
+    except (EOFError, KeyboardInterrupt):
+        return None
+    if ans.isdigit() and 1 <= int(ans) <= len(profiles):
+        return profiles[int(ans) - 1]
+    if ans in profiles:
+        return ans
+    info("unknown profile")
+    return None
+
+
+def _ask_cron_job(profile: str) -> str | None:
+    cron_path = ASSISTANT_DIR / f"{profile}.cron.yaml"
+    if not cron_path.exists():
+        info(f"no cron yaml for {profile}")
+        return None
+    cron = load_yaml(cron_path)
+    jobs = cron.get("jobs", [])
+    print()
+    for i, j in enumerate(jobs, 1):
+        mark = "●" if j.get("enabled", True) else "○"
+        print(f"  {i}. {mark} {j['name']}  ({j.get('schedule', '')})")
+    try:
+        ans = input("which cron job? ").strip()
+    except (EOFError, KeyboardInterrupt):
+        return None
+    if ans.isdigit() and 1 <= int(ans) <= len(jobs):
+        return jobs[int(ans) - 1]["name"]
+    for j in jobs:
+        if j["name"] == ans:
+            return ans
+    info("unknown job")
+    return None
+
+
+def _manage_cron_run(profile: str, job: str) -> int:
+    job_name = f"{profile}-{job}"
+    proc = openclaw_run(["openclaw", "cron", "list", "--json"])
+    try:
+        data = json.loads(proc.stdout)
+        entry = next((j for j in data.get("jobs", []) if j.get("name") == job_name), None)
+        if not entry:
+            err(f"job not found in gateway: {job_name}")
+            return 1
+        proc_run = openclaw_run(["openclaw", "cron", "run", entry["id"]])
+        if proc_run.returncode == 0:
+            ok(f"fired: {job_name}")
+            info(f"view session at http://127.0.0.1:18789/ or via `openclaw sessions --agent {profile}`")
+        else:
+            err(f"fire failed: {proc_run.stderr.strip()[:200]}")
+    except Exception as e:
+        err(f"could not fire: {e}")
+    return 0
+
+
+def _manage_cron_toggle(profile: str, job: str, action: str) -> int:
+    job_name = f"{profile}-{job}"
+    # Update local yaml
+    cron_path = ASSISTANT_DIR / f"{profile}.cron.yaml"
+    cron = load_yaml(cron_path)
+    target = next((j for j in cron.get("jobs", []) if j["name"] == job), None)
+    if target:
+        target["enabled"] = (action == "enable")
+        try:
+            import yaml
+            with open(cron_path, "w") as f:
+                yaml.dump(cron, f, sort_keys=False)
+            ok(f"yaml updated: {job} → enabled={target['enabled']}")
+        except ImportError:
+            err("PyYAML required")
+            return 2
+    # Propagate to gateway
+    if have("openclaw"):
+        proc = openclaw_run(["openclaw", "cron", action, job_name])
+        if proc.returncode == 0:
+            ok(f"gateway: openclaw cron {action} {job_name}")
+        else:
+            warn(f"gateway: {proc.stderr.strip()[:120]}")
+    return 0
+
+
+def _manage_cron_edit(profile: str, job: str, new_schedule: str) -> int:
+    job_name = f"{profile}-{job}"
+    # Update local yaml
+    cron_path = ASSISTANT_DIR / f"{profile}.cron.yaml"
+    cron = load_yaml(cron_path)
+    target = next((j for j in cron.get("jobs", []) if j["name"] == job), None)
+    if not target:
+        err(f"job '{job}' not in {cron_path}")
+        return 1
+    old_schedule = target.get("schedule", "")
+    target["schedule"] = new_schedule
+    try:
+        import yaml
+        with open(cron_path, "w") as f:
+            yaml.dump(cron, f, sort_keys=False)
+        ok(f"yaml updated: {job} schedule {old_schedule!r} → {new_schedule!r}")
+    except ImportError:
+        err("PyYAML required")
+        return 2
+    # Propagate: simplest path is to delete + re-add via the install path
+    translated = translate_schedule(new_schedule)
+    if not translated:
+        warn(f"new schedule {new_schedule!r} not recognized — gateway not updated")
+        return 0
+    flag, value = translated
+    # Find existing job id + remove
+    proc = openclaw_run(["openclaw", "cron", "list", "--json"])
+    try:
+        data = json.loads(proc.stdout)
+        entry = next((j for j in data.get("jobs", []) if j.get("name") == job_name), None)
+        if entry:
+            openclaw_run(["openclaw", "cron", "rm", entry["id"]])
+        # Re-add with new schedule
+        prompt = target.get("trigger", {}).get("prompt", "").strip() or f"Run {job} task"
+        description = target.get("description", "")
+        cmd = [
+            "openclaw", "cron", "add",
+            "--name", job_name,
+            flag, value,
+            "--agent", profile,
+            "--message", prompt,
+            "--description", description,
+            "--session", "isolated",
+            "--expect-final",
+            "--best-effort-deliver",
+        ]
+        if not target.get("enabled", True):
+            cmd.append("--disabled")
+        proc_add = openclaw_run(cmd)
+        if proc_add.returncode == 0:
+            ok(f"gateway: re-registered {job_name} with {flag} {value}")
+        else:
+            warn(f"gateway re-add failed: {proc_add.stderr.strip()[:200]}")
+    except Exception as e:
+        warn(f"gateway update failed: {e}")
+    return 0
+
+
+def _manage_cron_history(profile: str, job: str) -> int:
+    job_name = f"{profile}-{job}"
+    proc = openclaw_run(["openclaw", "cron", "list", "--json"])
+    try:
+        data = json.loads(proc.stdout)
+        entry = next((j for j in data.get("jobs", []) if j.get("name") == job_name), None)
+        if not entry:
+            err(f"job not found: {job_name}")
+            return 1
+        proc_runs = openclaw_run(["openclaw", "cron", "runs", "--id", entry["id"]])
+        print(proc_runs.stdout if proc_runs.returncode == 0 else proc_runs.stderr)
+    except Exception as e:
+        err(f"history fetch failed: {e}")
+    return 0
+
+
+def _manage_run_action(action: str, args: argparse.Namespace) -> int:
+    """Non-interactive action dispatch — bin/assistant manage --action <X> --profile <P> --job <J>."""
+    profile = getattr(args, "profile", None)
+    job = getattr(args, "job", None)
+    if action == "status":
+        class _A: pass
+        _A.profile = profile
+        return cmd_status(_A())
+    if action == "pace":
+        return cmd_pace(args)
+    if action == "fire":
+        if not profile or not job:
+            err("--profile and --job required for action=fire")
+            return 1
+        return _manage_cron_run(profile, job)
+    if action == "enable":
+        if not profile or not job:
+            err("--profile and --job required for action=enable")
+            return 1
+        return _manage_cron_toggle(profile, job, "enable")
+    if action == "disable":
+        if not profile or not job:
+            err("--profile and --job required for action=disable")
+            return 1
+        return _manage_cron_toggle(profile, job, "disable")
+    if action == "edit":
+        schedule = getattr(args, "schedule", None)
+        if not profile or not job or not schedule:
+            err("--profile, --job, and --schedule required for action=edit")
+            return 1
+        return _manage_cron_edit(profile, job, schedule)
+    if action == "history":
+        if not profile or not job:
+            err("--profile and --job required for action=history")
+            return 1
+        return _manage_cron_history(profile, job)
+    err(f"unknown action: {action}")
+    return 1
+
+
 def cmd_modes(_args: argparse.Namespace) -> int:
     stage("Workspace modes (set in Profile YAML as `workspace_mode: <mode>`)")
     for mode, spec in WORKSPACE_MODES.items():
@@ -1195,7 +2111,7 @@ def build_parser() -> argparse.ArgumentParser:
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__.split("USAGE\n=====")[1] if "USAGE\n=====" in __doc__ else "",
     )
-    sub = p.add_subparsers(dest="cmd", required=True)
+    sub = p.add_subparsers(dest="cmd", required=False)
 
     sp = sub.add_parser("profiles", help="List known profiles")
     sp.set_defaults(func=cmd_profiles)
@@ -1206,6 +2122,7 @@ def build_parser() -> argparse.ArgumentParser:
     sp.add_argument("--no-openclaw", action="store_true", help="Skip OpenClaw agent registration")
     sp.add_argument("--no-mcp", action="store_true", help="Skip wiring this project's MCP server into OpenClaw gateway")
     sp.add_argument("--no-cron", action="store_true", help="Skip registering per-profile cron jobs into the gateway")
+    sp.add_argument("--no-wake", action="store_true", help="Skip firing the first cron job immediately after install (the 'agent comes alive' step)")
     sp.set_defaults(func=cmd_install)
 
     sp = sub.add_parser("up", help="Start the assistant")
@@ -1259,12 +2176,32 @@ def build_parser() -> argparse.ArgumentParser:
     sp.add_argument("--dry-run", action="store_true")
     sp.set_defaults(func=cmd_cron_install_global)
 
+    sp = sub.add_parser("pace", help="Show the full schedule timeline across all assistants + global cron")
+    sp.set_defaults(func=cmd_pace)
+
+    sp = sub.add_parser("activity", help="Show what the assistants have ACTUALLY done — files + cron runs + sessions")
+    sp.add_argument("profile", nargs="?", help="Limit to a specific profile (default: all)")
+    sp.add_argument("--hours", type=int, default=24, help="Lookback window in hours (default: 24)")
+    sp.set_defaults(func=cmd_activity)
+
+    sp = sub.add_parser("manage", help="Unified management view (blank = interactive; --action/--profile/--job for direct ops)")
+    sp.add_argument("--action", choices=["status", "pace", "fire", "enable", "disable", "edit", "history"],
+                    help="Skip the interactive menu and run a specific action")
+    sp.add_argument("--profile", help="Profile name (e.g. continuous-research)")
+    sp.add_argument("--job", help="Cron job name (without profile prefix, e.g. morning-scan)")
+    sp.add_argument("--schedule", help="New schedule (for --action edit)")
+    sp.set_defaults(func=cmd_manage)
+
     return p
 
 
 def main() -> int:
     parser = build_parser()
     args = parser.parse_args()
+    # No subcommand → interactive manage view (per operator's /ai-assistants intent)
+    if not getattr(args, "cmd", None):
+        ns = argparse.Namespace(action=None, profile=None, job=None, schedule=None)
+        return cmd_manage(ns)
     return args.func(args)
 
 

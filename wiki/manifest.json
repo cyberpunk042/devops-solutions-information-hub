@@ -1,7 +1,7 @@
 {
-  "generated": "2026-05-15T19:13:25.496713+00:00",
+  "generated": "2026-05-15T22:00:52.238104+00:00",
   "stats": {
-    "pages": 867,
+    "pages": 871,
     "domains": 14,
     "sources": 110,
     "comparisons": 10,
@@ -37007,6 +37007,94 @@
       ]
     },
     {
+      "path": "log/2026-05-15-research-watch-frontier-delta-detected-opus-4-7-mythos-gpt-5.md",
+      "slug": "log/2026-05-15-research-watch-frontier-delta-detected-opus-4-7-mythos-gpt-5",
+      "title": "research-watch \u2014 frontier delta detected (Opus 4.7, Mythos, GPT-5.5, GPT-Rosalind, Claude Managed Agents v2, Claude Design)",
+      "type": "note",
+      "domain": "log",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "log",
+        "directive"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "log/2026-05-15-research-watch-lightweight-scan-3-2026-05-15-17-16-et-noted.md",
+      "slug": "log/2026-05-15-research-watch-lightweight-scan-3-2026-05-15-17-16-et-noted",
+      "title": "research-watch \u2014 lightweight scan #3 (2026-05-15 17:16 ET), noted-but-skipped \u2014 duplication guard + carry-forward",
+      "type": "note",
+      "domain": "log",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "log",
+        "directive"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "log/2026-05-15-research-watch-lightweight-scan-noted-but-skipped-no-new-nov.md",
+      "slug": "log/2026-05-15-research-watch-lightweight-scan-noted-but-skipped-no-new-nov",
+      "title": "research-watch \u2014 lightweight scan, noted-but-skipped (no new novelty beyond 2026-05-15 earlier scan)",
+      "type": "note",
+      "domain": "log",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "log",
+        "directive"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "log/2026-05-15-weekly-research-digest-2026-05-09-2026-05-15.md",
+      "slug": "log/2026-05-15-weekly-research-digest-2026-05-09-2026-05-15",
+      "title": "Weekly Research Digest \u2014 2026-05-09 \u2192 2026-05-15",
+      "type": "note",
+      "domain": "log",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "log",
+        "session"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "log/5-candidate-behavioral-failure-detection-rules-from-openflee.md",
       "slug": "log/5-candidate-behavioral-failure-detection-rules-from-openflee",
       "title": "5 candidate behavioral-failure detection rules from OpenFleet doctor.py (2026-04-18)",
@@ -61265,7 +61353,7 @@
       "relationship_count": 195
     },
     "log": {
-      "page_count": 184,
+      "page_count": 188,
       "relationship_count": 58
     },
     "agent-config": {
@@ -63316,6 +63404,10 @@
       "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
       "log/2026-05-08-strong-loop-arc-ingest-synthesize-propagate-distill-and-operator-decisions-pending",
       "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension",
+      "log/2026-05-15-research-watch-frontier-delta-detected-opus-4-7-mythos-gpt-5",
+      "log/2026-05-15-research-watch-lightweight-scan-3-2026-05-15-17-16-et-noted",
+      "log/2026-05-15-research-watch-lightweight-scan-noted-but-skipped-no-new-nov",
+      "log/2026-05-15-weekly-research-digest-2026-05-09-2026-05-15",
       "spine/standards/note-page-standards"
     ],
     "contract": [
@@ -68829,7 +68921,10 @@
       "log/2026-04-09/system/2026-04-09-directive-systemic-incompleteness",
       "log/2026-04-09/system/2026-04-09-directive-validate-second-brain-readiness",
       "log/2026-04-09/system/2026-04-09-ingest-awesome-design-md",
-      "log/2026-04-10/2026-04-10-directive-quality-evolution-epic"
+      "log/2026-04-10/2026-04-10-directive-quality-evolution-epic",
+      "log/2026-05-15-research-watch-frontier-delta-detected-opus-4-7-mythos-gpt-5",
+      "log/2026-05-15-research-watch-lightweight-scan-3-2026-05-15-17-16-et-noted",
+      "log/2026-05-15-research-watch-lightweight-scan-noted-but-skipped-no-new-nov"
     ],
     "critical-failure": [
       "log/2026-04-09/methodology/2026-04-09-directive-FOLLOW-THE-WORKFLOW"
@@ -68916,7 +69011,8 @@
       "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
       "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring",
       "log/2026-05-08-strong-loop-arc-ingest-synthesize-propagate-distill-and-operator-decisions-pending",
-      "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension"
+      "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension",
+      "log/2026-05-15-weekly-research-digest-2026-05-09-2026-05-15"
     ],
     "summary": [
       "log/2026-04-09/system/2026-04-09-session-summary",
