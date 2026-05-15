@@ -1,0 +1,15 @@
+[Unit]
+Description=AI Assistant CRON job: {{PROFILE_NAME}}/{{JOB_NAME}}
+Documentation=file://{{PROJECT_ROOT}}/.assistant/{{PROFILE_NAME}}.cron.yaml
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory={{PROJECT_ROOT}}
+ExecStart={{TRIGGER_COMMAND}}
+Environment="CLAUDE_PROJECT_DIR={{PROJECT_ROOT}}"
+Environment="ASSISTANT_PROFILE={{PROFILE_NAME}}"
+Environment="CRON_JOB={{JOB_NAME}}"
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=assistant-cron-{{PROFILE_NAME}}-{{JOB_NAME}}

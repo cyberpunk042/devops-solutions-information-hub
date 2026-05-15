@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# Convenience shim: `bin/assistant <subcommand>` → `tools/assistant.py` via the venv.
+#
+# Operator-facing entry point. The actual logic lives in tools/assistant.py.
+# This shim adds:
+#   - .venv activation (Hard Rule 5: .venv/bin/python for tools.*)
+#   - working directory anchor (CLAUDE_PROJECT_DIR)
+#   - colored output preserved (no piping)
+
+set -euo pipefail
+
+# Find project root (parent of bin/)
+HERE="$(cd "$(dirname "$0")" && pwd)"
+PROJECT_ROOT="$(dirname "$HERE")"
+export CLAUDE_PROJECT_DIR="${CLAUDE_PROJECT_DIR:-$PROJECT_ROOT}"
+
+# Use venv python (Hard Rule 5)
+if [ -x "$PROJECT_ROOT/.venv/bin/python" ]; then
+    PYTHON="$PROJECT_ROOT/.venv/bin/python"
+else
+    PYTHON="python3"
+fi
+
+cd "$PROJECT_ROOT"
+exec "$PYTHON" -m tools.assistant "$@"

@@ -1,0 +1,11 @@
+[Unit]
+Description=Timer for AI Assistant CRON: {{PROFILE_NAME}}/{{JOB_NAME}}
+Documentation=file://{{PROJECT_ROOT}}/.assistant/{{PROFILE_NAME}}.cron.yaml
+
+[Timer]
+OnCalendar={{SCHEDULE}}
+Persistent=true
+Unit=assistant-cron-{{PROFILE_NAME}}-{{JOB_NAME}}.service
+
+[Install]
+WantedBy=timers.target

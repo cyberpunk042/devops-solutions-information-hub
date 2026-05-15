@@ -433,6 +433,7 @@ Full analysis: [[execution-mode-is-consumer-property-not-project-property|Execut
 [[e022-context-aware-gateway-orientation-and-routing|E022 — Context-Aware Gateway Orientation and Task Routing]]
 [[gateway-output-contract|Gateway Output Contract — What Good Tool Output Looks Like]]
 [[harness-engineering-is-the-dominant-performance-lever|Harness Engineering Is the Dominant Performance Lever]]
+[[model-per-project-assistant-profile|Model — Per-Project Assistant Profile]]
 [[profile-as-coordination-bundle|Profile as Coordination Bundle]]
 [[progressive-structural-enrichment-in-agent-config|Progressive Structural Enrichment in Agent Config]]
 [[src-claude-code-prompt-patch-rebalancing|Source — Claude Code Prompt Patch: Rebalancing System Prompt Instructions]]

@@ -1,19 +1,18 @@
 ---
-title: "E024-M006 — Cross-Project Profile Catalog (the 'everywhere' integration: one Profile per sister project + catalog page enabling operator navigation across the 7-project ecosystem)"
+title: "E024-M006 — /opt-side Meta-Layer for Per-Project Profiles (standards · model · integration · super-model) — the unique /opt contribution; sister projects author their OWN Profiles consuming this meta-layer"
 type: module
 domain: backlog
 status: draft
-priority: P2
+priority: P1
 task_type: module
 current_stage: document
-readiness: 25
+readiness: 30
 progress: 0
 stages_completed: []
-artifacts: []
+artifacts:
+  - wiki/spine/standards/per-project-assistant-profile-standards.md
 epic: "E024"
-depends_on:
-  - E024-M002                            # need Profile schema
-  - E024-M003                            # need /opt canonical example to mirror
+depends_on: []
 confidence: high
 created: 2026-05-09
 updated: "2026-05-09"
@@ -21,102 +20,74 @@ sources:
   - id: parent-epic
     type: wiki
     file: wiki/backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn.md
-    description: "Parent Epic E024 — the 'everywhere' requirement from operator directive 2026-05-09 turn 3"
-  - id: operator-directive-2026-05-09-turn-3
+    description: "Parent Epic E024"
+  - id: operator-correction-2026-05-09-turn-5
     type: directive
-    file: raw/notes/2026-05-09-operator-directive-sdd-skills-context-hooks-harness-overlap-need-clear-view-and-vision-integrate-everywhere-wiki-llm-pm-claude-os-multica-openclaw-claude-code-opencode.md
-    description: "Operator: 'Both need to be possible to use / integrate properly everywhere, Wiki LLM, PM management tools, etc.... Through whatever tool'"
-  - id: spectrum
+    file: raw/notes/2026-05-09-operator-correction-turn-5-every-project-does-own-profile-opt-difference-is-standards-model-integration-super-models-do-not-lose-yourself.md
+    description: "Operator clarification 2026-05-09 turn 5 (sacrosanct, verbatim): 'every project will do their own Profiles... this is per project.. the difference in the second-brain is that we do not only have profiles for AI assistants but we will also have the standards and the model and integration into the knowledge and super-models'. This module was originally wrongly scoped as '/opt authors sister profiles' — refactored 2026-05-09 to its correct scope: /opt's unique meta-layer contribution."
+  - id: profile-standards-artifact
     type: wiki
-    file: wiki/domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools.md
-    description: "Spectrum's tool-agnostic abstraction makes per-project Profile portable across all 7 sister projects + tool variations"
-  - id: sister-projects-config
-    type: file
-    file: wiki/config/sister-projects.yaml
-    description: "Operator-confirmed sister-projects registry — 6 projects (openarms, openfleet, aicp, devops-control-plane, openclaw, root-ghostproxy); Hermes operator-confirmed 2026-05-09 (may or may not be in this file yet)"
-tags: [module, "E024-M006", cross-project, profile-catalog, sister-projects, everywhere-integration, navigation, openarms, openfleet, aicp, devops-control-plane, openclaw, root-ghostproxy, hermes, "2026-05-09", "draft"]
+    file: wiki/spine/standards/per-project-assistant-profile-standards.md
+    description: "First deliverable of this module — Profile Standards (the what-good-looks-like spec sister projects consume)"
+tags: [module, "E024-M006", per-project-assistant-meta-layer, profile-standards, profile-model, profile-integration, profile-super-model, "2026-05-09", "refactored-from-cross-project-catalog", "draft"]
 ---
 
-# E024-M006 — Cross-Project Profile Catalog
+# E024-M006 — /opt-side Meta-Layer for Per-Project Profiles
+
+> [!warning] **2026-05-09 refactor**: This module was originally scoped as "/opt authors sister-project Profile catalog" — operator correction 2026-05-09 turn 5 (sacrosanct): *"every project will do their own Profiles... this is per project"*. /opt does NOT author sister-project Profiles; that's each project's own work. /opt uniquely contributes the **meta-layer** (standards · model · integration · super-model). This module is now scoped correctly.
 
 ## Summary
 
-Author one Per-Project Assistant Profile per sister project (OpenArms · OpenFleet · AICP · devops-control-plane · OpenClaw · root-ghostproxy · Hermes-the-project-if-it-exists) plus a catalog page enabling operator-level navigation across the entire ecosystem. Operator-stated 2026-05-09 turn 3: *"Both need to be possible to use / integrate properly everywhere, Wiki LLM, PM management tools, etc.... Through whatever tool Claude OS, Multica, OpenClaw, Claude Code, OpenCode..."* — this is the "everywhere" requirement. The /opt canonical Profile (M003) provides the structural reference; this module replicates that structure tailored to each project's needs. The catalog page is the navigation hub: operator opens it, sees all 7 profiles + their target runtimes + their value-output telemetry at a glance.
+Author /opt second-brain's **unique meta-layer contribution** to the Per-Project Assistant Profile ecosystem — the **standards**, **model**, **integration into the knowledge**, and **super-model update** that ALL sister projects consume to author their own Profiles. Each project (OpenArms · OpenFleet · AICP · devops-control-plane · OpenClaw · root-ghostproxy · others) authors its OWN Profile in its OWN repo using these /opt-side artifacts. /opt does NOT author sister-project Profiles — that would be a cross-project boundary violation. /opt authors:
+1. **Profile Standards** — what good Profile looks like; quality gates (✅ done)
+2. **Profile Model** — the named model in the 16-model spine registry (pending operator-approval for promotion)
+3. **Profile-Knowledge Integration** — how Profile integrates with existing wiki layers (lessons, patterns, decisions, super-model)
+4. **Super-Model Update** — add Profile to the spine super-model
 
 ## Tasks
 
 | Task | Title | Readiness | Progress | Status |
 |------|-------|-----------|----------|--------|
-| T084 | Author OpenArms Profile (fleet-agent runtime engineering, harness compliance, methodology enforcement) | 25% | 0% | draft |
-| T085 | Author OpenFleet Profile (fleet orchestration, LightRAG consumption, task dispatch) | 25% | 0% | draft |
-| T086 | Author AICP Profile (local-AI inference, complexity routing, $0 target enforcement) | 25% | 0% | draft |
-| T087 | Author devops-control-plane Profile (infrastructure governance, decision tracking) | 25% | 0% | draft |
-| T088 | Author OpenClaw Profile (autonomous agentic workflows runtime) | 25% | 0% | draft |
-| T089 | Author root-ghostproxy Profile (OS-root harness propagation, IPS modules, global config) | 25% | 0% | draft |
-| T090 | Author Hermes-the-project Profile (TBD — depends on whether Hermes-the-project exists separately from Hermes-the-CLI) | 15% | 0% | draft |
-| T091 | Author the Cross-Project Profile Catalog page (the navigation hub) | 20% | 0% | draft |
+| T084 | Author Per-Project Assistant Profile Standards (`wiki/spine/standards/`) | 100% | 100% | ✅ done |
+| T085 | Author Per-Project Assistant Profile Model (`wiki/spine/models/agent-config/`) | 30% | 0% | draft |
+| T086 | Author Profile-Knowledge Integration concept (cross-reference topology with existing wiki) | 25% | 0% | draft |
+| T087 | Update Spine Super-Model to include Profile as foundational | 20% | 0% | draft |
+| T088 | (optional) Author Per-Project Assistant Profile Template at `wiki/config/templates/` for sister-project scaffolding | 15% | 0% | draft |
+| T089 | (optional) Extend `wiki/config/wiki-schema.yaml` + `wiki/config/artifact-types.yaml` to codify `assistant-profile` as a recognized page type (operator-approval) | 10% | 0% | draft |
 
 ## Dependencies
 
-- [[e024-m002-per-project-assistant-profile-pattern-and-schema|E024-M002]] — Profile schema must be locked
-- [[e024-m003-opt-second-brain-assistant-profile-canonical-example|E024-M003]] — /opt canonical example provides the template all 7 mirror
+- [[e024-m002-per-project-assistant-profile-pattern-and-schema|E024-M002]] — Profile pattern (the design these meta-layer artifacts standardize)
+- [[e024-m003-opt-second-brain-assistant-profile-canonical-example|E024-M003]] — /opt's own Profile (the exemplar applying the standards)
 
 ## Done When
 
-- [ ] All 8 child tasks at status: done
-- [ ] 7 Profile artifacts at `wiki/concepts/sister-project-profiles/<project>-assistant-profile.md` (or per-repo `.assistant/profile.yaml`)
-- [ ] Catalog page at `wiki/concepts/sister-project-profiles/_index.md` (or similar) lists all 7 with runtime targets + value-output expectations
-- [ ] Each Profile validates against the schema (T071 output)
-- [ ] Each Profile maps the project's actual needs (not template-clone)
-- [ ] Operator confirms 7-project coverage reflects intent
-- [ ] `.venv/bin/python -m tools.pipeline post` returns 0 errors
+- [ ] Profile Standards page exists at `wiki/spine/standards/` ✅ done
+- [ ] Profile Model page exists at `wiki/spine/models/agent-config/`
+- [ ] Profile-Knowledge Integration concept exists (cross-reference topology documented)
+- [ ] Spine Super-Model updated to include Profile (operator-approval — touches a spine-canonical artifact)
+- [ ] Optional Profile Template at `wiki/config/templates/` for sister-project scaffolding (operator-decision)
+- [ ] Optional schema codification of `assistant-profile` page type (operator-approval)
+- [ ] Operator confirms /opt's meta-layer scope is complete and ready for sister-project consumption
 
-## Impediments
+## Out of Scope (explicit boundary)
 
-- D1 (Hermes identity) was resolved — Hermes is real (per Multica's daemon CLI list). But: does Hermes-the-CLI come with its own SISTER PROJECT (repo), or is it just a CLI we target? T090 depends on this distinction.
-- The 7-project list assumes Hermes-the-project exists. If it doesn't, T090 becomes "skip" rather than "author".
-
-## The "Everywhere" Requirement (operator-stated)
-
-Per [[2026-05-09-operator-directive-sdd-skills-context-hooks-harness-overlap-need-clear-view-and-vision-integrate-everywhere-wiki-llm-pm-claude-os-multica-openclaw-claude-code-opencode|operator directive turn 3]]: *"Both need to be possible to use / integrate properly everywhere, Wiki LLM, PM management tools, etc.... Through whatever tool"*.
-
-Realized in this module by:
-
-- **One Profile per project** = "everywhere" at the project axis
-- **Multiple runtime targets per Profile** (Claude Code · Multica · OpenClaw · Hermes-CLI · OpenCode · Claude OS) = "everywhere" at the tool axis
-- **Catalog page** = navigation primitive across both axes
-- **Multica integration** (per [[spawn-protocol-multica-the-runtime-agnostic-bridge-from-per-project-profile-to-multicas-10-cli-daemon|spawn-protocol-multica]]) = "everywhere" via the meta-harness (10+ CLIs)
-- **Destination integration** (Wiki LLM + PM tools per the spectrum's destination table) = "everywhere" at the consumption axis
-
-## The Per-Project Profile Sketches
-
-Per [[per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes|Pattern — Per-Project Assistant Profile]] Sister-Project Applicability section:
-
-| Project | Profile name | Primary focus |
-|---|---|---|
-| **/opt second-brain** (anchor — M003) | `opt-second-brain-assistant` | Knowledge curation, methodology stewardship, source ingestion, lesson distillation |
-| **OpenArms** | `openarms-assistant` | Fleet-agent runtime engineering, harness compliance, methodology enforcement |
-| **OpenFleet** | `openfleet-assistant` | Fleet orchestration, LightRAG knowledge consumption, task dispatch |
-| **AICP** | `aicp-assistant` | Local-AI inference, complexity routing, $0 target enforcement |
-| **devops-control-plane** | `dcp-assistant` | Infrastructure governance, decision tracking |
-| **OpenClaw** | `openclaw-assistant` | Autonomous agentic workflows runtime |
-| **root-ghostproxy** | `root-ghostproxy-assistant` | OS-root harness propagation, IPS modules, global config |
-| **Hermes-the-project** (TBD) | `hermes-assistant` (if project exists) | TBD |
+- [ ] **Authoring sister-project Profiles at /opt** — operator-corrected 2026-05-09: each project authors its OWN Profile. /opt does not. Cross-project boundary holds.
+- [ ] **Maintaining sister-project Profiles** — same. Sister projects own their own Profile lifecycle.
+- [ ] **Auditing sister-project Profile content** — operator-territory, not /opt-content-territory.
 
 ## Relationships
 
 - PART OF: [[e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn|E024 — Per-Project Assistant Configurations]]
-- DEPENDS ON: [[e024-m002-per-project-assistant-profile-pattern-and-schema|E024-M002 — Profile Schema]]
-- DEPENDS ON: [[e024-m003-opt-second-brain-assistant-profile-canonical-example|E024-M003 — /opt canonical example]]
-- BUILDS ON: [[declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools|Concept — Declarative Agent Programming Spectrum]] — provides the tool-agnostic abstraction enabling cross-project portability
-- IMPLEMENTS: [[per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes|Pattern — Per-Project Assistant Profile]] across the 7-project ecosystem
-- DEMONSTRATES: [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Lesson — Anti-Vendor-Lock-In]] — Profiles preserve runtime-agnosticism across all 7 projects
+- DEPENDS ON: [[e024-m002-per-project-assistant-profile-pattern-and-schema|E024-M002]] (the Profile pattern this standards-layer governs)
+- DEPENDS ON: [[e024-m003-opt-second-brain-assistant-profile-canonical-example|E024-M003]] (/opt's canonical Profile = exemplar)
+- DELIVERS: [[per-project-assistant-profile-standards|Per-Project Assistant Profile Standards]] (this module's first deliverable)
+- DEMONSTRATES: [[the-agent-must-practice-what-it-documents|Lesson — The agent must practice what it documents]] — /opt provides the meta-layer + uses it for /opt's own Profile
 
 ## Backlinks
 
 [[E024 — Per-Project Assistant Configurations]]
-[[E024-M002 — Profile Schema]]
-[[E024-M003 — /opt canonical example]]
-[[Concept — Declarative Agent Programming Spectrum]]
-[[Pattern — Per-Project Assistant Profile]]
-[[Lesson — Anti-Vendor-Lock-In]]
+[[E024-M002]]
+[[E024-M003]]
+[[per-project-assistant-profile-standards|Per-Project Assistant Profile Standards]]
+[[Lesson — The agent must practice what it documents]]

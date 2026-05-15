@@ -1,0 +1,110 @@
+# =============================================================================
+# .assistant/_global/surfaces.yaml
+# =============================================================================
+# Surface integrations: where the operator can INTERACT with running assistants.
+# Per operator 2026-05-09 turn 7 (sacrosanct, verbatim):
+#   "I can interact with, with or without multica or the wiki LLM folder
+#   and/or docs folder and/or Claude OS and/or any other relevant surface
+#   that we usually use to interact with OpenClaw."
+#
+# Each surface is OPTIONAL — assistant works with/without any combination.
+# `assistant install <profile>` auto-detects which surfaces are present
+# (via `detect:` command) and wires accordingly. Operator can enable/disable
+# specific surfaces per profile via `assistant surfaces enable <profile> <surface>`.
+# =============================================================================
+
+surfaces:
+
+  # ─── OpenClaw native channels (the primary runtime; always required) ────
+  openclaw-native:
+    description: "OpenClaw built-in channels (Slack, Discord, Telegram, CLI). Primary interaction surface."
+    detect: "openclaw"
+    config_hint: |
+      Configure channels via `openclaw config set channels.telegram.botToken <token>`
+      or similar. See docs.openclaw.ai/gateway/configuration#channels.
+    required: true
+
+  # ─── Multica board (already operator-adopted) ───────────────────────────
+  multica:
+    description: "Multica managed-agents platform — board view, issues, multi-agent coordination, WebSocket progress."
+    detect: "multica"
+    config_hint: |
+      Multica auto-detects openclaw CLI on PATH. To wire this assistant to
+      Multica: `multica setup` and the agent appears under Multica Settings.
+      Per-agent custom_env per the operator's existing pattern (memory: 2026-04-28).
+    state_path: "/home/jfortin/.multica/server"
+    notes: "Operator self-hosts at /home/jfortin/.multica/server (memory)."
+
+  # ─── Wiki LLM folder (/opt second-brain — this project) ─────────────────
+  wiki-llm-folder:
+    description: "Direct access to wiki/ via the research-wiki MCP server."
+    detect: ".venv/bin/python"  # tools.mcp_server entry point
+    config_hint: |
+      The research-wiki MCP server is wired via .mcp.json (project-level).
+      Profile.knowledge_scope.wiki_scope lists the wiki paths the assistant reads.
+      Cross-domain interaction: ask the assistant in any other surface, it reaches
+      wiki content via the MCP regardless of which UI fronts the query.
+
+  # ─── Docs folder (project documentation, README, AGENTS.md, etc.) ───────
+  docs-folder:
+    description: "Project docs folder (README, AGENTS.md, CLAUDE.md, CONTEXT.md, docs/) — always-on context."
+    detect: "ls"  # always available
+    notes: "Profile.knowledge_scope.brain_files explicitly lists which docs load."
+
+  # ─── Claude OS (brobertsaz/claude-os — memory MCP) ──────────────────────
+  claude-os:
+    description: "Claude OS memory layer (Redis pub/sub + Memory MCP + tree-sitter indexing) — persistent context across sessions."
+    detect: "redis-cli"
+    config_hint: |
+      Requires Ollama + Redis + Python 3.11+. See:
+      https://github.com/brobertsaz/claude-os
+      Once installed, run /claude-os-init in this project. Profile inherits
+      Claude OS Memory MCP via knowledge_scope.
+
+  # ─── Claude Code (interactive — operator's terminal) ────────────────────
+  claude-code:
+    description: "Operator's interactive Claude Code session — same Profile + ambient context."
+    detect: "claude"
+    notes: "Claude Code reads CLAUDE.md + AGENTS.md ambient (brain_files); Profile YAML adds on-demand context."
+
+  # ─── OpenCode (alternative CLI to Claude Code) ──────────────────────────
+  opencode:
+    description: "OpenCode CLI (operator's stack member 2026-04-23) — alternative-tier consumer."
+    detect: "opencode"
+    notes: "Profile is tool-agnostic; OpenCode reads same Profile via similar ambient/MCP patterns."
+
+  # ─── Hermes Agent (Nous Research) ───────────────────────────────────────
+  hermes:
+    description: "Hermes Agent — Nous Research's CLI agent; consumes Profile via skill+memory subsystem."
+    detect: "hermes"
+    notes: "Hermes is in Multica's daemon-detected CLI list (operator-confirmed 2026-05-09)."
+
+  # ─── Hugging Face (research surface — read-only) ────────────────────────
+  huggingface:
+    description: "Hugging Face Hub tools (paper_search, hub_repo_search, hf_doc_search) via Anthropic MCP."
+    detect: "true"  # MCP server, not a CLI; always available via Claude
+    notes: "Continuous Research Profile uses these for monitoring frontier (Profile.knowledge_scope.ingestion_substrate)."
+
+  # ─── GitHub (corpus + alternative routing) ──────────────────────────────
+  github:
+    description: "GitHub via gh CLI (auth-bearing — succeeds where pipeline fetch fails for some repos)."
+    detect: "gh"
+    notes: "Lesson 2026-05-09: prefer gh repo view + gh api over public-access fetches for auth-required content."
+
+  # ─── obsidian (the public Obsidian vault sync destination) ──────────────
+  public-obsidian:
+    description: "Obsidian vault sync target — operator's public knowledge surface (downstream of wiki/)."
+    detect: "wiki_sync"  # MCP tool, not a CLI directly
+    notes: "Information-surface-before-public-obsidian (D10): the assistant surfaces content via Multica WebSocket + wiki/log/ research-watch BEFORE Obsidian sync."
+
+# =============================================================================
+# Surface composition rules
+# =============================================================================
+# 1. The Profile is the same regardless of which surfaces are wired.
+# 2. Wiring a surface means the consuming tool can SEE the Profile + its content.
+# 3. Surfaces compose: an assistant running in OpenClaw can ALSO surface to
+#    Multica board (if Multica daemon also detects openclaw), AND ALSO be
+#    visible in Claude Code (because the Profile's brain_files are ambient).
+# 4. None of the surfaces are required EXCEPT the runtime that hosts the
+#    assistant. For OpenClaw-spawned assistants, openclaw-native is required.
+# 5. Surfaces can be enabled/disabled per profile without changing the Profile YAML.

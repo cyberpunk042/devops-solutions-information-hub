@@ -245,3 +245,4 @@ Standards for lesson pages — actionable learnings distilled from convergent ev
 [[model-wiki-design|Model — Wiki Design]]
 [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 [[deployment-closure-monitoring-artifacts|Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
+[[per-project-assistant-profile-standards|Per-Project Assistant Profile Standards]]

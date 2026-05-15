@@ -54,15 +54,12 @@ A **Per-Project Assistant Profile** is a declarative YAML artifact with 6 requir
 
 ## Instances
 
-| Instance | Project | Status | Notes |
-|---|---|---|---|
-| **opt-second-brain-assistant** | devops-solutions-information-hub (this) | planned (E024-M003 / T075) | The canonical example — knowledge curation, methodology stewardship, source ingestion, lesson distillation |
-| **openarms-assistant** | OpenArms | future (E024-M006) | Fleet-agent runtime engineering, harness compliance, methodology enforcement |
-| **openfleet-assistant** | OpenFleet | future (E024-M006) | Fleet orchestration, LightRAG knowledge consumption, task dispatch |
-| **aicp-assistant** | AICP | future (E024-M006) | Local-AI inference, complexity routing, $0 target enforcement |
-| **dcp-assistant** | devops-control-plane | future (E024-M006) | Infrastructure governance, decision tracking |
-| **root-ghostproxy-assistant** | root-ghostproxy | future (E024-M006) | Harness/ecosystem maintenance, global config propagation, IPS rule curation |
-| **hermes-assistant** | Hermes | future (E024-M006) — Hermes confirmed 2026-05-09 (Greek messenger god) |
+> [!warning] **2026-05-09 boundary correction (operator-stated, sacrosanct)**: *"every project will do their own Profiles... this is per project"*. /opt does NOT author sister-project Profiles. The only Profile instance authored at /opt is /opt's own (eat-our-own-dogfood); every other project authors its own Profile in its own repo.
+
+| Instance | Where authored | Status |
+|---|---|---|
+| **opt-second-brain-assistant** (this project — /opt's own Profile) | `wiki/domains/cross-domain/opt-second-brain-assistant-profile-...md` (THIS project's wiki) | ✅ authored 2026-05-09 |
+| **Per-sister-project Profiles** (OpenArms · OpenFleet · AICP · devops-control-plane · OpenClaw · root-ghostproxy · others) | Each project's OWN repo (typically `.assistant/profile.yaml`) | NOT /opt's authoring scope. /opt provides standards + model + integration + super-model (E024-M006) that those projects consume. |
 
 ## Pattern Structure
 

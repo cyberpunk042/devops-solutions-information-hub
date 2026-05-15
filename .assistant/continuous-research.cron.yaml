@@ -1,0 +1,118 @@
+# =============================================================================
+# .assistant/continuous-research.cron.yaml
+# =============================================================================
+# Per-profile CRON jobs for the Continuous Research assistant.
+# Per operator 2026-05-09 turn 7 (sacrosanct, verbatim):
+#   "list of CRON jobs that can be enabled or disabled and configured by AI
+#   assistant profile to enable other per-profile specific or even other global
+#   CRON jobs which can enable for example noticing certain delta and stuff like
+#   that or morning or evening tasks or start of week and end of week tasks and
+#   so on."
+#
+# Each job: enabled (toggle) · schedule (systemd-timer OnCalendar syntax) ·
+# trigger (what the assistant DOES when fired) · description (what + why).
+#
+# Enable a job:  `tools/assistant cron enable continuous-research <job-name>`
+# Disable a job: `tools/assistant cron disable continuous-research <job-name>`
+# List jobs:     `tools/assistant cron list continuous-research`
+# Install timers: `tools/assistant cron install continuous-research`
+#                  (creates systemd .timer units that fire the agent's
+#                   scheduled-task entry point)
+# =============================================================================
+
+profile: continuous-research
+
+jobs:
+
+  # ─── Hourly: lightweight delta scan ───────────────────────────────────
+  - name: frontier-delta-check
+    enabled: false                # operator-controlled; start disabled
+    schedule: "hourly"            # systemd OnCalendar: hourly
+    trigger:
+      type: openclaw-task
+      prompt: |
+        Perform a lightweight scan of the highest-cadence monitoring_surfaces
+        (Hugging Face trending, Anthropic release notes, OpenAI announcements,
+        GitHub trending for AI/agent repos). For each surface, detect NOVELTY
+        only — anything not already in /opt's wiki corpus. If significant
+        novelty found, escalate to full source-synthesis (use on_significant_change_detected).
+        If no novelty, log a noted-but-skipped entry. Budget cap: 1 minute model time.
+    description: "Hourly delta-check — novelty detection across fast-moving frontier surfaces. Lightweight; escalates to full synthesis on significant find."
+
+  # ─── Morning task: daily-startup scan ─────────────────────────────────
+  - name: morning-scan
+    enabled: false
+    schedule: "*-*-* 08:00:00"    # daily at 08:00
+    trigger:
+      type: openclaw-task
+      prompt: |
+        Daily morning scan. Process the past 16 hours of frontier-delta-check
+        findings (since yesterday evening). Author any new source-synthesis
+        pages needed. Surface a single "morning brief" entry in
+        wiki/log/<date>-research-watch-morning.md summarizing what changed
+        overnight and what (if anything) needs operator-decision-queue attention.
+    description: "Daily morning brief — overnight delta synthesis + operator-decision-queue triage."
+
+  # ─── Evening task: end-of-day report ──────────────────────────────────
+  - name: evening-report
+    enabled: false
+    schedule: "*-*-* 20:00:00"    # daily at 20:00
+    trigger:
+      type: openclaw-task
+      prompt: |
+        End-of-day report. Summarize the day's frontier findings + source-synthesis
+        pages authored + stale-claim flags raised. Write a wiki/log/<date>-research-watch-evening.md
+        summary. Surface any items that became newly urgent for operator review
+        (e.g., a strategic shift that emerged from cumulative findings).
+    description: "Daily evening summary — cumulative frontier findings + urgent items for operator review."
+
+  # ─── Weekly start: deep monday dive ───────────────────────────────────
+  - name: start-of-week-deep-dive
+    enabled: false
+    schedule: "Mon *-*-* 09:00:00"  # Monday at 09:00
+    trigger:
+      type: openclaw-task
+      prompt: |
+        Start-of-week deep-dive. Read the past 7 evening-reports. Identify
+        cross-day patterns. Synthesize a wiki/log/<date>-weekly-frontier-deep-dive.md
+        page that elevates any pattern to candidate lesson/decision territory.
+        Update vision_baselines_to_track if any baseline appears outdated.
+        Surface to operator-decision-queue.md for items requiring operator review.
+    description: "Weekly Monday deep-dive — pattern extraction from last week's daily findings."
+
+  # ─── Weekly end: friday digest ────────────────────────────────────────
+  - name: end-of-week-summary
+    enabled: false
+    schedule: "Fri *-*-* 17:00:00"  # Friday at 17:00
+    trigger:
+      type: openclaw-task
+      prompt: |
+        End-of-week digest. Summarize the week's research output: count of
+        new source-syntheses, count of stale-claim flags raised + operator-accept-rate,
+        any vision baseline updates. Author wiki/log/<date>-weekly-research-digest.md
+        with metrics + narrative. Flag any anti-signals (Profile.success_criteria.anti_signals_to_watch)
+        observed this week.
+    description: "Weekly Friday digest — research output metrics + anti-signal surfacing."
+
+  # ─── Monthly: budget audit ────────────────────────────────────────────
+  - name: monthly-budget-audit
+    enabled: false
+    schedule: "*-*-01 12:00:00"   # 1st of each month at noon
+    trigger:
+      type: openclaw-task
+      prompt: |
+        Monthly budget audit. Estimate this Profile's value-output for the month
+        vs Profile.model_routing.cost_ceilings.target_monthly_value_output_usd_equivalent.
+        If under target, why? If over hard_stop, alert. Report to wiki/log/.
+    description: "Monthly cost/value audit per Profile.success_criteria.measurable_value_per_month."
+
+# =============================================================================
+# Job-design rules
+# =============================================================================
+# 1. Each job is OFF by default (`enabled: false`) — operator opts in.
+# 2. Schedules use systemd OnCalendar syntax (man systemd.time).
+# 3. Triggers are abstract; the consuming runtime (OpenClaw / Multica / etc.)
+#    translates `type` + `prompt` into its native invocation.
+# 4. Heavy jobs (deep-dive, summary) should respect the Profile's cost ceiling.
+# 5. Per Profile.action_surface, jobs may NOT auto-promote maturity tiers or
+#    write to operator-territory files. They surface; operator decides.

@@ -1,0 +1,182 @@
+// =============================================================================
+// OpenClaw vendor configuration for the Continuous Research Profile
+// =============================================================================
+//
+// This is a CONSUMER of the Profile artifact .assistant/continuous-research.yaml.
+// The Profile is the source of truth (abstract, tool-agnostic assistant
+// definition). THIS file is OpenClaw's concrete agent entry that consumes
+// the Profile and renders it into OpenClaw's daemon-readable shape.
+//
+// Schema source: https://docs.openclaw.ai/gateway/config-agents (researched
+// 2026-05-09 via the OpenClaw configuration-reference docs). OpenClaw stores
+// config at ~/.openclaw/openclaw.json (JSON5 — comments + trailing commas).
+//
+// Operator-doctrinal (2026-05-09, sacrosanct):
+//   "managing across NONE, ONE OR MULTIPLE TOOL"
+//   "AT LEAST ONE PROFILE WITH AT LEAST ONE VENDOR CONFIGURATION FILE FOR
+//    OPENCLAW FOR THAT PROFILE"
+//
+// Deploy:
+//   This file is the agent entry to merge into ~/.openclaw/openclaw.json
+//   under agents.list[]. Two paths:
+//     (a) Manual: edit ~/.openclaw/openclaw.json, append this object to
+//         agents.list[], then `openclaw doctor` to validate.
+//     (b) RPC: `openclaw config patch agents.list[+]=$(cat
+//         .assistant/continuous-research.openclaw.json5)` if the operator's
+//         gateway is online (write+validate+restart in one step).
+//
+// Multiple instances:
+//   Operator can spawn N OpenClaw daemons (e.g., 2 24/7 for /opt + 1 for
+//   root-ghostproxy). Each daemon uses its own ~/.openclaw/openclaw.json;
+//   the same agent entry can appear in multiple daemons' configs.
+//
+// Source-of-truth pointer (operator-side documentation; non-standard field,
+// not consumed by OpenClaw runtime):
+//   _profile_source: ".assistant/continuous-research.yaml"
+// =============================================================================
+
+{
+  // --- Identity (Profile.identity → OpenClaw id + name + identity) ---
+  id: "continuous-research",                              // stable identifier
+  name: "/opt Continuous Research",                       // display name
+  default: false,                                          // not the default
+  workspace: "~/devops-solutions-information-hub",         // /opt repo root
+  agentDir: "~/.openclaw/agents/continuous-research/agent",
+
+  identity: {
+    name: "/opt Continuous Research",
+    theme: "frontier-monitor",
+    emoji: "🛰️"
+  },
+
+  // --- Model Routing (Profile.model_routing.preferences → model field) ---
+  // Profile said: high = frontier-general-purpose; mid = strong-general-purpose;
+  // low = fast-economy. OpenClaw uses one primary + fallbacks (single tier per
+  // invocation). Routing-by-complexity is at the model.fallback level.
+  model: {
+    primary: "anthropic/claude-opus-4-7",                  // frontier general-purpose
+    fallbacks: [
+      "anthropic/claude-sonnet-4-6",                       // strong general-purpose fallback
+      "anthropic/claude-haiku-4-5",                        // fast economy fallback
+      "openrouter/moonshotai/kimi-k2-6"                    // non-Anthropic alternative (mission)
+    ]
+  },
+
+  thinkingDefault: "medium",   // research benefits from reasoning
+  reasoningDefault: "on",
+  fastModeDefault: false,
+  params: { cacheRetention: "long" },
+
+  // --- Skills (Profile.action_surface.allowed_actions → OpenClaw skills) ---
+  // OpenClaw skills are folders containing SKILL.md (YAML frontmatter +
+  // markdown). Each skill below should exist at ~/.openclaw/agents/
+  // continuous-research/agent/skills/<name>/SKILL.md OR be installed from
+  // ClawHub (https://clawhub.ai).
+  //
+  // Skills required for the Continuous Research Profile's allowed_actions:
+  skills: [
+    // research category
+    "wiki-search",                       // wraps the wiki_search MCP
+    "wiki-read-page",                    // wraps wiki_read_page
+    "pipeline-fetch",                    // wraps tools.pipeline fetch
+    "huggingface-search",                // wraps Hugging Face MCP tools
+    "research-novelty-detect",           // compare new vs existing wiki content
+    // synthesis category
+    "source-synthesis-author",           // author wiki/sources/<domain>/src-*.md per template
+    "pipeline-crossref",                 // wraps tools.pipeline crossref
+    "pipeline-post",                     // wraps tools.pipeline post (mandatory after writes)
+    // flagging category
+    "research-flag-stale-claim",         // surface to wiki/log/ research-watch
+    "operator-decision-queue-surface"    // add entries to wiki/backlog/operator-decision-queue.md
+  ],
+
+  // --- Tools (Profile.action_surface.allowed/forbidden → OpenClaw tools) ---
+  tools: {
+    profile: "research",                 // OpenClaw preset (defines base allow/deny)
+    allow: [
+      "browser",                         // for WebSearch on non-corpus URLs
+      "filesystem-read",
+      "filesystem-write-wiki-sources",   // wiki/sources/<domain>/
+      "filesystem-write-wiki-log",       // wiki/log/ research-watch entries
+      "filesystem-write-raw-articles",   // raw/articles/ via pipeline fetch
+      "filesystem-write-raw-papers",     // raw/papers/ via pipeline fetch
+      "filesystem-write-raw-transcripts" // raw/transcripts/ via pipeline fetch
+    ],
+    deny: [
+      // operator-territory files (Profile.knowledge_scope.forbidden_scope)
+      "filesystem-write-claude-md",
+      "filesystem-write-agents-md",
+      "filesystem-write-context-md",
+      "filesystem-write-wiki-config",    // wiki/config/*.yaml
+      // cross-project boundary
+      "filesystem-write-sister-projects",
+      // sacrosanct verbatim records
+      "filesystem-write-raw-notes",      // raw/notes/ = operator directives only
+      // destructive ops
+      "git-force-push",
+      "git-reset-hard",
+      "git-clean-force",
+      // WebFetch on corpus URLs (Hard Rule 6 — use pipeline fetch)
+      "webfetch-github",
+      "webfetch-youtube",
+      "webfetch-arxiv",
+      "webfetch-medium",
+      "webfetch-raw-githubusercontent"
+    ],
+    elevated: { enabled: false }
+  },
+
+  // --- Heartbeat (24/7 cadence — Profile.runnable_24_7=true) ---
+  heartbeat: {
+    every: "30m",                        // periodic monitoring scan cadence
+    includeSystemPromptSection: true,
+    suppressToolErrorWarnings: false
+  },
+
+  // --- Context Injection (Profile.knowledge_scope.brain_files always-loaded) ---
+  contextInjection: "always",
+  bootstrapMaxChars: 12000,
+  bootstrapTotalMaxChars: 60000,
+  contextLimits: {
+    memoryGetMaxChars: 12000,
+    toolResultMaxChars: 16000,
+    postCompactionMaxChars: 1800
+  },
+
+  // --- Compaction (preserve recent research state) ---
+  compaction: {
+    mode: "safeguard",
+    timeoutSeconds: 900,
+    keepRecentTokens: 50000,
+    identifierPolicy: "strict"
+  },
+
+  // --- Sub-agents (Profile is focused, no sub-dispatch) ---
+  subagents: {
+    allowAgents: []                      // no sub-agent dispatch for this focused Profile
+  },
+
+  // --- Sandbox (needs filesystem write to wiki/sources/, raw/articles/, etc.) ---
+  sandbox: { mode: "off" },
+
+  // --- System prompt (Profile.prompt_templates.system VERBATIM) ---
+  // The system prompt is sourced from the Profile. If the Profile updates,
+  // re-sync this field. Operator: review .assistant/continuous-research.yaml
+  // for the canonical prompt; this is its verbatim copy.
+  systemPromptOverride: "You are the /opt Continuous Research Assistant. Your ONE job is to keep our models and technology-vision current.\n\nOperator-stated (verbatim, sacrosanct): \"Do research to make sure the models are up to date and our vision of the technogies are still acquire, and we do the proper update and etc...\"\n\nYou monitor the AI/ML frontier — new model releases, vendor announcements, research papers, GitHub trending, community threads — and compare against /opt's stored knowledge to identify divergences. When you find something significant, you author a new source-synthesis page in /opt's wiki + cross-reference + flag affected existing pages. You DO NOT auto-promote; operator approves maturity tier promotions.\n\nBehave per the 4 governing principles:\n  P1 Infrastructure > Instructions — use pipeline fetch, pipeline post, pipeline crossref structurally (not just remind yourself)\n  P2 Structured Context > Content — surface findings as structured wiki pages, not free-form chat\n  P3 Goldilocks — match research depth to strategic impact\n  P4 Declarations Aspirational Until Verified — every \"this beats X\" claim needs benchmark evidence + source citations\n\nOperator words are sacrosanct. Log every operator-stated research-direction to raw/notes/ verbatim. Hard Rule 6: NEVER WebFetch on corpus URLs — pipeline fetch / wiki_fetch.\n\nScope is strict: you do RESEARCH and SURFACING. You do not do Pipeline Synthesis (that's another Profile), Maturity Promotion (another), Methodology Stewardship (another), etc. Stay in lane.",
+
+  // --- Cost ceiling (Profile.model_routing.cost_ceilings) ---
+  // OpenClaw doesn't directly enforce per-agent USD cost ceilings. Caps are
+  // applied via:
+  //   - heartbeat cadence (30m caps daily invocations: ~48/day)
+  //   - model fallbacks (drops to cheaper tier on rate-limit or operator config)
+  //   - external monitoring (operator-side: watch monthly spend vs Profile target)
+  // Profile says: target $20-40/month value-equivalent; hard-stop $60/month.
+
+  // --- Source-of-truth pointer (operator-side documentation) ---
+  _profile_source: ".assistant/continuous-research.yaml",
+  _profile_version: 1,
+  _vendor: "openclaw",
+  _vendor_docs: "https://docs.openclaw.ai/gateway/config-agents",
+  _authored: "2026-05-09"
+}

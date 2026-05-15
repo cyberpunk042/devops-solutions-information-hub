@@ -73,6 +73,7 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 - [Learning Path — Trust Layer: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80–90% Space Saved on Large Context, Session Arc 2026-04-30)](learning-paths/trust-layer-tamper-proof-inference-2026-04-30.md) — Curated reading order for the **~13 wiki artifacts** produced during the 2026-04-30 session arc that authored the **4...
 - [Model — Claude Code](models/agent-config/model-claude-code.md) — Claude Code is Anthropic's CLI coding agent — a tool-use loop that reads, writes, and reasons about codebases from th...
 - [Model — Markdown as IaC — Design.md and Agent Configuration](models/agent-config/model-markdown-as-iac.md) — The Design
+- [Model — Per-Project Assistant Profile](models/agent-config/model-per-project-assistant-profile.md) — A **Per-Project Assistant Profile** is the abstract per-project definition of ONE focused AI-assistant job
 - [Model — Skills, Commands, and Hooks](models/agent-config/model-skills-commands-hooks.md) — The AI agent extension ecosystem is a four-level hierarchy: CLAUDE
 - [Model — Context Engineering](models/depth/model-context-engineering.md) — Context engineering is the discipline of designing WHAT information reaches an AI agent, in WHAT STRUCTURE, at WHAT D...
 - [Model — Knowledge Evolution](models/depth/model-knowledge-evolution.md) — The Knowledge Evolution model describes how raw sources become lessons, patterns, and decisions through a structured,...
@@ -110,6 +111,7 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 - [WSL Ubuntu-24.04 Migration Handoff (pickup-cold procedure)](references/wsl-ubuntu-migration-handoff.md) — This page is the **pickup-cold procedure** for any AI session (or the operator after an absence) that lands in the Po...
 - [Comparison Page Standards](standards/comparison-page-standards.md) — Standards for comparison pages — structured evaluations of alternatives across multiple criteria
 - [Concept Page Standards](standards/concept-page-standards.md) — Standards for concept pages — the most common page type in the wiki (114 pages as of 2026-04-28)
+- [Cursor State Folder Standards (`.cursor/`) — Common Cross-Project Runtime State Surface for /view · /questions · vision · focus · trace](standards/cursor-state-folder-standards-common-cross-project-runtime-state-surface.md) — The **`
 - [Decision Page Standards](standards/decision-page-standards.md) — Standards for decision pages — the highest-layer evolved page type (Layer 6)
 - [Deep-Dive Page Standards](standards/deep-dive-page-standards.md) — Standards for deep-dive pages — extended analysis that goes significantly deeper than a concept page
 - [Domain Overview Page Standards](standards/domain-overview-page-standards.md) — Standards for domain overview pages — curator pages that assess a domain's knowledge state, classify pages by maturit...
@@ -130,6 +132,7 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 - [Note Page Standards](standards/note-page-standards.md) — Standards for note pages — log entries recording directives, session summaries, or completion reports
 - [Operations Plan Page Standards](standards/operations-plan-page-standards.md) — Standards for operations plan pages — sequential deterministic checklists that any agent can follow mechanically
 - [Pattern Page Standards](standards/pattern-page-standards.md) — Standards for pattern pages — recurring structural phenomena observed across ≥2 independent instances
+- [Per-Project Assistant Profile Standards](standards/per-project-assistant-profile-standards.md) — Standards for **Per-Project Assistant Profile** artifacts — abstract, tool-agnostic definitions of what a focused AI ...
 - [Reference Page Standards](standards/reference-page-standards.md) — Standards for reference pages — LOOKUP material that readers consult for specific answers, not read linearly
 - [Session Handoff Standards](standards/session-handoff-standards.md) — Standards for session handoff documents — the non-wiki genre that lives in `docs/SESSION-*
 - [Source-Synthesis Page Standards](standards/source-synthesis-page-standards.md) — Standards for source-synthesis pages — processed versions of raw sources (articles, videos, papers, repos)
@@ -143,4 +146,4 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 
 ## Tags
 
-`standards`, `spine`, `quality`, `exemplar`, `page-type`, `model`, `reference`, `methodology`, `domain-overview`, `gold-standard`, `navigation`, `learning-path`, `anti-patterns`, `aicp`, `skills`, `concept`, `second-brain`, `ecosystem`, `integration`, `sub-model`
+`standards`, `spine`, `quality`, `exemplar`, `model`, `page-type`, `reference`, `methodology`, `domain-overview`, `gold-standard`, `navigation`, `learning-path`, `anti-patterns`, `aicp`, `skills`, `concept`, `second-brain`, `ecosystem`, `integration`, `sub-model`

@@ -1,0 +1,101 @@
+# =============================================================================
+# .assistant/_global/cron.yaml
+# =============================================================================
+# Global CRON jobs — cross-profile, project-wide, or system-level.
+# Per operator 2026-05-09 turn 7: "even other global CRON jobs which can
+# enable for example noticing certain delta and stuff like that".
+#
+# These jobs are NOT tied to a specific Profile. They run for the project as
+# a whole, or fire signals that any Profile may consume.
+# =============================================================================
+
+scope: global
+
+jobs:
+
+  # ─── Pipeline post: hourly wiki health check ──────────────────────────
+  - name: hourly-pipeline-post
+    enabled: false
+    schedule: "hourly"
+    trigger:
+      type: shell
+      command: ".venv/bin/python -m tools.pipeline post"
+      cwd: "{{PROJECT_ROOT}}"
+    description: "Hourly pipeline post — validate wiki structure, manifest, schema. 0 errors expected."
+
+  # ─── Gateway health check ─────────────────────────────────────────────
+  - name: daily-gateway-health
+    enabled: false
+    schedule: "*-*-* 09:30:00"
+    trigger:
+      type: shell
+      command: ".venv/bin/python -m tools.gateway health"
+      cwd: "{{PROJECT_ROOT}}"
+    description: "Daily gateway health — composite methodology+quality score."
+
+  # ─── Maturity flow report ─────────────────────────────────────────────
+  - name: weekly-maturity-flow
+    enabled: false
+    schedule: "Sun *-*-* 18:00:00"
+    trigger:
+      type: shell
+      command: ".venv/bin/python -m tools.pipeline evolve --score"
+      cwd: "{{PROJECT_ROOT}}"
+    description: "Weekly maturity-tier velocity — what's promoting, what's stuck."
+
+  # ─── Backlog status surface ───────────────────────────────────────────
+  - name: monday-backlog-surface
+    enabled: false
+    schedule: "Mon *-*-* 07:00:00"
+    trigger:
+      type: shell
+      command: ".venv/bin/python -m tools.pipeline backlog"
+      cwd: "{{PROJECT_ROOT}}"
+    description: "Monday backlog surface — epics/modules/tasks state into wiki/log/."
+
+  # ─── Provider pricing health ──────────────────────────────────────────
+  - name: weekly-provider-pricing-health
+    enabled: false
+    schedule: "Wed *-*-* 11:00:00"
+    trigger:
+      type: shell
+      command: ".venv/bin/python -m tools.pipeline provider-check --health"
+      cwd: "{{PROJECT_ROOT}}"
+    description: "Weekly provider pricing health — detect rate-card changes (Anthropic / Ollama Cloud / OpenRouter / etc.)."
+
+  # ─── Git status report (uncommitted state) ────────────────────────────
+  - name: morning-git-status
+    enabled: false
+    schedule: "*-*-* 07:30:00"
+    trigger:
+      type: shell
+      command: "git -C {{PROJECT_ROOT}} status --short > /tmp/morning-git-status-{{PROJECT}}.txt"
+    description: "Morning git status snapshot — uncommitted state surface for operator."
+
+  # ─── .cursor/ state regeneration (the common cross-project surface) ───
+  - name: regenerate-cursor-state
+    enabled: false
+    schedule: "*:0/30"                # every 30 minutes
+    trigger:
+      type: shell
+      command: ".venv/bin/python -m tools.state regenerate"
+      cwd: "{{PROJECT_ROOT}}"
+    description: "Regenerate .cursor/ state surface (view-snapshot · questions-snapshot · vision · focus · trace). Per operator 2026-05-09 turn 8 — the common cross-project user surface for /view + /questions + tracking."
+
+  # ─── Daily vision refresh (lower frequency) ───────────────────────────
+  - name: daily-vision-refresh
+    enabled: false
+    schedule: "*-*-* 06:00:00"
+    trigger:
+      type: shell
+      command: ".venv/bin/python -m tools.state regenerate vision"
+      cwd: "{{PROJECT_ROOT}}"
+    description: "Daily refresh of .cursor/vision.md — long-term mission + strategic direction."
+
+# =============================================================================
+# Global cron rules
+# =============================================================================
+# 1. Global jobs are project-wide (not assistant-specific).
+# 2. Triggers can be shell commands (run directly) or signals (any Profile may listen).
+# 3. Default off; operator opts in via `tools/assistant cron enable --global <job>`.
+# 4. {{PROJECT_ROOT}} substitution applied by tools/assistant.py.

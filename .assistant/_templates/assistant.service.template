@@ -1,0 +1,43 @@
+[Unit]
+Description=AI Assistant: {{PROFILE_NAME}} (Per-Project Assistant Profile)
+Documentation=file://{{PROJECT_ROOT}}/.assistant/README.md
+After=network-online.target
+Wants=network-online.target
+
+# The OpenClaw daemon is shared across agents in ~/.openclaw/openclaw.json.
+# This unit ensures the daemon is up (idempotent — safe to start when already running).
+
+[Service]
+Type=simple
+WorkingDirectory={{PROJECT_ROOT}}
+ExecStart=/usr/bin/env openclaw daemon start --foreground
+ExecStop=/usr/bin/env openclaw daemon stop
+Restart=on-failure
+RestartSec=10s
+
+# Environment — Profile-driven knowledge scope
+Environment="CLAUDE_PROJECT_DIR={{PROJECT_ROOT}}"
+Environment="ASSISTANT_PROFILE={{PROFILE_NAME}}"
+Environment="ASSISTANT_PROFILE_FILE={{PROJECT_ROOT}}/.assistant/{{PROFILE_NAME}}.yaml"
+
+# Output to journal (use `journalctl --user -u assistant-{{PROFILE_NAME}}` to view)
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=assistant-{{PROFILE_NAME}}
+
+[Install]
+WantedBy=default.target
+
+# =============================================================================
+# Operator commands (after `tools/assistant install {{PROFILE_NAME}}`):
+#
+#   systemctl --user enable  assistant-{{PROFILE_NAME}}    # reboot-persistent
+#   systemctl --user start   assistant-{{PROFILE_NAME}}    # start now
+#   systemctl --user status  assistant-{{PROFILE_NAME}}    # check
+#   systemctl --user stop    assistant-{{PROFILE_NAME}}    # stop
+#   systemctl --user disable assistant-{{PROFILE_NAME}}    # remove from boot
+#   journalctl --user -u     assistant-{{PROFILE_NAME}} -f # tail logs
+#
+# Note: WSL2 systemd requires `/etc/wsl.conf` to have `[boot]\nsystemd=true`.
+# Windows-side reboot-persistence: use Task Scheduler with `wsl --exec` action.
+# =============================================================================
