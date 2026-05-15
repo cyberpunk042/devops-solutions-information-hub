@@ -32,7 +32,7 @@ tags: [pattern, per-project-assistant, assistant-profile, runtime-agnostic, decl
 
 ## Summary
 
-A **per-project Assistant Profile** is a declarative configuration artifact (one per repository) that defines an assistant's identity, knowledge scope, action surface, model routing, MCP wiring, prompt templates, and success criteria — in a runtime-agnostic format. The Profile is consumed by a **spawn protocol** to materialize a running assistant instance on a specific runtime (OpenClaw, OpenArms, Hermes, generic Agent SDK consumer, future runtimes). The Profile is the **spec**; the spawned instance is the **product**. The pattern enables: (1) per-project tailoring without re-authoring runtime-specific config; (2) runtime portability (same Profile → different runtimes); (3) operator-level navigation across ecosystem assistants; (4) capture of Anthropic's programmatic credit pool ($200/month at Max 20x, effective 2026-06-15). Profiles must remain runtime-agnostic to preserve [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|anti-vendor-lock-in mission alignment]] — future routing to local-AI (AICP), other-provider models, and custom-tailored model groups must be supported by the schema.
+A **per-project Assistant Profile** is the abstract per-project assistant definition — a declarative artifact (one per repository) that defines what the assistant IS for this project: identity, knowledge scope, action surface, model preferences, prompt templates, and success criteria. A Profile is **way more than just setting for one tool** (operator-doctrinal 2026-05-09, sacrosanct). It is tool-agnostic by definition; tools come and go around it. Tools may consume or reference a Profile through their native mechanisms (Claude Code's CLAUDE.md / AGENTS.md ambient loading, Multica's agent + workspace config, OpenClaw's agent personality, Claude OS's Memory MCP, Hermes's skill subsystem, OpenCode's similar mechanism, etc.) but the Profile does NOT change shape to fit any tool. The pattern enables: (1) per-project tailoring of the assistant's definition without coupling to specific runtimes; (2) tool portability — the same Profile remains valid as tools evolve, are added, or are deprecated; (3) cross-project consistency (operator can navigate assistants across the ecosystem); (4) quality of both DEFINITIONS (precision of identity/scope/surface) and FEATURES (what the assistant actually delivers). Profiles must remain tool-agnostic to preserve [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|anti-vendor-lock-in mission alignment]] — *"support but not vendor lock ourself"* (operator 2026-05-09).
 
 ## Context
 
@@ -50,7 +50,7 @@ Does NOT apply to:
 
 ## Pattern Description
 
-A **Per-Project Assistant Profile** is a declarative YAML configuration with 6 required sections (Identity, Knowledge Scope, Action Surface, Model Routing, Prompt Templates, Success Criteria). The Profile is the **spec** the assistant inherits; the assistant runtime (OpenClaw, OpenArms, Hermes, generic Agent SDK consumer) is the **execution layer** that consumes the spec at spawn time. The pattern separates declarative configuration from execution mechanics — the same Profile can spawn on multiple runtimes via runtime-specific spawn protocols. Per-project tailoring means each repository has its own Profile reflecting that project's actual needs; the schema enforces that all Profiles use the same 6-section structure so they remain navigable, comparable, and migrable across the ecosystem.
+A **Per-Project Assistant Profile** is a declarative YAML artifact with 6 required sections (Identity, Knowledge Scope, Action Surface, Model Routing, Prompt Templates, Success Criteria). The Profile defines the abstract assistant for this project. Any tool that respects the abstract shape may consume the Profile through its native mechanism — but the Profile does NOT depend on, embed, or accommodate any specific tool's configuration shape. Per-project tailoring means each repository has its own Profile reflecting that project's actual needs; the shared 6-section structure makes Profiles navigable, comparable, and migrable across the ecosystem. The Profile is the abstract definition; tool configs are separate, derivative artifacts.
 
 ## Instances
 
@@ -66,9 +66,9 @@ A **Per-Project Assistant Profile** is a declarative YAML configuration with 6 r
 
 ## Pattern Structure
 
-> [!success] **Profile is the spec; Assistant is the spawned instance**
+> [!success] **A Profile is the abstract per-project assistant definition — way more than just settings for one tool**
 >
-> Declarative artifact → spawn protocol → running instance. The pattern enforces the separation so the same Profile can spawn on multiple runtimes and projects can swap runtimes without re-authoring the Profile.
+> A Profile defines WHAT the assistant IS for this project: its identity, knowledge scope, action surface, model preferences, prompts, success criteria. It is **tool-independent** by definition. Any tool (Claude Code, Multica, OpenClaw, Claude OS, OpenCode, Hermes, etc.) may consume or reference the Profile through its own mechanism — but the Profile does NOT change shape to fit any tool. Treating a Profile as a synonym for tool config is a vendor-lock corruption.
 
 ### The 6 Profile sections
 
@@ -76,7 +76,7 @@ A valid Per-Project Assistant Profile MUST have these sections:
 
 | Section | Content | Why |
 |---|---|---|
-| **1. Identity** | name, version, project, owner, tagline, runtime-targets supported | Declares what the assistant IS and which runtimes accept it |
+| **1. Identity** | name, version, project, owner, tagline, purpose | Declares what the assistant IS — its abstract definition, independent of any runtime |
 | **2. Knowledge Scope** | wiki paths, raw paths, file globs, MCP server access, sister-project links | Bounds what the assistant can/should know — prevents knowledge bloat |
 | **3. Action Surface** | allowed tool calls, forbidden tool calls, escalation triggers, approval gates | The MUST/MUST NOT list — programs assistant behavior structurally (P2) |
 | **4. Model Routing** | primary model, fallback chain, complexity-to-tier mapping, cost ceilings | Runtime-agnostic preferences for which model serves which workload |
@@ -92,11 +92,10 @@ profile_name: opt-second-brain-assistant
 project: devops-solutions-information-hub
 owner: operator
 tagline: "Knowledge curation, methodology stewardship, source ingestion, lesson distillation for the research wiki"
-runtime_targets:                         # which runtimes this Profile can spawn on
-  - openclaw
-  - openarms
-  - generic-agent-sdk
-  - claude-code-cli-p                    # the `claude -p` non-interactive mode
+# NOTE: A Profile is the abstract assistant definition. It is NOT a tool config.
+# It is NOT coupled to any specific runtime (Multica / Claude Code / OpenClaw / etc).
+# Tool configs are SEPARATE artifacts that may consume / reference the Profile.
+# Any spawn protocol documents HOW a tool consumes a Profile — never the other way around.
 knowledge_scope:
   wiki_paths:
     - wiki/spine/                        # foundation knowledge
@@ -157,39 +156,45 @@ success_criteria:
 ---
 ```
 
-## The Spawn Protocol
+## How Tools Consume a Profile (NOT how a Profile is shaped by tools)
 
-> [!info] **One Profile, many spawn protocols (one per runtime)**
+> [!info] **The Profile is the source; each tool consumes it through its own mechanism**
 >
-> The Profile is runtime-agnostic. A separate **spawn protocol** documents (per runtime) how the Profile is consumed to instantiate a running assistant. Spawn protocols live as their own pattern pages.
+> The Profile is independent and abstract. Each tool that may instantiate or reference an assistant from a Profile does so through ITS native mechanism. The Profile never changes shape to fit any tool. Spawn protocols (per-tool documents) describe how each tool consumes a Profile — never how the Profile depends on the tool.
 
-| Runtime | Spawn protocol (planned) |
+| Tool / runtime | How it can consume a Profile (via its native mechanism) |
 |---|---|
-| **Generic Agent SDK** | [[spawn-protocol-generic-agent-sdk]] — read Profile → construct Agent SDK config → instantiate Agent → expose CLI/HTTP endpoint |
-| **OpenClaw** | [[spawn-protocol-openclaw]] — read Profile → map to OpenClaw harness config → register profile as OpenClaw "personality" → expose Discord/Telegram/HTTP front-end |
-| **OpenArms** | [[spawn-protocol-openarms]] — read Profile → map to OpenArms fleet-agent spec → register in fleet → schedule per cron/event triggers |
-| **Hermes** | [[spawn-protocol-hermes]] — planned per E024-M004 (Hermes confirmed 2026-05-09) |
-| **`claude -p` CLI** | [[spawn-protocol-claude-code-cli-p]] — read Profile → render system prompt + tool list → invoke `claude -p` with composed args (consumes programmatic credit per Anthropic 2026-06-15 policy) |
+| **Claude Code** (interactive) | Reads `.assistant/profile.yaml` as ambient context; Claude inherits Identity + Knowledge Scope + Prompt Templates via CLAUDE.md / AGENTS.md / MCP wiring |
+| **`claude -p` CLI** (programmatic) | A wrapper composes the Profile's Prompt Templates + Action Surface into `claude -p` args; consumes Anthropic programmatic credit pool |
+| **Multica** | Multica agent's system prompt + workspace + skills reference the Profile; daemon-level routing respects Profile.model_routing |
+| **OpenClaw** | OpenClaw agent personality is built from the Profile; gateway-level configuration mirrors Profile.action_surface |
+| **OpenCode** | OpenCode reads the Profile as ambient config (same approach as Claude Code) |
+| **Claude OS** | Claude OS's Memory MCP + Real-Time Learning consume Profile.knowledge_scope; skills library aligned with Profile.action_surface |
+| **Hermes Agent** (Nous Research) | Hermes consumes the Profile via its skill / memory subsystem |
+| **Other / Future** | Any Agent-SDK-compatible runtime; Profile remains stable as tools evolve |
 
-## Why Runtime-Agnostic Matters
+**Critical**: a Profile does NOT enumerate "supported" tools. Any tool that respects the Profile's abstract shape can consume it. The list above is illustrative, not exhaustive, and never bounding.
 
-> [!warning] **A Profile coupled to one runtime violates the anti-vendor-lock-in mission**
+## Why Tool-Agnosticism Is Constitutive (Not Optional)
+
+> [!warning] **A Profile coupled to one tool violates the anti-vendor-lock-in mission**
 >
-> If the Profile schema only supports Claude Agent SDK, the operator's investment in profiles becomes a sunk cost when Claude alternatives mature (local models, Ollama Cloud, Kimi K2.6 via OpenRouter, custom-tailored model groups). Runtime-agnosticism preserves portability.
+> Operator-doctrinal (2026-05-09, sacrosanct): *"A PROFILE IS WAY MORE THAN JUST SETTING FOR ONE TOOL"* + *"support but not vendor lock ourself"*. The Profile is the per-project assistant definition; tools come and go around it. If the Profile's shape depends on Claude Agent SDK / Multica / any specific runtime, the operator's investment becomes captive to that vendor's lifecycle. Tool-agnosticism is constitutive of what a Profile IS.
 
 Concrete examples:
-- A Profile says "use the primary model for complex synthesis" — the runtime decides which actual model (Claude Opus, Qwen3.5, custom LoRA)
-- A Profile says "must have access to wiki_search MCP" — the runtime ensures that MCP is wired regardless of host
-- A Profile says "cost ceiling $50/month" — the runtime tracks consumption regardless of pricing model
+- A Profile says "the assistant has copywriting capability" — different tools realize this differently (skill.md, system prompt section, Multica skill, etc.); the Profile doesn't say HOW
+- A Profile says "primary model preference is high-capability for synthesis" — the runtime picks the actual model (Claude Opus / Qwen / custom LoRA)
+- A Profile says "must have access to the wiki knowledge base" — different tools wire it via MCP / file mount / API; the Profile doesn't specify the wiring mechanism
+- A Profile says "cost ceiling $50/month equivalent value" — the runtime tracks consumption in whatever unit its provider uses
 
 ## When To Apply
 
 > [!tip] **Project gets a Profile when**
 >
 > 1. The project has recurring assistance needs (curation, automation, scheduled tasks)
-> 2. The needs are project-specific (not generic — generic = no profile needed, use `claude -p` ad-hoc)
-> 3. The operator wants ecosystem-wide consistency (the 5-project navigability)
-> 4. The credit-capture frame matters (consuming $200/month at Max 20x)
+> 2. The needs are project-specific (not generic — generic = no profile needed, ad-hoc tool use suffices)
+> 3. The operator wants ecosystem-wide consistency (the multi-project navigability)
+> 4. High-quality definitions and features are wanted — Profile is the artifact that captures both
 
 ## When Not To
 

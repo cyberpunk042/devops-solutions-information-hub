@@ -265,32 +265,91 @@ Per memory [project_multica_self_hosted_2026_04_28.md]: operator already runs Mu
 - **HIGH** — Multica's skills-as-reusable-team-knowledge maps to /opt's existing wiki skills concept
 - **HIGH** — Multica's WebSocket progress streaming + board presence is candidate for "information surface before public Obsidian" requirement
 
-## T4 — Assistant Mission Control UI (Frontier: TBD — needs deeper code investigation)
+## T4 — Assistant Mission Control UI
 
-> [!warning] **Both reference repos have empty READMEs — classification based on repo names + operator framing only**
+> [!warning] **2026-05-09 correction**: Earlier draft of this section claimed "both repos have empty READMEs". That was wrong — pipeline fetch via public access failed to retrieve content, but the repos have substantial READMEs (verified via `gh repo view` with auth). Operator-corrected: *"They dont have empty readme.... this is nonsense... do this properly... stop skipping and minimizing"*. Section rewritten with real content.
 
-| Repo | Status | Notes |
+The T4 category has **two distinct projects** (not variants of one):
+
+### T4.a — jontsai/openclaw-command-center: Lightweight Read-Only Dashboard
+
+> [!success] **[jontsai/openclaw-command-center](https://github.com/jontsai/openclaw-command-center)** — AI assistant command and control dashboard ("Spawn more Overlords!")
+
+| Aspect | Value |
+|---|---|
+| **Purpose** | Real-time visibility into OpenClaw deployment — sessions, costs, system health, scheduled tasks |
+| **License** | MIT © Jonathan Tsai |
+| **Stack** | Vanilla JS · ES Modules · SSE streaming · REST API · Zero bundler |
+| **Size** | ~200 KB total (dashboard + server) |
+| **Dependencies** | Node.js only (Node 18+) |
+| **Default mode** | Read-only · localhost-binding (127.0.0.1) by default |
+| **Auth modes** | Token · Tailscale · Cloudflare Access · IP allowlist |
+| **Features** | Session Monitoring · LLM Fuel Gauges (token usage, costs, quota) · System Vitals (CPU, memory, disk, temperature) · Cron Jobs view + manage · Cerebro Topics (auto conversation tagging) · Operators tracking · Memory Browser · Privacy Controls · Cost Breakdown · Savings Projections |
+| **Update mechanism** | 2-second SSE push (not polling) · 5-second cache · single unified `/api/state` endpoint (no 16+ separate requests) |
+| **Install** | `npx clawhub@latest install command-center` |
+| **Auto-detect** | Workspace via `$OPENCLAW_WORKSPACE` / `~/.openclaw-workspace` / `~/molty` / `~/clawd` |
+
+### T4.b — abhi1693/openclaw-mission-control: Enterprise Governance Platform
+
+> [!success] **[abhi1693/openclaw-mission-control](https://github.com/abhi1693/openclaw-mission-control)** — operator-recommended "original"; centralized operations and governance for OpenClaw across teams + organizations
+
+| Aspect | Value |
+|---|---|
+| **Purpose** | Day-to-day operations surface for OpenClaw — plan, execute, review, audit in one system |
+| **License** | MIT |
+| **Stack** | Docker + Docker Compose · Next.js frontend · Node.js 22+ backend |
+| **Auth modes** | `local` (shared bearer token, 50+ chars) · `clerk` (Clerk JWT) |
+| **Features** | Work orchestration (orgs / board groups / boards / tasks / tags) · Agent operations · Governance + approvals · Gateway management · Activity timeline + audit · API-first model |
+| **Use cases** | Multi-team agent operations · Human-in-the-loop execution · Distributed runtime control · Audit + incident review · API-backed automation |
+| **Install** | One-line: `curl -fsSL https://raw.githubusercontent.com/abhi1693/openclaw-mission-control/master/install.sh \| bash` |
+| **Status** | Active development; APIs may change |
+
+### T4.c — cyberpunk042/ocmc-backup: Operator's Backup
+
+[cyberpunk042/ocmc-backup](https://github.com/cyberpunk042/ocmc-backup) is the operator's backup of abhi1693/openclaw-mission-control — same description ("AI Agent Orchestration Dashboard - Manage AI agents, assign tasks, and coordinate multi-agent collaboration via OpenClaw Gateway"). Operator-confirmed 2026-05-09: *"you can use the original too: https://github.com/abhi1693/openclaw-mission-control"*.
+
+### T4 Differentiator
+
+The two are NOT variants — they serve different layers of the same need:
+
+| Layer | T4.a (jontsai) | T4.b (abhi1693) |
 |---|---|---|
-| **[jontsai/openclaw-command-center](https://github.com/jontsai/openclaw-command-center)** | README empty | Original Mission Control for OpenClaw agents |
-| **[cyberpunk042/ocmc-backup](https://github.com/cyberpunk042/ocmc-backup)** | README empty | Operator's backup / fork — existence signals operator-adaptation pattern |
+| Primary mode | **Read-only** visibility | Full operations + governance |
+| Stack weight | Lightweight (~200KB) | Heavy (Docker + backend/frontend) |
+| Multi-team / approvals | ❌ | ✅ |
+| Real-time SSE | ✅ | (via API) |
+| Best for | Solo operator monitoring | Team-scale agent ops |
 
-### Classification rationale
-- Both repo names indicate "OpenClaw Mission Control" — UI for managing OpenClaw assistant fleet
-- "Command Center" / "Mission Control" terminology = dashboard / orchestration UI
-- Operator's "backup" repo signals they've forked or stashed the original
+### T4 Frontier
 
-### Open research items (operator-decision)
+Both are frontier in their respective sub-types. **T4.a** is the frontier for lightweight OpenClaw monitoring; **T4.b** is the frontier for enterprise OpenClaw governance. They are complementary, not competing.
 
-- [ ] Deep-read jontsai/openclaw-command-center repo CODE (not just README) — what does it actually do? Frontend? CLI? MCP server?
-- [ ] Deep-read cyberpunk042/ocmc-backup CODE — what does operator's fork differ on?
-- [ ] Determine relationship: is OCMC subsumed by Multica's broader board? Or complementary (OpenClaw-specific deep features)?
-- [ ] Frontier in T4 may be Multica's OpenClaw integration, not a dedicated OCMC
+### Relevance to /opt Profile design (E024)
 
-### Provisional relevance to /opt Profile design (E024)
-- **LOW (until investigated)** — empty READMEs limit insight; the function may already be subsumed by Multica
-- **MEDIUM** — if OCMC has OpenClaw-specific deep features Multica doesn't expose, those features are candidate inputs to spawn-protocol-openclaw (E024-M004)
+- **HIGH** — both expose OpenClaw operations data (sessions, costs, agent activity, audit) that any Profile's Success Criteria telemetry could surface
+- **MEDIUM** — T4.b's governance + approval primitives map onto Profile's Action Surface "escalation triggers" + "approval gates"
+- **MEDIUM** — both are OpenClaw-specific; the Profile remains tool-agnostic. These are **consumers** of an OpenClaw assistant's runtime activity, not consumers of the Profile itself
 
 ## Comparison Matrix
+
+## T5 — CLI Agent Runtimes (Hermes Agent + ecosystem)
+
+> [!success] **[nousresearch/hermes-agent](https://github.com/nousresearch/hermes-agent)** — Nous Research's self-improving CLI agent (researched 2026-05-09 per operator D7 follow-up; the "Hermes" the operator named)
+
+| Aspect | Value |
+|---|---|
+| **Purpose** | Self-improving CLI agent with persistent memory + automated skill creation; open-source alternative to Claude Code / Codex CLI |
+| **Built by** | Nous Research collective |
+| **Launched** | February 2026 |
+| **Models** | 300+ across multiple providers |
+| **Distinctive features** | Agent-curated memory with periodic nudges · Autonomous skill creation after complex tasks · Skills that self-improve during use · Sandboxed code execution via Unix socket RPC · Multi-platform reach (Telegram/Slack/Discord/WhatsApp/Signal/WeChat/iMessage/CLI simultaneously) |
+| **GitHub traction** | Crossed Claude Code on GitHub stars in ~10 weeks; one of fastest-growing OSS in mid-2026 |
+| **Known limitations** | Cannot navigate codebases via LSP · No AST-aware editing |
+| **Ecosystem** | [0xNyk/awesome-hermes-agent](https://github.com/0xNyk/awesome-hermes-agent) curated skills list · [AlexAI-MCP/hermes-CCC](https://github.com/AlexAI-MCP/hermes-CCC) port to Claude Code Channel (46 native skills) |
+
+**Why this matters in the comparison**: Hermes is the named CLI agent the operator referenced in the original directive (turn 1: "spawn an OpenClaw or OpenArms or Hermess and whatever"). Confirmed real CLI runtime via Multica's daemon-supported list AND as standalone Nous Research project. It's NOT a planned project name — it's a live, growing alternative to Claude Code.
+
+**Relevance to Profile pattern**: Hermes is one of many possible runtimes a per-project Profile can spawn an assistant on. Like OpenClaw / Multica / Claude OS / OpenCode / Claude Code, Hermes is a tool that may CONSUME a Profile through its native skill + memory mechanism. The Profile does not depend on Hermes; Hermes consumes the Profile.
 
 ## Cross-Type Comparison Matrix
 

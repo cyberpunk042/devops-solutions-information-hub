@@ -1,12 +1,12 @@
 {
-  "generated": "2026-05-15T14:50:10.799972+00:00",
+  "generated": "2026-05-15T15:36:19.641853+00:00",
   "stats": {
-    "pages": 859,
+    "pages": 861,
     "domains": 14,
     "sources": 110,
     "comparisons": 10,
-    "relationships": 4021,
-    "tags_unique": 3180,
+    "relationships": 4033,
+    "tags_unique": 3187,
     "layers": {
       "3": 4,
       "5": 38,
@@ -4175,6 +4175,173 @@
         {
           "verb": "DEMONSTRATES",
           "target": "Pattern \u2014 Per-Project Assistant Profile"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/e024-m004-spawn-protocols-per-runtime.md",
+      "slug": "backlog/modules/e024-m004-spawn-protocols-per-runtime",
+      "title": "E024-M004 \u2014 Spawn Protocols per Runtime (the bridge layer: Profile \u2192 running Assistant on Multica / OpenClaw / Hermes / Claude Code CLI / generic Agent SDK)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-09",
+      "updated": "2026-05-09",
+      "last_reviewed": "",
+      "tags": [
+        "module",
+        "E024-M004",
+        "spawn-protocols",
+        "runtime-bridge",
+        "multica",
+        "openclaw",
+        "hermes",
+        "claude-code-cli-p",
+        "generic-agent-sdk",
+        "2026-05-09",
+        "draft"
+      ],
+      "sources": [
+        {
+          "id": "parent-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn.md",
+          "description": "Parent Epic E024"
+        },
+        {
+          "id": "spectrum-foundation",
+          "type": "wiki",
+          "file": "wiki/domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools.md",
+          "description": "The L5 row of the integration matrix names the runtimes this module produces spawn protocols for"
+        },
+        {
+          "id": "frontier-comparison",
+          "type": "wiki",
+          "file": "wiki/comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09.md",
+          "description": "Frontier comparison identifying Multica as T3 frontier + operator-adopted; informs spawn priority"
+        },
+        {
+          "id": "spawn-protocol-multica",
+          "type": "wiki",
+          "file": "wiki/patterns/01_drafts/spawn-protocol-multica-the-runtime-agnostic-bridge-from-per-project-profile-to-multicas-10-cli-daemon.md",
+          "description": "First concrete spawn protocol (already authored 2026-05-09) \u2014 Multica is operator-adopted runtime"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E024 \u2014 Per-Project Assistant Configurations"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E024-M002 \u2014 Profile Pattern + Schema"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Concept \u2014 Declarative Agent Programming Spectrum"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Pattern \u2014 Per-Project Assistant Profile"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E024-M003 /opt Profile"
+        },
+        {
+          "verb": "DELIVERS",
+          "target": "Pattern \u2014 spawn-protocol-multica"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/e024-m006-cross-project-profile-catalog-everywhere-integration.md",
+      "slug": "backlog/modules/e024-m006-cross-project-profile-catalog-everywhere-integration",
+      "title": "E024-M006 \u2014 Cross-Project Profile Catalog (the 'everywhere' integration: one Profile per sister project + catalog page enabling operator navigation across the 7-project ecosystem)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-09",
+      "updated": "2026-05-09",
+      "last_reviewed": "",
+      "tags": [
+        "module",
+        "E024-M006",
+        "cross-project",
+        "profile-catalog",
+        "sister-projects",
+        "everywhere-integration",
+        "navigation",
+        "openarms",
+        "openfleet",
+        "aicp",
+        "devops-control-plane",
+        "openclaw",
+        "root-ghostproxy",
+        "hermes",
+        "2026-05-09",
+        "draft"
+      ],
+      "sources": [
+        {
+          "id": "parent-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn.md",
+          "description": "Parent Epic E024 \u2014 the 'everywhere' requirement from operator directive 2026-05-09 turn 3"
+        },
+        {
+          "id": "operator-directive-2026-05-09-turn-3",
+          "type": "directive",
+          "file": "raw/notes/2026-05-09-operator-directive-sdd-skills-context-hooks-harness-overlap-need-clear-view-and-vision-integrate-everywhere-wiki-llm-pm-claude-os-multica-openclaw-claude-code-opencode.md",
+          "description": "Operator: 'Both need to be possible to use / integrate properly everywhere, Wiki LLM, PM management tools, etc.... Through whatever tool'"
+        },
+        {
+          "id": "spectrum",
+          "type": "wiki",
+          "file": "wiki/domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools.md",
+          "description": "Spectrum's tool-agnostic abstraction makes per-project Profile portable across all 7 sister projects + tool variations"
+        },
+        {
+          "id": "sister-projects-config",
+          "type": "file",
+          "file": "wiki/config/sister-projects.yaml",
+          "description": "Operator-confirmed sister-projects registry \u2014 6 projects (openarms, openfleet, aicp, devops-control-plane, openclaw, root-ghostproxy); Hermes operator-confirmed 2026-05-09 (may or may not be in this file yet)"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E024 \u2014 Per-Project Assistant Configurations"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E024-M002 \u2014 Profile Schema"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E024-M003 \u2014 /opt canonical example"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Concept \u2014 Declarative Agent Programming Spectrum"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Pattern \u2014 Per-Project Assistant Profile"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Lesson \u2014 Anti-Vendor-Lock-In"
         }
       ]
     },
@@ -60451,8 +60618,8 @@
   ],
   "domains": {
     "backlog": {
-      "page_count": 111,
-      "relationship_count": 498
+      "page_count": 113,
+      "relationship_count": 510
     },
     "cross-domain": {
       "page_count": 291,
@@ -60763,6 +60930,7 @@
     ],
     "navigation": [
       "backlog/epics/milestone-v2/e014-goldilocks-navigable-system-identity-to-action-in-continuous-flow",
+      "backlog/modules/e024-m006-cross-project-profile-catalog-everywhere-integration",
       "sources/src-suricata-yaml-config",
       "spine/goldilocks-flow",
       "spine/learning-paths/custom-tailored-senior-engineer-tier-model-group-2026-05-04",
@@ -60890,6 +61058,7 @@
       "backlog/epics/milestone-v2/e016-integration-chain-proof-end-to-end-with-openarms",
       "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn",
       "backlog/epics/pre-milestone/E002-ecosystem-integration",
+      "backlog/modules/e024-m006-cross-project-profile-catalog-everywhere-integration",
       "comparisons/model-ecosystem-vs-four-project-ecosystem",
       "comparisons/openarms-vs-openfleet-enforcement",
       "domains/ai-agents/patterns/task-lifecycle-stage-gating",
@@ -61040,6 +61209,8 @@
     ],
     "openclaw": [
       "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn",
+      "backlog/modules/e024-m004-spawn-protocols-per-runtime",
+      "backlog/modules/e024-m006-cross-project-profile-catalog-everywhere-integration",
       "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09",
       "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
       "domains/ai-agents/orchestration/openclaw",
@@ -61068,6 +61239,8 @@
       "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn",
       "backlog/modules/e024-m002-per-project-assistant-profile-pattern-and-schema",
       "backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example",
+      "backlog/modules/e024-m004-spawn-protocols-per-runtime",
+      "backlog/modules/e024-m006-cross-project-profile-catalog-everywhere-integration",
       "backlog/tasks/T071-author-per-project-assistant-profile-schema-formal-definition",
       "backlog/tasks/T075-author-opt-second-brain-assistant-profile-canonical-example",
       "backlog/tasks/T078-author-spawn-protocol-generic-agent-sdk",
@@ -61100,6 +61273,8 @@
       "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn",
       "backlog/modules/e024-m002-per-project-assistant-profile-pattern-and-schema",
       "backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example",
+      "backlog/modules/e024-m004-spawn-protocols-per-runtime",
+      "backlog/modules/e024-m006-cross-project-profile-catalog-everywhere-integration",
       "backlog/tasks/T071-author-per-project-assistant-profile-schema-formal-definition",
       "backlog/tasks/T075-author-opt-second-brain-assistant-profile-canonical-example",
       "backlog/tasks/T078-author-spawn-protocol-generic-agent-sdk",
@@ -61128,6 +61303,7 @@
       "backlog/modules/e011-m004-circuit-breakers-and-fallback-chain",
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
       "backlog/modules/e012-m003-wiki-router-candidate-d",
+      "backlog/modules/e024-m006-cross-project-profile-catalog-everywhere-integration",
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
       "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
       "backlog/tasks/T015-extend-router-complexity-to-tier-mapping",
@@ -61218,6 +61394,7 @@
     ],
     "openfleet": [
       "backlog/epics/pre-milestone/E002-ecosystem-integration",
+      "backlog/modules/e024-m006-cross-project-profile-catalog-everywhere-integration",
       "comparisons/model-ecosystem-vs-four-project-ecosystem",
       "comparisons/openarms-vs-openfleet-enforcement",
       "domains/ai-agents/orchestration/agent-orchestration-patterns",
@@ -61964,6 +62141,7 @@
     ],
     "multica": [
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
+      "backlog/modules/e024-m004-spawn-protocols-per-runtime",
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
       "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config",
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
@@ -62052,6 +62230,7 @@
     ],
     "root-ghostproxy": [
       "backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05",
+      "backlog/modules/e024-m006-cross-project-profile-catalog-everywhere-integration",
       "backlog/modules/root-ghostproxy-m001-author-claude-md-and-agents-md",
       "backlog/modules/root-ghostproxy-m002-methodology-layer-decision",
       "backlog/modules/root-ghostproxy-m003-foundation-hardening",
@@ -62333,6 +62512,8 @@
       "backlog/modules/e022-m003-what-do-i-need-upgrade",
       "backlog/modules/e024-m002-per-project-assistant-profile-pattern-and-schema",
       "backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example",
+      "backlog/modules/e024-m004-spawn-protocols-per-runtime",
+      "backlog/modules/e024-m006-cross-project-profile-catalog-everywhere-integration",
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
       "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config",
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
@@ -62849,6 +63030,56 @@
     ],
     "tailored-profile": [
       "backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example"
+    ],
+    "E024-M004": [
+      "backlog/modules/e024-m004-spawn-protocols-per-runtime"
+    ],
+    "spawn-protocols": [
+      "backlog/modules/e024-m004-spawn-protocols-per-runtime"
+    ],
+    "runtime-bridge": [
+      "backlog/modules/e024-m004-spawn-protocols-per-runtime",
+      "patterns/01_drafts/spawn-protocol-multica-the-runtime-agnostic-bridge-from-per-project-profile-to-multicas-10-cli-daemon"
+    ],
+    "hermes": [
+      "backlog/modules/e024-m004-spawn-protocols-per-runtime",
+      "backlog/modules/e024-m006-cross-project-profile-catalog-everywhere-integration",
+      "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
+      "sources/tools-integration/src-multica-managed-agents-platform"
+    ],
+    "claude-code-cli-p": [
+      "backlog/modules/e024-m004-spawn-protocols-per-runtime"
+    ],
+    "generic-agent-sdk": [
+      "backlog/modules/e024-m004-spawn-protocols-per-runtime",
+      "backlog/tasks/T078-author-spawn-protocol-generic-agent-sdk"
+    ],
+    "E024-M006": [
+      "backlog/modules/e024-m006-cross-project-profile-catalog-everywhere-integration"
+    ],
+    "cross-project": [
+      "backlog/modules/e024-m006-cross-project-profile-catalog-everywhere-integration",
+      "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
+      "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects",
+      "lessons/03_validated/enforcement-compliance/second-brain-agent-must-respect-sister-project-boundaries-no-direct-cross-project-file-edits",
+      "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
+      "patterns/02_synthesized/second-brain-observer-pattern-extracting-learnings-from-live-sister-project-sessions"
+    ],
+    "profile-catalog": [
+      "backlog/modules/e024-m006-cross-project-profile-catalog-everywhere-integration"
+    ],
+    "sister-projects": [
+      "backlog/modules/e024-m006-cross-project-profile-catalog-everywhere-integration"
+    ],
+    "everywhere-integration": [
+      "backlog/modules/e024-m006-cross-project-profile-catalog-everywhere-integration"
+    ],
+    "devops-control-plane": [
+      "backlog/modules/e024-m006-cross-project-profile-catalog-everywhere-integration",
+      "comparisons/model-ecosystem-vs-four-project-ecosystem",
+      "domains/devops/four-project-ecosystem",
+      "ecosystem/project_profiles/devops-control-plane/identity-profile",
+      "spine/models/ecosystem/model-ecosystem"
     ],
     "custom_env": [
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config"
@@ -63426,9 +63657,6 @@
       "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes",
       "patterns/01_drafts/spawn-protocol-multica-the-runtime-agnostic-bridge-from-per-project-profile-to-multicas-10-cli-daemon"
     ],
-    "generic-agent-sdk": [
-      "backlog/tasks/T078-author-spawn-protocol-generic-agent-sdk"
-    ],
     "runtime-binding": [
       "backlog/tasks/T078-author-spawn-protocol-generic-agent-sdk"
     ],
@@ -63796,12 +64024,6 @@
       "spine/models/quality/model-quality-failure-prevention",
       "spine/models/quality/model-sfif-architecture"
     ],
-    "devops-control-plane": [
-      "comparisons/model-ecosystem-vs-four-project-ecosystem",
-      "domains/devops/four-project-ecosystem",
-      "ecosystem/project_profiles/devops-control-plane/identity-profile",
-      "spine/models/ecosystem/model-ecosystem"
-    ],
     "multi-project": [
       "comparisons/model-ecosystem-vs-four-project-ecosystem",
       "domains/devops/four-project-ecosystem",
@@ -64099,13 +64321,6 @@
     "execution-mode": [
       "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
       "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property"
-    ],
-    "cross-project": [
-      "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
-      "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects",
-      "lessons/03_validated/enforcement-compliance/second-brain-agent-must-respect-sister-project-boundaries-no-direct-cross-project-file-edits",
-      "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
-      "patterns/02_synthesized/second-brain-observer-pattern-extracting-learnings-from-live-sister-project-sessions"
     ],
     "thinking": [
       "decisions/01_drafts/extended-to-adaptive-thinking-migration"
@@ -64730,10 +64945,6 @@
     ],
     "integration-matrix": [
       "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools"
-    ],
-    "hermes": [
-      "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
-      "sources/tools-integration/src-multica-managed-agents-platform"
     ],
     "multi-agent": [
       "domains/ai-agents/orchestration/agent-orchestration-patterns",
@@ -70930,9 +71141,6 @@
     "profile-action-surface": [
       "patterns/01_drafts/skill-systems-orchestrator-plus-modular-child-skills-the-architecture-pattern-anthropic-wont-solve-for-you"
     ],
-    "runtime-bridge": [
-      "patterns/01_drafts/spawn-protocol-multica-the-runtime-agnostic-bridge-from-per-project-profile-to-multicas-10-cli-daemon"
-    ],
     "daemon-cli-auto-detection": [
       "patterns/01_drafts/spawn-protocol-multica-the-runtime-agnostic-bridge-from-per-project-profile-to-multicas-10-cli-daemon"
     ],
@@ -74751,7 +74959,9 @@
     {
       "target": "Concept \u2014 Declarative Agent Programming Spectrum",
       "referenced_by": [
-        "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermes)"
+        "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermes)",
+        "E024-M004 \u2014 Spawn Protocols per Runtime (the bridge layer: Profile \u2192 running Assistant on Multica / OpenClaw / Hermes / Claude Code CLI / generic Agent SDK)",
+        "E024-M006 \u2014 Cross-Project Profile Catalog (the 'everywhere' integration: one Profile per sister project + catalog page enabling operator navigation across the 7-project ecosystem)"
       ]
     },
     {
@@ -75082,6 +75292,8 @@
       "referenced_by": [
         "E024-M002 \u2014 Per-Project Assistant Profile Pattern + Schema (the foundational module)",
         "E024-M003 \u2014 /opt Second-Brain Assistant Profile (the canonical tailored example)",
+        "E024-M004 \u2014 Spawn Protocols per Runtime (the bridge layer: Profile \u2192 running Assistant on Multica / OpenClaw / Hermes / Claude Code CLI / generic Agent SDK)",
+        "E024-M006 \u2014 Cross-Project Profile Catalog (the 'everywhere' integration: one Profile per sister project + catalog page enabling operator navigation across the 7-project ecosystem)",
         "Decision \u2014 Strategic response to Anthropic Programmatic Credit Pool (2026-06-15): adopt per-project Assistant Profiles as the value-capture mechanism for the $200/month Max 20x credit"
       ]
     },
@@ -75095,13 +75307,32 @@
       "target": "E024-M002 \u2014 Profile Pattern + Schema",
       "referenced_by": [
         "E024-M003 \u2014 /opt Second-Brain Assistant Profile (the canonical tailored example)",
+        "E024-M004 \u2014 Spawn Protocols per Runtime (the bridge layer: Profile \u2192 running Assistant on Multica / OpenClaw / Hermes / Claude Code CLI / generic Agent SDK)",
         "T071 \u2014 Author Per-Project Assistant Profile schema formal definition (YAML schema for the 6 sections)"
+      ]
+    },
+    {
+      "target": "E024-M002 \u2014 Profile Schema",
+      "referenced_by": [
+        "E024-M006 \u2014 Cross-Project Profile Catalog (the 'everywhere' integration: one Profile per sister project + catalog page enabling operator navigation across the 7-project ecosystem)"
+      ]
+    },
+    {
+      "target": "E024-M003 /opt Profile",
+      "referenced_by": [
+        "E024-M004 \u2014 Spawn Protocols per Runtime (the bridge layer: Profile \u2192 running Assistant on Multica / OpenClaw / Hermes / Claude Code CLI / generic Agent SDK)"
       ]
     },
     {
       "target": "E024-M003 \u2014 /opt Profile",
       "referenced_by": [
         "T075 \u2014 Author /opt Second-Brain Assistant Profile per M002 schema (canonical tailored example)"
+      ]
+    },
+    {
+      "target": "E024-M003 \u2014 /opt canonical example",
+      "referenced_by": [
+        "E024-M006 \u2014 Cross-Project Profile Catalog (the 'everywhere' integration: one Profile per sister project + catalog page enabling operator navigation across the 7-project ecosystem)"
       ]
     },
     {
@@ -75571,6 +75802,7 @@
     {
       "target": "Lesson \u2014 Anti-Vendor-Lock-In",
       "referenced_by": [
+        "E024-M006 \u2014 Cross-Project Profile Catalog (the 'everywhere' integration: one Profile per sister project + catalog page enabling operator navigation across the 7-project ecosystem)",
         "Concept \u2014 The Declarative Agent Programming Spectrum: 5 layers (SDD \u00b7 Skills \u00b7 Context/Context-Injection \u00b7 Hooks \u00b7 Harness) unified, with integration matrix across tools (Claude OS \u00b7 Multica \u00b7 OpenClaw \u00b7 Claude Code \u00b7 OpenCode \u00b7 Hermes \u00b7 Codex \u00b7 Gemini) and destinations (Wiki LLM \u00b7 PM tools)",
         "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermes / generic Agent SDK consumers",
         "Pattern \u2014 Skill Systems: orchestrator skill + modular child skills wired by skill.md (the architecture that compounds \u2014 what Anthropic won't solve for you)",
@@ -76120,6 +76352,8 @@
       "referenced_by": [
         "E024-M002 \u2014 Per-Project Assistant Profile Pattern + Schema (the foundational module)",
         "E024-M003 \u2014 /opt Second-Brain Assistant Profile (the canonical tailored example)",
+        "E024-M004 \u2014 Spawn Protocols per Runtime (the bridge layer: Profile \u2192 running Assistant on Multica / OpenClaw / Hermes / Claude Code CLI / generic Agent SDK)",
+        "E024-M006 \u2014 Cross-Project Profile Catalog (the 'everywhere' integration: one Profile per sister project + catalog page enabling operator navigation across the 7-project ecosystem)",
         "T071 \u2014 Author Per-Project Assistant Profile schema formal definition (YAML schema for the 6 sections)",
         "T075 \u2014 Author /opt Second-Brain Assistant Profile per M002 schema (canonical tailored example)",
         "T078 \u2014 Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermes variants)",
@@ -76145,6 +76379,7 @@
     {
       "target": "Pattern \u2014 spawn-protocol-multica",
       "referenced_by": [
+        "E024-M004 \u2014 Spawn Protocols per Runtime (the bridge layer: Profile \u2192 running Assistant on Multica / OpenClaw / Hermes / Claude Code CLI / generic Agent SDK)",
         "Concept \u2014 The Declarative Agent Programming Spectrum: 5 layers (SDD \u00b7 Skills \u00b7 Context/Context-Injection \u00b7 Hooks \u00b7 Harness) unified, with integration matrix across tools (Claude OS \u00b7 Multica \u00b7 OpenClaw \u00b7 Claude Code \u00b7 OpenCode \u00b7 Hermes \u00b7 Codex \u00b7 Gemini) and destinations (Wiki LLM \u00b7 PM tools)"
       ]
     },

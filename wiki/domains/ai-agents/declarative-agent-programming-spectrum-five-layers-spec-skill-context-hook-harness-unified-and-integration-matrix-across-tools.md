@@ -49,11 +49,28 @@ tags: [concept, declarative-agent-programming, spectrum-of-abstractions, sdd, sk
 
 # Concept — The Declarative Agent Programming Spectrum
 
+> [!warning] **2026-05-09 refactor**: This concept was originally written with 5 layers (SDD · Skills · Context · Hooks · Harness). Operator correction 2026-05-09 turn 4: *"we see more, commands, hooks, agents brain files, etc..."* — the spectrum is wider. Now 7 layers (L0 Agents Brain Files · L1 SDD · L2 Skills · L3 Commands · L4 Context/Injection · L5 Hooks · L6 Harness). "etc." remains open — additional layers may surface (e.g., MCP server design as its own layer, telemetry config, governance gates).
+
 ## Summary
 
-A unification concept that resolves the operator's 2026-05-09 observation — *"SDD and Skills workflow overlap a lot, then context and context-injection / hooks and harnesss engineering too"* — into **5 distinct-but-overlapping layers** of a single underlying activity: **declaratively programming an AI agent's behavior**. The 5 layers, ordered from **most architectural / least runtime-bound** to **most operational / most runtime-bound**, are: **(1) SDD (Spec-Driven Development)** — the project/feature-level spec that programs what the agent will build · **(2) Skills (Skill Systems)** — the atomic-action-level spec that programs what the agent can do · **(3) Context / Context-Injection** — what the agent SEES at inference time and how that information is delivered · **(4) Hooks** — lifecycle-event-driven behavior modification (insertion point + reason + remediation) · **(5) Harness Engineering** — the runtime substrate that hosts the agent (Claude Code · Multica · OpenClaw · etc.). All 5 layers are **declarative** (text/yaml/markdown files, not imperative code) and all 5 program agent behavior — they differ in WHEN they fire, WHAT they program, and WHERE they live. The 5 layers compose: the per-project Assistant Profile pattern (E024) bridges all 5 by mapping each into a Profile section. The pattern is **tool-agnostic by design**: each of Claude OS · Multica · OpenClaw · Claude Code · OpenCode · Hermes · Codex · Gemini supports each layer through different mechanisms, captured in the **5×N integration matrix** below. Destinations (Wiki LLM, PM tools) consume the integrated output via shared file-system + MCP wiring.
+A unification concept that resolves the operator's 2026-05-09 observation — *"SDD and Skills workflow overlap a lot, then context and context-injection / hooks and harnesss engineering too"* + *"but we see more, commands, hooks, agents brain files, etc..."* — into **7 distinct-but-overlapping layers** of a single underlying activity: **declaratively programming an AI agent's behavior**. The 7 layers, ordered from **most foundational / always-loaded** to **most operational / runtime-bound**, are: **(L0) Agents Brain Files** — CLAUDE.md / AGENTS.md / RULES — the always-loaded foundational config that programs agent identity + ambient context · **(L1) SDD (Spec-Driven Development)** — the project/feature-level spec documents that program what the agent will build · **(L2) Skills (Skill Systems)** — the atomic-action-level spec that programs what the agent can do · **(L3) Commands** — slash-invoked operator-typed deterministic workflows (`.claude/commands/`) · **(L4) Context / Context-Injection** — what the agent SEES at inference time and how that information is delivered · **(L5) Hooks** — lifecycle-event-driven behavior modification · **(L6) Harness Engineering** — the runtime substrate that hosts the agent. All 7 layers are **declarative** (text/yaml/markdown files, not imperative code) and all 7 program agent behavior — they differ in WHEN they fire, WHAT they program, and WHERE they live. The layers compose; per-project Profiles span across them but DO NOT collapse them into one tool's config (operator-doctrinal 2026-05-09: *"A PROFILE IS WAY MORE THAN JUST SETTING FOR ONE TOOL"*). The pattern is **tool-agnostic by design**: each tool (Claude Code · Claude OS · Multica · OpenClaw · OpenCode · Hermes Agent · Codex · Gemini · etc.) supports each layer through different native mechanisms. Destinations (Wiki LLM, PM tools, public Obsidian — *every surface*) consume the integrated output flexibly + compatibly.
 
-## The 5 Layers — Defined
+## The 7 Layers — Defined
+
+### Layer 0: Agents Brain Files
+
+> [!info] **Layer 0 — Agents Brain Files: the always-loaded foundational config that programs agent identity + ambient context**
+>
+> Examples: CLAUDE.md (Claude Code), AGENTS.md (universal cross-tool), RULES files, CONTEXT.md (this project), per-project conventions docs.
+
+**Granularity**: foundational / ambient (always-loaded)
+**Lifecycle**: persists across every invocation; agent's "identity layer"
+**File form**: markdown at well-known paths (CLAUDE.md / AGENTS.md / RULES / etc.)
+**Programs**: WHO the agent IS, HOW it works, WHAT it must never forget
+**When it fires**: ambient — every reasoning step has these loaded
+**Mechanism**: harness auto-loads at session start; remains in context throughout
+**Operator-named**: *"agents brain files"* (2026-05-09 turn 3)
+**Distinction from L4 Context**: brain files are constitutive (define identity); context is informational (what's accessible at inference)
 
 ### Layer 1: SDD (Spec-Driven Development)
 
@@ -83,7 +100,22 @@ A unification concept that resolves the operator's 2026-05-09 observation — *"
 **Mechanism**: skill description triggers loading; orchestrator chains child skills; progressive disclosure of context
 **Determinism**: ~70% per operator-stated determinism ladder (skills auto-trigger but not 100% reliable)
 
-### Layer 3: Context / Context-Injection
+### Layer 3: Commands
+
+> [!info] **Layer 3 — Commands: slash-invoked deterministic operator-typed workflows**
+>
+> See: [[model-skills-commands-hooks|Model — Skills, Commands, Hooks]] for the mechanism-determinism positioning (Commands = 100% deterministic per operator 2026-04-24).
+
+**Granularity**: workflow (medium — same as skills, but operator-explicit)
+**Lifecycle**: persists; invoked when operator types `/<name>`
+**File form**: `.claude/commands/<name>.md` (or equivalent per tool)
+**Programs**: WHAT happens when operator deliberately invokes the named workflow
+**When it fires**: 100% on operator slash-invocation; never auto-triggered
+**Mechanism**: harness reads the command file when slash invoked; executes the workflow
+**Determinism**: **100%** — strongest of any layer per operator's determinism ladder
+**Distinction from L2 Skills**: skills auto-trigger by description-match (~70%); commands are operator-explicit slash-invocation (100%)
+
+### Layer 4: Context / Context-Injection
 
 > [!info] **Layer 3 — Context: what the agent SEES at inference time; Context-Injection: how it gets there**
 >
@@ -97,7 +129,7 @@ A unification concept that resolves the operator's 2026-05-09 observation — *"
 **Mechanism**: ambient (always-loaded files), on-demand (MCP/RAG retrieval), injection (hooks adding text mid-flow)
 **Channel constraints**: per the hook validity lesson — `hookSpecificOutput.additionalContext` valid ONLY for 6 events (SessionStart, UserPromptSubmit, PreToolUse, PostToolUse, PostToolBatch, SubagentStart); other events use `systemMessage` or plain stdout
 
-### Layer 4: Hooks
+### Layer 5: Hooks
 
 > [!info] **Layer 4 — Hooks: lifecycle-event-driven behavior modification**
 >
@@ -112,7 +144,7 @@ A unification concept that resolves the operator's 2026-05-09 observation — *"
 **Determinism**: 100% on the lifecycle event firing; logical (block + reason + remediation) per hook design pattern
 **Schema constraint**: output channels are event-specific (Layer 3 lesson)
 
-### Layer 5: Harness Engineering
+### Layer 6: Harness Engineering
 
 > [!info] **Layer 5 — Harness: the runtime substrate that hosts the agent**
 >

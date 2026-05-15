@@ -184,6 +184,12 @@ Beyond Anthropic's policy (which IS the trigger), this decision has soft depende
 | **D4** | Quality bar specifics — concrete success criteria beyond "schema passes" | Profile validation rules | Suggested: profile passes `pipeline post`; spawn protocol produces runnable instance; instance has measurable per-month value-output |
 | **D5** | Multi-seat operator handling — single seat or multiple seats? | Credit allocation strategy | Per Anthropic policy, credits per-seat with no pooling; if multi-seat, allocate each seat to specific project(s) |
 
+> [!warning] **2026-05-09 correction (operator-stated, sacrosanct)**
+>
+> *"A PROFILE IS WAY MORE THAN JUST SETTING FOR ONE TOOL"* + *"support but not vendor lock ourself"*. An earlier draft of this decision included a D15 question framing Profile as "unified spec that tool-configs duplicate parts of" — that framing is a corruption of what Profile means. A Profile is the **abstract per-project assistant definition**, tool-agnostic by definition. Tool configs are separate, derivative artifacts; the Profile is NOT a config file for any specific tool. D15 (Profile-as-source-of-truth vs distributed-config) is **dropped** — the question itself was wrongly framed.
+>
+> Likewise, D4 (define a quality bar) is **dropped** — operator's "high quality definitions and features" was a quality assertion about the artifact itself (the Profile must have high-quality definitions and features), not a request to operationalize a separate quality threshold.
+
 ## Relationships
 
 - IMPLEMENTS: [[2026-05-09-operator-directive-per-project-assistant-configs-spawn-openclaw-openarms-hermess-and-anthropic-programmatic-budget-policy-research|Operator directive 2026-05-09]]
