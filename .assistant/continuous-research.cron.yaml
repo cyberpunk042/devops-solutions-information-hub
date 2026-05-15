@@ -26,7 +26,7 @@ jobs:
 
   # ─── Hourly: lightweight delta scan ───────────────────────────────────
   - name: frontier-delta-check
-    enabled: false                # operator-controlled; start disabled
+    enabled: true                # autonomous AI assistant — runs by default; opt OUT only if you specifically want this job silent
     schedule: "hourly"            # systemd OnCalendar: hourly
     trigger:
       type: openclaw-task
@@ -41,7 +41,7 @@ jobs:
 
   # ─── Morning task: daily-startup scan ─────────────────────────────────
   - name: morning-scan
-    enabled: false
+    enabled: true
     schedule: "*-*-* 08:00:00"    # daily at 08:00
     trigger:
       type: openclaw-task
@@ -55,7 +55,7 @@ jobs:
 
   # ─── Evening task: end-of-day report ──────────────────────────────────
   - name: evening-report
-    enabled: false
+    enabled: true
     schedule: "*-*-* 20:00:00"    # daily at 20:00
     trigger:
       type: openclaw-task
@@ -68,7 +68,7 @@ jobs:
 
   # ─── Weekly start: deep monday dive ───────────────────────────────────
   - name: start-of-week-deep-dive
-    enabled: false
+    enabled: true
     schedule: "Mon *-*-* 09:00:00"  # Monday at 09:00
     trigger:
       type: openclaw-task
@@ -82,7 +82,7 @@ jobs:
 
   # ─── Weekly end: friday digest ────────────────────────────────────────
   - name: end-of-week-summary
-    enabled: false
+    enabled: true
     schedule: "Fri *-*-* 17:00:00"  # Friday at 17:00
     trigger:
       type: openclaw-task
@@ -96,7 +96,7 @@ jobs:
 
   # ─── Monthly: budget audit ────────────────────────────────────────────
   - name: monthly-budget-audit
-    enabled: false
+    enabled: true
     schedule: "*-*-01 12:00:00"   # 1st of each month at noon
     trigger:
       type: openclaw-task

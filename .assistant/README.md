@@ -112,11 +112,12 @@ All commands have THREE invocation paths (operator preference):
 | Stage | What | Mutates | Skips if... |
 |---|---|---|---|
 | **[1/6]** | Validate Profile YAML + resolve `workspace_mode` + materialize workspace (`git worktree add` for `worktree` / `git clone` for `own-workspace`; no-op for `shared`) | `~/.openclaw/agents/<name>/worktree` or `/workspace` (only if non-shared) | profile file missing → error; workspace already exists → idempotent skip |
-| **[2/6]** | Validate vendor config (OpenClaw default) | (read-only) | no vendor file → warn + `--no-openclaw` proceeds |
-| **[3/6]** | Merge agent entry into `~/.openclaw/openclaw.json` agents.list[] — **agent's `workspace` field is overridden with the workspace_mode-resolved path**, and `_workspace_mode` is stamped on the entry for status reporting | `~/.openclaw/openclaw.json` (writes JSON) | `--dry-run` to preview |
-| **[4/6]** | Register per-profile CRON jobs | (reads `.assistant/<name>.cron.yaml`) | no cron file → skipped |
-| **[5/6]** | Install systemd user unit (reboot persistence) | `~/.config/systemd/user/assistant-<name>.service` | systemctl absent → skipped |
-| **[6/6]** | Wire detected surfaces | (reads `.assistant/_global/surfaces.yaml`) | no surfaces file → skipped |
+| **[2/6]** | Validate vendor config (OpenClaw default) — read `agentDir` + `model.primary` from `.openclaw.json5` | (read-only) | no vendor file → warn + `--no-openclaw` proceeds |
+| **[3/6]** | Register agent with OpenClaw gateway: `openclaw agents add <id> --workspace <path> --agent-dir <path> --model <id> --non-interactive --json`. Idempotent: skips if `openclaw agents list` already shows the agent. | OpenClaw gateway state (agent registration) | `--dry-run` to preview; `--no-openclaw` to skip; openclaw not on PATH → error |
+| **[3b/6]** | Wire this project's MCP server into the gateway: `openclaw mcp set wiki-llm '{"command":".venv/bin/python","args":["-m","tools.mcp_server"],"cwd":"<project-root>"}'`. After this, ALL agents in the gateway (continuous-research, pipeline-synthesis, your existing `main`) can call this project's 28 wiki_* tools natively. | OpenClaw gateway state (MCP servers) | `--no-mcp` to skip; idempotent — skips if `wiki-llm` already registered |
+| **[4/6]** | Register per-profile CRON jobs in the gateway via `openclaw cron add` per job. Schedules translated from systemd-OnCalendar style (`Mon *-*-* 09:00:00`) to cron expressions (`0 9 * * 1`). Jobs registered DISABLED by default; enable via `bin/assistant cron enable <profile> <job>` or `openclaw cron enable <name>-<job>`. | OpenClaw gateway state (cron jobs) | `--no-cron` to skip; reads `.assistant/<name>.cron.yaml`; no cron file → skipped |
+| **[5/6]** | (Reserved for any future agent-specific systemd unit. Currently the gateway daemon's own systemd unit handles reboot persistence — `systemctl --user is-active openclaw-gateway`.) | `~/.config/systemd/user/assistant-<name>.service` | systemctl absent → skipped |
+| **[6/6]** | Detect available surfaces from `.assistant/_global/surfaces.yaml` | (read-only) | no surfaces file → skipped |
 
 Idempotent. Re-running install is safe — it updates the agent entry in place.
 

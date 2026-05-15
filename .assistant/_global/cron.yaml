@@ -15,7 +15,7 @@ jobs:
 
   # ─── Pipeline post: hourly wiki health check ──────────────────────────
   - name: hourly-pipeline-post
-    enabled: false
+    enabled: true
     schedule: "hourly"
     trigger:
       type: shell
@@ -25,7 +25,7 @@ jobs:
 
   # ─── Gateway health check ─────────────────────────────────────────────
   - name: daily-gateway-health
-    enabled: false
+    enabled: true
     schedule: "*-*-* 09:30:00"
     trigger:
       type: shell
@@ -35,7 +35,7 @@ jobs:
 
   # ─── Maturity flow report ─────────────────────────────────────────────
   - name: weekly-maturity-flow
-    enabled: false
+    enabled: true
     schedule: "Sun *-*-* 18:00:00"
     trigger:
       type: shell
@@ -45,7 +45,7 @@ jobs:
 
   # ─── Backlog status surface ───────────────────────────────────────────
   - name: monday-backlog-surface
-    enabled: false
+    enabled: true
     schedule: "Mon *-*-* 07:00:00"
     trigger:
       type: shell
@@ -55,7 +55,7 @@ jobs:
 
   # ─── Provider pricing health ──────────────────────────────────────────
   - name: weekly-provider-pricing-health
-    enabled: false
+    enabled: true
     schedule: "Wed *-*-* 11:00:00"
     trigger:
       type: shell
@@ -65,7 +65,7 @@ jobs:
 
   # ─── Git status report (uncommitted state) ────────────────────────────
   - name: morning-git-status
-    enabled: false
+    enabled: true
     schedule: "*-*-* 07:30:00"
     trigger:
       type: shell
@@ -74,7 +74,7 @@ jobs:
 
   # ─── .cursor/ state regeneration (the common cross-project surface) ───
   - name: regenerate-cursor-state
-    enabled: false
+    enabled: true
     schedule: "*:0/30"                # every 30 minutes
     trigger:
       type: shell
@@ -84,7 +84,7 @@ jobs:
 
   # ─── Daily vision refresh (lower frequency) ───────────────────────────
   - name: daily-vision-refresh
-    enabled: false
+    enabled: true
     schedule: "*-*-* 06:00:00"
     trigger:
       type: shell

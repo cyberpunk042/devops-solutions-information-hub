@@ -26,7 +26,7 @@ jobs:
 
   # ─── Hourly: process top-of-backlog ───────────────────────────────────
   - name: backlog-process-top
-    enabled: false                # operator-controlled; start disabled
+    enabled: true                # autonomous AI assistant — runs by default; opt OUT only if you specifically want this job silent
     schedule: "hourly"            # systemd OnCalendar: hourly
     trigger:
       type: openclaw-task
@@ -46,7 +46,7 @@ jobs:
 
   # ─── Morning: daily batch process ─────────────────────────────────────
   - name: morning-batch-process
-    enabled: false
+    enabled: true
     schedule: "*-*-* 07:00:00"    # daily at 07:00 (before morning-scan of Continuous Research)
     trigger:
       type: openclaw-task
@@ -66,7 +66,7 @@ jobs:
 
   # ─── Evening: backlog status report ───────────────────────────────────
   - name: evening-backlog-report
-    enabled: false
+    enabled: true
     schedule: "*-*-* 21:00:00"    # daily at 21:00 (after Continuous Research's evening-report)
     trigger:
       type: openclaw-task
@@ -83,7 +83,7 @@ jobs:
 
   # ─── Weekly Monday: backlog deep-audit ────────────────────────────────
   - name: start-of-week-backlog-audit
-    enabled: false
+    enabled: true
     schedule: "Mon *-*-* 10:00:00"  # Monday at 10:00
     trigger:
       type: openclaw-task
@@ -102,7 +102,7 @@ jobs:
 
   # ─── Weekly Friday: synthesis output digest ───────────────────────────
   - name: end-of-week-synthesis-digest
-    enabled: false
+    enabled: true
     schedule: "Fri *-*-* 17:30:00"  # Friday at 17:30
     trigger:
       type: openclaw-task
@@ -121,7 +121,7 @@ jobs:
 
   # ─── Monthly: budget audit ────────────────────────────────────────────
   - name: monthly-budget-audit
-    enabled: false
+    enabled: true
     schedule: "*-*-01 13:00:00"   # 1st of each month at 13:00
     trigger:
       type: openclaw-task
