@@ -53,10 +53,10 @@ Build per-project assistant configurations / profiles — one per repo, tailored
 ## Goals
 
 - **Per-project Assistant Profile schema** — runtime-agnostic format defining assistant identity, knowledge scope, allowed/forbidden actions, model preferences, MCP wiring, prompt templates, success criteria. One schema, many instances.
-- **/opt second-brain Assistant Profile** — the tailored example for THIS project (knowledge curation, methodology stewardship, source ingestion, lesson distillation, gateway-driven orientation). Demonstrates the schema by exemplary instance.
+- **this project (the research wiki) Assistant Profile** — the tailored example for THIS project (knowledge curation, methodology stewardship, source ingestion, lesson distillation, gateway-driven orientation). Demonstrates the schema by exemplary instance.
 - **Spawn protocols per runtime** — concrete instructions for how a Profile materializes as a running instance on OpenClaw / OpenArms / Hermes / generic Agent-SDK consumer. Each runtime has its conventions; the spawn protocol bridges Profile → runtime.
 - **Programmatic credit budget allocation strategy** — decide how to consume the $200/month Max 20x credit across projects (each project's share; cross-project pooling not supported by Anthropic so cannot be done at the credit layer; pool at the operator-decision layer).
-- **Cross-project Profile catalog** — once /opt's profile is exemplary, each sister project (OpenArms, OpenFleet, AICP, devops-control-plane, root-ghostproxy) gets its own tailored Profile. The catalog enables operator-level navigation.
+- **Cross-project Profile catalog** — once this project's profile is exemplary, each sister project (OpenArms, OpenFleet, AICP, devops-control-plane, root-ghostproxy) gets its own tailored Profile. The catalog enables operator-level navigation.
 - **Quality bar enforcement** — "high quality definitions and features" per operator. Profiles must have specific structural sections (identity, knowledge scope, action surface, model routing, success criteria); validators enforce.
 
 ## Done When
@@ -65,7 +65,7 @@ Build per-project assistant configurations / profiles — one per repo, tailored
 - [ ] `wiki/decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles.md` exists with operator approval (strategy decision)
 - [ ] `wiki/patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes.md` exists with schema definition (pattern)
 - [ ] `wiki/config/templates/assistant-profile.md` template exists (operationalizes the pattern)
-- [ ] `wiki/concepts/opt-second-brain-assistant-profile.md` (or domain-overview placement) exists — the tailored /opt example
+- [ ] `wiki/concepts/assistant-profile.md` (or domain-overview placement) exists — the tailored this project example
 - [ ] At least 3 spawn protocol pages: `wiki/patterns/01_drafts/spawn-protocol-{openclaw,openarms,generic-agent-sdk}.md`
 - [ ] Operator confirms "Hermes" identity — typo for Hermes, or new project name; if new, add to `wiki/config/sister-projects.yaml`
 - [ ] All 6 sister projects have draft assistant profiles in `wiki/concepts/sister-project-profiles/` (one per project)
@@ -94,9 +94,9 @@ Build per-project assistant configurations / profiles — one per repo, tailored
 > | Stage | Required Artifacts | Status |
 > |-------|--------------------|--------|
 > | **Document** | Research synthesis (Anthropic policy) · Directive log · This Epic · Strategic decision page · Profile pattern page | ✅ Mostly done (this turn) |
-> | **Design** | Profile schema (formal) · Spawn protocol per runtime · /opt profile design · Credit allocation strategy · Cross-project profile design | Pending |
+> | **Design** | Profile schema (formal) · Spawn protocol per runtime · this project profile design · Credit allocation strategy · Cross-project profile design | Pending |
 > | **Scaffold** | `wiki/config/templates/assistant-profile.md` · Profile scaffold script (`pipeline scaffold assistant-profile`) · Profile validator (`pipeline post` extension) | Pending |
-> | **Implement** | /opt profile authored · Sister-project profiles authored · Spawn protocols documented · Profile catalog page | Pending |
+> | **Implement** | this project profile authored · Sister-project profiles authored · Spawn protocols documented · Profile catalog page | Pending |
 > | **Test** | Profile validates · Spawn protocol runnable on OpenClaw test · `claude -p` consumption observed against $200 credit | Pending (requires 2026-06-15 effective date for `claude -p` consumption test) |
 
 ## Module Breakdown
@@ -105,14 +105,14 @@ Build per-project assistant configurations / profiles — one per repo, tailored
 |---|---|---|---|
 | **E024-M001** | Anthropic Policy Synthesis | Research-confirmed source-synthesis page; clarifies the credit pool mechanics + value-at-risk | ✅ done this turn (1 task) |
 | **E024-M002** | Per-Project Assistant Profile Pattern + Schema | Pattern page defining the Profile schema (identity, knowledge scope, action surface, model routing, success criteria); operator-reviewable schema | 3-4 tasks |
-| **E024-M003** | /opt Second-Brain Assistant Profile (the tailored example) | The tailored profile for /opt — knowledge curation, methodology stewardship, source ingestion, lesson distillation; demonstrates schema by exemplary instance | 2-3 tasks |
+| **E024-M003** | this project Second-Brain Assistant Profile (the tailored example) | The tailored profile for this project — knowledge curation, methodology stewardship, source ingestion, lesson distillation; demonstrates schema by exemplary instance | 2-3 tasks |
 | **E024-M004** | Spawn Protocols per Runtime | Pattern pages for spawn-on-OpenClaw, spawn-on-OpenArms, spawn-on-Hermes (pending clarification), spawn-on-generic-Agent-SDK; bridges Profile → runtime | 4 tasks |
 | **E024-M005** | Strategic Decision + Credit Budget Allocation | Decision page on the strategic response to Anthropic policy + how to allocate the $200/month across projects + cost-tracking pattern | 2-3 tasks |
 | **E024-M006** | Cross-Project Profile Catalog | One profile per sister project (OpenArms, OpenFleet, AICP, devops-control-plane, root-ghostproxy, Hermes) + catalog page enabling operator navigation | 6 tasks |
 
 ## Dependencies
 
-- **None blocking** — all 6 modules can be authored at /opt without external dependencies
+- **None blocking** — all 6 modules can be authored at this project without external dependencies
 - **Benefits from but does not require**:
   - [[custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis|Custom-Tailored Model Group]] — once mature, profiles can route to local models instead of Claude
   - [[root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05|root-ghostproxy SFIF rollout]] — harness propagation provides the runtime layer that consumes profiles
@@ -126,7 +126,7 @@ Build per-project assistant configurations / profiles — one per repo, tailored
 
 > [!question] **Cross-project credit pool** — Anthropic does NOT allow pooling credits across team seats. If operator has multiple seats (e.g., one per project), each seat has its own $200/month — pooling happens at the operator-decision layer (which project's automation consumes which seat's credit). If single-seat operator, the $200/month must be split conceptually but is a single credit pool technically.
 
-> [!question] **2026-06-15 effective-date readiness** — Should the M002 Profile pattern + M003 /opt profile + at least one spawn protocol (M004) be ready by 2026-06-15 to start capturing credit immediately? If yes, that's a ~5-week timeline — operator decision.
+> [!question] **2026-06-15 effective-date readiness** — Should the M002 Profile pattern + M003 this project profile + at least one spawn protocol (M004) be ready by 2026-06-15 to start capturing credit immediately? If yes, that's a ~5-week timeline — operator decision.
 
 > [!question] **Quality bar definition** — Operator-stated "high quality definitions and features". Concrete quality criteria? Suggested: profile passes `pipeline post`; profile uses schema-required sections (identity, scope, surface, routing, criteria); spawn protocol produces runnable instance; instance demonstrably consumes < $200/month with measurable value-output.
 
@@ -134,7 +134,7 @@ Build per-project assistant configurations / profiles — one per repo, tailored
 
 | Anti-pattern | Why bad |
 |---|---|
-| Build the runtime (OpenClaw/OpenArms/Hermes code) at /opt | /opt = knowledge; runtimes live in their own repos. /opt produces the **profile** + **spawn protocol**; the runtime CONSUMES |
+| Build the runtime (OpenClaw/OpenArms/Hermes code) at this project | this project = knowledge; runtimes live in their own repos. this project produces the **profile** + **spawn protocol**; the runtime CONSUMES |
 | Conflate Profile (configuration artifact) with Assistant (running instance) | Profile is the spec; Assistant is the spawned process. Schema discipline matters |
 | Build a single mega-profile for all projects | Operator said "one tailored to the needs" per project. One profile per project — each tailored |
 | Defer to 2026-06-15+ to start capturing credit | Use-it-or-lose-it begins billing-cycle-after-2026-06-15. Each unused month = $200 expired |

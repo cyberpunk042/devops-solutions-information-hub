@@ -119,7 +119,7 @@ Survey + classification of 7 operator-named assistant/orchestration platforms (p
 - Documentation is functional but bare; v1.0+ rough edges
 - Optimized for one-user one-machine; team-sharing is template-based (manual)
 
-### Relevance to /opt Profile design (E024)
+### Relevance to this project Profile design (E024)
 - **HIGH** — Claude OS's session-management + memory-MCP patterns map directly to Profile's **Knowledge Scope + Success Criteria** sections
 - **HIGH** — Skills library + skill-chaining (per YouTube source) maps to Profile's optional **Skills inventory** (TBD in M002)
 - **HIGH** — Hybrid indexing approach informs the Profile's potential code-aware knowledge-scope expansion
@@ -186,8 +186,8 @@ Task description in Markdown.
 - Project management feature set is comprehensive but not at-scale enterprise (no advanced reporting, etc.)
 - Restricted to Obsidian users
 
-### Relevance to /opt Profile design (E024)
-- **MEDIUM** — Obsidian PM's plain-Markdown-with-frontmatter pattern aligns with /opt's existing approach (Profile YAML)
+### Relevance to this project Profile design (E024)
+- **MEDIUM** — Obsidian PM's plain-Markdown-with-frontmatter pattern aligns with this project's existing approach (Profile YAML)
 - **HIGH** — Confirms operator's existing public Obsidian publishing flow ([[wiki_sync]] MCP / `tools.sync`) as the right anchor for the "info surface before public Obsidian" question — the issue isn't WHERE data lives (already plain-text), it's WHAT layers exist between authoring and publishing
 - **MEDIUM** — The task-frontmatter schema is an exemplary instance of declarative-config-as-data; informs Profile section design
 
@@ -259,10 +259,10 @@ Per memory [project_multica_self_hosted_2026_04_28.md]: operator already runs Mu
 - Cloud version is paid (multica.ai/app); self-host avoids cost but adds ops burden
 - License unclear from README snippet (need deeper read; community CI badge suggests open-source)
 
-### Relevance to /opt Profile design (E024)
+### Relevance to this project Profile design (E024)
 - **CRITICAL** — Multica is the existing operator adoption that the Profile-spawn-protocol architecture must INTEGRATE WITH, not compete with
 - **CRITICAL** — Multica's daemon-auto-detect-CLIs pattern aligns with Profile's `runtime_targets:` list — the same Profile can target any of Multica's 10+ supported CLIs
-- **HIGH** — Multica's skills-as-reusable-team-knowledge maps to /opt's existing wiki skills concept
+- **HIGH** — Multica's skills-as-reusable-team-knowledge maps to this project's existing wiki skills concept
 - **HIGH** — Multica's WebSocket progress streaming + board presence is candidate for "information surface before public Obsidian" requirement
 
 ## T4 — Assistant Mission Control UI
@@ -324,7 +324,7 @@ The two are NOT variants — they serve different layers of the same need:
 
 Both are frontier in their respective sub-types. **T4.a** is the frontier for lightweight OpenClaw monitoring; **T4.b** is the frontier for enterprise OpenClaw governance. They are complementary, not competing.
 
-### Relevance to /opt Profile design (E024)
+### Relevance to this project Profile design (E024)
 
 - **HIGH** — both expose OpenClaw operations data (sessions, costs, agent activity, audit) that any Profile's Success Criteria telemetry could surface
 - **MEDIUM** — T4.b's governance + approval primitives map onto Profile's Action Surface "escalation triggers" + "approval gates"
@@ -427,13 +427,13 @@ This pattern aligns with the [[per-project-assistant-profile-pattern-tailored-co
 | **T3 Multi-Agent Orchestration** | **Multica** | Widest CLI breadth (10+ including Hermes); team-native multi-workspace; self-host option; **already operator-adopted** |
 | **T4 Assistant Mission Control UI** | TBD | Both candidate repos have empty READMEs; possibly subsumed by Multica; needs code-investigation |
 
-## Synthesis — How These Inputs Shape the /opt Profile Design (E024)
+## Synthesis — How These Inputs Shape this project Profile Design (E024)
 
 > [!tip] **Adopt the best from each frontier; don't lock in to any single one**
 
 1. **From Claude OS**: take the **session-management pattern** (4-field state for hot-resume) and the **memory-MCP integration pattern** (natural-language remember-this) into Profile **Knowledge Scope** + **Success Criteria** sections (E024-M002).
 
-2. **From Obsidian PM**: take the **plain-Markdown-with-YAML-frontmatter** discipline (already aligned with /opt's existing approach); confirms Profile-as-YAML is right primitive (E024-M002 schema design).
+2. **From Obsidian PM**: take the **plain-Markdown-with-YAML-frontmatter** discipline (already aligned with this project's existing approach); confirms Profile-as-YAML is right primitive (E024-M002 schema design).
 
 3. **From Multica**: this is the **integration target**, not a competitor. The Profile's `runtime_targets:` list should explicitly enumerate Multica's 10+ supported CLIs (Claude Code · Codex · OpenClaw · OpenCode · Hermes · Gemini · Pi · Cursor Agent · Kimi · Kiro CLI) since Multica's daemon already detects them. **Spawn-protocol-multica** becomes a candidate addition to E024-M004 module scope.
 
@@ -453,9 +453,9 @@ This pattern aligns with the [[per-project-assistant-profile-pattern-tailored-co
 
 > [!question] **D8 — T4 (OCMC) investigation** — Both reference repos have empty READMEs. Should we deep-read the code (gh CLI clone or look at file tree via gh api)? Or defer pending operator-clarification of which OCMC fork to study?
 
-> [!question] **D9 — Skill Systems pattern adoption** — The YouTube transcript's "skill system = orchestrator + child skills" pattern is concretely applicable. Should /opt adopt this pattern (one canonical skill system per Profile, mirroring Claude OS's approach) or treat it as one option among many?
+> [!question] **D9 — Skill Systems pattern adoption** — The YouTube transcript's "skill system = orchestrator + child skills" pattern is concretely applicable. Should this project adopt this pattern (one canonical skill system per Profile, mirroring Claude OS's approach) or treat it as one option among many?
 
-> [!question] **D10 — "Information surface before public Obsidian"** — Operator-stated requirement. Possible mechanisms: (a) extend MCP server with real-time push; (b) build a pre-sync dashboard; (c) leverage Multica's WebSocket streaming for /opt content; (d) RSS feed of wiki/log/ updates. Direction needed.
+> [!question] **D10 — "Information surface before public Obsidian"** — Operator-stated requirement. Possible mechanisms: (a) extend MCP server with real-time push; (b) build a pre-sync dashboard; (c) leverage Multica's WebSocket streaming for this project content; (d) RSS feed of wiki/log/ updates. Direction needed.
 
 ## Additional candidates to investigate (operator-invited "We can even find more")
 

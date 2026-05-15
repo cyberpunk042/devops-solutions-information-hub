@@ -34,7 +34,7 @@ tags: [task, "T078", spawn-protocol, generic-agent-sdk, runtime-binding, "2026-0
 
 ## Summary
 
-Author the first spawn protocol — for the generic Claude Agent SDK runtime (including `claude -p` CLI, GitHub Actions, and any SDK-compatible third-party app per Anthropic's 2026-06-15 credit pool definition). The protocol documents how a Per-Project Assistant Profile is consumed to instantiate a running assistant on this runtime: read Profile → render system prompt + tool list → invoke Agent SDK with composed args. Once this is operable, the /opt Profile (T075) can be spawned for the first time — closing the loop from Profile → Assistant. Subsequent spawn protocols (OpenClaw, OpenArms, Hermes) follow this template.
+Author the first spawn protocol — for the generic Claude Agent SDK runtime (including `claude -p` CLI, GitHub Actions, and any SDK-compatible third-party app per Anthropic's 2026-06-15 credit pool definition). The protocol documents how a Per-Project Assistant Profile is consumed to instantiate a running assistant on this runtime: read Profile → render system prompt + tool list → invoke Agent SDK with composed args. Once this is operable, this project Profile (T075) can be spawned for the first time — closing the loop from Profile → Assistant. Subsequent spawn protocols (OpenClaw, OpenArms, Hermes) follow this template.
 
 ## Done When
 
@@ -47,7 +47,7 @@ Author the first spawn protocol — for the generic Claude Agent SDK runtime (in
   - Prompt Templates → system prompt + recovery prompts
   - Success Criteria → telemetry hooks
 - [ ] Protocol covers the `claude -p` CLI variant explicitly (consumes Anthropic programmatic credit pool per 2026-06-15)
-- [ ] Protocol includes a runnable example invoking the /opt profile (T075 prerequisite)
+- [ ] Protocol includes a runnable example invoking this project profile (T075 prerequisite)
 - [ ] `.venv/bin/python -m tools.pipeline post` returns 0 errors
 
 ## Relationships

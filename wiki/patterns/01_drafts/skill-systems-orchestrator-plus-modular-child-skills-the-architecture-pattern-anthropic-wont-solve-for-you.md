@@ -60,8 +60,8 @@ The pattern enforces a parent-children relationship analogous to Claude Code's s
 | **Social carousel skill system** | Claude OS / Agentic Academy | Orchestrator + research + writing + factcheck + humanizing + slide-generation child skills |
 | **HTML slide generation skill system** | Claude OS / Agentic Academy | Orchestrator + design-system + slide-renderer + export child skills |
 | **Skill System Creator** (meta-skill) | Claude OS / Agentic Academy | A skill system that BUILDS skill systems from existing skills — single-line install per user |
-| **/opt knowledge curation skill system** (planned) | E024 (this Epic) | Orchestrator + ingest + synthesize + cross-ref + maturity-promote child skills |
-| **/opt session-checkin skill system** (planned) | E024 (this Epic) | Orchestrator + gateway-orient + recent-directives + pipeline-status + decisions-survey child skills |
+| **this-project knowledge curation skill system** (planned) | E024 (this Epic) | Orchestrator + ingest + synthesize + cross-ref + maturity-promote child skills |
+| **this-project session-checkin skill system** (planned) | E024 (this Epic) | Orchestrator + gateway-orient + recent-directives + pipeline-status + decisions-survey child skills |
 
 ## When To Apply
 
@@ -204,7 +204,7 @@ This aligns with the operator-stated doctrine: *"Pull the level from the frontie
 
 | Project | Skill Systems applicable? | Example |
 |---|---|---|
-| **/opt second-brain** | YES — knowledge curation, methodology stewardship, source ingestion as orchestrator + child skill systems | Ingest System: orchestrator + fetch + read-full + synthesize + cross-ref + pipeline-post child skills |
+| **this project (the research wiki)** | YES — knowledge curation, methodology stewardship, source ingestion as orchestrator + child skill systems | Ingest System: orchestrator + fetch + read-full + synthesize + cross-ref + pipeline-post child skills |
 | **OpenArms** | YES — fleet-agent runtime, harness compliance, methodology enforcement | Methodology Enforcement System: orchestrator + stage-detect + boundary-check + violation-report child skills |
 | **OpenFleet** | YES — fleet orchestration, task dispatch | Task Dispatch System: orchestrator + agent-select + context-package + handoff + heartbeat child skills |
 | **AICP** | YES — local-AI complexity routing, $0 target | Routing System: orchestrator + complexity-detect + tier-select + backend-call + fallback child skills |

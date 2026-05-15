@@ -1,5 +1,5 @@
 ---
-title: "E024-M003 — /opt Second-Brain Assistant Profile (the canonical tailored example)"
+title: "E024-M003 — this project Second-Brain Assistant Profile (the canonical tailored example)"
 type: module
 domain: backlog
 status: draft
@@ -28,18 +28,18 @@ sources:
 tags: [module, "E024-M003", per-project-assistant, opt-second-brain, canonical-example, tailored-profile, "2026-05-09", "draft"]
 ---
 
-# E024-M003 — /opt Second-Brain Assistant Profile (the canonical tailored example)
+# E024-M003 — this project Second-Brain Assistant Profile (the canonical tailored example)
 
 ## Summary
 
-Author the /opt second-brain Assistant Profile — the tailored profile for THIS project — as the canonical example that demonstrates the Profile pattern by exemplary instance. Operator-stated 2026-05-09: *"in the knowledge/information-hub we will have one taillored to the needs"*. The profile captures /opt's specific assistance needs: knowledge curation, methodology stewardship, source ingestion, lesson distillation, gateway-driven orientation, P4-compliant verification, sacrosanct-verbatim quoting. Once authored, the profile serves as the reference for sister-project profiles in M006 — each project's profile mirrors /opt's structure, adapted to that project's needs.
+Author the this project (the research wiki) Assistant Profile — the tailored profile for THIS project — as the canonical example that demonstrates the Profile pattern by exemplary instance. Operator-stated 2026-05-09: *"in the knowledge/information-hub we will have one taillored to the needs"*. The profile captures this project's specific assistance needs: knowledge curation, methodology stewardship, source ingestion, lesson distillation, gateway-driven orientation, P4-compliant verification, sacrosanct-verbatim quoting. Once authored, the profile serves as the reference for sister-project profiles in M006 — each project's profile mirrors this project's structure, adapted to that project's needs.
 
 ## Tasks
 
 | Task | Title | Readiness | Progress | Status |
 |------|-------|-----------|----------|--------|
-| T075 | Author /opt second-brain assistant profile per M002 schema | 30% | 0% | draft |
-| T076 | Document /opt profile success criteria + telemetry hooks | 20% | 0% | draft |
+| T075 | Author this project (the research wiki) assistant profile per M002 schema | 30% | 0% | draft |
+| T076 | Document this project profile success criteria + telemetry hooks | 20% | 0% | draft |
 | T077 | Operator-review the profile for "high quality" bar adherence | 10% | 0% | draft |
 
 ## Dependencies
@@ -49,10 +49,10 @@ Author the /opt second-brain Assistant Profile — the tailored profile for THIS
 ## Done When
 
 - [ ] All 3 child tasks at status: done
-- [ ] `.assistant/profile.yaml` (or equivalent — TBD in M002) exists at /opt repo root
-- [ ] `.venv/bin/python -m tools.pipeline post` validates the /opt profile
+- [ ] `.assistant/profile.yaml` (or equivalent — TBD in M002) exists at this project repo root
+- [ ] `.venv/bin/python -m tools.pipeline post` validates this project profile
 - [ ] Profile contains all 6 sections (Identity · Knowledge Scope · Action Surface · Model Routing · Prompt Templates · Success Criteria)
-- [ ] Operator confirms profile reflects /opt's actual needs and the "high quality definitions and features" bar
+- [ ] Operator confirms profile reflects this project's actual needs and the "high quality definitions and features" bar
 - [ ] Profile is sufficient to spawn an instance via at least one spawn protocol from M004
 
 ## Impediments

@@ -42,13 +42,13 @@ Formalize the 6-section Per-Project Assistant Profile schema (Identity · Knowle
 - [ ] Schema includes `profile_version` field for migration policy
 - [ ] Schema supports runtime-agnostic `runtime_targets:` list (at minimum: openclaw, openarms, generic-agent-sdk, claude-code-cli-p)
 - [ ] Schema is reviewable by `.venv/bin/python -c "import yaml; yaml.safe_load(open('wiki/config/assistant-profile-schema.yaml'))"` without error
-- [ ] One example Profile (the /opt profile from T075) validates against this schema
+- [ ] One example Profile (this project profile from T075) validates against this schema
 
 ## Relationships
 
 - PART OF: [[e024-m002-per-project-assistant-profile-pattern-and-schema|E024-M002 — Profile Pattern + Schema]]
 - IMPLEMENTS: [[per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes|Pattern — Per-Project Assistant Profile]]
-- ENABLES: T072 (template), T073 (validator), T075 (/opt profile)
+- ENABLES: T072 (template), T073 (validator), T075 (canonical profile)
 
 ## Backlinks
 
@@ -56,4 +56,4 @@ Formalize the 6-section Per-Project Assistant Profile schema (Identity · Knowle
 [[Pattern — Per-Project Assistant Profile]]
 [[T072 (template)]]
 [[T073 (validator)]]
-[[T075 (/opt profile)]]
+[[T075 (canonical profile)]]

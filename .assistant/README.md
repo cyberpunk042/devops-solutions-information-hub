@@ -274,7 +274,7 @@ Common issues:
 - Profile concept (knowledge): [wiki/spine/models/agent-config/model-per-project-assistant-profile.md](../wiki/spine/models/agent-config/model-per-project-assistant-profile.md)
 - Profile standards: [wiki/spine/standards/per-project-assistant-profile-standards.md](../wiki/spine/standards/per-project-assistant-profile-standards.md)
 - Profile pattern: [wiki/patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes.md](../wiki/patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes.md)
-- /opt's current Profiles (knowledge layer): `wiki/domains/cross-domain/opt-profile-*.md`
+- this project's current Profiles (knowledge layer): `wiki/domains/cross-domain/profile-*.md`
 - Knowledge integration topology: [wiki/domains/cross-domain/profile-integration-into-the-knowledge-cross-reference-topology-with-existing-wiki-layers.md](../wiki/domains/cross-domain/profile-integration-into-the-knowledge-cross-reference-topology-with-existing-wiki-layers.md)
 - OpenClaw configuration reference: [docs.openclaw.ai/gateway/config-agents](https://docs.openclaw.ai/gateway/config-agents)
 - Multica self-hosting: `/home/jfortin/.multica/server/SELF_HOSTING.md`

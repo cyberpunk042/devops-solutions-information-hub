@@ -1,11 +1,11 @@
 {
-  "generated": "2026-05-15T17:28:16.595169+00:00",
+  "generated": "2026-05-15T17:52:16.114308+00:00",
   "stats": {
     "pages": 867,
     "domains": 14,
     "sources": 110,
     "comparisons": 10,
-    "relationships": 4078,
+    "relationships": 4074,
     "tags_unique": 3221,
     "layers": {
       "3": 4,
@@ -4125,9 +4125,9 @@
       ]
     },
     {
-      "path": "backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example.md",
-      "slug": "backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example",
-      "title": "E024-M003 \u2014 /opt Second-Brain Assistant Profile (the canonical tailored example)",
+      "path": "backlog/modules/e024-m003-assistant-profile-canonical-example.md",
+      "slug": "backlog/modules/e024-m003-assistant-profile-canonical-example",
+      "title": "E024-M003 \u2014 this project Second-Brain Assistant Profile (the canonical tailored example)",
       "type": "module",
       "domain": "backlog",
       "status": "draft",
@@ -4251,7 +4251,7 @@
         },
         {
           "verb": "ENABLES",
-          "target": "E024-M003 /opt Profile"
+          "target": "E024-M003 this project Profile"
         },
         {
           "verb": "DELIVERS",
@@ -4262,7 +4262,7 @@
     {
       "path": "backlog/modules/e024-m006-cross-project-profile-catalog-everywhere-integration.md",
       "slug": "backlog/modules/e024-m006-cross-project-profile-catalog-everywhere-integration",
-      "title": "E024-M006 \u2014 /opt-side Meta-Layer for Per-Project Profiles (standards \u00b7 model \u00b7 integration \u00b7 super-model) \u2014 the unique /opt contribution; sister projects author their OWN Profiles consuming this meta-layer",
+      "title": "E024-M006 \u2014 this-project Meta-Layer for Per-Project Profiles (standards \u00b7 model \u00b7 integration \u00b7 super-model) \u2014 the unique this project contribution; sister projects author their OWN Profiles consuming this meta-layer",
       "type": "module",
       "domain": "backlog",
       "status": "draft",
@@ -4293,7 +4293,7 @@
           "id": "operator-correction-2026-05-09-turn-5",
           "type": "directive",
           "file": "raw/notes/2026-05-09-operator-correction-turn-5-every-project-does-own-profile-opt-difference-is-standards-model-integration-super-models-do-not-lose-yourself.md",
-          "description": "Operator clarification 2026-05-09 turn 5 (sacrosanct, verbatim): 'every project will do their own Profiles... this is per project.. the difference in the second-brain is that we do not only have profiles for AI assistants but we will also have the standards and the model and integration into the knowledge and super-models'. This module was originally wrongly scoped as '/opt authors sister profiles' \u2014 refactored 2026-05-09 to its correct scope: /opt's unique meta-layer contribution."
+          "description": "Operator clarification 2026-05-09 turn 5 (sacrosanct, verbatim): 'every project will do their own Profiles... this is per project.. the difference in the second-brain is that we do not only have profiles for AI assistants but we will also have the standards and the model and integration into the knowledge and super-models'. This module was originally wrongly scoped as 'this project authors sister profiles' \u2014 refactored 2026-05-09 to its correct scope: this project's unique meta-layer contribution."
         },
         {
           "id": "profile-standards-artifact",
@@ -6891,14 +6891,14 @@
         },
         {
           "verb": "ENABLES",
-          "target": "T075 (/opt profile)"
+          "target": "T075 (canonical profile)"
         }
       ]
     },
     {
-      "path": "backlog/tasks/T075-author-opt-second-brain-assistant-profile-canonical-example.md",
-      "slug": "backlog/tasks/T075-author-opt-second-brain-assistant-profile-canonical-example",
-      "title": "T075 \u2014 Author /opt Second-Brain Assistant Profile per M002 schema (canonical tailored example)",
+      "path": "backlog/tasks/T075-author-assistant-profile-canonical-example.md",
+      "slug": "backlog/tasks/T075-author-assistant-profile-canonical-example",
+      "title": "T075 \u2014 Author this project Second-Brain Assistant Profile per M002 schema (canonical tailored example)",
       "type": "task",
       "domain": "backlog",
       "status": "draft",
@@ -6919,8 +6919,8 @@
         {
           "id": "parent-module",
           "type": "wiki",
-          "file": "wiki/backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example.md",
-          "description": "Parent module E024-M003 \u2014 /opt canonical example"
+          "file": "wiki/backlog/modules/e024-m003-assistant-profile-canonical-example.md",
+          "description": "Parent module E024-M003 \u2014 this project canonical example"
         },
         {
           "id": "operator-directive-2026-05-09",
@@ -6936,7 +6936,7 @@
       "relationships": [
         {
           "verb": "PART OF",
-          "target": "E024-M003 \u2014 /opt Profile"
+          "target": "E024-M003 \u2014 this project Profile"
         },
         {
           "verb": "DEPENDS ON",
@@ -14588,9 +14588,9 @@
       ]
     },
     {
-      "path": "domains/cross-domain/opt-profile-continuous-research-keep-models-and-tech-vision-current.md",
-      "slug": "domains/cross-domain/opt-profile-continuous-research-keep-models-and-tech-vision-current",
-      "title": "Profile \u2014 /opt Continuous Research: focused assistant Profile for keeping models + technology-vision current; runnable as a 24/7 OpenClaw (or other tool) agent",
+      "path": "domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current.md",
+      "slug": "domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current",
+      "title": "Profile \u2014 this project Continuous Research: focused assistant Profile for keeping models + technology-vision current; runnable as a 24/7 OpenClaw (or other tool) agent",
       "type": "concept",
       "domain": "cross-domain",
       "status": "synthesized",
@@ -14665,7 +14665,7 @@
         },
         {
           "verb": "COMPLEMENTS",
-          "target": "/opt Pipeline Synthesis Profile"
+          "target": "Pipeline Synthesis Profile"
         },
         {
           "verb": "DEMONSTRATES",
@@ -14682,9 +14682,114 @@
       ]
     },
     {
-      "path": "domains/cross-domain/opt-profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline.md",
-      "slug": "domains/cross-domain/opt-profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline",
-      "title": "Profile \u2014 /opt Pipeline Synthesis: focused assistant Profile for synthesizing ingested information still not at end of pipeline (raw \u2192 wiki page); runnable as a 24/7 OpenClaw (or other tool) agent",
+      "path": "domains/cross-domain/profile-integration-into-the-knowledge-cross-reference-topology-with-existing-wiki-layers.md",
+      "slug": "domains/cross-domain/profile-integration-into-the-knowledge-cross-reference-topology-with-existing-wiki-layers",
+      "title": "Concept \u2014 Profile Integration into the Knowledge: cross-reference topology between Per-Project Assistant Profiles and existing this project wiki layers (lessons \u00b7 patterns \u00b7 decisions \u00b7 models \u00b7 standards \u00b7 super-model)",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-09",
+      "updated": "2026-05-09",
+      "last_reviewed": "",
+      "tags": [
+        "concept",
+        "profile-knowledge-integration",
+        "cross-reference-topology",
+        "navigation-substrate",
+        "gateway-discoverability",
+        "wiki-graph",
+        "this-project meta-layer",
+        "2026-05-09",
+        "e024-m006",
+        "cross-domain",
+        "synthesized"
+      ],
+      "sources": [
+        {
+          "id": "operator-correction-2026-05-09-turn-5",
+          "type": "directive",
+          "file": "raw/notes/2026-05-09-operator-correction-turn-5-every-project-does-own-profile-opt-difference-is-standards-model-integration-super-models-do-not-lose-yourself.md",
+          "title": "Operator turn 5 \u2014 this project's difference: standards + model + integration into the knowledge + super-models"
+        },
+        {
+          "id": "operator-correction-2026-05-09-turn-6",
+          "type": "directive",
+          "file": "raw/notes/2026-05-09-operator-correction-turn-6-profiles-plural-per-project-each-is-one-focused-assistant-job-continuous-research-ingestion-synthesis-stop-conflating.md",
+          "title": "Operator turn 6 \u2014 Profiles plural per project; each is one focused job"
+        },
+        {
+          "id": "profile-model",
+          "type": "wiki",
+          "file": "wiki/spine/models/agent-config/model-per-project-assistant-profile.md",
+          "title": "Model \u2014 Per-Project Assistant Profile (spine)"
+        },
+        {
+          "id": "profile-standards",
+          "type": "wiki",
+          "file": "wiki/spine/standards/per-project-assistant-profile-standards.md",
+          "title": "Per-Project Assistant Profile Standards (spine)"
+        },
+        {
+          "id": "profile-pattern",
+          "type": "wiki",
+          "file": "wiki/patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes.md",
+          "title": "Pattern \u2014 Per-Project Assistant Profile"
+        },
+        {
+          "id": "spectrum",
+          "type": "wiki",
+          "file": "wiki/domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools.md",
+          "title": "Concept \u2014 Declarative Agent Programming Spectrum (7 layers)"
+        },
+        {
+          "id": "wiki-schema",
+          "type": "file",
+          "file": "wiki/config/wiki-schema.yaml",
+          "title": "Schema \u2014 17 relationship verbs + 9 frontmatter fields + page types"
+        },
+        {
+          "id": "super-model",
+          "type": "wiki",
+          "file": "wiki/spine/super-model/super-model.md",
+          "title": "Spine Super-Model (target of T087 update)"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Per-Project Assistant Profile"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Per-Project Assistant Profile Standards"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Pattern \u2014 Per-Project Assistant Profile"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Concept \u2014 Declarative Agent Programming Spectrum"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline.md",
+      "slug": "domains/cross-domain/profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline",
+      "title": "Profile \u2014 this project Pipeline Synthesis: focused assistant Profile for synthesizing ingested information still not at end of pipeline (raw \u2192 wiki page); runnable as a 24/7 OpenClaw (or other tool) agent",
       "type": "concept",
       "domain": "cross-domain",
       "status": "synthesized",
@@ -14764,7 +14869,7 @@
         },
         {
           "verb": "COMPLEMENTS",
-          "target": "/opt Continuous Research Profile"
+          "target": "Continuous Research Profile"
         },
         {
           "verb": "DEMONSTRATES",
@@ -14773,111 +14878,6 @@
         {
           "verb": "DEMONSTRATES",
           "target": "Principle 4"
-        }
-      ]
-    },
-    {
-      "path": "domains/cross-domain/profile-integration-into-the-knowledge-cross-reference-topology-with-existing-wiki-layers.md",
-      "slug": "domains/cross-domain/profile-integration-into-the-knowledge-cross-reference-topology-with-existing-wiki-layers",
-      "title": "Concept \u2014 Profile Integration into the Knowledge: cross-reference topology between Per-Project Assistant Profiles and existing /opt wiki layers (lessons \u00b7 patterns \u00b7 decisions \u00b7 models \u00b7 standards \u00b7 super-model)",
-      "type": "concept",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "high",
-      "created": "2026-05-09",
-      "updated": "2026-05-09",
-      "last_reviewed": "",
-      "tags": [
-        "concept",
-        "profile-knowledge-integration",
-        "cross-reference-topology",
-        "navigation-substrate",
-        "gateway-discoverability",
-        "wiki-graph",
-        "/opt-meta-layer",
-        "2026-05-09",
-        "e024-m006",
-        "cross-domain",
-        "synthesized"
-      ],
-      "sources": [
-        {
-          "id": "operator-correction-2026-05-09-turn-5",
-          "type": "directive",
-          "file": "raw/notes/2026-05-09-operator-correction-turn-5-every-project-does-own-profile-opt-difference-is-standards-model-integration-super-models-do-not-lose-yourself.md",
-          "title": "Operator turn 5 \u2014 /opt's difference: standards + model + integration into the knowledge + super-models"
-        },
-        {
-          "id": "operator-correction-2026-05-09-turn-6",
-          "type": "directive",
-          "file": "raw/notes/2026-05-09-operator-correction-turn-6-profiles-plural-per-project-each-is-one-focused-assistant-job-continuous-research-ingestion-synthesis-stop-conflating.md",
-          "title": "Operator turn 6 \u2014 Profiles plural per project; each is one focused job"
-        },
-        {
-          "id": "profile-model",
-          "type": "wiki",
-          "file": "wiki/spine/models/agent-config/model-per-project-assistant-profile.md",
-          "title": "Model \u2014 Per-Project Assistant Profile (spine)"
-        },
-        {
-          "id": "profile-standards",
-          "type": "wiki",
-          "file": "wiki/spine/standards/per-project-assistant-profile-standards.md",
-          "title": "Per-Project Assistant Profile Standards (spine)"
-        },
-        {
-          "id": "profile-pattern",
-          "type": "wiki",
-          "file": "wiki/patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes.md",
-          "title": "Pattern \u2014 Per-Project Assistant Profile"
-        },
-        {
-          "id": "spectrum",
-          "type": "wiki",
-          "file": "wiki/domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools.md",
-          "title": "Concept \u2014 Declarative Agent Programming Spectrum (7 layers)"
-        },
-        {
-          "id": "wiki-schema",
-          "type": "file",
-          "file": "wiki/config/wiki-schema.yaml",
-          "title": "Schema \u2014 17 relationship verbs + 9 frontmatter fields + page types"
-        },
-        {
-          "id": "super-model",
-          "type": "wiki",
-          "file": "wiki/spine/super-model/super-model.md",
-          "title": "Spine Super-Model (target of T087 update)"
-        }
-      ],
-      "layer": "",
-      "maturity": "seed",
-      "derived_from": [],
-      "aliases": [],
-      "relationships": [
-        {
-          "verb": "BUILDS ON",
-          "target": "Model \u2014 Per-Project Assistant Profile"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Per-Project Assistant Profile Standards"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Pattern \u2014 Per-Project Assistant Profile"
-        },
-        {
-          "verb": "COMPLEMENTS",
-          "target": "Concept \u2014 Declarative Agent Programming Spectrum"
-        },
-        {
-          "verb": "DEMONSTRATES",
-          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
-        },
-        {
-          "verb": "DEMONSTRATES",
-          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
         }
       ]
     },
@@ -56327,7 +56327,7 @@
           "id": "operator-correction-2026-05-09-turn-5",
           "type": "directive",
           "file": "raw/notes/2026-05-09-operator-correction-turn-5-every-project-does-own-profile-opt-difference-is-standards-model-integration-super-models-do-not-lose-yourself.md",
-          "title": "2026-05-09 turn 5 correction \u2014 every project does own Profiles; /opt has standards + model + integration + super-models"
+          "title": "2026-05-09 turn 5 correction \u2014 every project does own Profiles; this project has standards + model + integration + super-models"
         },
         {
           "id": "operator-correction-2026-05-09-turn-6",
@@ -56348,16 +56348,16 @@
           "title": "Per-Project Assistant Profile Standards"
         },
         {
-          "id": "opt-profile-continuous-research",
+          "id": "profile-continuous-research",
           "type": "wiki",
-          "file": "wiki/domains/cross-domain/opt-profile-continuous-research-keep-models-and-tech-vision-current.md",
-          "title": "Profile \u2014 /opt Continuous Research (canonical example #1)"
+          "file": "wiki/domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current.md",
+          "title": "Profile \u2014 this project Continuous Research (canonical example #1)"
         },
         {
-          "id": "opt-profile-pipeline-synthesis",
+          "id": "profile-pipeline-synthesis",
           "type": "wiki",
-          "file": "wiki/domains/cross-domain/opt-profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline.md",
-          "title": "Profile \u2014 /opt Pipeline Synthesis (canonical example #2)"
+          "file": "wiki/domains/cross-domain/profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline.md",
+          "title": "Profile \u2014 this project Pipeline Synthesis (canonical example #2)"
         },
         {
           "id": "spectrum-concept",
@@ -56423,7 +56423,7 @@
         },
         {
           "verb": "INSTANCES",
-          "target": "/opt Continuous Research"
+          "target": "Continuous Research"
         }
       ]
     },
@@ -59459,7 +59459,7 @@
           "id": "profile-standards",
           "type": "wiki",
           "file": "wiki/spine/standards/per-project-assistant-profile-standards.md",
-          "title": "Per-Project Assistant Profile Standards (sibling /opt meta-layer artifact)"
+          "title": "Per-Project Assistant Profile Standards (sibling this project meta-layer artifact)"
         }
       ],
       "layer": "spine",
@@ -59478,22 +59478,6 @@
         {
           "verb": "COMPLEMENTS",
           "target": "Per-Project Assistant Profile Standards"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "root-ghostproxy cursor-files convention (operator-stated alignment; canonical spec TBD as root-ghostproxy formalizes)"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "operator's `/view` and `/questions` slash commands (root-propagated) to render quickly + consistently across projects"
-        },
-        {
-          "verb": "DEPENDS ON",
-          "target": "gitignore discipline (project-territory); regeneration tool (project-territory)"
-        },
-        {
-          "verb": "USED BY",
-          "target": "every project that wants its state surface to be quickly queryable"
         },
         {
           "verb": "DEMONSTRATES",
@@ -60703,7 +60687,7 @@
           "id": "operator-correction-2026-05-09-turn-5",
           "type": "directive",
           "file": "raw/notes/2026-05-09-operator-correction-turn-5-every-project-does-own-profile-opt-difference-is-standards-model-integration-super-models-do-not-lose-yourself.md",
-          "description": "Operator clarification 2026-05-09 turn 5 (sacrosanct, verbatim): 'every project will do their own Profiles... this is per project.. the difference in the second-brain is that we do not only have profiles for AI assistants but we will also have the standards and the model and integration into the knowledge and super-models'. THIS standards page is the /opt second-brain's meta-layer artifact \u2014 what /opt uniquely contributes beyond its own Profile."
+          "description": "Operator clarification 2026-05-09 turn 5 (sacrosanct, verbatim): 'every project will do their own Profiles... this is per project.. the difference in the second-brain is that we do not only have profiles for AI assistants but we will also have the standards and the model and integration into the knowledge and super-models'. THIS standards page is the this project's (the research wiki) meta-layer artifact \u2014 what this project uniquely contributes beyond its own Profile."
         },
         {
           "id": "profile-pattern",
@@ -60714,8 +60698,8 @@
         {
           "id": "opt-canonical-profile",
           "type": "wiki",
-          "file": "wiki/domains/cross-domain/opt-second-brain-assistant-profile-the-canonical-tool-agnostic-per-project-assistant-definition.md",
-          "description": "The /opt second-brain's own canonical Profile \u2014 exemplar of standards application"
+          "file": "wiki/domains/cross-domain/assistant-profile-the-canonical-tool-agnostic-per-project-assistant-definition.md",
+          "description": "The this project's (the research wiki) own canonical Profile \u2014 exemplar of standards application"
         },
         {
           "id": "spectrum-concept",
@@ -60749,7 +60733,7 @@
         },
         {
           "verb": "BUILDS ON",
-          "target": "/opt Second-Brain Assistant Profile"
+          "target": "Second-Brain Assistant Profile"
         },
         {
           "verb": "BUILDS ON",
@@ -61250,7 +61234,7 @@
     },
     "cross-domain": {
       "page_count": 297,
-      "relationship_count": 1813
+      "relationship_count": 1809
     },
     "ai-agents": {
       "page_count": 76,
@@ -61825,7 +61809,7 @@
     "per-project-assistant": [
       "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn",
       "backlog/modules/e024-m002-per-project-assistant-profile-pattern-and-schema",
-      "backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example",
+      "backlog/modules/e024-m003-assistant-profile-canonical-example",
       "backlog/tasks/T071-author-per-project-assistant-profile-schema-formal-definition",
       "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles",
       "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes",
@@ -61865,18 +61849,18 @@
     "2026-05-09": [
       "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn",
       "backlog/modules/e024-m002-per-project-assistant-profile-pattern-and-schema",
-      "backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example",
+      "backlog/modules/e024-m003-assistant-profile-canonical-example",
       "backlog/modules/e024-m004-spawn-protocols-per-runtime",
       "backlog/modules/e024-m006-cross-project-profile-catalog-everywhere-integration",
       "backlog/tasks/T071-author-per-project-assistant-profile-schema-formal-definition",
-      "backlog/tasks/T075-author-opt-second-brain-assistant-profile-canonical-example",
+      "backlog/tasks/T075-author-assistant-profile-canonical-example",
       "backlog/tasks/T078-author-spawn-protocol-generic-agent-sdk",
       "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09",
       "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles",
       "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
-      "domains/cross-domain/opt-profile-continuous-research-keep-models-and-tech-vision-current",
-      "domains/cross-domain/opt-profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline",
+      "domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current",
       "domains/cross-domain/profile-integration-into-the-knowledge-cross-reference-topology-with-existing-wiki-layers",
+      "domains/cross-domain/profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline",
       "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately",
       "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
       "log/2026-05-09-PRE-COMPACT-STRONG-HANDOFF-decisions-executed-boundary-correction-freeze-memory-rrf-and-23-lessons-reformatted",
@@ -61905,11 +61889,11 @@
     "draft": [
       "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn",
       "backlog/modules/e024-m002-per-project-assistant-profile-pattern-and-schema",
-      "backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example",
+      "backlog/modules/e024-m003-assistant-profile-canonical-example",
       "backlog/modules/e024-m004-spawn-protocols-per-runtime",
       "backlog/modules/e024-m006-cross-project-profile-catalog-everywhere-integration",
       "backlog/tasks/T071-author-per-project-assistant-profile-schema-formal-definition",
-      "backlog/tasks/T075-author-opt-second-brain-assistant-profile-canonical-example",
+      "backlog/tasks/T075-author-assistant-profile-canonical-example",
       "backlog/tasks/T078-author-spawn-protocol-generic-agent-sdk",
       "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles",
       "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately",
@@ -63141,7 +63125,7 @@
       "backlog/modules/e022-m002-gateway-orient-subcommand",
       "backlog/modules/e022-m003-what-do-i-need-upgrade",
       "backlog/modules/e024-m002-per-project-assistant-profile-pattern-and-schema",
-      "backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example",
+      "backlog/modules/e024-m003-assistant-profile-canonical-example",
       "backlog/modules/e024-m004-spawn-protocols-per-runtime",
       "backlog/modules/e024-m006-cross-project-profile-catalog-everywhere-integration",
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
@@ -63645,21 +63629,21 @@
       "spine/standards/pattern-page-standards"
     ],
     "E024-M003": [
-      "backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example"
+      "backlog/modules/e024-m003-assistant-profile-canonical-example"
     ],
     "opt-second-brain": [
-      "backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example",
-      "backlog/tasks/T075-author-opt-second-brain-assistant-profile-canonical-example",
+      "backlog/modules/e024-m003-assistant-profile-canonical-example",
+      "backlog/tasks/T075-author-assistant-profile-canonical-example",
       "patterns/01_drafts/auto-compact-disable-implementation-spec-prevention-layer-for-impl-spec-10-defense-in-depth",
       "patterns/01_drafts/post-compact-pretooluse-blocker-implementation-spec-tier-4-enforcement-for-impl-spec-10",
       "patterns/01_drafts/pre-compact-handoff-hook-implementation-spec-for-opt-path-to-tier-4-for-impl-spec-10"
     ],
     "canonical-example": [
-      "backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example",
-      "backlog/tasks/T075-author-opt-second-brain-assistant-profile-canonical-example"
+      "backlog/modules/e024-m003-assistant-profile-canonical-example",
+      "backlog/tasks/T075-author-assistant-profile-canonical-example"
     ],
     "tailored-profile": [
-      "backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example"
+      "backlog/modules/e024-m003-assistant-profile-canonical-example"
     ],
     "E024-M004": [
       "backlog/modules/e024-m004-spawn-protocols-per-runtime"
@@ -64016,7 +64000,7 @@
       "backlog/tasks/T060-audit-wiki-corpus-training-readiness",
       "backlog/tasks/T070-design-adapter-training-datasets",
       "backlog/tasks/T071-author-per-project-assistant-profile-schema-formal-definition",
-      "backlog/tasks/T075-author-opt-second-brain-assistant-profile-canonical-example",
+      "backlog/tasks/T075-author-assistant-profile-canonical-example",
       "backlog/tasks/T078-author-spawn-protocol-generic-agent-sdk",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
       "domains/devops/backlog-hierarchy-rules",
@@ -64267,10 +64251,10 @@
       "backlog/tasks/T071-author-per-project-assistant-profile-schema-formal-definition"
     ],
     "T075": [
-      "backlog/tasks/T075-author-opt-second-brain-assistant-profile-canonical-example"
+      "backlog/tasks/T075-author-assistant-profile-canonical-example"
     ],
     "per-project-assistant-profile": [
-      "backlog/tasks/T075-author-opt-second-brain-assistant-profile-canonical-example",
+      "backlog/tasks/T075-author-assistant-profile-canonical-example",
       "spine/models/agent-config/model-per-project-assistant-profile",
       "spine/standards/per-project-assistant-profile-standards"
     ],
@@ -64404,9 +64388,9 @@
     "synthesized": [
       "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09",
       "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
-      "domains/cross-domain/opt-profile-continuous-research-keep-models-and-tech-vision-current",
-      "domains/cross-domain/opt-profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline",
+      "domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current",
       "domains/cross-domain/profile-integration-into-the-knowledge-cross-reference-topology-with-existing-wiki-layers",
+      "domains/cross-domain/profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline",
       "patterns/01_drafts/agent-execution-cost-optimization-stack",
       "spine/standards/per-project-assistant-profile-standards"
     ],
@@ -64415,9 +64399,9 @@
       "comparisons/llm-wiki-vs-rag",
       "comparisons/skills-architecture-patterns",
       "domains/cross-domain/integration/skyscraper-pyramid-mountain",
-      "domains/cross-domain/opt-profile-continuous-research-keep-models-and-tech-vision-current",
-      "domains/cross-domain/opt-profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline",
+      "domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current",
       "domains/cross-domain/profile-integration-into-the-knowledge-cross-reference-topology-with-existing-wiki-layers",
+      "domains/cross-domain/profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline",
       "lessons/01_drafts/if-you-can-verify-you-converge",
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
       "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
@@ -65543,9 +65527,9 @@
     "concept": [
       "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
       "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
-      "domains/cross-domain/opt-profile-continuous-research-keep-models-and-tech-vision-current",
-      "domains/cross-domain/opt-profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline",
+      "domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current",
       "domains/cross-domain/profile-integration-into-the-knowledge-cross-reference-topology-with-existing-wiki-layers",
+      "domains/cross-domain/profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline",
       "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
       "spine/models/depth/model-local-ai",
       "spine/models/depth/model-notebooklm",
@@ -66261,53 +66245,44 @@
       "domains/cross-domain/methodology-initiative/methodology-standards-initiative-infrastructure"
     ],
     "opt-profile": [
-      "domains/cross-domain/opt-profile-continuous-research-keep-models-and-tech-vision-current",
-      "domains/cross-domain/opt-profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline"
+      "domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current",
+      "domains/cross-domain/profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline"
     ],
     "continuous-research": [
-      "domains/cross-domain/opt-profile-continuous-research-keep-models-and-tech-vision-current"
+      "domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current"
     ],
     "focused-assistant-job": [
-      "domains/cross-domain/opt-profile-continuous-research-keep-models-and-tech-vision-current",
-      "domains/cross-domain/opt-profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline",
+      "domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current",
+      "domains/cross-domain/profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline",
       "spine/models/agent-config/model-per-project-assistant-profile"
     ],
     "24-7-agent-runnable": [
-      "domains/cross-domain/opt-profile-continuous-research-keep-models-and-tech-vision-current",
-      "domains/cross-domain/opt-profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline"
+      "domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current",
+      "domains/cross-domain/profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline"
     ],
     "openclaw-runnable": [
-      "domains/cross-domain/opt-profile-continuous-research-keep-models-and-tech-vision-current",
-      "domains/cross-domain/opt-profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline"
+      "domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current",
+      "domains/cross-domain/profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline"
     ],
     "model-monitoring": [
-      "domains/cross-domain/opt-profile-continuous-research-keep-models-and-tech-vision-current"
+      "domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current"
     ],
     "tech-vision-currency": [
-      "domains/cross-domain/opt-profile-continuous-research-keep-models-and-tech-vision-current"
+      "domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current"
     ],
     "frontier-tracking": [
-      "domains/cross-domain/opt-profile-continuous-research-keep-models-and-tech-vision-current"
+      "domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current"
     ],
     "tool-agnostic": [
-      "domains/cross-domain/opt-profile-continuous-research-keep-models-and-tech-vision-current",
-      "domains/cross-domain/opt-profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline",
+      "domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current",
+      "domains/cross-domain/profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline",
       "spine/models/agent-config/model-per-project-assistant-profile",
       "spine/standards/per-project-assistant-profile-standards"
     ],
     "profiles-plural-per-project": [
-      "domains/cross-domain/opt-profile-continuous-research-keep-models-and-tech-vision-current",
-      "domains/cross-domain/opt-profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline",
+      "domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current",
+      "domains/cross-domain/profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline",
       "spine/models/agent-config/model-per-project-assistant-profile"
-    ],
-    "pipeline-synthesis": [
-      "domains/cross-domain/opt-profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline"
-    ],
-    "ingestion-synthesis": [
-      "domains/cross-domain/opt-profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline"
-    ],
-    "raw-to-wiki": [
-      "domains/cross-domain/opt-profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline"
     ],
     "profile-knowledge-integration": [
       "domains/cross-domain/profile-integration-into-the-knowledge-cross-reference-topology-with-existing-wiki-layers"
@@ -66325,11 +66300,20 @@
       "domains/cross-domain/profile-integration-into-the-knowledge-cross-reference-topology-with-existing-wiki-layers",
       "lessons/03_validated/knowledge-systems/graph-enhanced-retrieval-bridges-wiki-and-vector-search"
     ],
-    "/opt-meta-layer": [
+    "this-project meta-layer": [
       "domains/cross-domain/profile-integration-into-the-knowledge-cross-reference-topology-with-existing-wiki-layers"
     ],
     "e024-m006": [
       "domains/cross-domain/profile-integration-into-the-knowledge-cross-reference-topology-with-existing-wiki-layers"
+    ],
+    "pipeline-synthesis": [
+      "domains/cross-domain/profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline"
+    ],
+    "ingestion-synthesis": [
+      "domains/cross-domain/profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline"
+    ],
+    "raw-to-wiki": [
+      "domains/cross-domain/profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline"
     ],
     "operations-plan": [
       "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
@@ -75128,30 +75112,6 @@
   },
   "orphaned_refs": [
     {
-      "target": "/opt Continuous Research",
-      "referenced_by": [
-        "Model \u2014 Per-Project Assistant Profile"
-      ]
-    },
-    {
-      "target": "/opt Continuous Research Profile",
-      "referenced_by": [
-        "Profile \u2014 /opt Pipeline Synthesis: focused assistant Profile for synthesizing ingested information still not at end of pipeline (raw \u2192 wiki page); runnable as a 24/7 OpenClaw (or other tool) agent"
-      ]
-    },
-    {
-      "target": "/opt Pipeline Synthesis Profile",
-      "referenced_by": [
-        "Profile \u2014 /opt Continuous Research: focused assistant Profile for keeping models + technology-vision current; runnable as a 24/7 OpenClaw (or other tool) agent"
-      ]
-    },
-    {
-      "target": "/opt Second-Brain Assistant Profile",
-      "referenced_by": [
-        "Per-Project Assistant Profile Standards"
-      ]
-    },
-    {
       "target": "18 Claude Code Token Hacks",
       "referenced_by": [
         "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)"
@@ -75743,7 +75703,7 @@
       "referenced_by": [
         "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermes)",
         "E024-M004 \u2014 Spawn Protocols per Runtime (the bridge layer: Profile \u2192 running Assistant on Multica / OpenClaw / Hermes / Claude Code CLI / generic Agent SDK)",
-        "Concept \u2014 Profile Integration into the Knowledge: cross-reference topology between Per-Project Assistant Profiles and existing /opt wiki layers (lessons \u00b7 patterns \u00b7 decisions \u00b7 models \u00b7 standards \u00b7 super-model)",
+        "Concept \u2014 Profile Integration into the Knowledge: cross-reference topology between Per-Project Assistant Profiles and existing this project wiki layers (lessons \u00b7 patterns \u00b7 decisions \u00b7 models \u00b7 standards \u00b7 super-model)",
         "Model \u2014 Per-Project Assistant Profile",
         "Per-Project Assistant Profile Standards"
       ]
@@ -75778,6 +75738,18 @@
       ]
     },
     {
+      "target": "Continuous Research",
+      "referenced_by": [
+        "Model \u2014 Per-Project Assistant Profile"
+      ]
+    },
+    {
+      "target": "Continuous Research Profile",
+      "referenced_by": [
+        "Profile \u2014 this project Pipeline Synthesis: focused assistant Profile for synthesizing ingested information still not at end of pipeline (raw \u2192 wiki page); runnable as a 24/7 OpenClaw (or other tool) agent"
+      ]
+    },
+    {
       "target": "Coverage Blindness",
       "referenced_by": [
         "Epic readiness math is wrong when an epic has implicit goals beyond its current children",
@@ -75787,7 +75759,7 @@
     {
       "target": "Custom-Tailored Model Group concept",
       "referenced_by": [
-        "Profile \u2014 /opt Continuous Research: focused assistant Profile for keeping models + technology-vision current; runnable as a 24/7 OpenClaw (or other tool) agent"
+        "Profile \u2014 this project Continuous Research: focused assistant Profile for keeping models + technology-vision current; runnable as a 24/7 OpenClaw (or other tool) agent"
       ]
     },
     {
@@ -76081,9 +76053,9 @@
       "target": "E024 \u2014 Per-Project Assistant Configurations",
       "referenced_by": [
         "E024-M002 \u2014 Per-Project Assistant Profile Pattern + Schema (the foundational module)",
-        "E024-M003 \u2014 /opt Second-Brain Assistant Profile (the canonical tailored example)",
+        "E024-M003 \u2014 this project Second-Brain Assistant Profile (the canonical tailored example)",
         "E024-M004 \u2014 Spawn Protocols per Runtime (the bridge layer: Profile \u2192 running Assistant on Multica / OpenClaw / Hermes / Claude Code CLI / generic Agent SDK)",
-        "E024-M006 \u2014 /opt-side Meta-Layer for Per-Project Profiles (standards \u00b7 model \u00b7 integration \u00b7 super-model) \u2014 the unique /opt contribution; sister projects author their OWN Profiles consuming this meta-layer",
+        "E024-M006 \u2014 this-project Meta-Layer for Per-Project Profiles (standards \u00b7 model \u00b7 integration \u00b7 super-model) \u2014 the unique this project contribution; sister projects author their OWN Profiles consuming this meta-layer",
         "Decision \u2014 Strategic response to Anthropic Programmatic Credit Pool (2026-06-15): adopt per-project Assistant Profiles as the value-capture mechanism for the $200/month Max 20x credit"
       ]
     },
@@ -76096,13 +76068,13 @@
     {
       "target": "E024-M002",
       "referenced_by": [
-        "E024-M006 \u2014 /opt-side Meta-Layer for Per-Project Profiles (standards \u00b7 model \u00b7 integration \u00b7 super-model) \u2014 the unique /opt contribution; sister projects author their OWN Profiles consuming this meta-layer"
+        "E024-M006 \u2014 this-project Meta-Layer for Per-Project Profiles (standards \u00b7 model \u00b7 integration \u00b7 super-model) \u2014 the unique this project contribution; sister projects author their OWN Profiles consuming this meta-layer"
       ]
     },
     {
       "target": "E024-M002 \u2014 Profile Pattern + Schema",
       "referenced_by": [
-        "E024-M003 \u2014 /opt Second-Brain Assistant Profile (the canonical tailored example)",
+        "E024-M003 \u2014 this project Second-Brain Assistant Profile (the canonical tailored example)",
         "E024-M004 \u2014 Spawn Protocols per Runtime (the bridge layer: Profile \u2192 running Assistant on Multica / OpenClaw / Hermes / Claude Code CLI / generic Agent SDK)",
         "T071 \u2014 Author Per-Project Assistant Profile schema formal definition (YAML schema for the 6 sections)"
       ]
@@ -76110,19 +76082,19 @@
     {
       "target": "E024-M003",
       "referenced_by": [
-        "E024-M006 \u2014 /opt-side Meta-Layer for Per-Project Profiles (standards \u00b7 model \u00b7 integration \u00b7 super-model) \u2014 the unique /opt contribution; sister projects author their OWN Profiles consuming this meta-layer"
+        "E024-M006 \u2014 this-project Meta-Layer for Per-Project Profiles (standards \u00b7 model \u00b7 integration \u00b7 super-model) \u2014 the unique this project contribution; sister projects author their OWN Profiles consuming this meta-layer"
       ]
     },
     {
-      "target": "E024-M003 /opt Profile",
+      "target": "E024-M003 this project Profile",
       "referenced_by": [
         "E024-M004 \u2014 Spawn Protocols per Runtime (the bridge layer: Profile \u2192 running Assistant on Multica / OpenClaw / Hermes / Claude Code CLI / generic Agent SDK)"
       ]
     },
     {
-      "target": "E024-M003 \u2014 /opt Profile",
+      "target": "E024-M003 \u2014 this project Profile",
       "referenced_by": [
-        "T075 \u2014 Author /opt Second-Brain Assistant Profile per M002 schema (canonical tailored example)"
+        "T075 \u2014 Author this project Second-Brain Assistant Profile per M002 schema (canonical tailored example)"
       ]
     },
     {
@@ -76593,7 +76565,7 @@
       "target": "Lesson \u2014 Anti-Vendor-Lock-In",
       "referenced_by": [
         "Concept \u2014 The Declarative Agent Programming Spectrum: 5 layers (SDD \u00b7 Skills \u00b7 Context/Context-Injection \u00b7 Hooks \u00b7 Harness) unified, with integration matrix across tools (Claude OS \u00b7 Multica \u00b7 OpenClaw \u00b7 Claude Code \u00b7 OpenCode \u00b7 Hermes \u00b7 Codex \u00b7 Gemini) and destinations (Wiki LLM \u00b7 PM tools)",
-        "Profile \u2014 /opt Continuous Research: focused assistant Profile for keeping models + technology-vision current; runnable as a 24/7 OpenClaw (or other tool) agent",
+        "Profile \u2014 this project Continuous Research: focused assistant Profile for keeping models + technology-vision current; runnable as a 24/7 OpenClaw (or other tool) agent",
         "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermes / generic Agent SDK consumers",
         "Pattern \u2014 Skill Systems: orchestrator skill + modular child skills wired by skill.md (the architecture that compounds \u2014 what Anthropic won't solve for you)",
         "Pattern \u2014 Spawn protocol for Multica: bridge a Per-Project Assistant Profile to a running Assistant instance on Multica's 10-CLI daemon (operator-adopted runtime)",
@@ -76659,7 +76631,7 @@
     {
       "target": "Lesson \u2014 Never synthesize from descriptions alone",
       "referenced_by": [
-        "Profile \u2014 /opt Pipeline Synthesis: focused assistant Profile for synthesizing ingested information still not at end of pipeline (raw \u2192 wiki page); runnable as a 24/7 OpenClaw (or other tool) agent"
+        "Profile \u2014 this project Pipeline Synthesis: focused assistant Profile for synthesizing ingested information still not at end of pipeline (raw \u2192 wiki page); runnable as a 24/7 OpenClaw (or other tool) agent"
       ]
     },
     {
@@ -76671,7 +76643,7 @@
     {
       "target": "Lesson \u2014 The agent must practice what it documents",
       "referenced_by": [
-        "E024-M006 \u2014 /opt-side Meta-Layer for Per-Project Profiles (standards \u00b7 model \u00b7 integration \u00b7 super-model) \u2014 the unique /opt contribution; sister projects author their OWN Profiles consuming this meta-layer"
+        "E024-M006 \u2014 this-project Meta-Layer for Per-Project Profiles (standards \u00b7 model \u00b7 integration \u00b7 super-model) \u2014 the unique this project contribution; sister projects author their OWN Profiles consuming this meta-layer"
       ]
     },
     {
@@ -77090,8 +77062,8 @@
     {
       "target": "Operator correction 2026-05-09 turn 6",
       "referenced_by": [
-        "Profile \u2014 /opt Continuous Research: focused assistant Profile for keeping models + technology-vision current; runnable as a 24/7 OpenClaw (or other tool) agent",
-        "Profile \u2014 /opt Pipeline Synthesis: focused assistant Profile for synthesizing ingested information still not at end of pipeline (raw \u2192 wiki page); runnable as a 24/7 OpenClaw (or other tool) agent"
+        "Profile \u2014 this project Continuous Research: focused assistant Profile for keeping models + technology-vision current; runnable as a 24/7 OpenClaw (or other tool) agent",
+        "Profile \u2014 this project Pipeline Synthesis: focused assistant Profile for synthesizing ingested information still not at end of pipeline (raw \u2192 wiki page); runnable as a 24/7 OpenClaw (or other tool) agent"
       ]
     },
     {
@@ -77181,16 +77153,16 @@
       "target": "Pattern \u2014 Per-Project Assistant Profile",
       "referenced_by": [
         "E024-M002 \u2014 Per-Project Assistant Profile Pattern + Schema (the foundational module)",
-        "E024-M003 \u2014 /opt Second-Brain Assistant Profile (the canonical tailored example)",
+        "E024-M003 \u2014 this project Second-Brain Assistant Profile (the canonical tailored example)",
         "E024-M004 \u2014 Spawn Protocols per Runtime (the bridge layer: Profile \u2192 running Assistant on Multica / OpenClaw / Hermes / Claude Code CLI / generic Agent SDK)",
         "T071 \u2014 Author Per-Project Assistant Profile schema formal definition (YAML schema for the 6 sections)",
-        "T075 \u2014 Author /opt Second-Brain Assistant Profile per M002 schema (canonical tailored example)",
+        "T075 \u2014 Author this project Second-Brain Assistant Profile per M002 schema (canonical tailored example)",
         "T078 \u2014 Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermes variants)",
         "Comparison \u2014 Assistant Platforms & Frameworks Frontier (2026-05-09): Claude OS \u00b7 Obsidian PM \u00b7 Multica \u00b7 OpenClaw Command Center / OCMC \u2014 by Type and Frontier",
         "Concept \u2014 The Declarative Agent Programming Spectrum: 5 layers (SDD \u00b7 Skills \u00b7 Context/Context-Injection \u00b7 Hooks \u00b7 Harness) unified, with integration matrix across tools (Claude OS \u00b7 Multica \u00b7 OpenClaw \u00b7 Claude Code \u00b7 OpenCode \u00b7 Hermes \u00b7 Codex \u00b7 Gemini) and destinations (Wiki LLM \u00b7 PM tools)",
-        "Profile \u2014 /opt Continuous Research: focused assistant Profile for keeping models + technology-vision current; runnable as a 24/7 OpenClaw (or other tool) agent",
-        "Profile \u2014 /opt Pipeline Synthesis: focused assistant Profile for synthesizing ingested information still not at end of pipeline (raw \u2192 wiki page); runnable as a 24/7 OpenClaw (or other tool) agent",
-        "Concept \u2014 Profile Integration into the Knowledge: cross-reference topology between Per-Project Assistant Profiles and existing /opt wiki layers (lessons \u00b7 patterns \u00b7 decisions \u00b7 models \u00b7 standards \u00b7 super-model)",
+        "Profile \u2014 this project Continuous Research: focused assistant Profile for keeping models + technology-vision current; runnable as a 24/7 OpenClaw (or other tool) agent",
+        "Concept \u2014 Profile Integration into the Knowledge: cross-reference topology between Per-Project Assistant Profiles and existing this project wiki layers (lessons \u00b7 patterns \u00b7 decisions \u00b7 models \u00b7 standards \u00b7 super-model)",
+        "Profile \u2014 this project Pipeline Synthesis: focused assistant Profile for synthesizing ingested information still not at end of pipeline (raw \u2192 wiki page); runnable as a 24/7 OpenClaw (or other tool) agent",
         "Pattern \u2014 Skill Systems: orchestrator skill + modular child skills wired by skill.md (the architecture that compounds \u2014 what Anthropic won't solve for you)",
         "Pattern \u2014 Spawn protocol for Multica: bridge a Per-Project Assistant Profile to a running Assistant instance on Multica's 10-CLI daemon (operator-adopted runtime)",
         "Model \u2014 Per-Project Assistant Profile",
@@ -77246,6 +77218,12 @@
       "target": "Phil Schmid Four Subagent Patterns Synthesis",
       "referenced_by": [
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)"
+      ]
+    },
+    {
+      "target": "Pipeline Synthesis Profile",
+      "referenced_by": [
+        "Profile \u2014 this project Continuous Research: focused assistant Profile for keeping models + technology-vision current; runnable as a 24/7 OpenClaw (or other tool) agent"
       ]
     },
     {
@@ -77492,6 +77470,12 @@
       "target": "Schema aspirationalism",
       "referenced_by": [
         "last_reviewed frontmatter field + evolve mark-reviewed CLI"
+      ]
+    },
+    {
+      "target": "Second-Brain Assistant Profile",
+      "referenced_by": [
+        "Per-Project Assistant Profile Standards"
       ]
     },
     {
@@ -77969,7 +77953,7 @@
     {
       "target": "T071 \u2014 Profile Schema",
       "referenced_by": [
-        "T075 \u2014 Author /opt Second-Brain Assistant Profile per M002 schema (canonical tailored example)",
+        "T075 \u2014 Author this project Second-Brain Assistant Profile per M002 schema (canonical tailored example)",
         "T078 \u2014 Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermes variants)"
       ]
     },
@@ -78354,21 +78338,9 @@
       ]
     },
     {
-      "target": "every project that wants its state surface to be quickly queryable",
-      "referenced_by": [
-        "Cursor State Folder Standards (`.cursor/`) \u2014 Common Cross-Project Runtime State Surface for /view \u00b7 /questions \u00b7 vision \u00b7 focus \u00b7 trace"
-      ]
-    },
-    {
       "target": "fake-blockers-vs-real-blockers",
       "referenced_by": [
         "Lesson \u2014 Anti-minimizing: don't undercount systemic bugs; blocker register self-filters before surfacing"
-      ]
-    },
-    {
-      "target": "gitignore discipline (project-territory); regeneration tool",
-      "referenced_by": [
-        "Cursor State Folder Standards (`.cursor/`) \u2014 Common Cross-Project Runtime State Surface for /view \u00b7 /questions \u00b7 vision \u00b7 focus \u00b7 trace"
       ]
     },
     {
@@ -78387,12 +78359,6 @@
       "target": "not the label",
       "referenced_by": [
         "Right-size the methodology model to the actual work, not the structural category"
-      ]
-    },
-    {
-      "target": "operator's `/view` and `/questions` slash commands (root-propagated) to render quickly + consistently across projects",
-      "referenced_by": [
-        "Cursor State Folder Standards (`.cursor/`) \u2014 Common Cross-Project Runtime State Surface for /view \u00b7 /questions \u00b7 vision \u00b7 focus \u00b7 trace"
       ]
     },
     {
@@ -78437,12 +78403,6 @@
       "target": "root-ghostproxy `operating-principles.md` Principle #8",
       "referenced_by": [
         "Lesson \u2014 Fake blockers vs real blockers: every 'blocker' claim requires empirical verification, not assumption"
-      ]
-    },
-    {
-      "target": "root-ghostproxy cursor-files convention",
-      "referenced_by": [
-        "Cursor State Folder Standards (`.cursor/`) \u2014 Common Cross-Project Runtime State Surface for /view \u00b7 /questions \u00b7 vision \u00b7 focus \u00b7 trace"
       ]
     },
     {

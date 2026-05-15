@@ -47,7 +47,7 @@ In response to Anthropic's 2026-06-15 Programmatic Credit Pool policy — which 
 
 ## Decision
 
-**Adopt Per-Project Assistant Profiles as the value-capture mechanism** for Anthropic's 2026-06-15 Programmatic Credit Pool ($200/month at Max 20x). Build one tailored Profile per project (starting with /opt second-brain as the canonical example), spawn runtime-agnostic instances on OpenClaw / OpenArms / Hermes / generic Agent-SDK consumers, and use the spawned instances to consume the programmatic credit on valuable per-project automation. This is Option A from the alternatives below; phased delivery puts Phase 1+2 on track to be operable before 2026-06-15 to start capturing credit on the first billing cycle.
+**Adopt Per-Project Assistant Profiles as the value-capture mechanism** for Anthropic's 2026-06-15 Programmatic Credit Pool ($200/month at Max 20x). Build one tailored Profile per project (starting with this project (the research wiki) as the canonical example), spawn runtime-agnostic instances on OpenClaw / OpenArms / Hermes / generic Agent-SDK consumers, and use the spawned instances to consume the programmatic credit on valuable per-project automation. This is Option A from the alternatives below; phased delivery puts Phase 1+2 on track to be operable before 2026-06-15 to start capturing credit on the first billing cycle.
 
 ## Alternatives
 
@@ -113,8 +113,8 @@ Skip the profile abstraction; configure each runtime directly per project.
 
 | Phase | Timeline | Deliverable |
 |---|---|---|
-| Phase 1 (Document — 2 weeks) | by 2026-05-23 | Profile pattern + schema design + /opt example + strategic decision (this page) + spawn protocol design |
-| Phase 2 (Implement — 2 weeks) | by 2026-06-08 | /opt profile authored · 1 spawn protocol operable (generic Agent SDK or OpenClaw) · profile template + scaffold tool |
+| Phase 1 (Document — 2 weeks) | by 2026-05-23 | Profile pattern + schema design + this project example + strategic decision (this page) + spawn protocol design |
+| Phase 2 (Implement — 2 weeks) | by 2026-06-08 | this project profile authored · 1 spawn protocol operable (generic Agent SDK or OpenClaw) · profile template + scaffold tool |
 | Phase 3 (Test — 1 week) | by 2026-06-15 | First Assistant instance spawned · `claude -p` consumption observed against $200 credit (cycle starts 2026-06-15) |
 | Phase 4 (Cross-project — ongoing) | 2026-06 → 2026-09 | One profile per sister project (5 projects); spawn protocols for OpenArms, Hermes, etc. |
 
@@ -134,13 +134,13 @@ Phase 1+2 delivery before 2026-06-15 is the recommended cadence because the firs
 | Trade-off | Direction | Rationale |
 |---|---|---|
 | Implementation speed vs design rigor | Lean toward rigor | Operator-stated "high quality definitions and features" |
-| Coverage breadth (all projects fast) vs depth (/opt example deep) | Depth-first | /opt as canonical example → projects follow with pattern in hand |
+| Coverage breadth (all projects fast) vs depth (this project example deep) | Depth-first | this project as canonical example → projects follow with pattern in hand |
 | Runtime support (many runtimes) vs runtime support (one done well) | One-done-well first | Generic Agent SDK + OpenClaw first; OpenArms, Hermes, others follow |
 | Profile schema flexibility vs strict validation | Strict validation | Quality bar requires schema enforcement; flexibility added later via versioning |
 
 ## Reversibility
 
-**Partially reversible**. The Profile pattern + schema + /opt example are knowledge-layer artifacts that survive even if the strategy pivots — they document the assistant-architecture approach independently of the credit-capture rationale. The runtime-specific spawn protocols are also reusable beyond the Anthropic credit context (they bridge Profile to any Agent-SDK runtime).
+**Partially reversible**. The Profile pattern + schema + this project example are knowledge-layer artifacts that survive even if the strategy pivots — they document the assistant-architecture approach independently of the credit-capture rationale. The runtime-specific spawn protocols are also reusable beyond the Anthropic credit context (they bridge Profile to any Agent-SDK runtime).
 
 **Hard-to-reverse elements**:
 - Sister-project profile authoring (M006) commits operator attention across 5 projects — if pivoting, sister profiles may be partial
@@ -148,7 +148,7 @@ Phase 1+2 delivery before 2026-06-15 is the recommended cadence because the firs
 
 **Recovery path if abandoned**:
 - Profiles remain valid documentation of project-specific assistance needs (reusable)
-- The wider /opt knowledge layer is unaffected
+- The wider this project knowledge layer is unaffected
 - No deletion of artifacts; status flip to `superseded`
 
 ## Dependencies
@@ -161,14 +161,14 @@ Beyond Anthropic's policy (which IS the trigger), this decision has soft depende
 
 ## Constraints
 
-- **Operator-territory items** (not /opt scope):
+- **Operator-territory items** (not this-project scope):
   - Hermes identity — ✅ RESOLVED 2026-05-09 (Greek messenger god, operator-confirmed)
   - Max plan tier confirmation (operator-decision)
   - Actual spawning + running of Assistants (runtime-territory, lives in runtime repos)
   - Credit pool monitoring at Anthropic billing dashboard (operator-territory)
-- **/opt scope** (this Epic's work):
+- **this-project scope** (this Epic's work):
   - Profile schema + pattern
-  - /opt tailored profile (the canonical example)
+  - this project tailored profile (the canonical example)
   - Spawn protocols (the bridge from profile to runtime — documentation)
   - Cross-project profile catalog (the navigation layer)
   - Strategic decisions (this page + future decisions)

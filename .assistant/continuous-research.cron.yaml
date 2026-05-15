@@ -34,7 +34,7 @@ jobs:
         Perform a lightweight scan of the highest-cadence monitoring_surfaces
         (Hugging Face trending, Anthropic release notes, OpenAI announcements,
         GitHub trending for AI/agent repos). For each surface, detect NOVELTY
-        only — anything not already in /opt's wiki corpus. If significant
+        only — anything not already in the project's wiki corpus. If significant
         novelty found, escalate to full source-synthesis (use on_significant_change_detected).
         If no novelty, log a noted-but-skipped entry. Budget cap: 1 minute model time.
     description: "Hourly delta-check — novelty detection across fast-moving frontier surfaces. Lightweight; escalates to full synthesis on significant find."

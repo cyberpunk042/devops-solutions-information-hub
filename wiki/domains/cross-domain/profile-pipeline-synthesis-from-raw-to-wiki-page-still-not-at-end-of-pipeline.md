@@ -1,5 +1,5 @@
 ---
-title: "Profile — /opt Pipeline Synthesis: focused assistant Profile for synthesizing ingested information still not at end of pipeline (raw → wiki page); runnable as a 24/7 OpenClaw (or other tool) agent"
+title: "Profile — this project Pipeline Synthesis: focused assistant Profile for synthesizing ingested information still not at end of pipeline (raw → wiki page); runnable as a 24/7 OpenClaw (or other tool) agent"
 type: concept
 domain: cross-domain
 status: synthesized
@@ -35,13 +35,13 @@ sources:
 tags: [concept, opt-profile, pipeline-synthesis, ingestion-synthesis, focused-assistant-job, 24-7-agent-runnable, openclaw-runnable, raw-to-wiki, tool-agnostic, "2026-05-09", profiles-plural-per-project, cross-domain, synthesized]
 ---
 
-# Profile — /opt Pipeline Synthesis
+# Profile — this project Pipeline Synthesis
 
 > [!info] **Operator-named example Profile (2026-05-09 turn 6, verbatim, sacrosanct)**: *"Another could be synthesize the ingested information still not at the end of the pipeline...."*. This Profile implements operator's named example.
 
 ## Summary
 
-The **Pipeline Synthesis** Profile is a focused assistant definition for ONE specific job at /opt second-brain: **synthesize ingested information that is still not at the end of the pipeline**. The pipeline goes: URL → pipeline fetch → raw/ file → **(this Profile) source-synthesis page → cross-references → pipeline post → operator review → maturity promotion**. This Profile owns the middle: taking raw/ files (articles · transcripts · papers · GitHub READMEs) that have been fetched but not yet synthesized into wiki pages, and producing schema-compliant source-synthesis pages that close the gap. Runnable as a 24/7 OpenClaw / Multica / etc. agent. ONE of /opt's plural focused Profiles; companion to [[opt-profile-continuous-research-keep-models-and-tech-vision-current|/opt Continuous Research Profile]].
+The **Pipeline Synthesis** Profile is a focused assistant definition for ONE specific job at this project (the research wiki): **synthesize ingested information that is still not at the end of the pipeline**. The pipeline goes: URL → pipeline fetch → raw/ file → **(this Profile) source-synthesis page → cross-references → pipeline post → operator review → maturity promotion**. This Profile owns the middle: taking raw/ files (articles · transcripts · papers · GitHub READMEs) that have been fetched but not yet synthesized into wiki pages, and producing schema-compliant source-synthesis pages that close the gap. Runnable as a 24/7 OpenClaw / Multica / etc. agent. ONE of this project's plural focused Profiles; companion to [[profile-continuous-research-keep-models-and-tech-vision-current|Continuous Research Profile]].
 
 ## The Profile
 
@@ -73,7 +73,7 @@ purpose: |
   candidates; never auto-promotes to validated tier (operator approves).
 
 what_this_profile_is_NOT: |
-  - NOT a Researcher (that's /opt Continuous Research Profile)
+  - NOT a Researcher (that's this project Continuous Research Profile)
   - NOT a Maturity Promoter (that's a separate Profile — TBD when needed)
   - NOT a Methodology Steward (operator-territory, not assistant scope)
   - NOT a Fetcher (the fetching IS pipeline fetch; this Profile consumes
@@ -203,7 +203,7 @@ model_routing:
 ```yaml
 prompt_templates:
   system: |
-    You are the /opt Pipeline Synthesis Assistant. Your ONE job is to take
+    You are this project Pipeline Synthesis Assistant. Your ONE job is to take
     raw/ files that are fetched but not yet at the end of the pipeline,
     and produce schema-compliant source-synthesis wiki pages.
 
@@ -327,7 +327,7 @@ success_criteria:
 
 3. **Schema-rigorous.** Every output must pass pipeline post (0 errors), satisfy ≥0.25 line ratio, have all 9 required frontmatter fields, all required sections. The schema is the quality floor.
 
-4. **Cross-references are mandatory.** Each synthesis must add ≥1 explicit relationship verb to an existing wiki page. The cross-reference density of /opt's knowledge graph is one of this Profile's success metrics.
+4. **Cross-references are mandatory.** Each synthesis must add ≥1 explicit relationship verb to an existing wiki page. The cross-reference density of this project's knowledge graph is one of this Profile's success metrics.
 
 5. **Sacrosanct boundary: raw/notes/ is NOT input.** Operator directives in raw/notes/ are verbatim primary records, not material to synthesize. Synthesizing them would be a corruption of the operator-verbatim doctrine.
 
@@ -364,12 +364,12 @@ Multiple instances of this Profile (e.g., one OpenClaw + one Multica) can proces
 
 **Concurrent consumers**: same Profile can be consumed by OpenClaw + Multica simultaneously — both agents process the unsynthesized backlog, possibly with rate-limit coordination.
 
-## Companion Profiles at /opt (plural per-project doctrine)
+## Companion Profiles at this project (plural per-project doctrine)
 
 | Profile | Job |
 |---|---|
-| **[[opt-profile-continuous-research-keep-models-and-tech-vision-current\|/opt Continuous Research]]** | Keep models + tech-vision current (operator example #1) |
-| **/opt Pipeline Synthesis** (this) | Synthesize ingested information still not at end of pipeline (operator example #2) |
+| **[[profile-continuous-research-keep-models-and-tech-vision-current\|Continuous Research]]** | Keep models + tech-vision current (operator example #1) |
+| **Pipeline Synthesis** (this) | Synthesize ingested information still not at end of pipeline (operator example #2) |
 | (more to author per operator's "things like this") | TBD as operator names them |
 
 ## Relationships
@@ -377,7 +377,7 @@ Multiple instances of this Profile (e.g., one OpenClaw + one Multica) can proces
 - IMPLEMENTS: [[2026-05-09-operator-correction-turn-6-profiles-plural-per-project-each-is-one-focused-assistant-job-continuous-research-ingestion-synthesis-stop-conflating|Operator correction 2026-05-09 turn 6]] (operator-named example Profile #2)
 - IMPLEMENTS: [[per-project-assistant-profile-standards|Per-Project Assistant Profile Standards]]
 - IMPLEMENTS: [[per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes|Pattern — Per-Project Assistant Profile]]
-- COMPLEMENTS: [[opt-profile-continuous-research-keep-models-and-tech-vision-current|/opt Continuous Research Profile]] (companion focused Profile; Continuous Research feeds the input that Pipeline Synthesis processes)
+- COMPLEMENTS: [[profile-continuous-research-keep-models-and-tech-vision-current|Continuous Research Profile]] (companion focused Profile; Continuous Research feeds the input that Pipeline Synthesis processes)
 - DEMONSTRATES: [[never-synthesize-from-descriptions-alone|Lesson — Never synthesize from descriptions alone]] — Profile's Action Surface explicitly forbids
 - DEMONSTRATES: [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4]] — pipeline post output is the verification gate
 
@@ -386,6 +386,6 @@ Multiple instances of this Profile (e.g., one OpenClaw + one Multica) can proces
 [[Operator correction 2026-05-09 turn 6]]
 [[per-project-assistant-profile-standards|Per-Project Assistant Profile Standards]]
 [[Pattern — Per-Project Assistant Profile]]
-[[/opt Continuous Research Profile]]
+[[Continuous Research Profile]]
 [[Lesson — Never synthesize from descriptions alone]]
 [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4]]

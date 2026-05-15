@@ -35,7 +35,7 @@ surfaces:
     state_path: "/home/jfortin/.multica/server"
     notes: "Operator self-hosts at /home/jfortin/.multica/server (memory)."
 
-  # ─── Wiki LLM folder (/opt second-brain — this project) ─────────────────
+  # ─── Wiki LLM folder (the research wiki (this project)) ─────────────────
   wiki-llm-folder:
     description: "Direct access to wiki/ via the research-wiki MCP server."
     detect: ".venv/bin/python"  # tools.mcp_server entry point

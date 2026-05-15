@@ -55,7 +55,7 @@ The spawn protocol is a deterministic mapping: read Profile YAML → render Mult
 
 | Instance | Profile | Status |
 |---|---|---|
-| **/opt second-brain on Multica** (planned per E024-M003 + this pattern) | [[opt-second-brain-assistant profile]] | Pending — needs Profile schema (M002) + this spawn protocol |
+| **this project (the research wiki) on Multica** (planned per E024-M003 + this pattern) | [[assistant-profile profile]] | Pending — needs Profile schema (M002) + this spawn protocol |
 | **OpenArms-via-Multica** (future) | OpenArms profile | Future per E024-M006 |
 | **AICP-via-Multica** (future) | AICP profile | Future per E024-M006 |
 | **Any sister project on Multica** | Per-project profile | Future per E024-M006 |
@@ -131,11 +131,11 @@ The spawn protocol is a deterministic mapping: read Profile YAML → render Mult
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-## How To Apply (concrete walkthrough — /opt second-brain example)
+## How To Apply (concrete walkthrough — this project (the research wiki) example)
 
 This walkthrough assumes:
 - E024-M002 Profile schema is finalized (T071 done)
-- /opt second-brain Profile authored at `.assistant/profile.yaml` (T075 done)
+- this project (the research wiki) Profile authored at `.assistant/profile.yaml` (T075 done)
 - Multica daemon is running at `/home/jfortin/.multica/server/`
 
 ### 1. Validate Profile
@@ -159,19 +159,19 @@ multica workspace create devops-solutions-information-hub
 # (Or use the existing workspace if operator has one)
 ```
 
-### 4. Create Multica agent from /opt Profile
+### 4. Create Multica agent from this project Profile
 
 Via Multica UI (Settings → Agents → New Agent) or via `multica` CLI:
 
 | Multica field | Source from Profile |
 |---|---|
-| Name | `opt-second-brain-assistant` (from Profile.identity.name) |
+| Name | `assistant-profile` (from Profile.identity.name) |
 | Runtime | The daemon-host (operator's machine) |
 | Provider | `claude-code` (from Profile.runtime_targets[0]; can be Hermes/OpenClaw/Claude Code/etc.) |
 | System prompt | Profile.prompt_templates.system (verbatim) |
 | Skills enabled | Profile.action_surface.allowed (each mapped to Multica skill ID) |
 | Custom env | Profile.knowledge_scope.mcp_servers + wiki paths |
-| Cost ceiling (Multica-side) | Profile.model_routing.cost_ceiling_usd_per_month ($50/month for /opt example) |
+| Cost ceiling (Multica-side) | Profile.model_routing.cost_ceiling_usd_per_month ($50/month for this project example) |
 
 ### 5. Smoke-test the spawned Assistant
 
@@ -182,7 +182,7 @@ multica issue create \
   --workspace devops-solutions-information-hub \
   --title "Smoke test: orient + report pipeline status" \
   --body "Run gateway orient + pipeline status; report findings." \
-  --assign opt-second-brain-assistant
+  --assign assistant-profile
 ```
 
 Watch via:
@@ -216,7 +216,7 @@ If drift detected → update Profile, re-spawn, iterate.
 |---|---|
 | **Multica overhead vs direct CLI spawn** | Multica overhead = workspace/agent setup; direct CLI = simpler but loses board/telemetry/team-coord. ACCEPTED — operator's existing investment justifies. |
 | **Multica's cloud vs self-host** | Self-host adds Docker + maintenance burden but ensures data sovereignty. ACCEPTED — already operator-chosen. |
-| **Multica's PostgreSQL+pgvector vs lighter SQLite (Claude OS style)** | Heavier stack but team-native; ACCEPTED for /opt where multi-context is natural |
+| **Multica's PostgreSQL+pgvector vs lighter SQLite (Claude OS style)** | Heavier stack but team-native; ACCEPTED for this project where multi-context is natural |
 | **Cost-tracking coupling** | Multica tracks per-agent cost; depending on Multica version, may not granularly map to Profile.model_routing.cost_ceiling. May need adapter. |
 
 ## Anti-Patterns
@@ -241,13 +241,13 @@ Multica's WebSocket progress stream + board UI is a natural candidate for the op
 | Multica's per-agent custom_env tail | Real-time daemon log |
 | Skills metrics view | Performance + cost telemetry per skill invocation |
 
-This means: operator's information surfacing requirement can be addressed by leveraging Multica's existing telemetry, rather than building new infrastructure. The /opt wiki content surfaces in Multica's board the moment the Assistant produces it — before any Obsidian sync happens.
+This means: operator's information surfacing requirement can be addressed by leveraging Multica's existing telemetry, rather than building new infrastructure. The this project wiki content surfaces in Multica's board the moment the Assistant produces it — before any Obsidian sync happens.
 
 ## Sister-Project Applicability
 
 | Project | Apply this spawn protocol? |
 |---|---|
-| **/opt second-brain** (this project, E024-M003) | **YES — first concrete instance** |
+| **this project (the research wiki)** (this project, E024-M003) | **YES — first concrete instance** |
 | **OpenArms / OpenFleet / AICP / dcp / Hermes (the project) / root-ghostproxy** | Plan: yes per E024-M006 (one Multica agent per project) |
 | **Any project where Multica daemon is reachable** | Yes — Multica is the unified bridge across the ecosystem |
 

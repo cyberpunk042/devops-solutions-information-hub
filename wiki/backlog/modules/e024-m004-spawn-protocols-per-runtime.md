@@ -88,7 +88,7 @@ This shapes priority: Multica first (done) · generic + claude-code-cli-p second
 - DEPENDS ON: [[e024-m002-per-project-assistant-profile-pattern-and-schema|E024-M002 — Profile Pattern + Schema]]
 - BUILDS ON: [[declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools|Concept — Declarative Agent Programming Spectrum]] — L5 Harness row
 - IMPLEMENTS: [[per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes|Pattern — Per-Project Assistant Profile]] for multiple concrete runtimes
-- ENABLES: [[e024-m003-opt-second-brain-assistant-profile-canonical-example|E024-M003 /opt Profile]] to actually spawn an Assistant instance
+- ENABLES: [[e024-m003-assistant-profile-canonical-example|E024-M003 this project Profile]] to actually spawn an Assistant instance
 - DELIVERS: [[spawn-protocol-multica-the-runtime-agnostic-bridge-from-per-project-profile-to-multicas-10-cli-daemon|Pattern — spawn-protocol-multica]] (already authored)
 
 ## Backlinks
@@ -97,5 +97,5 @@ This shapes priority: Multica first (done) · generic + claude-code-cli-p second
 [[E024-M002 — Profile Pattern + Schema]]
 [[Concept — Declarative Agent Programming Spectrum]]
 [[Pattern — Per-Project Assistant Profile]]
-[[E024-M003 /opt Profile]]
+[[E024-M003 this project Profile]]
 [[Pattern — spawn-protocol-multica]]

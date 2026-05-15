@@ -54,12 +54,12 @@ A **Per-Project Assistant Profile** is a declarative YAML artifact with 6 requir
 
 ## Instances
 
-> [!warning] **2026-05-09 boundary correction (operator-stated, sacrosanct)**: *"every project will do their own Profiles... this is per project"*. /opt does NOT author sister-project Profiles. The only Profile instance authored at /opt is /opt's own (eat-our-own-dogfood); every other project authors its own Profile in its own repo.
+> [!warning] **2026-05-09 boundary correction (operator-stated, sacrosanct)**: *"every project will do their own Profiles... this is per project"*. this project does NOT author sister-project Profiles. The only Profile instance authored at this project is this project's own (eat-our-own-dogfood); every other project authors its own Profile in its own repo.
 
 | Instance | Where authored | Status |
 |---|---|---|
-| **opt-second-brain-assistant** (this project — /opt's own Profile) | `wiki/domains/cross-domain/opt-second-brain-assistant-profile-...md` (THIS project's wiki) | ✅ authored 2026-05-09 |
-| **Per-sister-project Profiles** (OpenArms · OpenFleet · AICP · devops-control-plane · OpenClaw · root-ghostproxy · others) | Each project's OWN repo (typically `.assistant/profile.yaml`) | NOT /opt's authoring scope. /opt provides standards + model + integration + super-model (E024-M006) that those projects consume. |
+| **assistant-profile** (this project — this project's own Profile) | `wiki/domains/cross-domain/assistant-profile-...md` (THIS project's wiki) | ✅ authored 2026-05-09 |
+| **Per-sister-project Profiles** (OpenArms · OpenFleet · AICP · devops-control-plane · OpenClaw · root-ghostproxy · others) | Each project's OWN repo (typically `.assistant/profile.yaml`) | NOT this project's authoring scope. this project provides standards + model + integration + super-model (E024-M006) that those projects consume. |
 
 ## Pattern Structure
 
@@ -85,7 +85,7 @@ A valid Per-Project Assistant Profile MUST have these sections:
 ```yaml
 ---
 profile_version: 1                       # schema version
-profile_name: opt-second-brain-assistant
+profile_name: assistant-profile
 project: devops-solutions-information-hub
 owner: operator
 tagline: "Knowledge curation, methodology stewardship, source ingestion, lesson distillation for the research wiki"
@@ -130,7 +130,7 @@ model_routing:
   cost_ceiling_usd_per_month: 50         # caps credit consumption per profile
 prompt_templates:
   system: |
-    You are the /opt second-brain Assistant. You curate, synthesize,
+    You are the this project (the research wiki) Assistant. You curate, synthesize,
     and steward the research wiki at devops-solutions-information-hub.
     Behave FROM the project, not OVER it. Use MCP tools as your operating
     system. Operator words are sacrosanct — quote verbatim, never paraphrase.
@@ -149,7 +149,7 @@ success_criteria:
     target_credit_consumption_usd: 30-50  # consume $30-50/month of the $200 budget productively
     quality_proxy: "operator review checkboxes per delivered artifact"
   telemetry:
-    log_to: /tmp/opt-second-brain-assistant-telemetry.jsonl
+    log_to: /tmp/assistant-profile-telemetry.jsonl
 ---
 ```
 
@@ -226,7 +226,7 @@ Concrete examples:
 
 | Project | Profile expectation |
 |---|---|
-| **/opt second-brain** (this) | Profile tailored to knowledge curation, methodology stewardship, source ingestion, lesson distillation |
+| **this project (the research wiki)** (this) | Profile tailored to knowledge curation, methodology stewardship, source ingestion, lesson distillation |
 | **OpenArms** | Profile tailored to fleet-agent runtime engineering, harness compliance, methodology enforcement |
 | **OpenFleet** | Profile tailored to fleet orchestration, LightRAG knowledge consumption, task dispatch |
 | **AICP** | Profile tailored to local-AI inference, complexity routing, $0 target enforcement |
