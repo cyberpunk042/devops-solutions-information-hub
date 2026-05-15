@@ -317,6 +317,61 @@ def get_openclaw_admin_token() -> str | None:
     return cfg.get("gateway", {}).get("auth", {}).get("token")
 
 
+def ensure_agent_auth(agent_name: str) -> tuple[bool, str]:
+    """Ensure the agent has Anthropic auth credentials from a known-good source.
+
+    OpenClaw 2026.5.12 isolates auth per-agent. New agents created via `agents add`
+    get an empty `auth-profiles.json` (only `{"version":1,"profiles":{}}`). On first
+    invocation the agent fails with `FailoverError: No credentials found for profile
+    "anthropic:claude-cli"` — because the OAuth tokens captured during `openclaw
+    onboard` live in the operator's `main` agent dir, not in the new agent's.
+
+    This step propagates the OAuth profile from the canonical bootstrap source
+    (operator's main agent) into the target agent. Both agents then share the
+    refresh token and rotate independently when their access tokens expire.
+
+    Returns (success, message_for_log).
+    """
+    target_dir = Path.home() / ".openclaw" / "agents" / agent_name / "agent"
+    target_profiles = target_dir / "auth-profiles.json"
+    target_state = target_dir / "auth-state.json"
+
+    # Already populated?
+    if target_profiles.exists():
+        try:
+            data = json.loads(target_profiles.read_text())
+            if data.get("profiles"):
+                providers = list(data["profiles"].keys())
+                return (True, f"already populated with: {providers}")
+        except Exception:
+            pass
+
+    # Find a source agent with credentials — main is the bootstrap source
+    # (other already-installed profiles work too if main doesn't have them)
+    candidate_sources = ["main"] + [p for p in list_profiles() if p != agent_name]
+    for source in candidate_sources:
+        source_dir = Path.home() / ".openclaw" / "agents" / source / "agent"
+        source_profiles = source_dir / "auth-profiles.json"
+        if not source_profiles.exists():
+            continue
+        try:
+            data = json.loads(source_profiles.read_text())
+            if not data.get("profiles"):
+                continue
+            target_dir.mkdir(parents=True, exist_ok=True)
+            target_profiles.write_text(source_profiles.read_text())
+            target_profiles.chmod(0o600)
+            source_state = source_dir / "auth-state.json"
+            if source_state.exists():
+                target_state.write_text(source_state.read_text())
+                target_state.chmod(0o600)
+            providers = list(data["profiles"].keys())
+            return (True, f"propagated from '{source}': {providers}")
+        except Exception:
+            continue
+    return (False, "no source agent with credentials found — run `openclaw models auth login --provider anthropic` once")
+
+
 def materialize_workspace_files(profile: dict, workspace_path: Path) -> None:
     """Write the 7 OpenClaw workspace markdown files from the Profile YAML.
 
@@ -844,6 +899,20 @@ def cmd_install(args: argparse.Namespace) -> int:
             info("DRY RUN — not writing workspace files")
         else:
             materialize_workspace_files(profile, workspace_path)
+
+        # [3a2] Propagate Anthropic OAuth auth profile so the agent can actually
+        # authenticate on first invocation. OpenClaw isolates auth per-agent;
+        # without this, cron-fired runs error with `FailoverError: No credentials
+        # found for profile "anthropic:claude-cli"`.
+        stage("[3a2/6] Propagate Anthropic auth from main → this agent")
+        if args.dry_run:
+            info("DRY RUN — not copying auth profiles")
+        else:
+            success, message = ensure_agent_auth(agent_id)
+            if success:
+                ok(f"auth: {message}")
+            else:
+                warn(f"auth: {message}")
 
     # 3b. Wire project's MCP server (this project's wiki tools — 28 tools)
     if not args.no_mcp and have("openclaw"):
