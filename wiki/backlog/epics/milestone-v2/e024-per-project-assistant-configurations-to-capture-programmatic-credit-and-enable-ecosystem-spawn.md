@@ -146,6 +146,7 @@ Build per-project assistant configurations / profiles — one per repo, tailored
 - IMPLEMENTS: [[2026-05-09-operator-directive-hermes-clarification-information-surfacing-before-public-obsidian-pull-from-frontier-stay-independent-classify-existing-approaches|Operator directive 2026-05-09 turn 2]] — frontier-pulling + classify-existing-approaches + Hermes clarification (Hermes confirmed as real CLI per Multica evidence)
 - BUILDS ON: [[src-anthropic-programmatic-credit-pool-policy-change-2026-06-15|Anthropic Programmatic Credit Pool Policy Synthesis]] — the research evidence + value-at-risk frame
 - BUILDS ON: [[assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09|Comparison — Assistant Platforms & Frameworks Frontier]] — empirical inputs from Claude OS / Obsidian PM / Multica / OCMC; Hermes confirmed as real agent-CLI runtime via Multica's supported-CLI list
+- BUILDS ON: [[declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools|Concept — Declarative Agent Programming Spectrum]] — the foundational synthesis unifying SDD · Skills · Context/Context-Injection · Hooks · Harness across all tools (Claude OS · Multica · OpenClaw · Claude Code · OpenCode · Hermes · Codex · Gemini). Profile compiles all 5 layers into one runtime-agnostic spec.
 - COMPLEMENTS: [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Lesson — Anti-Vendor-Lock-In as empirical claim]] — Profile design preserves runtime-agnosticism, supporting future routing to non-Anthropic
 - COMPLEMENTS: [[post-anthropic-self-autonomous-stack|Milestone — Post-Anthropic Self-Autonomous Stack]] — strategic alignment with reducing Anthropic dependency
 - RELATES TO: [[custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis|Custom-Tailored Model Group Concept]] — Profile-driven routing can target this once it crystallizes
@@ -157,6 +158,7 @@ Build per-project assistant configurations / profiles — one per repo, tailored
 [[Operator directive 2026-05-09 turn 2]]
 [[Anthropic Programmatic Credit Pool Policy Synthesis]]
 [[Comparison — Assistant Platforms & Frameworks Frontier]]
+[[Concept — Declarative Agent Programming Spectrum]]
 [[Lesson — Anti-Vendor-Lock-In as empirical claim]]
 [[Milestone — Post-Anthropic Self-Autonomous Stack]]
 [[custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis|Custom-Tailored Model Group Concept]]

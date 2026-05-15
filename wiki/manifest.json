@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-15T14:29:35.831854+00:00",
+  "generated": "2026-05-15T14:50:10.799972+00:00",
   "stats": {
-    "pages": 856,
+    "pages": 859,
     "domains": 14,
     "sources": 110,
     "comparisons": 10,
-    "relationships": 3997,
-    "tags_unique": 3165,
+    "relationships": 4021,
+    "tags_unique": 3180,
     "layers": {
       "3": 4,
       "5": 38,
       "6": 26,
-      "2": 80,
+      "2": 82,
       "4": 83,
       "0": 1,
       "1": 81,
       "spine": 80
     },
     "maturity": {
-      "seed": 177,
+      "seed": 180,
       "growing": 331,
       "mature": 23
     }
@@ -936,6 +936,10 @@
         {
           "verb": "BUILDS ON",
           "target": "Comparison \u2014 Assistant Platforms & Frameworks Frontier"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Concept \u2014 Declarative Agent Programming Spectrum"
         },
         {
           "verb": "COMPLEMENTS",
@@ -10255,6 +10259,150 @@
         {
           "verb": "RELATES TO",
           "target": "LLM Wiki Pattern"
+        }
+      ]
+    },
+    {
+      "path": "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools.md",
+      "slug": "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
+      "title": "Concept \u2014 The Declarative Agent Programming Spectrum: 5 layers (SDD \u00b7 Skills \u00b7 Context/Context-Injection \u00b7 Hooks \u00b7 Harness) unified, with integration matrix across tools (Claude OS \u00b7 Multica \u00b7 OpenClaw \u00b7 Claude Code \u00b7 OpenCode \u00b7 Hermes \u00b7 Codex \u00b7 Gemini) and destinations (Wiki LLM \u00b7 PM tools)",
+      "type": "concept",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-09",
+      "updated": "2026-05-09",
+      "last_reviewed": "",
+      "tags": [
+        "concept",
+        "declarative-agent-programming",
+        "spectrum-of-abstractions",
+        "sdd",
+        "skills",
+        "context-engineering",
+        "context-injection",
+        "hooks",
+        "harness-engineering",
+        "unification",
+        "integration-matrix",
+        "claude-os",
+        "multica",
+        "openclaw",
+        "claude-code",
+        "opencode",
+        "hermes",
+        "ai-agents",
+        "2026-05-09",
+        "synthesized"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive-2026-05-09-turn-3",
+          "type": "directive",
+          "file": "raw/notes/2026-05-09-operator-directive-sdd-skills-context-hooks-harness-overlap-need-clear-view-and-vision-integrate-everywhere-wiki-llm-pm-claude-os-multica-openclaw-claude-code-opencode.md",
+          "description": "Operator directive 2026-05-09 turn 3 \u2014 synthesis call: SDD/Skills/Context/Hooks/Harness overlap heavily; need a clear view + vision; must integrate everywhere (Wiki LLM, PM tools) across all tools"
+        },
+        {
+          "id": "src-sdd-convergence-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/02_synthesized/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md",
+          "description": "Lesson \u2014 Spec-Driven Convergence: 9 instances + 11-impact-area denotation. SDD layer of the spectrum."
+        },
+        {
+          "id": "src-skills-systems-pattern",
+          "type": "wiki",
+          "file": "wiki/patterns/01_drafts/skill-systems-orchestrator-plus-modular-child-skills-the-architecture-pattern-anthropic-wont-solve-for-you.md",
+          "description": "Pattern \u2014 Skill Systems: orchestrator + child skills. Skills layer of the spectrum."
+        },
+        {
+          "id": "src-context-engineering-model",
+          "type": "wiki",
+          "file": "wiki/spine/models/depth/model-context-engineering.md",
+          "description": "Existing model \u2014 Context Engineering. Context/Context-Injection layer of the spectrum."
+        },
+        {
+          "id": "src-skills-commands-hooks-model",
+          "type": "wiki",
+          "file": "wiki/spine/models/agent-config/model-skills-commands-hooks.md",
+          "description": "Existing model \u2014 Skills, Commands, Hooks. Hooks layer of the spectrum + the existing mechanism-determinism framing."
+        },
+        {
+          "id": "src-hook-output-channel-validity",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it.md",
+          "description": "Lesson \u2014 Hook output-channel validity. Hooks-layer constraint that the spectrum surfaces."
+        },
+        {
+          "id": "src-comparison-frontier",
+          "type": "wiki",
+          "file": "wiki/comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09.md",
+          "description": "Frontier comparison \u2014 Claude OS \u00b7 Obsidian PM \u00b7 Multica \u00b7 OCMC. Provides the tool-axis for the integration matrix."
+        },
+        {
+          "id": "src-per-project-profile-pattern",
+          "type": "wiki",
+          "file": "wiki/patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes.md",
+          "description": "Pattern \u2014 Per-Project Assistant Profile. Bridges all 5 layers via its 6 schema sections + runtime targets."
+        },
+        {
+          "id": "epic-e024",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn.md",
+          "description": "Parent Epic E024 \u2014 the operationalization of this spectrum via per-project Profiles."
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Operator directive 2026-05-09 turn 3"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Lesson \u2014 Spec-Driven Convergence"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Skills, Commands, Hooks"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Context Engineering"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Lesson \u2014 Hook output channel is event-specific"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Pattern \u2014 Skill Systems"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Comparison \u2014 Assistant Platforms Frontier"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Pattern \u2014 Per-Project Assistant Profile"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Pattern \u2014 spawn-protocol-multica"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Lesson \u2014 Anti-Vendor-Lock-In"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2 \u2014 Structured Context"
         }
       ]
     },
@@ -41911,6 +42059,180 @@
       ]
     },
     {
+      "path": "patterns/01_drafts/skill-systems-orchestrator-plus-modular-child-skills-the-architecture-pattern-anthropic-wont-solve-for-you.md",
+      "slug": "patterns/01_drafts/skill-systems-orchestrator-plus-modular-child-skills-the-architecture-pattern-anthropic-wont-solve-for-you",
+      "title": "Pattern \u2014 Skill Systems: orchestrator skill + modular child skills wired by skill.md (the architecture that compounds \u2014 what Anthropic won't solve for you)",
+      "type": "pattern",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-09",
+      "updated": "2026-05-09",
+      "last_reviewed": "",
+      "tags": [
+        "pattern",
+        "skill-systems",
+        "skills-architecture",
+        "orchestrator-pattern",
+        "modular-skills",
+        "anti-mega-skill",
+        "anti-isolated-skill",
+        "claude-os",
+        "claude-code",
+        "ai-agents",
+        "2026-05-09",
+        "draft",
+        "profile-action-surface"
+      ],
+      "sources": [
+        {
+          "id": "src-claude-os-skill-chaining-youtube",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=RrMTtG1ZccI",
+          "file": "raw/transcripts/skill-chaining-in-claude-os-is-insane-dont-fall-behind.txt",
+          "description": "YouTube \u2014 Skill Chaining in Claude OS is INSANE \u2014 primary empirical source for the Skill Systems pattern: orchestrator + modular child skills wired by skill.md, with the strategic frame that this is the ONE thing Anthropic won't solve for your business"
+        },
+        {
+          "id": "src-comparison-frontier",
+          "type": "wiki",
+          "file": "wiki/comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09.md",
+          "description": "Frontier comparison surfacing this pattern as the recommended implementation pattern within the per-project Profile's Action Surface"
+        },
+        {
+          "id": "src-claude-os-repo",
+          "type": "file",
+          "file": "raw/articles/brobertsazclaude-os.md",
+          "description": "Claude OS v2.5 skills library \u2014 36+ community skills demonstrating the modular-skill-as-building-block discipline"
+        },
+        {
+          "id": "companion-profile-pattern",
+          "type": "wiki",
+          "file": "wiki/patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes.md",
+          "description": "Companion pattern \u2014 Per-Project Assistant Profile. Skill Systems is one canonical implementation pattern within the Profile's Action Surface section"
+        },
+        {
+          "id": "existing-skills-commands-hooks-model",
+          "type": "wiki",
+          "file": "wiki/spine/models/agent-config/model-skills-commands-hooks.md",
+          "description": "Existing model \u2014 Skills, Commands, Hooks. This pattern extends the skills layer with the orchestrator-plus-children composition pattern"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Skills, Commands, Hooks"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Comparison \u2014 Assistant Platforms Frontier"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Pattern \u2014 Per-Project Assistant Profile"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Lesson \u2014 Anti-Vendor-Lock-In"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
+        }
+      ]
+    },
+    {
+      "path": "patterns/01_drafts/spawn-protocol-multica-the-runtime-agnostic-bridge-from-per-project-profile-to-multicas-10-cli-daemon.md",
+      "slug": "patterns/01_drafts/spawn-protocol-multica-the-runtime-agnostic-bridge-from-per-project-profile-to-multicas-10-cli-daemon",
+      "title": "Pattern \u2014 Spawn protocol for Multica: bridge a Per-Project Assistant Profile to a running Assistant instance on Multica's 10-CLI daemon (operator-adopted runtime)",
+      "type": "pattern",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-09",
+      "updated": "2026-05-09",
+      "last_reviewed": "",
+      "tags": [
+        "pattern",
+        "spawn-protocol",
+        "multica",
+        "runtime-bridge",
+        "daemon-cli-auto-detection",
+        "per-project-assistant",
+        "profile-to-runtime",
+        "operator-adopted-runtime",
+        "2026-05-09",
+        "ai-agents",
+        "draft",
+        "e024-m004"
+      ],
+      "sources": [
+        {
+          "id": "companion-profile-pattern",
+          "type": "wiki",
+          "file": "wiki/patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes.md",
+          "description": "Parent pattern \u2014 Per-Project Assistant Profile. This spawn protocol is one of several runtime-specific implementations (Multica, generic Agent SDK, OpenClaw, OpenArms, Hermes)"
+        },
+        {
+          "id": "src-multica-repo",
+          "type": "file",
+          "file": "raw/articles/multica-aimultica.md",
+          "description": "Multica README v1.x \u2014 open-source managed agents platform; Go+Next.js+pgvector+Daemon architecture; supports 10+ agent CLIs"
+        },
+        {
+          "id": "memory-multica-self-hosted",
+          "type": "file",
+          "file": "~/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/project_multica_self_hosted_2026_04_28.md",
+          "description": "Operator memory \u2014 Multica self-hosted at /home/jfortin/.multica/server/ with .env + source-level access; custom_env per-agent routing confirmed working 2026-04-28"
+        },
+        {
+          "id": "comparison-frontier",
+          "type": "wiki",
+          "file": "wiki/comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09.md",
+          "description": "Frontier comparison identifying Multica as T3 frontier and the operator's already-adopted runtime"
+        },
+        {
+          "id": "epic-e024",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn.md",
+          "description": "Parent E024 Epic \u2014 M004 spawn protocols module; this is the first concrete spawn protocol because Multica is the only operator-adopted runtime"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Pattern \u2014 Per-Project Assistant Profile"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E024-M004 \u2014 Spawn Protocols per Runtime"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Comparison \u2014 Assistant Platforms Frontier"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Pattern \u2014 Skill Systems"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Lesson \u2014 Anti-Vendor-Lock-In"
+        }
+      ]
+    },
+    {
       "path": "patterns/01_drafts/stage-class-gate-implementation-spec-methodology-edit-land-enforcement.md",
       "slug": "patterns/01_drafts/stage-class-gate-implementation-spec-methodology-edit-land-enforcement",
       "title": "Stage-Class Gate \u2014 Implementation Spec for Methodology Edit-Land Enforcement",
@@ -60130,15 +60452,15 @@
   "domains": {
     "backlog": {
       "page_count": 111,
-      "relationship_count": 497
+      "relationship_count": 498
     },
     "cross-domain": {
       "page_count": 291,
       "relationship_count": 1767
     },
     "ai-agents": {
-      "page_count": 73,
-      "relationship_count": 554
+      "page_count": 76,
+      "relationship_count": 577
     },
     "ai-models": {
       "page_count": 16,
@@ -60709,7 +61031,8 @@
       "backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example",
       "backlog/tasks/T071-author-per-project-assistant-profile-schema-formal-definition",
       "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles",
-      "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes"
+      "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes",
+      "patterns/01_drafts/spawn-protocol-multica-the-runtime-agnostic-bridge-from-per-project-profile-to-multicas-10-cli-daemon"
     ],
     "assistant-profile": [
       "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn",
@@ -60718,6 +61041,7 @@
     "openclaw": [
       "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn",
       "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09",
+      "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
       "domains/ai-agents/orchestration/openclaw",
       "domains/ai-agents/orchestration/openfleet",
       "log/2026-04-09/models/2026-04-09-directive-quality-models-hub-mindset",
@@ -60749,11 +61073,14 @@
       "backlog/tasks/T078-author-spawn-protocol-generic-agent-sdk",
       "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09",
       "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles",
+      "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
       "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately",
       "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
       "log/2026-05-09-PRE-COMPACT-STRONG-HANDOFF-decisions-executed-boundary-correction-freeze-memory-rrf-and-23-lessons-reformatted",
       "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension",
       "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes",
+      "patterns/01_drafts/skill-systems-orchestrator-plus-modular-child-skills-the-architecture-pattern-anthropic-wont-solve-for-you",
+      "patterns/01_drafts/spawn-protocol-multica-the-runtime-agnostic-bridge-from-per-project-profile-to-multicas-10-cli-daemon",
       "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15"
     ],
     "2026-06-15-deadline": [
@@ -60780,7 +61107,9 @@
       "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately",
       "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
       "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache",
-      "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes"
+      "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes",
+      "patterns/01_drafts/skill-systems-orchestrator-plus-modular-child-skills-the-architecture-pattern-anthropic-wont-solve-for-you",
+      "patterns/01_drafts/spawn-protocol-multica-the-runtime-agnostic-bridge-from-per-project-profile-to-multicas-10-cli-daemon"
     ],
     "local-inference": [
       "backlog/epics/pre-milestone/E001-local-inference-engine",
@@ -61069,6 +61398,7 @@
       "domains/ai-agents/claude-code/claude-code-best-practices",
       "domains/ai-agents/claude-code/claude-code-skills",
       "domains/ai-agents/claude-code/claude-code",
+      "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
       "domains/ai-agents/patterns/hooks-lifecycle-architecture",
       "domains/ai-agents/patterns/per-role-command-architecture",
       "domains/automation/wiki-event-driven-automation",
@@ -61121,6 +61451,7 @@
       "domains/ai-agents/claude-code/claude-code-best-practices",
       "domains/ai-agents/claude-code/claude-code-skills",
       "domains/ai-agents/claude-code/claude-code",
+      "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
       "domains/ai-agents/orchestration/openclaw",
       "domains/ai-agents/patterns/per-role-command-architecture",
       "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts",
@@ -61329,6 +61660,7 @@
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
       "backlog/tasks/T045-install-opencode-binary",
       "backlog/tasks/T051-audit-opencode-skill-and-agent-format",
+      "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
       "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
       "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
       "sources/tools-integration/src-multica-managed-agents-platform",
@@ -61637,8 +61969,10 @@
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
       "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09",
       "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
+      "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
       "log/2026-04-28-session-handoff",
       "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption",
+      "patterns/01_drafts/spawn-protocol-multica-the-runtime-agnostic-bridge-from-per-project-profile-to-multicas-10-cli-daemon",
       "sources/tools-integration/src-multica-managed-agents-platform",
       "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28"
     ],
@@ -62486,6 +62820,8 @@
       "patterns/01_drafts/profile-as-coordination-bundle",
       "patterns/01_drafts/progressive-structural-enrichment-in-agent-config",
       "patterns/01_drafts/single-active-backend-with-lru-eviction",
+      "patterns/01_drafts/skill-systems-orchestrator-plus-modular-child-skills-the-architecture-pattern-anthropic-wont-solve-for-you",
+      "patterns/01_drafts/spawn-protocol-multica-the-runtime-agnostic-bridge-from-per-project-profile-to-multicas-10-cli-daemon",
       "patterns/01_drafts/systemic-bug-tracker-priority-shift-cycle-step-design",
       "patterns/01_drafts/three-layer-agent-context-architecture",
       "patterns/01_drafts/three-permission-modes-think-edit-act",
@@ -62570,6 +62906,7 @@
       "domains/ai-agents/claude-code/claude-code-context-management",
       "domains/ai-agents/claude-code/claude-code-skills",
       "domains/ai-agents/claude-code/claude-code",
+      "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
       "domains/ai-agents/orchestration/harness-engineering",
       "domains/ai-agents/patterns/hooks-lifecycle-architecture",
       "domains/automation/ai-driven-content-pipeline",
@@ -62583,6 +62920,7 @@
       "lessons/03_validated/tools-architecture/always-plan-before-executing",
       "lessons/03_validated/tools-architecture/skills-architecture-is-dominant-extension-pattern",
       "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
+      "patterns/01_drafts/skill-systems-orchestrator-plus-modular-child-skills-the-architecture-pattern-anthropic-wont-solve-for-you",
       "patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles",
       "patterns/03_validated/enforcement/enforcement-hook-patterns",
       "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15",
@@ -63085,7 +63423,8 @@
     ],
     "spawn-protocol": [
       "backlog/tasks/T078-author-spawn-protocol-generic-agent-sdk",
-      "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes"
+      "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes",
+      "patterns/01_drafts/spawn-protocol-multica-the-runtime-agnostic-bridge-from-per-project-profile-to-multicas-10-cli-daemon"
     ],
     "generic-agent-sdk": [
       "backlog/tasks/T078-author-spawn-protocol-generic-agent-sdk"
@@ -63145,7 +63484,9 @@
       "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09"
     ],
     "claude-os": [
-      "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09"
+      "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09",
+      "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
+      "patterns/01_drafts/skill-systems-orchestrator-plus-modular-child-skills-the-architecture-pattern-anthropic-wont-solve-for-you"
     ],
     "obsidian-pm": [
       "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09"
@@ -63160,7 +63501,8 @@
       "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09"
     ],
     "skill-systems": [
-      "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09"
+      "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09",
+      "patterns/01_drafts/skill-systems-orchestrator-plus-modular-child-skills-the-architecture-pattern-anthropic-wont-solve-for-you"
     ],
     "memory-layer": [
       "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09"
@@ -63176,6 +63518,7 @@
     "ai-agents": [
       "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09",
       "comparisons/cross-domain-patterns",
+      "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
       "domains/ai-agents/orchestration/agent-orchestration-patterns",
       "domains/ai-agents/orchestration/openfleet",
       "domains/ai-agents/patterns/design-md-pattern",
@@ -63186,6 +63529,8 @@
       "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
       "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
       "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes",
+      "patterns/01_drafts/skill-systems-orchestrator-plus-modular-child-skills-the-architecture-pattern-anthropic-wont-solve-for-you",
+      "patterns/01_drafts/spawn-protocol-multica-the-runtime-agnostic-bridge-from-per-project-profile-to-multicas-10-cli-daemon",
       "patterns/01_drafts/three-layer-agent-context-architecture",
       "sources/src-autobe-compiler-verified-backend-generation",
       "sources/src-bmad-method-agile-ai-development-framework",
@@ -63205,6 +63550,7 @@
     ],
     "synthesized": [
       "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09",
+      "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
       "patterns/01_drafts/agent-execution-cost-optimization-stack"
     ],
     "cross-domain": [
@@ -64239,6 +64585,7 @@
     ],
     "context-engineering": [
       "domains/ai-agents/claude-code/claude-code-context-management",
+      "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
       "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
       "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading",
       "lessons/03_validated/context-engineering/structured-context-is-proto-programming-for-ai-agents",
@@ -64330,6 +64677,64 @@
       "spine/domain-overviews/automation-domain-overview",
       "spine/models/ecosystem/model-automation-pipelines"
     ],
+    "concept": [
+      "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
+      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
+      "spine/models/depth/model-local-ai",
+      "spine/models/depth/model-notebooklm",
+      "spine/models/depth/model-second-brain",
+      "spine/models/ecosystem/model-automation-pipelines",
+      "spine/standards/concept-page-standards",
+      "spine/standards/harness-contract"
+    ],
+    "declarative-agent-programming": [
+      "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools"
+    ],
+    "spectrum-of-abstractions": [
+      "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools"
+    ],
+    "sdd": [
+      "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
+      "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
+      "sources/src-github-spec-kit-specification-driven-development",
+      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee"
+    ],
+    "context-injection": [
+      "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
+      "domains/ai-agents/patterns/hooks-lifecycle-architecture",
+      "patterns/03_validated/knowledge/validation-matrix-test-suite-for-context-injection",
+      "spine/standards/gateway-output-contract"
+    ],
+    "harness-engineering": [
+      "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
+      "domains/ai-agents/orchestration/agent-orchestration-patterns",
+      "domains/ai-agents/orchestration/harness-engineering",
+      "domains/ai-agents/patterns/hooks-lifecycle-architecture",
+      "domains/ai-agents/patterns/rework-prevention",
+      "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
+      "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
+      "lessons/03_validated/tools-architecture/always-plan-before-executing",
+      "patterns/03_validated/architecture/plan-execute-review-cycle",
+      "sources/claude-code/src-harness-engineering",
+      "sources/src-anthropic-effective-harnesses-long-running-agents",
+      "sources/src-arxiv-meta-harness-outer-loop-search",
+      "sources/src-arxiv-natural-language-agent-harnesses",
+      "sources/src-claude-agent-sdk-and-managed-agents",
+      "sources/src-rethinking-ai-agents-harness-engineering-rise",
+      "spine/models/agent-config/model-claude-code",
+      "spine/models/agent-config/model-skills-commands-hooks"
+    ],
+    "unification": [
+      "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools"
+    ],
+    "integration-matrix": [
+      "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools"
+    ],
+    "hermes": [
+      "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
+      "sources/tools-integration/src-multica-managed-agents-platform"
+    ],
     "multi-agent": [
       "domains/ai-agents/orchestration/agent-orchestration-patterns",
       "domains/ai-agents/orchestration/openclaw",
@@ -64352,24 +64757,6 @@
     "fleet-management": [
       "domains/ai-agents/orchestration/agent-orchestration-patterns",
       "domains/ai-agents/orchestration/openfleet"
-    ],
-    "harness-engineering": [
-      "domains/ai-agents/orchestration/agent-orchestration-patterns",
-      "domains/ai-agents/orchestration/harness-engineering",
-      "domains/ai-agents/patterns/hooks-lifecycle-architecture",
-      "domains/ai-agents/patterns/rework-prevention",
-      "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
-      "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
-      "lessons/03_validated/tools-architecture/always-plan-before-executing",
-      "patterns/03_validated/architecture/plan-execute-review-cycle",
-      "sources/claude-code/src-harness-engineering",
-      "sources/src-anthropic-effective-harnesses-long-running-agents",
-      "sources/src-arxiv-meta-harness-outer-loop-search",
-      "sources/src-arxiv-natural-language-agent-harnesses",
-      "sources/src-claude-agent-sdk-and-managed-agents",
-      "sources/src-rethinking-ai-agents-harness-engineering-rise",
-      "spine/models/agent-config/model-claude-code",
-      "spine/models/agent-config/model-skills-commands-hooks"
     ],
     "plan-work-review": [
       "domains/ai-agents/orchestration/harness-engineering",
@@ -64462,11 +64849,6 @@
     "stage-gating": [
       "domains/ai-agents/patterns/hooks-lifecycle-architecture",
       "domains/ai-agents/patterns/task-lifecycle-stage-gating"
-    ],
-    "context-injection": [
-      "domains/ai-agents/patterns/hooks-lifecycle-architecture",
-      "patterns/03_validated/knowledge/validation-matrix-test-suite-for-context-injection",
-      "spine/standards/gateway-output-contract"
     ],
     "blocking-pattern": [
       "domains/ai-agents/patterns/hooks-lifecycle-architecture"
@@ -64741,16 +65123,6 @@
     ],
     "crystallization": [
       "domains/automation/wiki-event-driven-automation"
-    ],
-    "concept": [
-      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
-      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
-      "spine/models/depth/model-local-ai",
-      "spine/models/depth/model-notebooklm",
-      "spine/models/depth/model-second-brain",
-      "spine/models/ecosystem/model-automation-pipelines",
-      "spine/standards/concept-page-standards",
-      "spine/standards/harness-contract"
     ],
     "exploratory": [
       "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
@@ -66687,11 +67059,6 @@
     ],
     "meta-finding": [
       "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work"
-    ],
-    "sdd": [
-      "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
-      "sources/src-github-spec-kit-specification-driven-development",
-      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee"
     ],
     "specifications": [
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy"
@@ -70545,6 +70912,39 @@
     "fire-113": [
       "patterns/01_drafts/sister-project-propagation-spec-for-auto-compact-triplet-5-projects-adaptation-matrix"
     ],
+    "skills-architecture": [
+      "patterns/01_drafts/skill-systems-orchestrator-plus-modular-child-skills-the-architecture-pattern-anthropic-wont-solve-for-you"
+    ],
+    "orchestrator-pattern": [
+      "patterns/01_drafts/skill-systems-orchestrator-plus-modular-child-skills-the-architecture-pattern-anthropic-wont-solve-for-you"
+    ],
+    "modular-skills": [
+      "patterns/01_drafts/skill-systems-orchestrator-plus-modular-child-skills-the-architecture-pattern-anthropic-wont-solve-for-you"
+    ],
+    "anti-mega-skill": [
+      "patterns/01_drafts/skill-systems-orchestrator-plus-modular-child-skills-the-architecture-pattern-anthropic-wont-solve-for-you"
+    ],
+    "anti-isolated-skill": [
+      "patterns/01_drafts/skill-systems-orchestrator-plus-modular-child-skills-the-architecture-pattern-anthropic-wont-solve-for-you"
+    ],
+    "profile-action-surface": [
+      "patterns/01_drafts/skill-systems-orchestrator-plus-modular-child-skills-the-architecture-pattern-anthropic-wont-solve-for-you"
+    ],
+    "runtime-bridge": [
+      "patterns/01_drafts/spawn-protocol-multica-the-runtime-agnostic-bridge-from-per-project-profile-to-multicas-10-cli-daemon"
+    ],
+    "daemon-cli-auto-detection": [
+      "patterns/01_drafts/spawn-protocol-multica-the-runtime-agnostic-bridge-from-per-project-profile-to-multicas-10-cli-daemon"
+    ],
+    "profile-to-runtime": [
+      "patterns/01_drafts/spawn-protocol-multica-the-runtime-agnostic-bridge-from-per-project-profile-to-multicas-10-cli-daemon"
+    ],
+    "operator-adopted-runtime": [
+      "patterns/01_drafts/spawn-protocol-multica-the-runtime-agnostic-bridge-from-per-project-profile-to-multicas-10-cli-daemon"
+    ],
+    "e024-m004": [
+      "patterns/01_drafts/spawn-protocol-multica-the-runtime-agnostic-bridge-from-per-project-profile-to-multicas-10-cli-daemon"
+    ],
     "stage-class": [
       "patterns/01_drafts/stage-class-gate-implementation-spec-methodology-edit-land-enforcement",
       "patterns/01_drafts/stage-class-stress-test-scenario-spec-real-session-test-plan"
@@ -72512,9 +72912,6 @@
     "managed-agents-platform": [
       "sources/tools-integration/src-multica-managed-agents-platform"
     ],
-    "hermes": [
-      "sources/tools-integration/src-multica-managed-agents-platform"
-    ],
     "gemini": [
       "sources/tools-integration/src-multica-managed-agents-platform",
       "spine/references/ai-model-provider-harness-decision-matrix-2026"
@@ -74344,6 +74741,20 @@
       ]
     },
     {
+      "target": "Comparison \u2014 Assistant Platforms Frontier",
+      "referenced_by": [
+        "Concept \u2014 The Declarative Agent Programming Spectrum: 5 layers (SDD \u00b7 Skills \u00b7 Context/Context-Injection \u00b7 Hooks \u00b7 Harness) unified, with integration matrix across tools (Claude OS \u00b7 Multica \u00b7 OpenClaw \u00b7 Claude Code \u00b7 OpenCode \u00b7 Hermes \u00b7 Codex \u00b7 Gemini) and destinations (Wiki LLM \u00b7 PM tools)",
+        "Pattern \u2014 Skill Systems: orchestrator skill + modular child skills wired by skill.md (the architecture that compounds \u2014 what Anthropic won't solve for you)",
+        "Pattern \u2014 Spawn protocol for Multica: bridge a Per-Project Assistant Profile to a running Assistant instance on Multica's 10-CLI daemon (operator-adopted runtime)"
+      ]
+    },
+    {
+      "target": "Concept \u2014 Declarative Agent Programming Spectrum",
+      "referenced_by": [
+        "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermes)"
+      ]
+    },
+    {
       "target": "Concept \u2014 Secure Tamper-Proof Model on Shared GPU",
       "referenced_by": [
         "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
@@ -74696,7 +75107,8 @@
     {
       "target": "E024-M004 \u2014 Spawn Protocols per Runtime",
       "referenced_by": [
-        "T078 \u2014 Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermes variants)"
+        "T078 \u2014 Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermes variants)",
+        "Pattern \u2014 Spawn protocol for Multica: bridge a Per-Project Assistant Profile to a running Assistant instance on Multica's 10-CLI daemon (operator-adopted runtime)"
       ]
     },
     {
@@ -75159,7 +75571,10 @@
     {
       "target": "Lesson \u2014 Anti-Vendor-Lock-In",
       "referenced_by": [
-        "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermes / generic Agent SDK consumers"
+        "Concept \u2014 The Declarative Agent Programming Spectrum: 5 layers (SDD \u00b7 Skills \u00b7 Context/Context-Injection \u00b7 Hooks \u00b7 Harness) unified, with integration matrix across tools (Claude OS \u00b7 Multica \u00b7 OpenClaw \u00b7 Claude Code \u00b7 OpenCode \u00b7 Hermes \u00b7 Codex \u00b7 Gemini) and destinations (Wiki LLM \u00b7 PM tools)",
+        "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermes / generic Agent SDK consumers",
+        "Pattern \u2014 Skill Systems: orchestrator skill + modular child skills wired by skill.md (the architecture that compounds \u2014 what Anthropic won't solve for you)",
+        "Pattern \u2014 Spawn protocol for Multica: bridge a Per-Project Assistant Profile to a running Assistant instance on Multica's 10-CLI daemon (operator-adopted runtime)"
       ]
     },
     {
@@ -75209,6 +75624,18 @@
         "Synthesis \u2014 Meta-Harness \u2014 End-to-End Optimization of Model Harnesses via Outer-Loop Search",
         "Synthesis \u2014 Natural-Language Agent Harnesses (NLAH) \u2014 Externalizing Harness Logic as Editable Artifacts",
         "Synthesis \u2014 Rethinking AI Agents \u2014 The Rise of Harness Engineering (YouTube Meta-Synthesis)"
+      ]
+    },
+    {
+      "target": "Lesson \u2014 Hook output channel is event-specific",
+      "referenced_by": [
+        "Concept \u2014 The Declarative Agent Programming Spectrum: 5 layers (SDD \u00b7 Skills \u00b7 Context/Context-Injection \u00b7 Hooks \u00b7 Harness) unified, with integration matrix across tools (Claude OS \u00b7 Multica \u00b7 OpenClaw \u00b7 Claude Code \u00b7 OpenCode \u00b7 Hermes \u00b7 Codex \u00b7 Gemini) and destinations (Wiki LLM \u00b7 PM tools)"
+      ]
+    },
+    {
+      "target": "Lesson \u2014 Spec-Driven Convergence",
+      "referenced_by": [
+        "Concept \u2014 The Declarative Agent Programming Spectrum: 5 layers (SDD \u00b7 Skills \u00b7 Context/Context-Injection \u00b7 Hooks \u00b7 Harness) unified, with integration matrix across tools (Claude OS \u00b7 Multica \u00b7 OpenClaw \u00b7 Claude Code \u00b7 OpenCode \u00b7 Hermes \u00b7 Codex \u00b7 Gemini) and destinations (Wiki LLM \u00b7 PM tools)"
       ]
     },
     {
@@ -75526,7 +75953,9 @@
     {
       "target": "Model \u2014 Skills, Commands, Hooks",
       "referenced_by": [
+        "Concept \u2014 The Declarative Agent Programming Spectrum: 5 layers (SDD \u00b7 Skills \u00b7 Context/Context-Injection \u00b7 Hooks \u00b7 Harness) unified, with integration matrix across tools (Claude OS \u00b7 Multica \u00b7 OpenClaw \u00b7 Claude Code \u00b7 OpenCode \u00b7 Hermes \u00b7 Codex \u00b7 Gemini) and destinations (Wiki LLM \u00b7 PM tools)",
         "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermes / generic Agent SDK consumers",
+        "Pattern \u2014 Skill Systems: orchestrator skill + modular child skills wired by skill.md (the architecture that compounds \u2014 what Anthropic won't solve for you)",
         "Synthesis \u2014 Multica: Open-Source Managed-Agents Platform (Orchestrator Layer Above 10 Harness CLIs, Apache 2.0, Self-Host or Cloud)"
       ]
     },
@@ -75635,6 +76064,12 @@
       ]
     },
     {
+      "target": "Operator directive 2026-05-09 turn 3",
+      "referenced_by": [
+        "Concept \u2014 The Declarative Agent Programming Spectrum: 5 layers (SDD \u00b7 Skills \u00b7 Context/Context-Injection \u00b7 Hooks \u00b7 Harness) unified, with integration matrix across tools (Claude OS \u00b7 Multica \u00b7 OpenClaw \u00b7 Claude Code \u00b7 OpenCode \u00b7 Hermes \u00b7 Codex \u00b7 Gemini) and destinations (Wiki LLM \u00b7 PM tools)"
+      ]
+    },
+    {
       "target": "Operator directive \u2014 2026-04-25",
       "referenced_by": [
         "2026-04-25 Session Handoff \u2014 Qwen3.6-27B Ingestion Batch + Mission-Critical Spine Update"
@@ -75688,13 +76123,29 @@
         "T071 \u2014 Author Per-Project Assistant Profile schema formal definition (YAML schema for the 6 sections)",
         "T075 \u2014 Author /opt Second-Brain Assistant Profile per M002 schema (canonical tailored example)",
         "T078 \u2014 Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermes variants)",
-        "Comparison \u2014 Assistant Platforms & Frameworks Frontier (2026-05-09): Claude OS \u00b7 Obsidian PM \u00b7 Multica \u00b7 OpenClaw Command Center / OCMC \u2014 by Type and Frontier"
+        "Comparison \u2014 Assistant Platforms & Frameworks Frontier (2026-05-09): Claude OS \u00b7 Obsidian PM \u00b7 Multica \u00b7 OpenClaw Command Center / OCMC \u2014 by Type and Frontier",
+        "Concept \u2014 The Declarative Agent Programming Spectrum: 5 layers (SDD \u00b7 Skills \u00b7 Context/Context-Injection \u00b7 Hooks \u00b7 Harness) unified, with integration matrix across tools (Claude OS \u00b7 Multica \u00b7 OpenClaw \u00b7 Claude Code \u00b7 OpenCode \u00b7 Hermes \u00b7 Codex \u00b7 Gemini) and destinations (Wiki LLM \u00b7 PM tools)",
+        "Pattern \u2014 Skill Systems: orchestrator skill + modular child skills wired by skill.md (the architecture that compounds \u2014 what Anthropic won't solve for you)",
+        "Pattern \u2014 Spawn protocol for Multica: bridge a Per-Project Assistant Profile to a running Assistant instance on Multica's 10-CLI daemon (operator-adopted runtime)"
       ]
     },
     {
       "target": "Pattern \u2014 Session Orientation Pair",
       "referenced_by": [
         "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermes / generic Agent SDK consumers"
+      ]
+    },
+    {
+      "target": "Pattern \u2014 Skill Systems",
+      "referenced_by": [
+        "Concept \u2014 The Declarative Agent Programming Spectrum: 5 layers (SDD \u00b7 Skills \u00b7 Context/Context-Injection \u00b7 Hooks \u00b7 Harness) unified, with integration matrix across tools (Claude OS \u00b7 Multica \u00b7 OpenClaw \u00b7 Claude Code \u00b7 OpenCode \u00b7 Hermes \u00b7 Codex \u00b7 Gemini) and destinations (Wiki LLM \u00b7 PM tools)",
+        "Pattern \u2014 Spawn protocol for Multica: bridge a Per-Project Assistant Profile to a running Assistant instance on Multica's 10-CLI daemon (operator-adopted runtime)"
+      ]
+    },
+    {
+      "target": "Pattern \u2014 spawn-protocol-multica",
+      "referenced_by": [
+        "Concept \u2014 The Declarative Agent Programming Spectrum: 5 layers (SDD \u00b7 Skills \u00b7 Context/Context-Injection \u00b7 Hooks \u00b7 Harness) unified, with integration matrix across tools (Claude OS \u00b7 Multica \u00b7 OpenClaw \u00b7 Claude Code \u00b7 OpenCode \u00b7 Hermes \u00b7 Codex \u00b7 Gemini) and destinations (Wiki LLM \u00b7 PM tools)"
       ]
     },
     {

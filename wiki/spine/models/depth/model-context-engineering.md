@@ -425,6 +425,7 @@ Full analysis: [[execution-mode-is-consumer-property-not-project-property|Execut
 [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
 [[goldilocks-flow|Goldilocks Flow — From Identity to Action]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
+[[declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools|Concept — The Declarative Agent Programming Spectrum: 5 layers (SDD · Skills · Context/Context-Injection · Hooks · Harness) unified, with integration matrix across tools (Claude OS · Multica · OpenClaw · Claude Code · OpenCode · Hermes · Codex · Gemini) and destinations (Wiki LLM · PM tools)]]
 [[context-depth-must-vary-per-task-type-not-per-project|Context Depth Must Vary Per Task Type, Not Per Project — Tier Selection Extends Beyond Identity]]
 [[model-context-engineering-standards|Context Engineering Standards — What Good Structured Context Looks Like]]
 [[context-file-taxonomy|Context File Taxonomy — The 8 Dimensions of Agent Context]]
