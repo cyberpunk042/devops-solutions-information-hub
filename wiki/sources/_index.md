@@ -4,6 +4,7 @@ Source synthesis pages — one per ingested source.
 
 ## Pages
 
+- [Synthesis — Anthropic Programmatic Credit Pool (effective 2026-06-15): separate metered budget for Claude Agent SDK / `claude -p` CLI / GitHub Actions / third-party Agent SDK apps, at API rates, with $20–$200/month tier-by-tier allowance that does NOT roll over](ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15.md) — Starting **2026-06-15**, Anthropic separates programmatic Claude usage from interactive subscription limits
 - [Synthesis — Claude Code Accuracy Tips](claude-code/src-claude-code-accuracy-tips.md) — A practitioner's guide to 7 techniques for improving Claude Code accuracy, presented by a former Amazon/Microsoft sen...
 - [Claude Code Slash Commands (artemgetmann)](claude-code/src-claude-slash-commands.md) — A small open-source collection of reusable Claude Code slash commands installable globally (`~/
 - [Synthesis — Claude Code Harness Engineering](claude-code/src-harness-engineering.md) — Harness engineering is the practice of building structured control systems around an LLM coding agent — not just prom...
@@ -116,4 +117,4 @@ Source synthesis pages — one per ingested source.
 
 ## Tags
 
-`claude-code`, `synthesis`, `ai-agents`, `layer-1`, `mission-2026-04-27`, `mcp`, `anti-vendor-lock-in`, `mission-2026-05-04`, `skills`, `source-synthesis`, `mission-2026-05-06`, `hooks`, `context-engineering`, `methodology`, `tools-integration`, `subagents`, `cli`, `harness-engineering`, `cost-optimization`, `obsidian`
+`claude-code`, `synthesis`, `ai-agents`, `layer-1`, `mission-2026-04-27`, `mcp`, `anti-vendor-lock-in`, `mission-2026-05-04`, `source-synthesis`, `skills`, `mission-2026-05-06`, `hooks`, `context-engineering`, `methodology`, `tools-integration`, `openclaw`, `subagents`, `cli`, `harness-engineering`, `cost-optimization`

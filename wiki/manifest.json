@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-15T13:42:22.425936+00:00",
+  "generated": "2026-05-15T14:03:49.081334+00:00",
   "stats": {
-    "pages": 846,
+    "pages": 855,
     "domains": 14,
-    "sources": 109,
+    "sources": 110,
     "comparisons": 9,
-    "relationships": 3950,
-    "tags_unique": 3114,
+    "relationships": 3989,
+    "tags_unique": 3156,
     "layers": {
       "3": 4,
       "5": 38,
       "6": 26,
-      "2": 79,
+      "2": 80,
       "4": 83,
       "0": 1,
-      "1": 80,
+      "1": 81,
       "spine": 80
     },
     "maturity": {
-      "seed": 173,
+      "seed": 176,
       "growing": 331,
       "mature": 23
     }
@@ -870,6 +870,80 @@
         {
           "verb": "RELATES TO",
           "target": "Model \u2014 MCP and CLI Integration"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn.md",
+      "slug": "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn",
+      "title": "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermess)",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-09",
+      "updated": "2026-05-09",
+      "last_reviewed": "",
+      "tags": [
+        "epic",
+        "E024",
+        "per-project-assistant",
+        "assistant-profile",
+        "openclaw",
+        "openarms",
+        "hermess",
+        "programmatic-credit-capture",
+        "anthropic-policy-response",
+        "2026-05-09",
+        "2026-06-15-deadline",
+        "value-capture",
+        "ecosystem-spawn",
+        "P1",
+        "milestone-v2",
+        "draft"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive-2026-05-09",
+          "type": "directive",
+          "file": "raw/notes/2026-05-09-operator-directive-per-project-assistant-configs-spawn-openclaw-openarms-hermess-and-anthropic-programmatic-budget-policy-research.md",
+          "description": "Operator-stated 2026-05-09 directive \u2014 per-project assistant configurations/profiles to spawn OpenClaw/OpenArms/Hermess; capture programmatic credit budget; high quality definitions and features"
+        },
+        {
+          "id": "anthropic-policy-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15.md",
+          "description": "Anthropic Programmatic Credit Pool 2026-06-15 policy change \u2014 confirms $200/month value-at-risk on Max 20x; defines the credit pool the per-project Assistants will consume"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Operator directive 2026-05-09"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anthropic Programmatic Credit Pool Policy Synthesis"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Lesson \u2014 Anti-Vendor-Lock-In as empirical claim"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Custom-Tailored Model Group Concept"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "root-ghostproxy SFIF Rollout"
         }
       ]
     },
@@ -3989,6 +4063,110 @@
       ]
     },
     {
+      "path": "backlog/modules/e024-m002-per-project-assistant-profile-pattern-and-schema.md",
+      "slug": "backlog/modules/e024-m002-per-project-assistant-profile-pattern-and-schema",
+      "title": "E024-M002 \u2014 Per-Project Assistant Profile Pattern + Schema (the foundational module)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-09",
+      "updated": "2026-05-09",
+      "last_reviewed": "",
+      "tags": [
+        "module",
+        "E024-M002",
+        "per-project-assistant",
+        "profile-schema",
+        "pattern",
+        "foundation",
+        "2026-05-09",
+        "draft"
+      ],
+      "sources": [
+        {
+          "id": "epic-e024",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn.md",
+          "description": "Parent Epic E024"
+        },
+        {
+          "id": "profile-pattern",
+          "type": "wiki",
+          "file": "wiki/patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes.md",
+          "description": "Profile pattern page authored this turn \u2014 module finalizes its schema"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E024 \u2014 Per-Project Assistant Configurations"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Pattern \u2014 Per-Project Assistant Profile"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example.md",
+      "slug": "backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example",
+      "title": "E024-M003 \u2014 /opt Second-Brain Assistant Profile (the canonical tailored example)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-09",
+      "updated": "2026-05-09",
+      "last_reviewed": "",
+      "tags": [
+        "module",
+        "E024-M003",
+        "per-project-assistant",
+        "opt-second-brain",
+        "canonical-example",
+        "tailored-profile",
+        "2026-05-09",
+        "draft"
+      ],
+      "sources": [
+        {
+          "id": "epic-e024",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn.md",
+          "description": "Parent Epic E024"
+        },
+        {
+          "id": "operator-directive-2026-05-09",
+          "type": "directive",
+          "file": "raw/notes/2026-05-09-operator-directive-per-project-assistant-configs-spawn-openclaw-openarms-hermess-and-anthropic-programmatic-budget-policy-research.md",
+          "description": "Operator: 'in the knowledge/information-hub we will have one taillored to the needs'"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E024 \u2014 Per-Project Assistant Configurations"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E024-M002 \u2014 Profile Pattern + Schema"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Pattern \u2014 Per-Project Assistant Profile"
+        }
+      ]
+    },
+    {
       "path": "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config.md",
       "slug": "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
       "title": "Post-Anthropic 3-Layer Stack M001 \u2014 Multica Per-Agent Provider Config (`custom_env` field is the answer)",
@@ -6494,6 +6672,177 @@
       ]
     },
     {
+      "path": "backlog/tasks/T071-author-per-project-assistant-profile-schema-formal-definition.md",
+      "slug": "backlog/tasks/T071-author-per-project-assistant-profile-schema-formal-definition",
+      "title": "T071 \u2014 Author Per-Project Assistant Profile schema formal definition (YAML schema for the 6 sections)",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-09",
+      "updated": "2026-05-09",
+      "last_reviewed": "",
+      "tags": [
+        "task",
+        "T071",
+        "schema-design",
+        "yaml",
+        "per-project-assistant",
+        "2026-05-09",
+        "draft"
+      ],
+      "sources": [
+        {
+          "id": "parent-module",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e024-m002-per-project-assistant-profile-pattern-and-schema.md",
+          "description": "Parent module E024-M002 \u2014 this task delivers the schema definition that the module's other tasks build on"
+        },
+        {
+          "id": "pattern-page",
+          "type": "wiki",
+          "file": "wiki/patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes.md",
+          "description": "Pattern page with the 6-section structure this task formalizes"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E024-M002 \u2014 Profile Pattern + Schema"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Pattern \u2014 Per-Project Assistant Profile"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "T072 (template)"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "T073 (validator)"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "T075 (/opt profile)"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T075-author-opt-second-brain-assistant-profile-canonical-example.md",
+      "slug": "backlog/tasks/T075-author-opt-second-brain-assistant-profile-canonical-example",
+      "title": "T075 \u2014 Author /opt Second-Brain Assistant Profile per M002 schema (canonical tailored example)",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-09",
+      "updated": "2026-05-09",
+      "last_reviewed": "",
+      "tags": [
+        "task",
+        "T075",
+        "opt-second-brain",
+        "per-project-assistant-profile",
+        "canonical-example",
+        "2026-05-09",
+        "draft"
+      ],
+      "sources": [
+        {
+          "id": "parent-module",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example.md",
+          "description": "Parent module E024-M003 \u2014 /opt canonical example"
+        },
+        {
+          "id": "operator-directive-2026-05-09",
+          "type": "directive",
+          "file": "raw/notes/2026-05-09-operator-directive-per-project-assistant-configs-spawn-openclaw-openarms-hermess-and-anthropic-programmatic-budget-policy-research.md",
+          "description": "Operator: 'in the knowledge/information-hub we will have one taillored to the needs'"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E024-M003 \u2014 /opt Profile"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "T071 \u2014 Profile Schema"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Pattern \u2014 Per-Project Assistant Profile"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T078-author-spawn-protocol-generic-agent-sdk.md",
+      "slug": "backlog/tasks/T078-author-spawn-protocol-generic-agent-sdk",
+      "title": "T078 \u2014 Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermess variants)",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-09",
+      "updated": "2026-05-09",
+      "last_reviewed": "",
+      "tags": [
+        "task",
+        "T078",
+        "spawn-protocol",
+        "generic-agent-sdk",
+        "runtime-binding",
+        "2026-05-09",
+        "draft"
+      ],
+      "sources": [
+        {
+          "id": "parent-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn.md",
+          "description": "Parent Epic E024 \u2014 M004 spawn protocols"
+        },
+        {
+          "id": "anthropic-policy",
+          "type": "wiki",
+          "file": "wiki/sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15.md",
+          "description": "Anthropic Programmatic Credit Pool \u2014 `claude -p` CLI is one valid Agent SDK consumer + drives credit consumption"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E024-M004 \u2014 Spawn Protocols per Runtime"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "T071 \u2014 Profile Schema"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Pattern \u2014 Per-Project Assistant Profile"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Anthropic Programmatic Credit Pool Policy Synthesis"
+        }
+      ]
+    },
+    {
       "path": "comparisons/agentic-search-vs-vector-search.md",
       "slug": "comparisons/agentic-search-vs-vector-search",
       "title": "Agentic Search vs Vector Search",
@@ -8246,6 +8595,82 @@
         {
           "verb": "RELATES TO",
           "target": "Decision \u2014 LocalAI over Ollama / vLLM"
+        }
+      ]
+    },
+    {
+      "path": "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles.md",
+      "slug": "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles",
+      "title": "Decision \u2014 Strategic response to Anthropic Programmatic Credit Pool (2026-06-15): adopt per-project Assistant Profiles as the value-capture mechanism for the $200/month Max 20x credit",
+      "type": "decision",
+      "domain": "ai-models",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-09",
+      "updated": "2026-05-09",
+      "last_reviewed": "",
+      "tags": [
+        "decision",
+        "strategy",
+        "anthropic-policy",
+        "per-project-assistant",
+        "value-capture",
+        "$200-month",
+        "max-20x",
+        "2026-06-15",
+        "anti-vendor-lock-in-strategic-alignment",
+        "2026-05-09",
+        "draft",
+        "ai-models"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive-2026-05-09",
+          "type": "directive",
+          "file": "raw/notes/2026-05-09-operator-directive-per-project-assistant-configs-spawn-openclaw-openarms-hermess-and-anthropic-programmatic-budget-policy-research.md",
+          "description": "Operator directive 2026-05-09 framing the strategic response \u2014 per-project Assistant configurations as the value-capture mechanism"
+        },
+        {
+          "id": "policy-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15.md",
+          "description": "Anthropic Programmatic Credit Pool 2026-06-15 policy change \u2014 $200/month Max 20x value-at-risk + use-it-or-lose-it forcing function"
+        },
+        {
+          "id": "epic-e024",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn.md",
+          "description": "Epic E024 \u2014 the implementation scope for this decision"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Operator directive 2026-05-09"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anthropic Programmatic Credit Pool Policy Synthesis"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E024 \u2014 Per-Project Assistant Configurations"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Lesson \u2014 Anti-Vendor-Lock-In as empirical claim"
+        },
+        {
+          "verb": "CONSTRAINED BY",
+          "target": "Anthropic policy effective date 2026-06-15 (time-box)"
         }
       ]
     },
@@ -17564,18 +17989,6 @@
         {
           "verb": "DEMONSTRATES",
           "target": "Principle 1 \u2014 Infrastructure Over Instructions"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "knowledge-loop closure between raw/ \u2192 lesson layer \u2192 codebase"
-        },
-        {
-          "verb": "USED BY",
-          "target": "any project maintaining a knowledge layer + codebase"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "operator-stated 10x synthesis discipline 2026-05-06 (sacrosanct) \u2014 *\"lets make sure we properly ingest and digest and synthesize all the knowledge about this an the 10x level of it\"* \u2014 the 10x discipline demands not just synthesis but also application to codebase"
         }
       ]
     },
@@ -39868,6 +40281,98 @@
       ]
     },
     {
+      "path": "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes.md",
+      "slug": "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes",
+      "title": "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermess / generic Agent SDK consumers",
+      "type": "pattern",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-09",
+      "updated": "2026-05-09",
+      "last_reviewed": "",
+      "tags": [
+        "pattern",
+        "per-project-assistant",
+        "assistant-profile",
+        "runtime-agnostic",
+        "declarative-config",
+        "openclaw",
+        "openarms",
+        "hermess",
+        "agent-sdk",
+        "spawn-protocol",
+        "schema",
+        "ai-agents",
+        "2026-05-09",
+        "draft"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive-2026-05-09",
+          "type": "directive",
+          "file": "raw/notes/2026-05-09-operator-directive-per-project-assistant-configs-spawn-openclaw-openarms-hermess-and-anthropic-programmatic-budget-policy-research.md",
+          "description": "Operator directive \u2014 per-project assistant configurations/profiles to spawn ecosystem-project instances"
+        },
+        {
+          "id": "anthropic-policy-context",
+          "type": "wiki",
+          "file": "wiki/sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15.md",
+          "description": "Anthropic 2026-06-15 policy creating the credit pool this pattern is designed to consume"
+        },
+        {
+          "id": "decision-strategic-response",
+          "type": "wiki",
+          "file": "wiki/decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles.md",
+          "description": "Strategic decision selecting this pattern as the response approach"
+        },
+        {
+          "id": "epic-e024",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn.md",
+          "description": "Epic E024 implementing this pattern across the 5-project ecosystem"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Strategic Response to Anthropic Programmatic Credit Pool"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anthropic Programmatic Credit Pool Policy Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Skills, Commands, Hooks"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Pattern \u2014 Agent Modes (three-mode pattern)"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Pattern \u2014 Session Orientation Pair"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Lesson \u2014 Anti-Vendor-Lock-In"
+        }
+      ]
+    },
+    {
       "path": "patterns/01_drafts/post-compact-orientation-gate-implementation-spec-handoff-and-mirror-enforcement.md",
       "slug": "patterns/01_drafts/post-compact-orientation-gate-implementation-spec-handoff-and-mirror-enforcement",
       "title": "Post-Compact Orientation Gate \u2014 Implementation Spec for Handoff-Doc Completeness and Mirror Enforcement",
@@ -43301,6 +43806,94 @@
         {
           "verb": "FEEDS INTO",
           "target": "Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15.md",
+      "slug": "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15",
+      "title": "Synthesis \u2014 Anthropic Programmatic Credit Pool (effective 2026-06-15): separate metered budget for Claude Agent SDK / `claude -p` CLI / GitHub Actions / third-party Agent SDK apps, at API rates, with $20\u2013$200/month tier-by-tier allowance that does NOT roll over",
+      "type": "source-synthesis",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-09",
+      "updated": "2026-05-09",
+      "last_reviewed": "",
+      "tags": [
+        "anthropic",
+        "claude",
+        "claude-code",
+        "agent-sdk",
+        "claude-p-cli",
+        "programmatic-credit-pool",
+        "billing-policy",
+        "subscription-tiers",
+        "max-plan",
+        "pro-plan",
+        "openclaw",
+        "third-party-agents",
+        "2026-06-15",
+        "2026-05-14",
+        "api-rates",
+        "use-it-or-lose-it",
+        "anti-vendor-lock-in-implication",
+        "source-synthesis",
+        "2026-05-09"
+      ],
+      "sources": [
+        {
+          "id": "venturebeat-franzen-2026-05-13",
+          "type": "article",
+          "url": "https://venturebeat.com/technology/anthropic-reinstates-openclaw-and-third-party-agent-usage-on-claude-subscriptions-with-a-catch",
+          "file": "raw/articles/anthropic-reinstates-openclaw-and-third-party-agent-usage-on-claude-subscription.md",
+          "description": "VentureBeat (Carl Franzen, 2026-05-13 15:15 PT) \u2014 most comprehensive coverage with the full Agent SDK credit table, community reactions (Theo Browne, Kun Chen, Ben Hylak, EverNever), and historical context of the April 2026 ban that this policy reverses with a metered catch."
+        },
+        {
+          "id": "infoworld-ghoshal-2026-05-14",
+          "type": "article",
+          "url": "https://www.infoworld.com/article/4171274/anthropic-puts-claude-agents-on-a-meter-across-its-subscriptions.html",
+          "file": "raw/articles/anthropic-puts-claude-agents-on-a-meter-across-its-subscriptions-infoworld.md",
+          "description": "InfoWorld (Anirban Ghoshal, 2026-05-14) \u2014 analyst framing (Sanchit Vir Gogia of Greyhound Research; Advait Patel of Broadcom; Paul Chada of Doozer AI) positioning this as part of a broader 12-24 month industry shift to metered economics for agentic AI workloads."
+        },
+        {
+          "id": "the-decoder-bastian-2026-05-14",
+          "type": "article",
+          "url": "https://the-decoder.com/claude-subscriptions-get-separate-budgets-for-programmatic-use-billed-at-full-api-prices/",
+          "file": "raw/articles/claude-subscriptions-get-separate-budgets-for-programmatic-use-billed-at-full-ap.md",
+          "description": "The Decoder (Matthias Bastian, 2026-05-14) \u2014 concise technical coverage with the Lydia Hallie (Anthropic developer) diagram reference + 'you don't pay extra' rebuttal nuance ('only half the story' because the credit is metered at API rates vs prior subsidized subscription pool)."
+        },
+        {
+          "id": "operator-directive-2026-05-09",
+          "type": "directive",
+          "file": "raw/notes/2026-05-09-operator-directive-per-project-assistant-configs-spawn-openclaw-openarms-hermess-and-anthropic-programmatic-budget-policy-research.md",
+          "description": "Operator directive 2026-05-09 \u2014 flagged the policy change and requested research-confirmation. Operator-stated $240/month value-at-risk for Max x20 \u2014 research confirms actual figure is $200/month for Max 20x (operator was close)."
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-05-09 Operator Directive (verbatim)"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Lesson \u2014 Anti-Vendor-Lock-In as empirical claim"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Custom-Tailored Senior-Engineer-Tier Model Group Concept"
         }
       ]
     },
@@ -59402,20 +59995,20 @@
   ],
   "domains": {
     "backlog": {
-      "page_count": 105,
-      "relationship_count": 472
+      "page_count": 111,
+      "relationship_count": 495
     },
     "cross-domain": {
       "page_count": 291,
-      "relationship_count": 1770
+      "relationship_count": 1767
     },
     "ai-models": {
-      "page_count": 14,
-      "relationship_count": 82
+      "page_count": 16,
+      "relationship_count": 93
     },
     "ai-agents": {
-      "page_count": 71,
-      "relationship_count": 540
+      "page_count": 72,
+      "relationship_count": 548
     },
     "tools-integration": {
       "page_count": 38,
@@ -59474,6 +60067,7 @@
       "backlog/epics/milestone-v2/e021-new-source-ingestion-10-15-sources-through-full-pipeline",
       "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
       "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit",
+      "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn",
       "backlog/epics/pre-milestone/E007-openrouter-deadline-de-risk",
       "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier",
       "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity",
@@ -59545,7 +60139,8 @@
       "backlog/epics/milestone-v2/e020-knowledge-sweep-global-quality-confirmation-by-human-review",
       "backlog/epics/milestone-v2/e021-new-source-ingestion-10-15-sources-through-full-pipeline",
       "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
-      "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit"
+      "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit",
+      "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn"
     ],
     "standards": [
       "backlog/epics/milestone-v2/e011-standards-exemplification-all-15-per-type-standards-with-inline-annotated-e",
@@ -59837,6 +60432,7 @@
     ],
     "openarms": [
       "backlog/epics/milestone-v2/e016-integration-chain-proof-end-to-end-with-openarms",
+      "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn",
       "backlog/epics/pre-milestone/E002-ecosystem-integration",
       "comparisons/model-ecosystem-vs-four-project-ecosystem",
       "comparisons/openarms-vs-openfleet-enforcement",
@@ -59860,6 +60456,7 @@
       "log/2026-04-09/models/2026-04-09-directive-quality-models-hub-mindset",
       "patterns/01_drafts/artifact-path-verification-at-gate-close",
       "patterns/01_drafts/aspirational-declaration-without-enforcement",
+      "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes",
       "patterns/01_drafts/progressive-structural-enrichment-in-agent-config",
       "patterns/03_validated/architecture/gateway-centric-routing",
       "sources/ecosystem-projects/src-openarms-v10-enforcement",
@@ -59968,6 +60565,86 @@
     ],
     "stub": [
       "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit"
+    ],
+    "E024": [
+      "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn"
+    ],
+    "per-project-assistant": [
+      "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn",
+      "backlog/modules/e024-m002-per-project-assistant-profile-pattern-and-schema",
+      "backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example",
+      "backlog/tasks/T071-author-per-project-assistant-profile-schema-formal-definition",
+      "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles",
+      "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes"
+    ],
+    "assistant-profile": [
+      "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn",
+      "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes"
+    ],
+    "openclaw": [
+      "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn",
+      "domains/ai-agents/orchestration/openclaw",
+      "domains/ai-agents/orchestration/openfleet",
+      "log/2026-04-09/models/2026-04-09-directive-quality-models-hub-mindset",
+      "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes",
+      "patterns/03_validated/architecture/gateway-centric-routing",
+      "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15",
+      "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill",
+      "sources/src-openclaw-billing-proxy",
+      "sources/tools-integration/src-gemma4-searxng-openclaw",
+      "sources/tools-integration/src-multica-managed-agents-platform",
+      "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026"
+    ],
+    "hermess": [
+      "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn",
+      "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes"
+    ],
+    "programmatic-credit-capture": [
+      "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn"
+    ],
+    "anthropic-policy-response": [
+      "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn"
+    ],
+    "2026-05-09": [
+      "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn",
+      "backlog/modules/e024-m002-per-project-assistant-profile-pattern-and-schema",
+      "backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example",
+      "backlog/tasks/T071-author-per-project-assistant-profile-schema-formal-definition",
+      "backlog/tasks/T075-author-opt-second-brain-assistant-profile-canonical-example",
+      "backlog/tasks/T078-author-spawn-protocol-generic-agent-sdk",
+      "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles",
+      "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately",
+      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
+      "log/2026-05-09-PRE-COMPACT-STRONG-HANDOFF-decisions-executed-boundary-correction-freeze-memory-rrf-and-23-lessons-reformatted",
+      "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension",
+      "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes",
+      "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15"
+    ],
+    "2026-06-15-deadline": [
+      "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn"
+    ],
+    "value-capture": [
+      "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn",
+      "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles"
+    ],
+    "ecosystem-spawn": [
+      "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn"
+    ],
+    "P1": [
+      "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn"
+    ],
+    "draft": [
+      "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn",
+      "backlog/modules/e024-m002-per-project-assistant-profile-pattern-and-schema",
+      "backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example",
+      "backlog/tasks/T071-author-per-project-assistant-profile-schema-formal-definition",
+      "backlog/tasks/T075-author-opt-second-brain-assistant-profile-canonical-example",
+      "backlog/tasks/T078-author-spawn-protocol-generic-agent-sdk",
+      "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles",
+      "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately",
+      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
+      "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache",
+      "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes"
     ],
     "local-inference": [
       "backlog/epics/pre-milestone/E001-local-inference-engine",
@@ -60196,6 +60873,7 @@
     ],
     "foundation": [
       "backlog/epics/pre-milestone/E003-artifact-type-system",
+      "backlog/modules/e024-m002-per-project-assistant-profile-pattern-and-schema",
       "log/2026-04-09/models/2026-04-09-directive-bottom-up-model-completion",
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features"
     ],
@@ -61182,6 +61860,8 @@
       "backlog/modules/e012-m004-multi-lora-adapter-architecture-e",
       "backlog/modules/e022-m002-gateway-orient-subcommand",
       "backlog/modules/e022-m003-what-do-i-need-upgrade",
+      "backlog/modules/e024-m002-per-project-assistant-profile-pattern-and-schema",
+      "backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example",
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
       "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config",
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
@@ -61635,6 +62315,68 @@
     "upgrade": [
       "backlog/modules/e022-m003-what-do-i-need-upgrade"
     ],
+    "E024-M002": [
+      "backlog/modules/e024-m002-per-project-assistant-profile-pattern-and-schema"
+    ],
+    "profile-schema": [
+      "backlog/modules/e024-m002-per-project-assistant-profile-pattern-and-schema"
+    ],
+    "pattern": [
+      "backlog/modules/e024-m002-per-project-assistant-profile-pattern-and-schema",
+      "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing",
+      "decisions/01_drafts/aicp-active-state-mechanism-for-hooks",
+      "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
+      "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
+      "decisions/01_drafts/skills-as-primary-extension-pattern",
+      "patterns/01_drafts/active-task-anchor-and-drift-detection-gate-design",
+      "patterns/01_drafts/agent-execution-cost-optimization-stack",
+      "patterns/01_drafts/artifact-path-verification-at-gate-close",
+      "patterns/01_drafts/aspirational-declaration-without-enforcement",
+      "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
+      "patterns/01_drafts/blast-radius-classification-and-pre-action-severity-gate",
+      "patterns/01_drafts/block-with-reason-and-justified-escalation",
+      "patterns/01_drafts/comprehensive-agent-action-emission-pipeline-13-gate-composition-architecture",
+      "patterns/01_drafts/correction-as-calibration-pre-edit-verification-gate-design",
+      "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage",
+      "patterns/01_drafts/methodology-stage-gate-edit-land-enforcement-design",
+      "patterns/01_drafts/observe-fix-verify-loop",
+      "patterns/01_drafts/pattern-recurrence-quantification-and-operator-frustration-as-signal",
+      "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain",
+      "patterns/01_drafts/per-day-jsonl-dlq-with-retry-budget",
+      "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes",
+      "patterns/01_drafts/post-compact-orientation-mirror-and-handoff-doc-completeness-gate",
+      "patterns/01_drafts/pre-edit-regression-test-gate-canonical-verified-edit-enforcement",
+      "patterns/01_drafts/profile-as-coordination-bundle",
+      "patterns/01_drafts/progressive-structural-enrichment-in-agent-config",
+      "patterns/01_drafts/single-active-backend-with-lru-eviction",
+      "patterns/01_drafts/systemic-bug-tracker-priority-shift-cycle-step-design",
+      "patterns/01_drafts/three-layer-agent-context-architecture",
+      "patterns/01_drafts/three-permission-modes-think-edit-act",
+      "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries",
+      "patterns/02_synthesized/second-brain-observer-pattern-extracting-learnings-from-live-sister-project-sessions",
+      "patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles",
+      "patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report",
+      "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
+      "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality",
+      "spine/standards/pattern-page-standards"
+    ],
+    "E024-M003": [
+      "backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example"
+    ],
+    "opt-second-brain": [
+      "backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example",
+      "backlog/tasks/T075-author-opt-second-brain-assistant-profile-canonical-example",
+      "patterns/01_drafts/auto-compact-disable-implementation-spec-prevention-layer-for-impl-spec-10-defense-in-depth",
+      "patterns/01_drafts/post-compact-pretooluse-blocker-implementation-spec-tier-4-enforcement-for-impl-spec-10",
+      "patterns/01_drafts/pre-compact-handoff-hook-implementation-spec-for-opt-path-to-tier-4-for-impl-spec-10"
+    ],
+    "canonical-example": [
+      "backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example",
+      "backlog/tasks/T075-author-opt-second-brain-assistant-profile-canonical-example"
+    ],
+    "tailored-profile": [
+      "backlog/modules/e024-m003-opt-second-brain-assistant-profile-canonical-example"
+    ],
     "custom_env": [
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config"
     ],
@@ -61706,6 +62448,7 @@
       "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
       "patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles",
       "patterns/03_validated/enforcement/enforcement-hook-patterns",
+      "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15",
       "sources/claude-code/src-claude-code-accuracy-tips",
       "sources/claude-code/src-claude-slash-commands",
       "sources/claude-code/src-harness-engineering",
@@ -61943,6 +62686,9 @@
       "backlog/tasks/T058-create-unsloth-venv",
       "backlog/tasks/T060-audit-wiki-corpus-training-readiness",
       "backlog/tasks/T070-design-adapter-training-datasets",
+      "backlog/tasks/T071-author-per-project-assistant-profile-schema-formal-definition",
+      "backlog/tasks/T075-author-opt-second-brain-assistant-profile-canonical-example",
+      "backlog/tasks/T078-author-spawn-protocol-generic-agent-sdk",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
       "domains/devops/backlog-hierarchy-rules",
       "domains/devops/task-type-artifact-matrix",
@@ -62182,6 +62928,34 @@
       "backlog/tasks/T070-design-adapter-training-datasets",
       "lessons/03_validated/knowledge-systems/llm-maintained-wikis-outperform-static-documentation"
     ],
+    "T071": [
+      "backlog/tasks/T071-author-per-project-assistant-profile-schema-formal-definition"
+    ],
+    "schema-design": [
+      "backlog/tasks/T071-author-per-project-assistant-profile-schema-formal-definition"
+    ],
+    "yaml": [
+      "backlog/tasks/T071-author-per-project-assistant-profile-schema-formal-definition"
+    ],
+    "T075": [
+      "backlog/tasks/T075-author-opt-second-brain-assistant-profile-canonical-example"
+    ],
+    "per-project-assistant-profile": [
+      "backlog/tasks/T075-author-opt-second-brain-assistant-profile-canonical-example"
+    ],
+    "T078": [
+      "backlog/tasks/T078-author-spawn-protocol-generic-agent-sdk"
+    ],
+    "spawn-protocol": [
+      "backlog/tasks/T078-author-spawn-protocol-generic-agent-sdk",
+      "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes"
+    ],
+    "generic-agent-sdk": [
+      "backlog/tasks/T078-author-spawn-protocol-generic-agent-sdk"
+    ],
+    "runtime-binding": [
+      "backlog/tasks/T078-author-spawn-protocol-generic-agent-sdk"
+    ],
     "agentic-search": [
       "comparisons/agentic-search-vs-vector-search"
     ],
@@ -62308,6 +63082,7 @@
       "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
       "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
       "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
+      "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes",
       "patterns/01_drafts/three-layer-agent-context-architecture",
       "sources/src-autobe-compiler-verified-backend-generation",
       "sources/src-bmad-method-agile-ai-development-framework",
@@ -62411,6 +63186,7 @@
       "decisions/01_drafts/pretooluse-hooks-layered-approach",
       "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
       "decisions/01_drafts/skills-as-primary-extension-pattern",
+      "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles",
       "decisions/02_validated/knowledge/wiki-first-with-lightrag-upgrade-path",
       "decisions/02_validated/methodology/artifact-system-design-decisions",
       "decisions/02_validated/methodology/methodology-stage-extension-decisions",
@@ -62739,43 +63515,6 @@
       "spine/models/foundation/model-llm-wiki",
       "spine/references/adoption-guide"
     ],
-    "pattern": [
-      "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing",
-      "decisions/01_drafts/aicp-active-state-mechanism-for-hooks",
-      "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
-      "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
-      "decisions/01_drafts/skills-as-primary-extension-pattern",
-      "patterns/01_drafts/active-task-anchor-and-drift-detection-gate-design",
-      "patterns/01_drafts/agent-execution-cost-optimization-stack",
-      "patterns/01_drafts/artifact-path-verification-at-gate-close",
-      "patterns/01_drafts/aspirational-declaration-without-enforcement",
-      "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
-      "patterns/01_drafts/blast-radius-classification-and-pre-action-severity-gate",
-      "patterns/01_drafts/block-with-reason-and-justified-escalation",
-      "patterns/01_drafts/comprehensive-agent-action-emission-pipeline-13-gate-composition-architecture",
-      "patterns/01_drafts/correction-as-calibration-pre-edit-verification-gate-design",
-      "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage",
-      "patterns/01_drafts/methodology-stage-gate-edit-land-enforcement-design",
-      "patterns/01_drafts/observe-fix-verify-loop",
-      "patterns/01_drafts/pattern-recurrence-quantification-and-operator-frustration-as-signal",
-      "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain",
-      "patterns/01_drafts/per-day-jsonl-dlq-with-retry-budget",
-      "patterns/01_drafts/post-compact-orientation-mirror-and-handoff-doc-completeness-gate",
-      "patterns/01_drafts/pre-edit-regression-test-gate-canonical-verified-edit-enforcement",
-      "patterns/01_drafts/profile-as-coordination-bundle",
-      "patterns/01_drafts/progressive-structural-enrichment-in-agent-config",
-      "patterns/01_drafts/single-active-backend-with-lru-eviction",
-      "patterns/01_drafts/systemic-bug-tracker-priority-shift-cycle-step-design",
-      "patterns/01_drafts/three-layer-agent-context-architecture",
-      "patterns/01_drafts/three-permission-modes-think-edit-act",
-      "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries",
-      "patterns/02_synthesized/second-brain-observer-pattern-extracting-learnings-from-live-sister-project-sessions",
-      "patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles",
-      "patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report",
-      "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
-      "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality",
-      "spine/standards/pattern-page-standards"
-    ],
     "harness-orchestration": [
       "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04"
     ],
@@ -62909,6 +63648,35 @@
       "patterns/03_validated/architecture/deterministic-shell-llm-core",
       "patterns/03_validated/architecture/plan-execute-review-cycle",
       "sources/claude-code/src-harness-engineering"
+    ],
+    "strategy": [
+      "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles",
+      "spine/references/second-brain-custom-model-strategy"
+    ],
+    "anthropic-policy": [
+      "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles"
+    ],
+    "$200-month": [
+      "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles"
+    ],
+    "max-20x": [
+      "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles"
+    ],
+    "2026-06-15": [
+      "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles",
+      "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15"
+    ],
+    "anti-vendor-lock-in-strategic-alignment": [
+      "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles"
+    ],
+    "ai-models": [
+      "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles",
+      "sources/src-27-questions-llm-selection",
+      "sources/src-hrm-trm-tiny-recursion-models",
+      "sources/src-llm-architecture-gallery-raschka",
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding",
+      "spine/domain-overviews/ai-models-domain-overview",
+      "spine/references/ai-model-provider-harness-decision-matrix-2026"
     ],
     "knowledge-interface": [
       "decisions/02_validated/knowledge/obsidian-vs-notebooklm-as-knowledge-interface"
@@ -63125,6 +63893,7 @@
     ],
     "claude": [
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations",
+      "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15",
       "spine/references/ai-infrastructure-decision-framework-2026",
       "spine/references/root-documentation-map"
     ],
@@ -63360,6 +64129,7 @@
     ],
     "anthropic": [
       "domains/ai-agents/claude-code/claude-code",
+      "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15",
       "sources/src-anthropic-building-effective-ai-agents",
       "sources/src-anthropic-effective-harnesses-long-running-agents",
       "sources/src-openclaw-billing-proxy",
@@ -63453,17 +64223,6 @@
       "domains/ai-agents/orchestration/harness-engineering",
       "domains/cross-domain/methodology-artifacts/chains/domain-chain-typescript",
       "sources/claude-code/src-harness-engineering"
-    ],
-    "openclaw": [
-      "domains/ai-agents/orchestration/openclaw",
-      "domains/ai-agents/orchestration/openfleet",
-      "log/2026-04-09/models/2026-04-09-directive-quality-models-hub-mindset",
-      "patterns/03_validated/architecture/gateway-centric-routing",
-      "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill",
-      "sources/src-openclaw-billing-proxy",
-      "sources/tools-integration/src-gemma4-searxng-openclaw",
-      "sources/tools-integration/src-multica-managed-agents-platform",
-      "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026"
     ],
     "agent-framework": [
       "domains/ai-agents/orchestration/openclaw",
@@ -64481,6 +65240,7 @@
       "lessons/01_drafts/contributed/schema-aspirationalism-defining-required-sections-you-neve",
       "lessons/03_validated/knowledge-systems/schema-is-the-real-product",
       "log/2026-04-09/models/2026-04-09-directive-model-quality-links-schema",
+      "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes",
       "spine/models/foundation/model-llm-wiki",
       "spine/references/frontmatter-field-reference"
     ],
@@ -65302,17 +66062,6 @@
     "self-enforcement": [
       "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately",
       "lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents"
-    ],
-    "2026-05-09": [
-      "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately",
-      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
-      "log/2026-05-09-PRE-COMPACT-STRONG-HANDOFF-decisions-executed-boundary-correction-freeze-memory-rrf-and-23-lessons-reformatted",
-      "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension"
-    ],
-    "draft": [
-      "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately",
-      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
-      "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache"
     ],
     "hookSpecificOutput": [
       "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it"
@@ -69089,11 +69838,6 @@
     "prevention-layer": [
       "patterns/01_drafts/auto-compact-disable-implementation-spec-prevention-layer-for-impl-spec-10-defense-in-depth"
     ],
-    "opt-second-brain": [
-      "patterns/01_drafts/auto-compact-disable-implementation-spec-prevention-layer-for-impl-spec-10-defense-in-depth",
-      "patterns/01_drafts/post-compact-pretooluse-blocker-implementation-spec-tier-4-enforcement-for-impl-spec-10",
-      "patterns/01_drafts/pre-compact-handoff-hook-implementation-spec-for-opt-path-to-tier-4-for-impl-spec-10"
-    ],
     "harness-policy": [
       "patterns/01_drafts/auto-compact-disable-implementation-spec-prevention-layer-for-impl-spec-10-defense-in-depth"
     ],
@@ -69469,6 +70213,17 @@
     ],
     "jsonl": [
       "patterns/01_drafts/per-day-jsonl-dlq-with-retry-budget"
+    ],
+    "runtime-agnostic": [
+      "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes"
+    ],
+    "declarative-config": [
+      "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes"
+    ],
+    "agent-sdk": [
+      "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes",
+      "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15",
+      "sources/tools-integration/src-claude-code-harness-features"
     ],
     "lifecycle-event-gate": [
       "patterns/01_drafts/post-compact-orientation-gate-implementation-spec-handoff-and-mirror-enforcement",
@@ -69911,6 +70666,52 @@
     "quality-assurance": [
       "patterns/03_validated/knowledge/validation-matrix-test-suite-for-context-injection"
     ],
+    "claude-p-cli": [
+      "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15"
+    ],
+    "programmatic-credit-pool": [
+      "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15"
+    ],
+    "billing-policy": [
+      "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15"
+    ],
+    "subscription-tiers": [
+      "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15"
+    ],
+    "max-plan": [
+      "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15"
+    ],
+    "pro-plan": [
+      "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15"
+    ],
+    "third-party-agents": [
+      "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15"
+    ],
+    "2026-05-14": [
+      "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15"
+    ],
+    "api-rates": [
+      "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15"
+    ],
+    "use-it-or-lose-it": [
+      "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15"
+    ],
+    "anti-vendor-lock-in-implication": [
+      "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15"
+    ],
+    "source-synthesis": [
+      "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15",
+      "sources/ecosystem-projects/src-openarms-v10-enforcement",
+      "sources/ecosystem-projects/src-openfleet-fleet-architecture",
+      "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
+      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee",
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
+      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd",
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build",
+      "sources/wiki-methodology/src-sdlc-frameworks-research",
+      "spine/standards/source-synthesis-page-standards"
+    ],
     "agent-teams": [
       "sources/claude-code/src-claude-code-accuracy-tips",
       "sources/claude-code/src-harness-engineering"
@@ -69956,18 +70757,6 @@
     ],
     "v10": [
       "sources/ecosystem-projects/src-openarms-v10-enforcement"
-    ],
-    "source-synthesis": [
-      "sources/ecosystem-projects/src-openarms-v10-enforcement",
-      "sources/ecosystem-projects/src-openfleet-fleet-architecture",
-      "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
-      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee",
-      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
-      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
-      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd",
-      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build",
-      "sources/wiki-methodology/src-sdlc-frameworks-research",
-      "spine/standards/source-synthesis-page-standards"
     ],
     "contributions": [
       "sources/ecosystem-projects/src-openfleet-fleet-architecture"
@@ -70102,14 +70891,6 @@
     ],
     "evaluation-framework": [
       "sources/src-27-questions-llm-selection"
-    ],
-    "ai-models": [
-      "sources/src-27-questions-llm-selection",
-      "sources/src-hrm-trm-tiny-recursion-models",
-      "sources/src-llm-architecture-gallery-raschka",
-      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding",
-      "spine/domain-overviews/ai-models-domain-overview",
-      "spine/references/ai-model-provider-harness-decision-matrix-2026"
     ],
     "decision-criteria": [
       "sources/src-27-questions-llm-selection"
@@ -70887,9 +71668,6 @@
     "plugins": [
       "sources/tools-integration/src-claude-code-harness-features",
       "sources/tools-integration/src-opencode-harness-features"
-    ],
-    "agent-sdk": [
-      "sources/tools-integration/src-claude-code-harness-features"
     ],
     "agent-skills-standard": [
       "sources/tools-integration/src-claude-code-harness-features"
@@ -72722,9 +73500,6 @@
     "readme": [
       "spine/references/root-documentation-map"
     ],
-    "strategy": [
-      "spine/references/second-brain-custom-model-strategy"
-    ],
     "wiki-corpus": [
       "spine/references/second-brain-custom-model-strategy"
     ],
@@ -73129,6 +73904,12 @@
       ]
     },
     {
+      "target": "2026-05-09 Operator Directive",
+      "referenced_by": [
+        "Synthesis \u2014 Anthropic Programmatic Credit Pool (effective 2026-06-15): separate metered budget for Claude Agent SDK / `claude -p` CLI / GitHub Actions / third-party Agent SDK apps, at API rates, with $20\u2013$200/month tier-by-tier allowance that does NOT roll over"
+      ]
+    },
+    {
       "target": "2026-05-09 Session Log",
       "referenced_by": [
         "2026-05-09 PRE-COMPACT STRONG HANDOFF \u2014 Post-Compact Pickup Artifact (Decisions Executed \u00b7 Boundary Correction \u00b7 Freeze-Pattern Memory \u00b7 5-Channel RRF Live \u00b7 23 Lessons Reformatted \u00b7 AVX512 Machine Plan Captured \u00b7 Operator Forward Direction Signaled)"
@@ -73200,6 +73981,21 @@
       "target": "Agentic Search vs Vector Search Comparison",
       "referenced_by": [
         "Synthesis \u2014 Cavemem: Cross-Agent Persistent Memory for AI Coding Assistants (Julius Brussee, MIT-Licensed, Compressed-at-Rest SQLite + FTS5 + Vector Index + MCP Progressive Disclosure)"
+      ]
+    },
+    {
+      "target": "Anthropic Programmatic Credit Pool Policy Synthesis",
+      "referenced_by": [
+        "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermess)",
+        "T078 \u2014 Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermess variants)",
+        "Decision \u2014 Strategic response to Anthropic Programmatic Credit Pool (2026-06-15): adopt per-project Assistant Profiles as the value-capture mechanism for the $200/month Max 20x credit",
+        "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermess / generic Agent SDK consumers"
+      ]
+    },
+    {
+      "target": "Anthropic policy effective date 2026-06-15",
+      "referenced_by": [
+        "Decision \u2014 Strategic response to Anthropic Programmatic Credit Pool (2026-06-15): adopt per-project Assistant Profiles as the value-capture mechanism for the $200/month Max 20x credit"
       ]
     },
     {
@@ -73416,6 +74212,7 @@
         "2026-05-08 Strong-Loop Arc \u2014 Ingest \u2192 Synthesize \u2192 Propagate \u2192 Distill (5 raws \u00b7 5 syntheses \u00b7 3 NEW Layer-2 lessons \u00b7 8 propagation passes \u00b7 1 operator-doctrine denotation \u00b7 1 cross-cutting Layer-2 lesson distilled \u00b7 operator-decisions surfaced)",
         "2026-05-09 PRE-COMPACT STRONG HANDOFF \u2014 Post-Compact Pickup Artifact (Decisions Executed \u00b7 Boundary Correction \u00b7 Freeze-Pattern Memory \u00b7 5-Channel RRF Live \u00b7 23 Lessons Reformatted \u00b7 AVX512 Machine Plan Captured \u00b7 Operator Forward Direction Signaled)",
         "2026-05-09 Session Log \u2014 9 Pending Decisions Resolved (5 Executed \u00b7 3 Defer-Track \u00b7 1 Boundary-Correction) + 5-Channel RRF Retrieval Landed + Schema Extension + AVX512 Machine Plan Captured",
+        "Synthesis \u2014 Anthropic Programmatic Credit Pool (effective 2026-06-15): separate metered budget for Claude Agent SDK / `claude -p` CLI / GitHub Actions / third-party Agent SDK apps, at API rates, with $20\u2013$200/month tier-by-tier allowance that does NOT roll over",
         "Synthesis \u2014 Strands Agents (AWS): Intent-Based Tool Design Cuts Token Usage 96% (52K \u2192 2K) via Narrow Scope + Semantic-Search MCP Gateway"
       ]
     },
@@ -73693,6 +74490,33 @@
       "target": "E022 \u2014 Context-Aware Gateway Orientation",
       "referenced_by": [
         "2026-04-25 Regather + Systemic Bug Investigation \u2014 Layer-2 Teaching Gap and Second P4 Instance in Spine"
+      ]
+    },
+    {
+      "target": "E024 \u2014 Per-Project Assistant Configurations",
+      "referenced_by": [
+        "E024-M002 \u2014 Per-Project Assistant Profile Pattern + Schema (the foundational module)",
+        "E024-M003 \u2014 /opt Second-Brain Assistant Profile (the canonical tailored example)",
+        "Decision \u2014 Strategic response to Anthropic Programmatic Credit Pool (2026-06-15): adopt per-project Assistant Profiles as the value-capture mechanism for the $200/month Max 20x credit"
+      ]
+    },
+    {
+      "target": "E024-M002 \u2014 Profile Pattern + Schema",
+      "referenced_by": [
+        "E024-M003 \u2014 /opt Second-Brain Assistant Profile (the canonical tailored example)",
+        "T071 \u2014 Author Per-Project Assistant Profile schema formal definition (YAML schema for the 6 sections)"
+      ]
+    },
+    {
+      "target": "E024-M003 \u2014 /opt Profile",
+      "referenced_by": [
+        "T075 \u2014 Author /opt Second-Brain Assistant Profile per M002 schema (canonical tailored example)"
+      ]
+    },
+    {
+      "target": "E024-M004 \u2014 Spawn Protocols per Runtime",
+      "referenced_by": [
+        "T078 \u2014 Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermess variants)"
       ]
     },
     {
@@ -74153,6 +74977,20 @@
       ]
     },
     {
+      "target": "Lesson \u2014 Anti-Vendor-Lock-In",
+      "referenced_by": [
+        "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermess / generic Agent SDK consumers"
+      ]
+    },
+    {
+      "target": "Lesson \u2014 Anti-Vendor-Lock-In as empirical claim",
+      "referenced_by": [
+        "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermess)",
+        "Decision \u2014 Strategic response to Anthropic Programmatic Credit Pool (2026-06-15): adopt per-project Assistant Profiles as the value-capture mechanism for the $200/month Max 20x credit",
+        "Synthesis \u2014 Anthropic Programmatic Credit Pool (effective 2026-06-15): separate metered budget for Claude Agent SDK / `claude -p` CLI / GitHub Actions / third-party Agent SDK apps, at API rates, with $20\u2013$200/month tier-by-tier allowance that does NOT roll over"
+      ]
+    },
+    {
       "target": "Lesson \u2014 Audit-on-distillation discipline",
       "referenced_by": [
         "Lesson \u2014 Claude Code hook output channel is event-specific; `hookSpecificOutput.additionalContext` is valid for only 6 events (PostCompact / Stop / SessionEnd / others reject it)"
@@ -74408,6 +75246,7 @@
     {
       "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack",
       "referenced_by": [
+        "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermess)",
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
         "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
         "Augment the Entire Repository to Be a GitHub Top-Tier Repository with Perfect Paths and Clarity and Markdown",
@@ -74421,6 +75260,7 @@
         "2026-05-06 Session Handoff (Pre-Compaction) \u2014 Multi-Arc Research Sweep + Infrastructure Wiring (Stop Hook Fix \u00b7 root-ghostproxy Registration \u00b7 Firecrawl + Accept-Header Fallback Chain \u00b7 14+ Layer-1 Syntheses \u00b7 Layer-4 Compression Lesson \u00b7 Anti-Vendor-Lock-In Evidence 12-14)",
         "2026-05-08 Strong-Loop Arc \u2014 Ingest \u2192 Synthesize \u2192 Propagate \u2192 Distill (5 raws \u00b7 5 syntheses \u00b7 3 NEW Layer-2 lessons \u00b7 8 propagation passes \u00b7 1 operator-doctrine denotation \u00b7 1 cross-cutting Layer-2 lesson distilled \u00b7 operator-decisions surfaced)",
         "2026-05-09 PRE-COMPACT STRONG HANDOFF \u2014 Post-Compact Pickup Artifact (Decisions Executed \u00b7 Boundary Correction \u00b7 Freeze-Pattern Memory \u00b7 5-Channel RRF Live \u00b7 23 Lessons Reformatted \u00b7 AVX512 Machine Plan Captured \u00b7 Operator Forward Direction Signaled)",
+        "Synthesis \u2014 Anthropic Programmatic Credit Pool (effective 2026-06-15): separate metered budget for Claude Agent SDK / `claude -p` CLI / GitHub Actions / third-party Agent SDK apps, at API rates, with $20\u2013$200/month tier-by-tier allowance that does NOT roll over",
         "Learning Path \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer (Mission Arc 2026-05-04)",
         "Learning Path \u2014 Trust Layer: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context, Session Arc 2026-04-30)"
       ]
@@ -74505,6 +75345,7 @@
     {
       "target": "Model \u2014 Skills, Commands, Hooks",
       "referenced_by": [
+        "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermess / generic Agent SDK consumers",
         "Synthesis \u2014 Multica: Open-Source Managed-Agents Platform (Orchestrator Layer Above 10 Harness CLIs, Apache 2.0, Self-Host or Cloud)"
       ]
     },
@@ -74588,6 +75429,13 @@
       ]
     },
     {
+      "target": "Operator directive 2026-05-09",
+      "referenced_by": [
+        "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermess)",
+        "Decision \u2014 Strategic response to Anthropic Programmatic Credit Pool (2026-06-15): adopt per-project Assistant Profiles as the value-capture mechanism for the $200/month Max 20x credit"
+      ]
+    },
+    {
       "target": "Operator directive \u2014 2026-04-25",
       "referenced_by": [
         "2026-04-25 Session Handoff \u2014 Qwen3.6-27B Ingestion Batch + Mission-Critical Spine Update"
@@ -74629,7 +75477,24 @@
     {
       "target": "Pattern \u2014 Agent Modes",
       "referenced_by": [
-        "Lesson \u2014 Path-versatility doctrine: configs must work across machines via metadata-driven indirection (env vars, relative paths, parameters), not hardcoded absolute paths"
+        "Lesson \u2014 Path-versatility doctrine: configs must work across machines via metadata-driven indirection (env vars, relative paths, parameters), not hardcoded absolute paths",
+        "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermess / generic Agent SDK consumers"
+      ]
+    },
+    {
+      "target": "Pattern \u2014 Per-Project Assistant Profile",
+      "referenced_by": [
+        "E024-M002 \u2014 Per-Project Assistant Profile Pattern + Schema (the foundational module)",
+        "E024-M003 \u2014 /opt Second-Brain Assistant Profile (the canonical tailored example)",
+        "T071 \u2014 Author Per-Project Assistant Profile schema formal definition (YAML schema for the 6 sections)",
+        "T075 \u2014 Author /opt Second-Brain Assistant Profile per M002 schema (canonical tailored example)",
+        "T078 \u2014 Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermess variants)"
+      ]
+    },
+    {
+      "target": "Pattern \u2014 Session Orientation Pair",
+      "referenced_by": [
+        "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermess / generic Agent SDK consumers"
       ]
     },
     {
@@ -74954,6 +75819,12 @@
         "Synthesis \u2014 How To Train Your GPT (Raiyan Yahya): 12-Chapter Pedagogical Guide to Building a LLaMA-3-Style 124M GPT From Scratch",
         "Synthesis \u2014 Effective Context Engineering for AI Agents (MachineLearningMastery, April 2026): Treat Context Window as RAM, Token Budgets Across Agent Loops, Probe-Based Evaluation, 60-80% Utilization Target",
         "Learning Path \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer (Mission Arc 2026-05-04)"
+      ]
+    },
+    {
+      "target": "Strategic Response to Anthropic Programmatic Credit Pool",
+      "referenced_by": [
+        "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermess / generic Agent SDK consumers"
       ]
     },
     {
@@ -75370,6 +76241,31 @@
       ]
     },
     {
+      "target": "T071 \u2014 Profile Schema",
+      "referenced_by": [
+        "T075 \u2014 Author /opt Second-Brain Assistant Profile per M002 schema (canonical tailored example)",
+        "T078 \u2014 Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermess variants)"
+      ]
+    },
+    {
+      "target": "T072",
+      "referenced_by": [
+        "T071 \u2014 Author Per-Project Assistant Profile schema formal definition (YAML schema for the 6 sections)"
+      ]
+    },
+    {
+      "target": "T073",
+      "referenced_by": [
+        "T071 \u2014 Author Per-Project Assistant Profile schema formal definition (YAML schema for the 6 sections)"
+      ]
+    },
+    {
+      "target": "T075",
+      "referenced_by": [
+        "T071 \u2014 Author Per-Project Assistant Profile schema formal definition (YAML schema for the 6 sections)"
+      ]
+    },
+    {
       "target": "T116 cost analysis",
       "referenced_by": [
         "Right-size the methodology model to the actual work, not the structural category"
@@ -75512,12 +76408,6 @@
       "target": "`wiki/spine/references/operator-workstation-storage-tiering.md`",
       "referenced_by": [
         "E010 M003 \u2014 Storage Tiering Documentation (authoritative disk map)"
-      ]
-    },
-    {
-      "target": "any project maintaining a knowledge layer + codebase",
-      "referenced_by": [
-        "Lesson \u2014 Audit-on-distillation discipline: when promoting a bug-class to the lesson layer, audit the codebase for other instances immediately while knowledge is fresh"
       ]
     },
     {
@@ -75750,12 +76640,6 @@
       ]
     },
     {
-      "target": "knowledge-loop closure between raw/ \u2192 lesson layer \u2192 codebase",
-      "referenced_by": [
-        "Lesson \u2014 Audit-on-distillation discipline: when promoting a bug-class to the lesson layer, audit the codebase for other instances immediately while knowledge is fresh"
-      ]
-    },
-    {
       "target": "not rigidly apply one model",
       "referenced_by": [
         "Right-size the methodology model to the actual work, not the structural category"
@@ -75765,12 +76649,6 @@
       "target": "not the label",
       "referenced_by": [
         "Right-size the methodology model to the actual work, not the structural category"
-      ]
-    },
-    {
-      "target": "operator-stated 10x synthesis discipline 2026-05-06 (sacrosanct) \u2014 *\"lets make sure we properly ingest and digest and synthesize all the knowledge about this an the 10x level of it\"* \u2014 the 10x discipline demands not just synthesis but also application to codebase",
-      "referenced_by": [
-        "Lesson \u2014 Audit-on-distillation discipline: when promoting a bug-class to the lesson layer, audit the codebase for other instances immediately while knowledge is fresh"
       ]
     },
     {
@@ -75797,6 +76675,12 @@
       "referenced_by": [
         "root-ghostproxy M001 \u2014 Author CLAUDE.md + AGENTS.md",
         "root-ghostproxy M002 \u2014 Methodology Layer Decision"
+      ]
+    },
+    {
+      "target": "root-ghostproxy SFIF Rollout",
+      "referenced_by": [
+        "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermess)"
       ]
     },
     {
