@@ -48,4 +48,4 @@ tags: [backlog, tasks]
 | T070 | [T070 — Design 3 Adapter Training Datasets (methodology, compliance, relationship)](T070-design-adapter-training-datasets.md) | P2 | draft |  | 90 | E012 |
 | T071 | [T071 — Author Per-Project Assistant Profile schema formal definition (YAML schema for the 6 sections)](T071-author-per-project-assistant-profile-schema-formal-definition.md) | P1 | draft |  | 40 | E024 |
 | T075 | [T075 — Author /opt Second-Brain Assistant Profile per M002 schema (canonical tailored example)](T075-author-opt-second-brain-assistant-profile-canonical-example.md) | P1 | draft |  | 30 | E024 |
-| T078 | [T078 — Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermess variants)](T078-author-spawn-protocol-generic-agent-sdk.md) | P1 | draft |  | 25 | E024 |
+| T078 | [T078 — Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermes variants)](T078-author-spawn-protocol-generic-agent-sdk.md) | P1 | draft |  | 25 | E024 |

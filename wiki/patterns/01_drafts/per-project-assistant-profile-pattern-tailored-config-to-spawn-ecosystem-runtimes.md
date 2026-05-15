@@ -1,5 +1,5 @@
 ---
-title: "Pattern — Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermess / generic Agent SDK consumers"
+title: "Pattern — Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermes / generic Agent SDK consumers"
 type: pattern
 domain: ai-agents
 status: synthesized
@@ -32,14 +32,14 @@ tags: [pattern, per-project-assistant, assistant-profile, runtime-agnostic, decl
 
 ## Summary
 
-A **per-project Assistant Profile** is a declarative configuration artifact (one per repository) that defines an assistant's identity, knowledge scope, action surface, model routing, MCP wiring, prompt templates, and success criteria — in a runtime-agnostic format. The Profile is consumed by a **spawn protocol** to materialize a running assistant instance on a specific runtime (OpenClaw, OpenArms, Hermess, generic Agent SDK consumer, future runtimes). The Profile is the **spec**; the spawned instance is the **product**. The pattern enables: (1) per-project tailoring without re-authoring runtime-specific config; (2) runtime portability (same Profile → different runtimes); (3) operator-level navigation across ecosystem assistants; (4) capture of Anthropic's programmatic credit pool ($200/month at Max 20x, effective 2026-06-15). Profiles must remain runtime-agnostic to preserve [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|anti-vendor-lock-in mission alignment]] — future routing to local-AI (AICP), other-provider models, and custom-tailored model groups must be supported by the schema.
+A **per-project Assistant Profile** is a declarative configuration artifact (one per repository) that defines an assistant's identity, knowledge scope, action surface, model routing, MCP wiring, prompt templates, and success criteria — in a runtime-agnostic format. The Profile is consumed by a **spawn protocol** to materialize a running assistant instance on a specific runtime (OpenClaw, OpenArms, Hermes, generic Agent SDK consumer, future runtimes). The Profile is the **spec**; the spawned instance is the **product**. The pattern enables: (1) per-project tailoring without re-authoring runtime-specific config; (2) runtime portability (same Profile → different runtimes); (3) operator-level navigation across ecosystem assistants; (4) capture of Anthropic's programmatic credit pool ($200/month at Max 20x, effective 2026-06-15). Profiles must remain runtime-agnostic to preserve [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|anti-vendor-lock-in mission alignment]] — future routing to local-AI (AICP), other-provider models, and custom-tailored model groups must be supported by the schema.
 
 ## Context
 
 This pattern applies when:
 - A project needs a recurring assistant (curation, automation, scheduled tasks, on-demand specialist)
 - The assistant should be tailored to the project's specific needs (knowledge, terminology, workflows)
-- The assistant runtime is one of OpenClaw / OpenArms / Hermess / generic Agent SDK (or any future Agent-SDK-compatible runtime)
+- The assistant runtime is one of OpenClaw / OpenArms / Hermes / generic Agent SDK (or any future Agent-SDK-compatible runtime)
 - Cross-project consistency matters (operator wants to navigate assistants across the 5-project ecosystem)
 - Anthropic's programmatic credit pool should be consumed via productive automation (effective 2026-06-15)
 
@@ -50,7 +50,7 @@ Does NOT apply to:
 
 ## Pattern Description
 
-A **Per-Project Assistant Profile** is a declarative YAML configuration with 6 required sections (Identity, Knowledge Scope, Action Surface, Model Routing, Prompt Templates, Success Criteria). The Profile is the **spec** the assistant inherits; the assistant runtime (OpenClaw, OpenArms, Hermess, generic Agent SDK consumer) is the **execution layer** that consumes the spec at spawn time. The pattern separates declarative configuration from execution mechanics — the same Profile can spawn on multiple runtimes via runtime-specific spawn protocols. Per-project tailoring means each repository has its own Profile reflecting that project's actual needs; the schema enforces that all Profiles use the same 6-section structure so they remain navigable, comparable, and migrable across the ecosystem.
+A **Per-Project Assistant Profile** is a declarative YAML configuration with 6 required sections (Identity, Knowledge Scope, Action Surface, Model Routing, Prompt Templates, Success Criteria). The Profile is the **spec** the assistant inherits; the assistant runtime (OpenClaw, OpenArms, Hermes, generic Agent SDK consumer) is the **execution layer** that consumes the spec at spawn time. The pattern separates declarative configuration from execution mechanics — the same Profile can spawn on multiple runtimes via runtime-specific spawn protocols. Per-project tailoring means each repository has its own Profile reflecting that project's actual needs; the schema enforces that all Profiles use the same 6-section structure so they remain navigable, comparable, and migrable across the ecosystem.
 
 ## Instances
 
@@ -62,7 +62,7 @@ A **Per-Project Assistant Profile** is a declarative YAML configuration with 6 r
 | **aicp-assistant** | AICP | future (E024-M006) | Local-AI inference, complexity routing, $0 target enforcement |
 | **dcp-assistant** | devops-control-plane | future (E024-M006) | Infrastructure governance, decision tracking |
 | **root-ghostproxy-assistant** | root-ghostproxy | future (E024-M006) | Harness/ecosystem maintenance, global config propagation, IPS rule curation |
-| **hermess-assistant** | Hermess | TBD pending operator-clarification of Hermess identity |
+| **hermes-assistant** | Hermes | future (E024-M006) — Hermes confirmed 2026-05-09 (Greek messenger god) |
 
 ## Pattern Structure
 
@@ -168,7 +168,7 @@ success_criteria:
 | **Generic Agent SDK** | [[spawn-protocol-generic-agent-sdk]] — read Profile → construct Agent SDK config → instantiate Agent → expose CLI/HTTP endpoint |
 | **OpenClaw** | [[spawn-protocol-openclaw]] — read Profile → map to OpenClaw harness config → register profile as OpenClaw "personality" → expose Discord/Telegram/HTTP front-end |
 | **OpenArms** | [[spawn-protocol-openarms]] — read Profile → map to OpenArms fleet-agent spec → register in fleet → schedule per cron/event triggers |
-| **Hermess** | [[spawn-protocol-hermess]] — TBD pending operator-clarification of Hermess identity |
+| **Hermes** | [[spawn-protocol-hermes]] — planned per E024-M004 (Hermes confirmed 2026-05-09) |
 | **`claude -p` CLI** | [[spawn-protocol-claude-code-cli-p]] — read Profile → render system prompt + tool list → invoke `claude -p` with composed args (consumes programmatic credit per Anthropic 2026-06-15 policy) |
 
 ## Why Runtime-Agnostic Matters
@@ -230,7 +230,7 @@ Concrete examples:
 | **AICP** | Profile tailored to local-AI inference, complexity routing, $0 target enforcement |
 | **devops-control-plane** | Profile tailored to infrastructure governance, decision tracking |
 | **root-ghostproxy** | Profile tailored to harness/ecosystem maintenance, global config propagation, IPS rule curation |
-| **Hermess** | TBD pending operator-clarification |
+| **Hermes** | Profile tailored to Hermes's purpose (operator-confirmed 2026-05-09 as Greek-messenger-god-themed) — scope TBD |
 
 ## Relationships
 

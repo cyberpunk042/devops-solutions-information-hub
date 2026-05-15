@@ -14,6 +14,7 @@ Structured side-by-side evaluations with comparison matrices and decision criter
 ## Pages
 
 - [Agentic Search vs Vector Search](agentic-search-vs-vector-search.md) — A fundamental tension runs through the research wiki: multiple sources advocate for agent-driven navigation over stru...
+- [Comparison — Assistant Platforms & Frameworks Frontier (2026-05-09): Claude OS · Obsidian PM · Multica · OpenClaw Command Center / OCMC — by Type and Frontier](assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09.md) — Survey + classification of 7 operator-named assistant/orchestration platforms (plus the YouTube + article context) in...
 - [Cross-Domain Patterns](cross-domain-patterns.md) — Certain structural patterns recur independently across multiple domains in this wiki — in AI agent orchestration, kno...
 - [Kimi K2.6 Access Paths — OpenRouter vs Ollama Cloud vs Local KTransformers](kimi-k2-6-access-paths-openrouter-ollama-cloud-local.md) — Three ways to reach K2
 - [LLM Wiki vs RAG](llm-wiki-vs-rag.md) — A direct comparison of Karpathy's LLM Wiki Pattern against traditional Retrieval-Augmented Generation (RAG)
@@ -25,4 +26,4 @@ Structured side-by-side evaluations with comparison matrices and decision criter
 
 ## Tags
 
-`comparison`, `cross-domain`, `architecture`, `vector-search`, `rag`, `hybrid-search`, `knowledge-retrieval`, `patterns`, `skills`, `claude-code`, `openfleet`, `openarms`, `agentic-search`, `glob-grep`, `index-navigation`, `meta-analysis`, `plan-execute-review`, `progressive-distillation`, `deferred-loading`, `context-aware`
+`comparison`, `cross-domain`, `architecture`, `vector-search`, `rag`, `hybrid-search`, `knowledge-retrieval`, `ai-agents`, `patterns`, `skills`, `claude-code`, `openfleet`, `openarms`, `agentic-search`, `glob-grep`, `index-navigation`, `assistant-platforms`, `claude-os`, `obsidian-pm`, `multica`

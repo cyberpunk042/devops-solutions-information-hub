@@ -169,7 +169,7 @@ The Per-Project Assistant strategy treats this as a **resource-capture opportuni
 |---|---|
 | **Operator (Max x20)** | Build per-project Assistant configurations to consume $200/month programmatic credit; OR accept the $2,400/year value-at-risk |
 | **Per-project Assistant designers** | Architect profiles to use Claude Agent SDK + `claude -p` over interactive Claude Code (the credit IS the funding source) |
-| **OpenClaw / OpenArms / Hermess developers** | The "spawn from a profile" pattern aligns with the new credit model — Agent SDK usage IS what gets funded |
+| **OpenClaw / OpenArms / Hermes developers** | The "spawn from a profile" pattern aligns with the new credit model — Agent SDK usage IS what gets funded |
 | **Sister-project ecosystem (5 projects)** | Each project should plan for per-project Assistant profile to capture its share of the $200/month |
 | **Cost forecasting / budgeting** | Token-cost-per-workflow tracking becomes mission-critical; treat like AWS/GCP cost monitoring |
 
@@ -177,7 +177,7 @@ The Per-Project Assistant strategy treats this as a **resource-capture opportuni
 
 > [!question] What's the actual Max plan tier (5x vs 20x)? Operator-stated 2026-05-09 implied 20x ($240 claim ≈ $200 actual). Confirm tier.
 
-> [!question] Is the operator-named "Hermess" project a typo for "Hermes" (Greek messenger god) or a new project name? Not found in sister-projects.yaml.
+> [!success] Hermes identity — RESOLVED 2026-05-09: Greek messenger god (the original "Hermess" in the directive was a typo). Project added to operator's named ecosystem alongside OpenClaw and OpenArms. Whether the repo currently exists is a separate operator-decision.
 
 > [!question] How does this interact with operator's planned post-Anthropic self-autonomous stack milestone? Per [[post-anthropic-self-autonomous-stack|Milestone — Post-Anthropic Self-Autonomous Stack]], the strategic direction is to reduce Anthropic dependency. This new policy strengthens the case but creates a $2,400/year sunk-cost opportunity in the short term.
 

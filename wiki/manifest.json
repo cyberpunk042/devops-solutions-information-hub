@@ -1,12 +1,12 @@
 {
-  "generated": "2026-05-15T14:03:49.081334+00:00",
+  "generated": "2026-05-15T14:29:35.831854+00:00",
   "stats": {
-    "pages": 855,
+    "pages": 856,
     "domains": 14,
     "sources": 110,
-    "comparisons": 9,
-    "relationships": 3989,
-    "tags_unique": 3156,
+    "comparisons": 10,
+    "relationships": 3997,
+    "tags_unique": 3165,
     "layers": {
       "3": 4,
       "5": 38,
@@ -18,7 +18,7 @@
       "spine": 80
     },
     "maturity": {
-      "seed": 176,
+      "seed": 177,
       "growing": 331,
       "mature": 23
     }
@@ -876,7 +876,7 @@
     {
       "path": "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn.md",
       "slug": "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn",
-      "title": "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermess)",
+      "title": "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermes)",
       "type": "epic",
       "domain": "backlog",
       "status": "draft",
@@ -907,7 +907,7 @@
           "id": "operator-directive-2026-05-09",
           "type": "directive",
           "file": "raw/notes/2026-05-09-operator-directive-per-project-assistant-configs-spawn-openclaw-openarms-hermess-and-anthropic-programmatic-budget-policy-research.md",
-          "description": "Operator-stated 2026-05-09 directive \u2014 per-project assistant configurations/profiles to spawn OpenClaw/OpenArms/Hermess; capture programmatic credit budget; high quality definitions and features"
+          "description": "Operator-stated 2026-05-09 directive \u2014 per-project assistant configurations/profiles to spawn OpenClaw/OpenArms/Hermes; capture programmatic credit budget; high quality definitions and features"
         },
         {
           "id": "anthropic-policy-synthesis",
@@ -923,11 +923,19 @@
       "relationships": [
         {
           "verb": "IMPLEMENTS",
-          "target": "Operator directive 2026-05-09"
+          "target": "Operator directive 2026-05-09 turn 1"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Operator directive 2026-05-09 turn 2"
         },
         {
           "verb": "BUILDS ON",
           "target": "Anthropic Programmatic Credit Pool Policy Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Comparison \u2014 Assistant Platforms & Frameworks Frontier"
         },
         {
           "verb": "COMPLEMENTS",
@@ -6788,7 +6796,7 @@
     {
       "path": "backlog/tasks/T078-author-spawn-protocol-generic-agent-sdk.md",
       "slug": "backlog/tasks/T078-author-spawn-protocol-generic-agent-sdk",
-      "title": "T078 \u2014 Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermess variants)",
+      "title": "T078 \u2014 Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermes variants)",
       "type": "task",
       "domain": "backlog",
       "status": "draft",
@@ -6941,6 +6949,132 @@
         {
           "verb": "RELATES TO",
           "target": "Memory Lifecycle Management"
+        }
+      ]
+    },
+    {
+      "path": "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09.md",
+      "slug": "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09",
+      "title": "Comparison \u2014 Assistant Platforms & Frameworks Frontier (2026-05-09): Claude OS \u00b7 Obsidian PM \u00b7 Multica \u00b7 OpenClaw Command Center / OCMC \u2014 by Type and Frontier",
+      "type": "comparison",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-09",
+      "updated": "2026-05-09",
+      "last_reviewed": "",
+      "tags": [
+        "comparison",
+        "assistant-platforms",
+        "claude-os",
+        "obsidian-pm",
+        "multica",
+        "openclaw",
+        "ocmc",
+        "frontier-mapping",
+        "hermes-confirmation",
+        "skill-systems",
+        "memory-layer",
+        "agent-orchestration",
+        "pm-in-vault",
+        "2026-05-09",
+        "ai-agents",
+        "synthesized"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive-2026-05-09-turn-2",
+          "type": "directive",
+          "file": "raw/notes/2026-05-09-operator-directive-hermes-clarification-information-surfacing-before-public-obsidian-pull-from-frontier-stay-independent-classify-existing-approaches.md",
+          "description": "Operator directive 2026-05-09 (turn 2) \u2014 classify the 7 named tools by type and frontier at high standards"
+        },
+        {
+          "id": "src-claude-os-skill-chaining-youtube",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=RrMTtG1ZccI",
+          "file": "raw/transcripts/skill-chaining-in-claude-os-is-insane-dont-fall-behind.txt",
+          "description": "YouTube \u2014 Skill chaining in claude-os is insane don't fall behind \u2014 strategic argument for skill-system architecture over dashboards; 'Anthropic will solve 8 of 9; you must solve YOUR business workflows'"
+        },
+        {
+          "id": "src-claude-os-article",
+          "type": "article",
+          "url": "https://thebob.dev/ai/tools/productivity/2025/10/31/why-we-built-claude-os-and-what-it-actually-is/",
+          "file": "raw/articles/why-we-built-claude-os-and-what-it-actually-is-code-it-forward.md",
+          "description": "Bob Roberts \u2014 Why we built Claude OS (and what it actually is) \u2014 author article explaining the 6-component memory layer + hybrid indexing breakthrough"
+        },
+        {
+          "id": "src-claude-os-repo",
+          "type": "project",
+          "url": "https://github.com/brobertsaz/claude-os",
+          "project": "brobertsaz/claude-os",
+          "path": "README.md",
+          "description": "Claude OS repo README v2.5 (Feb 2026) \u2014 full feature set + roadmap + v2 changelog"
+        },
+        {
+          "id": "src-obsidian-pm-repo",
+          "type": "project",
+          "url": "https://github.com/StepanKropachev/obsidian-pm",
+          "project": "StepanKropachev/obsidian-pm",
+          "path": "README.md",
+          "description": "Obsidian PM by StepanKropachev \u2014 full PM in plain-Markdown Obsidian vault: Table + Gantt + Kanban + dependencies + recurring + time tracking"
+        },
+        {
+          "id": "src-multica-repo",
+          "type": "project",
+          "url": "https://github.com/multica-ai/multica",
+          "project": "multica-ai/multica",
+          "path": "README.md",
+          "description": "Multica \u2014 open-source managed agents platform supporting 10+ agent CLIs (Claude Code, Codex, OpenClaw, OpenCode, Hermes, Gemini, Pi, Cursor Agent, Kimi, Kiro CLI). Hermes is empirically a real CLI runtime, not just a planned project name."
+        },
+        {
+          "id": "src-openclaw-command-center",
+          "type": "article",
+          "url": "https://github.com/jontsai/openclaw-command-center",
+          "file": "raw/articles/jontsaiopenclaw-command-center.md",
+          "description": "OpenClaw Command Center (original) \u2014 README currently empty; classification based on operator framing + repo name; needs deeper code investigation"
+        },
+        {
+          "id": "src-ocmc-backup",
+          "type": "article",
+          "url": "https://github.com/cyberpunk042/ocmc-backup",
+          "file": "raw/articles/cyberpunk042ocmc-backup.md",
+          "description": "Operator's backup/fork of OpenClaw Mission Control \u2014 README currently empty; existence in operator's repos signals OCMC adaptation pattern; needs deeper code investigation"
+        },
+        {
+          "id": "epic-e024",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn.md",
+          "description": "E024 Epic \u2014 Per-Project Assistant Configurations; this comparison feeds the Profile pattern design with empirical inputs from frontier tools"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Operator directive 2026-05-09 turn 2"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "E024 \u2014 Per-Project Assistant Configurations Epic"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Pattern \u2014 Per-Project Assistant Profile"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Lesson \u2014 Anti-Vendor-Lock-In as empirical claim"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Synthesis \u2014 Anthropic Programmatic Credit Pool"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Multica self-hosted memory"
         }
       ]
     },
@@ -40283,7 +40417,7 @@
     {
       "path": "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes.md",
       "slug": "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes",
-      "title": "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermess / generic Agent SDK consumers",
+      "title": "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermes / generic Agent SDK consumers",
       "type": "pattern",
       "domain": "ai-agents",
       "status": "synthesized",
@@ -59996,19 +60130,19 @@
   "domains": {
     "backlog": {
       "page_count": 111,
-      "relationship_count": 495
+      "relationship_count": 497
     },
     "cross-domain": {
       "page_count": 291,
       "relationship_count": 1767
     },
+    "ai-agents": {
+      "page_count": 73,
+      "relationship_count": 554
+    },
     "ai-models": {
       "page_count": 16,
       "relationship_count": 93
-    },
-    "ai-agents": {
-      "page_count": 72,
-      "relationship_count": 548
     },
     "tools-integration": {
       "page_count": 38,
@@ -60583,6 +60717,7 @@
     ],
     "openclaw": [
       "backlog/epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn",
+      "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09",
       "domains/ai-agents/orchestration/openclaw",
       "domains/ai-agents/orchestration/openfleet",
       "log/2026-04-09/models/2026-04-09-directive-quality-models-hub-mindset",
@@ -60612,6 +60747,7 @@
       "backlog/tasks/T071-author-per-project-assistant-profile-schema-formal-definition",
       "backlog/tasks/T075-author-opt-second-brain-assistant-profile-canonical-example",
       "backlog/tasks/T078-author-spawn-protocol-generic-agent-sdk",
+      "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09",
       "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles",
       "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately",
       "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
@@ -61499,6 +61635,7 @@
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
       "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config",
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
+      "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09",
       "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
       "log/2026-04-28-session-handoff",
       "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption",
@@ -62989,6 +63126,7 @@
     ],
     "comparison": [
       "comparisons/agentic-search-vs-vector-search",
+      "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09",
       "comparisons/kimi-k2-6-access-paths-openrouter-ollama-cloud-local",
       "comparisons/llm-wiki-vs-rag",
       "comparisons/mcp-vs-cli-decision-vs-lesson",
@@ -63002,6 +63140,72 @@
     ],
     "index-navigation": [
       "comparisons/agentic-search-vs-vector-search"
+    ],
+    "assistant-platforms": [
+      "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09"
+    ],
+    "claude-os": [
+      "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09"
+    ],
+    "obsidian-pm": [
+      "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09"
+    ],
+    "ocmc": [
+      "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09"
+    ],
+    "frontier-mapping": [
+      "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09"
+    ],
+    "hermes-confirmation": [
+      "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09"
+    ],
+    "skill-systems": [
+      "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09"
+    ],
+    "memory-layer": [
+      "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09"
+    ],
+    "agent-orchestration": [
+      "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09",
+      "domains/ai-agents/orchestration/harness-engineering",
+      "sources/tools-integration/src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams"
+    ],
+    "pm-in-vault": [
+      "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09"
+    ],
+    "ai-agents": [
+      "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09",
+      "comparisons/cross-domain-patterns",
+      "domains/ai-agents/orchestration/agent-orchestration-patterns",
+      "domains/ai-agents/orchestration/openfleet",
+      "domains/ai-agents/patterns/design-md-pattern",
+      "domains/cross-domain/integration/ai-methodology-consumption-guide",
+      "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts",
+      "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately",
+      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
+      "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
+      "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
+      "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes",
+      "patterns/01_drafts/three-layer-agent-context-architecture",
+      "sources/src-autobe-compiler-verified-backend-generation",
+      "sources/src-bmad-method-agile-ai-development-framework",
+      "sources/src-claude-agent-sdk-and-managed-agents",
+      "sources/src-claude-code-prompt-patch-rebalancing",
+      "sources/src-code-review-graph-automated-review",
+      "sources/src-github-spec-kit-specification-driven-development",
+      "sources/src-openspec-spec-driven-development-framework",
+      "sources/src-pydantic-ai-typed-agent-framework",
+      "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
+      "sources/src-vercel-opensrc-toolkit",
+      "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents",
+      "sources/wiki-methodology/methodology-artifact-taxonomy-research",
+      "sources/wiki-methodology/src-awesome-design-md",
+      "sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide",
+      "spine/domain-overviews/ai-agents-domain-overview"
+    ],
+    "synthesized": [
+      "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09",
+      "patterns/01_drafts/agent-execution-cost-optimization-stack"
     ],
     "cross-domain": [
       "comparisons/cross-domain-patterns",
@@ -63070,35 +63274,6 @@
       "lessons/03_validated/knowledge-systems/schema-is-the-real-product",
       "patterns/03_validated/architecture/progressive-distillation",
       "spine/domain-overviews/knowledge-systems-domain-overview"
-    ],
-    "ai-agents": [
-      "comparisons/cross-domain-patterns",
-      "domains/ai-agents/orchestration/agent-orchestration-patterns",
-      "domains/ai-agents/orchestration/openfleet",
-      "domains/ai-agents/patterns/design-md-pattern",
-      "domains/cross-domain/integration/ai-methodology-consumption-guide",
-      "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts",
-      "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately",
-      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
-      "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
-      "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
-      "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes",
-      "patterns/01_drafts/three-layer-agent-context-architecture",
-      "sources/src-autobe-compiler-verified-backend-generation",
-      "sources/src-bmad-method-agile-ai-development-framework",
-      "sources/src-claude-agent-sdk-and-managed-agents",
-      "sources/src-claude-code-prompt-patch-rebalancing",
-      "sources/src-code-review-graph-automated-review",
-      "sources/src-github-spec-kit-specification-driven-development",
-      "sources/src-openspec-spec-driven-development-framework",
-      "sources/src-pydantic-ai-typed-agent-framework",
-      "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
-      "sources/src-vercel-opensrc-toolkit",
-      "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents",
-      "sources/wiki-methodology/methodology-artifact-taxonomy-research",
-      "sources/wiki-methodology/src-awesome-design-md",
-      "sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide",
-      "spine/domain-overviews/ai-agents-domain-overview"
     ],
     "kimi": [
       "comparisons/kimi-k2-6-access-paths-openrouter-ollama-cloud-local",
@@ -64204,10 +64379,6 @@
     "runtime-safety": [
       "domains/ai-agents/orchestration/harness-engineering",
       "sources/claude-code/src-harness-engineering"
-    ],
-    "agent-orchestration": [
-      "domains/ai-agents/orchestration/harness-engineering",
-      "sources/tools-integration/src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams"
     ],
     "spec-driven": [
       "domains/ai-agents/orchestration/harness-engineering",
@@ -69738,9 +69909,6 @@
     "multi-task": [
       "patterns/01_drafts/agent-execution-cost-optimization-stack"
     ],
-    "synthesized": [
-      "patterns/01_drafts/agent-execution-cost-optimization-stack"
-    ],
     "13-gate-mapping": [
       "patterns/01_drafts/aidlc-sdlc-integration-pattern-13-gate-pipeline-mapped-to-canonical-stages-and-methodology-engine"
     ],
@@ -73986,10 +74154,10 @@
     {
       "target": "Anthropic Programmatic Credit Pool Policy Synthesis",
       "referenced_by": [
-        "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermess)",
-        "T078 \u2014 Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermess variants)",
+        "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermes)",
+        "T078 \u2014 Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermes variants)",
         "Decision \u2014 Strategic response to Anthropic Programmatic Credit Pool (2026-06-15): adopt per-project Assistant Profiles as the value-capture mechanism for the $200/month Max 20x credit",
-        "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermess / generic Agent SDK consumers"
+        "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermes / generic Agent SDK consumers"
       ]
     },
     {
@@ -74167,6 +74335,12 @@
       "target": "Codex CLI + Plugin",
       "referenced_by": [
         "AI Model \u00d7 Provider \u00d7 Harness Decision Matrix 2026"
+      ]
+    },
+    {
+      "target": "Comparison \u2014 Assistant Platforms & Frameworks Frontier",
+      "referenced_by": [
+        "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermes)"
       ]
     },
     {
@@ -74501,6 +74675,12 @@
       ]
     },
     {
+      "target": "E024 \u2014 Per-Project Assistant Configurations Epic",
+      "referenced_by": [
+        "Comparison \u2014 Assistant Platforms & Frameworks Frontier (2026-05-09): Claude OS \u00b7 Obsidian PM \u00b7 Multica \u00b7 OpenClaw Command Center / OCMC \u2014 by Type and Frontier"
+      ]
+    },
+    {
       "target": "E024-M002 \u2014 Profile Pattern + Schema",
       "referenced_by": [
         "E024-M003 \u2014 /opt Second-Brain Assistant Profile (the canonical tailored example)",
@@ -74516,7 +74696,7 @@
     {
       "target": "E024-M004 \u2014 Spawn Protocols per Runtime",
       "referenced_by": [
-        "T078 \u2014 Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermess variants)"
+        "T078 \u2014 Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermes variants)"
       ]
     },
     {
@@ -74979,13 +75159,14 @@
     {
       "target": "Lesson \u2014 Anti-Vendor-Lock-In",
       "referenced_by": [
-        "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermess / generic Agent SDK consumers"
+        "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermes / generic Agent SDK consumers"
       ]
     },
     {
       "target": "Lesson \u2014 Anti-Vendor-Lock-In as empirical claim",
       "referenced_by": [
-        "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermess)",
+        "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermes)",
+        "Comparison \u2014 Assistant Platforms & Frameworks Frontier (2026-05-09): Claude OS \u00b7 Obsidian PM \u00b7 Multica \u00b7 OpenClaw Command Center / OCMC \u2014 by Type and Frontier",
         "Decision \u2014 Strategic response to Anthropic Programmatic Credit Pool (2026-06-15): adopt per-project Assistant Profiles as the value-capture mechanism for the $200/month Max 20x credit",
         "Synthesis \u2014 Anthropic Programmatic Credit Pool (effective 2026-06-15): separate metered budget for Claude Agent SDK / `claude -p` CLI / GitHub Actions / third-party Agent SDK apps, at API rates, with $20\u2013$200/month tier-by-tier allowance that does NOT roll over"
       ]
@@ -75246,7 +75427,7 @@
     {
       "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack",
       "referenced_by": [
-        "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermess)",
+        "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermes)",
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
         "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
         "Augment the Entire Repository to Be a GitHub Top-Tier Repository with Perfect Paths and Clarity and Markdown",
@@ -75345,7 +75526,7 @@
     {
       "target": "Model \u2014 Skills, Commands, Hooks",
       "referenced_by": [
-        "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermess / generic Agent SDK consumers",
+        "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermes / generic Agent SDK consumers",
         "Synthesis \u2014 Multica: Open-Source Managed-Agents Platform (Orchestrator Layer Above 10 Harness CLIs, Apache 2.0, Self-Host or Cloud)"
       ]
     },
@@ -75364,6 +75545,12 @@
         "Synthesis \u2014 Google TPU + UCSD DFlash (May 4 2026): Diffusion-Style Speculative Decoding Achieves 3.13\u00d7 Average / 6\u00d7 Peak Speedup on TPU v5p \u2014 O(1) Block Drafting Replaces O(K) Sequential",
         "Synthesis \u2014 Phil Schmid (May 5 2026): Four Subagents Patterns in 2026 \u2014 Inline Tool \u00b7 Fan-Out \u00b7 Agent Pool \u00b7 Teams (Ordered by Main-Agent Control over Subagent Lifecycle)",
         "Synthesis \u2014 Quantization (YouTube, 2026): How a 280GB Model Runs on Your Laptop \u2014 Outliers as Central Villain \u00b7 5 Algorithms \u00b7 Bell-Curve Per-Group Scaling \u00b7 NF4 Smart Grid"
+      ]
+    },
+    {
+      "target": "Multica self-hosted memory",
+      "referenced_by": [
+        "Comparison \u2014 Assistant Platforms & Frameworks Frontier (2026-05-09): Claude OS \u00b7 Obsidian PM \u00b7 Multica \u00b7 OpenClaw Command Center / OCMC \u2014 by Type and Frontier"
       ]
     },
     {
@@ -75431,8 +75618,20 @@
     {
       "target": "Operator directive 2026-05-09",
       "referenced_by": [
-        "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermess)",
         "Decision \u2014 Strategic response to Anthropic Programmatic Credit Pool (2026-06-15): adopt per-project Assistant Profiles as the value-capture mechanism for the $200/month Max 20x credit"
+      ]
+    },
+    {
+      "target": "Operator directive 2026-05-09 turn 1",
+      "referenced_by": [
+        "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermes)"
+      ]
+    },
+    {
+      "target": "Operator directive 2026-05-09 turn 2",
+      "referenced_by": [
+        "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermes)",
+        "Comparison \u2014 Assistant Platforms & Frameworks Frontier (2026-05-09): Claude OS \u00b7 Obsidian PM \u00b7 Multica \u00b7 OpenClaw Command Center / OCMC \u2014 by Type and Frontier"
       ]
     },
     {
@@ -75478,7 +75677,7 @@
       "target": "Pattern \u2014 Agent Modes",
       "referenced_by": [
         "Lesson \u2014 Path-versatility doctrine: configs must work across machines via metadata-driven indirection (env vars, relative paths, parameters), not hardcoded absolute paths",
-        "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermess / generic Agent SDK consumers"
+        "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermes / generic Agent SDK consumers"
       ]
     },
     {
@@ -75488,13 +75687,14 @@
         "E024-M003 \u2014 /opt Second-Brain Assistant Profile (the canonical tailored example)",
         "T071 \u2014 Author Per-Project Assistant Profile schema formal definition (YAML schema for the 6 sections)",
         "T075 \u2014 Author /opt Second-Brain Assistant Profile per M002 schema (canonical tailored example)",
-        "T078 \u2014 Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermess variants)"
+        "T078 \u2014 Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermes variants)",
+        "Comparison \u2014 Assistant Platforms & Frameworks Frontier (2026-05-09): Claude OS \u00b7 Obsidian PM \u00b7 Multica \u00b7 OpenClaw Command Center / OCMC \u2014 by Type and Frontier"
       ]
     },
     {
       "target": "Pattern \u2014 Session Orientation Pair",
       "referenced_by": [
-        "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermess / generic Agent SDK consumers"
+        "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermes / generic Agent SDK consumers"
       ]
     },
     {
@@ -75824,7 +76024,7 @@
     {
       "target": "Strategic Response to Anthropic Programmatic Credit Pool",
       "referenced_by": [
-        "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermess / generic Agent SDK consumers"
+        "Pattern \u2014 Per-Project Assistant Profile: tailored declarative configuration that spawns runtime-agnostic assistant instances on OpenClaw / OpenArms / Hermes / generic Agent SDK consumers"
       ]
     },
     {
@@ -75923,6 +76123,12 @@
         "Synthesis \u2014 Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model",
         "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
         "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 Anthropic Programmatic Credit Pool",
+      "referenced_by": [
+        "Comparison \u2014 Assistant Platforms & Frameworks Frontier (2026-05-09): Claude OS \u00b7 Obsidian PM \u00b7 Multica \u00b7 OpenClaw Command Center / OCMC \u2014 by Type and Frontier"
       ]
     },
     {
@@ -76244,7 +76450,7 @@
       "target": "T071 \u2014 Profile Schema",
       "referenced_by": [
         "T075 \u2014 Author /opt Second-Brain Assistant Profile per M002 schema (canonical tailored example)",
-        "T078 \u2014 Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermess variants)"
+        "T078 \u2014 Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermes variants)"
       ]
     },
     {
@@ -76680,7 +76886,7 @@
     {
       "target": "root-ghostproxy SFIF Rollout",
       "referenced_by": [
-        "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermess)"
+        "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermes)"
       ]
     },
     {

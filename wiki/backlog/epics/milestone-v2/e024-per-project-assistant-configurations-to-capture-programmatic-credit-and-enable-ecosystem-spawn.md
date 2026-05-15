@@ -1,5 +1,5 @@
 ---
-title: "E024 — Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermess)"
+title: "E024 — Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermes)"
 type: epic
 domain: backlog
 status: draft
@@ -19,7 +19,7 @@ sources:
   - id: operator-directive-2026-05-09
     type: directive
     file: raw/notes/2026-05-09-operator-directive-per-project-assistant-configs-spawn-openclaw-openarms-hermess-and-anthropic-programmatic-budget-policy-research.md
-    description: "Operator-stated 2026-05-09 directive — per-project assistant configurations/profiles to spawn OpenClaw/OpenArms/Hermess; capture programmatic credit budget; high quality definitions and features"
+    description: "Operator-stated 2026-05-09 directive — per-project assistant configurations/profiles to spawn OpenClaw/OpenArms/Hermes; capture programmatic credit budget; high quality definitions and features"
   - id: anthropic-policy-synthesis
     type: wiki
     file: wiki/sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15.md
@@ -31,11 +31,11 @@ tags: [epic, "E024", per-project-assistant, assistant-profile, openclaw, openarm
 
 ## Summary
 
-Build per-project assistant configurations / profiles — one per repo, tailored to each project's needs — that are runtime-agnostic enough to spawn assistant instances on OpenClaw, OpenArms, Hermess (operator-named, clarification pending), or any future Agent-SDK-compatible harness. The strategic context is **time-boxed**: Anthropic's new programmatic credit pool (effective 2026-06-15) provides $200/month at Max 20x that **does not roll over** — making proactive value-capture via per-project Assistants a $2,400/year forcing function for the operator. Beyond the value-capture frame, the architecture serves the broader anti-vendor-lock-in mission: profiles are runtime-agnostic, enabling future routing to local-AI subsystems (AICP), other-provider models (Kimi K2.6, Ollama Cloud), and custom-tailored model groups as those alternatives mature.
+Build per-project assistant configurations / profiles — one per repo, tailored to each project's needs — that are runtime-agnostic enough to spawn assistant instances on OpenClaw, OpenArms, Hermes (Greek messenger god — operator-confirmed 2026-05-09), or any future Agent-SDK-compatible harness. The strategic context is **time-boxed**: Anthropic's new programmatic credit pool (effective 2026-06-15) provides $200/month at Max 20x that **does not roll over** — making proactive value-capture via per-project Assistants a $2,400/year forcing function for the operator. Beyond the value-capture frame, the architecture serves the broader anti-vendor-lock-in mission: profiles are runtime-agnostic, enabling future routing to local-AI subsystems (AICP), other-provider models (Kimi K2.6, Ollama Cloud), and custom-tailored model groups as those alternatives mature.
 
 ## Operator Directive
 
-> "Now repos / projects will have assistants configurations / profiles.. e.g. in the knowledge/information-hub we will have one taillored to the needs. the goal is to be able to use those to spawn an OpenClaw or OpenArms or Hermess and whatever and have high quality definitions and features."
+> "Now repos / projects will have assistants configurations / profiles.. e.g. in the knowledge/information-hub we will have one taillored to the needs. the goal is to be able to use those to spawn an OpenClaw or OpenArms or Hermes and whatever and have high quality definitions and features."
 
 > "I think Anthropic changed that the -p option which was our workaround to not be treated as programmatical is now counted as programmatic use and now also considered credit budget but at the same time now they would give each month the equivalent of the month of budget in token for the programmatic uses ? I think thats what I read. so on max x20 its equivalent of 240$ lost if not used with something like such Assistant or our advanced systems which are not finished."
 
@@ -54,7 +54,7 @@ Build per-project assistant configurations / profiles — one per repo, tailored
 
 - **Per-project Assistant Profile schema** — runtime-agnostic format defining assistant identity, knowledge scope, allowed/forbidden actions, model preferences, MCP wiring, prompt templates, success criteria. One schema, many instances.
 - **/opt second-brain Assistant Profile** — the tailored example for THIS project (knowledge curation, methodology stewardship, source ingestion, lesson distillation, gateway-driven orientation). Demonstrates the schema by exemplary instance.
-- **Spawn protocols per runtime** — concrete instructions for how a Profile materializes as a running instance on OpenClaw / OpenArms / Hermess / generic Agent-SDK consumer. Each runtime has its conventions; the spawn protocol bridges Profile → runtime.
+- **Spawn protocols per runtime** — concrete instructions for how a Profile materializes as a running instance on OpenClaw / OpenArms / Hermes / generic Agent-SDK consumer. Each runtime has its conventions; the spawn protocol bridges Profile → runtime.
 - **Programmatic credit budget allocation strategy** — decide how to consume the $200/month Max 20x credit across projects (each project's share; cross-project pooling not supported by Anthropic so cannot be done at the credit layer; pool at the operator-decision layer).
 - **Cross-project Profile catalog** — once /opt's profile is exemplary, each sister project (OpenArms, OpenFleet, AICP, devops-control-plane, root-ghostproxy) gets its own tailored Profile. The catalog enables operator-level navigation.
 - **Quality bar enforcement** — "high quality definitions and features" per operator. Profiles must have specific structural sections (identity, knowledge scope, action surface, model routing, success criteria); validators enforce.
@@ -67,7 +67,7 @@ Build per-project assistant configurations / profiles — one per repo, tailored
 - [ ] `wiki/config/templates/assistant-profile.md` template exists (operationalizes the pattern)
 - [ ] `wiki/concepts/opt-second-brain-assistant-profile.md` (or domain-overview placement) exists — the tailored /opt example
 - [ ] At least 3 spawn protocol pages: `wiki/patterns/01_drafts/spawn-protocol-{openclaw,openarms,generic-agent-sdk}.md`
-- [ ] Operator confirms "Hermess" identity — typo for Hermes, or new project name; if new, add to `wiki/config/sister-projects.yaml`
+- [ ] Operator confirms "Hermes" identity — typo for Hermes, or new project name; if new, add to `wiki/config/sister-projects.yaml`
 - [ ] All 6 sister projects have draft assistant profiles in `wiki/concepts/sister-project-profiles/` (one per project)
 - [ ] Cost-tracking pattern documented (treat Claude credit like AWS/GCP per InfoWorld synthesis)
 - [ ] Pipeline post returns 0 errors after all changes
@@ -106,9 +106,9 @@ Build per-project assistant configurations / profiles — one per repo, tailored
 | **E024-M001** | Anthropic Policy Synthesis | Research-confirmed source-synthesis page; clarifies the credit pool mechanics + value-at-risk | ✅ done this turn (1 task) |
 | **E024-M002** | Per-Project Assistant Profile Pattern + Schema | Pattern page defining the Profile schema (identity, knowledge scope, action surface, model routing, success criteria); operator-reviewable schema | 3-4 tasks |
 | **E024-M003** | /opt Second-Brain Assistant Profile (the tailored example) | The tailored profile for /opt — knowledge curation, methodology stewardship, source ingestion, lesson distillation; demonstrates schema by exemplary instance | 2-3 tasks |
-| **E024-M004** | Spawn Protocols per Runtime | Pattern pages for spawn-on-OpenClaw, spawn-on-OpenArms, spawn-on-Hermess (pending clarification), spawn-on-generic-Agent-SDK; bridges Profile → runtime | 4 tasks |
+| **E024-M004** | Spawn Protocols per Runtime | Pattern pages for spawn-on-OpenClaw, spawn-on-OpenArms, spawn-on-Hermes (pending clarification), spawn-on-generic-Agent-SDK; bridges Profile → runtime | 4 tasks |
 | **E024-M005** | Strategic Decision + Credit Budget Allocation | Decision page on the strategic response to Anthropic policy + how to allocate the $200/month across projects + cost-tracking pattern | 2-3 tasks |
-| **E024-M006** | Cross-Project Profile Catalog | One profile per sister project (OpenArms, OpenFleet, AICP, devops-control-plane, root-ghostproxy, Hermess) + catalog page enabling operator navigation | 6 tasks |
+| **E024-M006** | Cross-Project Profile Catalog | One profile per sister project (OpenArms, OpenFleet, AICP, devops-control-plane, root-ghostproxy, Hermes) + catalog page enabling operator navigation | 6 tasks |
 
 ## Dependencies
 
@@ -120,7 +120,7 @@ Build per-project assistant configurations / profiles — one per repo, tailored
 
 ## Open Questions
 
-> [!question] **Hermess identity** — Is "Hermess" a typo for "Hermes" (Greek messenger god — would fit OpenClaw/OpenArms naming) OR a new project name? Not found in `wiki/config/sister-projects.yaml`. Block: M004 spawn-protocol-for-Hermess + M006 sister-project-profile-Hermess until clarified.
+> [!success] **Hermes identity — RESOLVED 2026-05-09** — Operator clarified: Hermes (Greek messenger god). The original "Hermess" in the verbatim directive was a typo. M004 spawn-protocol-hermes + M006 sister-project-profile-hermes unblocked. Open: should Hermes be added to `wiki/config/sister-projects.yaml`? (Depends on whether the project repo exists yet — operator decision.)
 
 > [!question] **Plan tier confirmation** — Operator said "max x20" with $240 value claim. Research confirms actual Max 20x = $200/month. Confirm operator is on Max 20x (not 5x).
 
@@ -134,7 +134,7 @@ Build per-project assistant configurations / profiles — one per repo, tailored
 
 | Anti-pattern | Why bad |
 |---|---|
-| Build the runtime (OpenClaw/OpenArms/Hermess code) at /opt | /opt = knowledge; runtimes live in their own repos. /opt produces the **profile** + **spawn protocol**; the runtime CONSUMES |
+| Build the runtime (OpenClaw/OpenArms/Hermes code) at /opt | /opt = knowledge; runtimes live in their own repos. /opt produces the **profile** + **spawn protocol**; the runtime CONSUMES |
 | Conflate Profile (configuration artifact) with Assistant (running instance) | Profile is the spec; Assistant is the spawned process. Schema discipline matters |
 | Build a single mega-profile for all projects | Operator said "one tailored to the needs" per project. One profile per project — each tailored |
 | Defer to 2026-06-15+ to start capturing credit | Use-it-or-lose-it begins billing-cycle-after-2026-06-15. Each unused month = $200 expired |
@@ -142,8 +142,10 @@ Build per-project assistant configurations / profiles — one per repo, tailored
 
 ## Relationships
 
-- IMPLEMENTS: [[2026-05-09-operator-directive-per-project-assistant-configs-spawn-openclaw-openarms-hermess-and-anthropic-programmatic-budget-policy-research|Operator directive 2026-05-09]]
+- IMPLEMENTS: [[2026-05-09-operator-directive-per-project-assistant-configs-spawn-openclaw-openarms-hermess-and-anthropic-programmatic-budget-policy-research|Operator directive 2026-05-09 turn 1]]
+- IMPLEMENTS: [[2026-05-09-operator-directive-hermes-clarification-information-surfacing-before-public-obsidian-pull-from-frontier-stay-independent-classify-existing-approaches|Operator directive 2026-05-09 turn 2]] — frontier-pulling + classify-existing-approaches + Hermes clarification (Hermes confirmed as real CLI per Multica evidence)
 - BUILDS ON: [[src-anthropic-programmatic-credit-pool-policy-change-2026-06-15|Anthropic Programmatic Credit Pool Policy Synthesis]] — the research evidence + value-at-risk frame
+- BUILDS ON: [[assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09|Comparison — Assistant Platforms & Frameworks Frontier]] — empirical inputs from Claude OS / Obsidian PM / Multica / OCMC; Hermes confirmed as real agent-CLI runtime via Multica's supported-CLI list
 - COMPLEMENTS: [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Lesson — Anti-Vendor-Lock-In as empirical claim]] — Profile design preserves runtime-agnosticism, supporting future routing to non-Anthropic
 - COMPLEMENTS: [[post-anthropic-self-autonomous-stack|Milestone — Post-Anthropic Self-Autonomous Stack]] — strategic alignment with reducing Anthropic dependency
 - RELATES TO: [[custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis|Custom-Tailored Model Group Concept]] — Profile-driven routing can target this once it crystallizes
@@ -151,8 +153,10 @@ Build per-project assistant configurations / profiles — one per repo, tailored
 
 ## Backlinks
 
-[[Operator directive 2026-05-09]]
+[[Operator directive 2026-05-09 turn 1]]
+[[Operator directive 2026-05-09 turn 2]]
 [[Anthropic Programmatic Credit Pool Policy Synthesis]]
+[[Comparison — Assistant Platforms & Frameworks Frontier]]
 [[Lesson — Anti-Vendor-Lock-In as empirical claim]]
 [[Milestone — Post-Anthropic Self-Autonomous Stack]]
 [[custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis|Custom-Tailored Model Group Concept]]

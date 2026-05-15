@@ -1,5 +1,5 @@
 ---
-title: "T078 — Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermess variants)"
+title: "T078 — Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermes variants)"
 type: task
 domain: backlog
 status: draft
@@ -34,7 +34,7 @@ tags: [task, "T078", spawn-protocol, generic-agent-sdk, runtime-binding, "2026-0
 
 ## Summary
 
-Author the first spawn protocol — for the generic Claude Agent SDK runtime (including `claude -p` CLI, GitHub Actions, and any SDK-compatible third-party app per Anthropic's 2026-06-15 credit pool definition). The protocol documents how a Per-Project Assistant Profile is consumed to instantiate a running assistant on this runtime: read Profile → render system prompt + tool list → invoke Agent SDK with composed args. Once this is operable, the /opt Profile (T075) can be spawned for the first time — closing the loop from Profile → Assistant. Subsequent spawn protocols (OpenClaw, OpenArms, Hermess) follow this template.
+Author the first spawn protocol — for the generic Claude Agent SDK runtime (including `claude -p` CLI, GitHub Actions, and any SDK-compatible third-party app per Anthropic's 2026-06-15 credit pool definition). The protocol documents how a Per-Project Assistant Profile is consumed to instantiate a running assistant on this runtime: read Profile → render system prompt + tool list → invoke Agent SDK with composed args. Once this is operable, the /opt Profile (T075) can be spawned for the first time — closing the loop from Profile → Assistant. Subsequent spawn protocols (OpenClaw, OpenArms, Hermes) follow this template.
 
 ## Done When
 

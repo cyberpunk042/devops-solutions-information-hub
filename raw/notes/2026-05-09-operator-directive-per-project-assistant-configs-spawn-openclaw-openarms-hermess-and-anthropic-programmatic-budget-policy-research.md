@@ -1,5 +1,5 @@
 ---
-title: "2026-05-09 — Operator directive: per-project assistant configurations/profiles to spawn OpenClaw/OpenArms/Hermess; research Anthropic -p flag programmatic-use credit/budget policy change; plan Epic + tasks + documents"
+title: "2026-05-09 — Operator directive: per-project assistant configurations/profiles to spawn OpenClaw/OpenArms/Hermes; research Anthropic -p flag programmatic-use credit/budget policy change; plan Epic + tasks + documents"
 type: note
 note_type: directive
 domain: cross-domain
@@ -19,7 +19,7 @@ tags: [operator-directive, sacrosanct, verbatim, "2026-05-09", per-project-assis
 ## Verbatim (operator, sacrosanct)
 
 > "continue. we need to finish what is on the table and then:
-> Now repos / projects will have assistants configurations / profiles.. e.g. in the knowledge/information-hub we will have one taillored to the needs. the goal is to be able to use those to spawn an OpenClaw or OpenArms or Hermess and whatever and have high quality definitions and features. I think Anthropic changed that the -p option which was our workaround to not be treated as programmatical is now counted as programmatic use and now also considered credit budget but at the same time now they would give each month the equivalent of the month of budget in token for the programmatic uses ? I think thats what I read. so on max x20 its equivalent of 240$ lost if not used with something like such Assistant or our advanced systems which are not finished. but we can confirm all that, do our research. record what I said, plan what is needed and create all the neeed tasks, Epics and documents."
+> Now repos / projects will have assistants configurations / profiles.. e.g. in the knowledge/information-hub we will have one taillored to the needs. the goal is to be able to use those to spawn an OpenClaw or OpenArms or Hermess [operator typo — clarified 2026-05-09 as Hermes (Greek messenger god)] and whatever and have high quality definitions and features. I think Anthropic changed that the -p option which was our workaround to not be treated as programmatical is now counted as programmatic use and now also considered credit budget but at the same time now they would give each month the equivalent of the month of budget in token for the programmatic uses ? I think thats what I read. so on max x20 its equivalent of 240$ lost if not used with something like such Assistant or our advanced systems which are not finished. but we can confirm all that, do our research. record what I said, plan what is needed and create all the neeed tasks, Epics and documents."
 
 ## Decomposition
 
@@ -35,8 +35,8 @@ tags: [operator-directive, sacrosanct, verbatim, "2026-05-09", per-project-assis
 - Example: this project (`knowledge/information-hub` — the /opt second-brain research wiki) will have a tailored profile
 
 ### C — Profiles spawn ecosystem-project instances
-- "the goal is to be able to use those to spawn an OpenClaw or OpenArms or Hermess and whatever"
-- Profiles produce **spawnable assistant instances** of: OpenClaw, OpenArms, **Hermess** (NEW project name not previously surfaced in /opt — verify in sister-projects.yaml or operator-clarify), "and whatever" (extensible)
+- "the goal is to be able to use those to spawn an OpenClaw or OpenArms or Hermes and whatever"
+- Profiles produce **spawnable assistant instances** of: OpenClaw, OpenArms, **Hermes** (NEW project name not previously surfaced in /opt — verify in sister-projects.yaml or operator-clarify), "and whatever" (extensible)
 - The profile is the **source**; the assistant instance is the **product**
 
 ### D — Quality framing
@@ -75,7 +75,7 @@ tags: [operator-directive, sacrosanct, verbatim, "2026-05-09", per-project-assis
 | # | Action | Type | Status |
 |---|---|---|---|
 | 1 | Log this directive verbatim BEFORE acting (this file) | hard rule | ✅ done now |
-| 2 | Check if "Hermess" is a known sister project | clarification | pending |
+| 2 | Check if "Hermes" is a known sister project | clarification | pending |
 | 3 | Check operator-decision-queue.md to confirm "what is on the table" is closed | verification | pending |
 | 4 | Research Anthropic policy claims (E + F): -p flag billing, programmatic-use budget allowance, Max x20 plan details, $240 calculation derivation | research | pending |
 | 5 | Author source-synthesis(es) for the Anthropic policy findings | synthesis | pending |
@@ -88,9 +88,9 @@ tags: [operator-directive, sacrosanct, verbatim, "2026-05-09", per-project-assis
 
 ## No-conflate guard
 
-- **"assistants configurations / profiles"** — these are configuration/profile artifacts that define an assistant, NOT the assistant runtime itself. The runtime is OpenClaw / OpenArms / Hermess; the profile is the spec that the runtime consumes.
+- **"assistants configurations / profiles"** — these are configuration/profile artifacts that define an assistant, NOT the assistant runtime itself. The runtime is OpenClaw / OpenArms / Hermes; the profile is the spec that the runtime consumes.
 - **"in the knowledge/information-hub we will have one"** — singular "one" tailored to /opt's needs. Don't author multiple profiles per project; one profile per project that captures the project's needs comprehensively.
-- **"OpenClaw or OpenArms or Hermess and whatever"** — pluggable runtime list. The profile design must be runtime-agnostic enough to spawn ANY of these.
+- **"OpenClaw or OpenArms or Hermes and whatever"** — pluggable runtime list. The profile design must be runtime-agnostic enough to spawn ANY of these.
 - **"I think... I think thats what I read"** — operator-stated uncertainty. The Anthropic policy claims (E + F) are HYPOTHESES requiring research confirmation. Do NOT propagate as facts without verification.
 - **"240$ lost if not used"** — derived calculation under uncertainty; the actual $240 figure depends on the unconfirmed monthly-allowance policy. Frame as "if policy is X, then $Y/month at risk."
 - **"such Assistant or our advanced systems which are not finished"** — the per-project Assistant IS the operator's proposed remedy to capture the value-at-risk. The "our advanced systems which are not finished" = parallel in-flight work; don't conflate Assistant scope with that.

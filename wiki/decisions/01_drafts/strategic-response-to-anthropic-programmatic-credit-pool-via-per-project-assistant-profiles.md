@@ -29,7 +29,7 @@ tags: [decision, strategy, anthropic-policy, per-project-assistant, value-captur
 
 ## Summary
 
-In response to Anthropic's 2026-06-15 Programmatic Credit Pool policy — which introduces a $200/month metered, non-rolling credit for Max 20x subscribers for Claude Agent SDK + `claude -p` CLI + GitHub Actions + third-party Agent SDK apps — adopt a strategy of building **per-project Assistant Profiles** (runtime-agnostic configurations, one tailored to each repo) that spawn assistant instances on OpenClaw / OpenArms / Hermess / generic Agent-SDK consumers. Each instance consumes part of the programmatic credit on valuable per-project automation, converting use-it-or-lose-it credit into project value. Beyond credit capture, the Profile design preserves runtime-agnosticism — supporting future routing to local-AI (AICP), other-provider models (Kimi K2.6 via OpenRouter, Ollama Cloud), and custom-tailored model groups — keeping anti-vendor-lock-in mission alignment intact even while consuming Anthropic credit in the short term.
+In response to Anthropic's 2026-06-15 Programmatic Credit Pool policy — which introduces a $200/month metered, non-rolling credit for Max 20x subscribers for Claude Agent SDK + `claude -p` CLI + GitHub Actions + third-party Agent SDK apps — adopt a strategy of building **per-project Assistant Profiles** (runtime-agnostic configurations, one tailored to each repo) that spawn assistant instances on OpenClaw / OpenArms / Hermes / generic Agent-SDK consumers. Each instance consumes part of the programmatic credit on valuable per-project automation, converting use-it-or-lose-it credit into project value. Beyond credit capture, the Profile design preserves runtime-agnosticism — supporting future routing to local-AI (AICP), other-provider models (Kimi K2.6 via OpenRouter, Ollama Cloud), and custom-tailored model groups — keeping anti-vendor-lock-in mission alignment intact even while consuming Anthropic credit in the short term.
 
 ## Context
 
@@ -40,20 +40,20 @@ In response to Anthropic's 2026-06-15 Programmatic Credit Pool policy — which 
 > | **Trigger** | Anthropic 2026-06-15 Programmatic Credit Pool policy (see [[src-anthropic-programmatic-credit-pool-policy-change-2026-06-15|policy synthesis]]) |
 > | **Operator subscription** | Max 20x — $200/month programmatic credit allocation |
 > | **Use-it-or-lose-it** | Credits reset monthly; expire if unused; $2,400/year value-at-risk |
-> | **Operator directive (verbatim)** | *"the goal is to be able to use those [profiles] to spawn an OpenClaw or OpenArms or Hermess and whatever and have high quality definitions and features... so on max x20 its equivalent of 240$ lost if not used with something like such Assistant or our advanced systems which are not finished"* (2026-05-09) |
+> | **Operator directive (verbatim)** | *"the goal is to be able to use those [profiles] to spawn an OpenClaw or OpenArms or Hermes and whatever and have high quality definitions and features... so on max x20 its equivalent of 240$ lost if not used with something like such Assistant or our advanced systems which are not finished"* (2026-05-09) |
 > | **Time pressure** | Each unused billing cycle after 2026-06-15 loses $200 |
 > | **Strategic alignment constraint** | Must NOT violate [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|anti-vendor-lock-in mission]] — profiles must remain runtime-agnostic |
 > | **Quality bar** | Operator-stated "high quality definitions and features" — profiles must follow rigorous schema, not improvised configs |
 
 ## Decision
 
-**Adopt Per-Project Assistant Profiles as the value-capture mechanism** for Anthropic's 2026-06-15 Programmatic Credit Pool ($200/month at Max 20x). Build one tailored Profile per project (starting with /opt second-brain as the canonical example), spawn runtime-agnostic instances on OpenClaw / OpenArms / Hermess / generic Agent-SDK consumers, and use the spawned instances to consume the programmatic credit on valuable per-project automation. This is Option A from the alternatives below; phased delivery puts Phase 1+2 on track to be operable before 2026-06-15 to start capturing credit on the first billing cycle.
+**Adopt Per-Project Assistant Profiles as the value-capture mechanism** for Anthropic's 2026-06-15 Programmatic Credit Pool ($200/month at Max 20x). Build one tailored Profile per project (starting with /opt second-brain as the canonical example), spawn runtime-agnostic instances on OpenClaw / OpenArms / Hermes / generic Agent-SDK consumers, and use the spawned instances to consume the programmatic credit on valuable per-project automation. This is Option A from the alternatives below; phased delivery puts Phase 1+2 on track to be operable before 2026-06-15 to start capturing credit on the first billing cycle.
 
 ## Alternatives
 
 ### Option A — Per-Project Assistant Profiles (RECOMMENDED)
 
-Build one tailored Profile per project; spawn instances on multiple runtimes (OpenClaw, OpenArms, Hermess, generic Agent SDK); each instance consumes programmatic credit on valuable per-project automation.
+Build one tailored Profile per project; spawn instances on multiple runtimes (OpenClaw, OpenArms, Hermes, generic Agent SDK); each instance consumes programmatic credit on valuable per-project automation.
 
 **Pros**:
 - Captures the $200/month credit directly (each spawned instance uses Agent SDK = drains the credit pool)
@@ -95,7 +95,7 @@ Build one profile that handles all programmatic automation across all projects.
 - Reduces specialization value (each project has different needs)
 - Single-profile architecture is harder to evolve without breaking dependent consumers
 
-### Option D — Build only the runtimes (OpenClaw / OpenArms / Hermess), no profile layer
+### Option D — Build only the runtimes (OpenClaw / OpenArms / Hermes), no profile layer
 
 Skip the profile abstraction; configure each runtime directly per project.
 
@@ -104,7 +104,7 @@ Skip the profile abstraction; configure each runtime directly per project.
 
 **Cons**:
 - Operator explicitly named "configurations / profiles" as the abstraction
-- Loses reusability — config in OpenClaw repo not portable to Hermess
+- Loses reusability — config in OpenClaw repo not portable to Hermes
 - Violates runtime-agnosticism principle
 
 ## Recommendation
@@ -116,14 +116,14 @@ Skip the profile abstraction; configure each runtime directly per project.
 | Phase 1 (Document — 2 weeks) | by 2026-05-23 | Profile pattern + schema design + /opt example + strategic decision (this page) + spawn protocol design |
 | Phase 2 (Implement — 2 weeks) | by 2026-06-08 | /opt profile authored · 1 spawn protocol operable (generic Agent SDK or OpenClaw) · profile template + scaffold tool |
 | Phase 3 (Test — 1 week) | by 2026-06-15 | First Assistant instance spawned · `claude -p` consumption observed against $200 credit (cycle starts 2026-06-15) |
-| Phase 4 (Cross-project — ongoing) | 2026-06 → 2026-09 | One profile per sister project (5 projects); spawn protocols for OpenArms, Hermess, etc. |
+| Phase 4 (Cross-project — ongoing) | 2026-06 → 2026-09 | One profile per sister project (5 projects); spawn protocols for OpenArms, Hermes, etc. |
 
 ## Rationale
 
 The recommendation flows from four constraints layered together:
 
 1. **Use-it-or-lose-it asymmetry** (Anthropic policy) — $200/month evaporates if unused; doing nothing = $2,400/year sunk loss
-2. **Operator-stated direction** (sacrosanct) — *"the goal is to be able to use those to spawn an OpenClaw or OpenArms or Hermess and whatever and have high quality definitions and features"* — operator explicitly named Profiles as the abstraction
+2. **Operator-stated direction** (sacrosanct) — *"the goal is to be able to use those to spawn an OpenClaw or OpenArms or Hermes and whatever and have high quality definitions and features"* — operator explicitly named Profiles as the abstraction
 3. **Anti-vendor-lock-in mission** — Profiles must remain runtime-agnostic to preserve future routing to local-AI / other-providers / custom-tailored model groups; this rules out Option D (runtime-coupled config)
 4. **Per-project tailoring** — operator-stated *"tailored to the needs"* per project; this rules out Option C (mega-profile)
 
@@ -135,7 +135,7 @@ Phase 1+2 delivery before 2026-06-15 is the recommended cadence because the firs
 |---|---|---|
 | Implementation speed vs design rigor | Lean toward rigor | Operator-stated "high quality definitions and features" |
 | Coverage breadth (all projects fast) vs depth (/opt example deep) | Depth-first | /opt as canonical example → projects follow with pattern in hand |
-| Runtime support (many runtimes) vs runtime support (one done well) | One-done-well first | Generic Agent SDK + OpenClaw first; OpenArms, Hermess, others follow |
+| Runtime support (many runtimes) vs runtime support (one done well) | One-done-well first | Generic Agent SDK + OpenClaw first; OpenArms, Hermes, others follow |
 | Profile schema flexibility vs strict validation | Strict validation | Quality bar requires schema enforcement; flexibility added later via versioning |
 
 ## Reversibility
@@ -162,7 +162,7 @@ Beyond Anthropic's policy (which IS the trigger), this decision has soft depende
 ## Constraints
 
 - **Operator-territory items** (not /opt scope):
-  - Hermess identity clarification (operator-decision)
+  - Hermes identity — ✅ RESOLVED 2026-05-09 (Greek messenger god, operator-confirmed)
   - Max plan tier confirmation (operator-decision)
   - Actual spawning + running of Assistants (runtime-territory, lives in runtime repos)
   - Credit pool monitoring at Anthropic billing dashboard (operator-territory)
@@ -178,7 +178,7 @@ Beyond Anthropic's policy (which IS the trigger), this decision has soft depende
 
 | # | Decision | Block on | Recommendation |
 |---|---|---|---|
-| **D1** | Hermess clarification — typo for Hermes, or new project name? | M004 + M006 in E024 | Operator-clarify; if new project, add to `sister-projects.yaml` |
+| ~~**D1**~~ | ~~Hermes clarification~~ — ✅ **RESOLVED 2026-05-09**: Greek messenger god (original "Hermess" was operator typo). Whether the Hermes repo exists or is planned is a separate question. | (no longer blocking) | None |
 | **D2** | Plan tier confirmation — Max 5x or Max 20x? ($100 or $200) | Sizing the value-capture mechanism | Confirm Max 20x ($200/month) per the operator's 2026-05-09 directive context |
 | **D3** | Timeline pressure — should Phase 1+2 hit 2026-06-15 effective date? | Implementation pacing | Recommendation: YES if value-capture matters short-term; flex if other priorities (root-ghostproxy + AVX512) take precedence |
 | **D4** | Quality bar specifics — concrete success criteria beyond "schema passes" | Profile validation rules | Suggested: profile passes `pipeline post`; spawn protocol produces runnable instance; instance has measurable per-month value-output |

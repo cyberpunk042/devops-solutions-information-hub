@@ -39,7 +39,7 @@ All planned work, organized by milestones, epics, modules, and tasks.
 | E021 | [E021 — New Source Ingestion — 10-15 Sources Through Full Pipeline](epics/milestone-v2/e021-new-source-ingestion-10-15-sources-through-full-pipeline.md) | P1 | active | 80 |
 | E022 | [E022 — Context-Aware Gateway Orientation and Task Routing](epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing.md) | P1 | active | 95 |
 | E023 | [E023 — Gateway-Wide Output Contract Audit](epics/milestone-v2/e023-gateway-wide-output-contract-audit.md) | P2 | draft | 5 |
-| E024 | [E024 — Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermess)](epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn.md) | P1 | draft | 15 |
+| E024 | [E024 — Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermes)](epics/milestone-v2/e024-per-project-assistant-configurations-to-capture-programmatic-credit-and-enable-ecosystem-spawn.md) | P1 | draft | 15 |
 | E001 | [Local Inference Engine (Subsystem 3)](epics/pre-milestone/E001-local-inference-engine.md) | P1 | draft | 10 |
 | E002 | [Ecosystem Integration Interfaces](epics/pre-milestone/E002-ecosystem-integration.md) | P2 | draft | 15 |
 | E003 | [Artifact Type System](epics/pre-milestone/E003-artifact-type-system.md) | P0 | active | 55 |
