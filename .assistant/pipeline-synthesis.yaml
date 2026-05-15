@@ -35,6 +35,7 @@ job: "Pipeline Synthesis: raw → wiki page (still not at end of pipeline)"
 focus: "Synthesize ingested information still not at the end of the pipeline"
 runnable_24_7: true
 owner: operator
+workspace_mode: shared    # shared | worktree | own-workspace — assistant works directly in the project folder, same git tree as operator
 
 # -----------------------------------------------------------------------------
 # 1. Identity

@@ -34,6 +34,7 @@ job: "Continuous Research"
 focus: "Keep models and technology-vision current"
 runnable_24_7: true
 owner: operator
+workspace_mode: shared    # shared | worktree | own-workspace — assistant works directly in the project folder, same git tree as operator
 
 # -----------------------------------------------------------------------------
 # 1. Identity

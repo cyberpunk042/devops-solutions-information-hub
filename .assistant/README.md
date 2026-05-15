@@ -55,6 +55,29 @@ Operator-doctrinal 2026-05-09 (sacrosanct): *"A PROFILE IS WAY MORE THAN JUST SE
 
 ---
 
+## Workspace modes (`workspace_mode:` in the Profile YAML)
+
+Every Profile declares a `workspace_mode:` that determines where the running assistant operates relative to the project tree. Set in `.assistant/<name>.yaml`; `assistant install` materializes the workspace + overrides the vendor config's `workspace:` path to match.
+
+| Mode | Where the assistant works | Operator sees writes live? | Git isolation | Best for |
+|---|---|---|---|---|
+| **`shared`** | The project folder itself (`~/devops-solutions-information-hub`) — same files, same `.git`, same branch as operator | YES — files appear as the assistant writes them | NONE — assistant commits to the operator's current branch | Live observable work — synthesis, research surfacing, ingestion — where operator wants to see + correct in real time |
+| **`worktree`** | `git worktree add ~/.openclaw/agents/<name>/worktree` on its own branch `assistant/<name>` (shared `.git`, separate working tree) | NO — writes land in the worktree, invisible until merged back | YES — assistant branch separate from operator's | Longer autonomous runs without interleaving operator's work; `git merge assistant/<name>` when ready |
+| **`own-workspace`** | A fully separate clone at `~/.openclaw/agents/<name>/workspace` | NO — separate repo entirely | FULL — sync via `git push` / `git pull` | Remote / sandboxed / untrusted contexts where full isolation is required |
+
+**Listing modes**: `bin/assistant modes` prints all 3 with tradeoffs.
+
+**Switching mode for an existing Profile**: edit `workspace_mode:` in `.assistant/<name>.yaml`, then re-run `bin/assistant install <name>` (idempotent; re-materializes workspace + overrides agent entry). For non-shared → other transitions, optionally `bin/assistant uninstall <name> --remove-workspace` first to clean up the prior worktree/clone.
+
+**Current Profiles** (this project):
+
+| Profile | `workspace_mode` | Workspace path |
+|---|---|---|
+| `continuous-research` | `shared` | `~/devops-solutions-information-hub/` |
+| `pipeline-synthesis` | `shared` | `~/devops-solutions-information-hub/` |
+
+---
+
 ## Complete lifecycle commands
 
 All commands have THREE invocation paths (operator preference):
@@ -88,9 +111,9 @@ All commands have THREE invocation paths (operator preference):
 
 | Stage | What | Mutates | Skips if... |
 |---|---|---|---|
-| **[1/6]** | Validate Profile YAML | (read-only) | profile file missing → error |
+| **[1/6]** | Validate Profile YAML + resolve `workspace_mode` + materialize workspace (`git worktree add` for `worktree` / `git clone` for `own-workspace`; no-op for `shared`) | `~/.openclaw/agents/<name>/worktree` or `/workspace` (only if non-shared) | profile file missing → error; workspace already exists → idempotent skip |
 | **[2/6]** | Validate vendor config (OpenClaw default) | (read-only) | no vendor file → warn + `--no-openclaw` proceeds |
-| **[3/6]** | Merge agent entry into `~/.openclaw/openclaw.json` agents.list[] | `~/.openclaw/openclaw.json` (writes JSON) | `--dry-run` to preview |
+| **[3/6]** | Merge agent entry into `~/.openclaw/openclaw.json` agents.list[] — **agent's `workspace` field is overridden with the workspace_mode-resolved path**, and `_workspace_mode` is stamped on the entry for status reporting | `~/.openclaw/openclaw.json` (writes JSON) | `--dry-run` to preview |
 | **[4/6]** | Register per-profile CRON jobs | (reads `.assistant/<name>.cron.yaml`) | no cron file → skipped |
 | **[5/6]** | Install systemd user unit (reboot persistence) | `~/.config/systemd/user/assistant-<name>.service` | systemctl absent → skipped |
 | **[6/6]** | Wire detected surfaces | (reads `.assistant/_global/surfaces.yaml`) | no surfaces file → skipped |

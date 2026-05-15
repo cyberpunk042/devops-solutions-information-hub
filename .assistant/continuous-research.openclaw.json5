@@ -38,9 +38,15 @@
 {
   // --- Identity (Profile.identity → OpenClaw id + name + identity) ---
   id: "continuous-research",                              // stable identifier
-  name: "Continuous Research",                       // display name
-  default: false,                                          // not the default
-  workspace: "~/devops-solutions-information-hub",         // this project's repo root
+  name: "Continuous Research",                            // display name
+  default: false,                                         // not the default
+
+  // --- Workspace (Profile.workspace_mode → OpenClaw workspace path) ---
+  // The Profile YAML's `workspace_mode:` (shared | worktree | own-workspace)
+  // determines which path lands here at install time. The static value below
+  // is the shared-mode default; `assistant install` overrides it per the
+  // Profile's workspace_mode. See `assistant modes` for tradeoffs.
+  workspace: "~/devops-solutions-information-hub",        // shared-mode default (the project folder)
   agentDir: "~/.openclaw/agents/continuous-research/agent",
 
   identity: {

@@ -92,6 +92,72 @@ OPENCLAW_CONFIG = Path.home() / ".openclaw" / "openclaw.json"
 
 VENDORS = ("openclaw", "multica", "claude-code-cli-p", "hermes", "opencode", "claude-os")
 
+# Workspace modes — declared in Profile YAML as `workspace_mode: <mode>`.
+# Determines where the assistant operates relative to the project tree.
+WORKSPACE_MODES = {
+    "shared": {
+        "description": "Assistant works directly in the project folder (same files, same git tree, same branch as operator).",
+        "writes_visible_immediately": True,
+        "git_isolation": False,
+        "best_for": "Live observable work — synthesis, research surfacing, ingestion — where operator wants to see + correct in real time.",
+    },
+    "worktree": {
+        "description": "Assistant works in a `git worktree add` directory under ~/.openclaw/agents/<profile>/worktree — shared .git, separate working tree, separate branch.",
+        "writes_visible_immediately": False,
+        "git_isolation": True,
+        "best_for": "Longer autonomous runs without interleaving operator's work; merge back when ready.",
+    },
+    "own-workspace": {
+        "description": "Assistant works in a fully separate clone at ~/.openclaw/agents/<profile>/workspace. Sync via git push/pull.",
+        "writes_visible_immediately": False,
+        "git_isolation": True,
+        "best_for": "Remote / sandboxed / untrusted contexts where full isolation is required.",
+    },
+}
+
+
+def compute_workspace_path(name: str, mode: str) -> Path:
+    """Return the absolute workspace path for the given Profile + mode."""
+    if mode == "shared":
+        return PROJECT_ROOT
+    elif mode == "worktree":
+        return Path.home() / ".openclaw" / "agents" / name / "worktree"
+    elif mode == "own-workspace":
+        return Path.home() / ".openclaw" / "agents" / name / "workspace"
+    else:
+        raise ValueError(f"Unknown workspace_mode: {mode}. Valid: {sorted(WORKSPACE_MODES.keys())}")
+
+
+def ensure_workspace(name: str, mode: str, dry_run: bool = False) -> Path:
+    """Materialize the workspace per mode. Idempotent. Returns the absolute path."""
+    path = compute_workspace_path(name, mode)
+    if mode == "shared":
+        return path  # project folder already exists
+    if path.exists():
+        ok(f"workspace already exists at {path}")
+        return path
+    if dry_run:
+        info(f"DRY RUN — would create workspace at {path} ({mode} mode)")
+        return path
+    if mode == "worktree":
+        path.parent.mkdir(parents=True, exist_ok=True)
+        branch = f"assistant/{name}"
+        info(f"Creating git worktree at {path} on branch {branch}")
+        # Check if branch exists; if not, create from HEAD
+        proc = run(["git", "-C", str(PROJECT_ROOT), "rev-parse", "--verify", branch], check=False)
+        if proc.returncode != 0:
+            info(f"Branch {branch} does not exist; creating from HEAD")
+            run(["git", "-C", str(PROJECT_ROOT), "worktree", "add", "-b", branch, str(path)], check=False)
+        else:
+            run(["git", "-C", str(PROJECT_ROOT), "worktree", "add", str(path), branch], check=False)
+        ok(f"worktree ready at {path}")
+    elif mode == "own-workspace":
+        path.parent.mkdir(parents=True, exist_ok=True)
+        info(f"Cloning {PROJECT_ROOT} into {path}")
+        run(["git", "clone", str(PROJECT_ROOT), str(path)], check=False)
+        ok(f"own workspace ready at {path}")
+    return path
+
 # ANSI for stage explanations (operator: "everything must be explained to me at each stage properly")
 BOLD = "\033[1m"
 DIM = "\033[2m"
@@ -249,6 +315,15 @@ def cmd_install(args: argparse.Namespace) -> int:
         return 1
     ok(f"Profile valid: {profile['profile_name']} — {profile['job']}")
 
+    # 1b. Resolve workspace_mode + materialize workspace
+    workspace_mode = profile.get("workspace_mode", "shared")
+    if workspace_mode not in WORKSPACE_MODES:
+        err(f"Invalid workspace_mode '{workspace_mode}'. Valid: {sorted(WORKSPACE_MODES.keys())}")
+        return 1
+    ok(f"workspace_mode: {workspace_mode} — {WORKSPACE_MODES[workspace_mode]['description']}")
+    workspace_path = ensure_workspace(name, workspace_mode, dry_run=args.dry_run)
+    ok(f"workspace resolved: {workspace_path}")
+
     # 2. validate openclaw vendor config
     stage("[2/6] Validate OpenClaw vendor config")
     vp = vendor_path(name, "openclaw", "json5")
@@ -267,16 +342,24 @@ def cmd_install(args: argparse.Namespace) -> int:
     # 3. merge into ~/.openclaw/openclaw.json
     if vp.exists() and not args.no_openclaw:
         stage("[3/6] Merge into ~/.openclaw/openclaw.json")
+        # Override the agent's workspace field with the workspace_mode-resolved path.
+        # This is what makes workspace_mode actually take effect — the vendor config's
+        # static `workspace:` value is replaced by the live mode-derived path.
+        previous_ws = agent.get("workspace")
+        agent["workspace"] = str(workspace_path)
+        agent["_workspace_mode"] = workspace_mode
+        if previous_ws and previous_ws != str(workspace_path):
+            info(f"workspace override: {previous_ws} → {workspace_path} ({workspace_mode} mode)")
         cfg = load_openclaw_config()
         cfg.setdefault("agents", {}).setdefault("list", [])
         agent_id = agent["id"]
         existing_idx = next((i for i, a in enumerate(cfg["agents"]["list"]) if a.get("id") == agent_id), -1)
         if existing_idx >= 0:
             cfg["agents"]["list"][existing_idx] = agent
-            ok(f"Updated existing agent entry (idx={existing_idx})")
+            ok(f"Updated existing agent entry (idx={existing_idx}, workspace_mode={workspace_mode})")
         else:
             cfg["agents"]["list"].append(agent)
-            ok(f"Appended new agent entry (now {len(cfg['agents']['list'])} agent(s))")
+            ok(f"Appended new agent entry (now {len(cfg['agents']['list'])} agent(s), workspace_mode={workspace_mode})")
         if args.dry_run:
             info("DRY RUN — not writing ~/.openclaw/openclaw.json")
         else:
@@ -429,9 +512,19 @@ def cmd_status(args: argparse.Namespace) -> int:
     for name in names:
         print()
         print(f"{BOLD}{name}{RESET}")
-        # 1. Profile YAML present?
+        # 1. Profile YAML present + workspace_mode resolved?
         if profile_path(name).exists():
             ok(f"Profile YAML: present ({profile_path(name).name})")
+            profile = load_yaml(profile_path(name))
+            ws_mode = profile.get("workspace_mode", "shared")
+            ws_path = compute_workspace_path(name, ws_mode) if ws_mode in WORKSPACE_MODES else None
+            if ws_mode in WORKSPACE_MODES:
+                ok(f"workspace_mode: {ws_mode}")
+                exists = ws_path and ws_path.exists()
+                marker = "exists" if exists else "NOT materialized (run install)"
+                ok(f"workspace path: {ws_path} ({marker})")
+            else:
+                err(f"workspace_mode INVALID: {ws_mode} (must be one of {sorted(WORKSPACE_MODES.keys())})")
         else:
             err("Profile YAML: missing")
             continue
@@ -442,9 +535,11 @@ def cmd_status(args: argparse.Namespace) -> int:
         else:
             warn("OpenClaw vendor config: absent")
         # 3. Installed in ~/.openclaw/openclaw.json?
-        installed = any(a.get("id") == name for a in agents)
-        if installed:
-            ok("Installed in ~/.openclaw/openclaw.json: YES")
+        installed_agent = next((a for a in agents if a.get("id") == name), None)
+        if installed_agent:
+            installed_mode = installed_agent.get("_workspace_mode", "(unknown)")
+            installed_ws = installed_agent.get("workspace", "(unknown)")
+            ok(f"Installed in ~/.openclaw/openclaw.json: YES (workspace_mode={installed_mode}, workspace={installed_ws})")
         else:
             warn("Installed in ~/.openclaw/openclaw.json: NO")
         # 4. systemd unit?
@@ -602,6 +697,9 @@ def cmd_surfaces(args: argparse.Namespace) -> int:
 def cmd_uninstall(args: argparse.Namespace) -> int:
     name = args.profile
     stage(f"Uninstall {name} (preserves Profile YAML + vendor configs)")
+    # Determine workspace_mode from Profile (need it to decide whether to remove worktree/clone)
+    profile = load_yaml(profile_path(name)) if profile_path(name).exists() else {}
+    ws_mode = profile.get("workspace_mode", "shared")
     # Remove from openclaw config
     cfg = load_openclaw_config()
     agents = cfg.get("agents", {}).get("list", [])
@@ -622,7 +720,43 @@ def cmd_uninstall(args: argparse.Namespace) -> int:
         unit_file.unlink()
         ok(f"Removed {unit_file}")
         run(["systemctl", "--user", "daemon-reload"], check=False)
+    # Workspace cleanup — only for non-shared modes (shared mode = project folder, NEVER delete)
+    if ws_mode == "shared":
+        info("workspace_mode=shared — project folder is the workspace; NOT touching it")
+    elif ws_mode == "worktree":
+        ws_path = compute_workspace_path(name, ws_mode)
+        if ws_path.exists():
+            if args.remove_workspace:
+                info(f"Removing git worktree at {ws_path}")
+                run(["git", "-C", str(PROJECT_ROOT), "worktree", "remove", "--force", str(ws_path)], check=False)
+                ok(f"git worktree removed")
+            else:
+                info(f"worktree preserved at {ws_path} (use --remove-workspace to delete)")
+    elif ws_mode == "own-workspace":
+        ws_path = compute_workspace_path(name, ws_mode)
+        if ws_path.exists():
+            if args.remove_workspace:
+                info(f"Removing own-workspace clone at {ws_path}")
+                shutil.rmtree(ws_path)
+                ok(f"clone removed")
+            else:
+                info(f"clone preserved at {ws_path} (use --remove-workspace to delete)")
     info("Profile YAML + vendor configs preserved at .assistant/ (not deleted)")
+    return 0
+
+
+def cmd_modes(_args: argparse.Namespace) -> int:
+    stage("Workspace modes (set in Profile YAML as `workspace_mode: <mode>`)")
+    for mode, spec in WORKSPACE_MODES.items():
+        print()
+        print(f"  {BOLD}{mode}{RESET}")
+        print(f"     {spec['description']}")
+        print(f"     writes visible to operator immediately: {spec['writes_visible_immediately']}")
+        print(f"     git isolation: {spec['git_isolation']}")
+        print(f"     best for: {spec['best_for']}")
+    print()
+    info("Switch a Profile's mode by editing `workspace_mode:` in .assistant/<profile>.yaml,")
+    info("then re-running `assistant install <profile>` to re-materialize the workspace.")
     return 0
 
 
@@ -689,7 +823,12 @@ def build_parser() -> argparse.ArgumentParser:
 
     sp = sub.add_parser("uninstall", help="Remove assistant install (keeps Profile)")
     sp.add_argument("profile")
+    sp.add_argument("--remove-workspace", action="store_true",
+                    help="For worktree/own-workspace modes, also delete the workspace directory.")
     sp.set_defaults(func=cmd_uninstall)
+
+    sp = sub.add_parser("modes", help="Show available workspace_mode values + tradeoffs")
+    sp.set_defaults(func=cmd_modes)
 
     return p
 

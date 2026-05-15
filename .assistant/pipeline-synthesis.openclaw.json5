@@ -36,7 +36,13 @@
   id: "pipeline-synthesis",                                  // stable identifier
   name: "Pipeline Synthesis",                                // display name
   default: false,
-  workspace: "~/devops-solutions-information-hub",
+
+  // --- Workspace (Profile.workspace_mode → OpenClaw workspace path) ---
+  // The Profile YAML's `workspace_mode:` (shared | worktree | own-workspace)
+  // determines which path lands here at install time. The static value below
+  // is the shared-mode default; `assistant install` overrides it per the
+  // Profile's workspace_mode. See `assistant modes` for tradeoffs.
+  workspace: "~/devops-solutions-information-hub",           // shared-mode default (the project folder)
   agentDir: "~/.openclaw/agents/pipeline-synthesis/agent",
 
   identity: {
