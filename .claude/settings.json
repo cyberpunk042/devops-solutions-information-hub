@@ -1,4 +1,6 @@
 {
+  "autoCompactEnabled": false,
+  "autoDreamEnabled": true,
   "permissions": {
     "allow": [
       "Bash(gh --version)",
@@ -81,7 +83,7 @@
       "Bash(.venv/bin/python -m tools.gateway query --page \"RLM Paper Deep Dive\")",
       "Bash(.venv/bin/python -m tools.gateway query --stage scaffold)",
       "Bash(.venv/bin/python -m tools.gateway query --chain feature-development)",
-      "Bash(.venv/bin/python -m tools.gateway query --page \"Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role \\(Post-Anthropic Mission, T-0 2026-04-27\\)\")",
+      "Bash(.venv/bin/python -m tools.gateway query --page \"Comparison — RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role \\(Post-Anthropic Mission, T-0 2026-04-27\\)\")",
       "Bash(.venv/bin/python -m tools.gateway query --page \"RLM-Qwen3-8B vs Qwen3.6-27B\")",
       "Bash(.venv/bin/python -m tools.gateway query --page \"Tier-0 Long-Context Candidate Comparison\")",
       "Bash(.venv/bin/python -m tools.view search \"RLM\")",
