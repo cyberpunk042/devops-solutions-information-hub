@@ -120,6 +120,13 @@ WORKSPACE_MODES = {
         "git_isolation": True,
         "best_for": "Remote / sandboxed / untrusted contexts where full isolation is required.",
     },
+    "cross_project_target": {
+        "description": "Workspace dir is isolated under ~/.openclaw/agents/<name>/workspace/ (OpenClaw scaffolds its own state there). The agent's tools target a DIFFERENT existing project specified by `target_project:` in the Profile YAML — not PROJECT_ROOT. Use for workers fixing a sister repo (e.g., root-ghostproxy-rollout writing to ~/root-ghostproxy/). The target project keeps its own git history; the worker stages via `git add` but NEVER commits (per R20). Uninstall NEVER touches the target project — only the isolated workspace dir.",
+        "writes_visible_immediately": True,
+        "git_isolation": False,
+        "best_for": "Cross-project worker fixing a target project whose backlog defines the work. The target has its own root docs + install.sh + wiki; the worker reads them and executes per-task fixes. Self-deprecating when the target works on its own.",
+        "requires_profile_field": "target_project",
+    },
 }
 
 
@@ -179,7 +186,14 @@ def translate_schedule(schedule: str) -> tuple[str, str] | None:
 
 
 def compute_workspace_path(name: str, mode: str) -> Path:
-    """Return the absolute OpenClaw workspace path (NEVER the project root — see safety note)."""
+    """Return the absolute OpenClaw workspace path (NEVER the project root — see safety note).
+
+    For `cross_project_target`, the workspace dir follows the same pattern as `shared`
+    (isolated empty dir under ~/.openclaw/agents/<name>/workspace/). The DIFFERENCE
+    is where the agent's tools TARGET — see `compute_operating_root(mode, profile)`.
+    Critical: the workspace dir is OpenClaw's scratch space; the target project is
+    NOT the workspace and uninstall MUST NEVER delete it.
+    """
     base = Path.home() / ".openclaw" / "agents" / name
     if mode == "shared":
         return base / "workspace"
@@ -187,25 +201,76 @@ def compute_workspace_path(name: str, mode: str) -> Path:
         return base / "worktree"
     elif mode == "own-workspace":
         return base / "own-workspace"
+    elif mode == "cross_project_target":
+        return base / "workspace"
     else:
         raise ValueError(f"Unknown workspace_mode: {mode}. Valid: {sorted(WORKSPACE_MODES.keys())}")
 
 
-def compute_operating_root(mode: str) -> Path:
+def compute_operating_root(mode: str, profile: dict | None = None, name: str | None = None) -> Path | None:
     """Return the dir the agent's tools target (cwd for shell commands, MCP cwd, etc.).
 
     `shared` mode → PROJECT_ROOT (writes land in the project, visible to operator).
     `worktree` / `own-workspace` → the workspace dir itself (writes stay isolated).
+    `cross_project_target` → `profile.target_project` (writes land in a DIFFERENT existing repo).
+
+    Signature accepts optional `profile` + `name` so cross_project_target can read
+    `profile.target_project` (the path to the foreign repo) and worktree/own-workspace
+    can compute the workspace path. Returning None retains backward-compatible
+    "caller substitutes" semantics for the worktree/own-workspace fallthrough when
+    `name` is not provided.
     """
     if mode == "shared":
         return PROJECT_ROOT
-    # Worktree / own-workspace: operating root is the workspace dir itself
+    if mode == "cross_project_target":
+        if profile is None:
+            raise ValueError("cross_project_target requires the profile dict to read target_project")
+        target = profile.get("target_project")
+        if not target:
+            raise ValueError(
+                "cross_project_target requires `target_project:` in the Profile YAML "
+                "(absolute path to the foreign repo the worker writes to)"
+            )
+        target_path = Path(os.path.expanduser(str(target))).resolve()
+        return target_path
+    # worktree / own-workspace: operating root is the workspace dir itself
+    if name is not None:
+        return compute_workspace_path(name, mode)
     return None  # caller substitutes compute_workspace_path(name, mode)
 
 
-def ensure_workspace(name: str, mode: str, dry_run: bool = False) -> Path:
-    """Materialize the workspace per mode. Idempotent. Returns the absolute path."""
+def ensure_workspace(name: str, mode: str, dry_run: bool = False, profile: dict | None = None) -> Path:
+    """Materialize the workspace per mode. Idempotent. Returns the absolute path.
+
+    `profile` arg is optional for shared/worktree/own-workspace; REQUIRED for
+    cross_project_target so we can verify the foreign `target_project` exists +
+    is writable before install proceeds. Fail-fast: if target doesn't exist,
+    install aborts (better than installing an agent that will crash on first fire).
+    """
     path = compute_workspace_path(name, mode)
+    # cross_project_target: pre-verify the foreign target before touching workspace
+    if mode == "cross_project_target":
+        if profile is None:
+            raise ValueError("cross_project_target requires the profile dict to read target_project")
+        target = profile.get("target_project")
+        if not target:
+            raise ValueError(
+                "cross_project_target requires `target_project:` in the Profile YAML"
+            )
+        target_path = Path(os.path.expanduser(str(target))).resolve()
+        if not target_path.exists():
+            raise FileNotFoundError(
+                f"cross_project_target: target_project does not exist: {target_path}"
+            )
+        if not target_path.is_dir():
+            raise NotADirectoryError(
+                f"cross_project_target: target_project is not a directory: {target_path}"
+            )
+        if not os.access(target_path, os.W_OK):
+            raise PermissionError(
+                f"cross_project_target: target_project is not writable: {target_path}"
+            )
+        ok(f"target_project verified: {target_path} (exists, dir, writable)")
     if path.exists():
         ok(f"workspace already exists at {path}")
         return path
@@ -232,6 +297,12 @@ def ensure_workspace(name: str, mode: str, dry_run: bool = False) -> Path:
         info(f"Cloning {PROJECT_ROOT} into {path}")
         run(["git", "clone", str(PROJECT_ROOT), str(path)], check=False)
         ok(f"own workspace ready at {path}")
+    elif mode == "cross_project_target":
+        # Workspace dir is isolated empty (same as shared). The foreign target_project
+        # was verified above. OpenClaw scaffolds its own behavioral files in this dir;
+        # the agent's TOOLS target target_project (per compute_operating_root).
+        path.mkdir(parents=True, exist_ok=True)
+        ok(f"isolated workspace dir created at {path} (target: {profile.get('target_project')})")
     return path
 
 # ANSI for stage explanations (operator: "everything must be explained to me at each stage properly")
@@ -405,7 +476,19 @@ def materialize_workspace_files(profile: dict, workspace_path: Path) -> None:
     prompt_templates = profile.get("prompt_templates", {})
     success_criteria = profile.get("success_criteria", {})
     workspace_mode = profile.get("workspace_mode", "shared")
-    project_root_str = str(PROJECT_ROOT)
+    # For cross_project_target: operating root = profile.target_project (a DIFFERENT repo).
+    # For shared/worktree/own-workspace: operating root = PROJECT_ROOT or the workspace.
+    if workspace_mode == "cross_project_target":
+        try:
+            operating_root = compute_operating_root(workspace_mode, profile=profile, name=name)
+        except (ValueError, FileNotFoundError) as e:
+            # Profile authoring error — surface at render time so the operator sees it
+            # even if install validation was skipped (e.g., --no-openclaw flag).
+            warn(f"cross_project_target operating root resolution failed: {e}")
+            operating_root = PROJECT_ROOT
+    else:
+        operating_root = PROJECT_ROOT
+    project_root_str = str(operating_root)
 
     # ─── IDENTITY.md ──────────────────────────────────────────────────────
     identity_md = f"""# IDENTITY — {name}
@@ -1164,8 +1247,16 @@ def cmd_install(args: argparse.Namespace) -> int:
         err(f"Invalid workspace_mode '{workspace_mode}'. Valid: {sorted(WORKSPACE_MODES.keys())}")
         return 1
     ok(f"workspace_mode: {workspace_mode} — {WORKSPACE_MODES[workspace_mode]['description']}")
-    workspace_path = ensure_workspace(name, workspace_mode, dry_run=args.dry_run)
+    try:
+        workspace_path = ensure_workspace(name, workspace_mode, dry_run=args.dry_run, profile=profile)
+    except (ValueError, FileNotFoundError, NotADirectoryError, PermissionError) as e:
+        err(f"workspace materialization failed: {e}")
+        return 1
     ok(f"workspace resolved: {workspace_path}")
+    # cross_project_target: resolve operating root (where tools target) — distinct from workspace dir
+    if workspace_mode == "cross_project_target":
+        operating_root = compute_operating_root(workspace_mode, profile=profile, name=name)
+        ok(f"operating root (tools target): {operating_root}")
 
     # 2. validate openclaw vendor config
     stage("[2/6] Validate OpenClaw vendor config")

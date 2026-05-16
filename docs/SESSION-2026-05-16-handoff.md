@@ -336,8 +336,130 @@ When ready to install (operator's call when "other things" are done):
 - `raw/notes/2026-05-16-operator-directive-rgp-worker-quality-bar-sdd-tdd-sfif-augment-not-rewrite.md` — NEW; UNCOMMITTED
 - `docs/SESSION-2026-05-16-handoff.md` — THIS HANDOFF; UNCOMMITTED
 
+## Continuation — 2026-05-16 evening — Beyond the Initial Handoff
+
+> **Context recovery anchor.** This handoff was first written at ~17:00 ET when the v5 profile YAML was 1226 lines + cron/openclaw.json5 still stale v3 + design queue at 8 items (1 done, 7 pending). Between then and the compaction trigger, the operator authorized continuing ("good, continue. yes."). Most of the design queue was implemented in surgical Edits. This section captures everything done in the continuation so post-compaction pickup is clean.
+
+### Status of the 8-item design queue (refreshed)
+
+| # | Item | Initial handoff | Status now (evening 2026-05-16) | Key delta |
+|---|---|---|---|---|
+| 1 | Cron prompts rewrite | PENDING | ✅ **DONE** | 3 prompts replaced observer → worker /goal in `.assistant/root-ghostproxy-rollout.cron.yaml`. Each 5-7K chars: BOUND-TO refs + SACROSANCT invariants + WALK through 10 workflow steps + priority_order + anti-patterns + audit-anchor + budget. File 186 → 424 lines. |
+| 2 | OpenClaw config alignment | PENDING | ✅ **DONE** | 4 surgical Edits to `.assistant/root-ghostproxy-rollout.openclaw.json5`: (a) tools.deny removed `filesystem-write-root-ghostproxy` + added cross-project boundary list for OTHER sisters; (b) tools.allow added 7 target-project capabilities (write target / bash target / backlog / .claude-dir / agent-docs / install.sh / tools/) + git-stage; (c) systemPromptOverride replaced (v3 observer → v5 worker with multi-discipline competence frame + 12 core principles + 5 sacrosanct operator quotes verbatim); (d) subagents.allowAgents replaced (9 observer agents → 10 worker fleet matching profile YAML); (e) metadata bumped to _profile_version: 5 + _v5_rewritten + _augmentations_log. File 180 → 214 lines. |
+| 3 | Opus 1M context investigation | PENDING | ⚠️ **PATH A TESTED — INSUFFICIENT ALONE** | Tested Path A: `openclaw models aliases add opus-1m anthropic/claude-opus-4-7[1m]` → accepted (exit 0; alias registered at `~/.openclaw/openclaw.json`; backup at `.bak`). BUT `openclaw models list` still shows `Ctx 195k` for the variant — the bracket syntax is a NAME at OpenClaw's layer, not a context-window directive. `~/.claude/settings.json` is essentially empty (`{"effortLevel":"max"}`); the `[1m]` in operator's banner must be runtime-negotiated via `anthropic-beta` API header. **Path E (anthropic-beta header) identified as most likely real mechanism** — closest match to operator's intuition "add it at the start of a prompt and it will be transferred to the -p command". 6 investigation paths now documented in profile's `runtime_settings_verification.opus_1m_context_mode.investigation_paths_status` (A tested · B/C/D/E/F not yet) + 3 operator decision points surfaced (which path to pursue / where to set the flag / install at 195k baseline now or wait). |
+| 4 | Multi-discipline identity + 5 new subagents | PENDING | ✅ **DONE** | Profile YAML augmented: (a) `identity.tagline` extended with "Senior Software Architect + DevOps Engineer + FullStack Expert + PM Scrum Agile facilitator" framing; (b) NEW `identity.multi_discipline_competence_frame` section binding each discipline to specific epics/modules + subagents + principles_focus; (c) NEW `identity.operating_mode: "WORK MODE ALWAYS"` per operator-doctrine; (d) NEW `identity.24_7_recyclable` framing per operator "we can recycle it later or transfer it"; (e) 5 new subagent declarations appended to `subagents:` section with full purpose / when_to_use / tools / forbidden_tools / budget / style / output — `research_online`, `research_local`, `adr_author`, `regression_test_author`, `pm_scrum_facilitator`. Total subagents: 5 → 10. |
+| 5 | Anti-patterns for operator-prevention concerns | PENDING | ✅ **DONE** | 5 new anti-patterns appended to `anti_patterns:` directly mapping to operator's 2026-05-16 concerns ("Making such it will not freeze or be mindless or receive garbage or be too spammed or not poked enough or not directed well"): `mindless_execution` · `accept_garbage_input` · `cron_cadence_spam` · `poke_deficit` · `direction_deficit`. Each with description / detector / response / why. Total anti-patterns: 12 → 17. |
+| 6 | Runtime settings verification block | PENDING | ✅ **DONE** | `pre_launch_readiness.runtime_settings_verification` block added with: `opus_1m_context_mode` (6 paths + status + decision points) · `claude_cli_invocation_params` (model + thinking + reasoning + cache_retention + context_injection + heartbeat) · `sandbox_state` · `context_limits` (with 1M scaling guidance) · `auth_lifetime` (OAuth ~6h expiry; refresh path) · `proper_settings_attestation` (gate list). |
+| 7 | /load-brain Goldilocks remaster | DESIGNED | ✅ **DONE** | 5 surgical Edits to `.claude/commands/load-brain.md`: (a) Discipline section rules 2-4 reshape (offset-allowed on >500-line reference pages + reflection-checkpoint mandate + topic-args additive rule 7); (b) Argument modes table (default + deeper-on-topic, not replace); (c) Topic vocabulary table (annotated "In default?" column + new `methodology-profiles` + new `rules` topics + demoted-from-default markers); (d) The Tree section completely reshaped (13 levels → 7 levels + 3 inter-level REFLECTION blocks; 76 reads → ~42 reads; ~800K → ~500K tokens; END attestation refreshed with reflection-emitted flags + demoted-to-topic-arg inventory); (e) Composition section ~76 → ~42. File 342 → 333 lines. |
+| 8 | Reflection-enforcement hook (Phase 2) | DEFERRED | ⏸ **STILL DEFERRED** | Per design: command-text-as-program first; hook only if reflection-skipping recurs after `/load-brain` Goldilocks remaster ships. Defer until observed need. |
+
+**Net: 6 of 8 done; 1 partial (Path A tested, decision needed); 1 deferred.**
+
+### New artifacts this continuation
+
+| Path | Size | Purpose |
+|---|---|---|
+| `.assistant/_state/root-ghostproxy-rollout-operator-directives.md` | 4488 bytes | Operator's input channel (NEW). Structured slots: INSTALL: GO · BOOTSTRAP-EXECUTE: GO · SPRINT: ACTIVE / OFF · PRIORITY-OVERRIDE · CROSS-TIER-OVERRIDE · RESOLVE: <slug> · RETIRE: CONFIRMED · free-form section. Worker reads at step 0_operator_directives; appends `[!processed]` follow-ups; never overwrites operator text. |
+| `~/.openclaw/openclaw.json` (modified) | n/a | Operator-territory but updated by `openclaw models aliases add` — added alias `opus-1m → anthropic/claude-opus-4-7[1m]`. Backup at `~/.openclaw/openclaw.json.bak`. Alias is kept (harmless naming) even though it doesn't unlock 1M context alone. |
+
+### Files Modified — refreshed inventory
+
+```
+M .assistant/root-ghostproxy-rollout.yaml                                            # 480 → 1446 lines (v3 observer → v5 worker, 12 surgical augmentations across 2 batches)
+M .assistant/root-ghostproxy-rollout.cron.yaml                                       # 186 → 424 lines (v3 observer prompts → v5 worker /goal prompts; 3 jobs)
+M .assistant/root-ghostproxy-rollout.openclaw.json5                                  # 180 → 214 lines (v3 → v5; deny/allow flip + subagents + systemPromptOverride + metadata)
+M .assistant/_state/root-ghostproxy-rollout-inbox.md                                 # appended dry-run planning artifact
+M .claude/commands/load-brain.md                                                     # 342 → 333 lines (Goldilocks remaster: 13 levels → 7 + 3 reflection blocks)
+?? .assistant/_state/root-ghostproxy-rollout-operator-directives.md                  # NEW operator input channel
+?? docs/SESSION-2026-05-16-handoff.md                                                # THIS HANDOFF
+?? raw/notes/2026-05-16-operator-directive-why-rgp-not-working-on-200-plus-epics-tasks.md
+?? raw/notes/2026-05-16-operator-directive-rgp-profile-is-symptom-fix-the-actual-project-100-plus-issues.md
+?? raw/notes/2026-05-16-operator-directive-rgp-worker-quality-bar-sdd-tdd-sfif-augment-not-rewrite.md
+... plus other CR/CK artifacts from the morning arc (out of scope this evening)
+```
+
+State-modifying command run this evening (operator-territory but reversible):
+- `openclaw models aliases add opus-1m anthropic/claude-opus-4-7[1m]` — alias kept, backup at `~/.openclaw/openclaw.json.bak`
+
+### Path A test concrete commands + results (for post-compact verification)
+
+```bash
+# Command run:
+openclaw models aliases add opus-1m anthropic/claude-opus-4-7[1m]
+# Result: exit 0; "Config overwrite: /home/jfortin/.openclaw/openclaw.json (sha256 ... -> ..., backup=...)"; "Alias opus-1m -> anthropic/claude-opus-4-7[1m]"
+
+# Verify alias landed:
+openclaw models aliases list
+# Output: 3 aliases — opus, sonnet, opus-1m
+
+# Verify context window of new variant:
+openclaw models list | grep '4-7\[1m\]'
+# Output: anthropic/claude-opus-4-7[1m] | text | 195k | no | yes | configured,alias:opus-1m
+# ⚠️ THE Ctx COLUMN STILL SHOWS 195k — alias is just a name; doesn't unlock 1M context
+
+# Check ~/.claude/settings.json for clues about how operator's Claude Code banner shows [1m]:
+cat ~/.claude/settings.json
+# Output: {"effortLevel": "max"}  — empty of model/context settings
+
+# Check env vars:
+env | grep -iE "anthropic|claude|context|beta"
+# Output: CLAUDECODE=1 / CLAUDE_AGENT_SDK_VERSION=0.3.143 / CLAUDE_EFFORT=xhigh / CLAUDE_CODE_ENTRYPOINT=claude-vscode
+# ⚠️ No model or context-window env vars. The [1m] in operator's banner is set elsewhere (runtime-negotiated via anthropic-beta API header most likely).
+```
+
+### Decision points awaiting operator (post-compact)
+
+Surfaced in `pre_launch_readiness.runtime_settings_verification.opus_1m_context_mode.decision_required_from_operator`:
+
+1. **Which Opus 1M path to pursue?** Recommended: **Path E** (anthropic-beta header) since it matches the underlying API mechanism + closest to operator's "prompt prefix transferred to -p" intuition. Alternatives: Path B (direct model.primary), Path C (prompt-prefix /model slash command), Path D (~/.claude/settings.json default-model — broader scope; operator-territory edit), Path F (new params field in openclaw.json5).
+
+2. **If Path E confirmed, where to set the flag?**
+   - (a) `ANTHROPIC_BETA_FEATURES` env in systemd service unit (`~/.config/systemd/user/openclaw-gateway.service`)
+   - (b) New field in `.assistant/root-ghostproxy-rollout.openclaw.json5` (e.g., `params.betaFeatures: ["context-1m-2025-08-07"]` — needs schema verification)
+   - (c) Prompt-prefix per cron job per operator's intuition (test whether OpenClaw's spawn passes prompt through Claude Code's slash-parser)
+
+3. **Install at 195k baseline now OR wait for 1M?** The cron prompts + audit substrate + first-pick context all fit comfortably in 195k. 1M would benefit weekly-deep multi-task fires + cross-cluster cross-references. Operator decides whether 1M is blocking or post-install.
+
+Also gated:
+- **GO signal** in `.assistant/_state/root-ghostproxy-rollout-operator-directives.md` (placeholder ready with INSTALL: GO slot)
+- **v3 uninstall** before v5 install: `bin/assistant uninstall root-ghostproxy-rollout` (operator runs)
+- **v5 install**: `bin/assistant install root-ghostproxy-rollout` (after GO)
+- **First real fire monitoring**: ~45-75 min budget on first-pick T014 (operator reviews planning artifact in inbox first)
+
+### How to Resume (refreshed)
+
+```
+1. Read this handoff in full
+2. Read .assistant/_state/root-ghostproxy-rollout-inbox.md → Pre-Launch Dry-Run #1 section (the planning artifact)
+3. Read .assistant/_state/root-ghostproxy-rollout-operator-directives.md (operator input channel placeholder)
+4. Decide on Opus 1M path (3 decision points above) — or defer and install at 195k baseline
+5. If installing:
+   a. Verify: openclaw daemon status (gateway healthy?); openclaw models aliases list (opus-1m still there?)
+   b. Uninstall v3: bin/assistant uninstall root-ghostproxy-rollout
+   c. (Optional) Update .openclaw.json5 model.primary if pursuing Path E or other 1M path
+   d. Write "INSTALL: GO" in operator-directives.md
+   e. Install v5: bin/assistant install root-ghostproxy-rollout
+   f. Monitor first cron fire end-to-end; review staged edits in ~/root-ghostproxy/ + Resolution sections
+6. If NOT installing yet (operator has other things first): all artifacts on disk, gated, reversible
+```
+
+### Pitfalls observed in the continuation (added to mistakes table)
+
+| Mistake this continuation | Lesson |
+|---|---|
+| First subagents Edit failed because old_string used "Removed from v1" but actual file had "Added: r20_gate" trailing | Always `grep` for the EXACT current content before crafting Edit old_string — context-memory of v5 YAML structure ≠ what's on disk after prior edits |
+| Path A alias test assumed OpenClaw's bracket-syntax acceptance would mean 1M context activation | Test the OUTCOME (Ctx column), not just the INPUT acceptance (exit 0). Empirical verification per P4: declarations aspirational until infrastructure verifies them. |
+
+### What's NOT done (carry-forward for next session)
+
+- Items #3 (Opus 1M path decision) + #8 (reflection-enforcement hook Phase 2)
+- Install (gated on operator GO)
+- v3 uninstall (operator runs)
+- First real fire on T014 (post-install)
+- Possible cron.yaml + openclaw.json5 + profile YAML tweaks based on first-fire empirical observations
+
 ## Sister-Project Handoff Reference
 
-The morning handoff at `docs/SESSION-2026-05-16.md` covers the gateway-fix arc + initial v3 install. This handoff is the AFTERNOON arc continuation — v3 → v5 worker rebuild + design queue. Read both for full day context.
+The morning handoff at `docs/SESSION-2026-05-16.md` covers the gateway-fix arc + initial v3 install. This handoff is the AFTERNOON + EVENING arc continuation — v3 → v5 worker rebuild + design queue (6 of 8 implemented; Path A tested; install gated). Read both for full day context.
 
 The CK + CR profiles continue to operate in parallel — see `wiki/log/2026-05-16-ck-bootstrap-execution-batch-2.md` + `wiki/log/2026-05-16-flagged-pages-gemini-spark.md` for their concurrent activity. They are NOT in scope for this RGP-rebuild arc.

@@ -144,17 +144,25 @@ jobs:
     description: "First fire after install — WORKER mode. Verify install + identify first-pick + produce planning artifact for operator review. Executes first-pick only if operator-directives.md contains 'BOOTSTRAP-EXECUTE: GO'."
     timeout_seconds: 5400
 
-  # ─── Daily light check — 14:00 ET ────────────────────────────────────
-  - name: daily-light-check
+  # ─── Driven worker tick — every 15 min ───────────────────────────────
+  # Operator-doctrine 2026-05-16 (sacrosanct): worker assistant must be DRIVEN.
+  # Daily cadence = 1 task/day = 100+ days to clear the 100+ task backlog =
+  # unacceptable for a worker. Worker-pace = 10-30 min per substantive task;
+  # 15-min cron tick gives queue depth ≤ 1 + immediate response to operator
+  # directives via operator-directives.md step 0 reads.
+  - name: driven-worker-tick
     enabled: true
-    schedule: "*-*-* 14:00:00"
+    schedule: "every:15m"
     trigger:
       type: openclaw-task
       prompt: |
-        WORKER fire — root-ghostproxy. VARIANT: DAILY LIGHT (14:00 ET, steady-state).
+        WORKER fire — root-ghostproxy. VARIANT: DRIVEN WORKER TICK (every 15m, steady-state).
 
         GOAL: Execute next-ready task end-to-end per SDD+TDD discipline. Goldilocks
-        per-tick: 1 substantive task OR 2-3 simple tasks within same module.
+        per-tick: 1 substantive task (10-30 min) OR 2-4 simple tasks within same
+        module. CRITICAL: surfacing NCs / [NEEDS OPERATOR REVIEW] markers is NOT
+        an exit condition — surface + continue to next-ready task per build_forward.
+        The next 15-min tick will pick up whatever's left.
 
         BOUND TO (load at fire start):
           Profile: .assistant/root-ghostproxy-rollout.yaml (v5 worker)
@@ -261,7 +269,17 @@ jobs:
           (.venv/bin/python -m tools.pipeline post; 0 NEW errors required).
 
         STEP 10 loop_or_declare:
-          - If budget remains AND next-ready task exists AND last task succeeded → LOOP to step 2
+          - LOOP CONDITIONS (continue to step 2 if ALL true):
+            1. Budget remains (< 12 min used of 15-min tick budget; reserve 3 min for stage + log)
+            2. Next-ready task exists (any P0/P1 task at status:not-started or status:in-progress with operator-side blockers cleared)
+            3. Last task reached status:review (NCs surfaced ≠ failure — task is DONE for worker purposes once status:review + Resolution + R20 staged)
+          - SURFACING NCs / [NEEDS OPERATOR REVIEW] markers is NOT an exit condition.
+            The driven-worker pattern is: complete current task → surface what's
+            ambiguous → CONTINUE to next task. Operator reads queue async + writes
+            RESOLVE blocks; worker reads RESOLVE blocks at step 0 of NEXT tick.
+            Freezing on "NCs need operator" = anti-pattern (operator-doctrine 2026-05-16:
+            "why block when its not block").
+          - If LOOP CONDITIONS all true → step 2 (pick next-ready)
           - Else: append inbox one-liner (v5 worker format):
             HH:MM ET | <branch> | tasks_executed:<n> | tasks_staged:<n> |
             blocked:<n> | retired:false | post:<ok|err N>
@@ -279,12 +297,15 @@ jobs:
           - Surface scope question in wiki/backlog/operator-decision-queue.md (cascade:root-ghostproxy)
           - Move to NEXT task. Build forward. NEVER freeze. NEVER revert-and-restart.
 
-        BUDGET:
-          - STEADY_WORK: 30-45 min (1 substantive task) OR 45-60 min (2-3 simple tasks same module)
-          - FRESH_SIGNAL: 45-75 min (re-prioritized work + 1-2 tasks)
-          - OPERATOR_DIRECTED_SPRINT: 60-180 min (multi-task burst per operator directive)
-    description: "14:00 ET daily — WORKER steady-state. Picks next-ready P0 task per SFIF, executes SDD+TDD end-to-end, stages for operator commit. Branches to sprint mode if operator-directives.md has unprocessed sprint directive."
-    timeout_seconds: 10800
+        BUDGET (per 15-min tick):
+          - STEADY_WORK: 8-12 min (1 substantive task) — reserve 3 min for stage+log
+          - FRESH_SIGNAL: 12-14 min (re-prioritize + start 1 task; next tick continues)
+          - OPERATOR_DIRECTED_SPRINT: 13-14 min (chained operator-directives; next tick picks up remainder)
+          - If a substantive task exceeds 12 min: complete current sub-step (4a/b/c/d/e),
+            stage best-effort, log, exit. Next tick resumes from current_stage.
+          - Tasks naturally chunked across ticks; queue depth ≤ 1 keeps work flowing.
+    description: "every 15min — WORKER driven tick. Picks next-ready P0 task per SFIF, executes SDD+TDD per tick budget, stages for operator commit, loops in same tick if budget remains. Branches to sprint mode if operator-directives.md has unprocessed sprint directive."
+    timeout_seconds: 900
 
   # ─── Weekly module-progress deep drafting — Tue 09:00 ET ─────────────
   - name: weekly-module-deep

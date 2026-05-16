@@ -129,15 +129,39 @@ pre_launch_readiness:
     # with the righth params and arguments and content and structure and data objects
     # and divisions can be gold."
     opus_1m_context_mode:
-      status: "PENDING — exact OpenClaw mechanism unverified (handoff item #3 in docs/SESSION-2026-05-16-handoff.md)"
-      investigation_paths:
-        - path_a: "openclaw models aliases add opus-1m anthropic/claude-opus-4-7[1m]; then set model.primary in openclaw.json5 to anthropic/opus-1m"
-        - path_b: "model.primary in openclaw.json5 directly set to anthropic/claude-opus-4-7[1m] (test if bracket syntax accepted by OpenClaw alias resolver)"
-        - path_c: "Prompt-prefix /model slash command at start of cron trigger.prompt (Claude Code session-level model switch — operator-suggested 2026-05-16)"
-        - path_d: "~/.claude/settings.json default-model setting affecting all Claude Code spawns (broader scope)"
-      expected_runtime_marker: "Banner shows 'claude-opus-4-7[1m]' at agent fire start (matches operator's Claude Code session banner)"
+      status: "INSUFFICIENT-ALONE — Path A tested 2026-05-16; alias registered but Ctx still 195k. Needs deeper claude-cli-level investigation OR ~/.claude/ config OR API beta header. (handoff item #3 — gates install)"
+      investigation_paths_status:
+        path_a_alias:
+          attempt: "openclaw models aliases add opus-1m anthropic/claude-opus-4-7[1m]"
+          result: "ACCEPTED (exit 0; alias registered; ~/.openclaw/openclaw.json updated; .bak preserved)"
+          but: "openclaw models list shows Ctx=195k for anthropic/claude-opus-4-7[1m] — the bracket suffix is a NAME, not a context-window directive at the OpenClaw layer. Alias works as shorthand but does NOT activate 1M context on its own."
+          recommendation: "Keep alias for naming clarity; pair with whichever real activation path proves out below"
+        path_b_direct_in_openclaw_json5:
+          attempt: "Set model.primary in .assistant/root-ghostproxy-rollout.openclaw.json5 to anthropic/claude-opus-4-7[1m] (or alias anthropic/opus-1m)"
+          result: "NOT YET TESTED — likely same outcome as Path A (name resolves but Ctx stays 195k unless backed by claude-cli flag)"
+          dependency: "Path B without underlying Claude-CLI flag = cosmetic only"
+        path_c_prompt_prefix_slash_model:
+          attempt: "Prefix cron trigger.prompt with `/model claude-opus-4-7[1m]\\n<rest>` so Claude Code's slash-command parser switches model session-level"
+          result: "NOT YET TESTED — unclear if OpenClaw's claude-cli spawn passes the prompt through Claude Code's slash-parser (depends on whether spawn uses `claude -p \"<prompt>\"` or `claude chat` + piped prompt)"
+          risk: "If OpenClaw bypasses Claude Code's slash-parser, the `/model` becomes literal first-message content (ignored or treated as plain text)"
+        path_d_claude_settings_json:
+          attempt: "Set model field in ~/.claude/settings.json (per-user Claude Code config)"
+          result: "OBSERVED 2026-05-16 — ~/.claude/settings.json currently contains only {\"effortLevel\":\"max\"}; NO model field. The [1m] in operator's own Claude Code banner must come from elsewhere (claude-cli internal default for v2.1.143; OR runtime-negotiated via anthropic-beta API header)"
+          risk: "Modifying ~/.claude/settings.json affects ALL Claude Code spawns on this machine — operator-territory edit; needs explicit GO"
+        path_e_anthropic_beta_header:
+          attempt: "Investigate if claude-cli accepts an --anthropic-beta flag OR ANTHROPIC_BETA_FEATURES env var like 'context-1m-2025-08-07'"
+          result: "NOT YET TESTED — requires reading claude-cli source OR Anthropic docs; this is likely the REAL mechanism since 1M is a beta API feature"
+          recommendation: "Operator-stated preference: 'add it at the start of a prompt and it will be transferred to the -p command' — Path C OR Path E are the closest to that intuition"
+        path_f_openclaw_params_field:
+          attempt: "Add a params.contextWindow or params.betaFeatures field to .openclaw.json5 that OpenClaw passes through to claude-cli spawn"
+          result: "NOT YET TESTED — needs to check OpenClaw config schema for such a field; .openclaw.json5 has params: { cacheRetention: 'long' } currently — schema might support more"
+      expected_runtime_marker: "Banner at agent fire start shows 'claude-opus-4-7[1m]' (matches operator's Claude Code session banner — current empirical 1M indicator)"
+      verification_command_post_install: "openclaw cron run <bootstrap-job-id> --expect-final 2>&1 | grep -iE 'context|1m|1000k' ; OR inspect first cron run's session metadata for context_window field"
       gate_required_before_install: true
-      verification_command: "Read fire's stdout banner; grep for '[1m]' or '1m' or '1000K' context indicator"
+      decision_required_from_operator:
+        - "Which path to pursue next? Recommended: Path E (anthropic-beta header) since it matches the underlying API mechanism"
+        - "If Path E confirmed: do we set it via ANTHROPIC_BETA_FEATURES env in systemd service unit (~/.config/systemd/user/openclaw-gateway.service) OR via a new field in .openclaw.json5 OR via prompt-prefix per operator's intuition?"
+        - "Until 1M confirmed: should profile install proceed with 195k baseline (cron prompts + audit fit in 195k easily), OR wait for 1M?"
 
     claude_cli_invocation_params:
       # The cron-spawned agent receives these from openclaw.json5 → claude-cli `-p` invocation
