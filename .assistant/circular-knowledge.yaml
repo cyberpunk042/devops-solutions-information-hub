@@ -28,6 +28,12 @@
 #     WHICH COULD BE FAST LIKE THIS IS THE root-ghostproxy ai assistant"
 #
 #   2026-05-16: "we love online researches" (when it applies)
+#
+#   2026-05-16 (reframing — operator post-handoff): "the handoff just
+#     conflated the circular knowledge... in general they are all very
+#     early prototype we will keep evolving and adding configuration and
+#     content". CK v3 is the most-recently-rewritten of the four profiles
+#     but it remains EARLY PROTOTYPE. Not frozen. Keep evolving.
 # =============================================================================
 
 profile_version: 3
@@ -173,6 +179,32 @@ action_surface:
     - "Self-documentation pages in wiki/"
     - "Drafts to wiki/spine/01_drafts/"
     - "Single-truth promotions (must include Context Boundaries)"
+
+# -----------------------------------------------------------------------------
+# 21-Requirements Framework Mapping (CK-specific) — added v3-alignment 2026-05-16
+# -----------------------------------------------------------------------------
+requirements_mapping:
+  R1_multi_vision: "every draft has ## Context Boundaries; ## Alternative Visions when applicable; multi_vision_diff sub-agent gate at step 3_evaluate"
+  R2_self_first_cascade: "step 5_self_check in distillation + step 8_self_check in retroactive — self before other-target proposals"
+  R3_goldilocks: "per-proposal AND per-tick — cap 0-1 level-up draft per weekly tick; right-sized scope"
+  R4_stage_discipline: "Layer N → N+1 only; principles need ≥3 lessons; stage_discipline_check sub-agent at step 3_evaluate"
+  R5_no_auto_promote: "drafts at wiki/<tier>/01_drafts/ only; operator promotes past drafts"
+  R6_no_garbage: "convergence_scout ≥3 anchors required; failure → defer (Goldilocks-under-budget = correct outcome)"
+  R7_flow: "CK is LEVEL-UP lane (Layer-N → N+1). Doesn't ingest (CR), doesn't synthesize (PS), doesn't cascade (RGP)"
+  R8_cadence_matches_scope: "weekly steady-state (Sat distillation + Sun retroactive); NO 3min sprint-tick (RGP's pattern only)"
+  R9_autonomous_bounded: "level-up drafting + UNTRACKED retroactive rm autonomous; tracked-rm + tier-promotion + brain-edits forbidden/surfacing-gated"
+  R10_build_forward: "supersedes drafts via SUPERSEDES; never revert + restart"
+  R11_no_freeze: "Goldilocks-under-budget on no-convergence-tick is correct, NOT freeze; uncertainty → multi-vision draft + continue"
+  R12_pause_ready_for_review: "pollution-pause when growth > 5× operator-accept = correct pause; not freeze"
+  R13_anti_pollution: "pile_state metric (DEPILED ≤2× / PILING_UP 2-5× / NEVER_DEPILED >5×); auto-pause when threshold crossed"
+  R14_retroactive: "workflow_retroactive — primary purger of UNTRACKED clear-trash; R20-gated for tracked"
+  R15_online_research_when_applies: "web_search + hf_paper_search for VERIFICATION + anchors + cross-reference; NOT mass ingestion (CR's lane)"
+  R16_no_cross_project_work: "ABSOLUTE — no sister-project edits"
+  R17_no_brain_audits: "spine + brain files READ-ONLY"
+  R18_no_self_doc_in_wiki: "wiki/domains/cross-domain/profile-circular-knowledge-* in operator_flagged_trash_signatures.agent_self_doc — CK detects + flags its own anti-pattern"
+  R19_no_drafts_to_spine: "filesystem-write-wiki-spine-01-drafts in tools.deny"
+  R20_sacrosanct: "tools.deny includes git-commit + git-rm-tracked; workflow_retroactive step 4_execute_autonomous re-verifies via `git ls-files --error-unmatch`; tracked → step 5_execute_agreed gated on prior accepted Q##"
+  R21_no_ai_slop: "525-line yaml (down from v2's 1127); 3 cron jobs (down from 6); 7 sub-agents (down from 9 — removed work_completion_detector + anti_pattern_diagnostician); tight prompts"
 
 # -----------------------------------------------------------------------------
 # Cadence

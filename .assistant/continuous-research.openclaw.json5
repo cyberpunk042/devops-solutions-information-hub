@@ -109,6 +109,9 @@
       "filesystem-write-raw-transcripts" // raw/transcripts/ via pipeline fetch
     ],
     deny: [
+      // R20 SACROSANCT (2026-05-16) — agent never commits, never auto-rm tracked
+      "git-commit",
+      "git-rm-tracked",                  // tracked-rm requires accepted Q## (R20 gate)
       // operator-territory files (Profile.knowledge_scope.forbidden_scope)
       "filesystem-write-claude-md",
       "filesystem-write-agents-md",
@@ -181,8 +184,9 @@
 
   // --- Source-of-truth pointer (operator-side documentation) ---
   _profile_source: ".assistant/continuous-research.yaml",
-  _profile_version: 1,
+  _profile_version: 3,
   _vendor: "openclaw",
   _vendor_docs: "https://docs.openclaw.ai/gateway/config-agents",
-  _authored: "2026-05-09"
+  _authored: "2026-05-09",
+  _v3_updated: "2026-05-16"   // R20 + 21-reqs mapping added; structure unchanged ("wasn't that bad")
 }

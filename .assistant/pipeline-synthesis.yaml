@@ -15,6 +15,15 @@
 #      ASSISTANT AT THE SAME TIME FOR ONE PROJECT"
 #   - "managing across NONE, ONE OR MULTIPLE TOOL"
 #
+# Operator-doctrinal (2026-05-16, sacrosanct):
+#   - R20 (hard rule): "THE AI ASSISTANT IS NOT GOING TO DELETE ANYTHING
+#     THAT IS ALREADY COMMITED OR STAGED WITHOUT MY AGREEMENT"
+#   - autonomy: "WHY WOULD THE AI HAVE TO PROPOSE TO REMOVE THE TRASH IT
+#     ADDED ITSELF?? ITS SUPPOSED TO BE A FUCKING AUTONOMOUS ASSISTANT"
+#   - reframing: "in general they are all very early prototype we will keep
+#     evolving and adding configuration and content" (PS v3 alignment is
+#     targeted — existing structure is solid; adds R20 + 21-reqs mapping)
+#
 # Companion vendor configurations that consume this Profile:
 #   .assistant/pipeline-synthesis.openclaw.json5  — OpenClaw agent entry
 #   (more vendors added as they're authored — Multica, Hermes, etc.)
@@ -27,7 +36,7 @@
 #   This Profile (Pipeline Synthesis) is the next stage (raw/ → wiki/sources/)
 # =============================================================================
 
-profile_version: 1
+profile_version: 3
 profile_name: pipeline-synthesis
 project: devops-solutions-information-hub
 project_role: "Knowledge curation — pipeline synthesis substrate"
@@ -207,6 +216,10 @@ action_surface:
     - "Drift into Continuous Research scope (don't fetch new URLs proactively — that's the other Profile's job)"
     - "Claim 'synthesized' without inline pipeline post output evidence"
     - "Use WebFetch on corpus URLs (Hard Rule 6 — pipeline fetch / wiki_fetch only)"
+    # R20 sacrosanct additions (2026-05-16)
+    - "git commit (R20 — operator commits, agent never)"
+    - "git rm on tracked files without prior accepted Q## (R20 — surface batch Q## with operator-agreement gate; only then execute)"
+    - "Auto-delete COMMITTED or STAGED raws OR wiki/sources/*.md without operator agreement (R20 sacrosanct)"
 
   escalation_triggers:
     - "Raw appears to be a high-impact strategic source → flag as promotion-to-lesson candidate (operator-decision)"
@@ -284,6 +297,33 @@ model_routing:
     - "Ratio-preserving — ≥0.25 line ratio is non-negotiable"
     - "Schema-compliant — every output passes pipeline post"
     - "Match tier to source length + complexity (Goldilocks)"
+    - "R20 sacrosanct — agent never commits; tracked-rm requires operator-accepted Q##; untracked autonomous"
+
+# -----------------------------------------------------------------------------
+# 4a. 21-Requirements Framework Mapping (PS-specific) — added v3 2026-05-16
+# -----------------------------------------------------------------------------
+requirements_mapping:
+  R1_multi_vision: "step 7 surface_candidates includes operator-question when raw suggests multiple promotion paths; never single-truth on strategic shifts"
+  R2_self_first_cascade: "self-improvement check before surfacing other-target proposals"
+  R3_goldilocks: "per-tick cap 1-3 syntheses (steady) / 1 per tick if substantive; daily total cap aligned with cron cadence"
+  R4_stage_discipline: "Layer 1 source-synthesis only; no Layer 2+ authoring (that's CK's lane)"
+  R5_no_auto_promote: "surfacing_required for all maturity-tier promotions; operator approves Q##"
+  R6_no_garbage: "step 2 dedup_check + step 4 ratio gate (≥0.25) + step 7 convergence floor (≥3) prevents thin/garbage syntheses"
+  R7_flow: "PS is SYNTH lane — raw/ → wiki/sources/ (Layer 1). Doesn't ingest (CR), doesn't level up (CK), doesn't cascade (RGP)."
+  R8_cadence_matches_scope: "hourly drain + morning/evening batch + weekly digest + monthly audit — matches synthesis throughput scope"
+  R9_autonomous_bounded: "scan + read + synthesize + crossref + purge-ephemeral-UNTRACKED autonomous; tier-promotion + cross-project + raw/notes/-touch forbidden"
+  R10_build_forward: "supersedes existing source-syntheses via SUPERSEDES when better data lands; never revert + restart"
+  R11_no_freeze: "synthesis validation failure → root-cause + retry, NEVER skip the gate; if raw is too thin → surface, don't publish substandard"
+  R12_pause_ready_for_review: "backlog drained AND nothing pending → log 'drained' and END (correct steady-state); promotion candidates surfaced → END pending operator (pause, NOT freeze)"
+  R13_anti_pollution: "if wiki/sources/ growth > 5× operator-accept → pause production until operator catches up; orphan-detection cron flags 0-inbound syntheses"
+  R14_retroactive: "step 6b purge → PS cleans its own UNTRACKED noise raws (R20 gated for tracked); weekly orphan-audit identifies stale syntheses"
+  R15_online_research_when_applies: "PS does NOT proactively fetch (CR's lane); may verify a claim via wiki_search but no mass external fetching"
+  R16_no_cross_project_work: "ABSOLUTE — no sister-project edits"
+  R17_no_brain_audits: "spine + brain files READ-ONLY"
+  R18_no_self_doc_in_wiki: "NEVER author profile-pipeline-synthesis-*.md in wiki/ (CK v1 anti-pattern applies here)"
+  R19_no_drafts_to_spine: "spine is operator-territory"
+  R20_sacrosanct: "tools.deny includes git-commit + git-rm-tracked; step 6b purge gated on `git ls-files --error-unmatch` untracked-check; tracked raws → batch Q## with operator-agreement"
+  R21_no_ai_slop: "tight workflow steps; no version-history markers in profile; no dead-code sections; sub-agents are 4 load-bearing only (batch_fs_search, ratio_validator, deduplication_scout, convergence_scout)"
 
 # -----------------------------------------------------------------------------
 # 4b. Workflow Contract (structured pipeline — NOT prose-in-prompt)
@@ -346,8 +386,10 @@ workflow:
         - "source-synthesis page exists with ratio ≥0.25"
         - "pipeline_post in this tick is 0-error"
         - "no `lifecycle: keep` operator-override frontmatter on the raw"
+        # R20 sacrosanct (2026-05-16)
+        - "AND raw is UNTRACKED (`git ls-files --error-unmatch <path>` returns non-zero) — tracked raws require operator-accepted Q## per R20; surface batch instead"
       output: "purged file paths logged to wiki/log/<YYYY-MM-DD>-purge-summary.md (counts + rationale per file)"
-      success_gate: "noise raws purged; reference raws retained; purge log written"
+      success_gate: "noise raws purged; reference raws retained; tracked raws NEVER auto-purged; purge log written"
 
     - step: 7_surface_candidates
       purpose: "If raws suggest higher-layer content (lesson/pattern/decision), surface to operator-decision-queue. NEVER auto-promote."
