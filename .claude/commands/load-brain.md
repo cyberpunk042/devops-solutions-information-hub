@@ -38,6 +38,49 @@ diffs). Use both together for a cold-start or post-compact full warm.
 The tree IS the order. If you get lost reading random files, the
 tree is buggy — that's the bug to fix, not your behavior.
 
+## Argument modes
+
+| Invocation | Behavior |
+|---|---|
+| `/load-brain` (no args) | Full deterministic walk — the 13-level tree below, ~76 reads |
+| `/load-brain <topic>` | Focused load — just the topic's files (vocabulary below) |
+| `/load-brain <topic1> <topic2> ...` | Union of multiple topics |
+
+For the LIGHT essentials-only set, use `/load-brain-light` instead.
+
+### Topic vocabulary
+
+| Topic | Aliases | What it loads (reads) |
+|---|---|---|
+| `principles` | `laws` | 5 files in `wiki/lessons/04_principles/hypothesis/` |
+| `super-model` | `topology`, `center` | `wiki/spine/super-model/*.md` (6 files: root + 5 sub-super-models) |
+| `foundation` | | `wiki/spine/models/foundation/*.md` (3 models) |
+| `quality` | `sfif` | `wiki/spine/models/quality/*.md` (2 models) |
+| `agent-config` | | `wiki/spine/models/agent-config/*.md` (4 models) |
+| `depth` | | `wiki/spine/models/depth/*.md` (5 models) |
+| `ecosystem` | | `wiki/spine/models/ecosystem/*.md` (3 models) |
+| `registry` | `index` | `wiki/spine/references/model-registry.md` (1) |
+| `engine` | `yaml`, `configs` | `wiki/config/{methodology,wiki-schema,artifact-types}.yaml` (3) |
+| `sdlc` | `aidlc`, `process` | sdlc-customization-framework + src-sdlc-frameworks + src-aidlc (3) |
+| `standards` | | All 28 in `wiki/spine/standards/` |
+| `goldilocks` | `flow`, `selection` | goldilocks-flow + goldilocks-protocol + sdlc-customization-framework (3) |
+| `<model-name>` | | The named model's page + companion `*-standards.md` if it exists (1-2) |
+
+Valid `<model-name>` values: `llm-wiki`, `methodology`, `wiki-design`, `sfif`, `quality-failure-prevention`, `markdown-as-iac`, `claude-code`, `skills-commands-hooks`, `per-project-assistant-profile`, `second-brain`, `knowledge-evolution`, `context-engineering`, `local-ai`, `notebooklm`, `ecosystem`, `mcp-cli-integration`, `automation-pipelines`.
+
+### Resolution rules
+
+- Topic names are case-insensitive
+- Spaces or hyphens are equivalent (e.g. "LLM Wiki" → `llm-wiki`)
+- `and` between topics is a separator (e.g. `/load-brain llm-wiki and methodology` loads both)
+- Unknown topic → ask the operator to clarify, do NOT guess
+- For focused loads, emit a small FOCUSED attestation at the end (not the full BRAIN LOADED report). Format:
+  ```
+  FOCUSED BRAIN LOAD complete — Topic(s): <name>
+  Files read: <N>
+  Status: ready for operator direction.
+  ```
+
 ## The Tree — 13 levels, ~76 reads
 
 ### Level 0 — Identity & operational rules (10)
