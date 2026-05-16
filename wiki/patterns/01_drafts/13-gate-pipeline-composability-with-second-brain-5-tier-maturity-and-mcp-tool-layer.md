@@ -36,7 +36,7 @@ tags: [composability-map, 13-gate-pipeline, 5-tier-maturity, mcp-tool-layer, day
 
 ## Summary
 
-The 13-gate pipeline (per piece #1) is a single-project enforcement substrate; the second-brain (this wiki) is a multi-project knowledge substrate with 5-tier maturity progression (00_inbox → 01_drafts → 02_synthesized → 03_validated → 04_principles); MCP tools are the programmatic-API layer. This piece maps how the three layers compose: composite-compliance metric (gate #12) FEEDS tier promotion; tier promotion enables /opt knowledge-reuse (Insight 5b); MCP tools query both layers programmatically. Per substitution-pattern Insight 5b: documenting the 13-gate pipeline alone is partial — its operational meaning emerges from composing with the second-brain promotion-mechanism + MCP query layer. This piece closes the cross-cutting composability gap.
+The 13-gate pipeline (per piece #1) is a single-project enforcement substrate; the second-brain (this wiki) is a multi-project knowledge substrate with 5-tier maturity progression (00_inbox → 01_drafts → 02_synthesized → 03_validated → 04_principles); MCP tools are the programmatic-API layer. This piece maps how the three layers compose: composite-compliance metric (gate #12) FEEDS tier promotion; tier promotion enables the second-brain knowledge-reuse (Insight 5b); MCP tools query both layers programmatically. Per substitution-pattern Insight 5b: documenting the 13-gate pipeline alone is partial — its operational meaning emerges from composing with the second-brain promotion-mechanism + MCP query layer. This piece closes the cross-cutting composability gap.
 
 ## Pattern Description
 
@@ -92,7 +92,7 @@ Wiki-state MCP tools:
   - wiki_gateway_health: composite quality score
   - wiki_gateway_compliance: super-model adoption tier + gaps
 
-Wiki-mutation MCP tools (for /opt second-brain only):
+Wiki-mutation MCP tools (for the second-brain second-brain only):
   - wiki_post          : run post-ingestion 6-step chain
   - wiki_crossref      : find new connections
   - wiki_log           : add log entry
@@ -198,16 +198,16 @@ Boundary 3→4: cross-project convergence (multiple validated lessons → princi
 | Promote piece to tier 2 WITHOUT empirical evidence | Composite metric not yet sustained; promotion is aspirational | Wait for ≥85% / 30 days OR explicit operator-grant |
 | Cite tier 1 piece as canonical (without DRAFT annotation) | Per piece C06 fabrication-cure; tier 1 IS DRAFT | Citation discipline (impl-spec #8 Read-time banner) |
 | MCP query treats all tiers as equivalent | Tier 1 DRAFTs surface as canonical; downstream consumers misled | wiki_search returns annotation per tier |
-| Implement 13-gate pipeline without /opt knowledge-reuse | Per Insight 5b: agents re-author existing /opt content | Input-discipline gate (impl-spec #1) CHECK 3 (opt_pieces_loaded) |
+| Implement 13-gate pipeline without the second-brain knowledge-reuse | Per Insight 5b: agents re-author existing the second-brain content | Input-discipline gate (impl-spec #1) CHECK 3 (opt_pieces_loaded) |
 | Promote 13-gate pipeline to tier 4 (governing principle) prematurely | Single-project evidence ≠ governing principle | Tier 3 cross-project validation gate first |
 
 ## When To Apply
 
 Apply this composability map when:
 - Project has implemented 13-gate pipeline (or planning to)
-- /opt second-brain is reachable as knowledge resource
+- the second-brain second-brain is reachable as knowledge resource
 - MCP tool layer is operational (wiki_* tools available)
-- Pain-point cluster overlap with /opt existing lessons (Insight 5b knowledge-reuse opportunity)
+- Pain-point cluster overlap with the second-brain existing lessons (Insight 5b knowledge-reuse opportunity)
 - Operator considers tier-promotion ceremony for any agent-authored piece
 - Cross-project propagation is goal (sister projects consume promoted lessons)
 
@@ -240,7 +240,7 @@ Apply this composability map when:
 
 ## When Not To
 
-- Project lacks /opt second-brain integration (early-scaffold isolated projects)
+- Project lacks the second-brain second-brain integration (early-scaffold isolated projects)
 - MCP tool layer unavailable (CLI-only access; no programmatic API)
 - Single-project pieces with no cross-project relevance (don't push to tier 4 prematurely)
 - Operator-explicit tier-pinning (some pieces pinned at tier 1 by design; e.g., per-project specifics)
@@ -248,7 +248,7 @@ Apply this composability map when:
 
 ## Empirical Evidence
 
-Per the 64-hour /root failed-conversation arc: agent operated AT /opt second-brain WITHOUT consuming /opt's knowledge (Insight 5b violation) — re-authored content that existed in /opt rather than extending. The 13-gate pipeline alone wouldn't have prevented this; the input-discipline gate (impl-spec #1 CHECK 3) + composability map (this piece) close the gap. The composability map provides the conceptual bridge: 13-gate enforcement at write-time + MCP query at think-time + tier-promotion at operator-confirm-time = closed loop.
+Per the 64-hour /root failed-conversation arc: agent operated AT the second-brain second-brain WITHOUT consuming the second-brain's knowledge (Insight 5b violation) — re-authored content that existed in the second-brain rather than extending. The 13-gate pipeline alone wouldn't have prevented this; the input-discipline gate (impl-spec #1 CHECK 3) + composability map (this piece) close the gap. The composability map provides the conceptual bridge: 13-gate enforcement at write-time + MCP query at think-time + tier-promotion at operator-confirm-time = closed loop.
 
 ## Required Gates (per hook-architecture proposal #2 4th component)
 

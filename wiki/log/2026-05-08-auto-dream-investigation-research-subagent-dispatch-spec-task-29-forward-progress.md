@@ -32,9 +32,9 @@ OPTION 1: claude-code-guide subagent
   Expected: claude-code-guide research; existing terminology mapping
 
 OPTION 2: general-purpose subagent for cross-second-brain search
-  Prompt: "Search /opt/devops-solutions-information-hub for any references
+  Prompt: "Search $HOME/devops-solutions-information-hub for any references
            to 'auto-dream' across all wiki content + raw notes."
-  Expected: existing definition surfaced if /opt has prior reference
+  Expected: existing definition surfaced if the second-brain has prior reference
 
 OPTION 3: Explore subagent for /root and sister projects
   Prompt: "Search /root/.claude/ + /openarms + /openfleet for 'auto-dream'
@@ -65,8 +65,8 @@ Q-FIRE-206-1: Endorse subagent dispatch for auto-dream investigation?
   Recommended: yes — provides parallel forward-progress while operator-empirical answer awaits
 
 Q-FIRE-206-2: Subagent dispatch authorization?
-  Per /opt operating-principles: agent-territory IF research-only (no decisions)
-  Per /opt sub-agent-dispatch retry pattern (SB-049)
+  Per the second-brain operating-principles: agent-territory IF research-only (no decisions)
+  Per the second-brain sub-agent-dispatch retry pattern (SB-049)
 ```
 
 ## Closing

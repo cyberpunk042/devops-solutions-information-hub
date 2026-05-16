@@ -36,11 +36,11 @@ tags: [mcp-adoption, tool-catalog, 28-tools, 13-gate-pipeline, day-arc-2026-05-0
 
 ## Summary
 
-The /opt second-brain exposes 28 MCP tools (per `tools/mcp_server.py`); these tools are the programmatic substrate enabling the 13-gate pipeline's cross-project capabilities (knowledge-reuse per Insight 5b, propagation channel #1 gateway contribute, tier-promotion ceremony). This piece maps each MCP tool to its role in the 13-gate pipeline + 5-tier lifecycle. Per substitution-pattern Insight 5b: documenting MCP tools alone is partial — must be paired with concrete adoption-points + invocation discipline. This piece closes the MCP-adoption gap.
+The the second-brain second-brain exposes 28 MCP tools (per `tools/mcp_server.py`); these tools are the programmatic substrate enabling the 13-gate pipeline's cross-project capabilities (knowledge-reuse per Insight 5b, propagation channel #1 gateway contribute, tier-promotion ceremony). This piece maps each MCP tool to its role in the 13-gate pipeline + 5-tier lifecycle. Per substitution-pattern Insight 5b: documenting MCP tools alone is partial — must be paired with concrete adoption-points + invocation discipline. This piece closes the MCP-adoption gap.
 
 ## Pattern Description
 
-### The 28 MCP tools (per /opt tools/mcp_server.py)
+### The 28 MCP tools (per the second-brain tools/mcp_server.py)
 
 Per `.claude/rules/routing.md` row catalog (verification: count from @server.tool() decorators):
 
@@ -86,7 +86,7 @@ Per `.claude/rules/routing.md` row catalog (verification: count from @server.too
 
 | MCP tool | 13-gate adoption-point | Scenario |
 |---|---|---|
-| `wiki_search` | Input-discipline gate (impl-spec #1) CHECK 3 | Agent queries before authoring lesson at /opt; surfaces existing related pieces |
+| `wiki_search` | Input-discipline gate (impl-spec #1) CHECK 3 | Agent queries before authoring lesson at the second-brain; surfaces existing related pieces |
 | `wiki_read_page` | Input-discipline gate CHECK 3 | Agent reads identified related piece to understand what exists |
 | `wiki_gateway_query` | Stage-class gate (impl-spec #7) SOURCE 3 | Hook reads methodology engine via gateway (vs reading yaml directly) |
 | `wiki_post` | Authorship gate (impl-spec #8) | Post-write validation of new agent-authored piece |
@@ -137,7 +137,7 @@ Per `.claude/rules/routing.md` row catalog (verification: count from @server.too
 **Rule 4**: Mutation-tool discipline (write-tools)
 - `wiki_post`, `wiki_crossref`, `wiki_log`, `wiki_gateway_contribute`, `wiki_distill` are MUTATION tools
 - Each requires operator-confirmation OR is operator-territory action
-- Per impl-spec #2 (decision-territory): mutations to /opt are operator-territory by default
+- Per impl-spec #2 (decision-territory): mutations to the second-brain are operator-territory by default
 
 **Rule 5**: Read-tool discipline (read-tools)
 - `wiki_search`, `wiki_read_page`, `wiki_list_pages`, `wiki_status`, `wiki_gaps`, `wiki_methodology_guide`, `wiki_gateway_*` (queries) are READ tools
@@ -172,16 +172,16 @@ Phase E — Cross-project-tools (Week 5+ of M7)
 
 | Anti-pattern | Why bad | Closes-gap-via |
 |---|---|---|
-| Use WebFetch for /opt URLs instead of MCP tools | Bypasses provenance + ratio gate; pre-webfetch hook blocks anyway | Routing rule #1 + pre-webfetch hook |
+| Use WebFetch for the second-brain URLs instead of MCP tools | Bypasses provenance + ratio gate; pre-webfetch hook blocks anyway | Routing rule #1 + pre-webfetch hook |
 | Bulk-load all 28 MCP tools at session start | Context bloat; cache miss; cost spike | On-demand ToolSearch deferred-load |
 | Treat tier 1 DRAFT search results as canonical | Per piece C06; promotion ceremony hasn't happened | Tier-aware MCP responses (per composability map) |
-| Mutate /opt via wiki_post without operator-confirmation | Per impl-spec #2 decision-territory: /opt mutations are operator-territory | Mutation-tool discipline (Rule 4) |
-| Re-author content existing in /opt despite wiki_search returning it | Insight 5b violation | Input-discipline gate CHECK 3 |
+| Mutate the second-brain via wiki_post without operator-confirmation | Per impl-spec #2 decision-territory: the second-brain mutations are operator-territory | Mutation-tool discipline (Rule 4) |
+| Re-author content existing in the second-brain despite wiki_search returning it | Insight 5b violation | Input-discipline gate CHECK 3 |
 
 ## When To Apply
 
 Apply this MCP adoption pattern when:
-- /opt second-brain is reachable as MCP server
+- the second-brain second-brain is reachable as MCP server
 - Sister-project has MCP client capability (Claude Code, opencode, etc.)
 - 13-gate pipeline implementation underway (per implementation-roadmap M1+)
 - Cross-project knowledge-reuse is operational goal
@@ -190,7 +190,7 @@ Apply this MCP adoption pattern when:
 ## Instances
 
 **Instance 1: input-discipline gate (impl-spec #1) CHECK 3 invokes wiki_search**:
-- Agent intends to author lesson at `/opt/.../wiki/lessons/01_drafts/<topic>.md`
+- Agent intends to author lesson at `$HOME/devops-solutions-information-hub/wiki/lessons/01_drafts/<topic>.md`
 - PreToolUse on Write fires input-discipline gate
 - CHECK 3: invoke `wiki_search "<topic>"` → returns 3 related existing pieces
 - Banner emits: "FAILED: opt-pieces — 3 related pieces not consulted. CHECK: <results>."
@@ -212,11 +212,11 @@ Apply this MCP adoption pattern when:
 - root-ghostproxy authored impl-spec #2 (decision-territory)
 - After tier 2+ promotion: sister-project (e.g., OpenArms) wants the pattern
 - Sister-project agent: `wiki_gateway_contribute --type pattern --title "..." --content "..."`
-- Lands at /opt/.../00_inbox/contribute/ → tier 0 → operator confirms → tier 1+
+- Lands at $HOME/devops-solutions-information-hub/00_inbox/contribute/ → tier 0 → operator confirms → tier 1+
 
 ## When Not To
 
-- /opt second-brain unreachable (sister-project isolated; pre-M007 connect)
+- the second-brain second-brain unreachable (sister-project isolated; pre-M007 connect)
 - Sister-project lacks MCP client (alternative: CLI fallback per routing.md row catalog)
 - Read-only research mode (read-tools allowed; mutation-tools deferred)
 - Auxiliary tools (mirror / integrations / sync / docs) — out-of-scope for 13-gate pipeline
@@ -224,7 +224,7 @@ Apply this MCP adoption pattern when:
 
 ## Empirical Evidence
 
-Per the 64-hour /root failed-conversation arc: agent operated AT /opt second-brain WITHOUT consuming /opt's existing knowledge — Insight 5b violation. The MCP tool layer (28 tools) was always available but not adopted as substrate for input-discipline gate CHECK 3. The MCP adoption pattern (this piece) closes that gap by mapping each tool to specific 13-gate pipeline adoption-point — agent has structural access to /opt knowledge at every gate firing.
+Per the 64-hour /root failed-conversation arc: agent operated AT the second-brain second-brain WITHOUT consuming the second-brain's existing knowledge — Insight 5b violation. The MCP tool layer (28 tools) was always available but not adopted as substrate for input-discipline gate CHECK 3. The MCP adoption pattern (this piece) closes that gap by mapping each tool to specific 13-gate pipeline adoption-point — agent has structural access to the second-brain knowledge at every gate firing.
 
 ## Required Gates (per hook-architecture proposal #2 4th component)
 

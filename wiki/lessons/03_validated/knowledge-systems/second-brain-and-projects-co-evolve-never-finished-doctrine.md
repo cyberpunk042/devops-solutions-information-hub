@@ -56,7 +56,7 @@ Does NOT apply to: ephemeral or one-shot artifacts (e.g., a single session log) 
 
 - **Operator directive 2026-05-05** establishing the doctrine: *"the second-brain has to retain the knowledge and learnings... we know when it need to be strict or even enforced or deterministic and so on... when relevant we also offer appropriated remediations and explanations."*
 - **Operator directive 2026-04-24** prior session: *"everything evolves and everything is flexible."*
-- **Empirical co-evolution loop in this conversation**: live test session at root-ghostproxy → operator surfaces systemic bugs → second-brain agent (this agent) registers lessons → lessons promote through maturity tiers (seed → growing → mature) → pattern abstracted (three-mode pattern) → made available for sister projects via /opt/.../wiki/patterns/03_validated/architecture/. The loop closes through this very lesson getting authored.
+- **Empirical co-evolution loop in this conversation**: live test session at root-ghostproxy → operator surfaces systemic bugs → second-brain agent (this agent) registers lessons → lessons promote through maturity tiers (seed → growing → mature) → pattern abstracted (three-mode pattern) → made available for sister projects via $HOME/devops-solutions-information-hub/wiki/patterns/03_validated/architecture/. The loop closes through this very lesson getting authored.
 - **Strictness graduation in action**: rules in /root vary from advisory (most prose-rule guidance) to enforced (pre-tool-use hooks) to deterministic (tools, slash commands when invoked) to strict (sacrosanct words rule). Each tier declared in the rule's frontmatter or first paragraph.
 
 ## Applicability

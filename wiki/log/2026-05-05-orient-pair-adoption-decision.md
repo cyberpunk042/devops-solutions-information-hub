@@ -23,7 +23,7 @@ tags: [adoption, opt-in, transcension, orient, session-orientation, second-brain
 
 ## Summary
 
-The second-brain (this project, /opt/devops-solutions-information-hub) opted in
+The second-brain (this project, $HOME/devops-solutions-information-hub) opted in
 to the **session-orientation pair** transcendable feature originated in
 root-ghostproxy. Adopted: SessionStart hook + /orient command + ORIENT REPORT +
 PostCompact mirror. Deferred: SessionEnd summary hook (nice-to-have, not
@@ -48,49 +48,49 @@ The directive scoped the transcension to **agent-behavior infrastructure**:
 modes + commands + /loop + hooks (Status I/O). The orient pair is the cold-start
 piece of that bundle. Modes + /cycle + /loop autopilot deferred per agent's
 sequencing recommendation (orient first because prerequisite for modes; lens
-distinctions for /opt's modes will be empirically clearer after a few sessions
+distinctions for second-brain's modes will be empirically clearer after a few sessions
 under orient discipline).
 
 ## Reasoning (why orient pair first, not modes-too)
 
 1. **Prerequisites met for orient**, not yet for modes
-   - /opt has comprehensive brain files (CLAUDE.md, AGENTS.md, 7 rules, 9
+   - second-brain has comprehensive brain files (CLAUDE.md, AGENTS.md, 7 rules, 9
      existing commands, methodology engine, super-model, 4 principles, 477+
      pages) — orient has substance to surface
-   - Modes need a coherent two-lens distinction; /opt's bimodal split (content
+   - Modes need a coherent two-lens distinction; second-brain's bimodal split (content
      work vs methodology/system work) is real but the lens NAMES are not yet
      obvious. Forcing names now risks picking wrong; operating under orient
      discipline first reveals the right names empirically.
 
-2. **/opt benefits MORE from orient than /root did**
+2. **second-brain benefits MORE from orient than /root did**
    - /root has bounded scope (12 modules + SFIF stage + install.sh deliverable)
-   - /opt is continuously iterative — ingestions land, lessons mature 01→04,
+   - second-brain is continuously iterative — ingestions land, lessons mature 01→04,
      methodology evolves, sister projects co-evolve. State is fluid; ad-hoc
      re-discovery per session wastes cognition AND is fragile (agent might
      miss what's actually pending)
-   - Orient pair captures /opt's flow-state shape in one deterministic chain
+   - Orient pair captures second-brain's flow-state shape in one deterministic chain
 
 3. **Adoption itself IS the loop directive**
    - "till it become or update the intelligence and knowledges" — a pattern
      adopted ONCE is single-project; adopted in 2 projects is cross-project
-     intelligence. /opt adoption is the SECOND validation, transforming the
+     intelligence. second-brain adoption is the SECOND validation, transforming the
      pattern from /root-specific to validated cross-project.
    - The empirical observations from this adoption (manual procedure,
      gaps in the Adoption Guide, customizations needed) feed back into the
      pattern as refinements.
 
-## /opt-specific customizations (vs /root)
+## second-brain-specific customizations (vs /root)
 
 ### Hook content
 - `/root`'s session-orient.sh names "ROOT-GHOSTPROXY — NEW SESSION DETECTED"
   with project-type / group / doctrine framing
-- `/opt`'s session-orient.sh names "RESEARCH WIKI / SECOND BRAIN" with
+- `second-brain`'s session-orient.sh names "RESEARCH WIKI / SECOND BRAIN" with
   ecosystem-hub framing + the broken-and-idle reference
 
 ### /orient chain content
 - `/root`'s 21-step chain orients on bounded-state: SFIF stage, modules,
   governance docs, methodology engine, mode state
-- `/opt`'s 12-step chain orients on flow-state:
+- `second-brain`'s 12-step chain orients on flow-state:
   1. Brain layer health (CLAUDE.md, AGENTS.md, CONTEXT.md, 7 rules)
   2. CONTEXT.md (active milestones / identity)
   3. Recent operator directives (raw/notes/ last 5-7)
@@ -107,12 +107,12 @@ under orient discipline).
 ### ORIENT REPORT format
 - `/root`'s: SFIF stage, active modules, pending operator decisions, active
   mode, next-best-actions
-- `/opt`'s: brain-health, active milestones, recent operator directives,
+- `second-brain`'s: brain-health, active milestones, recent operator directives,
   recent session work, pipeline/methodology health, adoption tier, maturity
   flow, pending ingestions, sister-project pulse, active mode (n/a until
   adopted), git state, next-best-actions
 
-The flow-state shape of /opt's report mirrors the project's actual nature
+The flow-state shape of second-brain's report mirrors the project's actual nature
 (continuous iteration on knowledge content + methodology) vs /root's
 bounded-deliverable nature.
 
@@ -146,7 +146,7 @@ concerns: security/reminder vs orient-directive).
 - `python3 -c "import json; json.load(open('.claude/settings.json'))"` → settings.json valid
 
 ### Behavioral verification (NEXT SESSION)
-Will be observed on the next fresh session of /opt:
+Will be observed on the next fresh session of second-brain:
 1. SessionStart fires → both session-start.sh (plain text) AND session-orient.sh (additionalContext JSON) execute
 2. Agent sees the orient directive, invokes /orient on first turn
 3. /orient runs the 12-step chain
@@ -156,14 +156,14 @@ Will be observed on the next fresh session of /opt:
 If the next session does NOT exhibit the above behavior, the lesson
 [broken-and-idle](../lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading.md)
 applies recursively — refinement queued (per the pattern's "currently desired by"
-checklist, /opt's adoption status moves to in-progress until verified).
+checklist, second-brain's adoption status moves to in-progress until verified).
 
 ## What this DOES NOT do (scope discipline)
 
-- Does NOT adopt modes or /cycle or /loop autopilot for /opt (deferred sequencing)
+- Does NOT adopt modes or /cycle or /loop autopilot for second-brain (deferred sequencing)
 - Does NOT add SessionEnd summary hook (nice-to-have, not load-bearing)
 - Does NOT modify the existing session-start.sh or post-compact.sh (coexists; doesn't replace)
-- Does NOT touch `/root` files (cross-project boundary respected — /opt agent only edits /opt)
+- Does NOT touch `/root` files (cross-project boundary respected — second-brain agent only edits second-brain)
 - Does NOT build `tools.adopt` scaffolder (premature; manual-via-Adoption-Guide first informs eventual tooling)
 
 ## Pattern feedback (informs the Adoption Guide refinement)
@@ -198,4 +198,4 @@ These refinements will land in the pattern's Adoption Guide on next iteration.
 - COMPANION TO: pattern at `wiki/patterns/03_validated/architecture/session-orientation-pair-*`
 - BUILDS ON: lesson [broken-and-idle](../lessons/03_validated/context-engineering/broken-and-idle-*)
 - IMPLEMENTS: operator-directive 2026-05-05 (opt-in feature transcension)
-- FIRST IMPLEMENTATION OF PATTERN IN /opt — second project after root-ghostproxy
+- FIRST IMPLEMENTATION OF PATTERN IN second-brain — second project after root-ghostproxy

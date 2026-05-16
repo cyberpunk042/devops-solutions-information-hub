@@ -43,7 +43,7 @@ T2 → T3: stage-class enforcement integration
 
 ## Composition
 
-- Methodology engine (existing /opt tools.methodology)
+- Methodology engine (existing the second-brain tools.methodology)
 - Wiki-schema field (Fire 116)
 - Per-cluster solution-piece chain (Fire 79)
 

@@ -83,7 +83,7 @@ from typing import Any
 # Paths + Constants
 # ───────────────────────────────────────────────────────────────────────
 
-PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", "/home/jfortin/devops-solutions-information-hub"))
+PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR") or Path(__file__).resolve().parent.parent)
 ASSISTANT_DIR = PROJECT_ROOT / ".assistant"
 TEMPLATES_DIR = ASSISTANT_DIR / "_templates"
 GLOBAL_DIR = ASSISTANT_DIR / "_global"

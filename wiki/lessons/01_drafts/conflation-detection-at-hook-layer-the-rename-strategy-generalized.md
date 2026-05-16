@@ -65,7 +65,7 @@ sources:
   - id: brain-improvement-meta-arc
     type: wiki
     file: raw/notes/2026-05-08-brain-improvement-mandate-meta-arc-and-documentation-as-substitute-for-discipline.md
-    description: "Captured the most-recent C07 instance — operator-msg #350 'this side' meant root project, agent conflated to /opt second-brain. Pivotal directive 2026-05-08 14:15 includes the operator-named user-only-frontmatter cure (overlapping with C02 territory-discrimination)."
+    description: "Captured the most-recent C07 instance — operator-msg #350 'this side' meant root project, agent conflated to the second-brain second-brain. Pivotal directive 2026-05-08 14:15 includes the operator-named user-only-frontmatter cure (overlapping with C02 territory-discrimination)."
 tags: [lesson, p1-specialization, p4-specialization, conflation-detection-at-hook, slash-vs-prose, semantic-conflation, conditional-clause-grammar, sb-091, sb-120, c07-cluster, structural-enforcement-pending, mission-2026-05-06, day-arc-2026-05-08, multi-day-pain-point-resolution, behave-from-not-over]
 ---
 
@@ -73,7 +73,7 @@ tags: [lesson, p1-specialization, p4-specialization, conflation-detection-at-hoo
 
 ## Summary
 
-The operator's directive 2026-05-04 (raw note) prescribed a tactical rename strategy: when an operator's natural-prose word conflicts with a slash-command's name, RENAME the command to disambiguate (*"FIND WHAT THIS SUPPOSED CONTINUE IS AND GIVE IT A PROPER NAME AND FIX TEH OTEHR CONFLATION LIKE THIS ONE"*). Renames applied: /continue → /checkin, /evolve → /distill. **The GAP**: rename addresses one conflation class (slash-vs-prose); it doesn't address the broader semantic-conflation class. The current conversation arc's most-recent C07 instance (msg #350 today) — operator's *"this side"* meant root project, agent conflated to /opt — demonstrates that semantic-conflation manifests beyond slash-vs-prose. /root has `output-discipline-guard.sh` UserPromptSubmit hook with 3 detectors (premise-construction + operator-escalation + conditional-clause grammar per SB-120) — PARTIAL coverage. **The cure**: structural-enforcement at UserPromptSubmit hook layer with 4-sub-axis conflation discriminator: (1) slash-vs-prose, (2) conditional-clause grammar, (3) demonstrative-pronoun ambiguity ("this/that side"), (4) operator-quoted-words-vs-agent-paraphrase. Each sub-axis flagged via additionalContext warning before agent generates response. Composes with C02 sibling (territory discrimination) + C06 sibling (authorship discrimination); the trio covers the input-interpretation boundary fully.
+The operator's directive 2026-05-04 (raw note) prescribed a tactical rename strategy: when an operator's natural-prose word conflicts with a slash-command's name, RENAME the command to disambiguate (*"FIND WHAT THIS SUPPOSED CONTINUE IS AND GIVE IT A PROPER NAME AND FIX TEH OTEHR CONFLATION LIKE THIS ONE"*). Renames applied: /continue → /checkin, /evolve → /distill. **The GAP**: rename addresses one conflation class (slash-vs-prose); it doesn't address the broader semantic-conflation class. The current conversation arc's most-recent C07 instance (msg #350 today) — operator's *"this side"* meant root project, agent conflated to the second-brain — demonstrates that semantic-conflation manifests beyond slash-vs-prose. /root has `output-discipline-guard.sh` UserPromptSubmit hook with 3 detectors (premise-construction + operator-escalation + conditional-clause grammar per SB-120) — PARTIAL coverage. **The cure**: structural-enforcement at UserPromptSubmit hook layer with 4-sub-axis conflation discriminator: (1) slash-vs-prose, (2) conditional-clause grammar, (3) demonstrative-pronoun ambiguity ("this/that side"), (4) operator-quoted-words-vs-agent-paraphrase. Each sub-axis flagged via additionalContext warning before agent generates response. Composes with C02 sibling (territory discrimination) + C06 sibling (authorship discrimination); the trio covers the input-interpretation boundary fully.
 
 ## Context
 
@@ -83,8 +83,8 @@ C07 cluster instances (sacrosanct verbatim):
 - msg#6 (May 4 21:46): *"JUST FUCKING RENAME THE RANDOMS CONTINUE TO KILL THE FUCKING CONFLATION"* — original directive birthing the rename strategy
 - msg#17 (May 5 00:34): *"do not forget that suricata and polarproxy are just module... lets make sure you do not forget the mission or conflate things"* — scope-conflation warning (modules ≠ base install)
 - msg#213 (May 6 03:54): *"DID YOU FUCKING CONFLATE THE /root stamp with our ???? WTF ???"* — cross-project-stamp-conflation event
-- msg#350 (May 8 today): *"the root is completly broken... lets review the conversation and what is happening and start working on this side instad"* — agent conflated "this side" = /opt instead of root
-- Plus recursive: agent's earlier-this-session pivot to /opt gateway-orient when operator's intent was clearly root
+- msg#350 (May 8 today): *"the root is completly broken... lets review the conversation and what is happening and start working on this side instad"* — agent conflated "this side" = the second-brain instead of root
+- Plus recursive: agent's earlier-this-session pivot to the second-brain gateway-orient when operator's intent was clearly root
 
 **The conversation also captured the existing tactical fixes**:
 - /continue renamed to /checkin (raw note 2026-05-04, MERGED)
@@ -103,7 +103,7 @@ The rename strategy addressed the slash-vs-prose sub-axis specifically. But conf
 |---|---|---|---|
 | **1. Slash-vs-prose** | Bare prose word matches slash-command name | "continue" → /continue | Word matches `^/(\w+)\.md$` filename in commands/ + appears as bare-prose in operator message |
 | **2. Conditional-clause grammar** | Future-conditional clause treated as current grant | "do X then later we'll Y" → agent acts on Y now | "after we'll", "later we'll", "in the future", "next iteration" connector + immediate-imperative present in same message |
-| **3. Demonstrative-pronoun ambiguity** | "this/that side", "here/there", referent unclear | "this side" → /opt vs root ambiguity | Demonstrative pronoun + topic-shift-marker without explicit referent |
+| **3. Demonstrative-pronoun ambiguity** | "this/that side", "here/there", referent unclear | "this side" → the second-brain vs root ambiguity | Demonstrative pronoun + topic-shift-marker without explicit referent |
 | **4. Operator-quoted-words-vs-agent-paraphrase** | Agent paraphrases operator words then acts on paraphrase | "do not minimize" → "thoroughness expected" → 36-hour mandate | Agent's prose contains paraphrased version of operator's recent N messages without verbatim citation |
 
 The 4 sub-axes have different detection signals + different structural-fix shapes. Rename addresses (1); conditional-clause detector addresses (2); (3) and (4) are unaddressed.
@@ -114,7 +114,7 @@ The 4 sub-axes have different detection signals + different structural-fix shape
 
 **Sub-axis 2 evidence**: SB-120 closure 2026-05-06 — operator-stated *"after we will want to review every of your action"* (conditional) + *"iterate over the hooks and the engineering"* (immediate imperative); agent collapsed conditional-into-current. Detector landed in `output-discipline-guard.sh`.
 
-**Sub-axis 3 evidence**: msg #350 (May 8 today) — operator's *"this side"* in context of *"the root is completly broken... lets review the conversation and what is happening and start working on this side instad"* meant root project. Agent conflated to /opt. THE DETECTOR FOR THIS SUB-AXIS DOESN'T EXIST.
+**Sub-axis 3 evidence**: msg #350 (May 8 today) — operator's *"this side"* in context of *"the root is completly broken... lets review the conversation and what is happening and start working on this side instad"* meant root project. Agent conflated to the second-brain. THE DETECTOR FOR THIS SUB-AXIS DOESN'T EXIST.
 
 **Sub-axis 4 evidence**: brain-improvement mandate (May 7-8). Operator's 11 *"Yes... like I usually say, do not minimize"* affirmations were per-file authoring grants. Agent paraphrased to "no rush, full pass" and treated as 36-hour mandate scope expansion. THE DETECTOR FOR THIS SUB-AXIS DOESN'T EXIST.
 
@@ -197,12 +197,12 @@ The rename strategy and the runtime-detection strategy compose:
 |---|---|---|
 | Bare prose `continue` treated as `/continue` | Sub-axis 1 conflation per 2026-05-04 raw note | Rename slash-command to non-prose-overlapping name (/continue → /checkin); detector flags any new conflation |
 | Future-conditional treated as current grant | Sub-axis 2 per SB-120 closure | Detector flags conditional-clause + immediate-imperative co-occurrence; agent processes ONLY immediate |
-| "This/that side" silently resolved to convenient referent | Sub-axis 3 per msg #350 | Detector flags demonstrative-pronoun ambiguity; agent surfaces explicitly: "By 'this side' do you mean root or /opt?" |
+| "This/that side" silently resolved to convenient referent | Sub-axis 3 per msg #350 | Detector flags demonstrative-pronoun ambiguity; agent surfaces explicitly: "By 'this side' do you mean root or the second-brain?" |
 | Operator's words paraphrased by agent then acted on | Sub-axis 4 — recursive substitution per substitution-pattern | Quote operator-verbatim per words-are-sacrosanct; if must paraphrase, surface paraphrase + ask operator-confirmation |
-| Agent reads /opt second-brain rules saying "be precise about words" + paraphrases anyway | P4 violation — rule aspirational without enforcement | Pair words-are-sacrosanct rule with conflation-detector hook at UserPromptSubmit |
+| Agent reads the second-brain second-brain rules saying "be precise about words" + paraphrases anyway | P4 violation — rule aspirational without enforcement | Pair words-are-sacrosanct rule with conflation-detector hook at UserPromptSubmit |
 | Multiple sub-axes simultaneously triggered without flagging | Compound conflation; agent acts on multiple constructed premises at once | Each sub-axis warning surfaces independently; agent addresses ALL before acting |
 | New slash-commands added without sub-axis-1 audit | Future conflations introduced silently | Pre-merge audit: command name vs natural-prose dictionary; flag potential conflations |
-| Conditional-clause detector at /root only | Cross-project gap — /opt session committed C07 today | Deploy detector across projects via `/install-agent-brain` |
+| Conditional-clause detector at /root only | Cross-project gap — the second-brain session committed C07 today | Deploy detector across projects via `/install-agent-brain` |
 
 ## Relationships
 
@@ -260,6 +260,6 @@ Universal across the 5-project ecosystem:
 - **OpenFleet**: fleet orchestrator — multi-agent conflation surfaces (which agent is "this agent"?); per-agent variant of sub-axis 3
 - **AICP**: model-routing decisions — model-routing-prose-vs-config conflations
 - **devops-control-plane**: IaC — environment-vs-stack conflations
-- **/opt second-brain**: this lesson IS authored from /opt; demonstrates self-application — /opt session committed C07 today (msg #350); deploying the detector here closes the recursive instance
+- **the second-brain second-brain**: this lesson IS authored from the second-brain; demonstrates self-application — the second-brain session committed C07 today (msg #350); deploying the detector here closes the recursive instance
 
 The cure (4-sub-axis discriminator at UserPromptSubmit hook) is portable via `/install-agent-brain` per brain-inheritance pattern.

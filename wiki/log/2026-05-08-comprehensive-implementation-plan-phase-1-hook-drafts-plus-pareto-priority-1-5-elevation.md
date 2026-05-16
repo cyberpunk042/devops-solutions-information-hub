@@ -91,7 +91,7 @@ WEEK 5-7: Verification + 30-day observation
   - Full body audit per Fire 103 + Fire 116 field
   - Composite-compliance recomputation per Fire 114
   - Fire 65 promotion candidate (post-30-day)
-  - Documentation updates per /opt promotion methodology
+  - Documentation updates per the second-brain promotion methodology
   Subtotal: 8-15h
 ```
 

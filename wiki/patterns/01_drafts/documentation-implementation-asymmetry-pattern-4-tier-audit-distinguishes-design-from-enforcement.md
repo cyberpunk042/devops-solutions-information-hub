@@ -36,7 +36,7 @@ tags: [documentation-implementation-asymmetry, audit-method, 4-tier-implementati
 
 ## Summary
 
-Per Fire 102 worked example: impl-spec #10 (post-compact-orientation-gate) documented a comprehensive bidirectional design 100+ pieces ago BUT only the POST side was wired in /opt's settings.json. The PRE side never materialized. This is the **documentation-implementation asymmetry pattern**: a body of work or codebase has a piece-of-design at maturity-tier-N (e.g., Tier 4 designed) but the implementation-state is at maturity-tier-M (e.g., Tier 2 partial). The asymmetry IS the bug. Per substitution-pattern (Fire 65 lesson + Fires 53-64 cluster): documentation-as-substitute-for-discipline IS one specific failure mode of asymmetry. This pattern operationalizes a 4-tier audit distinguishing **designed → partial → enforced → full** so the body can verify itself + sister projects can verify themselves + future agents can verify post-compact handoff.
+Per Fire 102 worked example: impl-spec #10 (post-compact-orientation-gate) documented a comprehensive bidirectional design 100+ pieces ago BUT only the POST side was wired in the second-brain's settings.json. The PRE side never materialized. This is the **documentation-implementation asymmetry pattern**: a body of work or codebase has a piece-of-design at maturity-tier-N (e.g., Tier 4 designed) but the implementation-state is at maturity-tier-M (e.g., Tier 2 partial). The asymmetry IS the bug. Per substitution-pattern (Fire 65 lesson + Fires 53-64 cluster): documentation-as-substitute-for-discipline IS one specific failure mode of asymmetry. This pattern operationalizes a 4-tier audit distinguishing **designed → partial → enforced → full** so the body can verify itself + sister projects can verify themselves + future agents can verify post-compact handoff.
 
 ## Pattern Description
 
@@ -120,11 +120,11 @@ def audit_piece(piece_path: str) -> tuple[int, dict]:
 | Body piece | Tier | Evidence |
 |---|---|---|
 | Impl-spec #10 (post-compact orientation gate) | **2** | PostCompact wired; PreCompact NOT wired (Fire 102 empirical) |
-| Question-registry pattern (Fire 99) | **1** | Pattern designed; /questions slash command NOT in /opt commands dir |
-| Blocker-impediment registry pattern (Fire 101) | **1** | Pattern designed; ~/.claude/blockers/ NOT created; /blockers slash NOT in /opt commands |
+| Question-registry pattern (Fire 99) | **1** | Pattern designed; /questions slash command NOT in the second-brain commands dir |
+| Blocker-impediment registry pattern (Fire 101) | **1** | Pattern designed; ~/.claude/blockers/ NOT created; /blockers slash NOT in the second-brain commands |
 | Mode-by-nature governance pattern (Fire 98) | **1** | Pattern designed; governance-scan auto-fire NOT implemented |
 | Feature-flag system pattern (Fire 96) | **1** | Pattern designed; ~/.claude/feature-flags.json NOT created; flag commands NOT implemented |
-| Backlog-decomposition (Fire 97) | **1** | Epic+Module+Task hierarchy proposed; no actualization at /opt or /root |
+| Backlog-decomposition (Fire 97) | **1** | Epic+Module+Task hierarchy proposed; no actualization at the second-brain or /root |
 | Operator-empirical signal-grammar (Fire 92) | **1** | 5-class taxonomy + Python pseudocode `recognize_operator_signals()`; no actual recognizer |
 | Body versioning v1.0.0 (Fire 91) | **3** | Versioning declared; no automated semver-bump-on-piece-add enforcement |
 | Composite-compliance metric (Fire 85) | **3** | Metric computed via methodology; no auto-aggregator running per-cycle |
@@ -215,7 +215,7 @@ Apply this 4-tier asymmetry audit when:
 **Instance 3: Pre-bash truncation block (Tier 4 baseline)**
 - Tier: **4**
 - Designed: hook description + REASON env var bypass
-- Implemented: pre-bash.sh active in /opt settings.json
+- Implemented: pre-bash.sh active in the second-brain settings.json
 - Enforced: blocks reflexive truncation pipes; operator-empirical compliance high
 - This session: hook fired on agent's `ls | head -20` attempt → agent corrected to `head -100`
 

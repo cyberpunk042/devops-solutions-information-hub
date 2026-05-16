@@ -24,7 +24,7 @@ sources:
   - id: opt-pre-bash-hook-pattern-source
     type: file
     file: .claude/hooks/pre-bash.sh
-    description: "Existing /opt PreToolUse hook pattern (truncation block)"
+    description: "Existing the second-brain PreToolUse hook pattern (truncation block)"
 tags: [c09-hook-draft, python-implementation, agent-authored, pre-tool-use, day-arc-2026-05-08, fire-154]
 ---
 
@@ -32,7 +32,7 @@ tags: [c09-hook-draft, python-implementation, agent-authored, pre-tool-use, day-
 
 ## Summary
 
-Per Fire 126 (C09 evidence) + Fire 127 (foundational addition) + Fire 137 (Phase 1 spec): C09 status-claim enforcement-layer is FOUNDATIONAL Phase 1 priority. This Fire 154 authors agent-DRAFT Python hook draft for /opt/.claude/hooks/c09-status-claim-check.sh per the spec. **Agent-DRAFT per SB-095**: this is design-only; operator confirms + wires per work-mode.md.
+Per Fire 126 (C09 evidence) + Fire 127 (foundational addition) + Fire 137 (Phase 1 spec): C09 status-claim enforcement-layer is FOUNDATIONAL Phase 1 priority. This Fire 154 authors agent-DRAFT Python hook draft for .claude/hooks/c09-status-claim-check.sh per the spec. **Agent-DRAFT per SB-095**: this is design-only; operator confirms + wires per work-mode.md.
 
 ## Pattern Description
 
@@ -41,7 +41,7 @@ This pattern provides an agent-DRAFT Python implementation of the C09 status-cla
 ## When To Apply
 
 Apply this hook when:
-- /opt second-brain has Phase 1 enforcement-layer authorization (operator-confirmed)
+- the second-brain second-brain has Phase 1 enforcement-layer authorization (operator-confirmed)
 - C09 cluster identified as foundational (per Fire 127)
 - Pattern-match rate-limit acceptable (~5-10% false-positive expected)
 
@@ -53,7 +53,7 @@ Apply this hook when:
 
 ## Instances
 
-**Instance 1: This /opt (M-C09 task per Fire 137)**
+**Instance 1: This the second-brain (M-C09 task per Fire 137)**
 - Wire as PreToolUse hook with Write/Edit/NotebookEdit matcher
 - Test via real-session "Done" claim
 - Verify block fires + REASON bypass works
@@ -89,7 +89,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", "/opt/devops-solutions-information-hub"))
+PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", "$HOME/devops-solutions-information-hub"))
 AUDIT_LOG = PROJECT_ROOT / ".claude" / "hooks" / "c09-status-claim-bypass.log"
 
 STATUS_CLAIM_PATTERNS = [
@@ -183,7 +183,7 @@ Status-claim(s) detected: {claims}
 
 REASON:
   Per P4 governing principle (Declarations Aspirational Until Verified) +
-  /opt CLAUDE.md HR 7 (status claims must inline verification): "Done" / 
+  the second-brain CLAUDE.md HR 7 (status claims must inline verification): "Done" / 
   "Verified" / etc. require command-output evidence in same response.
   
   Per Fire 126 C09 12-instance evidence (5 HIGH severity): unverified status-claims
@@ -260,8 +260,8 @@ Bypass-frequency monitoring + threshold-based escalation: T4 (enforced)
 | Fire 126 C09 per-instance evidence | Empirical foundation |
 | Fire 127 foundational-cluster expansion | C09 part of foundational triplet |
 | Fire 137 foundational-triplet solution-chain | This fire IS the C09 layer Phase 1 |
-| /opt CLAUDE.md HR 7 | Brain-rule baseline; this hook enforces |
-| /opt learnings.md HR 4 | Existing baseline |
+| the second-brain CLAUDE.md HR 7 | Brain-rule baseline; this hook enforces |
+| the second-brain learnings.md HR 4 | Existing baseline |
 | Pre-bash hook pattern | Adapted-from source |
 
 ## Operator-pending action
@@ -283,7 +283,7 @@ Q-FIRE-154-3: Hook integration timing?
 
 ## Closing
 
-C09 hook Python draft authored as agent-DRAFT per SB-095. Concrete forward-anchor for Phase 1 M-C09 task per Fire 137. T1 (designed); operator-territory pending wire + test. Composability with /opt's existing PreToolUse hook patterns (pre-bash, pre-webfetch, opt-write-block).
+C09 hook Python draft authored as agent-DRAFT per SB-095. Concrete forward-anchor for Phase 1 M-C09 task per Fire 137. T1 (designed); operator-territory pending wire + test. Composability with the second-brain's existing PreToolUse hook patterns (pre-bash, pre-webfetch, opt-write-block).
 
 **Standing by per /loop directive. C09 hook draft surfaced; awaits operator-empirical wiring confirmation.**
 

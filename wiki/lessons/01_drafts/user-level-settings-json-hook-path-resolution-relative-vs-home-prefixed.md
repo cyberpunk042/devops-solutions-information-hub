@@ -12,8 +12,8 @@ sources:
   - id: empirical-2026-05-05-self-deadlock
     type: empirical-evidence
     project: devops-solutions-information-hub
-    path: /opt/devops-solutions-information-hub/wiki/lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed.md
-    description: "Agent in /opt second-brain session changed /root/.claude/settings.json (user-level) hook paths from absolute to relative without testing. /opt session's hooks tried to resolve relative paths against /opt cwd — failed — blocked all tool calls. Self-deadlock until escape via Monitor tool (bypasses PreToolUse matcher)."
+    path: $HOME/devops-solutions-information-hub/wiki/lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed.md
+    description: "Agent in second-brain session changed /root/.claude/settings.json (user-level) hook paths from absolute to relative without testing. second-brain session's hooks tried to resolve relative paths against the second-brain cwd — failed — blocked all tool calls. Self-deadlock until escape via Monitor tool (bypasses PreToolUse matcher)."
   - id: companion-going-to-extremes
     type: wiki
     file: wiki/lessons/03_validated/enforcement-compliance/correction-as-calibration-not-swing-the-going-to-extremes-anti-pattern.md
@@ -63,13 +63,13 @@ Does NOT apply to: project-level settings.json (`<project>/.claude/settings.json
 
 Empirical, 2026-05-05 self-deadlock:
 
-1. /opt second-brain agent was auditing /root project files for portability. Found 9 hook paths in `/root/.claude/settings.json` were absolute `/root/.claude/hooks/X.sh` — non-portable for non-/root install.
+1. second-brain agent was auditing /root project files for portability. Found 9 hook paths in `/root/.claude/settings.json` were absolute `/root/.claude/hooks/X.sh` — non-portable for non-/root install.
 
 2. Agent batch-changed all 9 to relative `.claude/hooks/X.sh` thinking Claude Code would resolve relative-to-project-root.
 
 3. /root/.claude/settings.json is BOTH user-level (since $HOME=/root for root user) AND project-level (project is /root). Claude Code applies it as user-level for all root-user sessions.
 
-4. /opt second-brain agent's session has cwd=/opt. Hook fires `python3 .claude/hooks/policy-block.sh`. python3's cwd is /opt. Relative resolves to `/opt/.claude/hooks/policy-block.sh` — file doesn't exist (it's at /root/.claude/hooks/). python3 exits 2.
+4. second-brain agent's session has cwd=`$HOME/devops-solutions-information-hub`. Hook fires `python3 .claude/hooks/policy-block.sh`. python3's cwd is the second-brain repo. Relative resolves to `$HOME/devops-solutions-information-hub/.claude/hooks/policy-block.sh` — file doesn't exist (it's at /root/.claude/hooks/). python3 exits 2.
 
 5. PreToolUse hook exits non-zero → Claude Code blocks tool. EVERY tool call blocked.
 
@@ -149,7 +149,7 @@ When editing user-level settings.json hook commands:
 Universal. Any Claude Code project with user-level settings.json hooks has this risk. The portable-paths discipline + the deadlock-recovery escape (Monitor tool) apply to:
 
 - root-ghostproxy (canonical case where this was learned)
-- /opt second-brain (this very session — was on the receiving end)
+- second-brain (this very session — was on the receiving end)
 - OpenArms, OpenFleet, AICP, devops-control-plane (every project with user-level hook config)
 
 ## Relationships

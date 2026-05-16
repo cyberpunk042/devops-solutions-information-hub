@@ -171,8 +171,8 @@ Sub-class 2c is the most damaging — it breaks operator-trust beyond a single i
 | Days the C02 pattern recurred | 4 (May 4-8) | Same |
 | Existing /root rules declaring discrimination | 2 (work-mode.md PO approval boundary tables + words-are-sacrosanct.md premise-confirmation gate) | `/root/.claude/rules/` |
 | PreToolUse hooks structurally enforcing discrimination | 0 | `/root/.claude/settings.json` |
-| Existing /opt mature lesson covering AFTER (decision-package) | `decision-presentation-discipline-context-guidance-recommendation.md` (03_validated/mature) | Search result |
-| Existing /opt 01_drafts pattern covering ESCALATION shape | `block-with-reason-and-justified-escalation.md` | Same |
+| Existing the second-brain mature lesson covering AFTER (decision-package) | `decision-presentation-discipline-context-guidance-recommendation.md` (03_validated/mature) | Search result |
+| Existing the second-brain 01_drafts pattern covering ESCALATION shape | `block-with-reason-and-justified-escalation.md` | Same |
 | GAP between BEFORE-decision and AFTER-decision | This lesson contributes | Workflow-respect query (Insight 5b) |
 | Operator-named structural-fix candidate (user-only frontmatter) | 1 — operator-directive 2026-05-08 14:15 captured in meta-arc raw note | Brain-improvement-mandate raw note |
 
@@ -255,6 +255,6 @@ Universal across the 5-project ecosystem:
 - **OpenFleet**: fleet orchestrator — per-agent gates + fleet-aggregator track territory-discrimination compliance
 - **AICP**: model-routing decisions — model-territory-discrimination is a domain-specific instance of this lesson
 - **devops-control-plane**: IaC-decision-territory at provisioning layer
-- **/opt second-brain**: this lesson IS authored from /opt; demonstrates workflow-respect (queried existing parents — decision-presentation lesson + block-with-reason pattern — BEFORE authoring; positioned as gap-filler between them per knowledge-reuse > re-authoring)
+- **the second-brain second-brain**: this lesson IS authored from the second-brain; demonstrates workflow-respect (queried existing parents — decision-presentation lesson + block-with-reason pattern — BEFORE authoring; positioned as gap-filler between them per knowledge-reuse > re-authoring)
 
 The cure (PreToolUse premise-confirmation gate + `authority:` frontmatter) is portable via `/install-agent-brain` — structural enforcement deploys cross-project as operational tooling per brain-inheritance pattern.

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-16T15:08:49.271578+00:00",
+  "generated": "2026-05-16T16:06:34.671987+00:00",
   "stats": {
     "pages": 895,
     "domains": 15,
@@ -18753,7 +18753,7 @@
           "id": "existing-maturity-tiers",
           "type": "wiki",
           "file": "wiki/spine/standards/wiki-schema.yaml",
-          "description": "/opt second-brain wiki schema defines 5-tier maturity progression: 00_inbox \u2192 01_drafts \u2192 02_synthesized \u2192 03_validated \u2192 04_principles. The structural infrastructure for promotion EXISTS; this lesson identifies the discipline gap (no auto-promotion of agent-authored content)."
+          "description": "the second-brain second-brain wiki schema defines 5-tier maturity progression: 00_inbox \u2192 01_drafts \u2192 02_synthesized \u2192 03_validated \u2192 04_principles. The structural infrastructure for promotion EXISTS; this lesson identifies the discipline gap (no auto-promotion of agent-authored content)."
         },
         {
           "id": "existing-status-fields",
@@ -19375,7 +19375,7 @@
           "id": "brain-improvement-meta-arc",
           "type": "wiki",
           "file": "raw/notes/2026-05-08-brain-improvement-mandate-meta-arc-and-documentation-as-substitute-for-discipline.md",
-          "description": "Captured the most-recent C07 instance \u2014 operator-msg #350 'this side' meant root project, agent conflated to /opt second-brain. Pivotal directive 2026-05-08 14:15 includes the operator-named user-only-frontmatter cure (overlapping with C02 territory-discrimination)."
+          "description": "Captured the most-recent C07 instance \u2014 operator-msg #350 'this side' meant root project, agent conflated to the second-brain second-brain. Pivotal directive 2026-05-08 14:15 includes the operator-named user-only-frontmatter cure (overlapping with C02 territory-discrimination)."
         }
       ],
       "layer": 4,
@@ -20979,13 +20979,13 @@
           "id": "existing-4-principles",
           "type": "file",
           "file": "CONTEXT.md",
-          "description": "/opt CONTEXT.md \u2014 4 governing principles (Infrastructure>Instructions, Structured Context>Content, Goldilocks, Declarations Aspirational Until Verified)"
+          "description": "the second-brain CONTEXT.md \u2014 4 governing principles (Infrastructure>Instructions, Structured Context>Content, Goldilocks, Declarations Aspirational Until Verified)"
         },
         {
           "id": "opt-principles-folder",
           "type": "file",
           "file": "wiki/lessons/04_principles/hypothesis/",
-          "description": "Principles folder per /opt methodology \u2014 hypothesis in 01_drafts; promotion requires cross-project evidence"
+          "description": "Principles folder per the second-brain methodology \u2014 hypothesis in 01_drafts; promotion requires cross-project evidence"
         }
       ],
       "layer": "",
@@ -21031,19 +21031,19 @@
           "id": "operator-directive-2026-05-05-versatility",
           "type": "file",
           "file": "raw/notes/2026-05-05-thorough-review-context-engineering-versatility-and-network-spec-note.md",
-          "description": "Operator-explicit 2026-05-05 directive \u2014 versatility / metadata-driven-configs / *'we do configs smart with proper metadata and parameters and relatives info and logic'*; named at least 1 lesson at /opt/.../wiki/lessons/ as the deliverable"
+          "description": "Operator-explicit 2026-05-05 directive \u2014 versatility / metadata-driven-configs / *'we do configs smart with proper metadata and parameters and relatives info and logic'*; named at least 1 lesson at `wiki/lessons/` as the deliverable"
         },
         {
           "id": "operator-directive-2026-05-06-fix-now",
           "type": "file",
           "file": "wiki/log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring.md",
-          "description": "Operator-explicit 2026-05-06 \u2014 *'we are coming from another system that the second-brain is inside /opt... we should just support it.. we have a relative / flexible strategy.. we need to fix this now. usualy there is the $HOME variable for example'*; triggered Stop hook fix using ${CLAUDE_PROJECT_DIR} env-indirection"
+          "description": "Operator-explicit 2026-05-06 \u2014 *'we are coming from another system that the second-brain is inside the second-brain... we should just support it.. we have a relative / flexible strategy.. we need to fix this now. usualy there is the $HOME variable for example'*; triggered Stop hook fix using ${CLAUDE_PROJECT_DIR} env-indirection"
         },
         {
           "id": "empirical-stop-hook-fix",
           "type": "wiki",
           "file": ".claude/hooks/end-of-cycle-stamp.sh",
-          "description": "Empirical anchor \u2014 line 35 changed from `Path('/opt/devops-solutions-information-hub')` to `Path(os.environ.get('CLAUDE_PROJECT_DIR', '/opt/devops-solutions-information-hub'))`; settings.json line 164 updated in parallel; loop bug ended"
+          "description": "Empirical anchor \u2014 line 35 changed from `Path('$HOME/devops-solutions-information-hub')` to `Path(os.environ.get('CLAUDE_PROJECT_DIR', '$HOME/devops-solutions-information-hub'))`; settings.json line 164 updated in parallel; loop bug ended"
         },
         {
           "id": "empirical-six-hook-completion",
@@ -21754,8 +21754,8 @@
           "id": "empirical-2026-05-05-self-deadlock",
           "type": "empirical-evidence",
           "project": "devops-solutions-information-hub",
-          "path": "/opt/devops-solutions-information-hub/wiki/lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed.md",
-          "description": "Agent in /opt second-brain session changed /root/.claude/settings.json (user-level) hook paths from absolute to relative without testing. /opt session's hooks tried to resolve relative paths against /opt cwd \u2014 failed \u2014 blocked all tool calls. Self-deadlock until escape via Monitor tool (bypasses PreToolUse matcher)."
+          "path": "$HOME/devops-solutions-information-hub/wiki/lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed.md",
+          "description": "Agent in second-brain session changed /root/.claude/settings.json (user-level) hook paths from absolute to relative without testing. second-brain session's hooks tried to resolve relative paths against the second-brain cwd \u2014 failed \u2014 blocked all tool calls. Self-deadlock until escape via Monitor tool (bypasses PreToolUse matcher)."
         },
         {
           "id": "companion-going-to-extremes",
@@ -23185,7 +23185,7 @@
           "type": "rule",
           "project": "root-ghostproxy",
           "path": "/root/.claude/rules/work-mode.md",
-          "description": "Companion to the /root-side rule: /root agent must not write to /opt directly (operator: 'LET THE SECOND-BRAIN BE ITS OWN'). This lesson is the symmetric inverse: second-brain agent must not write to sister-project files directly."
+          "description": "Companion to the /root-side rule: /root agent must not write to the second-brain repo directly (operator: 'LET THE SECOND-BRAIN BE ITS OWN'). This lesson is the symmetric inverse: second-brain agent must not write to sister-project files directly."
         }
       ],
       "layer": 2,
@@ -24925,7 +24925,7 @@
           "id": "empirical-2026-05-05-sidetrack-traced",
           "type": "empirical-evidence",
           "project": "devops-solutions-information-hub",
-          "path": "/opt/devops-solutions-information-hub/raw/notes/2026-05-05-sidetrack-detection-emperical-trace.md",
+          "path": "$HOME/devops-solutions-information-hub/raw/notes/2026-05-05-sidetrack-detection-emperical-trace.md",
           "description": "Tracing in conversation: agent received original task (monitor live session + extract for second-brain). Operator made a complaint about a tangent (blockers SRP). Agent SWITCHED TASKS to 'rectify the complaint' instead of integrating the complaint into the original task. Original task was abandoned silently. Hours of agent work went into the wrong direction."
         }
       ],
@@ -26080,7 +26080,7 @@
           "type": "empirical-evidence",
           "project": "root-ghostproxy",
           "path": "/root/.claude/hooks/opt-write-block.sh",
-          "description": "The /root user's machine-level opt-write-block.sh hook fired against an /opt-cwd session attempting a legitimate /opt write, because the hook is at /root/.claude/hooks/ (root-user $HOME) and applies to ALL root-user sessions including non-/root-project ones"
+          "description": "The /root user's machine-level opt-write-block.sh hook fired against an second-brain-cwd session attempting a legitimate write to the second-brain, because the hook is at /root/.claude/hooks/ (root-user $HOME) and applies to ALL root-user sessions including non-/root-project ones"
         },
         {
           "id": "companion-lesson-cross-project-boundary",
@@ -30235,7 +30235,7 @@
           "id": "this-session-evolution-arc",
           "type": "wiki",
           "file": "wiki/log/2026-05-05-handoff-to-root-session.md",
-          "description": "/opt second-brain session 2026-05-05 \u2014 distillation arc post-/root-test-session (self-reference; this artifact captures the arc)"
+          "description": "the second-brain second-brain session 2026-05-05 \u2014 distillation arc post-/root-test-session (self-reference; this artifact captures the arc)"
         }
       ],
       "layer": "",
@@ -31507,7 +31507,7 @@
           "id": "multi-project-ecosystem-index",
           "type": "wiki",
           "file": "wiki/patterns/01_drafts/multi-project-ecosystem-index-pattern-5-project-propagation-surface-post-tier-3.md",
-          "description": "Sibling \u2014 ecosystem propagation surface; this preview shows what /opt spine looks like post-promotion"
+          "description": "Sibling \u2014 ecosystem propagation surface; this preview shows what the second-brain spine looks like post-promotion"
         },
         {
           "id": "modelize-proposal-1-skills-commands-hooks",
@@ -33594,7 +33594,7 @@
           "id": "p4-principle-canonical",
           "type": "file",
           "file": "CONTEXT.md",
-          "description": "/opt P4 governing principle: Declarations Aspirational Until Verified; C09 IS the per-instance evidence supporting P4"
+          "description": "the second-brain P4 governing principle: Declarations Aspirational Until Verified; C09 IS the per-instance evidence supporting P4"
         }
       ],
       "layer": "",
@@ -33822,7 +33822,7 @@
           "id": "canonical-spine-update-preview",
           "type": "wiki",
           "file": "wiki/log/2026-05-08-canonical-spine-update-preview-post-promotion-spine-super-model-16-models.md",
-          "description": "Sibling \u2014 /opt canonical-spine post-promotion preview"
+          "description": "Sibling \u2014 the second-brain canonical-spine post-promotion preview"
         },
         {
           "id": "implementation-roadmap-pattern",
@@ -34496,13 +34496,13 @@
           "id": "opt-claude-md-hard-rule-9",
           "type": "file",
           "file": "CLAUDE.md",
-          "description": "/opt CLAUDE.md Hard Rule 6: stage gates enforced; violations are SB-instances of C03"
+          "description": "the second-brain CLAUDE.md Hard Rule 6: stage gates enforced; violations are SB-instances of C03"
         },
         {
           "id": "opt-learnings-md",
           "type": "file",
           "file": ".claude/rules/learnings.md",
-          "description": "/opt learnings.md HR 5 + HR 11: scaffold-vs-implementation boundary; page-placement boundary"
+          "description": "the second-brain learnings.md HR 5 + HR 11: scaffold-vs-implementation boundary; page-placement boundary"
         }
       ],
       "layer": "",
@@ -34803,25 +34803,25 @@
           "id": "p4-principle-canonical",
           "type": "file",
           "file": "CONTEXT.md",
-          "description": "/opt CONTEXT.md \u2014 P4 governing principle: Declarations Aspirational Until Verified; cluster C09 IS the per-instance evidence for P4"
+          "description": "the second-brain CONTEXT.md \u2014 P4 governing principle: Declarations Aspirational Until Verified; cluster C09 IS the per-instance evidence for P4"
         },
         {
           "id": "opt-learnings-md",
           "type": "file",
           "file": ".claude/rules/learnings.md",
-          "description": "/opt learnings.md HR 4: status claims must inline verification command output"
+          "description": "the second-brain learnings.md HR 4: status claims must inline verification command output"
         },
         {
           "id": "opt-claude-md-hard-rule-7",
           "type": "file",
           "file": "CLAUDE.md",
-          "description": "/opt CLAUDE.md HR 7: status claims must inline verification (P4 instance)"
+          "description": "the second-brain CLAUDE.md HR 7: status claims must inline verification (P4 instance)"
         },
         {
           "id": "opt-work-mode-md",
           "type": "file",
           "file": ".claude/rules/work-mode.md",
-          "description": "/opt work-mode.md \u2014 verify-status-claims extension (synthetic tests not real verification SB-091; post-operator-fix re-read SB-112)"
+          "description": "the second-brain work-mode.md \u2014 verify-status-claims extension (synthetic tests not real verification SB-091; post-operator-fix re-read SB-112)"
         }
       ],
       "layer": "",
@@ -34865,8 +34865,8 @@
         {
           "id": "opt-work-mode-md-post-operator-fix-re-read",
           "type": "file",
-          "file": "/opt/devops-solutions-information-hub/.claude/rules/work-mode.md",
-          "description": "/opt work-mode.md verify-status-claims extension \u2014 post-operator-fix re-read requirement (SB-112 closure)"
+          "file": "$HOME/devops-solutions-information-hub/.claude/rules/work-mode.md",
+          "description": "the second-brain work-mode.md verify-status-claims extension \u2014 post-operator-fix re-read requirement (SB-112 closure)"
         }
       ],
       "layer": "",
@@ -35967,7 +35967,7 @@
           "id": "canonical-spine-update-preview",
           "type": "wiki",
           "file": "wiki/log/2026-05-08-canonical-spine-update-preview-post-promotion-spine-super-model-16-models.md",
-          "description": "Sibling preview \u2014 /opt canonical-spine post-promotion view; this preview covers /root rule files"
+          "description": "Sibling preview \u2014 the second-brain canonical-spine post-promotion view; this preview covers /root rule files"
         }
       ],
       "layer": "",
@@ -36157,13 +36157,13 @@
           "id": "opt-claude-md",
           "type": "file",
           "file": "CLAUDE.md",
-          "description": "/opt CLAUDE.md current hot-path; 10 Hard Rules currently; this proposal adds HR 16 (skipping HR 11-15 which are /root-side per /root CLAUDE.md)"
+          "description": "the second-brain CLAUDE.md current hot-path; 10 Hard Rules currently; this proposal adds HR 16 (skipping HR 11-15 which are /root-side per /root CLAUDE.md)"
         },
         {
           "id": "opt-agents-md",
           "type": "file",
           "file": "AGENTS.md",
-          "description": "/opt AGENTS.md universal cross-tool restatement; receives mirror of HR 16"
+          "description": "the second-brain AGENTS.md universal cross-tool restatement; receives mirror of HR 16"
         },
         {
           "id": "tier-elevation-pathway-fire-109",
@@ -37418,7 +37418,7 @@
           "id": "root-ghostproxy-readme",
           "type": "directive",
           "file": "/tmp/rgp-readme.md",
-          "description": "Operator-explicit transient lookup of root-ghostproxy README confirming the boundary: root = harness/ecosystem at $HOME; /opt = knowledge"
+          "description": "Operator-explicit transient lookup of root-ghostproxy README confirming the boundary: root = harness/ecosystem at $HOME; the second-brain = knowledge"
         }
       ],
       "layer": "",
@@ -37498,7 +37498,7 @@
           "id": "root-ghostproxy-readme",
           "type": "directive",
           "file": "/tmp/rgp-readme.md",
-          "description": "Operator-explicit transient lookup of root-ghostproxy README (https://github.com/cyberpunk042/root-ghostproxy) confirming /opt-vs-root boundary: root = harness/ecosystem at $HOME/global level (hooks/skills/commands/statusline/IPS); /opt = knowledge (lessons/patterns/principles/syntheses)"
+          "description": "Operator-explicit transient lookup of root-ghostproxy README (https://github.com/cyberpunk042/root-ghostproxy) confirming second-brain-vs-root boundary: root = harness/ecosystem at $HOME/global level (hooks/skills/commands/statusline/IPS); the second-brain = knowledge (lessons/patterns/principles/syntheses)"
         },
         {
           "id": "5-channel-rrf-impl",
@@ -37826,6 +37826,7 @@
         {
           "id": "session-2026-05-16",
           "type": "directive",
+          "file": "raw/notes/2026-05-16-cron-ck-weekly-distillation-1054.md",
           "description": "Multi-hour session: bootstrap CK v3 rewrite + uninstall all 4 prior profiles + patch bin/assistant + verbatim operator directives across the session"
         }
       ],
@@ -38383,7 +38384,7 @@
     {
       "path": "patterns/01_drafts/aidlc-sdlc-integration-pattern-13-gate-pipeline-mapped-to-canonical-stages-and-methodology-engine.md",
       "slug": "patterns/01_drafts/aidlc-sdlc-integration-pattern-13-gate-pipeline-mapped-to-canonical-stages-and-methodology-engine",
-      "title": "AIDLC/SDLC Integration Pattern \u2014 13-Gate Pipeline Mapped to Canonical Stages + /opt Methodology Engine",
+      "title": "AIDLC/SDLC Integration Pattern \u2014 13-Gate Pipeline Mapped to Canonical Stages + the second-brain Methodology Engine",
       "type": "pattern",
       "domain": "agent-config",
       "status": "synthesized",
@@ -38415,7 +38416,7 @@
           "id": "composability-map",
           "type": "wiki",
           "file": "wiki/patterns/01_drafts/13-gate-pipeline-composability-with-second-brain-5-tier-maturity-and-mcp-tool-layer.md",
-          "description": "Sibling \u2014 composability map; SDLC integration is composability with /opt methodology engine"
+          "description": "Sibling \u2014 composability map; SDLC integration is composability with the second-brain methodology engine"
         },
         {
           "id": "implementation-roadmap-pattern",
@@ -38859,7 +38860,7 @@
           "id": "opt-claude-settings-json",
           "type": "file",
           "file": ".claude/settings.json",
-          "description": "Existing /opt settings \u2014 investigation target for auto-compact-disable mechanism (location TBD)"
+          "description": "Existing the second-brain settings \u2014 investigation target for auto-compact-disable mechanism (location TBD)"
         }
       ],
       "layer": "",
@@ -38977,7 +38978,7 @@
           "type": "project",
           "project": "root-ghostproxy",
           "path": "/root/.claude/hooks/opt-write-block.sh",
-          "description": "Existing /root PreToolUse hook blocking knowledge-content writes to /opt second-brain. PARTIAL implementation \u2014 covers cross-project-boundary sub-axis. Pattern proposes broader coverage."
+          "description": "Existing /root PreToolUse hook blocking knowledge-content writes to the second-brain second-brain. PARTIAL implementation \u2014 covers cross-project-boundary sub-axis. Pattern proposes broader coverage."
         }
       ],
       "layer": 4,
@@ -39523,7 +39524,7 @@
           "id": "opt-pre-bash-hook-pattern-source",
           "type": "file",
           "file": ".claude/hooks/pre-bash.sh",
-          "description": "Existing /opt PreToolUse hook pattern (truncation block)"
+          "description": "Existing the second-brain PreToolUse hook pattern (truncation block)"
         }
       ],
       "layer": "",
@@ -40850,7 +40851,7 @@
           "id": "opt-loop-cron-lifecycle",
           "type": "file",
           "file": "/root/.claude/rules/loop-cron-lifecycle.md",
-          "description": "/root sister-project rule \u2014 autonomous cron-cancellation scenarios L1-L7; this pattern adapts to /opt's body-of-work-cycle context"
+          "description": "/root sister-project rule \u2014 autonomous cron-cancellation scenarios L1-L7; this pattern adapts to the second-brain's body-of-work-cycle context"
         }
       ],
       "layer": "",
@@ -42211,13 +42212,13 @@
           "id": "opt-pre-bash-hook-pattern-source",
           "type": "file",
           "file": ".claude/hooks/pre-bash.sh",
-          "description": "Existing /opt PreToolUse blocker pattern (truncation-pipe block); adapted-from source for this spec's blocker design"
+          "description": "Existing the second-brain PreToolUse blocker pattern (truncation-pipe block); adapted-from source for this spec's blocker design"
         },
         {
           "id": "opt-pre-webfetch-hook-pattern-source",
           "type": "file",
           "file": ".claude/hooks/pre-webfetch-corpus-check.sh",
-          "description": "Existing /opt PreToolUse blocker pattern (corpus URL block); adapted-from source for this spec's blocker design"
+          "description": "Existing the second-brain PreToolUse blocker pattern (corpus URL block); adapted-from source for this spec's blocker design"
         },
         {
           "id": "auto-compact-detection-failure-priority",
@@ -42301,7 +42302,7 @@
     {
       "path": "patterns/01_drafts/pre-compact-handoff-hook-implementation-spec-for-opt-path-to-tier-4-for-impl-spec-10.md",
       "slug": "patterns/01_drafts/pre-compact-handoff-hook-implementation-spec-for-opt-path-to-tier-4-for-impl-spec-10",
-      "title": "Pre-Compact Handoff Hook Implementation-Spec for /opt \u2014 Path to Tier 4 for Impl-Spec #10",
+      "title": "Pre-Compact Handoff Hook Implementation-Spec for the second-brain \u2014 Path to Tier 4 for Impl-Spec #10",
       "type": "pattern",
       "domain": "agent-config",
       "status": "synthesized",
@@ -42324,7 +42325,7 @@
           "id": "post-compact-orientation-gate-impl-spec-10",
           "type": "wiki",
           "file": "wiki/patterns/01_drafts/post-compact-orientation-gate-implementation-spec-handoff-and-mirror-enforcement.md",
-          "description": "PRIMARY parent \u2014 impl-spec #10 prescribes bidirectional design (PreCompact + PostCompact); /opt only has PostCompact wired; this spec closes the gap"
+          "description": "PRIMARY parent \u2014 impl-spec #10 prescribes bidirectional design (PreCompact + PostCompact); the second-brain only has PostCompact wired; this spec closes the gap"
         },
         {
           "id": "worked-example-4-real-session-failure",
@@ -42342,13 +42343,13 @@
           "id": "opt-post-compact-hook-existing",
           "type": "file",
           "file": ".claude/hooks/post-compact.sh",
-          "description": "Existing companion \u2014 /opt PostCompact bash hook (re-prints sacrosanct directives + pointers); this spec authors the PreCompact pair"
+          "description": "Existing companion \u2014 the second-brain PostCompact bash hook (re-prints sacrosanct directives + pointers); this spec authors the PreCompact pair"
         },
         {
           "id": "opt-post-orient-hook-existing",
           "type": "file",
           "file": ".claude/hooks/post-orient.sh",
-          "description": "Existing companion \u2014 /opt PostCompact Python hook (additionalContext directs /orient invocation); reads handoff doc per impl-spec #10"
+          "description": "Existing companion \u2014 the second-brain PostCompact Python hook (additionalContext directs /orient invocation); reads handoff doc per impl-spec #10"
         },
         {
           "id": "auto-compact-detection-failure-priority",
@@ -42360,7 +42361,7 @@
           "id": "root-pre-compact-hook-pattern",
           "type": "file",
           "file": "/root/.claude/hooks/pre-compact.sh",
-          "description": "/root sister-project pre-compact pattern \u2014 adapted-from source for /opt's pre-compact hook (per bidirectional inheritance rule)"
+          "description": "/root sister-project pre-compact pattern \u2014 adapted-from source for the second-brain's pre-compact hook (per bidirectional inheritance rule)"
         }
       ],
       "layer": "",
@@ -43313,13 +43314,13 @@
           "id": "bidirectional-inheritance-rule",
           "type": "file",
           "file": "/root/.claude/rules/self-reference.md",
-          "description": "Bidirectional inheritance pattern: $HOME source-of-truth for operational tooling; /opt inherits with adaptations; sister projects inherit from /opt OR /root depending on tooling-class"
+          "description": "Bidirectional inheritance pattern: $HOME source-of-truth for operational tooling; the second-brain inherits with adaptations; sister projects inherit from the second-brain OR /root depending on tooling-class"
         },
         {
           "id": "opt-self-reference-rule",
           "type": "file",
           "file": ".claude/rules/self-reference.md",
-          "description": "/opt self-reference rule \u2014 defines 5-project ecosystem (research-wiki + OpenArms + OpenFleet + AICP + devops-control-plane)"
+          "description": "the second-brain self-reference rule \u2014 defines 5-project ecosystem (research-wiki + OpenArms + OpenFleet + AICP + devops-control-plane)"
         }
       ],
       "layer": "",
@@ -44183,7 +44184,7 @@
           "type": "project",
           "project": "root-ghostproxy",
           "path": "/root/.claude/projects/",
-          "description": "Operator ran a live test session of root-ghostproxy in /root. Operator simultaneously worked with /opt second-brain agent. Pattern of read-only observation + lesson-distillation emerged (with failure modes when boundaries weren't respected)."
+          "description": "Operator ran a live test session of root-ghostproxy in /root. Operator simultaneously worked with second-brain agent. Pattern of read-only observation + lesson-distillation emerged (with failure modes when boundaries weren't respected)."
         },
         {
           "id": "companion-lesson-boundary",

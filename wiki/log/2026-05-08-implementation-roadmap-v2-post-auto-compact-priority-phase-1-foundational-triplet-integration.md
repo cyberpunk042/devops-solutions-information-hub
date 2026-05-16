@@ -86,7 +86,7 @@ M2: TIER-1 → TIER-2 PROMOTION (per Fire 58 + Fire 109)
 
 M3: TIER-2 → TIER-3 DEPLOYMENT (per Fire 58)
   Duration: 30-day cross-reference period per piece
-  Per /opt promotion methodology
+  Per the second-brain promotion methodology
   Dependency: M2 complete
 
 M4: STANDARDIZE-EXTENSION APPLICATIONS
@@ -100,8 +100,8 @@ M5: MODELIZE-EXTENSION APPLICATIONS
 
 M6: SISTER-PROJECT PROPAGATION PHASE 1 (per Fires 76+ + 113)
   Duration: 8-15h per project × 5 projects = 40-75h
-  Per /opt → /root → OpenArms → OpenFleet → AICP → devops-control-plane
-  Dependency: M3 complete; tier-3 prerequisite per /opt methodology
+  Per the second-brain → /root → OpenArms → OpenFleet → AICP → devops-control-plane
+  Dependency: M3 complete; tier-3 prerequisite per the second-brain methodology
 
 M7: SISTER-PROJECT PROPAGATION PHASE 2-N (long-running)
   Cross-project synchronization

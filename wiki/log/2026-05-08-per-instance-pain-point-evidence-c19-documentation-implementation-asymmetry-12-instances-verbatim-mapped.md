@@ -43,7 +43,7 @@ tags: [per-instance-evidence, c19-documentation-implementation-asymmetry, NEW-cl
 
 ## Summary
 
-Per Fire 102 worked-example (post-compact-detection-failure incident): impl-spec #10 was authored ~Fire 50 documenting bidirectional design (PreCompact + PostCompact) but only PostCompact wired in /opt's settings.json. The PRE side never materialized. This is the **documentation-implementation asymmetry pattern** — a body of work or codebase has piece-of-design documented at one tier (e.g., comprehensive Tier 1 design) but implementation state at lower tier (Tier 0 absent OR Tier 2 partial). Per Fire 65 substitution-pattern recursive-applicability audit: substitution-pattern is the META-frame; C19 IS the implementation-layer specialization. Per Fires 93-96 per-instance evidence methodology: this Fire 111 establishes **C19** as a NEW cluster discovered post-Fire-100, with 12 initial instances enumerated. C19 is distinct from C18 cross-cutting (which is multi-cluster intersection) — C19 is single-axis: design-vs-implementation tier-mismatch per piece.
+Per Fire 102 worked-example (post-compact-detection-failure incident): impl-spec #10 was authored ~Fire 50 documenting bidirectional design (PreCompact + PostCompact) but only PostCompact wired in the second-brain's settings.json. The PRE side never materialized. This is the **documentation-implementation asymmetry pattern** — a body of work or codebase has piece-of-design documented at one tier (e.g., comprehensive Tier 1 design) but implementation state at lower tier (Tier 0 absent OR Tier 2 partial). Per Fire 65 substitution-pattern recursive-applicability audit: substitution-pattern is the META-frame; C19 IS the implementation-layer specialization. Per Fires 93-96 per-instance evidence methodology: this Fire 111 establishes **C19** as a NEW cluster discovered post-Fire-100, with 12 initial instances enumerated. C19 is distinct from C18 cross-cutting (which is multi-cluster intersection) — C19 is single-axis: design-vs-implementation tier-mismatch per piece.
 
 ## C19 cluster definition
 
@@ -127,7 +127,7 @@ Designed:
   - 8 slash commands /blockers add/show/resolve/defer + /impediment set/clear/show/queue-add
   - Bidirectional flow per audience taxonomy
 Implemented:
-  - NONE — pattern designed; no infrastructure exists at /opt
+  - NONE — pattern designed; no infrastructure exists at the second-brain
   - Per Fire 110: 3 questions escalated to "blockers" but no slash command
     to register them; they live in chat-text + this Fire 111 log
 Asymmetry: 100%
@@ -177,7 +177,7 @@ Designed:
   - 1 Epic + 2 Modules + 9 Tasks specific decomposition for runtime-control
 Implemented:
   - METHODOLOGY exists (this is the proposal); no actual Epic/Module/Task
-    pages authored at /opt/wiki/backlog/
+    pages authored at wiki/backlog/
   - Fire 108 applies methodology to auto-compact priority but doesn't
     actualize backlog pages
 Asymmetry: 100% (no actualized backlog pages)
@@ -260,7 +260,7 @@ Designed:
 Implemented:
   - PARTIAL — recent fires (105+106+107) include `required_gates:` yaml block
     matching the proposed format
-  - No actual hook in /opt/.claude/hooks/ uses required_gates yet
+  - No actual hook in .claude/hooks/ uses required_gates yet
   - Standardize-proposal pending operator-confirmation
 Asymmetry: 50% (proposal authored; hooks not yet adopting)
 Tier-elevation path: operator confirms standardize proposal; existing hooks updated

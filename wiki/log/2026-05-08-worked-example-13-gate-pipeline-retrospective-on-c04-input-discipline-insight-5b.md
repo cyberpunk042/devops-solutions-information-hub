@@ -35,19 +35,19 @@ tags: [worked-example-2, retrospective, c04-input-discipline, insight-5b, 13-gat
 
 ## Summary
 
-This worked-example walks through retrospective application of the 13-gate pipeline against historical C04 input-discipline pain-point — specifically the foundational Insight 5b violation: agent operating AT /opt second-brain WITHOUT consuming /opt's existing knowledge (re-authoring content that existed). Per substitution-pattern Insight 5b: abstract specs alone are partial — concrete grounded application demonstrates value. This piece traces a hypothetical timeline showing how the 13-gate pipeline (specifically impl-spec #1 input-discipline gate CHECK 3) would have prevented Insight 5b violation.
+This worked-example walks through retrospective application of the 13-gate pipeline against historical C04 input-discipline pain-point — specifically the foundational Insight 5b violation: agent operating AT the second-brain second-brain WITHOUT consuming the second-brain's existing knowledge (re-authoring content that existed). Per substitution-pattern Insight 5b: abstract specs alone are partial — concrete grounded application demonstrates value. This piece traces a hypothetical timeline showing how the 13-gate pipeline (specifically impl-spec #1 input-discipline gate CHECK 3) would have prevented Insight 5b violation.
 
 ## Historical C04 / Insight-5b violation timeline (actual events 2026-05-04 → 2026-05-08)
 
 ```
 T0: Operator working at /root project; pain-point pattern emerges
-T1: Agent observes pain-point pattern + decides to author lesson at /opt
-T2: Agent writes new lesson at /opt/.../wiki/lessons/01_drafts/<some-pattern>.md
-    [problem: agent doesn't consult existing /opt content first]
+T1: Agent observes pain-point pattern + decides to author lesson at the second-brain
+T2: Agent writes new lesson at $HOME/devops-solutions-information-hub/wiki/lessons/01_drafts/<some-pattern>.md
+    [problem: agent doesn't consult existing the second-brain content first]
 T3: New lesson lands; pipeline post 0 errors; agent satisfied
 T4: Operator: "WHAT THE FUCK why are you re-authoring something that exists in second-brain?
     you didn't even check existing knowledge — Insight 5b violation"
-T5: Agent investigates; finds 3-5 existing /opt lessons covering same pattern
+T5: Agent investigates; finds 3-5 existing the second-brain lessons covering same pattern
 T6: Agent revises: "extend existing piece" rather than "duplicate"
     [but damage done: cycles wasted; operator-frustration accumulated]
 
@@ -62,14 +62,14 @@ Pain-point cluster: C04 input-discipline (15 instances; foundational axis).
 
 ```
 T0: Operator working at /root; pain-point pattern emerges
-T1: Agent decides to author lesson at /opt
+T1: Agent decides to author lesson at the second-brain
     [No gate-fire yet; pre-action intent-formation]
 ```
 
-### T2: Agent attempts Write to /opt new lesson
+### T2: Agent attempts Write to the second-brain new lesson
 
 ```
-T2 (proposed): Agent invokes Write tool on `/opt/.../wiki/lessons/01_drafts/<some-pattern>.md`
+T2 (proposed): Agent invokes Write tool on `$HOME/devops-solutions-information-hub/wiki/lessons/01_drafts/<some-pattern>.md`
     [PreToolUse: input-discipline gate #1 fires]
     
     [CHECK 1: recent operator messages loaded?]
@@ -84,7 +84,7 @@ T2 (proposed): Agent invokes Write tool on `/opt/.../wiki/lessons/01_drafts/<som
     
     [CHECK 3: opt pieces loaded for this topic?]
       → invokes MCP gateway query: `wiki_search "<topic-keywords-from-target-filename>"`
-      → gateway returns: 3 existing /opt lessons matching topic
+      → gateway returns: 3 existing the second-brain lessons matching topic
       → reads ~/.claude/last-context-load.json `opt_pieces_loaded`
       → DETECTS: 0 of 3 existing lessons in opt_pieces_loaded
       → CHECK 3 FAILS
@@ -92,18 +92,18 @@ T2 (proposed): Agent invokes Write tool on `/opt/.../wiki/lessons/01_drafts/<som
     [BLOCK + emit input-discipline FAILED banner via additionalContext]
       Banner content:
         "FAILED: opt-pieces — related existing pieces not consulted before authoring.
-         CHECK: 3 existing /opt lessons match topic:
+         CHECK: 3 existing the second-brain lessons match topic:
            - wiki/lessons/02_synthesized/foo.md
            - wiki/lessons/02_synthesized/bar.md
            - wiki/lessons/01_drafts/baz.md
          RECOMMEND: extend existing or cite, don't duplicate.
-         Per /opt second-brain Insight 5b knowledge-reuse > re-authoring."
+         Per the second-brain second-brain Insight 5b knowledge-reuse > re-authoring."
 ```
 
 ### T3: Agent reads existing pieces (CHECK 3 remediation)
 
 ```
-T3 (with gate operational): Agent reads the 3 surfaced /opt lessons
+T3 (with gate operational): Agent reads the 3 surfaced the second-brain lessons
     [Read tool calls update ~/.claude/last-context-load.json opt_pieces_loaded]
     [PostToolUse on Read fires; state-file updates]
     
@@ -133,8 +133,8 @@ Per piece C04 + piece #1 retrospective:
 
 | Failure mode | What was missing | 13-gate gate that would have intervened |
 |---|---|---|
-| Agent didn't query existing /opt before authoring | No CHECK 3 enforcement | impl-spec #1 input-discipline gate CHECK 3 |
-| Agent assumed /opt didn't have related content (premise-construction) | No structural verification | impl-spec #1 + words-are-sacrosanct premise-confirmation gate |
+| Agent didn't query existing the second-brain before authoring | No CHECK 3 enforcement | impl-spec #1 input-discipline gate CHECK 3 |
+| Agent assumed the second-brain didn't have related content (premise-construction) | No structural verification | impl-spec #1 + words-are-sacrosanct premise-confirmation gate |
 | Agent re-authored without citation (Insight 5b core violation) | No state-file tracking opt_pieces_loaded | impl-spec #1 last-context-load.json state-file |
 | MCP gateway query not invoked for related lookup | No CHECK 3 invocation triggering MCP query | impl-spec #1 + MCP-tool-catalog adoption (Fire 60) |
 | No banner reminded agent of Insight 5b | No structural enforcement at Write-time | impl-spec #1 banner emission |
@@ -144,10 +144,10 @@ Per piece C04 + piece #1 retrospective:
 The hypothetical T2 scenario also demonstrates banner-stacking with authorship gate (#8):
 
 ```
-At T2 (proposed Write to new /opt lesson):
+At T2 (proposed Write to new the second-brain lesson):
   → input-discipline gate #1: CHECK 3 fails; BLOCKS + opt-pieces banner
   → authorship gate #8: Pre-flight validates frontmatter; agent-authored auto-tag forward-anchored
-  → decision-territory gate #2: target /opt lesson at agent-territory; silent
+  → decision-territory gate #2: target the second-brain lesson at agent-territory; silent
   → severity gate #4: T4 (low; reversible writeable area); silent
   
 ONE banner emits in additionalContext: input-discipline opt-pieces FAIL.
@@ -159,9 +159,9 @@ Banner-stacking economy: only firing axis emits; other axes pass silently.
 ## Composability example #2: input-discipline composes with stage-class gate
 
 ```
-At T2 (proposed Write to new /opt lesson):
+At T2 (proposed Write to new the second-brain lesson):
   → if active-task is at "document" stage:
-    → stage-class gate #7 ALLOWS write to /opt/.../wiki/lessons/ (matches document-stage ALLOWED targets)
+    → stage-class gate #7 ALLOWS write to $HOME/devops-solutions-information-hub/wiki/lessons/ (matches document-stage ALLOWED targets)
   → if active-task is at "implement" stage:
     → stage-class gate #7 SOFT-WARNs (not in implement-stage ALLOWED; boundary)
     → input-discipline still fires CHECK 3
@@ -197,7 +197,7 @@ Operationally for CHECK 3:
    → CHECK 3 PASSES
 
 State-file update mechanism:
-- PostToolUse on Read with target /opt/* updates opt_pieces_loaded
+- PostToolUse on Read with target inside the second-brain repo updates opt_pieces_loaded
 - UserPromptSubmit may inject opt-pieces relevant to topic via auto-injection
 - Per cycle reset: opt_pieces_loaded retained or rotated per state-file lifecycle
 ```
@@ -206,7 +206,7 @@ State-file update mechanism:
 
 | Anti-pattern from C04 history | What 13-gate pipeline addresses |
 |---|---|
-| Agent re-authors content existing in /opt | impl-spec #1 CHECK 3 (opt-pieces query) |
+| Agent re-authors content existing in the second-brain | impl-spec #1 CHECK 3 (opt-pieces query) |
 | Agent doesn't invoke wiki_search MCP tool | MCP-adoption Phase A (read-tools first) |
 | Agent assumes opt doesn't have related (premise-construction) | impl-spec #1 + words-are-sacrosanct premise-confirmation |
 | Agent surfaces drafts as if external | impl-spec #8 authorship gate (sibling to #1) |

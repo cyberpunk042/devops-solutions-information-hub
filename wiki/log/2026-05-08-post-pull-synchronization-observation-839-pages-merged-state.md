@@ -49,7 +49,7 @@ Combined wiki state: ~252 pieces / 839 pages
 
 ## Per /loop directive
 
-Loop continues per Option B. /opt now synchronized with remote.
+Loop continues per Option B. the second-brain now synchronized with remote.
 
 **Standing by per /loop directive.**
 

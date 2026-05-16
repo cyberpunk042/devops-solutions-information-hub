@@ -66,7 +66,7 @@ Q-FIRE-168-1: Endorse Fire 99 elevation T1 → T3?
   Recommended: bundle with Fire 101 blocker-impediment-registry parallel
   
 Q-FIRE-168-2: Slash command implementation pattern?
-  Per /opt commands/ existing patterns
+  Per the second-brain commands/ existing patterns
 ```
 
 ## Closing

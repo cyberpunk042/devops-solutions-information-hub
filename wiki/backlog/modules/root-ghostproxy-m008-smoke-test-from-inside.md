@@ -43,7 +43,7 @@ Open a fresh Claude Code session in /root and verify the second-brain connection
 
 - M007 (Connect) — explicit
 - /root/CLAUDE.md must reference the gateway forwarder + the second-brain connection (per M001 routing table)
-- A reachable /opt/devops-solutions-information-hub at session time
+- A reachable $HOME/devops-solutions-information-hub at session time
 
 ## Open Questions
 
@@ -65,7 +65,7 @@ Open a fresh Claude Code session in /root and verify the second-brain connection
 | T-M008-3 | Run `python3 -m tools.gateway orient` from inside session, capture output | ⊙ pending |
 | T-M008-4 | Run `python3 -m tools.view spine`, capture output | ⊙ pending |
 | T-M008-5 | Invoke at least one research-wiki MCP tool, capture response | ⊙ pending |
-| T-M008-6 | Test failure mode: temporarily make /opt/devops-solutions-information-hub unreachable, verify clear error message; restore | ⊙ pending |
+| T-M008-6 | Test failure mode: temporarily make $HOME/devops-solutions-information-hub unreachable, verify clear error message; restore | ⊙ pending |
 | T-M008-7 | Document M008 results back in this module page (mark Done When checkboxes) | ⊙ pending |
 
 ## Relationships

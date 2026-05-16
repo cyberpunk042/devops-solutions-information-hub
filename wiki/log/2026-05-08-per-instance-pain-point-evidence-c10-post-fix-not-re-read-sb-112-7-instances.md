@@ -18,8 +18,8 @@ sources:
     description: "Sibling (Fire 133) — 14th cluster"
   - id: opt-work-mode-md-post-operator-fix-re-read
     type: file
-    file: /opt/devops-solutions-information-hub/.claude/rules/work-mode.md
-    description: "/opt work-mode.md verify-status-claims extension — post-operator-fix re-read requirement (SB-112 closure)"
+    file: $HOME/devops-solutions-information-hub/.claude/rules/work-mode.md
+    description: "the second-brain work-mode.md verify-status-claims extension — post-operator-fix re-read requirement (SB-112 closure)"
 tags: [per-instance-evidence, c10-post-fix-not-re-read, sb-112, day-arc-2026-05-08, multi-day-pain-point-resolution, fire-134]
 ---
 
@@ -27,7 +27,7 @@ tags: [per-instance-evidence, c10-post-fix-not-re-read, sb-112, day-arc-2026-05-
 
 ## Summary
 
-Per Fire 79: C10 captures pain points where operator manually edits files + says "it works"; agent acknowledges without re-reading post-fix files to UNDERSTAND working config. Per /opt work-mode.md verify-status-claims extension (SB-112): operator-empirical confirmation establishes WHAT-works; agent re-read establishes WHY-works. This Fire 134 enumerates 7 instances.
+Per Fire 79: C10 captures pain points where operator manually edits files + says "it works"; agent acknowledges without re-reading post-fix files to UNDERSTAND working config. Per the second-brain work-mode.md verify-status-claims extension (SB-112): operator-empirical confirmation establishes WHAT-works; agent re-read establishes WHY-works. This Fire 134 enumerates 7 instances.
 
 ## C10 cluster definition
 
@@ -57,7 +57,7 @@ What happened: operator manually edited settings.json + end-of-cycle-stamp.sh;
                 agent acknowledged "fix landed" without re-reading
 Operator catch: SB-112 closure rule
 Severity: HIGH (future-bug risk)
-Solution: /opt work-mode.md post-operator-fix re-read extension
+Solution: the second-brain work-mode.md post-operator-fix re-read extension
 ```
 
 ### C10-2 — Cached file state vs ground-truth (HIGH; SB-102; cousin)
@@ -100,7 +100,7 @@ Severity: N/A (anti-instance; no fix to re-read)
 Solution: continued discipline — re-read only when fix occurred
 ```
 
-### C10-6 — Post-operator-edit on /opt/CLAUDE.md (forward-anchored)
+### C10-6 — Post-operator-edit on CLAUDE.md (forward-anchored)
 
 ```
 Date: hypothetical (HR 16 proposal Fire 112; not yet edited)
@@ -156,9 +156,9 @@ C10 = SECONDARY per Fire 119; below foundational. Post-operator-fix discipline e
 
 ## Solution-piece chain
 
-- /opt work-mode.md post-operator-fix re-read extension (SB-112)
-- /opt work-mode.md re-read-before-edit extension (SB-102)
-- /opt CLAUDE.md HR 7 (verification required)
+- the second-brain work-mode.md post-operator-fix re-read extension (SB-112)
+- the second-brain work-mode.md re-read-before-edit extension (SB-102)
+- the second-brain CLAUDE.md HR 7 (verification required)
 - Re-read after operator-confirmation discipline
 
 ## Closing

@@ -37,7 +37,7 @@ tags: [claude-code, hooks, hookSpecificOutput, additionalContext, systemMessage,
 
 ## Summary
 
-In Claude Code, **the JSON output channel a hook can use is constrained per lifecycle event**, not free-form. `hookSpecificOutput.additionalContext` is valid for exactly **6 events** — SessionStart, UserPromptSubmit, PreToolUse, PostToolUse, PostToolBatch, SubagentStart — and emitting it for any other event (Stop, PostCompact, PreCompact, SessionEnd, Notification, SubagentStop, ConfigChange, etc.) causes Claude Code to reject the hook output with `"Hook JSON output validation failed — (root): Invalid input"`. The right channel for events outside the 6-event whitelist is typically `systemMessage` (display-only) or plain stdout (no schema validation, always works for command-type hooks). This is the **same class of bug** that hit /root's stamp regression on 2026-05-06 (Stop hook miswired to use `additionalContext`); it re-surfaced 2026-05-09 in /opt's `post-orient.sh` PostCompact hook. The schema-validity table at the heart of the fix was captured in the 2026-05-06 raw note but not previously promoted to a lesson — operator-stated 10x synthesis directive (sacrosanct, 2026-05-06): *"its a lot of little details.. lets make sure we properly ingest and digest and synthesize all the knowledge about this an the 10x level of it."* This lesson discharges that synthesis directive.
+In Claude Code, **the JSON output channel a hook can use is constrained per lifecycle event**, not free-form. `hookSpecificOutput.additionalContext` is valid for exactly **6 events** — SessionStart, UserPromptSubmit, PreToolUse, PostToolUse, PostToolBatch, SubagentStart — and emitting it for any other event (Stop, PostCompact, PreCompact, SessionEnd, Notification, SubagentStop, ConfigChange, etc.) causes Claude Code to reject the hook output with `"Hook JSON output validation failed — (root): Invalid input"`. The right channel for events outside the 6-event whitelist is typically `systemMessage` (display-only) or plain stdout (no schema validation, always works for command-type hooks). This is the **same class of bug** that hit /root's stamp regression on 2026-05-06 (Stop hook miswired to use `additionalContext`); it re-surfaced 2026-05-09 in the second-brain's `post-orient.sh` PostCompact hook. The schema-validity table at the heart of the fix was captured in the 2026-05-06 raw note but not previously promoted to a lesson — operator-stated 10x synthesis directive (sacrosanct, 2026-05-06): *"its a lot of little details.. lets make sure we properly ingest and digest and synthesize all the knowledge about this an the 10x level of it."* This lesson discharges that synthesis directive.
 
 ## Context
 
@@ -108,7 +108,7 @@ Operator verbatim (sacrosanct, 2026-05-06):
 
 Captured in [[2026-05-06-claude-code-hook-stamp-bug-cached-config-vs-settings-local-hot-reload]] (raw note, primary empirical source) lines 119, 122-128.
 
-### 2026-05-09 — /opt post-orient.sh PostCompact bug (re-encounter)
+### 2026-05-09 — the second-brain post-orient.sh PostCompact bug (re-encounter)
 
 Same class of bug, different event, this very session. After `/compact` ran, the second post-compaction hook (`post-orient.sh`) failed:
 
@@ -179,7 +179,7 @@ Universal across any project using Claude Code hooks:
 | Project | Risk and applicability |
 |---|---|
 | **root-ghostproxy** | High — propagates global hook config to all sister projects per [[2026-05-05-opt-in-transcension-of-root-features-to-individual-projects-directive]]; the validity table needs to be enforced at the propagation source so downstream projects don't re-encounter the bug |
-| **/opt second-brain** (this) | Empirical evidence captured here; this lesson lives here per the boundary correction (knowledge = /opt; harness/ecosystem config propagation = root-ghostproxy) |
+| **the second-brain second-brain** (this) | Empirical evidence captured here; this lesson lives here per the boundary correction (knowledge = the second-brain; harness/ecosystem config propagation = root-ghostproxy) |
 | **OpenArms / OpenFleet / AICP / devops-control-plane** | Inherit Claude Code config from root-ghostproxy propagation; rely on the same validity table; this lesson available cross-project via wiki sync |
 
 ## Relationships

@@ -54,7 +54,7 @@ C02 hook detects when agent's tool-input contains decision-words ("I'll choose /
 
 ## Instances
 
-**Instance 1: This /opt (M-C02 task per Fire 137)**
+**Instance 1: This the second-brain (M-C02 task per Fire 137)**
 **Instance 2: Sister-projects (forward-anchored)**
 
 ## Hook implementation draft (Python; agent-DRAFT)
@@ -77,7 +77,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", "/opt/devops-solutions-information-hub"))
+PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", "$HOME/devops-solutions-information-hub"))
 AUDIT_LOG = PROJECT_ROOT / ".claude" / "hooks" / "c02-decision-territory-bypass.log"
 
 DECISION_PATTERNS = [
@@ -167,7 +167,7 @@ REASON:
   agent over-stepping operator-territory causes operator-trust loss.
 
 REMEDIATION:
-  1. Verify decision is agent-territory (per /opt work-mode.md)
+  1. Verify decision is agent-territory (per the second-brain work-mode.md)
   2. Add operator-grant cite (e.g., "per operator's directive 2026-05-08")
   3. Or flag as "agent-DRAFT per SB-095" (agent-territory authorship)
   4. Or surface as operator-pending decision (per Fire 110 question-registry)

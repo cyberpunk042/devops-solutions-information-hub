@@ -105,7 +105,7 @@ Per piece #54 learning-path v2 (linear pedagogical surface) + piece #73 per-clus
 | Tier 3 (`/03_validated/`) | 0 (post-M7 sustained-metric) |
 | Tier 4 (`/04_principles/`) | 0 (post-cross-project convergence) |
 
-(Pre-existing /opt tier-4 governing principles are P1, P2, P3, P4 — separate from this work block.)
+(Pre-existing the second-brain tier-4 governing principles are P1, P2, P3, P4 — separate from this work block.)
 
 ### Cross-axis lookup matrix (3D combination)
 

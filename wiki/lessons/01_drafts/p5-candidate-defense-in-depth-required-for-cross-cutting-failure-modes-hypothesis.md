@@ -32,11 +32,11 @@ sources:
   - id: existing-4-principles
     type: file
     file: CONTEXT.md
-    description: "/opt CONTEXT.md — 4 governing principles (Infrastructure>Instructions, Structured Context>Content, Goldilocks, Declarations Aspirational Until Verified)"
+    description: "the second-brain CONTEXT.md — 4 governing principles (Infrastructure>Instructions, Structured Context>Content, Goldilocks, Declarations Aspirational Until Verified)"
   - id: opt-principles-folder
     type: file
     file: wiki/lessons/04_principles/hypothesis/
-    description: "Principles folder per /opt methodology — hypothesis in 01_drafts; promotion requires cross-project evidence"
+    description: "Principles folder per the second-brain methodology — hypothesis in 01_drafts; promotion requires cross-project evidence"
 tags: [p5-candidate, defense-in-depth, cross-cutting-failures, single-axis-insufficient, hypothesis, day-arc-2026-05-08, multi-day-pain-point-resolution, fire-118]
 ---
 
@@ -44,11 +44,11 @@ tags: [p5-candidate, defense-in-depth, cross-cutting-failures, single-axis-insuf
 
 ## Summary
 
-The /opt second-brain has 4 validated governing principles (per CONTEXT.md): P1 Infrastructure>Instructions, P2 Structured Context>Content, P3 Goldilocks, P4 Declarations Aspirational Until Verified. Per Fire 115 C18 cross-cutting cluster + Fire 102 real-session evidence + Fire 107 defense-in-depth triplet design + Fire 114 tier-weighted compliance: a 5th principle CANDIDATE emerges. **P5 Hypothesis**: *single-axis enforcement (P1's hooks/validators) is necessary but INSUFFICIENT — when failures span multiple clusters, multiple enforcement layers stacked are required (defense-in-depth)*. This hypothesis is **agent-DRAFT** per SB-095 + /opt principle-promotion methodology requiring cross-project evidence (≥3 independent sources). This Fire 118 surfaces evidence chain + falsifiability + relationship to existing P1-P4 + promotion path. Per /loop directive: continued substantive piece progressing body's principle layer.
+The the second-brain second-brain has 4 validated governing principles (per CONTEXT.md): P1 Infrastructure>Instructions, P2 Structured Context>Content, P3 Goldilocks, P4 Declarations Aspirational Until Verified. Per Fire 115 C18 cross-cutting cluster + Fire 102 real-session evidence + Fire 107 defense-in-depth triplet design + Fire 114 tier-weighted compliance: a 5th principle CANDIDATE emerges. **P5 Hypothesis**: *single-axis enforcement (P1's hooks/validators) is necessary but INSUFFICIENT — when failures span multiple clusters, multiple enforcement layers stacked are required (defense-in-depth)*. This hypothesis is **agent-DRAFT** per SB-095 + the second-brain principle-promotion methodology requiring cross-project evidence (≥3 independent sources). This Fire 118 surfaces evidence chain + falsifiability + relationship to existing P1-P4 + promotion path. Per /loop directive: continued substantive piece progressing body's principle layer.
 
 ## Context
 
-The /opt body of work has 4 governing principles (per CONTEXT.md). 100+ pieces have been authored exploring failure-mode coverage. Fire 115 C18 cross-cutting cluster surfaced empirical evidence: cross-cluster failures (4-axis combinations) are HIGH-severity dominant (53%) vs single-axis clusters' LOW-MEDIUM dominant. The 4 existing principles (P1-P4) collectively cover infrastructure-vs-instructions, structured-vs-prose-context, right-process-right-context, and verification-required-for-declarations. None explicitly addresses the cross-cutting failure-mode coverage problem. P5 candidate emerges as a structural complement.
+The the second-brain body of work has 4 governing principles (per CONTEXT.md). 100+ pieces have been authored exploring failure-mode coverage. Fire 115 C18 cross-cutting cluster surfaced empirical evidence: cross-cluster failures (4-axis combinations) are HIGH-severity dominant (53%) vs single-axis clusters' LOW-MEDIUM dominant. The 4 existing principles (P1-P4) collectively cover infrastructure-vs-instructions, structured-vs-prose-context, right-process-right-context, and verification-required-for-declarations. None explicitly addresses the cross-cutting failure-mode coverage problem. P5 candidate emerges as a structural complement.
 
 ## Insight
 
@@ -68,7 +68,7 @@ The /opt body of work has 4 governing principles (per CONTEXT.md). 100+ pieces h
 
 (≥3 independent sources required for promotion)
 
-### Source 1: /opt body's C18 cross-cutting cluster (Fire 115)
+### Source 1: the second-brain body's C18 cross-cutting cluster (Fire 115)
 
 15 instances of cross-cluster failures enumerated. Distribution:
 - 53% HIGH severity (8 of 15)
@@ -110,14 +110,14 @@ Single-layer enforcement scenarios:
 
 Defense-in-depth (3 layers) catches each failure mode independently.
 
-### Source 4: Existing /opt P1 hooks evidence
+### Source 4: Existing the second-brain P1 hooks evidence
 
-Existing /opt has 3 PreToolUse hooks (pre-bash, pre-webfetch, opt-write-block). Each is single-axis:
+Existing the second-brain has 3 PreToolUse hooks (pre-bash, pre-webfetch, opt-write-block). Each is single-axis:
 - pre-bash: catches truncation (1 axis)
 - pre-webfetch: catches corpus URL routing (1 axis)
 - opt-write-block: catches knowledge-vs-config writes (1 axis)
 
-These work well for single-axis failures (per /opt's daily operation). But cross-cutting failures (e.g., pre-bash + decision-territory: agent uses REASON env var to bypass + claims "operator-confirmed" without operator-confirm) would slip through. Each hook is necessary; together insufficient if failure spans hooks.
+These work well for single-axis failures (per the second-brain's daily operation). But cross-cutting failures (e.g., pre-bash + decision-territory: agent uses REASON env var to bypass + claims "operator-confirmed" without operator-confirm) would slip through. Each hook is necessary; together insufficient if failure spans hooks.
 
 Defense-in-depth = stacking hooks AT POINT-OF-RISK + audit-log to detect bypass-abuse.
 
@@ -155,7 +155,7 @@ If falsified: P5 demoted from candidate to historical; alternative formulation p
 
 P5 is most closely related to P1 (extends it). The relationship: P1 says "infrastructure beats instructions" (compliance-rate evidence). P5 says "single infrastructure beats no infrastructure but multi-layer infrastructure beats single for cross-cutting."
 
-## Promotion path (per /opt methodology)
+## Promotion path (per the second-brain methodology)
 
 ```
 CURRENT: P5 candidate hypothesis (this Fire 118 — wiki/lessons/01_drafts/)
@@ -257,18 +257,18 @@ Q-FIRE-118-2: P5 statement variant?
   Variant B (broader): "Multi-Layer Enforcement is Required When Single-Layer Coverage is Insufficient"
   Variant C (foundational-cluster-prioritized): "Foundational Cluster Enforcement Stacking Maximizes Defense-in-Depth Efficiency"
 
-Q-FIRE-118-3: Path-to-validated principle (per /opt methodology)?
+Q-FIRE-118-3: Path-to-validated principle (per the second-brain methodology)?
   Estimated 1-3 months; depends on sister-project evidence accumulation
 
 Q-FIRE-118-4: Defense-in-depth scope per project (per Fire 113 propagation)?
-  All 5 sister projects OR /opt + /root only OR varies per project's critical-domain count
+  All 5 sister projects OR the second-brain + /root only OR varies per project's critical-domain count
 ```
 
 ## Closing framing
 
-Per Fire 115 C18 cross-cutting evidence + Fire 107 defense-in-depth design + Fire 102 real-session empirical: P5 candidate emerges as substantive principle hypothesis. Per /opt methodology: hypothesis lives in 01_drafts; promotion requires cross-project evidence + 30-day cross-reference period. Per /loop directive *"sdlc and methodology and workflow respect is utmost important"*: principle-promotion methodology honored — this fire surfaces hypothesis without bypass-promoting.
+Per Fire 115 C18 cross-cutting evidence + Fire 107 defense-in-depth design + Fire 102 real-session empirical: P5 candidate emerges as substantive principle hypothesis. Per the second-brain methodology: hypothesis lives in 01_drafts; promotion requires cross-project evidence + 30-day cross-reference period. Per /loop directive *"sdlc and methodology and workflow respect is utmost important"*: principle-promotion methodology honored — this fire surfaces hypothesis without bypass-promoting.
 
-Per /opt's 4 existing principles (P1-P4): P5 extends P1 specifically. Combined: 5-principle framework with defense-in-depth as the cross-axis principle bridging single-axis enforcement to cross-cutting coverage.
+Per the second-brain's 4 existing principles (P1-P4): P5 extends P1 specifically. Combined: 5-principle framework with defense-in-depth as the cross-axis principle bridging single-axis enforcement to cross-cutting coverage.
 
 **The agent stands by per /loop directive. Cron continues at 90s cadence. P5 candidate awaits operator-empirical endorsement + cross-project evidence accumulation.**
 
@@ -279,8 +279,8 @@ Per /opt's 4 existing principles (P1-P4): P5 extends P1 specifically. Combined: 
 - Fire 107 auto-compact-disable defense-in-depth: `wiki/patterns/01_drafts/auto-compact-disable-implementation-spec-prevention-layer-for-impl-spec-10-defense-in-depth.md`
 - Fire 102 worked example #4: `wiki/log/2026-05-08-worked-example-4-post-compact-detection-failure-real-session-empirical-evidence-impl-spec-10-stress-test.md`
 - Fire 114 composite-compliance recomputation: `wiki/log/2026-05-08-composite-compliance-metric-recomputation-v2-tier-weighted-per-fire-103-audit-method.md`
-- /opt CONTEXT.md (4 existing principles): `CONTEXT.md`
-- /opt principle hypothesis folder: `wiki/lessons/04_principles/hypothesis/`
+- the second-brain CONTEXT.md (4 existing principles): `CONTEXT.md`
+- the second-brain principle hypothesis folder: `wiki/lessons/04_principles/hypothesis/`
 
 ## Tags
 

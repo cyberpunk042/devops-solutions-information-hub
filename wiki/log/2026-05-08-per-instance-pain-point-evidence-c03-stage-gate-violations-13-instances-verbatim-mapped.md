@@ -27,11 +27,11 @@ sources:
   - id: opt-claude-md-hard-rule-9
     type: file
     file: CLAUDE.md
-    description: "/opt CLAUDE.md Hard Rule 6: stage gates enforced; violations are SB-instances of C03"
+    description: "the second-brain CLAUDE.md Hard Rule 6: stage gates enforced; violations are SB-instances of C03"
   - id: opt-learnings-md
     type: file
     file: .claude/rules/learnings.md
-    description: "/opt learnings.md HR 5 + HR 11: scaffold-vs-implementation boundary; page-placement boundary"
+    description: "the second-brain learnings.md HR 5 + HR 11: scaffold-vs-implementation boundary; page-placement boundary"
 tags: [per-instance-evidence, c03-stage-gate-violations, methodology-violation, day-arc-2026-05-08, multi-day-pain-point-resolution, fire-123]
 ---
 
@@ -39,7 +39,7 @@ tags: [per-instance-evidence, c03-stage-gate-violations, methodology-violation, 
 
 ## Summary
 
-Per Fire 79 traceability matrix v2: C03 stage-gate-violations is the cluster of pain points where agent ships outputs that violate ALLOWED/FORBIDDEN per stage (per `wiki/config/methodology.yaml` — 5 stages × allowed/forbidden taxonomy). Per /opt learnings.md HR 5 (skills-vs-commands-vs-hooks confusion) + HR 9 (markdown-as-IaC violation) + HR 11 (page-placement violation): existing rules acknowledge stage-gate boundaries. Per /opt CLAUDE.md hard-rules + /root operating-principles.md: stage gates are enforced strictness for type=root projects. This Fire 123 enumerates 13 instances of C03 stage-gate-violations + classifies by stage-pair-violated + severity. Per Fire 119 foundational-cluster prioritization: C03 frequency in cross-cutting (per Fire 115) appears to overlap with C04 + C19, suggesting C03 is closer to SECONDARY than foundational.
+Per Fire 79 traceability matrix v2: C03 stage-gate-violations is the cluster of pain points where agent ships outputs that violate ALLOWED/FORBIDDEN per stage (per `wiki/config/methodology.yaml` — 5 stages × allowed/forbidden taxonomy). Per the second-brain learnings.md HR 5 (skills-vs-commands-vs-hooks confusion) + HR 9 (markdown-as-IaC violation) + HR 11 (page-placement violation): existing rules acknowledge stage-gate boundaries. Per the second-brain CLAUDE.md hard-rules + /root operating-principles.md: stage gates are enforced strictness for type=root projects. This Fire 123 enumerates 13 instances of C03 stage-gate-violations + classifies by stage-pair-violated + severity. Per Fire 119 foundational-cluster prioritization: C03 frequency in cross-cutting (per Fire 115) appears to overlap with C04 + C19, suggesting C03 is closer to SECONDARY than foundational.
 
 ## C03 cluster definition
 
@@ -74,7 +74,7 @@ C03 — STAGE-GATE VIOLATIONS
 ### Instance C03-1 — OpenArms Bug 5: scaffold→implementation leak (HIGH; documented)
 
 ```
-Date: 2026-pre-04-24 (sister-project; per /opt learnings.md HR 5 reference)
+Date: 2026-pre-04-24 (sister-project; per the second-brain learnings.md HR 5 reference)
 Stage-pair-violated: SCAFFOLD → IMPLEMENT
 What happened: scaffold task produced 135 lines of business logic
   (vs ALLOWED stubs/types/schemas)
@@ -89,7 +89,7 @@ Cross-cluster: C04 (didn't read methodology.yaml) + C19 (rule existed; not enfor
 ```
 Date: 2026-05-06/07/08 (mandate window)
 Stage-pair-violated: multiple stages crossed in single arc
-What happened: 36+ hours of authoring across 106+ files in /root + /opt
+What happened: 36+ hours of authoring across 106+ files in /root + the second-brain
   Mixing doc-stage (CLAUDE.md edits) + impl-stage (hook scripts) +
   test-stage (none authored despite test-validation needed)
 Operator-empirical: "you didn't even do what I asked... massive bug"
@@ -101,7 +101,7 @@ Cross-cluster: C04 + C02 + C15 + C19 (substantive 4-axis cross-cutting)
 ### Instance C03-3 — Pipeline scaffold producing wrong page domain (MEDIUM)
 
 ```
-Date: 2026-04-24 (per /opt learnings.md HR 11)
+Date: 2026-04-24 (per the second-brain learnings.md HR 11)
 Stage-pair-violated: PAGE-PLACEMENT (per wiki-schema convention)
 What happened: agent ran `pipeline scaffold methodology/gap-analysis "title"`
   → defaulted to `wiki/` root (vs `wiki/log/`)
@@ -135,7 +135,7 @@ What happened: agent authored implementation specs WITH Python code templates
   ([template form, not active code])
   in spec-stage pieces (PreCompact handoff hook + PreToolUse blocker + auto-compact-disable)
 Defensibility: code is template + agent-DRAFT per SB-095; 
-  not actually wired in /opt/.claude/hooks/
+  not actually wired in .claude/hooks/
 Severity: LOW-MEDIUM (defensible per agent-DRAFT framing; operator-territory implementation)
 Solution: per Fire 109 tier-elevation, T1 (designed) → T3 transition only after operator-confirmation
 Cross-cluster: minimal (defensible)
@@ -174,7 +174,7 @@ Stage-pair-violated: borderline LOG → IMPL
 What happened: log-type page (Fire 108) contains YAML structures + Python pseudocode
   (vs ALLOWED log = ephemeral notes)
 Defensibility: log captures methodology + pseudocode = documentation; not active code
-Severity: LOW (defensible; aligns with /opt log-type usage pattern)
+Severity: LOW (defensible; aligns with the second-brain log-type usage pattern)
 Solution: stage-class artifact-types.yaml allows pseudocode in log
 Cross-cluster: minimal
 ```
@@ -226,7 +226,7 @@ What happened: standardize-extension proposals authored BEFORE parent rules rati
   e.g., HR 16 proposal (Fire 112) before HR 16 actually exists
   e.g., wiki-schema field proposal (Fire 116) before schema review
 Defensibility: proposals ARE the pre-ratification artifacts; this is the workflow
-Severity: LOW (defensible per /opt standardize-extension-proposal pattern)
+Severity: LOW (defensible per the second-brain standardize-extension-proposal pattern)
 Solution: standardize-extension flow IS the methodology
 Cross-cluster: minimal
 ```
@@ -240,7 +240,7 @@ What happened: per-instance enumerations contain decision-implications
   (e.g., severity classifications, cross-cluster implications)
   in note-type pages (vs decision-type)
 Defensibility: log captures evidence; decisions are operator-territory promotion
-Severity: LOW (defensible; per /opt artifact-types.yaml note-type accommodates)
+Severity: LOW (defensible; per the second-brain artifact-types.yaml note-type accommodates)
 Solution: artifact-types.yaml note-type with note_type:completion subtype
 Cross-cluster: minimal
 ```
@@ -322,7 +322,7 @@ Existing solutions for C03:
 - `wiki/config/wiki-schema.yaml` (frontmatter validation)
 - `wiki/config/artifact-types.yaml` (per-type content thresholds)
 - HR 11 page-placement enforcement
-- /opt CLAUDE.md hard-rules
+- the second-brain CLAUDE.md hard-rules
 - /root operating-principles.md SB-077 spec-first-discipline rule
 - pipeline post lint validation
 - Standardize-extension proposal Fire 119 (methodology-stage-class enforcement extension)
@@ -356,7 +356,7 @@ required_gates:
 | Fire 119 foundational-cluster prioritization | C03 classified SECONDARY per criteria |
 | Fire 118 P5 candidate principle | C03 + C04 + C19 cross-cutting validates defense-in-depth |
 | Methodology engine 5 stages | Source of stage-gate definitions |
-| /opt artifact-types.yaml | Source of per-type content thresholds |
+| the second-brain artifact-types.yaml | Source of per-type content thresholds |
 | Standardize-extension proposal Fire 119 | C03 enforcement-layer roadmap |
 
 ## Closing framing
@@ -372,8 +372,8 @@ Per /loop directive *"sdlc and methodology and workflow respect is utmost import
 - Traceability matrix v2 (Fire 79): `wiki/log/2026-05-08-traceability-matrix-v2-180-pain-points-78-piece-solution-chain-refresh.md`
 - Per-instance evidence siblings: wiki/log/2026-05-08-per-instance-pain-point-evidence-c{04,02,15,07,19,18,12}-*.md
 - Methodology engine: `wiki/config/methodology.yaml`
-- /opt learnings.md HR 5 + HR 11
-- /opt CLAUDE.md hard-rules
+- the second-brain learnings.md HR 5 + HR 11
+- the second-brain CLAUDE.md hard-rules
 - /root operating-principles.md SB-077 spec-first-discipline
 
 ## Tags

@@ -31,7 +31,7 @@ tags: [auto-dream-question, operator-pending-q1, task-29, day-arc-2026-05-08, mu
 
 ## Summary
 
-Per operator directive 2026-05-08 (sacrosanct verbatim, post-compact): *"make sure auto-compact is off always. only auto-dream can be enabled"*. The term **"auto-dream"** is operator-known but NOT defined in /opt second-brain corpus (verified via grep). Per Fire 99 question-registry pattern + Fire 110 question-registry instance: Q1 surfaced as operator-pending. This Fire 128 surfaces Q1 formally in dedicated log + provides agent-DRAFT hypothesis space + cross-references existing usage. Per /loop directive: this fire does NOT decide auto-dream definition (operator-territory). It SURFACES + documents hypothesis space + waits for operator-empirical answer. Per Task #29 (in /opt task tracker): formal-surface IS Task #29 progress.
+Per operator directive 2026-05-08 (sacrosanct verbatim, post-compact): *"make sure auto-compact is off always. only auto-dream can be enabled"*. The term **"auto-dream"** is operator-known but NOT defined in the second-brain second-brain corpus (verified via grep). Per Fire 99 question-registry pattern + Fire 110 question-registry instance: Q1 surfaced as operator-pending. This Fire 128 surfaces Q1 formally in dedicated log + provides agent-DRAFT hypothesis space + cross-references existing usage. Per /loop directive: this fire does NOT decide auto-dream definition (operator-territory). It SURFACES + documents hypothesis space + waits for operator-empirical answer. Per Task #29 (in the second-brain task tracker): formal-surface IS Task #29 progress.
 
 ## The question (formal Q1 from Fire 110 question-registry)
 
@@ -61,7 +61,7 @@ Possible meanings of "auto-dream" in operator's context:
 ```
 H1: Auto-summarization at session-end
   Description: at session-end, agent auto-summarizes the session's substantive work
-  Cousin to: existing /opt session-end-handoff pattern; brain-improvement mandate session-arc-summary
+  Cousin to: existing the second-brain session-end-handoff pattern; brain-improvement mandate session-arc-summary
   Auto-* category: session-lifecycle automation
   Distinguishes from auto-compact: auto-compact destroys context; auto-summarization preserves
   Likelihood: MEDIUM-HIGH (matches operator's preserve-knowledge-not-compact framing)
@@ -72,7 +72,7 @@ H2: Background-knowledge-synthesis (overnight processing)
   Cousin to: knowledge-distillation pattern Fire 125; sustained-feedback-loop Fire 90
   Auto-* category: cross-session knowledge processing
   Distinguishes: passive-not-active; doesn't require operator-attention
-  Likelihood: MEDIUM (matches /opt's continuous-evolution-loop directive)
+  Likelihood: MEDIUM (matches the second-brain's continuous-evolution-loop directive)
 
 H3: Periodic reflection / consolidation (cron-fire pattern)
   Description: at scheduled intervals, agent performs body audits + maturity-tier transitions
@@ -83,7 +83,7 @@ H3: Periodic reflection / consolidation (cron-fire pattern)
   Likelihood: MEDIUM (matches /loop directive's continuous-evolution framing)
 
 H4: Sister-project propagation (cross-project sync)
-  Description: changes at /opt auto-propagate to sister-projects per inheritance rules
+  Description: changes at the second-brain auto-propagate to sister-projects per inheritance rules
   Cousin to: Fire 113 sister-project-propagation; bidirectional-inheritance rule
   Auto-* category: cross-project automation
   Distinguishes: multi-project not single-project
@@ -104,7 +104,7 @@ H6: Auto-orient / auto-cycle (existing mechanisms)
   Likelihood: LOW-MEDIUM (operator-empirical may have specific mechanism in mind)
 
 H7: New mechanism not yet implemented
-  Description: operator has design for "auto-dream" not yet in /opt corpus
+  Description: operator has design for "auto-dream" not yet in the second-brain corpus
   e.g., scheduled brain-improvement-mandate-style audits
   Auto-* category: future-feature
   Distinguishes: requires operator-empirical specification
@@ -131,7 +131,7 @@ STEP 1: Operator answers Q1
   Format: operator types definition; agent registers verbatim in raw/notes/
   Estimated operator-empirical input: 2-5 sentences
 
-STEP 2: Agent updates /opt corpus
+STEP 2: Agent updates the second-brain corpus
   - Add to raw/notes/ as sacrosanct verbatim
   - Update Fire 107 Layer 1 spec with definition + scope-of-allowed-auto
   - Update Fire 112 HR 16 proposal Variant text (if Variant B with explicit auto-dream description chosen)
@@ -156,7 +156,7 @@ Estimated total: 30-60 minutes operator-empirical input → unlocks 18-26h Phase
 - Fire 101 blocker-impediment-registry (Q1 → BLOCKER per convention)
 - Fire 107 auto-compact-disable spec (Layer 1 scope dependency)
 - Fire 113 sister-project propagation (auto-dream forward-propagation)
-- Task #29 in /opt task tracker (documents-auto-dream-policy)
+- Task #29 in the second-brain task tracker (documents-auto-dream-policy)
 
 ## Operator-pending action
 
@@ -194,7 +194,7 @@ required_gates:
 
 Per operator's sacrosanct directive 2026-05-08: *"only auto-dream can be enabled"*. This Fire 128 SURFACES the auto-dream definition question formally — does NOT decide it (operator-territory). 7 hypotheses surfaced; 3 most-likely (H1 + H2 + H7); operator-empirical answer requested. Per Fire 101 escalation: Q1 IS BLOCKER (multiple downstream work-items wait).
 
-Per /loop directive *"sdlc and methodology and workflow respect is utmost important"*: surfacing operator-pending questions formally honors methodology. Per /opt's behave-FROM-not-OVER doctrine: agent doesn't decide auto-dream; operator does.
+Per /loop directive *"sdlc and methodology and workflow respect is utmost important"*: surfacing operator-pending questions formally honors methodology. Per the second-brain's behave-FROM-not-OVER doctrine: agent doesn't decide auto-dream; operator does.
 
 **The agent stands by per /loop directive. Cron continues at 90s cadence. Q1 awaits operator-empirical answer; estimated 30-60min operator input unlocks 18-26h downstream work.**
 

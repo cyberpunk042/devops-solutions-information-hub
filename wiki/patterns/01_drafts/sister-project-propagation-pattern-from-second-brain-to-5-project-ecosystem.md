@@ -44,7 +44,7 @@ The 5-project ecosystem (this wiki second-brain + OpenArms + OpenFleet + AICP + 
 
 ```
                     ┌────────────────────────────┐
-                    │   /opt second-brain        │
+                    │   the second-brain second-brain        │
                     │   (this wiki)              │
                     │   - 5-tier maturity        │
                     │   - 16 named models        │
@@ -90,9 +90,9 @@ agent runs work cycle
        --title "..."
        --content "..."
                                   receives at:
-                                  /opt/.../00_inbox/contribute/
+                                  $HOME/devops-solutions-information-hub/00_inbox/contribute/
                                   
-                                  /opt agent processes:
+                                  the second-brain agent processes:
                                   - validate per wiki schema
                                   - run pipeline post
                                   - tier 0 → tier 1 transition
@@ -112,7 +112,7 @@ operator (or sister-project agent) runs:
   └─ install.sh --profile project --dest <path>
                                    │
                                    ▼
-                                  rsync from /opt:
+                                  rsync from the second-brain:
                                   - .claude/rules/*.md
                                   - .claude/hooks/*.sh
                                   - .claude/commands/*.md
@@ -190,11 +190,11 @@ Apply this propagation pattern when:
 
 **Instance 2: P1 (governing principle, tier 4) propagation evidence**:
 - Per OpenArms v8→v10 evidence (~25% prose / ~100% hooks): empirically observed across multiple projects
-- Tier 4 governing principle; canonical in /opt; sister-projects adopt P1 hooks discipline universally
+- Tier 4 governing principle; canonical in the second-brain; sister-projects adopt P1 hooks discipline universally
 - Demonstrates Stage 6-8 (cross-project convergence)
 
 **Instance 3: hook-architecture.md /install-agent-brain propagation**:
-- /opt has `.claude/rules/hook-architecture.md` (3-component pattern)
+- the second-brain has `.claude/rules/hook-architecture.md` (3-component pattern)
 - Sister-project root-ghostproxy adopts via /install-agent-brain
 - root-ghostproxy authors implementation-specs paired with each axis
 - root-ghostproxy contributes back impl-spec #2 via gateway contribute (forward-anchor when promoted)
@@ -216,7 +216,7 @@ Apply this propagation pattern when:
 
 ## Empirical Evidence
 
-Per the 64-hour /root failed-conversation arc: agent operated AT /opt second-brain WITHOUT consuming /opt's existing knowledge (Insight 5b violation). The propagation pattern (this piece) closes the OPPOSITE direction concern: how lessons authored at /opt FLOW TO sister-projects. Both directions matter — without propagation pattern, /opt becomes a write-only knowledge silo; without input-discipline (impl-spec #1 CHECK 3), sister-projects re-author existing /opt content. The combination is the closed loop.
+Per the 64-hour /root failed-conversation arc: agent operated AT the second-brain second-brain WITHOUT consuming the second-brain's existing knowledge (Insight 5b violation). The propagation pattern (this piece) closes the OPPOSITE direction concern: how lessons authored at the second-brain FLOW TO sister-projects. Both directions matter — without propagation pattern, the second-brain becomes a write-only knowledge silo; without input-discipline (impl-spec #1 CHECK 3), sister-projects re-author existing the second-brain content. The combination is the closed loop.
 
 ## Required Gates (per hook-architecture proposal #2 4th component)
 

@@ -57,7 +57,7 @@ AUDIENCE 2 — AGENT (agent-pending-question)
 AUDIENCE 3 — SISTER-PROJECT-AGENTS (cross-project-question)
   Source: agent surfaces question that's relevant cross-project
   Resolution: routes via wiki_gateway_contribute MCP; second-brain processes
-  Storage: ~/.claude/active-questions/sister-pending/<id>.json + /opt/.../00_inbox/contribute/
+  Storage: ~/.claude/active-questions/sister-pending/<id>.json + $HOME/devops-solutions-information-hub/00_inbox/contribute/
 
 AUDIENCE 4 — FUTURE-AGENTS (handoff-question)
   Source: cycle-end OR pre-compact preservation; question useful for future-cold-start agent
@@ -114,7 +114,7 @@ AUDIENCE 2 — AGENT:
 AUDIENCE 3 — SISTER-PROJECT-AGENTS:
   Agent surfaces cross-project relevance
   → state-file: sister-pending/<id>.json
-  → MCP wiki_gateway_contribute lands at /opt 00_inbox/contribute
+  → MCP wiki_gateway_contribute lands at the second-brain 00_inbox/contribute
   Sister-project agent reads + answers OR escalates
   → state-file moves to resolved/ (cross-cited)
 
@@ -213,7 +213,7 @@ Apply this question-registry when:
 - Storage moves to resolved/
 
 **Instance 2: Operator asks agent-pending question**:
-- Operator: "how does the 13-gate pipeline compose with /opt MCP tools?"
+- Operator: "how does the 13-gate pipeline compose with the second-brain MCP tools?"
 - Storage: ~/.claude/active-questions/agent-pending/<uuid>.json
 - Agent investigates: reads MCP-tool-catalog adoption pattern (Fire 60); composability map (Fire 55)
 - Agent answers with evidence-citation
@@ -222,7 +222,7 @@ Apply this question-registry when:
 **Instance 3: Cross-project question**:
 - Agent surfaces: "OpenArms applies same pattern; ASK them how they handle T1 patterns specific to harness engineering"
 - Storage: sister-pending/
-- MCP gateway-contribute lands at /opt 00_inbox/contribute
+- MCP gateway-contribute lands at the second-brain 00_inbox/contribute
 - OpenArms agent processes; answers; cross-cited
 
 **Instance 4: Pre-compact handoff question**:

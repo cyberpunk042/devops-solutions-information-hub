@@ -39,7 +39,7 @@ tags: [question-registry-instance, operator-pending-questions, auto-compact-prio
 
 ## Summary
 
-Per Fire 99 question-registry discipline pattern: agent-raised questions surfaced via the discipline (4-audience taxonomy + bidirectional flow + per-cycle scan). This Fire 110 is the **FIRST formal instance** applying that pattern — surfacing 6 questions arising from the auto-compact priority sequence (Fires 102-109) for operator-empirical resolution. Per /opt's behave-FROM-not-OVER doctrine: questions persist as registry items, NOT as ephemeral chat-text. Per Fire 99 audience taxonomy: all 6 questions target AUDIENCE 1 OPERATOR. Per Fire 99 forward-anchored: /questions slash command not yet implemented (Tier 1) — questions logged in this wiki page until slash-command lands. Per /loop directive *"sdlc and methodology and workflow respect is utmost important"*: this fire honors the methodology by formalizing operator-pending questions rather than letting them dissolve into chat-text.
+Per Fire 99 question-registry discipline pattern: agent-raised questions surfaced via the discipline (4-audience taxonomy + bidirectional flow + per-cycle scan). This Fire 110 is the **FIRST formal instance** applying that pattern — surfacing 6 questions arising from the auto-compact priority sequence (Fires 102-109) for operator-empirical resolution. Per the second-brain's behave-FROM-not-OVER doctrine: questions persist as registry items, NOT as ephemeral chat-text. Per Fire 99 audience taxonomy: all 6 questions target AUDIENCE 1 OPERATOR. Per Fire 99 forward-anchored: /questions slash command not yet implemented (Tier 1) — questions logged in this wiki page until slash-command lands. Per /loop directive *"sdlc and methodology and workflow respect is utmost important"*: this fire honors the methodology by formalizing operator-pending questions rather than letting them dissolve into chat-text.
 
 ## Question registry instance — 6 operator-pending questions
 
@@ -74,7 +74,7 @@ Q2 — Epic placement (v2.0 vs v2.1)
                               completes second-brain self-protection
             Argument for v2.1: this is post-100-piece-milestone work;
                               v2.0 was pre-defined before incident"
-  Why-blocking: backlog-page authoring at /opt's wiki/backlog/ requires parent_milestone
+  Why-blocking: backlog-page authoring at the second-brain's wiki/backlog/ requires parent_milestone
                 field; cannot author until clarified
   Status: pending
   Path-to-resolution: operator chooses; backlog page authored
@@ -207,7 +207,7 @@ When PM-mode active (per Fire 98 by-nature scan):
 | Fire 105 PreCompact handoff spec | Section 4 (operator-pending decisions) preserves these questions across compaction |
 | Fire 108 backlog-decomposition | Q2+Q3 directly affect M-AC1 task definitions |
 | Fire 109 tier-elevation pathway | Q4+Q6 directly affect pathway application scope |
-| /opt task tracker (#25-29) | Q1 ↔ Task #29; Q2-Q6 ↔ M-AC1+M-AC2+M-AC3+M-AC4 module-level questions |
+| the second-brain task tracker (#25-29) | Q1 ↔ Task #29; Q2-Q6 ↔ M-AC1+M-AC2+M-AC3+M-AC4 module-level questions |
 
 ## Anti-patterns this fire avoids
 
@@ -230,7 +230,7 @@ required_gates:
     - sacrosanct_source_citation: passed via Q1 verbatim-cite (others are agent-derived)
   pending:
     - real_session_operator_answers_received: pending — depends on operator-attention
-    - questions_to_blockers_promoted_in_tracker: pending — Q1+Q2+Q3 → /opt task tracker as blockers
+    - questions_to_blockers_promoted_in_tracker: pending — Q1+Q2+Q3 → the second-brain task tracker as blockers
     - resolved_questions_archived_to_resolved_state: pending — Fire 99 spec convention
     - questions_slash_command_implementation: pending — Fire 99 Tier 1 elevation
     - cross_compaction_question_preservation: pending Fire 105 spec implementation
@@ -273,7 +273,7 @@ implementation phase per Fire 108 decomposition.
 
 ## Closing framing
 
-This Fire 110 demonstrates Fire 99 question-registry pattern in concrete instance — the FIRST application across the body's 108 pieces. Per /loop directive *"sdlc and methodology and workflow respect is utmost important"*: surfacing operator-pending questions formally (vs ephemerally in chat) is the methodology in action. Per /opt principle 4 (Declarations Aspirational Until Verified): each question pending operator-empirical answer remains aspirational; resolution becomes verified.
+This Fire 110 demonstrates Fire 99 question-registry pattern in concrete instance — the FIRST application across the body's 108 pieces. Per /loop directive *"sdlc and methodology and workflow respect is utmost important"*: surfacing operator-pending questions formally (vs ephemerally in chat) is the methodology in action. Per the second-brain principle 4 (Declarations Aspirational Until Verified): each question pending operator-empirical answer remains aspirational; resolution becomes verified.
 
 **The agent stands by per /loop directive. Cron continues at 90s cadence. 6 operator-pending questions await answers; 3 escalated to blockers per Fire 101 convention.**
 

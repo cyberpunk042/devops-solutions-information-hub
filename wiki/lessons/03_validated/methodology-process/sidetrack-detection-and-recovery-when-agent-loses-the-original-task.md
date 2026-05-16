@@ -17,7 +17,7 @@ sources:
   - id: empirical-2026-05-05-sidetrack-traced
     type: empirical-evidence
     project: devops-solutions-information-hub
-    path: /opt/devops-solutions-information-hub/raw/notes/2026-05-05-sidetrack-detection-emperical-trace.md
+    path: $HOME/devops-solutions-information-hub/raw/notes/2026-05-05-sidetrack-detection-emperical-trace.md
     description: "Tracing in conversation: agent received original task (monitor live session + extract for second-brain). Operator made a complaint about a tangent (blockers SRP). Agent SWITCHED TASKS to 'rectify the complaint' instead of integrating the complaint into the original task. Original task was abandoned silently. Hours of agent work went into the wrong direction."
 tags: [lesson, sidetrack, task-drift, attention-management, original-task, anti-context-loss, sister-project-applicable, layer-2]
 ---

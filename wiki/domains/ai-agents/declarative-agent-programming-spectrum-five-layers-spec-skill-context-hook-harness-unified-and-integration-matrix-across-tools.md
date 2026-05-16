@@ -277,7 +277,7 @@ This is the operator's *"Pull the level from the frontier and remain independant
 
 | Destination | Consumes | Mechanism |
 |---|---|---|
-| **Wiki LLM** (this /opt second-brain) | L1 SDD specs (as `concept` / `decision` pages); L2 Skills patterns (as `pattern` pages); L3 Context (as `source-synthesis` pages); L4 Hook lessons (as `lesson` pages); L5 Harness comparisons (as `comparison` pages) | All layers contribute knowledge artifacts; wiki indexes via methodology + 9 page types |
+| **Wiki LLM** (this the second-brain second-brain) | L1 SDD specs (as `concept` / `decision` pages); L2 Skills patterns (as `pattern` pages); L3 Context (as `source-synthesis` pages); L4 Hook lessons (as `lesson` pages); L5 Harness comparisons (as `comparison` pages) | All layers contribute knowledge artifacts; wiki indexes via methodology + 9 page types |
 | **PM Tools** (Obsidian PM, Multica board) | L1 SDD (epics/modules/tasks); L2 Skills (in PM tool task descriptions); L5 Harness (Multica = both PM tool AND harness) | PM tools display the SDD work breakdown + skill invocation tracking; Multica's board IS the L5/L1 unified view |
 | **Public Obsidian** | All layers as published markdown | `wiki_sync` MCP / `tools.sync` → operator's public Obsidian vault |
 | **D10 — Pre-public-Obsidian surface** | Same artifacts, surfaced earlier in the lifecycle | Multica's WebSocket streaming (real-time) + `multica issue list --watch` + agent skills metrics |
@@ -339,9 +339,9 @@ So a Profile IS a 5-layer-unified spec. The spawn protocol (e.g., [[spawn-protoc
 
 > [!question] **D12 — Tool-specific spawn protocols beyond Multica + generic-Agent-SDK** — Should E024-M004 author spawn-protocol-openclaw, spawn-protocol-claude-code-cli-p, spawn-protocol-hermes as priority? Recommendation: Multica covers most CLIs (it's a meta-harness); direct spawn protocols only needed when bypassing Multica.
 
-> [!question] **D13 — Cross-tool skill.md portability** — Anthropic / Claude OS / Multica skill formats are converging but not identical. Should /opt produce a canonical skill.md schema (extending the Skill Systems pattern) or wait for the de-facto standard to crystallize?
+> [!question] **D13 — Cross-tool skill.md portability** — Anthropic / Claude OS / Multica skill formats are converging but not identical. Should the second-brain produce a canonical skill.md schema (extending the Skill Systems pattern) or wait for the de-facto standard to crystallize?
 
-> [!question] **D14 — Per-tool L4 hook portability** — Hooks vary most across tools (Layer 4). Should /opt produce a hook-portability lesson (or pattern) documenting per-tool event mappings? Useful when migrating workflows between tools.
+> [!question] **D14 — Per-tool L4 hook portability** — Hooks vary most across tools (Layer 4). Should the second-brain produce a hook-portability lesson (or pattern) documenting per-tool event mappings? Useful when migrating workflows between tools.
 
 > [!question] **D15 — Profile-as-source-of-truth vs distributed-config** — Currently the Profile pattern envisions one YAML as the unified spec. Operator-decision: should we go full Profile-canonical (regenerate tool-specific configs FROM the Profile each time) OR allow tool-specific configs to drift (Profile as documentation only)?
 
@@ -349,7 +349,7 @@ So a Profile IS a 5-layer-unified spec. The spawn protocol (e.g., [[spawn-protoc
 
 | Project | Spectrum applicability |
 |---|---|
-| **/opt second-brain** | This spectrum lives here; provides the unified vocabulary |
+| **the second-brain second-brain** | This spectrum lives here; provides the unified vocabulary |
 | **OpenArms / OpenFleet / AICP / dcp / root-ghostproxy / Hermes** | Each project's Profile uses all 5 layers; spawn protocols compile to each project's harness |
 | **All Claude Code users** | The spectrum applies — pick the layer per need; same vocabulary across the ecosystem |
 

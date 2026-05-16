@@ -260,11 +260,11 @@ The composite metric IS the operational-vs-aspirational gap measurement per P4. 
 
 | Component | Implementation File | Project | Status |
 |---|---|---|---|
-| 13 gate-design-spec pieces | This pattern's source-list | /opt | Authored 2026-05-08 (this multi-day work); all at 01_drafts |
+| 13 gate-design-spec pieces | This pattern's source-list | the second-brain | Authored 2026-05-08 (this multi-day work); all at 01_drafts |
 | 13 gate-implementation hooks | `.claude/hooks/<gate-name>.sh` (Python) | /root | TO AUTHOR per piece (post-Ready-for-Review) |
-| Cross-gate state files | `~/.claude/<file>` per table | /root + /opt | Some exist (active-task per SB-124d, active-mission/focus/impediment per SB-118); rest TO AUTHOR |
+| Cross-gate state files | `~/.claude/<file>` per table | /root + the second-brain | Some exist (active-task per SB-124d, active-mission/focus/impediment per SB-118); rest TO AUTHOR |
 | Pipeline orchestrator | `tools/pipeline_orchestrator.py` (gate-precedence + skip-on-bypass) | /root | TO AUTHOR (post-implementation) |
-| Composite metric aggregator | `tools/pipeline_compliance_audit.py` | /root + /opt | TO AUTHOR |
+| Composite metric aggregator | `tools/pipeline_compliance_audit.py` | /root + the second-brain | TO AUTHOR |
 | Cross-project deployment | `/install-agent-brain` extension to deploy 13-gate pipeline | /root | TO EXTEND |
 | Test files | per-gate test files + integration test for full pipeline | /root | TO AUTHOR |
 

@@ -60,7 +60,7 @@ Q-FIRE-167-1: Endorse Fire 90 elevation T2 → T3?
   Recommended: bundle with Fire 98 mode-by-nature implementation
 
 Q-FIRE-167-2: Promotion to canonical lesson post-T3?
-  Per /opt methodology: validated → 02_synthesized → 03_validated
+  Per the second-brain methodology: validated → 02_synthesized → 03_validated
 ```
 
 ## Closing

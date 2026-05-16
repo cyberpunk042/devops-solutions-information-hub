@@ -130,7 +130,7 @@ Operator's directive extends this: PM mode by nature decomposes operator-directi
 Questions are bidirectional:
 - Agent surfaces question → operator answers (operator-pending)
 - Operator asks question → agent answers (agent-pending)
-- Cross-cycle: question-tracker (per /root tools.questions or equivalent at /opt)
+- Cross-cycle: question-tracker (per /root tools.questions or equivalent at the second-brain)
 
 Mode-by-nature active governance includes BOTH directions: agent surfaces unclear-points + answers operator-questions.
 

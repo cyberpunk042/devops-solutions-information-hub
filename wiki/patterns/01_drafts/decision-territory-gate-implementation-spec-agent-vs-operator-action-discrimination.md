@@ -56,14 +56,14 @@ RULE 1 — operator-territory paths (require operator-confirmation):
 
 RULE 2 — agent-territory paths (free to edit):
   - /root/wiki/log/<date>-*.md  (session logs, agent-authored)
-  - /opt/.../wiki/lessons/01_drafts/  (agent-authored seed lessons)
-  - /opt/.../wiki/patterns/01_drafts/  (agent-authored seed patterns)
-  - /opt/.../raw/notes/  (agent-authored notes)
+  - $HOME/devops-solutions-information-hub/wiki/lessons/01_drafts/  (agent-authored seed lessons)
+  - $HOME/devops-solutions-information-hub/wiki/patterns/01_drafts/  (agent-authored seed patterns)
+  - $HOME/devops-solutions-information-hub/raw/notes/  (agent-authored notes)
   - Any file with frontmatter `authorship: agent-authored`
 
 RULE 3 — boundary paths (require explicit territory tag):
   - /root/wiki/backlog/  (modules/tasks may be agent-authored or operator-authored)
-  - /opt/.../wiki/lessons/02_synthesized+  (promoted; operator-confirmed)
+  - $HOME/devops-solutions-information-hub/wiki/lessons/02_synthesized+  (promoted; operator-confirmed)
   - Any file without explicit `authorship` frontmatter — DEFAULT to operator-territory until tagged
 ```
 
@@ -95,7 +95,7 @@ DECISION-TERRITORY GATE — operator-territory action detected
 TARGET: <path>
 WHY: <RULE-N matched: e.g. /root/.claude/rules/*.md is operator-territory>
 RECOMMEND: surface to operator via handoff doc or pending-decision flag.
-        Author this as a proposal log under /opt/.../wiki/log/ first if
+        Author this as a proposal log under $HOME/devops-solutions-information-hub/wiki/log/ first if
         the change requires operator-confirmation.
 BYPASS (if operator already authorized): REASON="<operator-grant-citation>" <action>
 ═══════════════════════════════════════════════════════════════════════════
@@ -132,8 +132,8 @@ Apply this gate when:
 - BANNER: "TARGET: methodology.md. WHY: /root/.claude/rules/*.md is operator-territory. RECOMMEND: author proposal log first."
 - AGENT RESPONSE: writes proposal log under `wiki/log/<date>-*.md` (matches sibling proposal pattern from this work block); operator reviews; gate has done its job.
 
-**Instance 2: agent writes new lesson at `/opt/.../wiki/lessons/01_drafts/`**:
-- TRIGGER: PreToolUse on Write to `/opt/.../wiki/lessons/01_drafts/<new-lesson>.md`
+**Instance 2: agent writes new lesson at `$HOME/devops-solutions-information-hub/wiki/lessons/01_drafts/`**:
+- TRIGGER: PreToolUse on Write to `$HOME/devops-solutions-information-hub/wiki/lessons/01_drafts/<new-lesson>.md`
 - CLASSIFY: RULE 2 matches (agent-territory)
 - BANNER: silent — no banner emitted; allows action.
 - AGENT RESPONSE: lesson lands at draft tier; promotion gated by operator-confirmation per piece C06 + piece #18 stress-test data.
@@ -164,7 +164,7 @@ required_gates:
     - synthetic_path_classification: passed 2026-05-08 via mock path-set scenarios (15/15)
   pending:
     - real_session_operator_territory_edit: pending — needs 5+ real-session /.claude/rules/ edits
-    - real_session_agent_territory_edit: pending — needs 5+ real-session /opt/wiki/lessons/01_drafts/ edits
+    - real_session_agent_territory_edit: pending — needs 5+ real-session wiki/lessons/01_drafts/ edits
     - real_session_boundary_path_edit: pending — needs 5+ real-session backlog/ edits
     - bypass_audit_log: pending — needs 3+ legitimate REASON= bypasses tracked
     - frontmatter_authorship_classifier: pending — depends on piece C06 frontmatter taxonomy landing

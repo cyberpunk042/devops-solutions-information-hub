@@ -46,12 +46,12 @@ Per Fire 119 + Fire 127: foundational-cluster set = C04 (input-discipline) + C02
 ```
 EVIDENCE: 15 instances per Fire 93
 EXISTING SOLUTIONS:
-  - /opt CLAUDE.md HR 1: read command output IN FULL
-  - /opt CLAUDE.md HR 4: operator words SACROSANCT
-  - /opt CLAUDE.md HR 12: read full files before synthesizing
-  - /opt CLAUDE.md HR 13: log directives verbatim BEFORE acting
-  - /opt learnings.md: HR 12 read-full-files baseline
-  - /opt work-mode.md: re-read before edit (SB-102)
+  - the second-brain CLAUDE.md HR 1: read command output IN FULL
+  - the second-brain CLAUDE.md HR 4: operator words SACROSANCT
+  - the second-brain CLAUDE.md HR 12: read full files before synthesizing
+  - the second-brain CLAUDE.md HR 13: log directives verbatim BEFORE acting
+  - the second-brain learnings.md: HR 12 read-full-files baseline
+  - the second-brain work-mode.md: re-read before edit (SB-102)
   - pre-bash hook (Tier 4 truncation block)
   - pre-webfetch corpus check (Tier 4)
 
@@ -72,10 +72,10 @@ TARGET COVERAGE: ~80% C04-axis catch
 ```
 EVIDENCE: 18 instances per Fire 94
 EXISTING SOLUTIONS:
-  - /opt work-mode.md: PO approval boundary
-  - /opt operating-principles.md: principle #2 (always flexible) + principle #11 (systemic-fix priority)
-  - /opt operating-principles.md #14 (no hallucinated artifacts)
-  - /opt rules: words-are-sacrosanct.md premise-confirmation gate
+  - the second-brain work-mode.md: PO approval boundary
+  - the second-brain operating-principles.md: principle #2 (always flexible) + principle #11 (systemic-fix priority)
+  - the second-brain operating-principles.md #14 (no hallucinated artifacts)
+  - the second-brain rules: words-are-sacrosanct.md premise-confirmation gate
   - Decision-logbook: 40 entries D001-D040
 
 NEW PROPOSED LAYER (Fire 119 spec):
@@ -94,10 +94,10 @@ TARGET COVERAGE: ~73% C02-axis catch
 ```
 EVIDENCE: 12 instances per Fire 126 + Fire 127 foundational addition
 EXISTING SOLUTIONS:
-  - /opt CONTEXT.md P4 governing principle
-  - /opt CLAUDE.md HR 7 (verification required)
-  - /opt learnings.md HR 4 (status-claim verification mandatory)
-  - /opt work-mode.md verify-status-claims (extensions: synthetic-test SB-091; post-operator-fix SB-112)
+  - the second-brain CONTEXT.md P4 governing principle
+  - the second-brain CLAUDE.md HR 7 (verification required)
+  - the second-brain learnings.md HR 4 (status-claim verification mandatory)
+  - the second-brain work-mode.md verify-status-claims (extensions: synthetic-test SB-091; post-operator-fix SB-112)
   - /root operating-principles.md #5 (mental-model-verification + evidence-priority hierarchy)
   - Sub-agent dispatch retry pattern (SB-049)
 
@@ -163,19 +163,19 @@ EPIC: E-FOUNDATIONAL-TRIPLET-ENFORCEMENT
   Module M-C04: input-discipline hook (16-24h)
     T-C04-1: design + author state-file sentinel pattern
     T-C04-2: implement PreToolUse hook
-    T-C04-3: integrate with /opt settings.json
+    T-C04-3: integrate with the second-brain settings.json
     T-C04-4: real-session test
   
   Module M-C02: decision-territory hook (16-24h)
     T-C02-1: design pattern-match for decision-words
     T-C02-2: implement PreToolUse hook + cross-reference tracker
-    T-C02-3: integrate with /opt settings.json
+    T-C02-3: integrate with the second-brain settings.json
     T-C02-4: real-session test
   
   Module M-C09: status-claim hook (12-20h)
     T-C09-1: design status-claim pattern-detection
     T-C09-2: implement PreToolUse hook + verification check
-    T-C09-3: integrate with /opt settings.json
+    T-C09-3: integrate with the second-brain settings.json
     T-C09-4: real-session test
   
   Module M-VERIFY: combined coverage measurement (4-6h)

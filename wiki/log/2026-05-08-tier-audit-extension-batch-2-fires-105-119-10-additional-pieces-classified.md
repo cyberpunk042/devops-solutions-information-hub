@@ -28,10 +28,10 @@ Per Fire 103: initial 15-piece audit. Per Fire 110 Q4 (body-audit batch ordering
 ## Tier classification per piece (agent-DRAFT)
 
 ```
-Fire 105 PreCompact handoff hook impl-spec:    T1 (designed; not wired at /opt)
+Fire 105 PreCompact handoff hook impl-spec:    T1 (designed; not wired at the second-brain)
 Fire 106 PreToolUse-blocker impl-spec:          T1 (designed; not wired)
 Fire 107 Auto-compact-disable impl-spec:        T1 (designed; not wired)
-Fire 108 Auto-compact backlog decomposition:    T1 (designed; not in /opt/wiki/backlog/)
+Fire 108 Auto-compact backlog decomposition:    T1 (designed; not in wiki/backlog/)
 Fire 109 Tier-elevation pathway pattern:        T1 (designed; methodology-only)
 Fire 113 Sister-project propagation spec:       T1 (designed; not implemented)
 Fire 114 Composite-compliance recomputation:    T2 (computed; auto-recompute pending)

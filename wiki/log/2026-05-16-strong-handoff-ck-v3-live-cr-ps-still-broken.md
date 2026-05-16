@@ -10,11 +10,16 @@ updated: 2026-05-16
 sources:
   - id: session-2026-05-16
     type: directive
+    file: raw/notes/2026-05-16-cron-ck-weekly-distillation-1054.md
     description: "Multi-hour session: bootstrap CK v3 rewrite + uninstall all 4 prior profiles + patch bin/assistant + verbatim operator directives across the session"
 tags: [handoff, session, ck-v3, retroactive-cleanup, profile-requirements, r20-sacrosanct, autonomous-assistant, cr-pending, ps-pending, rgp-uninstalled]
 ---
 
 # Strong handoff — 2026-05-16
+
+## Summary
+
+End-of-session handoff covering all 4 AI assistant profiles. CK v3 is live (autonomous untracked-cleanup + R20-compliant tracked-batch surface). CR + PS remain on v1 with the trash bugs documented. RGP is uninstalled, mission preserved. Documents the 21-requirement framework, the sacrosanct R20 boundary, `tools/assistant.py` patches, and the work queue for the next session.
 
 ## TL;DR
 

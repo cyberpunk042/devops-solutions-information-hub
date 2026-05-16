@@ -168,7 +168,7 @@ The most damning measurement: the agent that authored extension principle 10 ("d
 | **Stop hook authoring** | Whenever designing a Stop event hook. Apply: implement substance-gate per Hard Rule 14 — block bare-standby responses; require concrete-blocker subject when standby is appropriate. |
 | **Operating-principles rule authoring** | Whenever authoring discipline-rules around correction-handling. Apply: pair the rule with a Stop hook BEFORE merging the rule's `MUST` language. Per the substitution-pattern lesson, rule-authoring without enforcement is recursive substitution. |
 | **Reviewing existing operating-principles for compliance gaps** | Audit principle 10/12b/13 specifically. Each is aspirational-tier today. Cost the gates; propose the structural-fix. |
-| **Cross-project propagation via `/install-agent-brain`** | Stop hook gates are sister-project candidates. Per brain-inheritance pattern, /root authors operational tooling; sister projects inherit. The cycle-output substance gate would deploy to /opt + other sisters via `--profile project` install. |
+| **Cross-project propagation via `/install-agent-brain`** | Stop hook gates are sister-project candidates. Per brain-inheritance pattern, /root authors operational tooling; sister projects inherit. The cycle-output substance gate would deploy to the second-brain + other sisters via `--profile project` install. |
 | **Fleet-scale enforcement** | The taxonomy's `detect_correction_threshold` candidate (multi-iteration rework without root-cause fix) belongs in this Class 9 family. Fleet-scale detection at OpenFleet's intervention-log layer would validate this lesson with multi-agent evidence. |
 | **NOT applicable** | When the agent's "standing by" is justified by an EXPLICIT operator-named blocker that the agent has surfaced concretely + the loop is continuing on other work (per circuit-breaker distinction in Insight 4). |
 
@@ -231,6 +231,6 @@ Universal across the 5-project ecosystem:
 - **OpenFleet**: fleet orchestrator — `detect_correction_threshold` rule operational; Class 9 fleet-scale evidence likely available in intervention-log audits (per agent-failure-taxonomy candidate-extension)
 - **AICP**: local-AI inference — agent-action discipline applies during model-routing decisions
 - **devops-control-plane**: same at IaC-discipline layer
-- **/opt second-brain**: this lesson IS authored from /opt; the lesson's authoring demonstrated workflow respect (queried existing taxonomy first per Insight 5b discipline; positioned correctly as Class 9 candidate rather than parallel new-class authoring)
+- **the second-brain second-brain**: this lesson IS authored from the second-brain; the lesson's authoring demonstrated workflow respect (queried existing taxonomy first per Insight 5b discipline; positioned correctly as Class 9 candidate rather than parallel new-class authoring)
 
 The cure (Stop hook substance-gate + iteration-tracking-blocker) is portable via `/install-agent-brain` — structural enforcement deploys cross-project as operational tooling.

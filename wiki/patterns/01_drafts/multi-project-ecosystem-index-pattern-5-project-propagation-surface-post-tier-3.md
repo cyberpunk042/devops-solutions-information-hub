@@ -44,7 +44,7 @@ The 5-project ecosystem (this wiki second-brain + root-ghostproxy + OpenArms + O
 
 | Project | Identity | Methodology profile | Trust tier | Current 13-gate status |
 |---|---|---|---|---|
-| **/opt second-brain** (this wiki) | knowledge-hub; 5-tier maturity authority | knowledge-evolution + project-lifecycle (SFIF) | operator-supervised | source-of-truth; tier-promotes pieces |
+| **the second-brain second-brain** (this wiki) | knowledge-hub; 5-tier maturity authority | knowledge-evolution + project-lifecycle (SFIF) | operator-supervised | source-of-truth; tier-promotes pieces |
 | **/root root-ghostproxy** | system-AI-safety-setup IaC at OS-root | stage-gated (strict) | operator-supervised | this work block: 68 pieces at tier-1 awaiting confirmation |
 | **/openarms** | harness engineering; advanced agent runtime | feature-development + custom | operator-supervised | (status: pending /install-agent-brain after tier-3) |
 | **/openfleet** | agent fleet orchestrator | feature-development + integration | operator-supervised | (status: pending) |
@@ -101,7 +101,7 @@ WHENEVER /install-agent-brain runs at sister-project:
   → update this index's "Tier-3 lessons received" column
 
 WHENEVER sister-project gateway-contributes:
-  → append to /opt/.../00_inbox/contribute/<contribution>.md
+  → append to $HOME/devops-solutions-information-hub/00_inbox/contribute/<contribution>.md
   → update this index's "Cross-cycle pattern feedback" column
 
 WHENEVER second-brain promotes piece tier-2 → tier-3:
@@ -132,7 +132,7 @@ Apply this multi-project ecosystem index when:
 
 **Instance 1: root-ghostproxy reaches tier-3 + propagates to openarms**:
 - root-ghostproxy completes M7 (30-day sustained ≥85%)
-- Tier-3 pieces published to /opt canonical paths
+- Tier-3 pieces published to the second-brain canonical paths
 - openarms operator runs `/install-agent-brain /openarms`
 - 13 hooks + impl-specs deployed with openarms-specific 5-layer adaptations
 - Index updated: openarms "Tier-3 lessons received: 13/13"
@@ -140,7 +140,7 @@ Apply this multi-project ecosystem index when:
 **Instance 2: sister-project gateway-contributes new lesson**:
 - openfleet agent identifies fleet-specific pain-point not in canonical body
 - Invokes wiki_gateway_contribute --type lesson --title "fleet-coordination-state-divergence" --content "..."
-- Lands in /opt/.../00_inbox/contribute/
+- Lands in $HOME/devops-solutions-information-hub/00_inbox/contribute/
 - Pattern-recurrence aggregator queues for operator-review
 - Operator promotes; tier-2; cross-listed in this index
 

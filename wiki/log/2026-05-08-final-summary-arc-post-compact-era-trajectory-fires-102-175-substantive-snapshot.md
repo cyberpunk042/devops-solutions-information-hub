@@ -73,7 +73,7 @@ Cumulative: 74 substantive fires post-compact; 0 quality regressions
 ## Major artifacts produced (cumulative this conversation)
 
 ```
-Patterns (per /opt wiki/patterns/01_drafts/):
+Patterns (per the second-brain wiki/patterns/01_drafts/):
   - Auto-compact triplet specs (Fires 105+106+107)
   - 4-tier asymmetry audit (Fire 103)
   - Tier-elevation pathway (Fire 109)
@@ -84,7 +84,7 @@ Patterns (per /opt wiki/patterns/01_drafts/):
   - 5 hook drafts (Fires 154-158)
   - HR 16 + wiki-schema field proposals (Fires 112+116)
 
-Logs (per /opt wiki/log/):
+Logs (per the second-brain wiki/log/):
   - 7 per-instance cluster enumerations (C19/C18/C12/C03/C09/C13/C06/C05/C01/C08/C10/C11) — 11 clusters
   - 4 milestone closing-arcs (100/120/150/170)
   - 4 decision-packages (v4/v5/v6/v7)
@@ -96,7 +96,7 @@ Logs (per /opt wiki/log/):
   - Empirical instance + state observations
   - This Fire 176 final summary arc
 
-Lessons (per /opt wiki/lessons/01_drafts/):
+Lessons (per the second-brain wiki/lessons/01_drafts/):
   - P5 candidate principle (Fire 118)
 ```
 

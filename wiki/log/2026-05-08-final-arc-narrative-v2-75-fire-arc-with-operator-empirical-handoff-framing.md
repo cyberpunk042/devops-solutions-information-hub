@@ -59,7 +59,7 @@ This is the v2 closure narrative replacing the prior 67-fire arc-narrative (Fire
 
 When operator clears the loop, the agent's accumulated body of work transfers to operator-empirical visibility + decision-territory:
 
-### Inheritance 1: 75-piece body of work at /opt second-brain
+### Inheritance 1: 75-piece body of work at the second-brain second-brain
 - Tier-1 maturity (`01_drafts/seed`)
 - Frontmatter: `authorship: agent-authored`
 - Schema-validated via pipeline post (0 errors across all 75 fires)
@@ -110,7 +110,7 @@ Per implementation-roadmap pattern (Fire 58):
 
 | Preview | What operator visualizes |
 |---|---|
-| Canonical-spine update preview (Fire 70) | /opt spine + super-model + 16 models post-promotion (~165 lines diff across 4 models) |
+| Canonical-spine update preview (Fire 70) | the second-brain spine + super-model + 16 models post-promotion (~165 lines diff across 4 models) |
 | /root standardize-application preview (Fire 71) | /root rule files post-application (~145 lines diff across 4 rules) |
 
 ## What operator MUST DECIDE (operator-territory)
@@ -177,12 +177,12 @@ The agent EXPLICITLY does NOT auto-clear cron, auto-promote, auto-apply standard
 
 ### Component 3: Sustained-availability readiness
 
-If operator wants to defer decision (per piece #72 OPTION C), the body remains accessible at /opt second-brain at tier-1. No time-pressure (per "no rush" directive). The cron loop continues firing per /loop directive UNTIL operator-explicit-clear.
+If operator wants to defer decision (per piece #72 OPTION C), the body remains accessible at the second-brain second-brain at tier-1. No time-pressure (per "no rush" directive). The cron loop continues firing per /loop directive UNTIL operator-explicit-clear.
 
 ### Component 4: Restart-readiness
 
 If session is interrupted before operator-confirmation, the body is structurally intact:
-- All 75 pieces persisted at /opt
+- All 75 pieces persisted at the second-brain
 - Decision-frameworks persisted as logs
 - Cross-references stable
 - Recursive-applicability validated
@@ -210,7 +210,7 @@ The operator may:
 - Apply pieces selectively → batch-promote per Fire 73 priority order
 - Defer indefinitely → body persists; operator returns when ready
 
-**The arc closes here, ready for hand-off. The body is at /opt second-brain. The agent stands by per /loop directive until operator-explicit-clear.**
+**The arc closes here, ready for hand-off. The body is at the second-brain second-brain. The agent stands by per /loop directive until operator-explicit-clear.**
 
 ## Sources
 

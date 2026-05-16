@@ -85,7 +85,7 @@ Tier-elevation pathway depends on:
   Fire 125 (Pareto subset selection)
 
 Sister-project propagation depends on:
-  /opt Phase 1 implementation complete (Fires 154-158 wired)
+  the second-brain Phase 1 implementation complete (Fires 154-158 wired)
   Fire 113 propagation methodology
   Per-project investigation specs (Fires 189+190)
 ```

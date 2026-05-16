@@ -19,19 +19,19 @@ sources:
   - id: p4-principle-canonical
     type: file
     file: CONTEXT.md
-    description: "/opt CONTEXT.md — P4 governing principle: Declarations Aspirational Until Verified; cluster C09 IS the per-instance evidence for P4"
+    description: "the second-brain CONTEXT.md — P4 governing principle: Declarations Aspirational Until Verified; cluster C09 IS the per-instance evidence for P4"
   - id: opt-learnings-md
     type: file
     file: .claude/rules/learnings.md
-    description: "/opt learnings.md HR 4: status claims must inline verification command output"
+    description: "the second-brain learnings.md HR 4: status claims must inline verification command output"
   - id: opt-claude-md-hard-rule-7
     type: file
     file: CLAUDE.md
-    description: "/opt CLAUDE.md HR 7: status claims must inline verification (P4 instance)"
+    description: "the second-brain CLAUDE.md HR 7: status claims must inline verification (P4 instance)"
   - id: opt-work-mode-md
     type: file
     file: .claude/rules/work-mode.md
-    description: "/opt work-mode.md — verify-status-claims extension (synthetic tests not real verification SB-091; post-operator-fix re-read SB-112)"
+    description: "the second-brain work-mode.md — verify-status-claims extension (synthetic tests not real verification SB-091; post-operator-fix re-read SB-112)"
 tags: [per-instance-evidence, c09-status-claim-without-verification, p4-axis, day-arc-2026-05-08, multi-day-pain-point-resolution, fire-126]
 ---
 
@@ -39,7 +39,7 @@ tags: [per-instance-evidence, c09-status-claim-without-verification, p4-axis, da
 
 ## Summary
 
-Per Fire 79 traceability matrix v2: C09 status-claim-without-verification is the cluster of pain points where agent declares "done" / "loaded" / "verified" / "complete" without inline verification command output (per Hard Rule 7 + P4 governing principle "Declarations Aspirational Until Verified"). Per /opt learnings.md HR 4: verifying status claims is mandatory baseline. Per /opt work-mode.md verify-status-claims extension (SB-091 + SB-112 closures): synthetic tests are insufficient; post-operator-fix re-read required. This Fire 126 enumerates 12 instances of C09 with severity classification + cross-cluster intersection. Per Fire 119 foundational-cluster prioritization: C09 is FOUNDATIONAL by criteria (HIGH-severity, recurring, cross-project applicable) — should likely be Phase 1 enforcement-layer per Fire 119.
+Per Fire 79 traceability matrix v2: C09 status-claim-without-verification is the cluster of pain points where agent declares "done" / "loaded" / "verified" / "complete" without inline verification command output (per Hard Rule 7 + P4 governing principle "Declarations Aspirational Until Verified"). Per the second-brain learnings.md HR 4: verifying status claims is mandatory baseline. Per the second-brain work-mode.md verify-status-claims extension (SB-091 + SB-112 closures): synthetic tests are insufficient; post-operator-fix re-read required. This Fire 126 enumerates 12 instances of C09 with severity classification + cross-cluster intersection. Per Fire 119 foundational-cluster prioritization: C09 is FOUNDATIONAL by criteria (HIGH-severity, recurring, cross-project applicable) — should likely be Phase 1 enforcement-layer per Fire 119.
 
 ## C09 cluster definition
 
@@ -70,7 +70,7 @@ C09 — STATUS-CLAIM-WITHOUT-VERIFICATION (P4 axis)
 ### Instance C09-1 — "Context regathered" without evidence (HIGH; 2026-04-24 incident)
 
 ```
-Date: 2026-04-24 (per /opt learnings.md HR 4 source)
+Date: 2026-04-24 (per the second-brain learnings.md HR 4 source)
 Status-claim: "Context regathered."
 Evidence-shown: NONE
 Reality: agent had not read SKILLS.md, .claude/ contents, model-skills-commands-hooks.md
@@ -98,7 +98,7 @@ Cross-cluster: C04 input-discipline (didn't re-read) + C19 (rule existed without
 
 ```
 Date: 2026-05-05 statusline cascade
-Status-claim: "Verified: T1 with `CLAUDE_PROJECT_DIR=/opt/...` exits empty"
+Status-claim: "Verified: T1 with `CLAUDE_PROJECT_DIR=$HOME/devops-solutions-information-hub` exits empty"
 Evidence-shown: synthetic test crafted by agent
 Reality: synthetic test confirmed AGENT'S MENTAL MODEL of Claude Code, not real Claude Code
 Operator-catch: 12 iterations later; structurally still wrong
@@ -115,7 +115,7 @@ Status-claim: "Hook output discipline guard refined"
 Evidence-shown: bash output of `cat hook.sh` (file contents)
 Reality: file contents != fired-hook behavior; runtime-test missing
 Severity: MEDIUM (caught mid-cycle; correctable)
-Solution: per /opt hook-architecture-spec — proof-fires step (Step 6 in update-config skill)
+Solution: per the second-brain hook-architecture-spec — proof-fires step (Step 6 in update-config skill)
 Cross-cluster: C04 (didn't run runtime test)
 ```
 
@@ -281,12 +281,12 @@ C09 is FOUNDATIONAL per Fire 119; per Pareto-prioritization: invest in C09 enfor
 
 Existing solutions for C09:
 - P4 governing principle (canonical, validated)
-- /opt CLAUDE.md HR 7 (status claims must inline verification)
-- /opt learnings.md HR 4 (status-claim verification mandatory)
-- /opt work-mode.md verify-status-claims + extensions (SB-091 + SB-112)
+- the second-brain CLAUDE.md HR 7 (status claims must inline verification)
+- the second-brain learnings.md HR 4 (status-claim verification mandatory)
+- the second-brain work-mode.md verify-status-claims + extensions (SB-091 + SB-112)
 - /root operating-principles.md mental-model-verification + evidence-priority hierarchy + post-operator-fix re-read
 
-The P4 principle is body's strongest existing solution. Per-instance evidence VALIDATES P4 empirically (12 instances of P4-violation observed in /opt body history).
+The P4 principle is body's strongest existing solution. Per-instance evidence VALIDATES P4 empirically (12 instances of P4-violation observed in the second-brain body history).
 
 ## Required Gates (per hook-architecture proposal #2 4th component)
 
@@ -337,7 +337,7 @@ This is significant — C09 enforcement-layer is high-leverage addition to Phase
 | Fires 93-96 + 111 + 115 + 120 + 123 per-instance methodology | This Fire 126 is 9th cluster application |
 | Fire 119 foundational-cluster prioritization | C09 added as 3rd foundational cluster |
 | Fire 118 P5 candidate principle | C09 + C04 + C19 cross-cutting validates defense-in-depth |
-| /opt CLAUDE.md HR 7 + learnings.md HR 4 + work-mode.md | Multi-layer C09 baseline solutions |
+| the second-brain CLAUDE.md HR 7 + learnings.md HR 4 + work-mode.md | Multi-layer C09 baseline solutions |
 
 ## Closing framing
 
@@ -351,10 +351,10 @@ Per /loop directive *"sdlc and methodology and workflow respect is utmost import
 
 - Traceability matrix v2 (Fire 79): `wiki/log/2026-05-08-traceability-matrix-v2-180-pain-points-78-piece-solution-chain-refresh.md`
 - Per-instance evidence siblings: wiki/log/2026-05-08-per-instance-pain-point-evidence-c{04,02,15,07,19,18,12,03}-*.md
-- /opt CONTEXT.md P4 principle
-- /opt CLAUDE.md HR 7
-- /opt learnings.md HR 4
-- /opt work-mode.md verify-status-claims extensions
+- the second-brain CONTEXT.md P4 principle
+- the second-brain CLAUDE.md HR 7
+- the second-brain learnings.md HR 4
+- the second-brain work-mode.md verify-status-claims extensions
 - Fire 119 foundational-cluster-prioritization
 
 ## Tags

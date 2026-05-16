@@ -83,7 +83,7 @@ Operator escalated multiple times. Agent kept producing variants of the same ant
 | Step | Anti-pattern at that step | What it looks like |
 |---|---|---|
 | 1. LOG | Skip the log; respond verbally instead | "I see the bug — let me explain..." (no artefact) |
-| 1. LOG | Author log in wrong layer (cross-project boundary violation) | /opt agent writing /root iteration log to /opt; or /root agent writing to /opt directly |
+| 1. LOG | Author log in wrong layer (cross-project boundary violation) | the second-brain agent writing /root iteration log to the second-brain; or /root agent writing to the second-brain directly |
 | 2. ANALYSIS | Treat bug as isolated; don't trace root cause | "I'll be more careful next time" without identifying WHY it happened |
 | 3. IDENTIFY | Identify wrong scope (files unrelated to the bug) | Audit-greping random files instead of tracing through the dependency chain |
 | 4. FIX | Stop after identifying — never apply the fix | "Here are the files that need updating..." then waiting |

@@ -68,7 +68,7 @@ Combined cross-project Phase 6: ~34-62h calendar 2-4 weeks at 50% engagement
 
 ```
 Per Fire 165 + Fire 113 + Fire 189: post-/opt-Phase-1 + post-/root
-  Week 5+: /opt Phase 1 complete
+  Week 5+: the second-brain Phase 1 complete
   Week 6: /root adaptation
   Weeks 6-8: 4 sister projects (parallel after first investigation)
   Week 9+: Phase 7 cross-project synchronization
@@ -86,7 +86,7 @@ Q-FIRE-190-2: AICP scope — Layer 1 only OR full triplet?
 
 ## Closing
 
-4 sister projects investigation specs forward-anchored. Combined ~20-37h. Sequence post-/opt + /root.
+4 sister projects investigation specs forward-anchored. Combined ~20-37h. Sequence post-the second-brain + /root.
 
 **Standing by per /loop directive.**
 

@@ -44,18 +44,18 @@ For each instance: (a) verbatim citation; (b) failure-mode mapping; (c) Detector
 
 ### Instance C07-1: "continue" prose conflated with /checkin slash (SB-085 closure)
 
-**Verbatim citation** (per /opt routing.md SB-085 closure 2026-05-04):
+**Verbatim citation** (per the second-brain routing.md SB-085 closure 2026-05-04):
 > Operator: "continue what we were doing"
 > Agent: invoked /checkin slash command (incorrect)
 
 **Failure-mode**: prose-vs-slash discriminator failure
 **Detector matched**: Detector 1 (slash-vs-prose)
 **Stress-test scenario**: stress-test #9 Scenario 1
-**Solution chain**: C07 + impl-spec #9 Detector 1 + /opt routing.md row #2
+**Solution chain**: C07 + impl-spec #9 Detector 1 + the second-brain routing.md row #2
 
 ### Instance C07-2: "evolve" prose conflated with /distill slash
 
-**Verbatim citation** (per /opt routing.md SB-086 closure):
+**Verbatim citation** (per the second-brain routing.md SB-086 closure):
 > Operator: "evolve what we have"
 > Agent: invoked /distill slash command (incorrect; "evolve" is prose)
 

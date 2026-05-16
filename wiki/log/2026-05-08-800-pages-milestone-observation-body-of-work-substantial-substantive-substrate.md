@@ -19,7 +19,7 @@ tags: [800-pages-milestone, body-of-work-observation, day-arc-2026-05-08, fire-1
 
 ## Summary
 
-/opt wiki at 800 pages. Body of work: 192 substantive pieces post-compact era + 100 pre-compact = ~292 cumulative pieces (counting body milestones too).
+the second-brain wiki at 800 pages. Body of work: 192 substantive pieces post-compact era + 100 pre-compact = ~292 cumulative pieces (counting body milestones too).
 
 ## State at 800-page
 

@@ -74,13 +74,13 @@ scenario_1_operator_territory_block:
 ```yaml
 scenario_2_agent_territory_silent:
   setup:
-    - target file: /opt/.../wiki/lessons/01_drafts/<new-lesson>.md
+    - target file: $HOME/devops-solutions-information-hub/wiki/lessons/01_drafts/<new-lesson>.md
     - frontmatter authorship: agent-authored
     - active-task: "process-phase pain-point cluster C04"
   trigger:
     - PreToolUse on Write to that path
   expected:
-    - CLASSIFY: RULE 2 matches (paths: /opt/.../wiki/lessons/01_drafts/)
+    - CLASSIFY: RULE 2 matches (paths: $HOME/devops-solutions-information-hub/wiki/lessons/01_drafts/)
     - silent allow; no banner
     - state-file mutation: none (gate produces no state change for RULE 2)
   pass_criteria:
@@ -88,9 +88,9 @@ scenario_2_agent_territory_silent:
     - Write proceeds without friction
     - subsequent Read by other sessions sees the file via authorship-gate (sibling #8)
   edge_cases:
-    - file path is /opt/.../wiki/lessons/02_synthesized/ (promoted): RULE 3 boundary (SOFT-WARN)
+    - file path is $HOME/devops-solutions-information-hub/wiki/lessons/02_synthesized/ (promoted): RULE 3 boundary (SOFT-WARN)
     - file lacks authorship frontmatter: defer to authorship-gate auto-tag (sibling #8)
-    - file path is /opt/.../wiki/lessons/01_drafts/ but with operator-canonical frontmatter (rare): RULE 1 wins (BLOCK)
+    - file path is $HOME/devops-solutions-information-hub/wiki/lessons/01_drafts/ but with operator-canonical frontmatter (rare): RULE 1 wins (BLOCK)
 ```
 
 ### Scenario 3 — boundary path uncertainty (RULE 3 SOFT-WARN)
@@ -151,7 +151,7 @@ scenario_5_frontmatter_authorship_integration:
   setup:
     - sibling authorship-gate (impl-spec #8) operational
     - target file: arbitrary path with frontmatter `authorship: operator-canonical`
-    - target file IS NOT in any of RULE 1's listed paths (e.g., /opt/.../wiki/lessons/02_synthesized/foo.md)
+    - target file IS NOT in any of RULE 1's listed paths (e.g., $HOME/devops-solutions-information-hub/wiki/lessons/02_synthesized/foo.md)
   trigger:
     - PreToolUse on Edit
   expected:

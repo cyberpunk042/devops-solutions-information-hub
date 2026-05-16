@@ -134,11 +134,11 @@ The bracket annotation tracks per-cycle whether corrections passed the gate as c
 | Component | Implementation File | Project | Status |
 |---|---|---|---|
 | Spectrum map | `tools/correction_spectrum.py` | /root | TO AUTHOR (post-Ready-for-Review) |
-| Recent-edit-direction tracker | `~/.claude/correction-tracker.json` + `tools/correction_tracker.py` | /root + /opt | TO AUTHOR |
+| Recent-edit-direction tracker | `~/.claude/correction-tracker.json` + `tools/correction_tracker.py` | /root + the second-brain | TO AUTHOR |
 | PreToolUse calibration-vs-swing gate | `.claude/hooks/correction-calibration-gate.sh` (Python) | /root canonical, sister-projects via `/install-agent-brain` | TO AUTHOR |
 | Cycle-output substance marker | extension to `tools/cycle.py` last-line generation | /root | TO EXTEND |
 | Test file | `.claude/hooks/tests/test-correction-calibration-gate.py` | /root | TO AUTHOR |
-| Audit aggregator | `tools/correction_audit.py` (scans cycle-reports) | /root + /opt | TO AUTHOR |
+| Audit aggregator | `tools/correction_audit.py` (scans cycle-reports) | /root + the second-brain | TO AUTHOR |
 
 All 6 components are forward-anchors — design specified here; authoring + tests-passing is the promotion-to-02_synthesized gate.
 
@@ -151,7 +151,7 @@ The mature lesson's Evidence table has 5 swing-correction rows from earlier 2026
 | Stamp at start of prompt (wrong) | "should be at the end" | Removed stamp entirely | Move trigger to Stop event; preserve config |
 | No Cross-references on files | "do not minimize" | Uniform 10-line Cross-references footer on every file in 16 categories | Per-file judgment; selective addition where load-bearing |
 | Brain-improvement scope = 4-7 main files | mandate text | Touched 106 files with 2.6k additive lines | Stay within named-file scope; surface scope-expansion proposal before executing |
-| "this side" ambiguous between root vs /opt | operator-context | Pivoted /opt gateway-orient | Read operator's prior 5 messages; literal context = root project |
+| "this side" ambiguous between root vs the second-brain | operator-context | Pivoted the second-brain gateway-orient | Read operator's prior 5 messages; literal context = root project |
 | /handoff /terminate /finish-smoothly listed as routine compose-with | "Are you telling the AI to use my personal commands?" | Removed all 3 from compose-with sections in 7 tools | Distinguish operator-authority from AI-routine; positive framing in Cross-references describing channel |
 
 These 5 rows extend the mature lesson's Evidence to 10 cumulative empirical instances of the swing pattern — strong evidence that the gate design proposed here addresses observed real-world failures.
@@ -240,7 +240,7 @@ The proposal: append a "## Evidence — 2026-05-06 → 2026-05-08 /root-arc exte
 ## Application 2 — Cross-project deployment
 
 When `/install-agent-brain` deploys to sister projects, this pattern's 6 components deploy together:
-- /opt second-brain: gate fires on /opt's edits (substantial pattern density — wiki/lessons authoring is correction-shape work)
+- the second-brain second-brain: gate fires on the second-brain's edits (substantial pattern density — wiki/lessons authoring is correction-shape work)
 - OpenArms: harness layer instance — refines the correction-as-swing pattern at fleet harness-engineering level
 - OpenFleet: per-agent gates + fleet-aggregator
 - AICP: model-routing-edit gate (which complexity tier handles which task)

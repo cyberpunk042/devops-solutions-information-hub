@@ -32,7 +32,7 @@ ACTION REQUIRED POST-COMPACT (DO NOT SKIP):
   1. Run: .venv/bin/python -m tools.gateway orient
   2. Read this entire handoff doc
   3. Read raw/notes/2026-05-08-*.md most-recent (all 4 files; chronological)
-  4. Read /opt CLAUDE.md, AGENTS.md, CONTEXT.md
+  4. Read the second-brain CLAUDE.md, AGENTS.md, CONTEXT.md
   5. Read .claude/rules/work-mode.md, self-reference.md, learnings.md
   6. THEN AND ONLY THEN respond to operator OR continue prior work
   
@@ -46,7 +46,7 @@ Per Fire 102 incident: skipping regather caused operator to catch agent
 ```
 Trigger: auto-compact at 5% remaining
 Operator-known: at ~5% (acknowledged in prior message)
-PreCompact hook: NOT WIRED at /opt (per Fire 102 incident); this handoff is MANUAL
+PreCompact hook: NOT WIRED at the second-brain (per Fire 102 incident); this handoff is MANUAL
 Auto-compact disable: NOT yet implemented (Tasks #25-#26 pending)
 Auto-dream definition: NOT yet defined (Q1 BLOCKER)
 ```
@@ -134,7 +134,7 @@ NEW BLOCKERS from operator's pre-compact directive (this turn):
 #25: Investigate auto-compact 5% trigger — pending
 #26: Disable auto-compact globally — pending (operator just confirmed at 5%; was NOT implemented)
 #27: Fix post-compact detection failure — pending
-#28: Wire PreCompact hook at /opt — pending (would have helped THIS handoff)
+#28: Wire PreCompact hook at the second-brain — pending (would have helped THIS handoff)
 #29: Document auto-dream policy — pending (still Q1 BLOCKER)
 #20: Sister-project context templates — pending (separate stream)
 ```
@@ -174,7 +174,7 @@ STEP 2: Read this handoff doc IN FULL
 STEP 3: Read raw/notes/2026-05-08-*.md (4+ recent: pre-compact-imminent + 
         auto-compact-detection-failure + brain-improvement-mandate + 
         pain-points-inventory)
-STEP 4: Read /opt CLAUDE.md, AGENTS.md, CONTEXT.md (auto-loaded; verify)
+STEP 4: Read the second-brain CLAUDE.md, AGENTS.md, CONTEXT.md (auto-loaded; verify)
 STEP 5: Read .claude/rules/{work-mode,self-reference,learnings}.md
 STEP 6: Read recent wiki/log/2026-05-08-*.md (top 5 most-recent)
 

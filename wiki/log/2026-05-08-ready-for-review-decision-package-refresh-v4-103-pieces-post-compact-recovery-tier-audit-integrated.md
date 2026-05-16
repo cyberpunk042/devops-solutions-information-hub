@@ -132,14 +132,14 @@ Per /loop directive *"the at least 100 pain point... will also need to have a di
 
 ## NEW priority registered post-Fire-100 (auto-compact issue)
 
-Per operator directive 2026-05-08 (post-compact): 5 tasks logged at /opt task tracker:
+Per operator directive 2026-05-08 (post-compact): 5 tasks logged at the second-brain task tracker:
 
 | Task ID | Subject | Status | Tier (per Fire 103) |
 |---|---|---|---|
 | #25 | Investigate auto-compact 5% trigger | Pending | N/A (investigative) |
 | #26 | Disable auto-compact globally; auto-dream only allowed | Pending | Tier 1 → target Tier 4 |
 | #27 | Fix post-compact detection failure (regather before action) | Pending | Tier 2 → target Tier 4 |
-| #28 | Wire PreCompact hook at /opt | Pending | Tier 1 → target Tier 4 |
+| #28 | Wire PreCompact hook at the second-brain | Pending | Tier 1 → target Tier 4 |
 | #29 | Document "auto-dream" policy + clarify term | Pending | Tier 1 → target Tier 3 |
 
 These tasks ARE the path-to-Tier-4 for impl-spec #10's full operationalization. Per Fire 103 pattern: each task moves a specific component from designed → implemented → enforced.

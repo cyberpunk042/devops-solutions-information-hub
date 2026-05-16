@@ -141,7 +141,7 @@ This is the MECHANICAL flow. It should be NATURAL for the agent to follow it; if
 | Level | What evolves | Example |
 |---|---|---|
 | **Project** | Project's own rules + brain files + hooks + tools + methodology | root-ghostproxy fixes its own agent's bugs |
-| **Second-brain** | Cross-project lessons + patterns + standards | This lesson lives at /opt; future projects pull |
+| **Second-brain** | Cross-project lessons + patterns + standards | This lesson lives in the second-brain repo; future projects pull |
 | **Ecosystem** | Sister projects co-evolve through second-brain | OpenArms, OpenFleet, AICP, etc. inherit lessons from root-ghostproxy's experiences |
 
 All three levels are evolving simultaneously. The second-brain is the connective tissue — observations from one project become reusable lessons for all.
@@ -174,8 +174,8 @@ For these, operator's *"create the model to help you see it"* applies: when stuc
 - **All operating principles** are spec-evolution products — each principle was authored when a corresponding bug surfaced
 - **All hooks** are spec-evolution at the enforcement layer
 - **All rules** are spec-evolution at the policy layer
-- **All lessons** in `/opt/wiki/lessons/` are spec-evolution at the cross-project knowledge layer
-- **All patterns** in `/opt/wiki/patterns/` are spec-evolution at the cross-project design layer
+- **All lessons** in `wiki/lessons/` are spec-evolution at the cross-project knowledge layer
+- **All patterns** in `wiki/patterns/` are spec-evolution at the cross-project design layer
 
 ## Sister-project applicability
 

@@ -211,7 +211,7 @@ The empirical evidence for this gate's value: tools.run-tests at /root passes 31
 
 - When target file has no associated tests (uncovered tier) — gate skipped; flag for post-edit human attention
 - When edit is intentional baseline update (`REASON="baseline-update"` bypass)
-- When edit is in /opt second-brain wiki content (different validation gate — `pipeline post`, not regression tests; per `/opt`'s methodology)
+- When edit is in the second-brain second-brain wiki content (different validation gate — `pipeline post`, not regression tests; per the second-brain's methodology)
 - When file is in 01_drafts maturity tier and tests are themselves draft (different gate granularity)
 
 ## Self-Check (audit procedure for any code/config edit)

@@ -11,7 +11,7 @@ sources:
   - id: this-session-evolution-arc
     type: wiki
     file: wiki/log/2026-05-05-handoff-to-root-session.md
-    description: "/opt second-brain session 2026-05-05 — distillation arc post-/root-test-session (self-reference; this artifact captures the arc)"
+    description: "the second-brain second-brain session 2026-05-05 — distillation arc post-/root-test-session (self-reference; this artifact captures the arc)"
 tags: [handoff, cross-session, second-brain-to-root, evolution-summary, sister-project, layer-2]
 ---
 
@@ -19,15 +19,15 @@ tags: [handoff, cross-session, second-brain-to-root, evolution-summary, sister-p
 
 ## Summary
 
-Operator-mediated channel for the /root agent (next root-ghostproxy session) to pick up what evolved on the /opt second-brain side during the 2026-05-05 distillation arc that ran in parallel with a /root test session (~10:46–16:55). 19 mature lessons + 1 principle + 2 patterns landed at 03_validated / 04_principles tiers, all schema-validated via `pipeline post` with the 4 required sections (Context, Insight, Evidence, Applicability) plus Relationships + structured tables. No /root files were edited from /opt — boundary respected per the second-brain-observer pattern.
+Operator-mediated channel for the /root agent (next root-ghostproxy session) to pick up what evolved on the the second-brain second-brain side during the 2026-05-05 distillation arc that ran in parallel with a /root test session (~10:46–16:55). 19 mature lessons + 1 principle + 2 patterns landed at 03_validated / 04_principles tiers, all schema-validated via `pipeline post` with the 4 required sections (Context, Insight, Evidence, Applicability) plus Relationships + structured tables. No /root files were edited from the second-brain — boundary respected per the second-brain-observer pattern.
 
 ## Context
 
-Operator ran a /root test session earlier today (~10:46–16:55). Operator simultaneously worked with the second-brain agent (this side, /opt) to distill cross-applicable lessons + patterns from that session into the second brain.
+Operator ran a /root test session earlier today (~10:46–16:55). Operator simultaneously worked with the second-brain agent (this side, the second-brain) to distill cross-applicable lessons + patterns from that session into the second brain.
 
-This handoff is the operator-mediated channel for the /root agent (next session) to pick up what evolved on the /opt side. **No /root files were edited from /opt** — boundary respected per the second-brain-observer pattern.
+This handoff is the operator-mediated channel for the /root agent (next session) to pick up what evolved on the the second-brain side. **No /root files were edited from the second-brain** — boundary respected per the second-brain-observer pattern.
 
-## What evolved in /opt this arc
+## What evolved in the second-brain this arc
 
 ### 19 mature lessons + 1 principle + 2 patterns landed at 03_validated / 04_principles tiers
 
@@ -37,7 +37,7 @@ All passed `pipeline post` schema gate (0 validation errors). Every lesson has t
 
 These distill /root operator directives into cross-applicable form. Worth a read:
 
-| /opt path (in /opt's wiki) | /root directive distilled | Why /root agent should care |
+| the second-brain path (in the second-brain's wiki) | /root directive distilled | Why /root agent should care |
 |---|---|---|
 | `wiki/lessons/03_validated/methodology-process/agent-bug-fix-flow-must-be-mechanical-log-analyze-identify-fix-verify-confirm.md` | "evolve to fix bug flow" + workblock-priority | The 6-step sequence as cross-applicable artefact |
 | `wiki/lessons/03_validated/methodology-process/multi-branch-parallel-driving-options-mean-evaluate-not-freeze.md` | SB-076 (16:48) | Distinguishing freeze-when-options from freeze-when-corrected |
@@ -54,36 +54,36 @@ These distill /root operator directives into cross-applicable form. Worth a read
 | `wiki/lessons/03_validated/methodology-process/systemic-bugs-tracker-as-dedicated-governance-register-distinct-from-blockers-decisions-findings.md` | systemic-bugs.md emergence | 4-register SRP discipline |
 | `wiki/lessons/03_validated/methodology-process/autopilot-loop-batch-accumulator-pattern-empirically-validated.md` | mode-dual self-improvement directive | Empirical validation of autopilot + batch-accumulator |
 | `wiki/lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading.md` | broken-and-idle directive | The hook+command pair as fix |
-| `wiki/lessons/03_validated/enforcement-compliance/second-brain-agent-must-respect-sister-project-boundaries-no-direct-cross-project-file-edits.md` | "let the second-brain be its own" inverse | Cross-project boundary discipline (/opt-side mirror of /root-side rule) |
-| `wiki/lessons/03_validated/tools-architecture/hook-scope-machine-vs-project-level-cross-firing-anti-pattern.md` | opt-write-block cross-fire | Empirically RE-VALIDATED this session — policy-block.sh fired on /opt-cwd Bash via `.claude/...jsonl` substring matching credential-pattern |
+| `wiki/lessons/03_validated/enforcement-compliance/second-brain-agent-must-respect-sister-project-boundaries-no-direct-cross-project-file-edits.md` | "let the second-brain be its own" inverse | Cross-project boundary discipline (second-brain-side mirror of /root-side rule) |
+| `wiki/lessons/03_validated/tools-architecture/hook-scope-machine-vs-project-level-cross-firing-anti-pattern.md` | opt-write-block cross-fire | Empirically RE-VALIDATED this session — policy-block.sh fired on second-brain-cwd Bash via `.claude/...jsonl` substring matching credential-pattern |
 | `wiki/lessons/03_validated/knowledge-systems/second-brain-and-projects-co-evolve-never-finished-doctrine.md` | co-evolution doctrine | Strictness graduation + always-flexible meta-doctrine |
 | `wiki/lessons/04_principles/hypothesis/spec-driven-evolution-the-project-evolves-its-own-spec-to-fix-bugs-it-exhibits.md` | "WE WILL FUCKING EVOLVE TO FIX IT" | The 5th governing principle |
 
 ### 2 transcendable patterns at 03_validated/architecture/ — opt-in mechanism for sister-project adoption
 
-| /opt path | What it captures | Adoption status |
+| the second-brain path | What it captures | Adoption status |
 |---|---|---|
-| `wiki/patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles.md` | Modes (PM/Architect/Dual) + mode commands + /cycle + /loop integration | root-ghostproxy: validated; /opt: deferred (pending lens-discovery under orient discipline) |
-| `wiki/patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report.md` | SessionStart hook + /orient command + ORIENT REPORT + PostCompact mirror | root-ghostproxy: canonical first impl; /opt: **adopted 2026-05-05** (second cross-project validation) |
+| `wiki/patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles.md` | Modes (PM/Architect/Dual) + mode commands + /cycle + /loop integration | root-ghostproxy: validated; the second-brain: deferred (pending lens-discovery under orient discipline) |
+| `wiki/patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report.md` | SessionStart hook + /orient command + ORIENT REPORT + PostCompact mirror | root-ghostproxy: canonical first impl; the second-brain: **adopted 2026-05-05** (second cross-project validation) |
 
 Each pattern has a full **Adoption Guide** section (prerequisites, per-project adaptation table, files to author, settings wiring, verification, customization checklist, current-status table per project). Sister projects opt-in by following the guide manually.
 
-### /opt adopted the orient pair this arc
+### the second-brain adopted the orient pair this arc
 
-The second-brain itself opted-in to the session-orientation pair pattern. Files now in /opt:
+The second-brain itself opted-in to the session-orientation pair pattern. Files now in the second-brain:
 - `.claude/hooks/session-orient.sh` (Python, additionalContext JSON, ~85% reliability)
 - `.claude/hooks/post-orient.sh` (Python, additionalContext JSON, PostCompact mirror)
-- `.claude/commands/orient.md` (12-step deterministic chain customized for /opt's flow-state nature)
+- `.claude/commands/orient.md` (12-step deterministic chain customized for the second-brain's flow-state nature)
 - `.claude/settings.json` (added second hook entry on SessionStart + PostCompact)
 - `wiki/log/2026-05-05-orient-pair-adoption-decision.md` (adoption decision + reasoning + customizations + pattern feedback)
 
-The behavioral verification will happen on the next fresh /opt session — agent should receive the orient directive, invoke /orient, run the 12-step chain, emit structured ORIENT REPORT.
+The behavioral verification will happen on the next fresh the second-brain session — agent should receive the orient directive, invoke /orient, run the 12-step chain, emit structured ORIENT REPORT.
 
 ## What /root agent should consider
 
 ### Optional reads (not load-bearing for /root work, but useful for /root's own evolution)
 
-The lessons above are mature in /opt. /root has its own operating-principles.md (12 numbered principles) — these /opt lessons COMPOSE WITH those principles, often making them more general or naming a specific case.
+The lessons above are mature in the second-brain. /root has its own operating-principles.md (12 numbered principles) — these the second-brain lessons COMPOSE WITH those principles, often making them more general or naming a specific case.
 
 Suggested triage if /root agent has time to read:
 1. **Skim**: structural-but-not-surfaced (new variant beyond verbal-only — useful framing for diagnosing operator's "this AGAIN" comments)
@@ -93,13 +93,13 @@ Suggested triage if /root agent has time to read:
 
 Not required reading. /root agent can keep operating from its own brain. These are AVAILABLE if useful.
 
-### No /root files were modified from /opt
+### No /root files were modified from the second-brain
 
-Confirming: cross-project boundary respected. Everything authored/modified in this arc was in /opt (lessons, patterns, hooks, commands, settings, raw notes, log). No /root edits. /root's iteration log layer is untouched.
+Confirming: cross-project boundary respected. Everything authored/modified in this arc was in the second-brain (lessons, patterns, hooks, commands, settings, raw notes, log). No /root edits. /root's iteration log layer is untouched.
 
 ### Empirical re-validation of hook-scope-cross-firing lesson
 
-While running pipeline operations from /opt, /root's machine-level `policy-block.sh` cross-fired against an /opt-cwd Bash command on the substring `.claude/...jsonl` (matching credential-pattern). This is the EXACT failure mode my own `hook-scope-machine-vs-project-level-cross-firing-anti-pattern` lesson predicts. The lesson now has a second empirical instance.
+While running pipeline operations from the second-brain, /root's machine-level `policy-block.sh` cross-fired against an second-brain-cwd Bash command on the substring `.claude/...jsonl` (matching credential-pattern). This is the EXACT failure mode my own `hook-scope-machine-vs-project-level-cross-firing-anti-pattern` lesson predicts. The lesson now has a second empirical instance.
 
 Worked around per the lesson's correct discipline (read /root/wiki/log/ instead of jsonl) — did not edit /root.
 
@@ -113,16 +113,16 @@ If operator wants /root agent to engage with these on the /root side:
 
 1. **Pull this commit** + read this handoff file
 2. **Sample 2-3 lessons** from the table above (~10 min total)
-3. **Consider reflection**: does any /root operating-principle want to be augmented by referencing the cross-applicable lesson in /opt? (e.g., principle #12 → also reference correction-as-calibration-not-swing for meta-framing)
+3. **Consider reflection**: does any /root operating-principle want to be augmented by referencing the cross-applicable lesson in the second-brain? (e.g., principle #12 → also reference correction-as-calibration-not-swing for meta-framing)
 4. **Continue /root's own work** — these distillations don't redirect /root's track; they're available knowledge
 
 The /root agent's primary work continues per operator direction; this handoff is enrichment, not redirection.
 
 ## State summary
 
-- /opt: 583 pages, 0 validation errors, 7 lint issues (cosmetic)
-- /opt new artefacts this arc: 19 mature lessons + 1 principle + 2 transcendable patterns + orient pair adoption (5 files) + this handoff
-- /root: untouched from /opt (boundary respected)
+- the second-brain: 583 pages, 0 validation errors, 7 lint issues (cosmetic)
+- the second-brain new artefacts this arc: 19 mature lessons + 1 principle + 2 transcendable patterns + orient pair adoption (5 files) + this handoff
+- /root: untouched from the second-brain (boundary respected)
 - Loop status: dynamic-mode self-pacing, currently sleeping ~30min between iterations; /root iteration pool approaching natural exhaustion; loop will continue via operator engagement OR until naturally idle
 
 ## Cross-references

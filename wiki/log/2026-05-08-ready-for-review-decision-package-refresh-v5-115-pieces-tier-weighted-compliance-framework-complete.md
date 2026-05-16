@@ -174,14 +174,14 @@ Per v4 (Fire 104): 14 operator-pending decisions documented. v5 surfaces 6 NEW:
 
 ## NEW priority registered post-Fire-100 (auto-compact issue) — STATUS
 
-Per operator directive 2026-05-08 (post-compact): 5 tasks logged at /opt task tracker.
+Per operator directive 2026-05-08 (post-compact): 5 tasks logged at the second-brain task tracker.
 
 | Task ID | Subject | Status | Spec authored? | Tier (post-implementation target) |
 |---|---|---|---|---|
 | #25 | Investigate auto-compact 5% trigger | Pending | YES (Fire 107 + Fire 108 M-AC1) | N/A (investigative) |
 | #26 | Disable auto-compact globally; auto-dream only | Pending | YES (Fire 107 + Fire 108 M-AC2) | T1 → T4 |
 | #27 | Fix post-compact detection failure | Pending | YES (Fire 106 + Fire 108 M-AC3) | T2 → T4 |
-| #28 | Wire PreCompact hook at /opt | Pending | YES (Fire 105 + Fire 108 M-AC3) | T1 → T4 |
+| #28 | Wire PreCompact hook at the second-brain | Pending | YES (Fire 105 + Fire 108 M-AC3) | T1 → T4 |
 | #29 | Document "auto-dream" policy | Pending | PARTIAL (Fire 110 Q1 + Fire 112) | T1 → T3 |
 
 All 5 tasks have spec-level coverage. Implementation pending operator-confirmation per Fire 108 backlog-decomposition (18-26h estimate; 6 operator-pending Q's per Fire 110 + Fire 113).

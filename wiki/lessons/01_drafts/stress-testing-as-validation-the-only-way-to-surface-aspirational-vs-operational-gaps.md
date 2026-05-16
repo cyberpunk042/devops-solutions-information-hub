@@ -80,7 +80,7 @@ C01 cluster instances (sacrosanct verbatim, distilled from 36-instance saga):
 1. Cached settings.json miswire — file-history version persisted from earlier debug iteration; cached settings ≠ visible settings.json content
 2. Hook json output validation failures — hook emitted invalid envelope schema; only visible when actually invoked
 3. Render-position pendulum — agent oscillated start↔end render position 5+ times because correction-shape was binary (per C08 sibling cure)
-4. Cross-project-stamp conflation — agent confused /root stamp with /opt stamp configs (per C07 sibling)
+4. Cross-project-stamp conflation — agent confused /root stamp with the second-brain stamp configs (per C07 sibling)
 
 **None of these would have surfaced without operator stress-test.** Static review of the same files showed nothing wrong. Synthetic tests with constructed env vars + simulated stdin would have passed (per SB-091 family — synthetic-as-verified disease).
 
@@ -244,6 +244,6 @@ Universal across the 5-project ecosystem:
 - **OpenFleet**: fleet orchestrator — per-agent stress conditions; cross-agent compliance varies per stress level
 - **AICP**: model-routing decisions — model-tier-effectiveness measured via real-task stress, not benchmarks alone
 - **devops-control-plane**: IaC — production-stress reveals what staging-stress missed
-- **/opt second-brain**: this lesson IS authored from /opt; demonstrates self-application — the 64-hour /root failed-conversation arc IS the operator-empirical stress-test that surfaced the 15 pain-clusters of this multi-day work
+- **the second-brain second-brain**: this lesson IS authored from the second-brain; demonstrates self-application — the 64-hour /root failed-conversation arc IS the operator-empirical stress-test that surfaced the 15 pain-clusters of this multi-day work
 
 The cure (stress-test methodology + real-session evidence collection + operational compliance measurement) is portable via `/install-agent-brain` — sister projects inherit the validation-mechanism standard.

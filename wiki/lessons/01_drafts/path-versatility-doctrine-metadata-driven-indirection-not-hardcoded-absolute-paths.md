@@ -18,15 +18,15 @@ sources:
   - id: operator-directive-2026-05-05-versatility
     type: file
     file: raw/notes/2026-05-05-thorough-review-context-engineering-versatility-and-network-spec-note.md
-    description: "Operator-explicit 2026-05-05 directive — versatility / metadata-driven-configs / *'we do configs smart with proper metadata and parameters and relatives info and logic'*; named at least 1 lesson at /opt/.../wiki/lessons/ as the deliverable"
+    description: "Operator-explicit 2026-05-05 directive — versatility / metadata-driven-configs / *'we do configs smart with proper metadata and parameters and relatives info and logic'*; named at least 1 lesson at `wiki/lessons/` as the deliverable"
   - id: operator-directive-2026-05-06-fix-now
     type: file
     file: wiki/log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring.md
-    description: "Operator-explicit 2026-05-06 — *'we are coming from another system that the second-brain is inside /opt... we should just support it.. we have a relative / flexible strategy.. we need to fix this now. usualy there is the $HOME variable for example'*; triggered Stop hook fix using ${CLAUDE_PROJECT_DIR} env-indirection"
+    description: "Operator-explicit 2026-05-06 — *'we are coming from another system that the second-brain is inside the second-brain... we should just support it.. we have a relative / flexible strategy.. we need to fix this now. usualy there is the $HOME variable for example'*; triggered Stop hook fix using ${CLAUDE_PROJECT_DIR} env-indirection"
   - id: empirical-stop-hook-fix
     type: wiki
     file: .claude/hooks/end-of-cycle-stamp.sh
-    description: "Empirical anchor — line 35 changed from `Path('/opt/devops-solutions-information-hub')` to `Path(os.environ.get('CLAUDE_PROJECT_DIR', '/opt/devops-solutions-information-hub'))`; settings.json line 164 updated in parallel; loop bug ended"
+    description: "Empirical anchor — line 35 changed from `Path('$HOME/devops-solutions-information-hub')` to `Path(os.environ.get('CLAUDE_PROJECT_DIR', '$HOME/devops-solutions-information-hub'))`; settings.json line 164 updated in parallel; loop bug ended"
   - id: empirical-six-hook-completion
     type: wiki
     file: .claude/settings.json
@@ -50,7 +50,7 @@ tags: [lesson, path-versatility, metadata-driven-configs, env-indirection, hardc
 
 ## Summary
 
-Hardcoded absolute paths in agent-config files (`.claude/settings.json` hook commands, shell-snippet command files, Python scripts that compute project paths, CLAUDE.md path references in operator-injection blocks) violate cross-machine portability. When a project moves between hosts — e.g., `/opt/devops-solutions-information-hub` on a `root` user vs `/home/jfortin/devops-solutions-information-hub` on an unprivileged user — every absolute path becomes wrong-on-this-machine and downstream behavior breaks (hook scripts not found → error fed back as user message → reflexive "Standing by" agent response → another hook fire → hard infinite loop, observed empirically 2026-05-06). The fix is **metadata-driven indirection**: declare WHAT the config means structurally (e.g., "the project root"), let the runtime resolve WHERE that is via env var (`${CLAUDE_PROJECT_DIR}` for Claude Code, `$HOME` for user-relative), relative path from a known anchor, or schema field. Operator-explicit 2026-05-05: *"we do configs smart with proper metadata and parameters and relatives info and logic"*. Operator-explicit 2026-05-06 (verbatim, after the loop bug surfaced): *"we are coming from another system that the second-brain is inside /opt... we should just support it.. we have a relative / flexible strategy.. we need to fix this now. usualy there is the $HOME variable for example."* This lesson generalizes both directives into a doctrine: hardcoded absolute paths are an anti-pattern; metadata-driven indirection is infrastructure-not-instructions (P1) and must be applied uniformly across ALL configs in the same family (P4 — declaring "use env-indirection" without verifying every config does so leaves a gap).
+Hardcoded absolute paths in agent-config files (`.claude/settings.json` hook commands, shell-snippet command files, Python scripts that compute project paths, CLAUDE.md path references in operator-injection blocks) violate cross-machine portability. When a project moves between hosts — e.g., `$HOME/devops-solutions-information-hub` on a `root` user vs `/home/jfortin/devops-solutions-information-hub` on an unprivileged user — every absolute path becomes wrong-on-this-machine and downstream behavior breaks (hook scripts not found → error fed back as user message → reflexive "Standing by" agent response → another hook fire → hard infinite loop, observed empirically 2026-05-06). The fix is **metadata-driven indirection**: declare WHAT the config means structurally (e.g., "the project root"), let the runtime resolve WHERE that is via env var (`${CLAUDE_PROJECT_DIR}` for Claude Code, `$HOME` for user-relative), relative path from a known anchor, or schema field. Operator-explicit 2026-05-05: *"we do configs smart with proper metadata and parameters and relatives info and logic"*. Operator-explicit 2026-05-06 (verbatim, after the loop bug surfaced): *"we are coming from another system that the second-brain is inside the second-brain... we should just support it.. we have a relative / flexible strategy.. we need to fix this now. usualy there is the $HOME variable for example."* This lesson generalizes both directives into a doctrine: hardcoded absolute paths are an anti-pattern; metadata-driven indirection is infrastructure-not-instructions (P1) and must be applied uniformly across ALL configs in the same family (P4 — declaring "use env-indirection" without verifying every config does so leaves a gap).
 
 ## Context
 
@@ -71,7 +71,7 @@ Hardcoded absolute paths in agent-config files (`.claude/settings.json` hook com
 
 > [!tip] **Hardcoded absolute paths are a portability anti-pattern. Configs declare WHAT, runtime resolves WHERE.**
 >
-> A config file that ships with a project should declare its intent in a way the runtime can resolve correctly on any host where the project is installed. Hardcoded absolute paths bake one host's filesystem into the config; metadata-driven indirection (env var, relative resolution, schema field) decouples the structural meaning ("the project root") from the host-specific manifestation (`/opt/...` vs `/home/jfortin/...`).
+> A config file that ships with a project should declare its intent in a way the runtime can resolve correctly on any host where the project is installed. Hardcoded absolute paths bake one host's filesystem into the config; metadata-driven indirection (env var, relative resolution, schema field) decouples the structural meaning ("the project root") from the host-specific manifestation (`$HOME/devops-solutions-information-hub` vs `/home/jfortin/...`).
 >
 > The deeper insight: this is a **P1 (Infrastructure Over Instructions)** application. Env-indirection is infrastructure — the shell/harness resolves the placeholder deterministically every fire. Prose-level guidance ("remember to fix the paths when you move the project") is ~25% reliable. Env-indirection is ~100% reliable.
 >
@@ -81,11 +81,11 @@ Hardcoded absolute paths in agent-config files (`.claude/settings.json` hook com
 
 > [!success]- **Evidence 1 — 2026-05-06 Stop hook hard-loop bug (the trigger event)**
 >
-> Per [2026-05-06 session handoff](../../log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring.md): the operator's setup imported `.claude/settings.json` from another machine where the second-brain was at `/opt/devops-solutions-information-hub/`. On the new machine ($HOME=/home/jfortin/, project at `/home/jfortin/devops-solutions-information-hub/`), the Stop hook command `python3 /opt/devops-solutions-information-hub/.claude/hooks/end-of-cycle-stamp.sh` resolved to a non-existent path. The Python invocation errored; the harness fed the error back as an injected user message; the agent reflexively responded "Standing by" each time; that triggered another Stop event; **hard infinite loop**.
+> Per [2026-05-06 session handoff](../../log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring.md): the operator's setup imported `.claude/settings.json` from another machine where the second-brain was at `$HOME/devops-solutions-information-hub/`. On the new machine ($HOME=/home/jfortin/, project at `/home/jfortin/devops-solutions-information-hub/`), the Stop hook command `python3 $HOME/devops-solutions-information-hub/.claude/hooks/end-of-cycle-stamp.sh` resolved to a non-existent path. The Python invocation errored; the harness fed the error back as an injected user message; the agent reflexively responded "Standing by" each time; that triggered another Stop event; **hard infinite loop**.
 >
 > Operator's verbatim diagnosis: *"Wow ... the AI just entered a hard loop bug lol"* — surfaced after several cycles.
 >
-> Operator's verbatim fix directive: *"we are coming from another system that the second-brain is inside /opt... we should just support it.. we have a relative / flexible strategy.. we need to fix this now. usualy there is the $HOME variable for example."*
+> Operator's verbatim fix directive: *"we are coming from another system that the second-brain is inside the second-brain... we should just support it.. we have a relative / flexible strategy.. we need to fix this now. usualy there is the $HOME variable for example."*
 >
 > **The empirical pattern**: hardcoded absolute path → cross-machine breakage → cascading loop. The cost was substantial (multiple cycles before operator caught the loop signature).
 
@@ -95,12 +95,12 @@ Hardcoded absolute paths in agent-config files (`.claude/settings.json` hook com
 >
 > ```diff
 > # .claude/settings.json:164
-> - "command": "python3 /opt/devops-solutions-information-hub/.claude/hooks/end-of-cycle-stamp.sh"
+> - "command": "python3 $HOME/devops-solutions-information-hub/.claude/hooks/end-of-cycle-stamp.sh"
 > + "command": "python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/end-of-cycle-stamp.sh"
 >
 > # .claude/hooks/end-of-cycle-stamp.sh:35
-> - PROJECT_ROOT = Path("/opt/devops-solutions-information-hub")
-> + PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", "/opt/devops-solutions-information-hub"))
+> - PROJECT_ROOT = Path("$HOME/devops-solutions-information-hub")
+> + PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", "$HOME/devops-solutions-information-hub"))
 > ```
 >
 > Loop ended. But the operator's directive was *systemic* (*"we have a relative / flexible strategy"*) — the same pattern applied to ALL hooks, not just Stop. The PreWebFetch + PreBash + 2× SessionStart + 2× PostCompact still had hardcoded `/opt/` paths. **The verification gap surfaced when `/compact` fired post-fix and both PostCompact hooks failed with `No such file or directory`** — same root cause, different lifecycle event.
@@ -111,17 +111,17 @@ Hardcoded absolute paths in agent-config files (`.claude/settings.json` hook com
 >
 > ```diff
 > # .claude/settings.json — 6 hook command paths
-> - bash /opt/devops-solutions-information-hub/.claude/hooks/pre-webfetch-corpus-check.sh
+> - bash $HOME/devops-solutions-information-hub/.claude/hooks/pre-webfetch-corpus-check.sh
 > + bash ${CLAUDE_PROJECT_DIR}/.claude/hooks/pre-webfetch-corpus-check.sh
-> - bash /opt/devops-solutions-information-hub/.claude/hooks/pre-bash.sh
+> - bash $HOME/devops-solutions-information-hub/.claude/hooks/pre-bash.sh
 > + bash ${CLAUDE_PROJECT_DIR}/.claude/hooks/pre-bash.sh
-> - bash /opt/devops-solutions-information-hub/.claude/hooks/session-start.sh
+> - bash $HOME/devops-solutions-information-hub/.claude/hooks/session-start.sh
 > + bash ${CLAUDE_PROJECT_DIR}/.claude/hooks/session-start.sh
-> - python3 /opt/devops-solutions-information-hub/.claude/hooks/session-orient.sh
+> - python3 $HOME/devops-solutions-information-hub/.claude/hooks/session-orient.sh
 > + python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/session-orient.sh
-> - bash /opt/devops-solutions-information-hub/.claude/hooks/post-compact.sh
+> - bash $HOME/devops-solutions-information-hub/.claude/hooks/post-compact.sh
 > + bash ${CLAUDE_PROJECT_DIR}/.claude/hooks/post-compact.sh
-> - python3 /opt/devops-solutions-information-hub/.claude/hooks/post-orient.sh
+> - python3 $HOME/devops-solutions-information-hub/.claude/hooks/post-orient.sh
 > + python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/post-orient.sh
 > ```
 >
@@ -129,9 +129,9 @@ Hardcoded absolute paths in agent-config files (`.claude/settings.json` hook com
 
 > [!success]- **Evidence 4 — Operator's verbatim doctrine (2026-05-05, broader than just hooks)**
 >
-> Per [raw/notes/2026-05-05-thorough-review-context-engineering-versatility-and-network-spec-note.md](../../../raw/notes/2026-05-05-thorough-review-context-engineering-versatility-and-network-spec-note.md): *"we also need to make sure that we make things versatile, e.g. on this system the second-brain is at /opt/... and right now for example I am as root instead of a normal user so the path is different and stuff and if I had both the /home/jfortin and /root setup they can both connect to the second-brain, we do configs smart with proper metadata and parameters and relatives info and logic like for the system project config with the repo config / data for example."*
+> Per [raw/notes/2026-05-05-thorough-review-context-engineering-versatility-and-network-spec-note.md](../../../raw/notes/2026-05-05-thorough-review-context-engineering-versatility-and-network-spec-note.md): *"we also need to make sure that we make things versatile, e.g. on this system the second-brain is at $HOME/devops-solutions-information-hub and right now for example I am as root instead of a normal user so the path is different and stuff and if I had both the /home/jfortin and /root setup they can both connect to the second-brain, we do configs smart with proper metadata and parameters and relatives info and logic like for the system project config with the repo config / data for example."*
 >
-> The doctrine extends beyond `.claude/settings.json`: ANY config file that travels with the project must accept multiple installation contexts — root user with homedir `/root`, unprivileged user with homedir `/home/<user>`, system-level install at `/opt/...`. Metadata + parameters + relatives + logic, not hardcoded absolutes.
+> The doctrine extends beyond `.claude/settings.json`: ANY config file that travels with the project must accept multiple installation contexts — root user with homedir `/root`, unprivileged user with homedir `/home/<user>`, system-level install at `$HOME/devops-solutions-information-hub`. Metadata + parameters + relatives + logic, not hardcoded absolutes.
 
 ## Applicability
 
@@ -140,7 +140,7 @@ Hardcoded absolute paths in agent-config files (`.claude/settings.json` hook com
 > | Stance | Apply this doctrine? |
 > |---|---|
 > | Agent-config that travels with the project (`.claude/settings.json`, `.claude/hooks/*.sh`, `.claude/commands/*.md`, project-shipped Python scripts that resolve paths) | YES — use env-indirection or relative paths |
-> | Operator-authored instructional banners that mention `/opt/...` or other paths descriptively (e.g., `session-orient.sh`'s DIRECTIVE string) | OPERATOR-DECISION — fix is symmetrical but content is operator-authored; surface for explicit authorization rather than unilateral edit |
+> | Operator-authored instructional banners that mention `$HOME/devops-solutions-information-hub` or other paths descriptively (e.g., `session-orient.sh`'s DIRECTIVE string) | OPERATOR-DECISION — fix is symmetrical but content is operator-authored; surface for explicit authorization rather than unilateral edit |
 > | Cross-project sister-projects.yaml `path: ~/...` declarations | YES — `~` is canonical; `Path.expanduser()` resolves at runtime per user |
 > | Genuine fixed external resources (`/var/log/syslog`, `/etc/hosts`, `/proc/cpuinfo`) | NO — those paths ARE the resource identity, not project-relative |
 > | Repo-internal paths that git already handles (`.gitignore`, `.gitattributes`) | NO — git tooling makes them repo-relative implicitly |
@@ -156,7 +156,7 @@ Hardcoded absolute paths in agent-config files (`.claude/settings.json` hook com
 > 2. **Classify each**: (a) genuine fixed external — leave; (b) project-internal path — parameterize.
 > 3. **Substitute**:
 >    - For shell command lines in `.claude/settings.json` and `.claude/commands/*.md`: `${CLAUDE_PROJECT_DIR}` (Claude Code's canonical project-root env var)
->    - For Python that the project ships: `os.environ.get("CLAUDE_PROJECT_DIR", "/opt/devops-solutions-information-hub")` — env var with documented fallback for backward compat on the original-install machine
+>    - For Python that the project ships: `os.environ.get("CLAUDE_PROJECT_DIR", "$HOME/devops-solutions-information-hub")` — env var with documented fallback for backward compat on the original-install machine
 >    - For shell user-relative paths (e.g., `~/some-tool/`): leave as `~/...` and use `Path.expanduser()` or shell tilde-expansion
 >    - For schema fields (e.g., `path:` in YAML): use `~/...` form; the loader handles expansion
 > 4. **Verify each substitution structurally** (P4 discipline): for every substitution, confirm the resolved path on the current machine; for projects with multi-machine deploy, run a test on each.
@@ -167,7 +167,7 @@ Hardcoded absolute paths in agent-config files (`.claude/settings.json` hook com
 > [!warning] **Anti-patterns to avoid**
 >
 > - **Hardcoded absolute paths in any config file that travels with the project** — first-machine-move breaks them
-> - **Two duplicate paths in two configs** ("one for /opt, one for /home/jfortin") — diverges over time; env-indirection unifies
+> - **Two duplicate paths in two configs** ("one for the second-brain, one for /home/jfortin") — diverges over time; env-indirection unifies
 > - **Forgetting fallback** when env var is unset — the lookup must have a documented default
 > - **Fixing one occurrence and leaving siblings hardcoded** — P4 violation; the fix is incomplete until verified uniformly
 > - **Fixing the symptom (the failing hook) without fixing the doctrine (all hooks)** — operator's 2026-05-06 directive was systemic, not specific
@@ -176,7 +176,7 @@ Hardcoded absolute paths in agent-config files (`.claude/settings.json` hook com
 ## Open Questions
 
 > [!question] Should descriptive instructional banners (like `session-orient.sh`'s DIRECTIVE string) also be parameterized?
-> The string says "the research wiki at /opt/devops-solutions-information-hub" — operationally fine on the original machine, wrong-as-fact on this machine. Symmetrical fix exists (compute the path at runtime via env var). But the content is operator-authored from /root work; defer to operator for explicit authorization. Default proposal: leave for now; surface in next operator-batch.
+> The string says "the research wiki at $HOME/devops-solutions-information-hub" — operationally fine on the original machine, wrong-as-fact on this machine. Symmetrical fix exists (compute the path at runtime via env var). But the content is operator-authored from /root work; defer to operator for explicit authorization. Default proposal: leave for now; surface in next operator-batch.
 
 > [!question] Should `tools/*.py` modules audit their path-handling for the same pattern?
 > Many wiki tools (`pipeline.py`, `gateway.py`, `view.py`, etc.) likely have implicit path assumptions. An audit would identify whether they handle multiple install contexts gracefully. Engineering cost: ~2-4 hours systematic. Defer to operator-batch.

@@ -47,8 +47,8 @@ PreCompact hook fires on PreCompact event; writes 11-section handoff doc to `wik
 
 ## Instances
 
-**Instance 1: This /opt (M-AC3 task per Fire 108)**
-- Wire pre-compact.sh in /opt/.claude/settings.json PreCompact hook block
+**Instance 1: This the second-brain (M-AC3 task per Fire 108)**
+- Wire pre-compact.sh in .claude/settings.json PreCompact hook block
 - Test via manual /compact
 
 **Instance 2: Sister-projects (forward-anchored per Fire 113)**
@@ -73,7 +73,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", "/opt/devops-solutions-information-hub"))
+PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", "$HOME/devops-solutions-information-hub"))
 LOG_DIR = PROJECT_ROOT / "wiki" / "log"
 SENTINEL_PATH = PROJECT_ROOT / ".claude" / "post-compact-recovery-required"
 ERROR_LOG = PROJECT_ROOT / ".claude" / "hooks" / "pre-compact-errors.log"
@@ -231,7 +231,7 @@ if __name__ == "__main__":
 ## Per Fire 109 tier-elevation
 
 ```
-Currently: T0 (no PreCompact hook at /opt)
+Currently: T0 (no PreCompact hook at the second-brain)
 This fire: T1 (designed; draft authored)
 Wired: T3 (impl-spec #10 → Tier 3 reached)
 Combined with PreToolUse blocker (Fire 106 spec): T4

@@ -122,7 +122,7 @@ scenario_3_opt_pieces_not_loaded:
     - gateway query for "agent-context-discipline" returns: ["wiki/lessons/01_drafts/agent-context-discipline-is-aspirational-without-enforcement-gates-not-reading-what-exists.md"]
     - ~/.claude/last-context-load.json opt_pieces_loaded: [] (none loaded)
   trigger:
-    - PreToolUse on Write to `/opt/.../wiki/lessons/01_drafts/<new-related-lesson>.md`
+    - PreToolUse on Write to `$HOME/devops-solutions-information-hub/wiki/lessons/01_drafts/<new-related-lesson>.md`
   expected:
     - CHECK 3 fails: gateway-identified relevant pieces not in opt_pieces_loaded
     - banner: "FAILED: opt-pieces — related existing pieces not consulted before authoring. CHECK: <gateway-results>. RECOMMEND: extend existing or cite, don't duplicate."

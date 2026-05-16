@@ -135,7 +135,7 @@ For any project with this issue, the pattern is:
 
 > [!warning] Before committing any config file, ask:
 >
-> 1. Does this file contain absolute paths (/home, /Users, C:\Users, /opt, /usr/local, ...)?
+> 1. Does this file contain absolute paths (/home, /Users, C:\Users, the second-brain, /usr/local, ...)?
 > 2. Does this file reference `.venv/` or any generated directory?
 > 3. Does this file have content that differs between two machines running the same project?
 > 4. If yes to any: does my committed version include a `{{PLACEHOLDER}}` or is it already a fully-resolved real path?

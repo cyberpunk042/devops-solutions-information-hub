@@ -36,7 +36,7 @@ Run `python3 -m tools.setup --connect-project /root` from inside the second brai
 
 ## Done When
 
-- [ ] `python3 -m tools.setup --connect-project /root` runs from /opt/devops-solutions-information-hub and exits 0
+- [ ] `python3 -m tools.setup --connect-project /root` runs from $HOME/devops-solutions-information-hub and exits 0
 - [ ] /root/.mcp.json contains a `research-wiki` server entry pointing at the second brain's venv-python + correct cwd
 - [ ] /root/tools/gateway.py exists, executable, and `python3 -m tools.gateway --help` runs from inside /root and dispatches to the second brain's gateway
 - [ ] /root/tools/view.py exists, executable, and `python3 -m tools.view --help` runs from inside /root and dispatches to the second brain's view

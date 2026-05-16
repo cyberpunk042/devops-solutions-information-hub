@@ -74,7 +74,7 @@ The project's infrastructure (45+ commands · 15 tools · 38+ MCP tools · 8-eve
 
 **Empirical evidence**: 64-hour /root failed-conversation arc 2026-05-04 → 2026-05-08 — agent operated at ~5% infrastructure-use capacity (gateway orient: 0 invocations during 36-hour brain-improvement mandate; pipeline post: 0; tools.run-tests: 1 audit-style at end; MCP tools: 0). Result: 180 pain-point instances across 15 clusters.
 
-**Pairing with structural enforcement** (per substitution-pattern Insight 2 recursive applicability): this principle requires the 13-gate pipeline architecture (`wiki/patterns/01_drafts/comprehensive-agent-action-emission-pipeline-13-gate-composition-architecture.md` at /opt) to be operational. Without enforcement, the principle is aspirational per P4. With enforcement: operational compliance ≥85% per stress-test data per piece #18.
+**Pairing with structural enforcement** (per substitution-pattern Insight 2 recursive applicability): this principle requires the 13-gate pipeline architecture (`wiki/patterns/01_drafts/comprehensive-agent-action-emission-pipeline-13-gate-composition-architecture.md` at the second-brain) to be operational. Without enforcement, the principle is aspirational per P4. With enforcement: operational compliance ≥85% per stress-test data per piece #18.
 
 **Strictness tier**: Strict (when paired with enforcement) / Aspirational (without enforcement). Tier graduates with implementation status.
 ```

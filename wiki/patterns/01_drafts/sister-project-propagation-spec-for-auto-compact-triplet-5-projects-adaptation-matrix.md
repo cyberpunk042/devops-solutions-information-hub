@@ -32,11 +32,11 @@ sources:
   - id: bidirectional-inheritance-rule
     type: file
     file: /root/.claude/rules/self-reference.md
-    description: "Bidirectional inheritance pattern: $HOME source-of-truth for operational tooling; /opt inherits with adaptations; sister projects inherit from /opt OR /root depending on tooling-class"
+    description: "Bidirectional inheritance pattern: $HOME source-of-truth for operational tooling; the second-brain inherits with adaptations; sister projects inherit from the second-brain OR /root depending on tooling-class"
   - id: opt-self-reference-rule
     type: file
     file: .claude/rules/self-reference.md
-    description: "/opt self-reference rule — defines 5-project ecosystem (research-wiki + OpenArms + OpenFleet + AICP + devops-control-plane)"
+    description: "the second-brain self-reference rule — defines 5-project ecosystem (research-wiki + OpenArms + OpenFleet + AICP + devops-control-plane)"
 tags: [sister-project-propagation, auto-compact-triplet, 5-projects-adaptation, fires-105-106-107, day-arc-2026-05-08, multi-day-pain-point-resolution, fire-113]
 ---
 
@@ -44,7 +44,7 @@ tags: [sister-project-propagation, auto-compact-triplet, 5-projects-adaptation, 
 
 ## Summary
 
-Per Fire 76+ sister-project-propagation pattern: post-Tier-3 patterns propagate from /opt second-brain (or /root sister) to the 5-project ecosystem (research-wiki itself + OpenArms + OpenFleet + AICP + devops-control-plane). Per Fires 105+106+107: auto-compact triplet (Layer 1 prevention + Layer 2 mitigation + Layer 3 enforcement) is candidate for propagation post-implementation. This spec authors the **5-project adaptation matrix**: per-project deviations from the canonical /opt design, accounting for each project's identity (type/domain/scale/PM-level/trust-tier) + existing hook infrastructure + bidirectional-inheritance flow direction. Per /root self-reference rule + bidirectional-inheritance: operational tooling (hooks, slash-commands, state-files) flows $HOME source-of-truth → /opt + sisters inherit + adapt. Each project's adaptation honors the source pattern but accommodates project-specific conventions.
+Per Fire 76+ sister-project-propagation pattern: post-Tier-3 patterns propagate from the second-brain second-brain (or /root sister) to the 5-project ecosystem (research-wiki itself + OpenArms + OpenFleet + AICP + devops-control-plane). Per Fires 105+106+107: auto-compact triplet (Layer 1 prevention + Layer 2 mitigation + Layer 3 enforcement) is candidate for propagation post-implementation. This spec authors the **5-project adaptation matrix**: per-project deviations from the canonical the second-brain design, accounting for each project's identity (type/domain/scale/PM-level/trust-tier) + existing hook infrastructure + bidirectional-inheritance flow direction. Per /root self-reference rule + bidirectional-inheritance: operational tooling (hooks, slash-commands, state-files) flows $HOME source-of-truth → the second-brain + sisters inherit + adapt. Each project's adaptation honors the source pattern but accommodates project-specific conventions.
 
 ## Pattern Description
 
@@ -52,7 +52,7 @@ Per Fire 76+ sister-project-propagation pattern: post-Tier-3 patterns propagate 
 
 | Project | Path | Type | Phase | Existing PreCompact? | Existing PostCompact? | Auto-compact policy |
 |---|---|---|---|---|---|---|
-| **research-wiki** (this) | `/opt/devops-solutions-information-hub/` | knowledge / second-brain | production | NO (Fire 102 evidence) | YES (post-compact.sh + post-orient.sh) | unknown — investigation per Task #25 |
+| **research-wiki** (this) | `$HOME/devops-solutions-information-hub/` | knowledge / second-brain | production | NO (Fire 102 evidence) | YES (post-compact.sh + post-orient.sh) | unknown — investigation per Task #25 |
 | **root-ghostproxy** ($HOME) | `/root/` (or `$HOME`) | system / OS-setup | foundation | YES (per /root .claude/hooks/pre-compact.sh) | YES | unknown |
 | **OpenArms** | `~/openarms/` | harness / agent-runtime | production | unknown | unknown | unknown |
 | **OpenFleet** | `~/openfleet/` | fleet-orchestrator | production | unknown | unknown | unknown |
@@ -64,7 +64,7 @@ Investigation pre-requisite: capture each project's existing hook state per the 
 ### Per-project adaptation matrix
 
 ```
-PROJECT 1: /opt/devops-solutions-information-hub (research-wiki)
+PROJECT 1: $HOME/devops-solutions-information-hub (research-wiki)
   Triplet status: Layer 2 partial (PostCompact only); Layer 3 absent; Layer 1 absent
   Adaptation: implement Fires 105+106+107 specs as canonical
     - Layer 1 (Fire 107): all 4 sub-layers per second-brain conventions
@@ -77,10 +77,10 @@ PROJECT 1: /opt/devops-solutions-information-hub (research-wiki)
 PROJECT 2: /root or $HOME (root-ghostproxy)
   Triplet status: Layer 2 wired (per /root .claude/hooks/pre-compact.sh existence);
                    Layer 1 + Layer 3 status unknown (investigation needed)
-  Adaptation: align /root pattern with /opt pattern via bidirectional inheritance
+  Adaptation: align /root pattern with the second-brain pattern via bidirectional inheritance
     - Per /root self-reference rule: $HOME source-of-truth for operational tooling
-    - IF /root pre-compact.sh is more advanced: /opt inherits FROM /root
-    - IF /opt pre-compact.sh is more advanced: /root may inherit FROM /opt
+    - IF /root pre-compact.sh is more advanced: the second-brain inherits FROM /root
+    - IF the second-brain pre-compact.sh is more advanced: /root may inherit FROM the second-brain
                                                 (reverses normal direction; confirm operator)
     - Layer 3 PreToolUse-blocker: novel; /root may benefit from same pattern
     - Layer 1 prevention: same operator-policy applies
@@ -91,12 +91,12 @@ PROJECT 3: OpenArms (~/openarms/)
   Triplet status: unknown (investigation needed)
   Adaptation: harness-engineering project; auto-compact may already be configured
     - PreCompact handoff: adapt 11-section template to harness-conventions
-    - PostCompact: align with /opt's post-orient.sh pattern
+    - PostCompact: align with the second-brain's post-orient.sh pattern
     - PreToolUse-blocker: REGATHER_ALLOWLIST adapted to harness's tools
                           (e.g., agent-runtime entrypoints, runtime-state queries)
     - Layer 1: same prevention design
   Effort estimate: 8-15h (harness-specific adaptations)
-  Cross-reference: /opt OpenArms identity profile
+  Cross-reference: the second-brain OpenArms identity profile
                    (wiki/ecosystem/project_profiles/openarms/identity-profile.md)
 
 PROJECT 4: OpenFleet (~/openfleet/)
@@ -107,7 +107,7 @@ PROJECT 4: OpenFleet (~/openfleet/)
     - PreToolUse-blocker: fleet-specific REGATHER_ALLOWLIST (e.g., fleet-orient command)
     - Layer 1: same prevention design
   Effort estimate: 10-18h (fleet-multi-agent complexity)
-  Cross-reference: /opt OpenFleet identity profile
+  Cross-reference: the second-brain OpenFleet identity profile
 
 PROJECT 5: AICP (path TBD)
   Triplet status: unknown
@@ -116,7 +116,7 @@ PROJECT 5: AICP (path TBD)
     - Layer 2 + Layer 3 may not apply
     - Layer 1 still relevant if any session-context-window
   Effort estimate: 2-4h (possibly minimal scope)
-  Cross-reference: /opt AICP identity profile
+  Cross-reference: the second-brain AICP identity profile
 
 PROJECT 6: devops-control-plane (path TBD)
   Triplet status: unknown
@@ -147,7 +147,7 @@ DIMENSION 2: Existing infrastructure
 
 DIMENSION 3: Conventions
   - Bash vs Python hook scripts (project preference)
-  - Path conventions (/opt vs ~/ vs $HOME)
+  - Path conventions (the second-brain vs ~/ vs $HOME)
   - Command naming (gateway orient vs cycle vs orient)
   - Brain files (CLAUDE.md / AGENTS.md / CONTEXT.md / BOOTSTRAP.md presence)
 
@@ -159,7 +159,7 @@ DIMENSION 4: Operational risk profile
 
 DIMENSION 5: Bidirectional-inheritance direction
   - Source-of-truth project for THIS particular pattern (operational tooling = $HOME usually;
-                                                        knowledge content = /opt usually)
+                                                        knowledge content = the second-brain usually)
   - Inheriting projects' adaptation freedom (high vs low)
   - Cross-project propagation cadence (manual operator-coordinated vs automatic)
 ```
@@ -187,7 +187,7 @@ For Fire 106 (PreToolUse-blocker):
 For Fire 107 (Layer 1 prevention):
 | Adaptation | Per-project guidance |
 |---|---|
-| Hard Rule numbering | Per project's existing rules (HR 16 for /opt; varies for others) |
+| Hard Rule numbering | Per project's existing rules (HR 16 for the second-brain; varies for others) |
 | Verbatim citation | Same operator directive (universal) |
 | Sub-layer 1A text | Adapt to project's CLAUDE.md style (concise vs verbose) |
 | Sub-layer 1B+1C+1D | Same harness investigation; possibly different finding per project |
@@ -196,7 +196,7 @@ For Fire 107 (Layer 1 prevention):
 ### Propagation cadence + sequencing
 
 ```
-PHASE 1: /opt research-wiki implementation (canonical reference)
+PHASE 1: the second-brain research-wiki implementation (canonical reference)
   Per Fire 108 backlog-decomposition: M-AC1 through M-AC3 complete
   Tier 4 reached for Fires 105+106+107
   Pipeline post 0 errors
@@ -209,7 +209,7 @@ PHASE 2: /root root-ghostproxy alignment
   Bidirectional-inheritance reconciliation (which side source-of-truth)
   
 PHASE 3: OpenArms propagation
-  Identity profile consultation: /opt wiki/ecosystem/project_profiles/openarms/
+  Identity profile consultation: the second-brain wiki/ecosystem/project_profiles/openarms/
   Investigation: existing harness state
   Adaptation: harness-specific REGATHER_ALLOWLIST
   Verification per OpenArms test suite
@@ -230,8 +230,8 @@ PHASE 6: devops-control-plane propagation
   Verification: governance-decision-flow tests
 
 PHASE 7: Cross-project synchronization
-  Per /opt's bidirectional-inheritance rule: any improvements found in propagation
-                                              feed back to /opt (or /root) source
+  Per the second-brain's bidirectional-inheritance rule: any improvements found in propagation
+                                              feed back to the second-brain (or /root) source
   Update Fire 105+106+107 specs with cross-project lessons learned
   Re-run Fire 103 audit on all 5 projects
 ```
@@ -243,19 +243,19 @@ PHASE 7: Cross-project synchronization
 | Fire 76+ propagation pattern | This Fire 113 IS the propagation methodology applied to specific triplet |
 | Fires 105+106+107 specs | Source canonical for propagation |
 | Fire 108 backlog-decomposition | M-AC4-T-AC4-3 = sister-project propagation; this Fire 113 specs that task |
-| Bidirectional-inheritance rule | Honored: $HOME source-of-truth for operational tooling; /opt may have refinements that flow back |
+| Bidirectional-inheritance rule | Honored: $HOME source-of-truth for operational tooling; the second-brain may have refinements that flow back |
 | Multi-project ecosystem index pattern | Per-project identity profiles consulted |
-| /opt sister-projects.yaml | Provides each project's metadata for adaptation |
+| the second-brain sister-projects.yaml | Provides each project's metadata for adaptation |
 | Fire 109 tier-elevation pathway | Each project's triplet implementation follows same T0→T4 path |
 
 ### Anti-patterns this spec avoids
 
 | Anti-pattern | Why bad | How avoided |
 |---|---|---|
-| Copy-paste /opt hooks to other projects | Project conventions ignored; unsynchronized | Adaptation matrix per Dimension 1-5 |
-| Skip identity-profile consultation | Wrong adaptation for project's phase/scale | Per-project guidance from /opt's profiles |
+| Copy-paste the second-brain hooks to other projects | Project conventions ignored; unsynchronized | Adaptation matrix per Dimension 1-5 |
+| Skip identity-profile consultation | Wrong adaptation for project's phase/scale | Per-project guidance from the second-brain's profiles |
 | Apply triplet to ALL projects equally | AICP may not need triplet | Per-project assessment phase |
-| Bypass bidirectional-inheritance | /root and /opt diverge; no source-of-truth | Phase 2 alignment + Phase 7 sync |
+| Bypass bidirectional-inheritance | /root and the second-brain diverge; no source-of-truth | Phase 2 alignment + Phase 7 sync |
 | Sequential propagation only | Long calendar; high WIP | Phases 3-5 can run in parallel post-Phase-1 |
 | Manual cross-project sync | Drift accumulates | Phase 7 explicit synchronization |
 | Document propagation without operator-confirmation | Sister-project owners may dissent | Operator-territory boundary explicit per project |
@@ -263,7 +263,7 @@ PHASE 7: Cross-project synchronization
 ## When To Apply
 
 Apply this propagation spec when:
-- /opt or /root reaches Tier 4 for the auto-compact triplet (Phase 1 complete)
+- the second-brain or /root reaches Tier 4 for the auto-compact triplet (Phase 1 complete)
 - Sister-project propagation pattern (Fire 76+) is operator-confirmed
 - Each sister project has identity-profile capturing project conventions
 - Bidirectional-inheritance direction has been operator-confirmed for this pattern
@@ -271,35 +271,35 @@ Apply this propagation spec when:
 
 ## Instances
 
-**Instance 1: /opt → /root alignment (Phase 2)**
-- /root has existing pre-compact.sh; /opt now has Fire 105 spec
+**Instance 1: the second-brain → /root alignment (Phase 2)**
+- /root has existing pre-compact.sh; the second-brain now has Fire 105 spec
 - Adaptation: align both per bidirectional-inheritance
 - Critical decision: source-of-truth direction (operator-confirms)
 
-**Instance 2: /opt → OpenArms (Phase 3)**
+**Instance 2: the second-brain → OpenArms (Phase 3)**
 - Adaptation: harness-engineering specifics
 - New REGATHER_ALLOWLIST: fleet-aware operations not applicable; agent-runtime ones replace
 
-**Instance 3: /opt → OpenFleet (Phase 4)**
+**Instance 3: the second-brain → OpenFleet (Phase 4)**
 - Adaptation: fleet-multi-agent state capture
 - Handoff doc extends to multi-agent state
 
-**Instance 4: /opt → AICP (Phase 5)**
+**Instance 4: the second-brain → AICP (Phase 5)**
 - Adaptation: possibly Layer 1 only (if AICP has no compaction)
 - Cross-reference: AICP's identity profile guides scope
 
 ## When Not To
 
-- /opt reference implementation not yet Tier 4 (premature propagation)
+- the second-brain reference implementation not yet Tier 4 (premature propagation)
 - Sister-project owners haven't confirmed adoption
 - Each project has different operator (multi-tenancy concerns)
 - Bidirectional-inheritance direction unresolved
 
 ## Empirical Evidence
 
-Per Fire 76+ propagation pattern: methodology established for cross-project sync. Per Fires 105+106+107: triplet authored at /opt as candidate for propagation. Per /opt sister-projects.yaml + identity profiles: each project's metadata available for per-project adaptation. Per /root self-reference rule: bidirectional-inheritance direction depends on tooling-class (operational vs knowledge).
+Per Fire 76+ propagation pattern: methodology established for cross-project sync. Per Fires 105+106+107: triplet authored at the second-brain as candidate for propagation. Per the second-brain sister-projects.yaml + identity profiles: each project's metadata available for per-project adaptation. Per /root self-reference rule: bidirectional-inheritance direction depends on tooling-class (operational vs knowledge).
 
-This spec demonstrates how the body's pattern-authoring at /opt can scale to the 5-project ecosystem via systematic adaptation. Without this spec: each sister-project would need ad-hoc adaptation; bidirectional-inheritance unmaintained; drift accumulates.
+This spec demonstrates how the body's pattern-authoring at the second-brain can scale to the 5-project ecosystem via systematic adaptation. Without this spec: each sister-project would need ad-hoc adaptation; bidirectional-inheritance unmaintained; drift accumulates.
 
 ## Required Gates (per hook-architecture proposal #2 4th component)
 
@@ -332,8 +332,8 @@ Q-FIRE-113-2: AICP scope
   Full triplet OR Layer 1 only OR N/A (no compaction in AICP context)
 
 Q-FIRE-113-3: Bidirectional-inheritance for THIS pattern
-  $HOME → /opt (default per operational tooling rule) OR
-  /opt → $HOME (reverses; if /opt's spec is more comprehensive)
+  $HOME → the second-brain (default per operational tooling rule) OR
+  the second-brain → $HOME (reverses; if the second-brain's spec is more comprehensive)
 
 Q-FIRE-113-4: devops-control-plane investigation timing
   Phase 6 (last) OR earlier batch (depends on operator's investment in DCP)
@@ -345,7 +345,7 @@ Q-FIRE-113-5: Phase 7 synchronization mechanism
 
 ## Closing framing
 
-Per Fire 76+ propagation pattern + Fires 105+106+107 auto-compact triplet: this Fire 113 authors the systematic 5-project adaptation methodology. Per /opt's behave-FROM-not-OVER doctrine: propagation methodology persists at /opt (this fire); per-project adaptation occurs in each project's own /.claude/ infrastructure. Per /loop directive *"the at least 100 pain point ... will need direct response / relationship to the proposed solution"*: this fire extends body's reach across the entire 5-project ecosystem (vs /opt-only).
+Per Fire 76+ propagation pattern + Fires 105+106+107 auto-compact triplet: this Fire 113 authors the systematic 5-project adaptation methodology. Per the second-brain's behave-FROM-not-OVER doctrine: propagation methodology persists at the second-brain (this fire); per-project adaptation occurs in each project's own /.claude/ infrastructure. Per /loop directive *"the at least 100 pain point ... will need direct response / relationship to the proposed solution"*: this fire extends body's reach across the entire 5-project ecosystem (vs second-brain-only).
 
 **The agent stands by per /loop directive. Cron continues at 90s cadence. Propagation pending Phase 1 canonical implementation + 5 operator decisions.**
 
@@ -361,7 +361,7 @@ Per Fire 76+ propagation pattern + Fires 105+106+107 auto-compact triplet: this 
 - Fire 107 auto-compact-disable spec: `wiki/patterns/01_drafts/auto-compact-disable-implementation-spec-prevention-layer-for-impl-spec-10-defense-in-depth.md`
 - Fire 108 backlog-decomposition: `wiki/log/2026-05-08-auto-compact-priority-backlog-decomposition-epic-4-modules-15-tasks-fire-97-pattern-application.md`
 - Bidirectional-inheritance rule (per /root): `/root/.claude/rules/self-reference.md`
-- /opt self-reference rule: `.claude/rules/self-reference.md`
+- the second-brain self-reference rule: `.claude/rules/self-reference.md`
 
 ## Tags
 

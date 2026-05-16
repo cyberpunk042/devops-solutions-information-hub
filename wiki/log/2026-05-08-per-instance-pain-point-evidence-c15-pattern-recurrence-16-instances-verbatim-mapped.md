@@ -115,10 +115,10 @@ For each instance: (a) verbatim citation; (b) failure-mode mapping; (c) impl-spe
 **Recurrence rule**: cross-cycle (stage-class fires ≥3 of last cycles)
 **Solution chain**: C15 + C10 + impl-spec #11 + impl-spec #7
 
-### Instance C15-9: Sister project absorbed pattern from /opt; /opt ages without update
+### Instance C15-9: Sister project absorbed pattern from the second-brain; the second-brain ages without update
 
 **Verbatim citation** (forward-anchored per multi-project ecosystem index):
-> Sister-project finding: "we're seeing same pattern; /opt should incorporate"
+> Sister-project finding: "we're seeing same pattern; the second-brain should incorporate"
 
 **Failure-mode**: cross-project recurrence at sister-project level
 **Recurrence rule**: cross-project pattern (multi-project ecosystem index aggregator)

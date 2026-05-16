@@ -62,7 +62,7 @@ Decide whether root-ghostproxy carries its own local methodology engine (`/root/
 > | Right-sized? | Yes for simplified-profile micro-scale | Overkill at scaffold; might fit at Infrastructure tier |
 > | Override | Local additions can layer on top via additional config files | Already local |
 
-> [!question] If pointer is chosen, what happens when /opt/devops-solutions-information-hub is unavailable?
+> [!question] If pointer is chosen, what happens when $HOME/devops-solutions-information-hub is unavailable?
 > The gateway forwarder calls into the second brain's venv + tools. If the second brain path isn't mounted, methodology queries fail. Acceptable for a project that lives on the same host as the second brain; not acceptable for an airgapped deployment. Operator's threat model determines the answer.
 
 > [!question] Could root-ghostproxy define a small subset of methodology (just the models it uses) locally and pointer for the rest?

@@ -73,7 +73,7 @@ Description:
   Rationale: per body-of-work Fire 96 pattern; without runtime control, all injection layers fire per-prompt creating noise. Without stuck-detection, agent's under-elaboration goes uncaught.
 
 Readiness: 0% (Epic just proposed; awaiting operator-confirmation)
-Methodology model: feature-development (per /opt methodology engine)
+Methodology model: feature-development (per the second-brain methodology engine)
 Stages traversed: document → design → scaffold → implement → test
 Modules: 2 (M-RUNTIME-CONTROL-FF + M-STUCK-DETECTION-HOOK)
 Estimated effort: 1-2 weeks (within implementation-roadmap M2 + M5 phases)
@@ -315,7 +315,7 @@ Total atomic tasks: 9
 
 ## Per-task done-when checklist (operator-empirical)
 
-Each Task has explicit done-when checklist (per /opt methodology engine + /root iterative-evolution-pathway):
+Each Task has explicit done-when checklist (per the second-brain methodology engine + /root iterative-evolution-pathway):
 - ☐ items operator/agent ticks off as completed
 - Pipeline post 0-error per task (verified-edit per Hard Rule 14)
 - Audit log entries deterministic
@@ -361,7 +361,7 @@ This proposal IS the first instance demonstrating the methodology. Future operat
 - Operator directive (sacrosanct verbatim 2026-05-08; just-arrived): per Summary above
 - Feature-flag-system pattern (Fire 96): `wiki/patterns/01_drafts/feature-flag-system-for-mode-conditional-context-injection-with-auto-manual-profile-management.md`
 - /root iterative-evolution-pathway rule: `/root/.claude/rules/iterative-evolution-pathway.md`
-- /opt methodology engine: `wiki/config/methodology.yaml`
+- the second-brain methodology engine: `wiki/config/methodology.yaml`
 - Substitution-pattern meta-frame: `wiki/lessons/01_drafts/documentation-as-substitute-for-discipline-the-meta-pattern.md`
 
 ## Tags
