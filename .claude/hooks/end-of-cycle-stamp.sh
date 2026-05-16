@@ -14,8 +14,9 @@
 # we have a relative / flexible strategy.. we need to fix this now. usualy
 # there is the $HOME variable for example." — PROJECT_ROOT now resolves from
 # CLAUDE_PROJECT_DIR env (Claude Code's canonical project-root variable),
-# falling back to /opt/devops-solutions-information-hub for backward compat
-# on the other-machine config that originated the hook.
+# falling back to $HOME/devops-solutions-information-hub. NEVER hardcoded
+# absolute paths (operator directive 2026-05-16: "THERE IS NO SUCH THING AS
+# AN ABSOLUTE PATH IN SOFTWARE PROGRAMMING... ITS ALWAYS FUCKING $home").
 #
 # Self-gates via {PROJECT_ROOT}/CLAUDE.md presence + cwd/CLAUDE_PROJECT_DIR
 # check so this fires only for second-brain sessions, not sister-project
@@ -32,15 +33,16 @@ import time
 from pathlib import Path
 
 PROJECT_ROOT = Path(
-    os.environ.get("CLAUDE_PROJECT_DIR", "/opt/devops-solutions-information-hub")
+    os.environ.get("CLAUDE_PROJECT_DIR")
+    or str(Path.home() / "devops-solutions-information-hub")
 )
 TRACE_LOG = "/tmp/hook-fire-trace.log"
 
 # Operator stamp preference — shared across all root-user sessions via
 # Path.home()/.claude/stamp-config.json (matches /root/tools/stamp.py
 # CONFIG_PATH). Schema: {layout: horizontal|vertical, enabled: on|off|auto}.
-# Defaults: layout=vertical, enabled=auto (mode-conditional; /opt has no
-# active-mode mechanism so auto = on).
+# Defaults: layout=vertical, enabled=auto (mode-conditional; this project has
+# no active-mode mechanism so auto = on).
 STAMP_CONFIG_PATH = Path.home() / ".claude" / "stamp-config.json"
 STAMP_DEFAULTS = {"layout": "vertical", "enabled": "auto"}
 
@@ -73,7 +75,7 @@ def _trace(tag: str, extra: str = "") -> None:
 
 
 def _is_project_context() -> bool:
-    """Fire only for /opt second-brain sessions."""
+    """Fire only for second-brain sessions (matches PROJECT_ROOT)."""
     project_dir = os.environ.get("CLAUDE_PROJECT_DIR", "").strip().rstrip("/")
     target = str(PROJECT_ROOT).rstrip("/")
     if project_dir:
@@ -227,8 +229,9 @@ def build_stamp_horizontal() -> str:
     """Horizontal layout matching /root/tools/cycle.py emit_status_block_ansi_horizontal:
     6 single-line-per-section rows with glyph + padded label + grouped fields.
     Separator conventions: ` · ` within logical group, `║` between groups.
-    Per SB-114 sub-req (a) + SB-116 UX iteration. Adapted to /opt's data model
-    (pages/epics/modules/tasks/lessons/notes/decisions/gaps; no tools.cycle).
+    Per SB-114 sub-req (a) + SB-116 UX iteration. Adapted to this project's
+    data model (pages/epics/modules/tasks/lessons/notes/decisions/gaps; no
+    tools.cycle).
     """
     pages = _count_files("wiki/**/*.md")
     notes = _recent_notes(5)
@@ -408,10 +411,10 @@ def main() -> None:
 
     # enabled=auto → mode-conditional (SB-114 sub-req c: default-hide-when-no-mode).
     # Active-mode is PER-PROJECT state (each project has its own mode files).
-    # /opt's active-mode lives at /opt/.../.claude/active-mode (project-local),
-    # NOT at Path.home()/.claude/active-mode (which is /root's mode for the
-    # /root project). Stamp-config is shared (operator-preference) but
-    # active-mode is per-project (project-state).
+    # This project's active-mode lives at {PROJECT_ROOT}/.claude/active-mode
+    # (project-local), NOT at Path.home()/.claude/active-mode (which is /root's
+    # mode for the /root project). Stamp-config is shared (operator-preference)
+    # but active-mode is per-project (project-state).
     if cfg["enabled"] == "auto":
         active_mode = ""
         try:

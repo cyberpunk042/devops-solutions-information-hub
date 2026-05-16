@@ -526,7 +526,7 @@ workflow:
       detector: "sprint window ended with <80% of ripe modules processed AND no operator-decision-queue entry explaining the gap"
 
     - name: cross_project_modification_attempt
-      description: "Trying to write to ~/ or any path outside /opt/devops-solutions-information-hub during sprint"
+      description: "Trying to write to ~/ or any path outside this project's working directory during sprint"
       why_forbidden: |
         Cross-project boundary is ABSOLUTE. root-ghostproxy lives at ~/
         (when installed) — that's operator territory. Cascade = surface +
