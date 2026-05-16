@@ -871,6 +871,7 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 [[second-brain-integration-chain|Operations Plan — Second Brain Integration Chain — Complete Walkthrough]]
 [[operator-decision-queue|Operator Decision Queue]]
 [[E004-portable-methodology-engine|Portable Methodology Engine]]
+[[profile-circular-knowledge-evolution-layer-and-brain-self-improvement|Profile — Circular Knowledge (evolution-layer; observes convergence + proposes promotion through the stages + cascades self → second-brain → ecosystem)]]
 [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
 [[requirements-and-design-artifacts|Requirements and Design Artifacts — Standards and Guide]]
 [[research-gaps|Research Gaps — Empirical Questions Requiring Data]]

@@ -602,6 +602,7 @@ Validated experience from operating Claude Code in this ecosystem.
 [[src-anthropic-effective-harnesses-long-running-agents|Synthesis — Anthropic — Effective Harnesses for Long-Running Agents]]
 [[src-claude-agent-sdk-and-managed-agents|Synthesis — Claude Agent SDK and Managed Agents]]
 [[src-claude-code-harness-features|Synthesis — Claude Code Harness: Skills, Hooks, Plugins, Subagents, MCP (2026)]]
+[[src-anthropic-claude-opus-4-7-release-2026-04-16|Synthesis — Claude Opus 4.7 release (Anthropic, 2026-04-16 GA): direct upgrade to Opus 4.6 with +13% on 93-task coding benchmark, 3× image resolution (2,576 px long edge), new `xhigh` effort level, file-system memory improvements, and self-verification of outputs — same price as Opus 4.6 ($5/$25 per MTok), updated tokenizer (1.0–1.35× more tokens per same input)]]
 [[src-cline-agentic-coding-ide-extension|Synthesis — Cline — Agentic Coding IDE Extension with Plan/Act, Skills, Hooks, MCP]]
 [[src-llm-architecture-gallery-raschka|Synthesis — LLM Architecture Gallery (Raschka)]]
 [[src-arxiv-natural-language-agent-harnesses|Synthesis — Natural-Language Agent Harnesses (NLAH) — Externalizing Harness Logic as Editable Artifacts]]

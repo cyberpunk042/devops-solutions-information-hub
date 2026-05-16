@@ -5,7 +5,7 @@ domain: log
 status: active
 confidence: high
 created: 2026-04-09
-updated: 2026-05-15
+updated: 2026-05-16
 sources: []
 tags: [log, directives, sessions]
 ---
@@ -29,11 +29,16 @@ Operator directives, session summaries, and task completion notes.
 | 2026-04-17 | [AICP Stage 3 hardware unlocked 2026-04-17 — 19GB VRAM dual-GPU](aicp-stage-3-hardware-unlocked-2026-04-17-19gb-vram-dual-g.md) | session | `contributed`, `remark` |
 | 2026-04-17 | [AICP identity-profile.md needs reconciliation per consumer-property doctrine + outdated facts](aicp-identity-profile.md-needs-reconciliation-per-consumer-p.md) | session | `contributed`, `correction` |
 | 2026-04-18 | [5 candidate behavioral-failure detection rules from OpenFleet doctor.py (2026-04-18)](5-candidate-behavioral-failure-detection-rules-from-openflee.md) | session | `contributed`, `remark` |
+| 2026-05-16 | [2026-05-16 — Strong handoff: CK v3 live (autonomous + R20-compliant); CR + PS still on v1 (broken); RGP uninstalled; full requirements framework](2026-05-16-strong-handoff-ck-v3-live-cr-ps-still-broken.md) | session | `handoff`, `session`, `ck-v3`, `retroactive-cleanup`, `profile-requirements`, `r20-sacrosanct`, `autonomous-assistant`, `cr-pending`, `ps-pending`, `rgp-uninstalled` |
+| 2026-05-16 | [CK Bootstrap — Pile Depile Batch 1 (NEVER_DEPILED verdict)](2026-05-16-ck-bootstrap-pile-depile-batch-1.md) | note | `ck-bootstrap`, `pollution-audit`, `pile-depile`, `retroactive`, `operator-decision`, `batch-1` |
+| 2026-05-16 | [CK Bootstrap Execution Batch 1 — autonomous untracked sweep + tracked-batch surface](2026-05-16-ck-bootstrap-execution-batch-1.md) | completion | `log`, `completion`, `circular-knowledge`, `pollution-cleanup`, `retroactive`, `batch-1` |
 | 2026-05-15 | [Weekly Research Digest — 2026-05-09 → 2026-05-15](2026-05-15-weekly-research-digest-2026-05-09-2026-05-15.md) | session | `log`, `session` |
+| 2026-05-15 | [research-watch — Opus 4.7 source-synthesis SHIPPED (end-to-end execution per cron 19:11 ET)](2026-05-15-research-watch-opus-4-7-source-synthesis-shipped-end-to-end.md) | completion | `log`, `completion` |
 | 2026-05-15 | [research-watch — lightweight scan, noted-but-skipped (no new novelty beyond 2026-05-15 earlier scan)](2026-05-15-research-watch-lightweight-scan-noted-but-skipped-no-new-nov.md) | directive | `log`, `directive` |
 | 2026-05-15 | [research-watch — lightweight scan #4 (cron 18:32 ET), noted-but-skipped — no new novelty](2026-05-15-research-watch-lightweight-scan-4-cron-18-32-et-noted-but-sk.md) | session | `log`, `session` |
 | 2026-05-15 | [research-watch — lightweight scan #3 (2026-05-15 17:16 ET), noted-but-skipped — duplication guard + carry-forward](2026-05-15-research-watch-lightweight-scan-3-2026-05-15-17-16-et-noted.md) | directive | `log`, `directive` |
 | 2026-05-15 | [research-watch — frontier delta detected (Opus 4.7, Mythos, GPT-5.5, GPT-Rosalind, Claude Managed Agents v2, Claude Design)](2026-05-15-research-watch-frontier-delta-detected-opus-4-7-mythos-gpt-5.md) | directive | `log`, `directive` |
+| 2026-05-15 | [CK Weekly Distillation — Surfacings (Week of 2026-05-09 → 2026-05-15)](2026-05-15-ck-weekly-distillation-surfacings.md) | session | `log`, `session`, `circular-knowledge`, `weekly-distillation`, `operator-decision-needed`, `cascade-self-first` |
 | 2026-05-09 | [2026-05-09 Session Log — 9 Pending Decisions Resolved (5 Executed · 3 Defer-Track · 1 Boundary-Correction) + 5-Channel RRF Retrieval Landed + Schema Extension + AVX512 Machine Plan Captured](2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension.md) | session | `session`, `log`, `2026-05-09`, `decisions-executed`, `boundary-correction-root-vs-opt`, `5-channel-rrf-retrieval-landed`, `schema-extension`, `avx512-machine-plan-noted`, `hardware-pending-flag`, `post-compact-pickup-runbook` |
 | 2026-05-09 | [2026-05-09 PRE-COMPACT STRONG HANDOFF — Post-Compact Pickup Artifact (Decisions Executed · Boundary Correction · Freeze-Pattern Memory · 5-Channel RRF Live · 23 Lessons Reformatted · AVX512 Machine Plan Captured · Operator Forward Direction Signaled)](2026-05-09-PRE-COMPACT-STRONG-HANDOFF-decisions-executed-boundary-correction-freeze-memory-rrf-and-23-lessons-reformatted.md) | session | `pre-compact`, `handoff`, `2026-05-09`, `post-compact-pickup`, `decisions-executed`, `boundary-correction-root-vs-opt`, `freeze-pattern-corrected`, `5-channel-rrf-live`, `schema-extended`, `23-lessons-reformatted`, `avx512-machine-plan`, `hardware-pending-flag`, `operator-forward-direction-signaled` |
 | 2026-05-08 | [Worked Example #4 — Post-Compact Detection Failure (Real-Session Empirical Evidence; Impl-Spec #10 Stress-Test)](2026-05-08-worked-example-4-post-compact-detection-failure-real-session-empirical-evidence-impl-spec-10-stress-test.md) | session | `worked-example`, `post-compact`, `detection-failure`, `real-session-empirical`, `impl-spec-10`, `stress-test`, `day-arc-2026-05-08`, `multi-day-pain-point-resolution`, `fire-102` |

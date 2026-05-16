@@ -1310,6 +1310,38 @@ def cmd_install(args: argparse.Namespace) -> int:
                     warn(f"    openclaw cron add failed for {job_name}: {proc.stderr.strip()[:200]}")
         info("Jobs registered DISABLED by default. Enable via `bin/assistant cron enable <profile> <job>` or directly: `openclaw cron enable <job-name>`")
 
+        # First-fire jobs: not cron, fire as one-shot post-registration.
+        # Profile YAML schedule="first-fire" denotes a job that should run ONCE
+        # immediately on install (e.g., bootstrap audits). translate_schedule()
+        # returns None for first-fire so they're not registered as recurring jobs;
+        # we fire them here as `openclaw cron add --at 5s --delete-after-run`.
+        first_fire_jobs = [j for j in jobs if j.get("schedule", "").strip() == "first-fire"]
+        if first_fire_jobs and not args.dry_run:
+            for j in first_fire_jobs:
+                job_name = f"{name}-{j['name']}"
+                prompt = j.get("trigger", {}).get("prompt", "").strip() or f"Run {j['name']} task"
+                description = j.get("description", "")
+                timeout_seconds = int(j.get("timeout_seconds", 3600))
+                ff_cmd = [
+                    "openclaw", "cron", "add",
+                    "--name", job_name,
+                    "--at", "5s",
+                    "--delete-after-run",
+                    "--agent", name,
+                    "--message", prompt,
+                    "--description", description,
+                    "--session", "isolated",
+                    "--expect-final",
+                    "--best-effort-deliver",
+                    "--timeout-seconds", str(timeout_seconds),
+                ]
+                info(f"  - first-fire one-shot: {job_name} (firing in 5s, delete-after-run)")
+                proc = openclaw_run(ff_cmd)
+                if proc.returncode == 0:
+                    ok(f"    fired one-shot: {job_name}")
+                else:
+                    warn(f"    first-fire failed for {job_name}: {proc.stderr.strip()[:200]}")
+
     # 5. systemd unit
     stage("[5/6] Install systemd user service (reboot persistence)")
     if not have("systemctl"):

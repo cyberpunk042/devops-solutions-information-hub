@@ -14,6 +14,7 @@ sources:
     description: "Operator verbatim — pre-compact directive at 5%"
   - id: operator-directive-finish-smoothly-idempotent
     type: conversation
+    file: raw/notes/2026-05-08-pre-compact-imminent-validate-adjust-auto-compact-auto-dream-finish-smoothly-directive.md
     description: "Operator verbatim 2026-05-08 (this turn): force finsih smoothly if there is not already a defined handoff document or whatnot so that we dont double when there is already a handoff lol or we make it smart / idempotent and whatnot... we work on this now"
   - id: fire-105-pre-compact-handoff-spec
     type: wiki
@@ -218,3 +219,10 @@ Test case: re-author this conversation's Fire 225 handoff via the pattern; verif
 ## Tags
 
 [finish-smoothly, idempotent, pre-compact, handoff, custom-variant, agent-draft, fire-226]
+
+## When Not To
+
+- **Auto-compact is disabled (Layer 1 is active):** If auto-compact has been globally disabled (Fire 107 spec), no compaction will fire, so pre-compact handoff is unnecessary — skip this pattern.
+- **Context window is healthy (>10k tokens):** This pattern is designed for the 5–10% context-remaining threshold. Invoking it early wastes tokens and produces premature handoff docs.
+- **A recent, complete handoff doc already exists:** The idempotency check is the core of this pattern. If a fresh handoff doc exists and context state has not significantly changed since it was authored, the pattern should SKIP (not refresh) — double-authoring is the failure mode this pattern prevents.
+- **Non-compaction context switches:** Normal task completion or operator-requested handoffs use the standard `/finish-smoothly` flow, not this custom variant.

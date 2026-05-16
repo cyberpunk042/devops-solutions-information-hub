@@ -1,25 +1,25 @@
 {
-  "generated": "2026-05-15T22:35:28.873101+00:00",
+  "generated": "2026-05-16T15:01:05.854700+00:00",
   "stats": {
-    "pages": 872,
-    "domains": 14,
-    "sources": 110,
+    "pages": 895,
+    "domains": 15,
+    "sources": 121,
     "comparisons": 10,
-    "relationships": 4074,
-    "tags_unique": 3221,
+    "relationships": 4113,
+    "tags_unique": 3406,
     "layers": {
       "3": 4,
       "5": 38,
       "6": 26,
-      "2": 82,
+      "2": 83,
       "4": 83,
       "0": 1,
-      "1": 81,
+      "1": 89,
       "spine": 83
     },
     "maturity": {
-      "seed": 186,
-      "growing": 331,
+      "seed": 201,
+      "growing": 332,
       "mature": 23
     }
   },
@@ -12000,6 +12000,309 @@
       ]
     },
     {
+      "path": "domains/cross-domain/agt-cascade-trio-adopt-as-substrate-unless-load-bearing-differentiator-cross-project-consolidation.md",
+      "slug": "domains/cross-domain/agt-cascade-trio-adopt-as-substrate-unless-load-bearing-differentiator-cross-project-consolidation",
+      "title": "Cross-Project Consolidation Candidate \u2014 AGT cascade trio (OpenClaw + OpenArms + OpenFleet share the same adopt-as-substrate-unless-load-bearing-differentiator decision-shape)",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "draft",
+      "confidence": "medium",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "2026-05-15",
+      "tags": [
+        "cross-project",
+        "cross-domain",
+        "agt",
+        "microsoft-agent-governance-toolkit",
+        "openclaw",
+        "openarms",
+        "openfleet",
+        "cascade",
+        "consolidation-candidate",
+        "adopt-as-substrate",
+        "multi-vision",
+        "agent-authored",
+        "draft",
+        "2026-05-15"
+      ],
+      "sources": [
+        {
+          "id": "agt-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02.md",
+          "description": "PRIMARY \u2014 AGT source-synthesis. MIT-licensed, 10/10 OWASP coverage, sub-millisecond p99, framework-agnostic adapters for 12+ frameworks. Three of those frameworks/contexts directly overlap with three of the operator's sister projects (agent runtime / agent mesh / agent SRE)."
+        },
+        {
+          "id": "operator-decision-queue-q74",
+          "type": "wiki",
+          "file": "wiki/backlog/operator-decision-queue.md",
+          "description": "Q74 (OpenClaw posture toward AGT). Recommendation in queue: composable adapter (OpenClaw harness hooks into AGT for per-action policy). Surfaced by continuous-research."
+        },
+        {
+          "id": "operator-decision-queue-q75",
+          "type": "wiki",
+          "file": "wiki/backlog/operator-decision-queue.md",
+          "description": "Q75 (OpenArms posture toward AGT Agent Mesh package). Recommendation in queue: adopt-as-substrate unless OpenArms can name a load-bearing differentiator vs AGT's Mesh (DIDs + Ed25519 + ML-DSA-65 + IATP + trust scoring)."
+        },
+        {
+          "id": "operator-decision-queue-q76",
+          "type": "wiki",
+          "file": "wiki/backlog/operator-decision-queue.md",
+          "description": "Q76 (OpenFleet posture toward AGT Agent SRE package). Recommendation in queue: adopt-as-substrate; differentiate on fleet topology / multi-tenant economics rather than re-implementing SRE primitives Microsoft has already shipped MIT-licensed."
+        },
+        {
+          "id": "sister-projects-config",
+          "type": "wiki",
+          "file": "wiki/config/sister-projects.yaml",
+          "description": "Sister-projects registry \u2014 declares the operator's five-project ecosystem (this wiki + OpenArms + OpenFleet + AICP + devops-control-plane). The cross-project boundary CK respects."
+        },
+        {
+          "id": "harness-engineering-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever.md",
+          "description": "RELATED \u2014 harness-engineering value extraction is the *thing* AGT operationalizes via deterministic enforcement. The cross-project shape names what happens when an external substrate validates a thesis the sister projects already hold."
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "AGT Cascade Trio",
+        "Cross-Project \u2014 Adopt-As-Substrate-Unless-Differentiator Decision Shape"
+      ],
+      "relationships": [
+        {
+          "verb": "DEMONSTRATES",
+          "target": "P1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 Microsoft Agent Governance Toolkit (AGT)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Lesson \u2014 Harness Engineering Is the Dominant Performance Lever"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Sister-Projects Registry"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Operator Decision Queue Q74-Q76"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/cascade-candidate-root-ghostproxy-m001-reframe-as-audit-of-existing-agents-md-claude-md-2026-05-16.md",
+      "slug": "domains/cross-domain/cascade-candidate-root-ghostproxy-m001-reframe-as-audit-of-existing-agents-md-claude-md-2026-05-16",
+      "title": "Cascade candidate \u2014 M001 reframe: audit (not author) existing AGENTS.md (34KB) + CLAUDE.md (38KB) at upstream root-ghostproxy",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "2026-05-16",
+      "tags": [
+        "cascade-candidate",
+        "root-ghostproxy",
+        "m001",
+        "audit-not-author",
+        "three-layer-context",
+        "cross-project-cascade",
+        "sprint"
+      ],
+      "sources": [
+        {
+          "id": "m001",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/root-ghostproxy-m001-author-claude-md-and-agents-md.md",
+          "description": "Module dated 2026-05-04. Done When says: AGENTS.md < 100 lines, CLAUDE.md < 200 lines, both authored from second-brain templates."
+        },
+        {
+          "id": "gh-snapshot",
+          "type": "gh-api-read-only",
+          "file": "repos/cyberpunk042/root-ghostproxy/contents/AGENTS.md + CLAUDE.md",
+          "description": "Read-only snapshot 2026-05-16T04:08Z. AGENTS.md 34874 bytes / CLAUDE.md 37606 bytes \u2014 both exist; both far over M001 thresholds."
+        },
+        {
+          "id": "three-layer-agent-context",
+          "type": "wiki",
+          "file": "wiki/spine/models/agent-config/model-skills-commands-hooks.md",
+          "description": "Reference standard for three-layer agent context \u2014 AGENTS.md universal cross-tool, CLAUDE.md Claude Code routing, skills auto-trigger."
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Parent state-divergence cascade-candidate"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/cascade-candidate-root-ghostproxy-scope-clarification-selfdef-boundary-2026-05-16.md",
+      "slug": "domains/cross-domain/cascade-candidate-root-ghostproxy-scope-clarification-selfdef-boundary-2026-05-16",
+      "title": "Cascade candidate \u2014 root-ghostproxy \u2194 selfdef scope-clarification (operator-verbatim 2026-05-15: 'not just going to use the selfdef project')",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "2026-05-16",
+      "tags": [
+        "cascade-candidate",
+        "root-ghostproxy",
+        "selfdef",
+        "scope-clarification",
+        "operator-verbatim-2026-05-15",
+        "multi-vision",
+        "cross-project-cascade",
+        "sprint"
+      ],
+      "sources": [
+        {
+          "id": "operator-verbatim-2026-05-15",
+          "type": "directive",
+          "file": "AGENTS.md (this Profile workspace)",
+          "description": "Operator-stated, sacrosanct: 'some of the things root-ghostproxy were going to do its not just going to use the selfdef project. so root-ghostproxy can focus more on its thing.'"
+        },
+        {
+          "id": "sister-projects-yaml",
+          "type": "file",
+          "file": "wiki/config/sister-projects.yaml",
+          "description": "Registry entry for root-ghostproxy: 'Planned modules: suricata (IPS), polarproxy (TLS inspection).' Same 9-module catalog appears in selfdef entry."
+        },
+        {
+          "id": "epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05.md",
+          "description": "Epic Stream 2 M5: 'Operator picks: suricata IPS module OR polarproxy TLS inspection module.'"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "domains/cross-domain/cascade-candidate-root-ghostproxy-self-update-observe-upstream-head-before-drafting-modules-2026-05-16.md",
+      "slug": "domains/cross-domain/cascade-candidate-root-ghostproxy-self-update-observe-upstream-head-before-drafting-modules-2026-05-16",
+      "title": "Cascade candidate (target: self) \u2014 root-ghostproxy-rollout Profile must read upstream HEAD via gh api BEFORE drafting module candidates",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "2026-05-16",
+      "tags": [
+        "cascade-candidate",
+        "target-self",
+        "self-improvement",
+        "profile-update",
+        "root-ghostproxy-rollout",
+        "sprint"
+      ],
+      "sources": [
+        {
+          "id": "this-sprint-tick",
+          "type": "log",
+          "file": ".assistant/_state/root-ghostproxy-rollout-inbox.md",
+          "description": "Sprint-tick at 2026-05-16 00:08 ET discovered upstream state-divergence (AGENTS.md/CLAUDE.md exist, 34KB+38KB) which the second-brain epic (dated 2026-05-04) did not anticipate."
+        },
+        {
+          "id": "profile-yaml",
+          "type": "file",
+          "file": ".assistant/root-ghostproxy-rollout.yaml",
+          "description": "Current canonical_pipeline orders step 2 (observe second-brain record) BEFORE step 3 (observe root-ghostproxy via gh). Step 3's success-gate is permissive ('snapshot OR fallback'). Step 4 picks candidates from second-brain priority order without requiring upstream-vs-record diff first."
+        },
+        {
+          "id": "autoadaptation-rules",
+          "type": "file",
+          "file": ".assistant/root-ghostproxy-rollout.yaml#autoadaptation",
+          "description": "self_tuning_changes_allowed_autonomous includes 'Add new subagent declarations IF accumulated work surfaces a clear sub-routine pattern' \u2014 but Profile-YAML pipeline-order changes are listed under surfacing_required (substantive Profile change)."
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "This tick's primary finding \u2014 divergence between record and upstream"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "M001 reframe"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/cascade-candidate-root-ghostproxy-state-divergence-upstream-already-advanced-2026-05-16.md",
+      "slug": "domains/cross-domain/cascade-candidate-root-ghostproxy-state-divergence-upstream-already-advanced-2026-05-16",
+      "title": "Cascade candidate \u2014 root-ghostproxy upstream state has materially diverged from second-brain epic+modules (snapshot 2026-05-16 00:08 ET)",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "2026-05-16",
+      "tags": [
+        "cascade-candidate",
+        "root-ghostproxy",
+        "state-divergence",
+        "upstream-snapshot",
+        "multi-vision",
+        "cross-project-cascade",
+        "sprint"
+      ],
+      "sources": [
+        {
+          "id": "gh-snapshot-2026-05-16",
+          "type": "gh-api-read-only",
+          "file": "repos/cyberpunk042/root-ghostproxy/contents/",
+          "description": "Read-only GitHub API listing of root-ghostproxy main branch at 2026-05-16T04:08Z. SHA of head commit bf248fe (Merge PR #1) pushed 2026-05-15T17:27:06Z."
+        },
+        {
+          "id": "epic-record",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05.md",
+          "description": "Second-brain epic dated 2026-05-04. Stream 2 Scaffold premise: AGENTS.md and CLAUDE.md must be authored."
+        },
+        {
+          "id": "m001",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/root-ghostproxy-m001-author-claude-md-and-agents-md.md",
+          "description": "M001 premise: AGENTS.md < 100 lines, CLAUDE.md < 200 lines, both authored from second-brain templates."
+        },
+        {
+          "id": "directive-2026-05-04",
+          "type": "wiki",
+          "file": "raw/notes/2026-05-04-prepare-root-ghostproxy-as-sister-type-root-group-operating-system-setup.md",
+          "description": "Operator directive \u2014 preparation only; future-session work; sacrosanct verbatim."
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md",
       "slug": "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
       "title": "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
@@ -14584,6 +14887,137 @@
         {
           "verb": "FEEDS INTO",
           "target": "Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/profile-circular-knowledge-evolution-layer-and-brain-self-improvement.md",
+      "slug": "domains/cross-domain/profile-circular-knowledge-evolution-layer-and-brain-self-improvement",
+      "title": "Profile \u2014 Circular Knowledge (evolution-layer; observes convergence + proposes promotion through the stages + cascades self \u2192 second-brain \u2192 ecosystem)",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "2026-05-15",
+      "tags": [
+        "profile",
+        "circular-knowledge",
+        "evolution-layer",
+        "brain-self-improvement",
+        "knowledge-evolution",
+        "agent-authored",
+        "cross-domain",
+        "multi-vision",
+        "goldilocks",
+        "stage-discipline",
+        "2026-05-15",
+        "self-first-cascade"
+      ],
+      "sources": [
+        {
+          "id": "profile-yaml",
+          "type": "file",
+          "file": ".assistant/circular-knowledge.yaml",
+          "description": "PRIMARY \u2014 the canonical YAML profile. 661 lines. Defines identity, knowledge_scope, action surface, workflow, autonomy_levels, sub_agents, cron cadence, success_criteria."
+        },
+        {
+          "id": "identity-md",
+          "type": "file",
+          "file": "/home/jfortin/.openclaw/agents/circular-knowledge/workspace/IDENTITY.md",
+          "description": "Profile identity contract \u2014 name, job, focus, project, profile yaml path, workspace mode."
+        },
+        {
+          "id": "agents-md",
+          "type": "file",
+          "file": "/home/jfortin/.openclaw/agents/circular-knowledge/workspace/AGENTS.md",
+          "description": "System prompt + 5 core operating principles + on_uncertainty / on_error recipes + hard project rules."
+        },
+        {
+          "id": "soul-md",
+          "type": "file",
+          "file": "/home/jfortin/.openclaw/agents/circular-knowledge/workspace/SOUL.md",
+          "description": "Persona, behavioural discipline, anti-signals to watch \u2014 the agent's named non-chatbot mode."
+        },
+        {
+          "id": "workflow-md",
+          "type": "file",
+          "file": "/home/jfortin/.openclaw/agents/circular-knowledge/workspace/WORKFLOW.md",
+          "description": "9-step gated workflow contract. Each step has a success gate. Step 4 (self-improvement check) is NEVER-SKIP."
+        },
+        {
+          "id": "tools-md",
+          "type": "file",
+          "file": "/home/jfortin/.openclaw/agents/circular-knowledge/workspace/TOOLS.md",
+          "description": "Allowed actions + forbidden actions + escalation triggers + project tools."
+        },
+        {
+          "id": "operator-directive-2026-05-15",
+          "type": "wiki",
+          "file": "raw/notes/2026-05-15-cron-ck-weekly-distillation-2150.md",
+          "description": "First-tick verbatim operator directive (weekly-distillation cron) + tick-level self-improvement observation that this very page was missing."
+        },
+        {
+          "id": "sibling-cr-profile",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current.md",
+          "description": "Sibling Profile in the per-project ecosystem \u2014 sets the documentation pattern this page mirrors."
+        },
+        {
+          "id": "sibling-ps-profile",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline.md",
+          "description": "Sibling Profile in the per-project ecosystem \u2014 sets the documentation pattern this page mirrors."
+        },
+        {
+          "id": "ecosystem-integration-pattern",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/profile-integration-into-the-knowledge-cross-reference-topology-with-existing-wiki-layers.md",
+          "description": "Integration page explaining how the three per-project Profiles compose against the wiki maturity tiers."
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Profile \u2014 Circular Knowledge",
+        "Circular Knowledge Profile",
+        "CK Profile",
+        "Evolution-Layer Profile"
+      ],
+      "relationships": [
+        {
+          "verb": "IS A",
+          "target": "Per-Project Assistant Profile (pattern)"
+        },
+        {
+          "verb": "SIBLING OF",
+          "target": "Continuous Research Profile"
+        },
+        {
+          "verb": "SIBLING OF",
+          "target": "Pipeline Synthesis Profile"
+        },
+        {
+          "verb": "INTEGRATES WITH",
+          "target": "Profile Integration Topology"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "Model \u2014 LLM Wiki"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "Model \u2014 Methodology"
+        },
+        {
+          "verb": "RESPECTS",
+          "target": "P1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "RESPECTS",
+          "target": "P3 \u2014 Goldilocks"
         }
       ]
     },
@@ -20378,6 +20812,114 @@
         {
           "verb": "DEMONSTRATES",
           "target": "Goldilocks Protocol"
+        }
+      ]
+    },
+    {
+      "path": "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction.md",
+      "slug": "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction",
+      "title": "Lesson \u2014 Metered programmatic agentic economics is the 2026 convergent direction: subscription compute arbitrage is closing; programmatic agent use is being separated from interactive use and billed at marginal-cost-tracking rates",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "2026-05-15",
+      "tags": [
+        "lesson",
+        "layer-2",
+        "cross-domain",
+        "agentic-economics",
+        "programmatic-vs-interactive",
+        "metered-pricing",
+        "credit-pool",
+        "compute-arbitrage",
+        "anthropic",
+        "openai",
+        "google",
+        "openclaw",
+        "harness-engineering",
+        "vendor-policy",
+        "agent-authored",
+        "draft",
+        "multi-vision",
+        "2026-05-15"
+      ],
+      "sources": [
+        {
+          "id": "anthropic-credit-pool-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15.md",
+          "description": "PRIMARY anchor 1 \u2014 Anthropic Programmatic Credit Pool effective 2026-06-15. Reverses the April 2026 ban on third-party Agent SDK usage on subscriptions; replaces it with a metered programmatic pool ($20-$200/month by tier) billed at full API rates. Use-it-or-lose-it (no rollover). Quote in synthesis: 'compute arbitrage is dead'. Sanchit Vir Gogia (Greyhound Research) quoted: 'industry transition' direction with ALL major vendors moving to metered programmatic consumption over the next 12-24 months."
+        },
+        {
+          "id": "alphaevolve-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07.md",
+          "description": "PRIMARY anchor 2 \u2014 Google's strategic-vector for AlphaEvolve. AlphaEvolve Service API is gated through Google Cloud Representative engagement (NOT self-serve), explicitly using 'selective access as a feature' rather than as a temporary capacity constraint. The synthesis names this directly as a pattern: 'both vendors are now using selective access as a feature' (referring to Anthropic Mythos preview parallel). Programmatic agentic capability is no longer flat-rate-subscription-accessible; it is relationship-and-rate-card gated."
+        },
+        {
+          "id": "gpt-5-5-instant-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05.md",
+          "description": "PRIMARY anchor 3 \u2014 GPT-5.5 Instant becomes the new ChatGPT default for interactive (consumer flat-rate) use 2026-05-05; programmatic GPT-5.5 access remains separately metered through OpenAI's API rate card. Same separation pattern as Anthropic Credit Pool: interactive (subscription, capped) and programmatic (metered API) are now distinct billing channels."
+        },
+        {
+          "id": "harness-engineering-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever.md",
+          "description": "RELATED \u2014 the harness-engineering lesson explains WHY metered pricing pressure is converging: programmatic harnesses (OpenClaw and similar) extract disproportionate value-per-API-call (per-prompt-cache-hit-rate optimization, sub-agent compositions, etc.) which made flat-rate subscription economics unsustainable for vendors. The metered shift is a vendor-side response to harness-engineering value extraction."
+        },
+        {
+          "id": "per-project-profile-strategic-response-draft",
+          "type": "wiki",
+          "file": "wiki/decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles.md",
+          "description": "RELATED \u2014 this project's draft strategic-response decision: per-project assistant profiles as the operator's response to the metered shift (consume credit purposefully through plural focused Profiles rather than burn it through ad-hoc usage). Operator-territory adjacent; do NOT promote without operator decision."
+        },
+        {
+          "id": "operator-directive-2026-05-09",
+          "type": "wiki",
+          "file": "raw/notes/2026-05-09-operator-directive-per-project-assistant-configs-spawn-openclaw-openarms-hermess-and-anthropic-programmatic-budget-policy-research.md",
+          "description": "Operator directive that surfaced the credit-pool issue and requested research-confirmation. Verbatim ground truth \u2014 the operator's $240/month value-at-risk framing (research-corrected to $200/month for Max 20x)."
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Metered Programmatic Economics 2026",
+        "Compute Arbitrage Is Closing",
+        "Lesson \u2014 Programmatic vs Interactive Pool Separation"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Lesson \u2014 Harness Engineering Is the Dominant Performance Lever"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Decision (draft) \u2014 Strategic Response via Per-Project Assistant Profiles"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Pattern (draft) \u2014 Per-Project Assistant Profile"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Lesson \u2014 Anti-Vendor-Lock-In Is an Empirical Claim"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 Anthropic Programmatic Credit Pool"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 AlphaEvolve"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 GPT-5.5 Instant ChatGPT Default"
         }
       ]
     },
@@ -37007,6 +37549,51 @@
       ]
     },
     {
+      "path": "log/2026-05-15-ck-weekly-distillation-surfacings.md",
+      "slug": "log/2026-05-15-ck-weekly-distillation-surfacings",
+      "title": "CK Weekly Distillation \u2014 Surfacings (Week of 2026-05-09 \u2192 2026-05-15)",
+      "type": "note",
+      "domain": "log",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "2026-05-15",
+      "tags": [
+        "log",
+        "session",
+        "circular-knowledge",
+        "weekly-distillation",
+        "operator-decision-needed",
+        "cascade-self-first"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "CK Weekly Surfacings 2026-05-15"
+      ],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Profile \u2014 Circular Knowledge"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Lesson \u2014 Metered Programmatic Agentic Economics 2026"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "AGT Cascade Trio"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "P1 \u2014 Infrastructure Over Instructions"
+        }
+      ]
+    },
+    {
       "path": "log/2026-05-15-research-watch-frontier-delta-detected-opus-4-7-mythos-gpt-5.md",
       "slug": "log/2026-05-15-research-watch-frontier-delta-detected-opus-4-7-mythos-gpt-5",
       "title": "research-watch \u2014 frontier delta detected (Opus 4.7, Mythos, GPT-5.5, GPT-Rosalind, Claude Managed Agents v2, Claude Design)",
@@ -37095,6 +37682,28 @@
       "relationships": []
     },
     {
+      "path": "log/2026-05-15-research-watch-opus-4-7-source-synthesis-shipped-end-to-end.md",
+      "slug": "log/2026-05-15-research-watch-opus-4-7-source-synthesis-shipped-end-to-end",
+      "title": "research-watch \u2014 Opus 4.7 source-synthesis SHIPPED (end-to-end execution per cron 19:11 ET)",
+      "type": "note",
+      "domain": "log",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "log",
+        "completion"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "log/2026-05-15-weekly-research-digest-2026-05-09-2026-05-15.md",
       "slug": "log/2026-05-15-weekly-research-digest-2026-05-09-2026-05-15",
       "title": "Weekly Research Digest \u2014 2026-05-09 \u2192 2026-05-15",
@@ -37110,6 +37719,116 @@
         "session"
       ],
       "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "log/2026-05-16-ck-bootstrap-execution-batch-1.md",
+      "slug": "log/2026-05-16-ck-bootstrap-execution-batch-1",
+      "title": "CK Bootstrap Execution Batch 1 \u2014 autonomous untracked sweep + tracked-batch surface",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "done",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "log",
+        "completion",
+        "circular-knowledge",
+        "pollution-cleanup",
+        "retroactive",
+        "batch-1"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "CK Bootstrap Execution Batch 1"
+      ],
+      "relationships": [
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Operator Decision Queue"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "CK v2 Bootstrap Batch 1 Report"
+        },
+        {
+          "verb": "VALIDATES",
+          "target": "Circular Knowledge Profile"
+        }
+      ]
+    },
+    {
+      "path": "log/2026-05-16-ck-bootstrap-pile-depile-batch-1.md",
+      "slug": "log/2026-05-16-ck-bootstrap-pile-depile-batch-1",
+      "title": "CK Bootstrap \u2014 Pile Depile Batch 1 (NEVER_DEPILED verdict)",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "review",
+      "confidence": "medium",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "ck-bootstrap",
+        "pollution-audit",
+        "pile-depile",
+        "retroactive",
+        "operator-decision",
+        "batch-1"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "CK Bootstrap Pollution Audit 2026-05-16"
+      ],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Operator Decision Queue"
+        }
+      ]
+    },
+    {
+      "path": "log/2026-05-16-strong-handoff-ck-v3-live-cr-ps-still-broken.md",
+      "slug": "log/2026-05-16-strong-handoff-ck-v3-live-cr-ps-still-broken",
+      "title": "2026-05-16 \u2014 Strong handoff: CK v3 live (autonomous + R20-compliant); CR + PS still on v1 (broken); RGP uninstalled; full requirements framework",
+      "type": "note",
+      "domain": "log",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "handoff",
+        "session",
+        "ck-v3",
+        "retroactive-cleanup",
+        "profile-requirements",
+        "r20-sacrosanct",
+        "autonomous-assistant",
+        "cr-pending",
+        "ps-pending",
+        "rgp-uninstalled"
+      ],
+      "sources": [
+        {
+          "id": "session-2026-05-16",
+          "type": "directive",
+          "description": "Multi-hour session: bootstrap CK v3 rewrite + uninstall all 4 prior profiles + patch bin/assistant + verbatim operator directives across the session"
+        }
+      ],
       "layer": "",
       "maturity": "",
       "derived_from": [],
@@ -39725,6 +40444,7 @@
         {
           "id": "operator-directive-finish-smoothly-idempotent",
           "type": "conversation",
+          "file": "raw/notes/2026-05-08-pre-compact-imminent-validate-adjust-auto-compact-auto-dream-finish-smoothly-directive.md",
           "description": "Operator verbatim 2026-05-08 (this turn): force finsih smoothly if there is not already a defined handoff document or whatnot so that we dont double when there is already a handoff lol or we make it smart / idempotent and whatnot... we work on this now"
         },
         {
@@ -44821,6 +45541,235 @@
       ]
     },
     {
+      "path": "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02.md",
+      "slug": "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02",
+      "title": "Synthesis \u2014 Microsoft Agent Governance Toolkit (AGT, MIT-licensed, GA-tracking v3.5.0 2026-05-07; first public preview 2026-04-02): the first open-source toolkit to claim 10/10 coverage of the OWASP Agentic AI Top 10 (Dec 2025 taxonomy) via deterministic sub-millisecond (<0.1 ms p99) application-layer policy enforcement, calibrated against a measured 26.67% prompt-only violation rate vs 0.00% with deterministic enforcement; framework-agnostic with adapters for Microsoft Agent Framework / Semantic Kernel / AutoGen / LangGraph / LangChain / CrewAI / OpenAI Agents SDK / Google ADK / LlamaIndex / Haystack / Dify / pi-mono; 5-language SDKs (Python/TS/.NET/Rust/Go); 13,000+ tests; positions agent runtime governance as 'kernel-like infrastructure' the way OS kernels solved untrusted-program isolation \u2014 strategic landmark for the operator's OpenClaw/OpenArms/OpenFleet agent-runtime stack and a hard data point against pure prompt-based safety",
+      "type": "source-synthesis",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "microsoft",
+        "agent-governance-toolkit",
+        "agt",
+        "owasp-agentic-top-10",
+        "runtime-security",
+        "agent-runtime",
+        "policy-as-code",
+        "opa-rego",
+        "cedar",
+        "ed25519",
+        "ml-dsa-65",
+        "spiffe-svid",
+        "zero-trust-identity",
+        "deterministic-enforcement",
+        "sub-millisecond-latency",
+        "defense-in-depth",
+        "mit-license",
+        "foundation-aspiration",
+        "eu-ai-act",
+        "colorado-ai-act",
+        "nist-ai-rmf",
+        "framework-agnostic",
+        "microsoft-agent-framework",
+        "semantic-kernel",
+        "autogen",
+        "langgraph",
+        "langchain",
+        "crewai",
+        "openai-agents-sdk",
+        "google-adk",
+        "llamaindex",
+        "haystack",
+        "dify",
+        "kernel-analogy",
+        "service-mesh-analogy",
+        "sre-for-agents",
+        "openclaw-relevant",
+        "openarms-relevant",
+        "openfleet-relevant",
+        "2026-04-02",
+        "2026-05-07",
+        "source-synthesis",
+        "2026-05-15",
+        "frontier-delta-2026-05-15"
+      ],
+      "sources": [
+        {
+          "id": "microsoft-opensource-blog-agt-launch-2026-04-02",
+          "type": "article",
+          "url": "https://opensource.microsoft.com/blog/2026/04/02/introducing-the-agent-governance-toolkit-open-source-runtime-security-for-ai-agents/",
+          "file": "raw/articles/introducing-the-agent-governance-toolkit-open-source-runtime-security-for-ai-age.md",
+          "description": "Microsoft Open Source Blog launch announcement (Imran Siddique, Principal Group Engineering Manager and Agentic AI Architect at Microsoft, 2026-04-02, 6-min read). Primary launch source. Names the 7 core packages (Agent OS, Agent Mesh, Agent Runtime, Agent SRE, Agent Compliance, Agent Marketplace, Agent Lightning), the 10 OWASP risk mappings, the sub-millisecond <0.1 ms p99 latency claim, the 9,500-tests-at-launch figure (now 13,000+ per README), the cross-language SDK roster (Python/TypeScript/Rust/Go/.NET), the regulatory framings (EU AI Act high-risk Aug 2026, Colorado AI Act June 2026), and the explicit foundation-aspiration ('move it into a foundation home where it can be governed by the broader community ... actively engaging with the OWASP agentic AI community and foundation leaders'). Key quoted philosophy: 'multiple untrusted programs sharing resources, making decisions, and interacting with the outside world, with limited mediation of their actions ... Operating systems solved a similar problem decades ago.'"
+        },
+        {
+          "id": "github-microsoft-agt-readme-v3-5-0-2026-05-07",
+          "type": "documentation",
+          "url": "https://github.com/microsoft/agent-governance-toolkit",
+          "file": "raw/articles/microsoftagent-governance-toolkit.md",
+          "description": "GitHub repository README + 30 fetched files for the microsoft/agent-governance-toolkit project (state at 2026-05-15 \u2014 latest stable v3.5.0 released 2026-05-07, marked 'Public Preview \u2014 Microsoft-signed, production-quality releases. May have breaking changes before GA'). Primary technical reference. Includes: the framework integration matrix (12+ frameworks), the OWASP ASI-01 through ASI-10 coverage table, the published performance numbers (0.012 ms p50 single-rule policy eval, 0.029 ms 100-rule, 72K ops/sec throughput, 35,481 ops/sec concurrent across 50 agents), the comparative claim of '26.67% policy violation rate' for prompt-based safety vs '0.00%' for deterministic application-layer enforcement, the 4-tier privilege rings + saga orchestration + kill switch model, Ed25519 + ML-DSA-65 (NIST post-quantum) credential schemes, SPIFFE/SVID identity, 9 named adopters across production/pilot/research tiers, 6 maintainers from 4 organizations, OpenSSF Best Practices 100%, and the explicit security disclosure that AGT is 'application-level governance (Python middleware), not OS kernel-level isolation. The policy engine and agents run in the same process \u2014 the same trust boundary as every Python agent framework.'"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16.md",
+      "slug": "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16",
+      "title": "Synthesis \u2014 Claude Opus 4.7 release (Anthropic, 2026-04-16 GA): direct upgrade to Opus 4.6 with +13% on 93-task coding benchmark, 3\u00d7 image resolution (2,576 px long edge), new `xhigh` effort level, file-system memory improvements, and self-verification of outputs \u2014 same price as Opus 4.6 ($5/$25 per MTok), updated tokenizer (1.0\u20131.35\u00d7 more tokens per same input)",
+      "type": "source-synthesis",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "anthropic",
+        "claude",
+        "claude-opus-4-7",
+        "claude-opus-4-6",
+        "model-tier",
+        "agentic-coding",
+        "cursorbench",
+        "swe-bench",
+        "multimodal",
+        "vision-3x",
+        "xhigh-effort-level",
+        "task-budgets",
+        "ultrareview",
+        "auto-mode",
+        "file-system-memory",
+        "self-verification",
+        "tokenizer-change",
+        "mythos-preview",
+        "cyber-verification-program",
+        "source-synthesis",
+        "2026-04-16",
+        "2026-05-15"
+      ],
+      "sources": [
+        {
+          "id": "anthropic-newsroom-opus-4-7-2026-04-16",
+          "type": "article",
+          "url": "https://www.anthropic.com/news/claude-opus-4-7",
+          "file": "raw/articles/introducing-claude-opus-47-anthropic.md",
+          "description": "Anthropic Newsroom (2026-04-16) \u2014 official Opus 4.7 announcement, full benchmark table, 28 early-tester quotes (Cursor 70% vs 58% on CursorBench, XBOW 98.5% vs 54.5% visual-acuity, Rakuten-SWE-Bench 3\u00d7 more resolved tasks, Notion +14% at fewer tokens and 1/3 tool errors, Replit easy upgrade decision), migration guidance (tokenizer change, effort levels), and safety profile (Mythos still best-aligned)."
+        },
+        {
+          "id": "marktechpost-razzaq-2026-04-18",
+          "type": "article",
+          "url": "https://www.marktechpost.com/2026/04/18/anthropic-releases-claude-opus-4-7-a-major-upgrade-for-agentic-coding-high-resolution-vision-and-long-horizon-autonomous-tasks/",
+          "file": "raw/articles/anthropic-releases-claude-opus-47-a-major-upgrade-for-agentic-coding-high-resolu.md",
+          "description": "MarkTechPost (Asif Razzaq, 2026-04-18) \u2014 third-party framing as 'focused improvement, not full generational leap', emphasis on self-verification as 'meaningful behavioral shift', highlights of `xhigh` effort level + task budgets + `/ultrareview` + auto mode in Claude Code, and operational framing of file-system memory."
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Anthropic Programmatic Credit Pool (2026-06-15)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Claude Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness Engineering Thesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Anthropic \u2014 Effective Harnesses for Long-Running Agents"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "AI Infrastructure Decision Framework 2026"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model Registry"
+        }
+      ]
+    },
+    {
+      "path": "sources/ai-models/src-anthropic-mythos-preview-frontier-restricted-2026-04-16.md",
+      "slug": "sources/ai-models/src-anthropic-mythos-preview-frontier-restricted-2026-04-16",
+      "title": "Synthesis \u2014 Claude Mythos Preview (Anthropic, restricted; April 2026): named successor-tier-above-Opus-4.7 model deliberately withheld from GA under Project Glasswing, deployed only to a small set of enterprise cybersecurity partners; serves as alignment-benchmark anchor (lowest misaligned-behavior score Anthropic has trained) and as the capability ceiling against which Opus 4.7's safeguards are calibrated \u2014 strategic indicator of Anthropic's intent to broker capability gating per use case rather than ship peak capability publicly",
+      "type": "source-synthesis",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "anthropic",
+        "claude-mythos-preview",
+        "frontier-restricted",
+        "project-glasswing",
+        "cybergym",
+        "capability-gating",
+        "alignment-benchmark",
+        "cyber-verification-program",
+        "2026-04-16",
+        "strategic-indicator",
+        "vendor-pipeline-visibility",
+        "source-synthesis",
+        "2026-05-15",
+        "frontier-delta-2026-05-15"
+      ],
+      "sources": [
+        {
+          "id": "anthropic-newsroom-opus-4-7-2026-04-16",
+          "type": "article",
+          "url": "https://www.anthropic.com/news/claude-opus-4-7",
+          "file": "raw/articles/introducing-claude-opus-47-anthropic.md",
+          "description": "Anthropic's Opus 4.7 launch post \u2014 the canonical primary source on Mythos Preview, naming it as the most-capable model Anthropic has trained, the best-aligned per evaluations, and the explicit reason Opus 4.7's cyber capabilities were 'differentially reduced' during training. Confirms Mythos is referenced in the model-family page (Mythos Preview / Opus / Sonnet / Haiku tier list)."
+        },
+        {
+          "id": "cnbc-capoot-2026-04-16",
+          "type": "article",
+          "url": "https://www.cnbc.com/2026/04/16/anthropic-claude-opus-4-7-model-mythos.html",
+          "file": "raw/articles/httpswwwcnbccom20260416anthropic-claude-opus-4-7-model-mythoshtml.md",
+          "description": "CNBC (Ashley Capoot, 2026-04-16) \u2014 Mythos rollout context: 'select group of companies as part of a new cybersecurity initiative called Project Glasswing earlier this month,' high-profile meetings between Trump administration, tech CEOs, and bank chief executives about the security risks of powerful AI models; explicit Anthropic statement that 'Anthropic does not plan to make Claude Mythos Preview generally available' though the goal is to learn how to deploy Mythos-class models at scale eventually."
+        },
+        {
+          "id": "venturebeat-franzen-2026-04-16",
+          "type": "article",
+          "url": "https://venturebeat.com/technology/anthropic-releases-claude-opus-4-7-narrowly-retaking-lead-for-most-powerful-generally-available-llm",
+          "file": "raw/articles/anthropic-releases-claude-opus-47-narrowly-retaking-lead-for-most-powerful-gener.md",
+          "description": "VentureBeat (Carl Franzen, 2026-04-16) \u2014 Mythos as the 'even more powerful successor, restricted to a small number of external enterprise partners for cybersecurity testing and patching vulnerabilities,' plus CyberGym benchmark anchor: Mythos Preview 83.1% vs Opus 4.7 73.1% vs GPT-5.4 66.3%."
+        },
+        {
+          "id": "cnbc-capoot-2026-04-23-gpt-5-5",
+          "type": "article",
+          "url": "https://www.cnbc.com/2026/04/23/openai-announces-latest-artificial-intelligence-model.html",
+          "file": "raw/articles/httpswwwcnbccom20260423openai-announces-latest-artificial-intelligence-modelhtml.md",
+          "description": "CNBC (Ashley Capoot, 2026-04-23) on GPT-5.5 \u2014 confirms Mythos discourse continues a week after Opus 4.7: 'OpenAI is racing to keep up with rivals including Google and Anthropic, whose latest model, Claude Mythos Preview, has captivated Wall Street'; OpenAI's GPT-5.5 explicitly does NOT cross 'Critical' cybersecurity risk threshold but does meet 'High' classification \u2014 the threshold Mythos exceeded."
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "SUCCESSOR-TIER ABOVE",
+          "target": "Claude Opus 4.7 \u2014 see `src-claude-opus-4-7-anthropic-frontier-2026-04-16.md`. Opus 4.7's shape (rigor + cyber-restraint + automated blockers) is calibrated against Mythos as ceiling."
+        }
+      ]
+    },
+    {
       "path": "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15.md",
       "slug": "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15",
       "title": "Synthesis \u2014 Anthropic Programmatic Credit Pool (effective 2026-06-15): separate metered budget for Claude Agent SDK / `claude -p` CLI / GitHub Actions / third-party Agent SDK apps, at API rates, with $20\u2013$200/month tier-by-tier allowance that does NOT roll over",
@@ -44909,6 +45858,255 @@
       ]
     },
     {
+      "path": "sources/ai-models/src-anthropic-spacex-colossus-claude-code-limits-doubled-2026-05-06.md",
+      "slug": "sources/ai-models/src-anthropic-spacex-colossus-claude-code-limits-doubled-2026-05-06",
+      "title": "Synthesis \u2014 Anthropic \u00d7 SpaceX Colossus 1 Compute Deal + Claude Code Usage-Limit Doubling (Code with Claude conference, 2026-05-06): Anthropic takes the entire Colossus 1 data center capacity (300+ MW, 220,000+ NVIDIA GPUs incl. H100/H200/GB200) under a deal announced from stage by Dario Amodei, immediately doubling Claude Code's 5-hour rate limits for Pro/Max/Team/seat-based-Enterprise plans, removing the peak-hours limit reduction on Claude Code for Pro/Max, and raising API rate limits considerably for Claude Opus models \u2014 strategic counter-narrative to the constraint-side credit-pool policy (effective 2026-06-15): supply-side relief is arriving on the subscription tier even as programmatic agentic use is being separated and metered; explicit interest also expressed in 'multiple gigawatts of orbital AI compute' with SpaceX, joining stack of recent Anthropic compute deals (Amazon up-to-5 GW, Google/Broadcom 5 GW from 2027, Microsoft+NVIDIA $30B Azure capacity, Fluidstack $50B US AI infrastructure)",
+      "type": "source-synthesis",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "anthropic",
+        "spacex",
+        "colossus-1",
+        "claude-code",
+        "usage-limits",
+        "opus-api-rate-limits",
+        "code-with-claude-2026",
+        "compute-supply",
+        "dario-amodei",
+        "elon-musk",
+        "gpu-capacity",
+        "orbital-compute",
+        "2026-05-06",
+        "source-synthesis",
+        "2026-05-15",
+        "frontier-delta-2026-05-15",
+        "vision-relevant-stack",
+        "operator-stack-direct"
+      ],
+      "sources": [
+        {
+          "id": "anthropic-news-2026-05-06",
+          "type": "article",
+          "url": "https://www.anthropic.com/news/higher-limits-spacex",
+          "file": "raw/articles/higher-usage-limits-for-claude-and-a-compute-deal-with-spacex-anthropic.md",
+          "description": "Anthropic official announcement (2026-05-06, Code with Claude conference). Three concrete limit changes effective same day: (1) Claude Code 5-hour rate limits doubled for Pro/Max/Team/seat-based-Enterprise; (2) peak-hours limit reduction on Claude Code removed for Pro/Max; (3) API rate limits raised considerably for Opus models (table in post). SpaceX deal: full capacity of Colossus 1, 300+ MW / 220,000+ NVIDIA GPUs, online within the month. Stack of other recent compute deals enumerated (Amazon up to 5 GW with ~1 GW new by end of 2026; Google/Broadcom 5 GW from 2027; Microsoft+NVIDIA $30B Azure; Fluidstack $50B US AI infra). Hardware diversity stated: Trainium + TPUs + NVIDIA GPUs. Orbital AI compute exploration (multiple GW) mentioned. International expansion drivers: financial services / healthcare / government data residency. Commitment to cover consumer electricity price increases caused by US data centers, exploring extension to international jurisdictions."
+        },
+        {
+          "id": "arstechnica-axon-2026-05-06",
+          "type": "article",
+          "url": "https://arstechnica.com/ai/2026/05/anthropic-raises-claude-code-usage-limits-credits-new-deal-with-spacex/",
+          "file": "raw/articles/anthropic-raises-claude-code-usage-limits-credits-new-deal-with-spacex-ars-techn.md",
+          "description": "Ars Technica trade-press write-up (Samuel Axon, 2026-05-06). On-stage attribution to Dario Amodei. Confirms Memphis, Tennessee location for Colossus 1; SpaceX-side disclosure adds GPU mix (H100, H200, next-gen GB200). Demand-side context: increase driven partly by users moving away from OpenAI after US-military-agreements controversy, increasing Claude Code adoption in professional software-dev orgs, and shift away from single-agent chat toward multi-agent workflows. Recent Anthropic responses to demand: peak-hour limits introduced + short-lived trial removing Claude Code from $20/month Pro plan. Musk pivot context: previously critical of Anthropic ('Anthropic hates Western Civilization,' Feb 2026); Wednesday tweet 'No one set off my evil detector' after meetings with Anthropic team. Frames the deal sequence (Microsoft, Google, Amazon, NVIDIA, now SpaceX) as Anthropic's response to compute-supply-vs-demand mismatch, with note that 'gains from some of them will take time to materialize.'"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16.md",
+      "slug": "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16",
+      "title": "Synthesis \u2014 Claude Opus 4.7 (Anthropic, 2026-04-16 GA): rigor-tuned frontier model with self-verification, 3.75 MP vision, xhigh effort tier, task budgets, file-system memory; narrowly retakes generally-available SOTA over GPT-5.4 and Gemini 3.1 Pro at unchanged $5/$25-per-MTok pricing while Mythos Preview remains restricted under Project Glasswing",
+      "type": "source-synthesis",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "anthropic",
+        "claude",
+        "claude-opus-4-7",
+        "claude-mythos-preview",
+        "frontier-llm",
+        "agentic-coding",
+        "swe-bench-pro",
+        "gdpval-aa",
+        "cursorbench",
+        "terminal-bench-2",
+        "xhigh-effort",
+        "task-budgets",
+        "file-system-memory",
+        "multimodal-vision",
+        "computer-use",
+        "ultrareview",
+        "auto-mode",
+        "claude-code",
+        "project-glasswing",
+        "cyber-verification-program",
+        "tokenizer-change-1-0-to-1-35x",
+        "self-verification",
+        "rigor",
+        "2026-04-16",
+        "source-synthesis",
+        "2026-05-15",
+        "frontier-delta-2026-05-15"
+      ],
+      "sources": [
+        {
+          "id": "anthropic-newsroom-2026-04-16",
+          "type": "article",
+          "url": "https://www.anthropic.com/news/claude-opus-4-7",
+          "file": "raw/articles/introducing-claude-opus-47-anthropic.md",
+          "description": "Anthropic's own announcement (April 16, 2026) \u2014 full benchmark suite, 28 customer testimonials (Intuit, Notion, Replit, Devin/Cognition, Harvey, XBOW, Vercel, Databricks, Ramp, Bolt, Hex, Hebbia, Rakuten, CodeRabbit, Genspark, Warp, Quantium, Factory, Qodo, IGGY/MysteryAI, Cursor, etc.), tokenizer-change disclosure (1.0\u20131.35\u00d7), xhigh/task-budgets/auto-mode/ultrareview detail, safety profile relative to Opus 4.6 and Mythos Preview."
+        },
+        {
+          "id": "venturebeat-franzen-2026-04-16",
+          "type": "article",
+          "url": "https://venturebeat.com/technology/anthropic-releases-claude-opus-4-7-narrowly-retaking-lead-for-most-powerful-generally-available-llm",
+          "file": "raw/articles/anthropic-releases-claude-opus-47-narrowly-retaking-lead-for-most-powerful-gener.md",
+          "description": "VentureBeat (Carl Franzen, 2026-04-16) \u2014 strategic framing: narrow SOTA lead vs GPT-5.4 (1753 vs 1674 GDPVal-AA Elo) and Gemini 3.1 Pro (1314), the Rust-TTS self-verification anecdote, Cyber Verification Program detail, Project Glasswing context, $800B valuation environment, DoW supply-chain-risk litigation, 'AI shrinkflation' user-rebellion backdrop the release is engineered to silence."
+        },
+        {
+          "id": "marktechpost-razzaq-2026-04-18",
+          "type": "article",
+          "url": "https://www.marktechpost.com/2026/04/18/anthropic-releases-claude-opus-4-7-a-major-upgrade-for-agentic-coding-high-resolution-vision-and-long-horizon-autonomous-tasks/",
+          "file": "raw/articles/anthropic-releases-claude-opus-47-a-major-upgrade-for-agentic-coding-high-resolu.md",
+          "description": "MarkTechPost (Asif Razzaq, 2026-04-18) \u2014 concise developer-facing recap: 13% lift on 93-task coding benchmark, CursorBench 70% vs 58% Opus 4.6, +14% on multi-step workflows at 1/3 tool errors, XBOW 98.5% vs 54.5% visual-acuity benchmark, file-system-memory framing, Claude Code default raised to xhigh effort."
+        },
+        {
+          "id": "cnbc-capoot-2026-04-16",
+          "type": "article",
+          "url": "https://www.cnbc.com/2026/04/16/anthropic-claude-opus-4-7-model-mythos.html",
+          "file": "raw/articles/httpswwwcnbccom20260416anthropic-claude-opus-4-7-model-mythoshtml.md",
+          "description": "CNBC (Ashley Capoot, 2026-04-16) \u2014 regulatory + strategic positioning: Opus 4.7 as 'less risky than Mythos,' Project Glasswing's high-profile Trump-administration/bank-CEO meetings, Mythos Preview not slated for general availability, Anthropic's reputation as safety-first vs OpenAI rival framing."
+        },
+        {
+          "id": "claude-release-notes-2026-04",
+          "type": "article",
+          "url": "https://support.claude.com/en/articles/12138966-release-notes",
+          "file": "raw/articles/httpssupportclaudecomenarticles12138966-release-notes.md",
+          "description": "Anthropic release-notes timeline \u2014 confirms 2026-04-16 Opus 4.7 launch + 2026-04-17 Claude Design launch + back-history of Cowork, Sonnet 4.6 (Feb 17 2026), Opus 4.6 (Feb 5 2026), Opus 4.5 (Nov 24 2025), Haiku 4.5 (Oct 15 2025) generational cadence."
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05.md",
+      "slug": "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05",
+      "title": "Synthesis \u2014 OpenAI GPT-5.5 Instant (2026-05-05): the Instant-variant of the GPT-5.5 frontier family becomes the new ChatGPT default model, replacing GPT-5.3 Instant for all users (Free/Plus/Pro/Business/Enterprise), with OpenAI-claimed 52.5% reduction in hallucinated claims on high-stakes evals (medicine/law/finance) and 37.3% reduction in inaccuracies on user-flagged difficult conversations vs predecessor; AIME-2025 jumps 65.4 \u2192 81.2, MMMU-Pro 69.2 \u2192 76; introduces cross-chat / files / Gmail memory-context and user-facing memory-sources surface (delete/correct controls) \u2014 first time OpenAI uses a default-model swap (not a separate premium tier) as the vehicle for hallucination-reduction + context-management upgrades, signaling that 'better daily assistant' has become as strategically important as frontier-capability for OpenAI's consumer product moat; API-distribution alias 'chat-latest' shifts to point at the new model, GPT-5.3 Instant retained 3 months for paid users only",
+      "type": "source-synthesis",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "openai",
+        "gpt-5-5-instant",
+        "chatgpt",
+        "default-model",
+        "gpt-5-3-instant",
+        "hallucination-reduction",
+        "aime-2025",
+        "mmmu-pro",
+        "memory-sources",
+        "personalization",
+        "gmail-integration",
+        "chat-latest",
+        "model-deprecation",
+        "gpt-4o-backlash",
+        "2026-05-05",
+        "source-synthesis",
+        "2026-05-15",
+        "frontier-delta-2026-05-15",
+        "vision-relevant-model-tier"
+      ],
+      "sources": [
+        {
+          "id": "techcrunch-mehta-2026-05-05",
+          "type": "article",
+          "url": "https://techcrunch.com/2026/05/05/openai-releases-gpt-5-5-instant-a-new-default-model-for-chatgpt/",
+          "file": "raw/articles/openai-releases-gpt-55-instant-a-new-default-model-for-chatgpt-techcrunch.md",
+          "description": "TechCrunch (Ivan Mehta, 2026-05-05) \u2014 primary trade-press write-up. Includes the AIME-2025 (65.4 \u2192 81.2) and MMMU-Pro (69.2 \u2192 76) benchmark deltas vs predecessor; rollout sequencing (web first, mobile later); API distribution change (chat-latest alias swap); GPT-5.3 retained as paid-tier option for 3 months; framing of the GPT-4o deprecation backlash (Feb 2026) as context for why OpenAI is now keeping the legacy variant as a paid option rather than hard-deprecating."
+        },
+        {
+          "id": "testingcatalog-shabanov-2026-05-05",
+          "type": "article",
+          "url": "https://www.testingcatalog.com/openai-launches-gpt-5-5-instant-as-new-chatgpt-default/",
+          "file": "raw/articles/openai-launches-gpt-55-instant-as-new-chatgpt-default.md",
+          "description": "TestingCatalog (Alexey Shabanov, 2026-05-05) \u2014 corroborating secondary source. Adds the headline 52.5%-fewer-hallucinated-claims figure (high-stakes evals: medicine/law/finance) and 37.3%-reduced-inaccuracies on difficult-conversation evals previously flagged by users for factual errors; positions GPT-5.5 Instant as 'updating the baseline ChatGPT experience rather than introducing a separate premium-only model'; surfaces the personalization (past chats / files / Gmail) + memory-sources UI as the parallel user-facing release vector."
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "sources/ai-models/src-gpt-5-5-openai-frontier-2026-04-23.md",
+      "slug": "sources/ai-models/src-gpt-5-5-openai-frontier-2026-04-23",
+      "title": "Synthesis \u2014 OpenAI GPT-5.5 (2026-04-23): rapid-cadence frontier-tier successor to GPT-5.4 (released ~7 weeks prior), explicitly positioned 'better at coding, computer use, deeper research,' rolling out to Plus/Pro/Business/Enterprise in ChatGPT and Codex with API arrival 'very soon' but staged via 'different safeguards'; safety-disclosure-class is 'High' (not 'Critical') \u2014 calibrated against Anthropic's Claude Mythos Preview restriction; first OpenAI release framed in industry discourse as 'racing to keep up with Anthropic' rather than setting the pace",
+      "type": "source-synthesis",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "openai",
+        "gpt-5-5",
+        "gpt-5-4",
+        "chatgpt",
+        "codex",
+        "frontier-llm",
+        "agentic-coding",
+        "computer-use",
+        "deep-research",
+        "terminal-bench-82-7",
+        "safety-class-high",
+        "cybersecurity-risk-threshold",
+        "novo-nordisk-partnership-context",
+        "2026-04-23",
+        "source-synthesis",
+        "2026-05-15",
+        "frontier-delta-2026-05-15"
+      ],
+      "sources": [
+        {
+          "id": "cnbc-capoot-2026-04-23",
+          "type": "article",
+          "url": "https://www.cnbc.com/2026/04/23/openai-announces-latest-artificial-intelligence-model.html",
+          "file": "raw/articles/httpswwwcnbccom20260423openai-announces-latest-artificial-intelligence-modelhtml.md",
+          "description": "CNBC (Ashley Capoot, 2026-04-23) \u2014 the canonical primary-source article for GPT-5.5 launch. Includes direct quotes from OpenAI President Greg Brockman ('how much more it can do with less guidance' / 'setting the foundation for how we're going to use computers'), Mia Glaese VP Research ('extensive third-party safeguard testing and red teaming for cyber and bio risks'), CNBC's strategic framing of OpenAI 'racing to keep up with rivals including Google and Anthropic, whose latest model Claude Mythos Preview has captivated Wall Street,' explicit safety-class disclosure (not 'Critical' threshold, meets 'High' classification), rollout cadence (ChatGPT + Codex 2026-04-23; API 'very soon' with 'different safeguards')."
+        },
+        {
+          "id": "marktechpost-razzaq-2026-04-18-opus-47",
+          "type": "article",
+          "url": "https://www.marktechpost.com/2026/04/18/anthropic-releases-claude-opus-4-7-a-major-upgrade-for-agentic-coding-high-resolution-vision-and-long-horizon-autonomous-tasks/",
+          "file": "raw/articles/anthropic-releases-claude-opus-47-a-major-upgrade-for-agentic-coding-high-resolu.md",
+          "description": "MarkTechPost (Asif Razzaq, 2026-04-18) \u2014 secondary corroborating data: 'GPT-5.5 tops Terminal-Bench at 82.7%' and 'Claude Code leads on code quality at 87.6% SWE-bench Verified' from MarkTechPost's separate roundup article ('Best AI Agents for Software Development Ranked'); also flags SWE-bench-Verified-was-declared-contaminated-by-OpenAI-in-February-2026 caveat that affects how to read GPT-5.5's coding-benchmark claims."
+        },
+        {
+          "id": "anthropic-newsroom-opus-4-7-2026-04-16",
+          "type": "article",
+          "url": "https://www.anthropic.com/news/claude-opus-4-7",
+          "file": "raw/articles/introducing-claude-opus-47-anthropic.md",
+          "description": "Anthropic Opus 4.7 newsroom (April 16, 2026) \u2014 direct comparative data: Opus 4.7's GDPVal-AA Elo 1753 vs GPT-5.4 1674 (the predecessor); CodeRabbit (David Loker) reports Opus 4.7 is 'a bit faster than GPT-5.4 xhigh on our harness' \u2014 establishes the baseline GPT-5.5 supersedes. No direct GPT-5.5 benchmarks from Anthropic since GPT-5.5 released 1 week after Opus 4.7."
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "sources/claude-code/src-claude-code-accuracy-tips.md",
       "slug": "sources/claude-code/src-claude-code-accuracy-tips",
       "title": "Synthesis \u2014 Claude Code Accuracy Tips",
@@ -44985,6 +46183,45 @@
           "target": "Decision \u2014 MCP vs CLI for Tool Integration"
         }
       ]
+    },
+    {
+      "path": "sources/claude-code/src-claude-code-hooks-reference.md",
+      "slug": "sources/claude-code/src-claude-code-hooks-reference",
+      "title": "Synthesis \u2014 Claude Code Hooks Reference \u2014 26 Lifecycle Events, 4 Handler Types",
+      "type": "source-synthesis",
+      "domain": "claude-code",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "claude-code",
+        "hooks",
+        "lifecycle",
+        "automation",
+        "agent-control",
+        "mcp",
+        "harness-engineering",
+        "permissions"
+      ],
+      "sources": [
+        {
+          "id": "claude-code-hooks-reference",
+          "type": "documentation",
+          "url": "https://code.claude.com/docs/en/hooks",
+          "file": "raw/articles/claude-code-hooks-reference.md",
+          "ingested": "2026-04-09"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Claude Code Hooks Reference",
+        "Claude Code Hooks \u2014 Lifecycle Events"
+      ],
+      "relationships": []
     },
     {
       "path": "sources/claude-code/src-claude-slash-commands.md",
@@ -48073,6 +49310,87 @@
       ]
     },
     {
+      "path": "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07.md",
+      "slug": "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07",
+      "title": "Synthesis \u2014 AlphaEvolve (Google DeepMind, May 2025 launch \u2192 May 7 2026 one-year scaling update \u2192 Dec 9 2025 Google Cloud private preview): Gemini-powered evolutionary coding agent that pairs Gemini Flash (breadth) + Gemini Pro (depth) with user-defined automated evaluators and an evolutionary loop over a program-population to discover algorithms that outperform expert-written baselines \u2014 moves from research curiosity to production substrate inside Google (Borg scheduling +0.7% global compute recovery, +23% on a key Gemini training kernel \u2192 1% total Gemini training-time reduction, FlashAttention +32.5%, Spanner LSM-tree write-amp \u221220%, software storage footprint \u22129%, TPU arithmetic-circuit redesign integrated into next-gen silicon) and across external partners (Klarna 2\u00d7 transformer training speed; Substrate multi-fold lithography simulation; FM Logistic +10.4% TSP routing; WPP +10% campaign-model accuracy; Schr\u00f6dinger ~4\u00d7 MLFF train+infer speedup; PacBio DeepConsensus \u221230% variant-detection errors; Earth-AI natural-disaster prediction +5%; AC Optimal Power Flow 14%\u219288% feasible solutions; quantum-circuit error 10\u00d7 lower on Willow; Erd\u0151s-problem progress with Tao; 4\u00d74 complex matrix multiplication in 48 scalar multiplications, beating Strassen 1969; kissing-number lower bound advanced in 11 dimensions; ~75% rediscovery + ~20% improvement on 50+ open mathematical problems) \u2014 productized via the AlphaEvolve Service API on Google Cloud (private preview, Dec 9 2025; ongoing Early Access program); strategic-impact event for this project's vision: introduces an 'agentic algorithm-discovery' tier ABOVE the agentic-coding-harness tier (Claude Code / Codex / OpenCode / Gemini CLI / etc.), where the deliverable is not 'completed task' but 'better algorithm discovered + production-deployed', and Google is the first vendor to formalize that tier as a cloud API",
+      "type": "source-synthesis",
+      "domain": "tools-and-platforms",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "alphaevolve",
+        "google-deepmind",
+        "gemini",
+        "gemini-flash",
+        "gemini-pro",
+        "evolutionary-coding-agent",
+        "algorithm-discovery",
+        "agentic-coding",
+        "google-cloud",
+        "tpu",
+        "borg",
+        "flashattention",
+        "spanner",
+        "klarna",
+        "schrodinger",
+        "fm-logistic",
+        "wpp",
+        "substrate",
+        "pacbio",
+        "willow-quantum",
+        "kissing-number",
+        "ramsey-numbers",
+        "traveling-salesman",
+        "terence-tao",
+        "matrix-multiplication",
+        "strassen",
+        "ac-optimal-power-flow",
+        "earth-ai",
+        "deepconsensus",
+        "lsm-tree",
+        "2025-05-14",
+        "2025-12-09",
+        "2026-05-07",
+        "source-synthesis",
+        "2026-05-15",
+        "frontier-delta-2026-05-15",
+        "vision-relevant-agent-runtime",
+        "vision-relevant-tools-platforms",
+        "agentic-algorithm-discovery"
+      ],
+      "sources": [
+        {
+          "id": "deepmind-alphaevolve-launch-2025-05-14",
+          "type": "article",
+          "url": "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/",
+          "file": "raw/articles/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms-goog.md",
+          "description": "Google DeepMind launch announcement (AlphaEvolve team, 2025-05-14). Defines AlphaEvolve as an evolutionary coding agent using a Gemini Flash + Gemini Pro ensemble with automated evaluators and an evolutionary framework over a program population. Documents production deployments at Google: Borg data-center scheduling (continuously recovering 0.7% of worldwide compute resources for >1 year), Verilog rewrite of a matrix-multiplication arithmetic circuit integrated into an upcoming TPU, +23% on a Gemini training kernel (1% total Gemini training-time reduction), +32.5% on FlashAttention low-level GPU kernel. Mathematical results: 4\u00d74 complex matrix multiplication in 48 scalar multiplications (beats Strassen 1969 \u2014 and AlphaTensor's previous best only worked for binary arithmetic in this setting); ~75% state-of-the-art rediscovery and ~20% improvement on 50+ open problems in analysis/geometry/combinatorics/number theory; kissing-number new lower bound in 11 dimensions (configuration of 593 outer spheres). Strategically frames AlphaEvolve as 'beyond single-function discovery to evolve entire codebases.'"
+        },
+        {
+          "id": "deepmind-alphaevolve-impact-2026-05-07",
+          "type": "article",
+          "url": "https://deepmind.google/blog/alphaevolve-impact/",
+          "file": "raw/articles/alphaevolve-gemini-powered-coding-agent-scaling-impact-across-fields-google-deep.md",
+          "description": "Google DeepMind one-year-anniversary scaling update (AlphaEvolve team, 2026-05-07). Catalogues impact across (a) social/sustainability \u2014 PacBio DeepConsensus \u221230% variant-detection errors, AC Optimal Power Flow feasibility 14%\u219288%, Earth-AI natural-disaster prediction +5%; (b) frontier research \u2014 Willow quantum-circuit error 10\u00d7 lower than conventional optimization, Erd\u0151s-problem progress with Terence Tao (UCLA), record TSP lower bounds, record Ramsey-number lower bounds, neuroscience-model interpretability, microeconomics market-limit proofs, neural-net building blocks, privacy cryptography, synthetic data generation, frontier-AI safety mitigations; (c) Google AI infrastructure \u2014 TPU circuit design integrated into silicon (Jeff Dean quote: 'TPU brains helping design next-generation TPU bodies'), cache-replacement-policy discovery (2 days vs months human effort), Spanner LSM-tree compaction heuristics \u221220% write amplification, software storage footprint \u22129%; (d) commercial enterprises via Google Cloud \u2014 Klarna 2\u00d7 transformer training speed + improved quality, Substrate computational-lithography multi-fold runtime speedup, FM Logistic +10.4% TSP routing efficiency (>15,000 km/yr saved), WPP +10% campaign-model accuracy, Schr\u00f6dinger ~4\u00d7 MLFF train+infer speedup. Positions AlphaEvolve as 'a versatile, general-purpose system' graduating from pilot to core component."
+        },
+        {
+          "id": "google-cloud-alphaevolve-private-preview-2025-12-09",
+          "type": "article",
+          "url": "https://cloud.google.com/blog/products/ai-machine-learning/alphaevolve-on-google-cloud",
+          "file": "raw/articles/alphaevolve-on-google-cloud-google-cloud-blog.md",
+          "description": "Google Cloud Blog (Vladimir Vuskovic, Dir Product Mgmt, Google Cloud + Anant Nawalgaria, Group AI PM/Eng, Google; 2025-12-09). The productization vector: AlphaEvolve Service API launched in private preview on Google Cloud via an Early Access Program (customers contact their Google Cloud Representative to participate). Operating model is documented: (1) customer-defined problem specification + evaluation logic + seed initialization program (compile-ready, sub-optimal); (2) Gemini Flash + Gemini Pro mutate code \u2192 'population space'; (3) evolutionary algorithms select crossover/mutation parents; (4) ground-truth evaluator decides whether a child replaces parent \u2014 feedback loop iterates until convergence. Target industries explicitly enumerated: biotech/pharma (molecular-simulation algorithm optimization \u2192 shorter drug-discovery timelines), logistics/supply chain (routing + inventory heuristics), financial services (algorithmic risk models for complex portfolio management), energy (smart-grid load-balancing + renewable integration). Frames the offering as 'for complex optimization problems you can define in code and objectively measure.'"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks.md",
       "slug": "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
       "title": "Synthesis \u2014 BrowseComp-Plus (Chen et al. Aug 2025) + LongBench v2 (Bai et al. Dec 2024): Completing the RLM Table 1 Benchmark Coverage",
@@ -49065,6 +50383,90 @@
           "target": "Goldilocks Protocol"
         }
       ]
+    },
+    {
+      "path": "sources/tools-integration/src-claude-managed-agents-dreaming-outcomes-multiagent-2026-05.md",
+      "slug": "sources/tools-integration/src-claude-managed-agents-dreaming-outcomes-multiagent-2026-05",
+      "title": "Synthesis \u2014 Claude Managed Agents Update (2026-05-07): Dreaming (self-improvement), Outcomes (rubric evaluation), Multiagent Orchestration",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "claude-managed-agents",
+        "dreaming",
+        "outcomes",
+        "multiagent-orchestration",
+        "agent-memory",
+        "self-improvement",
+        "evaluation",
+        "harness-engineering",
+        "anthropic",
+        "tools-integration"
+      ],
+      "sources": [
+        {
+          "id": "9to5mac-managed-agents-2026-05-07",
+          "type": "article",
+          "url": "https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/",
+          "file": "raw/articles/anthropic-updates-claude-managed-agents-with-three-new-features-9to5mac.md",
+          "ingested": "2026-05-15"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Claude Managed Agents Three New Features May 2026",
+        "Claude Managed Agents \u2014 Dreaming, Outcomes, Multiagent"
+      ],
+      "relationships": []
+    },
+    {
+      "path": "sources/tools-integration/src-claude-os-persistent-memory-brobertsaz.md",
+      "slug": "sources/tools-integration/src-claude-os-persistent-memory-brobertsaz",
+      "title": "Synthesis \u2014 Claude OS (brobertsaz): Persistent Memory + Hybrid Indexing Operating System for Claude Code",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "claude-os",
+        "persistent-memory",
+        "tree-sitter",
+        "hybrid-indexing",
+        "rag",
+        "agent-memory",
+        "sqlite",
+        "vector-embeddings",
+        "claude-code",
+        "knowledge-management",
+        "second-brain",
+        "tools-integration"
+      ],
+      "sources": [
+        {
+          "id": "code-it-forward-claude-os-2025-10-31",
+          "type": "article",
+          "url": "https://thebob.dev/ai/tools/productivity/2025/10/31/why-we-built-claude-os-and-what-it-actually-is/",
+          "file": "raw/articles/why-we-built-claude-os-and-what-it-actually-is-code-it-forward.md",
+          "ingested": "2026-05-15"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Claude OS Persistent Memory",
+        "Claude OS \u2014 SQLite + Tree-sitter Hybrid Indexing for Agent Memory"
+      ],
+      "relationships": []
     },
     {
       "path": "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17.md",
@@ -61343,23 +62745,23 @@
       "relationship_count": 509
     },
     "cross-domain": {
-      "page_count": 297,
-      "relationship_count": 1809
+      "page_count": 306,
+      "relationship_count": 1837
     },
     "ai-agents": {
-      "page_count": 76,
+      "page_count": 77,
       "relationship_count": 577
     },
     "ai-models": {
-      "page_count": 16,
-      "relationship_count": 93
+      "page_count": 22,
+      "relationship_count": 100
     },
     "tools-integration": {
-      "page_count": 38,
+      "page_count": 40,
       "relationship_count": 381
     },
     "tools-and-platforms": {
-      "page_count": 29,
+      "page_count": 30,
       "relationship_count": 195
     },
     "devops": {
@@ -61375,14 +62777,18 @@
       "relationship_count": 195
     },
     "log": {
-      "page_count": 189,
-      "relationship_count": 58
+      "page_count": 192,
+      "relationship_count": 62
     },
     "agent-config": {
       "page_count": 57,
       "relationship_count": 37
     },
     "patterns": {
+      "page_count": 1,
+      "relationship_count": 0
+    },
+    "claude-code": {
       "page_count": 1,
       "relationship_count": 0
     },
@@ -61642,6 +63048,7 @@
       "backlog/modules/root-ghostproxy-m002-methodology-layer-decision",
       "domains/cross-domain/integration/second-brain-integration-requirements",
       "domains/cross-domain/methodology-framework/project-self-identification-protocol",
+      "domains/cross-domain/profile-circular-knowledge-evolution-layer-and-brain-self-improvement",
       "ecosystem/project_profiles/aicp/identity-profile",
       "ecosystem/project_profiles/devops-control-plane/identity-profile",
       "ecosystem/project_profiles/openarms/identity-profile",
@@ -61731,6 +63138,7 @@
       "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis",
       "patterns/03_validated/architecture/gateway-centric-routing",
       "patterns/03_validated/knowledge/context-aware-tool-loading",
+      "sources/claude-code/src-claude-code-hooks-reference",
       "sources/obsidian-notebooklm/src-claude-world-notebooklm-skill",
       "sources/src-claude-agent-sdk-and-managed-agents",
       "sources/src-cline-agentic-coding-ide-extension",
@@ -61784,6 +63192,7 @@
       "comparisons/model-ecosystem-vs-four-project-ecosystem",
       "comparisons/openarms-vs-openfleet-enforcement",
       "domains/ai-agents/patterns/task-lifecycle-stage-gating",
+      "domains/cross-domain/agt-cascade-trio-adopt-as-substrate-unless-load-bearing-differentiator-cross-project-consolidation",
       "domains/cross-domain/mcp-runtime-signaling",
       "domains/devops/backlog-hierarchy-rules",
       "domains/devops/execution-modes-and-end-conditions",
@@ -61936,6 +63345,8 @@
       "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
       "domains/ai-agents/orchestration/openclaw",
       "domains/ai-agents/orchestration/openfleet",
+      "domains/cross-domain/agt-cascade-trio-adopt-as-substrate-unless-load-bearing-differentiator-cross-project-consolidation",
+      "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction",
       "log/2026-04-09/models/2026-04-09-directive-quality-models-hub-mindset",
       "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes",
       "patterns/03_validated/architecture/gateway-centric-routing",
@@ -62006,9 +63417,11 @@
       "backlog/tasks/T075-author-assistant-profile-canonical-example",
       "backlog/tasks/T078-author-spawn-protocol-generic-agent-sdk",
       "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles",
+      "domains/cross-domain/agt-cascade-trio-adopt-as-substrate-unless-load-bearing-differentiator-cross-project-consolidation",
       "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately",
       "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
       "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache",
+      "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction",
       "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes",
       "patterns/01_drafts/skill-systems-orchestrator-plus-modular-child-skills-the-architecture-pattern-anthropic-wont-solve-for-you",
       "patterns/01_drafts/spawn-protocol-multica-the-runtime-agnostic-bridge-from-per-project-profile-to-multicas-10-cli-daemon"
@@ -62127,6 +63540,7 @@
       "domains/ai-agents/patterns/rework-prevention",
       "domains/ai-agents/patterns/spec-driven-development",
       "domains/ai-agents/patterns/task-lifecycle-stage-gating",
+      "domains/cross-domain/agt-cascade-trio-adopt-as-substrate-unless-load-bearing-differentiator-cross-project-consolidation",
       "domains/cross-domain/mcp-runtime-signaling",
       "domains/devops/backlog-hierarchy-rules",
       "domains/devops/four-project-ecosystem",
@@ -62312,6 +63726,7 @@
       "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
       "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis",
       "patterns/03_validated/enforcement/enforcement-hook-patterns",
+      "sources/claude-code/src-claude-code-hooks-reference",
       "sources/claude-code/src-shanraisshan-claude-code-best-practice",
       "sources/ecosystem-projects/src-openarms-v10-enforcement",
       "sources/src-claude-agent-sdk-and-managed-agents",
@@ -62965,6 +64380,9 @@
       "backlog/modules/root-ghostproxy-m008-smoke-test-from-inside",
       "backlog/modules/root-ghostproxy-m009-worked-example-readme-ingest",
       "backlog/modules/root-ghostproxy-m010-sister-projects-yaml-flip",
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-m001-reframe-as-audit-of-existing-agents-md-claude-md-2026-05-16",
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-scope-clarification-selfdef-boundary-2026-05-16",
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-state-divergence-upstream-already-advanced-2026-05-16",
       "ecosystem/project_profiles/root-ghostproxy/identity-profile",
       "log/2026-05-04-new-machine-context-load-and-adaptation-findings",
       "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
@@ -63031,6 +64449,7 @@
       "backlog/epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle",
       "domains/ai-agents/patterns/hooks-lifecycle-architecture",
       "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
+      "sources/claude-code/src-claude-code-hooks-reference",
       "spine/models/agent-config/model-skills-commands-hooks"
     ],
     "phases": [
@@ -63181,6 +64600,7 @@
       "patterns/03_validated/architecture/progressive-distillation",
       "patterns/03_validated/knowledge/ecosystem-feedback-loop-wiki-as-source-of-truth",
       "sources/obsidian-notebooklm/src-obsidian-claude-code-second-brain",
+      "sources/tools-integration/src-claude-os-persistent-memory-brobertsaz",
       "sources/wiki-methodology/src-karpathy-claude-code-10x",
       "sources/wiki-methodology/src-karpathy-llm-wiki-idea-file",
       "spine/models/depth/model-knowledge-evolution",
@@ -63426,11 +64846,14 @@
       "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
       "log/2026-05-08-strong-loop-arc-ingest-synthesize-propagate-distill-and-operator-decisions-pending",
       "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension",
+      "log/2026-05-15-ck-weekly-distillation-surfacings",
       "log/2026-05-15-research-watch-frontier-delta-detected-opus-4-7-mythos-gpt-5",
       "log/2026-05-15-research-watch-lightweight-scan-3-2026-05-15-17-16-et-noted",
       "log/2026-05-15-research-watch-lightweight-scan-4-cron-18-32-et-noted-but-sk",
       "log/2026-05-15-research-watch-lightweight-scan-noted-but-skipped-no-new-nov",
+      "log/2026-05-15-research-watch-opus-4-7-source-synthesis-shipped-end-to-end",
       "log/2026-05-15-weekly-research-digest-2026-05-09-2026-05-15",
+      "log/2026-05-16-ck-bootstrap-execution-batch-1",
       "spine/standards/note-page-standards"
     ],
     "contract": [
@@ -63820,7 +65243,8 @@
     ],
     "m001": [
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
-      "backlog/modules/root-ghostproxy-m001-author-claude-md-and-agents-md"
+      "backlog/modules/root-ghostproxy-m001-author-claude-md-and-agents-md",
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-m001-reframe-as-audit-of-existing-agents-md-claude-md-2026-05-16"
     ],
     "mcp-integration": [
       "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config"
@@ -63877,7 +65301,10 @@
       "patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles",
       "patterns/03_validated/enforcement/enforcement-hook-patterns",
       "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15",
+      "sources/ai-models/src-anthropic-spacex-colossus-claude-code-limits-doubled-2026-05-06",
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16",
       "sources/claude-code/src-claude-code-accuracy-tips",
+      "sources/claude-code/src-claude-code-hooks-reference",
       "sources/claude-code/src-claude-slash-commands",
       "sources/claude-code/src-harness-engineering",
       "sources/claude-code/src-shanraisshan-claude-code-best-practice",
@@ -63900,6 +65327,7 @@
       "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
       "sources/tools-integration/src-claude-code-harness-features",
       "sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context",
+      "sources/tools-integration/src-claude-os-persistent-memory-brobertsaz",
       "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
       "sources/tools-integration/src-multica-managed-agents-platform",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
@@ -63936,7 +65364,8 @@
       "spine/models/agent-config/model-markdown-as-iac"
     ],
     "three-layer-context": [
-      "backlog/modules/root-ghostproxy-m001-author-claude-md-and-agents-md"
+      "backlog/modules/root-ghostproxy-m001-author-claude-md-and-agents-md",
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-m001-reframe-as-audit-of-existing-agents-md-claude-md-2026-05-16"
     ],
     "sfif-scaffold-design": [
       "backlog/modules/root-ghostproxy-m002-methodology-layer-decision"
@@ -64022,7 +65451,8 @@
     ],
     "operator-decision": [
       "backlog/modules/root-ghostproxy-m010-sister-projects-yaml-flip",
-      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate"
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "log/2026-05-16-ck-bootstrap-pile-depile-batch-1"
     ],
     "auto-connect": [
       "backlog/modules/root-ghostproxy-m010-sister-projects-yaml-flip"
@@ -64401,6 +65831,7 @@
       "domains/knowledge-systems/wiki-core/lightrag",
       "lessons/03_validated/knowledge-systems/graph-enhanced-retrieval-bridges-wiki-and-vector-search",
       "sources/src-7-levels-claude-code-rag",
+      "sources/tools-integration/src-claude-os-persistent-memory-brobertsaz",
       "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing"
     ],
     "hybrid-search": [
@@ -64438,7 +65869,8 @@
     "claude-os": [
       "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09",
       "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
-      "patterns/01_drafts/skill-systems-orchestrator-plus-modular-child-skills-the-architecture-pattern-anthropic-wont-solve-for-you"
+      "patterns/01_drafts/skill-systems-orchestrator-plus-modular-child-skills-the-architecture-pattern-anthropic-wont-solve-for-you",
+      "sources/tools-integration/src-claude-os-persistent-memory-brobertsaz"
     ],
     "obsidian-pm": [
       "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09"
@@ -64513,11 +65945,14 @@
       "comparisons/cross-domain-patterns",
       "comparisons/llm-wiki-vs-rag",
       "comparisons/skills-architecture-patterns",
+      "domains/cross-domain/agt-cascade-trio-adopt-as-substrate-unless-load-bearing-differentiator-cross-project-consolidation",
       "domains/cross-domain/integration/skyscraper-pyramid-mountain",
+      "domains/cross-domain/profile-circular-knowledge-evolution-layer-and-brain-self-improvement",
       "domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current",
       "domains/cross-domain/profile-integration-into-the-knowledge-cross-reference-topology-with-existing-wiki-layers",
       "domains/cross-domain/profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline",
       "lessons/01_drafts/if-you-can-verify-you-converge",
+      "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction",
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
       "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
       "lessons/03_validated/knowledge-systems/knowledge-systems-is-foundational-domain",
@@ -64635,6 +66070,7 @@
       "domains/knowledge-systems/pkm-theory/zettelkasten-methodology",
       "lessons/03_validated/ingestion-research/notebooklm-as-grounded-research-engine",
       "lessons/03_validated/knowledge-systems/llm-maintained-wikis-outperform-static-documentation",
+      "sources/tools-integration/src-claude-os-persistent-memory-brobertsaz",
       "sources/wiki-methodology/methodology-artifact-taxonomy-research",
       "spine/models/depth/model-second-brain"
     ],
@@ -64696,6 +66132,7 @@
       "lessons/01_drafts/if-you-can-verify-you-converge",
       "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
       "lessons/01_drafts/mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive",
+      "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction",
       "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths",
       "lessons/01_drafts/quality-per-position-compounds-quantity-per-position-diminishes-convergent-pattern",
       "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work",
@@ -64917,6 +66354,8 @@
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
       "lessons/02_synthesized/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
       "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
+      "sources/tools-integration/src-claude-managed-agents-dreaming-outcomes-multiagent-2026-05",
+      "sources/tools-integration/src-claude-os-persistent-memory-brobertsaz",
       "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
       "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
       "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
@@ -65064,6 +66503,7 @@
     ],
     "cross-project": [
       "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
+      "domains/cross-domain/agt-cascade-trio-adopt-as-substrate-unless-load-bearing-differentiator-cross-project-consolidation",
       "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects",
       "lessons/03_validated/enforcement-compliance/second-brain-agent-must-respect-sister-project-boundaries-no-direct-cross-project-file-edits",
       "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
@@ -65329,7 +66769,9 @@
       "decisions/02_validated/methodology/stage-gate-operational-decisions"
     ],
     "retroactive": [
-      "decisions/02_validated/methodology/stage-gate-operational-decisions"
+      "decisions/02_validated/methodology/stage-gate-operational-decisions",
+      "log/2026-05-16-ck-bootstrap-execution-batch-1",
+      "log/2026-05-16-ck-bootstrap-pile-depile-batch-1"
     ],
     "task-types": [
       "decisions/02_validated/methodology/task-type-edge-cases",
@@ -65376,7 +66818,9 @@
     ],
     "claude": [
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations",
+      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16",
       "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15",
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16",
       "spine/references/ai-infrastructure-decision-framework-2026",
       "spine/references/root-documentation-map"
     ],
@@ -65596,6 +67040,7 @@
     ],
     "gmail-integration": [
       "domains/ai-agents/claude-code/claude-code-skills",
+      "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05",
       "sources/obsidian-notebooklm/src-obsidian-claude-code-second-brain"
     ],
     "progressive-disclosure": [
@@ -65613,11 +67058,17 @@
     ],
     "anthropic": [
       "domains/ai-agents/claude-code/claude-code",
+      "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction",
+      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16",
+      "sources/ai-models/src-anthropic-mythos-preview-frontier-restricted-2026-04-16",
       "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15",
+      "sources/ai-models/src-anthropic-spacex-colossus-claude-code-limits-doubled-2026-05-06",
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16",
       "sources/src-anthropic-building-effective-ai-agents",
       "sources/src-anthropic-effective-harnesses-long-running-agents",
       "sources/src-openclaw-billing-proxy",
-      "sources/tools-integration/src-claude-code-harness-features"
+      "sources/tools-integration/src-claude-code-harness-features",
+      "sources/tools-integration/src-claude-managed-agents-dreaming-outcomes-multiagent-2026-05"
     ],
     "automation": [
       "domains/ai-agents/claude-code/claude-code",
@@ -65631,6 +67082,7 @@
       "lessons/03_validated/knowledge-systems/automated-knowledge-validation-prevents-wiki-decay",
       "lessons/03_validated/knowledge-systems/wiki-maintenance-problem-solved-by-llm-automation",
       "lessons/03_validated/tools-architecture/automation-is-bridge-between-knowledge-and-action",
+      "sources/claude-code/src-claude-code-hooks-reference",
       "sources/claude-code/src-claude-slash-commands",
       "sources/obsidian-notebooklm/src-claude-notebooklm-content-team",
       "sources/obsidian-notebooklm/src-claude-world-notebooklm-skill",
@@ -65678,15 +67130,18 @@
       "domains/ai-agents/patterns/hooks-lifecycle-architecture",
       "domains/ai-agents/patterns/rework-prevention",
       "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
+      "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction",
       "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
       "lessons/03_validated/tools-architecture/always-plan-before-executing",
       "patterns/03_validated/architecture/plan-execute-review-cycle",
+      "sources/claude-code/src-claude-code-hooks-reference",
       "sources/claude-code/src-harness-engineering",
       "sources/src-anthropic-effective-harnesses-long-running-agents",
       "sources/src-arxiv-meta-harness-outer-loop-search",
       "sources/src-arxiv-natural-language-agent-harnesses",
       "sources/src-claude-agent-sdk-and-managed-agents",
       "sources/src-rethinking-ai-agents-harness-engineering-rise",
+      "sources/tools-integration/src-claude-managed-agents-dreaming-outcomes-multiagent-2026-05",
       "spine/models/agent-config/model-claude-code",
       "spine/models/agent-config/model-skills-commands-hooks"
     ],
@@ -66085,6 +67540,101 @@
     "crystallization": [
       "domains/automation/wiki-event-driven-automation"
     ],
+    "agt": [
+      "domains/cross-domain/agt-cascade-trio-adopt-as-substrate-unless-load-bearing-differentiator-cross-project-consolidation",
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "microsoft-agent-governance-toolkit": [
+      "domains/cross-domain/agt-cascade-trio-adopt-as-substrate-unless-load-bearing-differentiator-cross-project-consolidation"
+    ],
+    "cascade": [
+      "domains/cross-domain/agt-cascade-trio-adopt-as-substrate-unless-load-bearing-differentiator-cross-project-consolidation"
+    ],
+    "consolidation-candidate": [
+      "domains/cross-domain/agt-cascade-trio-adopt-as-substrate-unless-load-bearing-differentiator-cross-project-consolidation"
+    ],
+    "adopt-as-substrate": [
+      "domains/cross-domain/agt-cascade-trio-adopt-as-substrate-unless-load-bearing-differentiator-cross-project-consolidation"
+    ],
+    "multi-vision": [
+      "domains/cross-domain/agt-cascade-trio-adopt-as-substrate-unless-load-bearing-differentiator-cross-project-consolidation",
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-scope-clarification-selfdef-boundary-2026-05-16",
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-state-divergence-upstream-already-advanced-2026-05-16",
+      "domains/cross-domain/profile-circular-knowledge-evolution-layer-and-brain-self-improvement",
+      "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction"
+    ],
+    "agent-authored": [
+      "domains/cross-domain/agt-cascade-trio-adopt-as-substrate-unless-load-bearing-differentiator-cross-project-consolidation",
+      "domains/cross-domain/profile-circular-knowledge-evolution-layer-and-brain-self-improvement",
+      "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction",
+      "patterns/01_drafts/c02-decision-territory-hook-python-draft-agent-authored-pre-tool-use-pattern-match-detection",
+      "patterns/01_drafts/c04-input-discipline-hook-python-draft-agent-authored-state-file-sentinel-pattern",
+      "patterns/01_drafts/c09-status-claim-hook-python-draft-agent-authored-pre-tool-use-pattern-match-detection",
+      "patterns/01_drafts/post-compact-pretooluse-blocker-hook-python-draft-agent-authored-tier-4-enforcement",
+      "patterns/01_drafts/pre-compact-handoff-hook-python-draft-agent-authored-deterministic-state-snapshot"
+    ],
+    "2026-05-15": [
+      "domains/cross-domain/agt-cascade-trio-adopt-as-substrate-unless-load-bearing-differentiator-cross-project-consolidation",
+      "domains/cross-domain/profile-circular-knowledge-evolution-layer-and-brain-self-improvement",
+      "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction",
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02",
+      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16",
+      "sources/ai-models/src-anthropic-mythos-preview-frontier-restricted-2026-04-16",
+      "sources/ai-models/src-anthropic-spacex-colossus-claude-code-limits-doubled-2026-05-06",
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16",
+      "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05",
+      "sources/ai-models/src-gpt-5-5-openai-frontier-2026-04-23",
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "cascade-candidate": [
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-m001-reframe-as-audit-of-existing-agents-md-claude-md-2026-05-16",
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-scope-clarification-selfdef-boundary-2026-05-16",
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-self-update-observe-upstream-head-before-drafting-modules-2026-05-16",
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-state-divergence-upstream-already-advanced-2026-05-16"
+    ],
+    "audit-not-author": [
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-m001-reframe-as-audit-of-existing-agents-md-claude-md-2026-05-16"
+    ],
+    "cross-project-cascade": [
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-m001-reframe-as-audit-of-existing-agents-md-claude-md-2026-05-16",
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-scope-clarification-selfdef-boundary-2026-05-16",
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-state-divergence-upstream-already-advanced-2026-05-16"
+    ],
+    "sprint": [
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-m001-reframe-as-audit-of-existing-agents-md-claude-md-2026-05-16",
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-scope-clarification-selfdef-boundary-2026-05-16",
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-self-update-observe-upstream-head-before-drafting-modules-2026-05-16",
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-state-divergence-upstream-already-advanced-2026-05-16"
+    ],
+    "selfdef": [
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-scope-clarification-selfdef-boundary-2026-05-16"
+    ],
+    "scope-clarification": [
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-scope-clarification-selfdef-boundary-2026-05-16"
+    ],
+    "operator-verbatim-2026-05-15": [
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-scope-clarification-selfdef-boundary-2026-05-16"
+    ],
+    "target-self": [
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-self-update-observe-upstream-head-before-drafting-modules-2026-05-16"
+    ],
+    "self-improvement": [
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-self-update-observe-upstream-head-before-drafting-modules-2026-05-16",
+      "lessons/03_validated/methodology-process/autopilot-loop-batch-accumulator-pattern-empirically-validated",
+      "sources/tools-integration/src-claude-managed-agents-dreaming-outcomes-multiagent-2026-05"
+    ],
+    "profile-update": [
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-self-update-observe-upstream-head-before-drafting-modules-2026-05-16"
+    ],
+    "root-ghostproxy-rollout": [
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-self-update-observe-upstream-head-before-drafting-modules-2026-05-16"
+    ],
+    "state-divergence": [
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-state-divergence-upstream-already-advanced-2026-05-16"
+    ],
+    "upstream-snapshot": [
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-state-divergence-upstream-already-advanced-2026-05-16"
+    ],
     "exploratory": [
       "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
       "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
@@ -66358,6 +67908,32 @@
     ],
     "infrastructure-analysis": [
       "domains/cross-domain/methodology-initiative/methodology-standards-initiative-infrastructure"
+    ],
+    "profile": [
+      "domains/cross-domain/profile-circular-knowledge-evolution-layer-and-brain-self-improvement",
+      "patterns/01_drafts/profile-as-coordination-bundle"
+    ],
+    "circular-knowledge": [
+      "domains/cross-domain/profile-circular-knowledge-evolution-layer-and-brain-self-improvement",
+      "log/2026-05-15-ck-weekly-distillation-surfacings",
+      "log/2026-05-16-ck-bootstrap-execution-batch-1"
+    ],
+    "evolution-layer": [
+      "domains/cross-domain/profile-circular-knowledge-evolution-layer-and-brain-self-improvement"
+    ],
+    "brain-self-improvement": [
+      "domains/cross-domain/profile-circular-knowledge-evolution-layer-and-brain-self-improvement"
+    ],
+    "knowledge-evolution": [
+      "domains/cross-domain/profile-circular-knowledge-evolution-layer-and-brain-self-improvement",
+      "spine/models/depth/model-knowledge-evolution",
+      "spine/standards/model-standards/model-knowledge-evolution-standards"
+    ],
+    "stage-discipline": [
+      "domains/cross-domain/profile-circular-knowledge-evolution-layer-and-brain-self-improvement"
+    ],
+    "self-first-cascade": [
+      "domains/cross-domain/profile-circular-knowledge-evolution-layer-and-brain-self-improvement"
     ],
     "per-project-profile": [
       "domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current",
@@ -66920,6 +68496,7 @@
     "google": [
       "domains/tools-and-platforms/notebooklm-py-cli",
       "domains/tools-and-platforms/notebooklm",
+      "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction",
       "sources/obsidian-notebooklm/src-claude-notebooklm-content-team"
     ],
     "research-tool": [
@@ -67950,6 +69527,7 @@
     ],
     "layer-2": [
       "lessons/01_drafts/mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive",
+      "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction",
       "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths",
       "lessons/01_drafts/quality-per-position-compounds-quantity-per-position-diminishes-convergent-pattern",
       "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed",
@@ -67989,12 +69567,38 @@
       "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms",
       "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing"
     ],
+    "agentic-economics": [
+      "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction"
+    ],
+    "programmatic-vs-interactive": [
+      "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction"
+    ],
+    "metered-pricing": [
+      "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction"
+    ],
+    "credit-pool": [
+      "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction"
+    ],
+    "compute-arbitrage": [
+      "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction"
+    ],
+    "openai": [
+      "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction",
+      "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05",
+      "sources/ai-models/src-gpt-5-5-openai-frontier-2026-04-23",
+      "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
+      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
+    ],
+    "vendor-policy": [
+      "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction"
+    ],
     "p5-candidate": [
       "lessons/01_drafts/p5-candidate-defense-in-depth-required-for-cross-cutting-failure-modes-hypothesis"
     ],
     "defense-in-depth": [
       "lessons/01_drafts/p5-candidate-defense-in-depth-required-for-cross-cutting-failure-modes-hypothesis",
-      "patterns/01_drafts/auto-compact-disable-implementation-spec-prevention-layer-for-impl-spec-10-defense-in-depth"
+      "patterns/01_drafts/auto-compact-disable-implementation-spec-prevention-layer-for-impl-spec-10-defense-in-depth",
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
     ],
     "cross-cutting-failures": [
       "lessons/01_drafts/p5-candidate-defense-in-depth-required-for-cross-cutting-failure-modes-hypothesis"
@@ -68598,9 +70202,6 @@
     "self-evaluation": [
       "lessons/03_validated/methodology-process/autopilot-loop-batch-accumulator-pattern-empirically-validated"
     ],
-    "self-improvement": [
-      "lessons/03_validated/methodology-process/autopilot-loop-batch-accumulator-pattern-empirically-validated"
-    ],
     "mode-dual": [
       "lessons/03_validated/methodology-process/autopilot-loop-batch-accumulator-pattern-empirically-validated"
     ],
@@ -69035,8 +70636,10 @@
       "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring",
       "log/2026-05-08-strong-loop-arc-ingest-synthesize-propagate-distill-and-operator-decisions-pending",
       "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension",
+      "log/2026-05-15-ck-weekly-distillation-surfacings",
       "log/2026-05-15-research-watch-lightweight-scan-4-cron-18-32-et-noted-but-sk",
-      "log/2026-05-15-weekly-research-digest-2026-05-09-2026-05-15"
+      "log/2026-05-15-weekly-research-digest-2026-05-09-2026-05-15",
+      "log/2026-05-16-strong-handoff-ck-v3-live-cr-ps-still-broken"
     ],
     "summary": [
       "log/2026-04-09/system/2026-04-09-session-summary",
@@ -69074,7 +70677,9 @@
       "log/2026-04-23-e010-m002-mount-complete",
       "log/2026-04-23-k2-6-q2-download-complete",
       "log/2026-04-23-ram-upgrade-48gb-wsl",
-      "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix"
+      "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix",
+      "log/2026-05-15-research-watch-opus-4-7-source-synthesis-shipped-end-to-end",
+      "log/2026-05-16-ck-bootstrap-execution-batch-1"
     ],
     "poc": [
       "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
@@ -69120,6 +70725,7 @@
       "log/2026-05-05-handoff-to-root-session",
       "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring",
       "log/2026-05-09-PRE-COMPACT-STRONG-HANDOFF-decisions-executed-boundary-correction-freeze-memory-rrf-and-23-lessons-reformatted",
+      "log/2026-05-16-strong-handoff-ck-v3-live-cr-ps-still-broken",
       "patterns/01_drafts/finish-smoothly-custom-idempotent-pre-compact-handoff-with-existing-doc-detection",
       "spine/references/wsl-ubuntu-migration-handoff"
     ],
@@ -69160,7 +70766,8 @@
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "2026-04-23": [
-      "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling"
+      "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
+      "sources/ai-models/src-gpt-5-5-openai-frontier-2026-04-23"
     ],
     "pickup-cold": [
       "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
@@ -69573,7 +71180,8 @@
       "log/2026-05-05-orient-pair-adoption-decision"
     ],
     "2026-05-06": [
-      "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring"
+      "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring",
+      "sources/ai-models/src-anthropic-spacex-colossus-claude-code-limits-doubled-2026-05-06"
     ],
     "infrastructure-wiring": [
       "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring"
@@ -71234,6 +72842,55 @@
     "post-compact-pickup-runbook": [
       "log/2026-05-09-decisions-executed-boundary-correction-5-channel-rrf-and-schema-extension"
     ],
+    "weekly-distillation": [
+      "log/2026-05-15-ck-weekly-distillation-surfacings"
+    ],
+    "operator-decision-needed": [
+      "log/2026-05-15-ck-weekly-distillation-surfacings"
+    ],
+    "cascade-self-first": [
+      "log/2026-05-15-ck-weekly-distillation-surfacings"
+    ],
+    "pollution-cleanup": [
+      "log/2026-05-16-ck-bootstrap-execution-batch-1"
+    ],
+    "batch-1": [
+      "log/2026-05-16-ck-bootstrap-execution-batch-1",
+      "log/2026-05-16-ck-bootstrap-pile-depile-batch-1"
+    ],
+    "ck-bootstrap": [
+      "log/2026-05-16-ck-bootstrap-pile-depile-batch-1"
+    ],
+    "pollution-audit": [
+      "log/2026-05-16-ck-bootstrap-pile-depile-batch-1"
+    ],
+    "pile-depile": [
+      "log/2026-05-16-ck-bootstrap-pile-depile-batch-1"
+    ],
+    "ck-v3": [
+      "log/2026-05-16-strong-handoff-ck-v3-live-cr-ps-still-broken"
+    ],
+    "retroactive-cleanup": [
+      "log/2026-05-16-strong-handoff-ck-v3-live-cr-ps-still-broken"
+    ],
+    "profile-requirements": [
+      "log/2026-05-16-strong-handoff-ck-v3-live-cr-ps-still-broken"
+    ],
+    "r20-sacrosanct": [
+      "log/2026-05-16-strong-handoff-ck-v3-live-cr-ps-still-broken"
+    ],
+    "autonomous-assistant": [
+      "log/2026-05-16-strong-handoff-ck-v3-live-cr-ps-still-broken"
+    ],
+    "cr-pending": [
+      "log/2026-05-16-strong-handoff-ck-v3-live-cr-ps-still-broken"
+    ],
+    "ps-pending": [
+      "log/2026-05-16-strong-handoff-ck-v3-live-cr-ps-still-broken"
+    ],
+    "rgp-uninstalled": [
+      "log/2026-05-16-strong-handoff-ck-v3-live-cr-ps-still-broken"
+    ],
     "correction": [
       "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
       "log/amendment-to-prior-compliance-checker-correction-root-depth",
@@ -71493,13 +73150,6 @@
       "patterns/01_drafts/c02-decision-territory-hook-python-draft-agent-authored-pre-tool-use-pattern-match-detection"
     ],
     "python-implementation": [
-      "patterns/01_drafts/c02-decision-territory-hook-python-draft-agent-authored-pre-tool-use-pattern-match-detection",
-      "patterns/01_drafts/c04-input-discipline-hook-python-draft-agent-authored-state-file-sentinel-pattern",
-      "patterns/01_drafts/c09-status-claim-hook-python-draft-agent-authored-pre-tool-use-pattern-match-detection",
-      "patterns/01_drafts/post-compact-pretooluse-blocker-hook-python-draft-agent-authored-tier-4-enforcement",
-      "patterns/01_drafts/pre-compact-handoff-hook-python-draft-agent-authored-deterministic-state-snapshot"
-    ],
-    "agent-authored": [
       "patterns/01_drafts/c02-decision-territory-hook-python-draft-agent-authored-pre-tool-use-pattern-match-detection",
       "patterns/01_drafts/c04-input-discipline-hook-python-draft-agent-authored-state-file-sentinel-pattern",
       "patterns/01_drafts/c09-status-claim-hook-python-draft-agent-authored-pre-tool-use-pattern-match-detection",
@@ -71878,9 +73528,6 @@
     "m-e001-1-verified-edit-action-type": [
       "patterns/01_drafts/pre-edit-regression-test-gate-canonical-verified-edit-enforcement"
     ],
-    "profile": [
-      "patterns/01_drafts/profile-as-coordination-bundle"
-    ],
     "coordination": [
       "patterns/01_drafts/profile-as-coordination-bundle"
     ],
@@ -71991,7 +73638,8 @@
       "patterns/01_drafts/state-file-ecosystem-map-claude-directory-13-gate-pipeline-substrate"
     ],
     "substrate": [
-      "patterns/01_drafts/state-file-ecosystem-map-claude-directory-13-gate-pipeline-substrate"
+      "patterns/01_drafts/state-file-ecosystem-map-claude-directory-13-gate-pipeline-substrate",
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
     ],
     "post-m7": [
       "patterns/01_drafts/sustained-feedback-loop-pattern-post-m7-operator-empirical-findings-routing-to-body-refinement"
@@ -72266,6 +73914,258 @@
     "quality-assurance": [
       "patterns/03_validated/knowledge/validation-matrix-test-suite-for-context-injection"
     ],
+    "microsoft": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "agent-governance-toolkit": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "owasp-agentic-top-10": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "runtime-security": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "agent-runtime": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "policy-as-code": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "opa-rego": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "cedar": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "ed25519": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "ml-dsa-65": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "spiffe-svid": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "zero-trust-identity": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "deterministic-enforcement": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "sub-millisecond-latency": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "mit-license": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02",
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
+    ],
+    "foundation-aspiration": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "eu-ai-act": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "colorado-ai-act": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "nist-ai-rmf": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "framework-agnostic": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "microsoft-agent-framework": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "semantic-kernel": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "autogen": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "langgraph": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "langchain": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02",
+      "sources/src-rethinking-ai-agents-harness-engineering-rise"
+    ],
+    "crewai": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "openai-agents-sdk": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "google-adk": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "llamaindex": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "haystack": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "dify": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "kernel-analogy": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "service-mesh-analogy": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "sre-for-agents": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "openclaw-relevant": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "openarms-relevant": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "openfleet-relevant": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "2026-04-02": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
+    ],
+    "2026-05-07": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02",
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "source-synthesis": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02",
+      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16",
+      "sources/ai-models/src-anthropic-mythos-preview-frontier-restricted-2026-04-16",
+      "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15",
+      "sources/ai-models/src-anthropic-spacex-colossus-claude-code-limits-doubled-2026-05-06",
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16",
+      "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05",
+      "sources/ai-models/src-gpt-5-5-openai-frontier-2026-04-23",
+      "sources/ecosystem-projects/src-openarms-v10-enforcement",
+      "sources/ecosystem-projects/src-openfleet-fleet-architecture",
+      "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07",
+      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee",
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
+      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd",
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build",
+      "sources/wiki-methodology/src-sdlc-frameworks-research",
+      "spine/standards/source-synthesis-page-standards"
+    ],
+    "frontier-delta-2026-05-15": [
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02",
+      "sources/ai-models/src-anthropic-mythos-preview-frontier-restricted-2026-04-16",
+      "sources/ai-models/src-anthropic-spacex-colossus-claude-code-limits-doubled-2026-05-06",
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16",
+      "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05",
+      "sources/ai-models/src-gpt-5-5-openai-frontier-2026-04-23",
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "claude-opus-4-7": [
+      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16",
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16"
+    ],
+    "claude-opus-4-6": [
+      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16"
+    ],
+    "model-tier": [
+      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16"
+    ],
+    "agentic-coding": [
+      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16",
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16",
+      "sources/ai-models/src-gpt-5-5-openai-frontier-2026-04-23",
+      "sources/src-cline-agentic-coding-ide-extension",
+      "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07",
+      "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04",
+      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
+    ],
+    "cursorbench": [
+      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16",
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16"
+    ],
+    "swe-bench": [
+      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16",
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
+    ],
+    "multimodal": [
+      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16",
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
+    ],
+    "vision-3x": [
+      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16"
+    ],
+    "xhigh-effort-level": [
+      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16"
+    ],
+    "task-budgets": [
+      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16",
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16"
+    ],
+    "ultrareview": [
+      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16",
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16"
+    ],
+    "auto-mode": [
+      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16",
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16"
+    ],
+    "file-system-memory": [
+      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16",
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16"
+    ],
+    "self-verification": [
+      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16",
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16"
+    ],
+    "tokenizer-change": [
+      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16"
+    ],
+    "mythos-preview": [
+      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16"
+    ],
+    "cyber-verification-program": [
+      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16",
+      "sources/ai-models/src-anthropic-mythos-preview-frontier-restricted-2026-04-16",
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16"
+    ],
+    "2026-04-16": [
+      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16",
+      "sources/ai-models/src-anthropic-mythos-preview-frontier-restricted-2026-04-16",
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16"
+    ],
+    "claude-mythos-preview": [
+      "sources/ai-models/src-anthropic-mythos-preview-frontier-restricted-2026-04-16",
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16"
+    ],
+    "frontier-restricted": [
+      "sources/ai-models/src-anthropic-mythos-preview-frontier-restricted-2026-04-16"
+    ],
+    "project-glasswing": [
+      "sources/ai-models/src-anthropic-mythos-preview-frontier-restricted-2026-04-16",
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16"
+    ],
+    "cybergym": [
+      "sources/ai-models/src-anthropic-mythos-preview-frontier-restricted-2026-04-16"
+    ],
+    "capability-gating": [
+      "sources/ai-models/src-anthropic-mythos-preview-frontier-restricted-2026-04-16"
+    ],
+    "alignment-benchmark": [
+      "sources/ai-models/src-anthropic-mythos-preview-frontier-restricted-2026-04-16"
+    ],
+    "strategic-indicator": [
+      "sources/ai-models/src-anthropic-mythos-preview-frontier-restricted-2026-04-16"
+    ],
+    "vendor-pipeline-visibility": [
+      "sources/ai-models/src-anthropic-mythos-preview-frontier-restricted-2026-04-16"
+    ],
     "claude-p-cli": [
       "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15"
     ],
@@ -72299,18 +74199,145 @@
     "anti-vendor-lock-in-implication": [
       "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15"
     ],
-    "source-synthesis": [
-      "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15",
-      "sources/ecosystem-projects/src-openarms-v10-enforcement",
-      "sources/ecosystem-projects/src-openfleet-fleet-architecture",
-      "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
-      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee",
-      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
+    "spacex": [
+      "sources/ai-models/src-anthropic-spacex-colossus-claude-code-limits-doubled-2026-05-06"
+    ],
+    "colossus-1": [
+      "sources/ai-models/src-anthropic-spacex-colossus-claude-code-limits-doubled-2026-05-06"
+    ],
+    "usage-limits": [
+      "sources/ai-models/src-anthropic-spacex-colossus-claude-code-limits-doubled-2026-05-06"
+    ],
+    "opus-api-rate-limits": [
+      "sources/ai-models/src-anthropic-spacex-colossus-claude-code-limits-doubled-2026-05-06"
+    ],
+    "code-with-claude-2026": [
+      "sources/ai-models/src-anthropic-spacex-colossus-claude-code-limits-doubled-2026-05-06"
+    ],
+    "compute-supply": [
+      "sources/ai-models/src-anthropic-spacex-colossus-claude-code-limits-doubled-2026-05-06"
+    ],
+    "dario-amodei": [
+      "sources/ai-models/src-anthropic-spacex-colossus-claude-code-limits-doubled-2026-05-06"
+    ],
+    "elon-musk": [
+      "sources/ai-models/src-anthropic-spacex-colossus-claude-code-limits-doubled-2026-05-06"
+    ],
+    "gpu-capacity": [
+      "sources/ai-models/src-anthropic-spacex-colossus-claude-code-limits-doubled-2026-05-06"
+    ],
+    "orbital-compute": [
+      "sources/ai-models/src-anthropic-spacex-colossus-claude-code-limits-doubled-2026-05-06"
+    ],
+    "vision-relevant-stack": [
+      "sources/ai-models/src-anthropic-spacex-colossus-claude-code-limits-doubled-2026-05-06"
+    ],
+    "operator-stack-direct": [
+      "sources/ai-models/src-anthropic-spacex-colossus-claude-code-limits-doubled-2026-05-06"
+    ],
+    "frontier-llm": [
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16",
+      "sources/ai-models/src-gpt-5-5-openai-frontier-2026-04-23"
+    ],
+    "swe-bench-pro": [
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16"
+    ],
+    "gdpval-aa": [
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16"
+    ],
+    "terminal-bench-2": [
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16"
+    ],
+    "xhigh-effort": [
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16"
+    ],
+    "multimodal-vision": [
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16"
+    ],
+    "computer-use": [
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16",
+      "sources/ai-models/src-gpt-5-5-openai-frontier-2026-04-23"
+    ],
+    "tokenizer-change-1-0-to-1-35x": [
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16"
+    ],
+    "rigor": [
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16"
+    ],
+    "gpt-5-5-instant": [
+      "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05"
+    ],
+    "chatgpt": [
+      "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05",
+      "sources/ai-models/src-gpt-5-5-openai-frontier-2026-04-23"
+    ],
+    "default-model": [
+      "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05"
+    ],
+    "gpt-5-3-instant": [
+      "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05"
+    ],
+    "hallucination-reduction": [
+      "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05"
+    ],
+    "aime-2025": [
+      "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05"
+    ],
+    "mmmu-pro": [
+      "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05"
+    ],
+    "memory-sources": [
+      "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05"
+    ],
+    "personalization": [
+      "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05"
+    ],
+    "chat-latest": [
+      "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05"
+    ],
+    "model-deprecation": [
+      "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05"
+    ],
+    "gpt-4o-backlash": [
+      "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05"
+    ],
+    "2026-05-05": [
+      "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05"
+    ],
+    "vision-relevant-model-tier": [
+      "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05"
+    ],
+    "gpt-5-5": [
+      "sources/ai-models/src-gpt-5-5-openai-frontier-2026-04-23",
+      "sources/tools-integration/src-codex-cli-and-claude-code-plugin"
+    ],
+    "gpt-5-4": [
+      "sources/ai-models/src-gpt-5-5-openai-frontier-2026-04-23"
+    ],
+    "codex": [
+      "sources/ai-models/src-gpt-5-5-openai-frontier-2026-04-23",
+      "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
       "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
-      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd",
+      "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
+      "sources/tools-integration/src-multica-managed-agents-platform",
       "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build",
-      "sources/wiki-methodology/src-sdlc-frameworks-research",
-      "spine/standards/source-synthesis-page-standards"
+      "spine/references/ai-infrastructure-decision-framework-2026"
+    ],
+    "deep-research": [
+      "sources/ai-models/src-gpt-5-5-openai-frontier-2026-04-23",
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks"
+    ],
+    "terminal-bench-82-7": [
+      "sources/ai-models/src-gpt-5-5-openai-frontier-2026-04-23"
+    ],
+    "safety-class-high": [
+      "sources/ai-models/src-gpt-5-5-openai-frontier-2026-04-23"
+    ],
+    "cybersecurity-risk-threshold": [
+      "sources/ai-models/src-gpt-5-5-openai-frontier-2026-04-23"
+    ],
+    "novo-nordisk-partnership-context": [
+      "sources/ai-models/src-gpt-5-5-openai-frontier-2026-04-23"
     ],
     "agent-teams": [
       "sources/claude-code/src-claude-code-accuracy-tips",
@@ -72318,6 +74345,13 @@
     ],
     "cli-over-mcp": [
       "sources/claude-code/src-claude-code-accuracy-tips"
+    ],
+    "agent-control": [
+      "sources/claude-code/src-claude-code-hooks-reference"
+    ],
+    "permissions": [
+      "sources/claude-code/src-claude-code-hooks-reference",
+      "sources/src-claude-agent-sdk-and-managed-agents"
     ],
     "tips": [
       "sources/claude-code/src-shanraisshan-claude-code-best-practice"
@@ -72640,9 +74674,6 @@
     "managed-agents": [
       "sources/src-claude-agent-sdk-and-managed-agents"
     ],
-    "permissions": [
-      "sources/src-claude-agent-sdk-and-managed-agents"
-    ],
     "agent-definition": [
       "sources/src-claude-agent-sdk-and-managed-agents"
     ],
@@ -72675,13 +74706,6 @@
     "vs-code-extension": [
       "sources/src-cline-agentic-coding-ide-extension"
     ],
-    "agentic-coding": [
-      "sources/src-cline-agentic-coding-ide-extension",
-      "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
-      "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04",
-      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
-      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
-    ],
     "checkpoints": [
       "sources/src-cline-agentic-coding-ide-extension"
     ],
@@ -72701,7 +74725,8 @@
       "sources/src-code-review-graph-automated-review"
     ],
     "tree-sitter": [
-      "sources/src-code-review-graph-automated-review"
+      "sources/src-code-review-graph-automated-review",
+      "sources/tools-integration/src-claude-os-persistent-memory-brobertsaz"
     ],
     "blast-radius": [
       "sources/src-code-review-graph-automated-review"
@@ -72711,7 +74736,8 @@
     ],
     "sqlite": [
       "sources/src-code-review-graph-automated-review",
-      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee"
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
+      "sources/tools-integration/src-claude-os-persistent-memory-brobertsaz"
     ],
     "constitutional-compliance": [
       "sources/src-github-spec-kit-specification-driven-development"
@@ -72897,9 +74923,6 @@
     "meta-synthesis": [
       "sources/src-rethinking-ai-agents-harness-engineering-rise"
     ],
-    "langchain": [
-      "sources/src-rethinking-ai-agents-harness-engineering-rise"
-    ],
     "langchain-deep-agent": [
       "sources/src-rethinking-ai-agents-harness-engineering-rise"
     ],
@@ -72994,14 +75017,6 @@
     "opensrc": [
       "sources/src-vercel-opensrc-toolkit"
     ],
-    "codex": [
-      "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
-      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
-      "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
-      "sources/tools-integration/src-multica-managed-agents-platform",
-      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build",
-      "spine/references/ai-infrastructure-decision-framework-2026"
-    ],
     "aider": [
       "sources/tools-integration/src-agentic-coding-harness-landscape-2026"
     ],
@@ -73044,8 +75059,107 @@
     "batch-inference": [
       "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload"
     ],
-    "deep-research": [
-      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks"
+    "alphaevolve": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "google-deepmind": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "gemini": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07",
+      "sources/tools-integration/src-multica-managed-agents-platform",
+      "spine/references/ai-model-provider-harness-decision-matrix-2026"
+    ],
+    "gemini-flash": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "gemini-pro": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "evolutionary-coding-agent": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "algorithm-discovery": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "google-cloud": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "tpu": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07",
+      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
+    ],
+    "borg": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "flashattention": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "spanner": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "klarna": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "schrodinger": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "fm-logistic": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "wpp": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "pacbio": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "willow-quantum": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "kissing-number": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "ramsey-numbers": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "traveling-salesman": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "terence-tao": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "matrix-multiplication": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "strassen": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "ac-optimal-power-flow": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "earth-ai": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "deepconsensus": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "lsm-tree": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "2025-05-14": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "2025-12-09": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "vision-relevant-agent-runtime": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "vision-relevant-tools-platforms": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "agentic-algorithm-discovery": [
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
     ],
     "multi-hop": [
       "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks"
@@ -73247,6 +75361,7 @@
     ],
     "persistent-memory": [
       "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
+      "sources/tools-integration/src-claude-os-persistent-memory-brobertsaz",
       "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17"
     ],
     "cross-agent-memory": [
@@ -73312,6 +75427,34 @@
     "layer-4-inter-agent-isolation": [
       "sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context"
     ],
+    "claude-managed-agents": [
+      "sources/tools-integration/src-claude-managed-agents-dreaming-outcomes-multiagent-2026-05"
+    ],
+    "dreaming": [
+      "sources/tools-integration/src-claude-managed-agents-dreaming-outcomes-multiagent-2026-05"
+    ],
+    "outcomes": [
+      "sources/tools-integration/src-claude-managed-agents-dreaming-outcomes-multiagent-2026-05"
+    ],
+    "multiagent-orchestration": [
+      "sources/tools-integration/src-claude-managed-agents-dreaming-outcomes-multiagent-2026-05"
+    ],
+    "agent-memory": [
+      "sources/tools-integration/src-claude-managed-agents-dreaming-outcomes-multiagent-2026-05",
+      "sources/tools-integration/src-claude-os-persistent-memory-brobertsaz",
+      "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17"
+    ],
+    "evaluation": [
+      "sources/tools-integration/src-claude-managed-agents-dreaming-outcomes-multiagent-2026-05",
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
+      "spine/references/open-model-evaluation-framework"
+    ],
+    "hybrid-indexing": [
+      "sources/tools-integration/src-claude-os-persistent-memory-brobertsaz"
+    ],
+    "vector-embeddings": [
+      "sources/tools-integration/src-claude-os-persistent-memory-brobertsaz"
+    ],
     "cloudflare": [
       "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17",
       "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements",
@@ -73319,9 +75462,6 @@
       "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02",
       "sources/tools-integration/src-cloudflare-mesh-private-networking-for-users-nodes-agents-workers-2026-04-14",
       "sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23"
-    ],
-    "agent-memory": [
-      "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17"
     ],
     "agents-week-2026": [
       "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17",
@@ -73567,14 +75707,7 @@
     "hermes-4-per-inference": [
       "sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23"
     ],
-    "openai": [
-      "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
-      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
-    ],
     "adversarial-review": [
-      "sources/tools-integration/src-codex-cli-and-claude-code-plugin"
-    ],
-    "gpt-5-5": [
       "sources/tools-integration/src-codex-cli-and-claude-code-plugin"
     ],
     "deepseek": [
@@ -73665,9 +75798,6 @@
     "diffusion-style-speculative-decoding": [
       "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
     ],
-    "tpu": [
-      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
-    ],
     "google-tpu": [
       "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
     ],
@@ -73742,9 +75872,6 @@
     "moonshot": [
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
     ],
-    "mit-license": [
-      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
-    ],
     "agent-swarm": [
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
     ],
@@ -73753,10 +75880,6 @@
     ],
     "256k-context": [
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
-    ],
-    "multimodal": [
-      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
-      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
     ],
     "liquid-ai": [
       "sources/tools-integration/src-lfm2-liquid-ai-frontier-small-models-edge-deployment-maxime-labonne"
@@ -73944,10 +76067,6 @@
     "managed-agents-platform": [
       "sources/tools-integration/src-multica-managed-agents-platform"
     ],
-    "gemini": [
-      "sources/tools-integration/src-multica-managed-agents-platform",
-      "spine/references/ai-model-provider-harness-decision-matrix-2026"
-    ],
     "pi": [
       "sources/tools-integration/src-multica-managed-agents-platform"
     ],
@@ -74005,10 +76124,6 @@
     ],
     "openclaw-openarms-integration": [
       "sources/tools-integration/src-omnivoice-tts-600-languages"
-    ],
-    "evaluation": [
-      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
-      "spine/references/open-model-evaluation-framework"
     ],
     "distributional-reasoning": [
       "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors"
@@ -74392,9 +76507,6 @@
       "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
     ],
     "yarn": [
-      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
-    ],
-    "swe-bench": [
       "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
     ],
     "terminal-bench": [
@@ -74945,10 +77057,6 @@
     ],
     "structure": [
       "spine/models/depth/model-context-engineering"
-    ],
-    "knowledge-evolution": [
-      "spine/models/depth/model-knowledge-evolution",
-      "spine/standards/model-standards/model-knowledge-evolution-standards"
     ],
     "wiki-lifecycle": [
       "spine/models/depth/model-knowledge-evolution"
@@ -75619,6 +77727,12 @@
       ]
     },
     {
+      "target": "Anthropic Programmatic Credit Pool",
+      "referenced_by": [
+        "Synthesis \u2014 Claude Opus 4.7 release (Anthropic, 2026-04-16 GA): direct upgrade to Opus 4.6 with +13% on 93-task coding benchmark, 3\u00d7 image resolution (2,576 px long edge), new `xhigh` effort level, file-system memory improvements, and self-verification of outputs \u2014 same price as Opus 4.6 ($5/$25 per MTok), updated tokenizer (1.0\u20131.35\u00d7 more tokens per same input)"
+      ]
+    },
+    {
       "target": "Anthropic Programmatic Credit Pool Policy Synthesis",
       "referenced_by": [
         "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermes)",
@@ -75631,6 +77745,12 @@
       "target": "Anthropic policy effective date 2026-06-15",
       "referenced_by": [
         "Decision \u2014 Strategic response to Anthropic Programmatic Credit Pool (2026-06-15): adopt per-project Assistant Profiles as the value-capture mechanism for the $200/month Max 20x credit"
+      ]
+    },
+    {
+      "target": "Anthropic \u2014 Effective Harnesses for Long-Running Agents",
+      "referenced_by": [
+        "Synthesis \u2014 Claude Opus 4.7 release (Anthropic, 2026-04-16 GA): direct upgrade to Opus 4.6 with +13% on 93-task coding benchmark, 3\u00d7 image resolution (2,576 px long edge), new `xhigh` effort level, file-system memory improvements, and self-verification of outputs \u2014 same price as Opus 4.6 ($5/$25 per MTok), updated tokenizer (1.0\u20131.35\u00d7 more tokens per same input)"
       ]
     },
     {
@@ -75737,6 +77857,12 @@
       ]
     },
     {
+      "target": "CK v2 Bootstrap Batch 1 Report",
+      "referenced_by": [
+        "CK Bootstrap Execution Batch 1 \u2014 autonomous untracked sweep + tracked-batch surface"
+      ]
+    },
+    {
       "target": "CLAUDE.md Structural Patterns",
       "referenced_by": [
         "Synthesis \u2014 JS Mastery Six-File Context System: Spec-Driven Agentic Build Methodology (project-overview \u00b7 architecture \u00b7 code-standards \u00b7 ai-workflow-rules \u00b7 ui-context \u00b7 progress-tracker + AGENTS.md, 2026 video tutorial + downloadable templates)"
@@ -75765,6 +77891,12 @@
       "target": "Claude Code Standards",
       "referenced_by": [
         "Progressive Structural Enrichment in Agent Config"
+      ]
+    },
+    {
+      "target": "Claude Opus 4.7 \u2014 see `src-claude-opus-4-7-anthropic-frontier-2026-04-16.md`. Opus 4.7's shape (rigor + cyber-restraint + automated blockers) is calibrated against Mythos as ceiling.",
+      "referenced_by": [
+        "Synthesis \u2014 Claude Mythos Preview (Anthropic, restricted; April 2026): named successor-tier-above-Opus-4.7 model deliberately withheld from GA under Project Glasswing, deployed only to a small set of enterprise cybersecurity partners; serves as alignment-benchmark anchor (lowest misaligned-behavior score Anthropic has trained) and as the capability ceiling against which Opus 4.7's safeguards are calibrated \u2014 strategic indicator of Anthropic's intent to broker capability gating per use case rather than ship peak capability publicly"
       ]
     },
     {
@@ -75866,6 +77998,7 @@
     {
       "target": "Continuous Research Profile",
       "referenced_by": [
+        "Profile \u2014 Circular Knowledge (evolution-layer; observes convergence + proposes promotion through the stages + cascades self \u2192 second-brain \u2192 ecosystem)",
         "Profile \u2014 this project Pipeline Synthesis: focused assistant Profile for synthesizing ingested information still not at end of pipeline (raw \u2192 wiki page); runnable as a 24/7 OpenClaw (or other tool) agent"
       ]
     },
@@ -75891,6 +78024,12 @@
         "2026-05-09 Session Log \u2014 9 Pending Decisions Resolved (5 Executed \u00b7 3 Defer-Track \u00b7 1 Boundary-Correction) + 5-Channel RRF Retrieval Landed + Schema Extension + AVX512 Machine Plan Captured",
         "Synthesis \u2014 Anthropic Programmatic Credit Pool (effective 2026-06-15): separate metered budget for Claude Agent SDK / `claude -p` CLI / GitHub Actions / third-party Agent SDK apps, at API rates, with $20\u2013$200/month tier-by-tier allowance that does NOT roll over",
         "Synthesis \u2014 Strands Agents (AWS): Intent-Based Tool Design Cuts Token Usage 96% (52K \u2192 2K) via Narrow Scope + Semantic-Search MCP Gateway"
+      ]
+    },
+    {
+      "target": "Decision (draft) \u2014 Strategic Response via Per-Project Assistant Profiles",
+      "referenced_by": [
+        "Lesson \u2014 Metered programmatic agentic economics is the 2026 convergent direction: subscription compute arbitrage is closing; programmatic agent use is being separated from interactive use and billed at marginal-cost-tracking rates"
       ]
     },
     {
@@ -76551,6 +78690,12 @@
       ]
     },
     {
+      "target": "Harness Engineering Thesis",
+      "referenced_by": [
+        "Synthesis \u2014 Claude Opus 4.7 release (Anthropic, 2026-04-16 GA): direct upgrade to Opus 4.6 with +13% on 93-task coding benchmark, 3\u00d7 image resolution (2,576 px long edge), new `xhigh` effort level, file-system memory improvements, and self-verification of outputs \u2014 same price as Opus 4.6 ($5/$25 per MTok), updated tokenizer (1.0\u20131.35\u00d7 more tokens per same input)"
+      ]
+    },
+    {
       "target": "Harness Landscape 2026",
       "referenced_by": [
         "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
@@ -76694,6 +78839,12 @@
       ]
     },
     {
+      "target": "Lesson \u2014 Anti-Vendor-Lock-In Is an Empirical Claim",
+      "referenced_by": [
+        "Lesson \u2014 Metered programmatic agentic economics is the 2026 convergent direction: subscription compute arbitrage is closing; programmatic agent use is being separated from interactive use and billed at marginal-cost-tracking rates"
+      ]
+    },
+    {
       "target": "Lesson \u2014 Anti-Vendor-Lock-In as empirical claim",
       "referenced_by": [
         "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermes)",
@@ -76735,6 +78886,8 @@
     {
       "target": "Lesson \u2014 Harness Engineering Is the Dominant Performance Lever",
       "referenced_by": [
+        "Cross-Project Consolidation Candidate \u2014 AGT cascade trio (OpenClaw + OpenArms + OpenFleet share the same adopt-as-substrate-unless-load-bearing-differentiator decision-shape)",
+        "Lesson \u2014 Metered programmatic agentic economics is the 2026 convergent direction: subscription compute arbitrage is closing; programmatic agent use is being separated from interactive use and billed at marginal-cost-tracking rates",
         "Synthesis \u2014 Anthropic \u2014 Building Effective AI Agents \u2014 5 Canonical Workflow Patterns",
         "Synthesis \u2014 Anthropic \u2014 Effective Harnesses for Long-Running Agents",
         "Synthesis \u2014 Meta-Harness \u2014 End-to-End Optimization of Model Harnesses via Outer-Loop Search",
@@ -76746,6 +78899,12 @@
       "target": "Lesson \u2014 Hook output channel is event-specific",
       "referenced_by": [
         "Concept \u2014 The Declarative Agent Programming Spectrum: 5 layers (SDD \u00b7 Skills \u00b7 Context/Context-Injection \u00b7 Hooks \u00b7 Harness) unified, with integration matrix across tools (Claude OS \u00b7 Multica \u00b7 OpenClaw \u00b7 Claude Code \u00b7 OpenCode \u00b7 Hermes \u00b7 Codex \u00b7 Gemini) and destinations (Wiki LLM \u00b7 PM tools)"
+      ]
+    },
+    {
+      "target": "Lesson \u2014 Metered Programmatic Agentic Economics 2026",
+      "referenced_by": [
+        "CK Weekly Distillation \u2014 Surfacings (Week of 2026-05-09 \u2192 2026-05-15)"
       ]
     },
     {
@@ -76808,6 +78967,12 @@
         "root-ghostproxy M003 \u2014 Foundation Hardening",
         "root-ghostproxy M006 \u2014 Pre-Connect Verification",
         "Decision: Adopt Multica as Orchestrator Layer in the Post-Anthropic Stack (2026-04-28)"
+      ]
+    },
+    {
+      "target": "M001 reframe",
+      "referenced_by": [
+        "Cascade candidate (target: self) \u2014 root-ghostproxy-rollout Profile must read upstream HEAD via gh api BEFORE drafting module candidates"
       ]
     },
     {
@@ -77174,6 +79339,12 @@
       ]
     },
     {
+      "target": "Operator Decision Queue Q74-Q76",
+      "referenced_by": [
+        "Cross-Project Consolidation Candidate \u2014 AGT cascade trio (OpenClaw + OpenArms + OpenFleet share the same adopt-as-substrate-unless-load-bearing-differentiator decision-shape)"
+      ]
+    },
+    {
       "target": "Operator correction 2026-05-09 turn 4",
       "referenced_by": [
         "Per-Project Assistant Profile Standards"
@@ -77236,6 +79407,20 @@
       ]
     },
     {
+      "target": "P1 \u2014 Infrastructure Over Instructions",
+      "referenced_by": [
+        "Cross-Project Consolidation Candidate \u2014 AGT cascade trio (OpenClaw + OpenArms + OpenFleet share the same adopt-as-substrate-unless-load-bearing-differentiator decision-shape)",
+        "Profile \u2014 Circular Knowledge (evolution-layer; observes convergence + proposes promotion through the stages + cascades self \u2192 second-brain \u2192 ecosystem)",
+        "CK Weekly Distillation \u2014 Surfacings (Week of 2026-05-09 \u2192 2026-05-15)"
+      ]
+    },
+    {
+      "target": "P3 \u2014 Goldilocks",
+      "referenced_by": [
+        "Profile \u2014 Circular Knowledge (evolution-layer; observes convergence + proposes promotion through the stages + cascades self \u2192 second-brain \u2192 ecosystem)"
+      ]
+    },
+    {
       "target": "P4 governing principle",
       "referenced_by": [
         "C09 Status-Claim Hook Python Draft (Agent-Authored) \u2014 PreToolUse Pattern-Match Detection"
@@ -77245,6 +79430,12 @@
       "target": "P5 candidate principle endorsement",
       "referenced_by": [
         "Foundational-Cluster-Prioritized Enforcement-Layer Pattern \u2014 C04+C02 Coverage Maximizes Cross-Cutting Prevention"
+      ]
+    },
+    {
+      "target": "Parent state-divergence cascade-candidate",
+      "referenced_by": [
+        "Cascade candidate \u2014 M001 reframe: audit (not author) existing AGENTS.md (34KB) + CLAUDE.md (38KB) at upstream root-ghostproxy"
       ]
     },
     {
@@ -77260,6 +79451,12 @@
         "Principle \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them",
         "Principle \u2014 Infrastructure Over Instructions for Process Enforcement",
         "Methodology Adoption Guide"
+      ]
+    },
+    {
+      "target": "Pattern (draft) \u2014 Per-Project Assistant Profile",
+      "referenced_by": [
+        "Lesson \u2014 Metered programmatic agentic economics is the 2026 convergent direction: subscription compute arbitrage is closing; programmatic agent use is being separated from interactive use and billed at marginal-cost-tracking rates"
       ]
     },
     {
@@ -77310,6 +79507,12 @@
       ]
     },
     {
+      "target": "Per-Project Assistant Profile",
+      "referenced_by": [
+        "Profile \u2014 Circular Knowledge (evolution-layer; observes convergence + proposes promotion through the stages + cascades self \u2192 second-brain \u2192 ecosystem)"
+      ]
+    },
+    {
       "target": "Per-Task Cost Growth",
       "referenced_by": [
         "The harness 'turnCount' variable counts streaming events, not conversational turns",
@@ -77343,6 +79546,7 @@
     {
       "target": "Pipeline Synthesis Profile",
       "referenced_by": [
+        "Profile \u2014 Circular Knowledge (evolution-layer; observes convergence + proposes promotion through the stages + cascades self \u2192 second-brain \u2192 ecosystem)",
         "Profile \u2014 this project Continuous Research: focused assistant Profile for keeping models + technology-vision current; runnable as a 24/7 OpenClaw (or other tool) agent"
       ]
     },
@@ -77415,6 +79619,12 @@
       "target": "Principle \u2014 Right Process for Right Context",
       "referenced_by": [
         "Principle \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them"
+      ]
+    },
+    {
+      "target": "Profile Integration Topology",
+      "referenced_by": [
+        "Profile \u2014 Circular Knowledge (evolution-layer; observes convergence + proposes promotion through the stages + cascades self \u2192 second-brain \u2192 ecosystem)"
       ]
     },
     {
@@ -77614,6 +79824,12 @@
       ]
     },
     {
+      "target": "Sister-Projects Registry",
+      "referenced_by": [
+        "Cross-Project Consolidation Candidate \u2014 AGT cascade trio (OpenClaw + OpenArms + OpenFleet share the same adopt-as-substrate-unless-load-bearing-differentiator decision-shape)"
+      ]
+    },
+    {
       "target": "Skyscraper / Pyramid / Mountain Pattern",
       "referenced_by": [
         "Synthesis \u2014 Cavekit v4: Compressed Spec-Driven Development for Claude Code (Julius Brussee, MIT-Licensed, SPEC.md + 3 Commands + Caveman Encoding + Backprop Reflex)"
@@ -77750,9 +79966,16 @@
       ]
     },
     {
+      "target": "Synthesis \u2014 AlphaEvolve",
+      "referenced_by": [
+        "Lesson \u2014 Metered programmatic agentic economics is the 2026 convergent direction: subscription compute arbitrage is closing; programmatic agent use is being separated from interactive use and billed at marginal-cost-tracking rates"
+      ]
+    },
+    {
       "target": "Synthesis \u2014 Anthropic Programmatic Credit Pool",
       "referenced_by": [
-        "Comparison \u2014 Assistant Platforms & Frameworks Frontier (2026-05-09): Claude OS \u00b7 Obsidian PM \u00b7 Multica \u00b7 OpenClaw Command Center / OCMC \u2014 by Type and Frontier"
+        "Comparison \u2014 Assistant Platforms & Frameworks Frontier (2026-05-09): Claude OS \u00b7 Obsidian PM \u00b7 Multica \u00b7 OpenClaw Command Center / OCMC \u2014 by Type and Frontier",
+        "Lesson \u2014 Metered programmatic agentic economics is the 2026 convergent direction: subscription compute arbitrage is closing; programmatic agent use is being separated from interactive use and billed at marginal-cost-tracking rates"
       ]
     },
     {
@@ -77790,6 +80013,12 @@
       ]
     },
     {
+      "target": "Synthesis \u2014 GPT-5.5 Instant ChatGPT Default",
+      "referenced_by": [
+        "Lesson \u2014 Metered programmatic agentic economics is the 2026 convergent direction: subscription compute arbitrage is closing; programmatic agent use is being separated from interactive use and billed at marginal-cost-tracking rates"
+      ]
+    },
+    {
       "target": "Synthesis \u2014 GitHub Spec Kit",
       "referenced_by": [
         "Synthesis \u2014 AWS AI-DLC: AI-Driven Development Lifecycle (Methodology, Not a Tool)"
@@ -77813,6 +80042,12 @@
         "Synthesis \u2014 Inference Provider Landscape 2026 (OpenRouter, Together, Groq, Cerebras, DeepInfra, Ollama Cloud, Direct APIs)",
         "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
         "AI Infrastructure Decision Framework 2026 \u2014 Full Landscape \u00d7 Cost \u00d7 Capability \u00d7 Privacy"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 Microsoft Agent Governance Toolkit",
+      "referenced_by": [
+        "Cross-Project Consolidation Candidate \u2014 AGT cascade trio (OpenClaw + OpenArms + OpenFleet share the same adopt-as-substrate-unless-load-bearing-differentiator decision-shape)"
       ]
     },
     {
@@ -78117,6 +80352,12 @@
       "target": "The 2026 Consumer-Hardware AI Stack",
       "referenced_by": [
         "Milestone: Post-Anthropic Self-Autonomous AI Stack"
+      ]
+    },
+    {
+      "target": "This tick's primary finding \u2014 divergence between record and upstream",
+      "referenced_by": [
+        "Cascade candidate (target: self) \u2014 root-ghostproxy-rollout Profile must read upstream HEAD via gh api BEFORE drafting module candidates"
       ]
     },
     {

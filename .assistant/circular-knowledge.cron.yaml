@@ -1,453 +1,122 @@
 # =============================================================================
-# .assistant/circular-knowledge.cron.yaml  (v2 rewrite 2026-05-16)
+# .assistant/circular-knowledge.cron.yaml  (v3 — 2026-05-16)
 # =============================================================================
-# Operator 2026-05-16 (verbatim, sacrosanct):
-#   "we will upgrade / evolve the Ai assistant circular knowledge so that
-#    its not trash but proper work like I required"
-#   "make it able to be retroactive too"
-#   "I dont want it to polute everything"
-#   "I would not want it to freeze for not reason"
-#   "I would not want it to work slow either"
-#   "or do little change and stop"
-#   "pause when the work is really ready for review"
-#   "after ingest you synthesize and then it continue to level up...
-#    no garbage, no random mindless promote"
+# Operator-verbatim 2026-05-16: "wtf what is every 3 min lol ???? THE ONLY
+# FUCKING THING WHICH COULD BE FAST LIKE THIS IS THE root-ghostproxy ai
+# assistant" — v3 removes 3min sprint-tick. CK is weekly steady-state.
 #
-# v1 had 4 jobs (daily, weekly, monthly-brain, mid-month-cross-project) that
-# auto-fired and produced trash. v2 has 4 jobs but most are disabled-by-default
-# OR rate-limited. Operator-triggered sprint takes precedence when active.
+# Operator-verbatim 2026-05-16 (sacrosanct): "THE AI ASSISTANT IS NOT GOING
+# TO DELETE ANYTHING THAT IS ALREADY COMMITED OR STAGED WITHOUT MY AGREEMENT"
+# → workflow_retroactive only auto-rm's UNTRACKED. Tracked goes through
+# operator-agreement Q## (single approval per signature class).
 #
-# Flow: INGEST (CR) → SYNTHESIZE (PS) → LEVEL UP (CK, this profile)
-# CK's per-tick caps make "no garbage, no random mindless promote" structural:
-#   - distillation: 0-1 candidate per weekly tick (was ≤5 in v1)
-#   - retroactive: 0-1 batch-removal proposal per weekly tick
-#   - daily / monthly-brain crons: DISABLED by default
-#   - cross-project cascade cron: REMOVED (operator-triggered ONLY)
+# 3 jobs only. No disabled-by-default dead jobs.
 # =============================================================================
 
 profile: circular-knowledge
 
 jobs:
 
-  # ─── BOOTSTRAP — fires once on install (first-fire) ──────────────────────
-  # Initial pollution audit + baseline metrics. Sets up the inbox.
+  # ─── Bootstrap (first-fire on install) ───────────────────────────────────
   - name: bootstrap-pollution-audit
     enabled: true
     schedule: "first-fire"
+    description: "First-run pile_state + autonomous untracked-cleanup + surface tracked batch + surface ambiguous"
+    timeout_seconds: 5400
     trigger:
       type: openclaw-task
       prompt: |
-        CK v2 BOOTSTRAP — pile-state detection + full pollution audit.
+        CK v3 BOOTSTRAP — pile-state detection + autonomous untracked cleanup.
 
-        Operator-verbatim (sacrosanct, 2026-05-16):
-          "make sure everything and it is ready for a proper run that will
-           also realize there is a need for retroactive work in this case...
-           as if one pile had piled up and never depiled"
+        Sacrosanct boundary: R20 — NEVER auto-delete COMMITTED or STAGED
+        files. UNTRACKED only is autonomous. Tracked = surface batch Q##.
 
-        This bootstrap MUST recognize the pile-state ("piled up and never
-        depiled") on its own. The agent does not assume — it computes the
-        pile_state metric and decides.
+        Follow WORKFLOW.md `workflow_retroactive` 10-step pipeline. Key
+        points for this first-fire:
 
-        STEP 0 — Read .assistant/_state/circular-knowledge-operator-directives.md
-        (create if absent); process unmarked; append [!processed].
+        STEP 1 (pile_state): compute total_agent_authored, total_operator_resolved,
+          pile_ratio. Verdict DEPILED / PILING_UP / NEVER_DEPILED.
+        STEP 2 (classify): per file → KEEP / AUTO-REMOVE-UNTRACKED /
+          SURFACE-TRACKED-AGREEMENT / SURFACE-AMBIGUOUS.
+        STEP 3 (check_agreed): scan operator-decision-queue.md for any
+          PRIOR accepted Q## covering trash-signature batches → promote
+          matching tracked files from SURFACE-TRACKED-AGREEMENT to
+          APPROVED-TRACKED-REMOVAL.
+        STEP 4 (execute_autonomous): for AUTO-REMOVE-UNTRACKED:
+          - Re-verify file is untracked: `git ls-files --error-unmatch <path>`
+            must return non-zero exit code.
+          - `rm <path>`
+        STEP 5 (execute_agreed): for APPROVED-TRACKED-REMOVAL:
+          - `git rm <path>` (stages removal; operator commits when ready)
+          - NEVER `git commit`
+        STEP 6 (log): wiki/log/2026-05-16-ck-bootstrap-execution-batch-1.md
+        STEP 7 (surface): one batch Q## for tracked, per-class Q## for ambiguous
+        STEP 8 (self_check) — STEP 9 (pipeline_post) — STEP 10 (declare)
 
-        STEP 1 — INVENTORY (full read, no truncation):
-          .venv/bin/python -m tools.pipeline status
-          .venv/bin/python -m tools.pipeline evolve --score
-          git -C /home/jfortin/devops-solutions-information-hub log --oneline -50
-          git -C /home/jfortin/devops-solutions-information-hub status --porcelain
-        Capture: total wiki pages, untracked agent-authored files count.
+        ANTI-PATTERN GUARDS (mandatory checks):
+          - deletion_of_committed_without_agreement: ZERO tolerance
+          - surface_when_should_auto_remove: untracked clear-trash MUST execute,
+            not surface
+          - surface_per_file_instead_of_batch: tracked clear-trash = ONE batch
+            Q## per signature
 
-        STEP 2 — PILE-STATE DETECTION (pollution_auditor MODE A):
-          Compute:
-            total_agent_authored = count files agent-authored across:
-              wiki/sources/, wiki/lessons/01_drafts/, wiki/patterns/01_drafts/,
-              wiki/decisions/01_drafts/, wiki/domains/cross-domain/cascade-candidate-*,
-              wiki/domains/cross-domain/profile-circular-knowledge-*,
-              wiki/log/2026-*-research-watch-*, wiki/log/2026-*-purge-summary-*,
-              wiki/log/2026-*-ck-*
-              (use git log + git blame to confirm authorship is an agent — i.e.,
-               commit author matches a profile name OR is untracked)
+        DO NOT freeze. DO NOT ask for approval on untracked clear-trash.
+        DO NOT commit. Operator-territory: brain, spine, methodology, sister
+        projects, raw/notes/, anything in operator-decision-queue with pending Q##.
 
-            total_operator_resolved = count files with EITHER:
-              (a) an entry in wiki/backlog/operator-decision-queue.md with
-                  accept/reject marker referencing this file, OR
-              (b) git blame shows operator (jfortin) as latest editor (signals
-                  operator hand-edit / approval)
-
-            pile_ratio = total_agent_authored / max(1, total_operator_resolved)
-
-          Verdict:
-            DEPILED      if pile_ratio ≤ 2  (healthy)
-            PILING_UP    if 2 < pile_ratio ≤ 5
-            NEVER_DEPILED if pile_ratio > 5  ← operator's "pile that piled up
-                                                and never depiled"
-
-          STATE THE VERDICT EXPLICITLY in inbox + batch report.
-
-        STEP 3 — FULL PILE AUDIT (pollution_auditor MODE B, scope_full_pile):
-          If verdict = NEVER_DEPILED → scan the ENTIRE pile (no past-7d cap)
-            because the FIRST RUN needs to address the legacy accumulation.
-          If verdict = PILING_UP or DEPILED → standard past-7d scan suffices.
-
-          For each file in scope, classify:
-            KEEP: operator-accepted OR ≥3 inbound links OR explicitly load-bearing
-            PROPOSE-REMOVAL: agent-authored AND orphan (0 inbound) AND not in
-              operator-decision-queue AND (duplicates other content OR matches
-              operator-flagged trash zones ecosystem-projects mass / self-doc /
-              cascade-candidate-pollution / log-noise)
-            REVIEW-NEEDED: ambiguous
-
-        STEP 4 — DRAFT BATCH REPORT:
-          Author wiki/log/2026-05-16-ck-bootstrap-pollution-audit-batch-1.md
-          (or pile-depile-batch-1 if NEVER_DEPILED) with:
-            ## Pile-state verdict
-              - Total agent-authored: <n>
-              - Total operator-resolved: <m>
-              - Pile ratio: <X>×
-              - Verdict: DEPILED | PILING_UP | NEVER_DEPILED
-              - Recommended action: steady-state-cron | retroactive-cron-priority |
-                                    depile-pile-sprint
-            ## Inventory summary (per-category counts)
-            ## PROPOSE-REMOVAL list (path, author, mtime, rationale)
-            ## REVIEW-NEEDED list (path, ambiguity reason)
-            ## KEEP list (path, retention reason — kept short)
-            ## Operator action
-              - if DEPILED: "no immediate action; weekly retroactive cron continues"
-              - if PILING_UP: "review + accept batch removal to bring ratio back ≤ 2"
-              - if NEVER_DEPILED: "**CRITICAL**: pile detected. Either bulk-approve
-                this batch OR issue sprint directive 'run depile-pile cleanup now'
-                to chunk through it via 3min sprint-tick cadence"
-
-        STEP 5 — Self-improvement check (FIRST tick — log baseline metrics).
-
-        STEP 6 — boundary_guard: verify NO sister-project edits, NO mass
-        ingestion, NO self-doc pages, NO operator-territory edits.
-
-        STEP 7 — pipeline_post (0 NEW errors).
-
-        STEP 8 — Surface to operator-decision-queue.md:
-          Title: "Q##: CK BOOTSTRAP — pile_state=<verdict>, <K> files proposed
-          for removal. Batch: wiki/log/2026-05-16-ck-bootstrap-pollution-
-          audit-batch-1.md"
-          Body: include the pile_state metrics + recommended action explicitly.
-          If verdict = NEVER_DEPILED → mark as HIGH URGENCY.
-
-        STEP 9 — DECLARE to inbox:
-          HH:MM ET | BOOTSTRAP | pile_state:<verdict> | ratio:<X>× | total_agent_authored:<n>
-          | total_operator_resolved:<m> | propose_remove:<k> | review_needed:<r>
-          | keep:<j> | surfaced:<n> | post:<ok|err>
-
-        ANTI-FREEZE: if pollution_auditor fails on a sub-scope (e.g., gh log
-        unavailable for some files), continue with what IS available; log
-        the gap; do NOT stall. The bootstrap MUST surface a batch report
-        even if partial.
-
-        ANTI-STOP: bootstrap NEVER exits with 0 classification done. Even
-        if total_agent_authored = 0 (clean repo), surface a "pile_state=
-        DEPILED, baseline metrics established, no action needed" report.
-
-        BUDGET: 45 min model time. This is the one-shot baseline.
-    description: "First-fire on install: pile-state detection + full pollution audit + comprehensive batch report. Recognizes 'pile never depiled' state automatically."
-    timeout_seconds: 3600
-
-  # ─── WEEKLY DISTILLATION — Sat 10:00 ET, cap 0-1 candidate ────────────────
+  # ─── Weekly Distillation (Saturday 10:00 ET) ─────────────────────────────
   - name: weekly-distillation
     enabled: true
     schedule: "Sat *-*-* 10:00:00"
+    description: "Weekly level-up tick. Layer-1→Layer-2 lessons (cap 0-1). Convergence-gated."
+    timeout_seconds: 2400
     trigger:
       type: openclaw-task
       prompt: |
-        CK weekly distillation. Follow WORKFLOW.md 10-step pipeline.
+        CK weekly distillation. Follow `workflow_distillation` 8-step pipeline.
 
-        Operator-verbatim (sacrosanct): "after ingest you synthesize and
-        then it continue to level up... no garbage, no random mindless
-        promote".
+        STEP 0 (directives) → STEP 1 (pipeline_evolve_score) → STEP 2
+        (convergence_scout: ≥3 anchors? If 0 pass → 'Goldilocks-under-budget'
+        + END) → STEP 3 (multi_vision_diff + goldilocks_sizer +
+        stage_discipline_check; if any fail → defer) → STEP 4 (draft AT MOST
+        1 at wiki/<tier>/01_drafts/<slug>.md) → STEP 5 (self_check) → STEP 6
+        (pipeline_post) → STEP 7 (declare inbox).
 
-        This is the LEVEL-UP tick: Layer-1 syntheses → Layer-2 lessons (or
-        Layer-3 patterns/decisions when convergence on existing lesson).
+        NO GARBAGE GATE: if no candidate passes ALL gates, write inbox
+        'Goldilocks-under-budget — no convergence ≥3 anchors this week' and
+        END. That IS the correct outcome.
 
-        STEP 0 — Process operator-directives.
+        NO MINDLESS PROMOTE: every draft includes ## Context Boundaries,
+        ## Alternative Visions (when multi-vision applies), Goldilocks
+        justification, ≥3 explicit relationship verbs.
 
-        STEP 1 — inbox_state_check. Branch: DISTILL / PAUSE / STEADY-STATE-LIGHT.
+        Online research (web_search, hf_paper_search) IS ALLOWED when it
+        applies to a level-up draft (verification + academic anchors +
+        cross-reference). NOT for mass ingestion.
 
-        STEP 2 — distillation_observe:
-          Run `.venv/bin/python -m tools.pipeline evolve --score`. Top-5
-          candidates with cross_source_convergence ≥0.5. For each: verify
-          ≥3 anchors via convergence_scout subagent.
-
-          NO GARBAGE GATE: if 0 candidates pass the ≥3-anchor floor, write
-          inbox 'Goldilocks-under-budget — no convergence ≥3 anchors this
-          week' and END tick. That's the right outcome.
-
-        STEP 3 — evaluate the top candidate:
-          - multi_vision_diff subagent
-          - goldilocks_sizer subagent
-          - stage_discipline_check subagent (Layer N → Layer N+1 ONLY)
-
-          NO RANDOM PROMOTE GATE: if any check fails (single-truth detected,
-          over-sized, stage-skip), DO NOT draft. Surface as 'evaluation
-          deferred' with rationale. NEVER force a draft.
-
-        STEP 4 — Draft (0-1 candidate this week):
-          Author wiki/<tier>/01_drafts/<slug>.md per knowledge-evolution
-          model. Mandatory sections: ## Context Boundaries, ## Alternative
-          Visions (when applicable), Goldilocks justification, ≥3 explicit
-          relationship verbs to the anchors.
-
-          CAP: 0-1 candidate per weekly tick. If you have 3 ripe candidates,
-          pick the highest-convergence one + defer the rest to next week
-          (log deferrals).
-
-        STEP 7 — self_improvement_check.
-
-        STEP 8 — boundary_guard: verify NO cross-project, NO online,
-        NO self-doc, NO operator-territory writes.
-
-        STEP 9 — pipeline_post (0 NEW errors).
-
-        STEP 10 — surface + completion_check + declare to inbox.
-
-        Inbox format: HH:MM ET | DISTILL | candidates_eval:<n>
-        | drafted:<0|1> | deferred:<n> | self:<applied|surfaced|skip>
-        | surfaced:<n> | post:<ok|err> | completion:<continuing|pause>
-
-        ANTI-PATTERNS to watch:
-          - single_truth (missing Context Boundaries)
-          - stage_skip (Layer 1 → Layer 4 jump)
-          - over_proposing (> 1 draft this tick)
-          - under_proposing (skipped a ≥3-anchor candidate without rationale)
-          - cascade_inversion (brain proposals before self current)
-          - cross_project_overreach (sister-projects.yaml read without directive)
-          - self_documentation_in_wiki
-
-        BUDGET: 20-30 min model time. NEVER freeze, NEVER work slow,
-        NEVER do little-change-and-stop.
-    description: "Weekly Layer-N→N+1 distillation. CAP 0-1 candidate. Stage discipline absolute."
-    timeout_seconds: 2400
-
-  # ─── WEEKLY RETROACTIVE AUDIT — Sun 09:00 ET ──────────────────────────────
+  # ─── Weekly Retroactive Audit (Sunday 09:00 ET) ──────────────────────────
   - name: weekly-retroactive-audit
     enabled: true
     schedule: "Sun *-*-* 09:00:00"
-    trigger:
-      type: openclaw-task
-      prompt: |
-        CK weekly retroactive pollution audit (v2 NEW).
-
-        Operator-verbatim (sacrosanct): "make it able to be retroactive too"
-        + "I dont want it to polute everything".
-
-        Scan past 7 days of agent-authored files; classify; propose batch
-        removal of trash. NO autonomous deletions.
-
-        STEP 0 — Process operator-directives.
-
-        STEP 1 — inbox_state_check.
-
-        STEP 5a — pile_state_check (pollution_auditor MODE A FIRST):
-          Compute pile_state metrics across ALL agent-authored files (not
-          just past 7d). Verdict: DEPILED | PILING_UP | NEVER_DEPILED.
-
-          IF verdict = NEVER_DEPILED:
-            → escalate this tick to FULL PILE AUDIT (not past-7d slice).
-              Author wiki/log/<date>-ck-pile-depile-batch-N.md (not
-              retroactive-audit-batch).
-              Mark surface HIGH URGENCY.
-              Pause routine distillation (auto): set inbox flag
-              "distillation_paused_pile_critical=true" — next weekly
-              distillation tick reads this flag and short-circuits.
-
-          IF verdict = PILING_UP:
-            → standard past-7d audit + warn in batch report that
-              pile_ratio is escalating; recommend operator review.
-
-          IF verdict = DEPILED:
-            → standard past-7d audit; expected outcome is small batch.
-
-        STEP 5b — retroactive_audit (pollution_auditor MODE B):
-          Files in scope (per verdict above) — for past-7d mode:
-            wiki/sources/, wiki/lessons/01_drafts/, wiki/patterns/01_drafts/,
-            wiki/decisions/01_drafts/, wiki/domains/cross-domain/cascade-candidate-*,
-            wiki/log/2026-*-research-watch-*, wiki/log/2026-*-purge-summary-*,
-            wiki/log/2026-*-ck-*  (filtered: mtime within past 7d)
-          For full-pile mode (NEVER_DEPILED): same scopes, NO mtime filter.
-
-          Classify each KEEP / PROPOSE-REMOVAL / REVIEW-NEEDED per criteria
-          in pollution_auditor output_contract.
-
-        STEP 6 — draft_retroactive_batch:
-          Author wiki/log/<date>-ck-retroactive-audit-batch-<N>.md.
-          Group PROPOSE-REMOVAL by category (CR over-ingestion / PS bulk-
-          synthesis / CK self-doc / cascade-pollution / log-noise / etc).
-          Per file: path, author, mtime, rationale.
-
-          CAP: 0-1 batch per weekly tick. If pollution_auditor returns 0
-          PROPOSE-REMOVAL items, write inbox 'retroactive-audit clean —
-          no pollution this week' and END tick.
-
-        STEP 7 — self_improvement_check.
-
-        STEP 8 — boundary_guard.
-
-        STEP 9 — pipeline_post.
-
-        STEP 10 — surface + completion_check + declare to inbox.
-
-          Surface target: operator-decision-queue.md
-          Format: "Q##: CK retroactive-audit batch <N>. <K> files proposed
-          for removal. Batch report: wiki/log/<date>-ck-retroactive-audit-
-          batch-<N>.md. Operator: review + apply via [slash command TBD]
-          or hand-edit."
-
-        Inbox: HH:MM ET | RETRO | audited_files:<n> | propose_remove:<n>
-        | review_needed:<n> | batch:<path> | surfaced:<n> | post:<ok|err>
-
-        ANTI-PATTERNS:
-          - Over-proposing removal (> 1 batch per week)
-          - Under-proposing (claims 'audit clean' when orphans + agent-authored
-            files exist + no operator-accept for them)
-          - Autonomous deletion (operator-trigger ONLY for execution)
-
-        AUTOADAPTATION: if past 4 retroactive batches were operator-rejected
-        ≥75%, tighten pollution_auditor thresholds + surface tuning proposal
-        as `target: self`.
-
-        BUDGET: 30 min model time.
-    description: "Weekly retroactive pollution audit. CAP 0-1 batch. NO autonomous deletions."
+    description: "Weekly pollution audit + autonomous untracked-cleanup + tracked batch surface + post-agreement execution"
     timeout_seconds: 2400
-
-  # ─── OPERATOR-DIRECTED SPRINT TICK — every 3min when sprint active ────────
-  # Fires every 3min. Agent gates: only does sprint work when inbox shows
-  # an active sprint directive. Otherwise short-circuits with 'no sprint
-  # active' inbox entry.
-  - name: sprint-tick
-    enabled: true
-    schedule: "every:3m"
     trigger:
       type: openclaw-task
       prompt: |
-        CK sprint-tick. Fires every 3min. AGENT-GATED: only does work when
-        operator-directed sprint is active.
+        CK weekly retroactive. Follow `workflow_retroactive` 10-step pipeline.
 
-        STEP 0 — Read .assistant/_state/circular-knowledge-operator-directives.md.
-        Look for an unmarked sprint directive (keywords: "sprint", "now",
-        "retroactive cleanup now", "audit now", or explicit sprint mode
-        toggle by operator).
+        Same R20 boundary as bootstrap: UNTRACKED autonomous, TRACKED needs
+        prior operator-agreement Q##.
 
-        IF NO sprint directive active → short-circuit:
-          Write inbox: 'HH:MM ET | TICK | no_sprint_active | END'
-          END tick (no work this fire).
+        STEP 3 (check_agreed): always scan operator-decision-queue.md for
+        accepted Q##s covering trash-signature batches BEFORE classifying.
+        Files covered by an accepted Q## move directly to APPROVED-TRACKED-
+        REMOVAL (executed in step 5 same tick).
 
-        IF sprint directive active → branch based on directive type:
+        Anti-pollution gate: if pile_state.verdict = NEVER_DEPILED AFTER
+        untracked-cleanup (autonomous step 4 done, ratio still > 5×), surface
+        pollution-pause HIGH urgency — agent self-disables distillation cron
+        until operator resolves the tracked batch.
 
-          (A) RETROACTIVE-CLEANUP-SPRINT:
-              Run STEP 5-6 of WORKFLOW.md (retroactive audit + draft batch).
-              CAP per sprint-tick: 1-3 batch proposals if multiple categories
-              warrant separate batches. Each batch is Goldilocks-per-proposal.
-
-          (B) DISTILLATION-SPRINT:
-              Run STEP 2-4 (distill convergent candidates).
-              CAP per sprint-tick: 1-3 candidates if multiple ≥3-anchor
-              convergences exist. Each draft is Goldilocks-per-proposal.
-
-          (C) BRAIN-AUDIT-SPRINT (operator-directive-only):
-              Run brain_drift analysis. NO auto-edits to CLAUDE.md /
-              AGENTS.md / super-model. Draft brain-update proposals at
-              wiki/spine/01_drafts/<slug>.md (only allowed in sprint mode
-              with explicit operator directive — DEFAULT FORBIDDEN).
-
-        STEP 7 — self_improvement_check.
-
-        STEP 8 — boundary_guard (cross_project_boundary_guard subagent +
-          anti_pattern_diagnostician for freeze/slow/stop detection).
-
-        STEP 9 — pipeline_post.
-
-        STEP 10 — surface + work_completion_detector + declare to inbox.
-
-          Inbox: HH:MM ET | SPRINT-<type> | drafted_this_tick:<n>
-          | surfaced:<n> | post:<ok|err> | completion:<continuing|sprint_complete>
-
-          If completion = sprint_complete → next tick takes PAUSE branch.
-
-        ANTI-FREEZE: if ambiguous candidate, draft multi-vision + MOVE TO
-        NEXT same tick.
-        ANTI-SLOW: process 2-3 batches/candidates per sprint-tick if ripe.
-        ANTI-STOP: never exit sprint mode with TODOs + no rationale.
-        BUILD FORWARD: never revert; SUPERSEDES via follow-up draft.
-
-        BUDGET: 8 min per sprint-tick (tight — 3min cadence).
-    description: "Operator-directed sprint tick. Every 3min. Agent-gated by operator-directives.md content. Default no-op."
-    timeout_seconds: 480
-
-  # ─── DAILY LIGHT CHECK — DISABLED BY DEFAULT (v2 — was a v1 trash bug) ───
-  - name: daily-light-check
-    enabled: false  # v2 DISABLED — operator-toggle to enable
-    schedule: "*-*-* 11:00:00"
-    trigger:
-      type: openclaw-task
-      prompt: |
-        CK daily light check (v2 — DISABLED BY DEFAULT).
-
-        Reason disabled: v1 daily-cron produced low-value drafts. Weekly
-        cadence is sufficient. Enable manually if operator authorizes
-        daily-rhythm via `bin/assistant cron enable circular-knowledge
-        daily-light-check`.
-
-        If fired: tiny scan — check operator-decision-queue for resolutions
-        affecting CK + check for new operator-directive in directives.md.
-        If something needs action, surface it. If not, write inbox 'daily
-        nothing-fresh' and END.
-
-        CAP: 0 distillation drafts (use weekly cron for drafting).
-
-        BUDGET: 5 min.
-    description: "Daily light check. DISABLED in v2 by default (was trash bug in v1)."
-    timeout_seconds: 600
-
-  # ─── MONTHLY BRAIN AUDIT — DISABLED BY DEFAULT (v2 — was trash bug in v1) ─
-  - name: monthly-brain-audit
-    enabled: false  # v2 DISABLED — operator-territory; operator-toggle to enable
-    schedule: "*-*-01 14:00:00"
-    trigger:
-      type: openclaw-task
-      prompt: |
-        CK monthly brain audit (v2 — DISABLED BY DEFAULT).
-
-        Reason disabled: brain (CLAUDE.md / AGENTS.md / super-model / 4
-        principles) is operator-territory. v1 auto-audit was overreach.
-        Enable via operator directive ONLY: append "run monthly brain
-        audit" to .assistant/_state/circular-knowledge-operator-directives.md
-        AND `bin/assistant cron enable circular-knowledge monthly-brain-audit`.
-
-        If fired: brain_drift_detector subagent + draft AT MOST 1 brain-
-        update proposal at wiki/spine/01_drafts/<slug>.md. SURFACE only,
-        never edit brain files directly.
-
-        BUDGET: 30 min.
-    description: "Monthly brain audit. DISABLED in v2. Operator-triggered only."
-    timeout_seconds: 1800
-
-# =============================================================================
-# v2 cron design rules (this Profile)
-# =============================================================================
-# 1. Bootstrap fires once on install (first-fire) — sets baseline pollution
-#    audit. Operator reviews + decides cleanup.
-# 2. Weekly distillation = Sat 10:00 ET. CAP 0-1 candidate. No garbage,
-#    no random promote. Stage discipline absolute.
-# 3. Weekly retroactive audit = Sun 09:00 ET. CAP 0-1 batch. No autonomous
-#    deletion. Operator approves + executes.
-# 4. Sprint-tick = every 3min. Agent-gated (no-op unless operator-directed
-#    sprint active in directives.md). Supports retroactive / distillation /
-#    brain-audit sprints with elevated cadence.
-# 5. Daily + monthly-brain DISABLED by default. v1 had these enabled and they
-#    produced trash. Operator-toggle to re-enable per workload.
-# 6. REMOVED (was in v1): midmonth-cross-project-cascade. Cross-project work
-#    is operator-triggered ONLY in v2.
-# 7. Every tick: step 0 (operator-directives) + step 7 (self-improvement)
-#    + step 8 (boundary_guard) + step 9 (pipeline_post) + step 10 (completion
-#    check) are NON-SKIPPABLE.
-# 8. pause_conditions per profile.yaml workflow.pause_conditions: when all
-#    work done + ready for review, CK pauses on its own (not freeze; PAUSE
-#    is correct cessation).
+        Online research allowed for verification + anchors during any level-up
+        co-occurring with this retroactive tick.

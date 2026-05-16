@@ -21,6 +21,10 @@ tags: [pre-compact-handoff-manual, imminent-compaction, "2026-05-08", post-compa
 
 # PRE-COMPACT HANDOFF MANUAL — Imminent Compaction State Snapshot 2026-05-08
 
+## Summary
+
+Manual pre-compact handoff snapshot authored at 5% context remaining (2026-05-08). Documents operator directives, active work state, and mandatory post-compact recovery actions for the next agent session. Read in full before taking any action post-compaction.
+
 ## ⚠️ POST-COMPACT AGENT — READ THIS FIRST ⚠️
 
 ```
