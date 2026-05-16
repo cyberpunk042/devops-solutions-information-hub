@@ -1,12 +1,12 @@
 {
-  "generated": "2026-05-16T17:01:06.060434+00:00",
+  "generated": "2026-05-16T18:42:53.320797+00:00",
   "stats": {
-    "pages": 895,
+    "pages": 901,
     "domains": 15,
-    "sources": 121,
+    "sources": 123,
     "comparisons": 10,
-    "relationships": 4113,
-    "tags_unique": 3406,
+    "relationships": 4121,
+    "tags_unique": 3436,
     "layers": {
       "3": 4,
       "5": 38,
@@ -14,12 +14,12 @@
       "2": 83,
       "4": 83,
       "0": 1,
-      "1": 89,
+      "1": 91,
       "spine": 83
     },
     "maturity": {
-      "seed": 201,
-      "growing": 332,
+      "seed": 202,
+      "growing": 336,
       "mature": 23
     }
   },
@@ -37767,6 +37767,47 @@
       ]
     },
     {
+      "path": "log/2026-05-16-ck-bootstrap-execution-batch-2.md",
+      "slug": "log/2026-05-16-ck-bootstrap-execution-batch-2",
+      "title": "CK Bootstrap Execution Batch 2 \u2014 re-fire verification + research-watch tracked-trash subclass surface",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "done",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "log",
+        "completion",
+        "circular-knowledge",
+        "pollution-cleanup",
+        "retroactive",
+        "batch-2"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "CK Bootstrap Execution Batch 2"
+      ],
+      "relationships": [
+        {
+          "verb": "EXTENDS",
+          "target": "CK Bootstrap Execution Batch 1"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Operator Decision Queue"
+        },
+        {
+          "verb": "VALIDATES",
+          "target": "Circular Knowledge Profile"
+        }
+      ]
+    },
+    {
       "path": "log/2026-05-16-ck-bootstrap-pile-depile-batch-1.md",
       "slug": "log/2026-05-16-ck-bootstrap-pile-depile-batch-1",
       "title": "CK Bootstrap \u2014 Pile Depile Batch 1 (NEVER_DEPILED verdict)",
@@ -37796,6 +37837,124 @@
         {
           "verb": "RELATES TO",
           "target": "Operator Decision Queue"
+        }
+      ]
+    },
+    {
+      "path": "log/2026-05-16-flagged-pages-cline-sdk.md",
+      "slug": "log/2026-05-16-flagged-pages-cline-sdk",
+      "title": "research-watch \u2014 Cline SDK 2026-05-13 \u2014 affected pages flagged for update",
+      "type": "note",
+      "domain": "log",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "research-watch",
+        "cline-sdk",
+        "flagged-pages",
+        "harness-engineering",
+        "terminal-bench-2-0",
+        "claude-opus-4-7",
+        "follow-up"
+      ],
+      "sources": [
+        {
+          "id": "cline-sdk-synthesis",
+          "type": "source-synthesis",
+          "file": "wiki/sources/tools-integration/src-cline-sdk-open-source-agent-runtime-2026-05-13.md",
+          "title": "Synthesis \u2014 Cline SDK (@cline/sdk) \u2014 Open-Source Agent Runtime",
+          "ingested": "2026-05-16"
+        }
+      ],
+      "layer": "",
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Cline SDK Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Operator Decision Queue"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Opus 4.7 surfacing log"
+        }
+      ]
+    },
+    {
+      "path": "log/2026-05-16-flagged-pages-gemini-spark.md",
+      "slug": "log/2026-05-16-flagged-pages-gemini-spark",
+      "title": "Flagged pages \u2014 Gemini Spark / Gemini Intelligence (Google agent-tier entry, 2026-05-12 + 2026-05-14) requires operator-review update on three existing pages",
+      "type": "note",
+      "domain": "log",
+      "status": "active",
+      "confidence": "medium",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "research-watch",
+        "frontier-delta-2026-05-16",
+        "flagged-pages",
+        "gemini-spark",
+        "gemini-intelligence",
+        "google",
+        "agent-runtime",
+        "vendor-agent-tier",
+        "2026-05-16"
+      ],
+      "sources": [
+        {
+          "id": "triggering-synthesis-2026-05-16",
+          "type": "synthesis",
+          "file": "wiki/sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14.md",
+          "description": "Triggering source-synthesis page (Gemini Spark + Gemini Intelligence, 2026-05-16) \u2014 this flagged-pages log was authored in the same tick."
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "log/2026-05-16-purge-summary.md",
+      "slug": "log/2026-05-16-purge-summary",
+      "title": "purge-summary 2026-05-16 \u2014 Cline SDK ephemeral raws",
+      "type": "note",
+      "domain": "log",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "purge-summary",
+        "lifecycle",
+        "ephemeral-raws",
+        "continuous-research",
+        "cline-sdk"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Cline SDK Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Cline SDK flagged-pages log"
         }
       ]
     },
@@ -45995,6 +46154,66 @@
       "relationships": []
     },
     {
+      "path": "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14.md",
+      "slug": "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14",
+      "title": "Synthesis \u2014 Gemini Intelligence + Gemini Spark (Google, 2026-05-12 Android Show announcement + 2026-05-14 APK Insight leak, pre-I/O 2026-05-19~21): Google formalizes a per-vendor agent-runtime tier inside the Gemini app (two-tab Chat/Agent layout; rebranded from internal codename 'Remy' \u2192 'Gemini Agent' \u2192 'Gemini Spark') alongside a confirmed proactive-AI substrate ('Gemini Intelligence') for Android \u2014 multi-step task automation (food/rideshare/shopping/cart-build/inbox-declutter/meeting-briefs/news-digest), Chrome auto-browse, Personal-Intelligence-powered Autofill, Rambler speech-cleanup, and natural-language widget generation \u2014 rolling out on Galaxy S26 + Pixel 10 this summer with broader Android (watch/car/glasses/laptop) availability later in 2026; Google explicitly warns Spark is 'experimental' and 'may do things like share your info or make purchases without asking,' confirming Google is intentionally entering the same trust-budget territory as ChatGPT agent mode and Claude Managed Agents but with deeper OS-level integration as the differentiator",
+      "type": "source-synthesis",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "google",
+        "gemini",
+        "gemini-intelligence",
+        "gemini-spark",
+        "gemini-agent",
+        "agent-runtime",
+        "vendor-agent-tier",
+        "android",
+        "pixel-10",
+        "galaxy-s26",
+        "multi-step-automation",
+        "chrome-auto-browse",
+        "personal-intelligence",
+        "autofill",
+        "rambler",
+        "create-my-widget",
+        "material-3-expressive",
+        "2026-05-12",
+        "2026-05-14",
+        "source-synthesis",
+        "2026-05-16",
+        "frontier-delta-2026-05-16",
+        "vision-relevant-agent-runtime",
+        "pre-io-2026",
+        "leak-corroborated"
+      ],
+      "sources": [
+        {
+          "id": "9to5google-li-2026-05-14",
+          "type": "article",
+          "url": "https://9to5google.com/2026/05/14/gemini-spark-insight/",
+          "file": "raw/articles/gemini-spark-is-googles-upcoming-ai-agent-in-the-gemini-app.md",
+          "description": "9to5Google (Abner Li, 2026-05-14 \u2014 APK Insight teardown of Google app beta 17.23). Primary leak source. Confirms the 'Gemini Agent' \u2192 'Gemini Spark' rebrand, the two-tab Chat/Agent in-app navigation, the Personal-Intelligence + Connected-Apps + skills + chats + tasks + websites-logged-in + location signal-pool the agent draws on, the 'share necessary info with third parties' clause, the 'may do things like share your info or make purchases without asking' experimental warning, and the three example task templates (declutter inbox \u00b7 meeting briefs \u00b7 custom news digest). APK-teardown so capabilities are interpreted-from-decompiled-strings, not officially-described."
+        },
+        {
+          "id": "google-blog-brooks-2026-05-12",
+          "type": "article",
+          "url": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/",
+          "file": "raw/articles/gemini-intelligence-brings-proactive-ai-to-android.md",
+          "description": "Google Keyword blog (Mindy Brooks VP Product Management, 2026-05-12, Android Show 2026 announcement). Confirms the umbrella name 'Gemini Intelligence' for the proactive-AI substrate; multi-step automation tuned on Galaxy S26 + Pixel 10 specifically for food + rideshare apps; the photo-context \u2192 Expedia-tour-search pattern (visual context as task input); long-press-power-button as the universal Gemini-action invocation gesture; Chrome auto-browse launching late June 2026 for appointment-booking + parking-reservation; Personal-Intelligence-powered Autofill (opt-in, toggleable); Rambler (speech-cleanup, multilingual, audio-not-stored); Create My Widget (natural-language widget generation backed by Gemini); Material 3 Expressive evolution as the visual design layer."
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05.md",
       "slug": "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05",
       "title": "Synthesis \u2014 OpenAI GPT-5.5 Instant (2026-05-05): the Instant-variant of the GPT-5.5 frontier family becomes the new ChatGPT default model, replacing GPT-5.3 Instant for all users (Free/Plus/Pro/Business/Enterprise), with OpenAI-claimed 52.5% reduction in hallucinated claims on high-stakes evals (medicine/law/finance) and 37.3% reduction in inaccuracies on user-flagged difficult conversations vs predecessor; AIME-2025 jumps 65.4 \u2192 81.2, MMMU-Pro 69.2 \u2192 76; introduces cross-chat / files / Gmail memory-context and user-facing memory-sources surface (delete/correct controls) \u2014 first time OpenAI uses a default-model swap (not a separate premium tier) as the vehicle for hallucination-reduction + context-management upgrades, signaling that 'better daily assistant' has become as strategically important as frontier-capability for OpenAI's consumer product moat; API-distribution alias 'chat-latest' shifts to point at the new model, GPT-5.3 Instant retained 3 months for paid users only",
@@ -50466,6 +50685,81 @@
       "aliases": [
         "Synthesis \u2014 Claude OS Persistent Memory",
         "Claude OS \u2014 SQLite + Tree-sitter Hybrid Indexing for Agent Memory"
+      ],
+      "relationships": []
+    },
+    {
+      "path": "sources/tools-integration/src-cline-sdk-open-source-agent-runtime-2026-05-13.md",
+      "slug": "sources/tools-integration/src-cline-sdk-open-source-agent-runtime-2026-05-13",
+      "title": "Synthesis \u2014 Cline SDK (@cline/sdk) \u2014 Open-Source Agent Runtime Extracted from Cline 2.0, Outperforms Claude Code on Terminal Bench 2.0 (2026-05-13)",
+      "type": "source-synthesis",
+      "domain": "tools-and-platforms",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "cline",
+        "cline-sdk",
+        "agent-runtime",
+        "agent-harness",
+        "open-source",
+        "typescript",
+        "terminal-bench-2-0",
+        "claude-opus-4-7",
+        "claude-code",
+        "opencode",
+        "codex",
+        "droid",
+        "multi-provider",
+        "subagents",
+        "plugins",
+        "mcp",
+        "apache-2-0",
+        "npm",
+        "layered-architecture",
+        "browser-compatible"
+      ],
+      "sources": [
+        {
+          "id": "cline-blog-introducing-sdk",
+          "type": "vendor-announcement",
+          "url": "https://cline.bot/blog/introducing-cline-sdk-the-upgraded-agent-runtime",
+          "file": "raw/articles/introducing-cline-sdk-the-upgraded-agent-runtime-and-we-rebuilt-cline-upon-it-cl.md",
+          "title": "Introducing Cline SDK: the upgraded agent runtime, and we rebuilt Cline upon it",
+          "author": "Renee Huang",
+          "published": "2026-05-13",
+          "ingested": "2026-05-16"
+        },
+        {
+          "id": "marktechpost-cline-sdk",
+          "type": "trade-press",
+          "url": "https://www.marktechpost.com/2026/05/14/cline-releases-cline-sdk-an-open-source-agent-runtime-now-powering-its-cli-and-kanban-with-ide-extensions-being-migrated/",
+          "file": "raw/articles/cline-releases-cline-sdk-an-open-source-agent-runtime-now-powering-its-cli-and-k.md",
+          "title": "Cline Releases Cline SDK: An Open-Source Agent Runtime Now Powering Its CLI and Kanban",
+          "author": "Asif Razzaq",
+          "published": "2026-05-14",
+          "ingested": "2026-05-16"
+        },
+        {
+          "id": "testingcatalog-cline-sdk",
+          "type": "trade-press",
+          "url": "https://www.testingcatalog.com/cline-releases-open-source-agent-runtime-sdk-for-coding-agents/",
+          "file": "raw/articles/cline-releases-open-source-agent-runtime-sdk.md",
+          "title": "Cline releases open-source agent runtime SDK for coding agents",
+          "author": "Nero Soares",
+          "published": "2026-05-13",
+          "ingested": "2026-05-16"
+        }
+      ],
+      "layer": 1,
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "Cline SDK Release 2026-05-13",
+        "@cline/sdk Open-Source Agent Runtime",
+        "Cline 2.0 Harness Extraction"
       ],
       "relationships": []
     },
@@ -62746,15 +63040,15 @@
       "relationship_count": 509
     },
     "cross-domain": {
-      "page_count": 306,
-      "relationship_count": 1837
+      "page_count": 307,
+      "relationship_count": 1840
     },
     "ai-agents": {
       "page_count": 77,
       "relationship_count": 577
     },
     "ai-models": {
-      "page_count": 22,
+      "page_count": 23,
       "relationship_count": 100
     },
     "tools-integration": {
@@ -62762,7 +63056,7 @@
       "relationship_count": 381
     },
     "tools-and-platforms": {
-      "page_count": 30,
+      "page_count": 31,
       "relationship_count": 195
     },
     "devops": {
@@ -62778,8 +63072,8 @@
       "relationship_count": 195
     },
     "log": {
-      "page_count": 192,
-      "relationship_count": 62
+      "page_count": 195,
+      "relationship_count": 67
     },
     "agent-config": {
       "page_count": 57,
@@ -63145,6 +63439,7 @@
       "sources/src-cline-agentic-coding-ide-extension",
       "sources/src-code-review-graph-automated-review",
       "sources/tools-integration/src-claude-code-harness-features",
+      "sources/tools-integration/src-cline-sdk-open-source-agent-runtime-2026-05-13",
       "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
       "sources/tools-integration/src-opencode-harness-features",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
@@ -63981,6 +64276,7 @@
       "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
       "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
       "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
+      "sources/tools-integration/src-cline-sdk-open-source-agent-runtime-2026-05-13",
       "sources/tools-integration/src-multica-managed-agents-platform",
       "sources/tools-integration/src-opencode-harness-features"
     ],
@@ -64449,6 +64745,7 @@
     "lifecycle": [
       "backlog/epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle",
       "domains/ai-agents/patterns/hooks-lifecycle-architecture",
+      "log/2026-05-16-purge-summary",
       "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
       "sources/claude-code/src-claude-code-hooks-reference",
       "spine/models/agent-config/model-skills-commands-hooks"
@@ -64855,6 +65152,7 @@
       "log/2026-05-15-research-watch-opus-4-7-source-synthesis-shipped-end-to-end",
       "log/2026-05-15-weekly-research-digest-2026-05-09-2026-05-15",
       "log/2026-05-16-ck-bootstrap-execution-batch-1",
+      "log/2026-05-16-ck-bootstrap-execution-batch-2",
       "spine/standards/note-page-standards"
     ],
     "contract": [
@@ -65329,6 +65627,7 @@
       "sources/tools-integration/src-claude-code-harness-features",
       "sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context",
       "sources/tools-integration/src-claude-os-persistent-memory-brobertsaz",
+      "sources/tools-integration/src-cline-sdk-open-source-agent-runtime-2026-05-13",
       "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
       "sources/tools-integration/src-multica-managed-agents-platform",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
@@ -66772,6 +67071,7 @@
     "retroactive": [
       "decisions/02_validated/methodology/stage-gate-operational-decisions",
       "log/2026-05-16-ck-bootstrap-execution-batch-1",
+      "log/2026-05-16-ck-bootstrap-execution-batch-2",
       "log/2026-05-16-ck-bootstrap-pile-depile-batch-1"
     ],
     "task-types": [
@@ -66940,6 +67240,7 @@
       "sources/claude-code/src-shanraisshan-claude-code-best-practice",
       "sources/claude-code/src-superpowers-end-of-vibe-coding",
       "sources/tools-integration/src-claude-code-harness-features",
+      "sources/tools-integration/src-cline-sdk-open-source-agent-runtime-2026-05-13",
       "sources/tools-integration/src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams",
       "sources/tools-integration/src-playwright-mcp-visual-testing"
     ],
@@ -67134,6 +67435,7 @@
       "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction",
       "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
       "lessons/03_validated/tools-architecture/always-plan-before-executing",
+      "log/2026-05-16-flagged-pages-cline-sdk",
       "patterns/03_validated/architecture/plan-execute-review-cycle",
       "sources/claude-code/src-claude-code-hooks-reference",
       "sources/claude-code/src-harness-engineering",
@@ -67197,7 +67499,8 @@
     "typescript": [
       "domains/ai-agents/orchestration/harness-engineering",
       "domains/cross-domain/methodology-artifacts/chains/domain-chain-typescript",
-      "sources/claude-code/src-harness-engineering"
+      "sources/claude-code/src-harness-engineering",
+      "sources/tools-integration/src-cline-sdk-open-source-agent-runtime-2026-05-13"
     ],
     "agent-framework": [
       "domains/ai-agents/orchestration/openclaw",
@@ -67917,7 +68220,8 @@
     "circular-knowledge": [
       "domains/cross-domain/profile-circular-knowledge-evolution-layer-and-brain-self-improvement",
       "log/2026-05-15-ck-weekly-distillation-surfacings",
-      "log/2026-05-16-ck-bootstrap-execution-batch-1"
+      "log/2026-05-16-ck-bootstrap-execution-batch-1",
+      "log/2026-05-16-ck-bootstrap-execution-batch-2"
     ],
     "evolution-layer": [
       "domains/cross-domain/profile-circular-knowledge-evolution-layer-and-brain-self-improvement"
@@ -67941,7 +68245,8 @@
       "domains/cross-domain/profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline"
     ],
     "continuous-research": [
-      "domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current"
+      "domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current",
+      "log/2026-05-16-purge-summary"
     ],
     "focused-assistant-job": [
       "domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current",
@@ -68498,6 +68803,8 @@
       "domains/tools-and-platforms/notebooklm-py-cli",
       "domains/tools-and-platforms/notebooklm",
       "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction",
+      "log/2026-05-16-flagged-pages-gemini-spark",
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14",
       "sources/obsidian-notebooklm/src-claude-notebooklm-content-team"
     ],
     "research-tool": [
@@ -70680,7 +70987,8 @@
       "log/2026-04-23-ram-upgrade-48gb-wsl",
       "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix",
       "log/2026-05-15-research-watch-opus-4-7-source-synthesis-shipped-end-to-end",
-      "log/2026-05-16-ck-bootstrap-execution-batch-1"
+      "log/2026-05-16-ck-bootstrap-execution-batch-1",
+      "log/2026-05-16-ck-bootstrap-execution-batch-2"
     ],
     "poc": [
       "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
@@ -72694,7 +73002,8 @@
       "log/2026-05-08-tier-audit-extension-batch-7-fires-120-141-per-instance-sample-10-pieces"
     ],
     "batch-2": [
-      "log/2026-05-08-tier-audit-extension-batch-2-fires-105-119-10-additional-pieces-classified"
+      "log/2026-05-08-tier-audit-extension-batch-2-fires-105-119-10-additional-pieces-classified",
+      "log/2026-05-16-ck-bootstrap-execution-batch-2"
     ],
     "fires-105-119": [
       "log/2026-05-08-tier-audit-extension-batch-2-fires-105-119-10-additional-pieces-classified"
@@ -72853,7 +73162,8 @@
       "log/2026-05-15-ck-weekly-distillation-surfacings"
     ],
     "pollution-cleanup": [
-      "log/2026-05-16-ck-bootstrap-execution-batch-1"
+      "log/2026-05-16-ck-bootstrap-execution-batch-1",
+      "log/2026-05-16-ck-bootstrap-execution-batch-2"
     ],
     "batch-1": [
       "log/2026-05-16-ck-bootstrap-execution-batch-1",
@@ -72867,6 +73177,64 @@
     ],
     "pile-depile": [
       "log/2026-05-16-ck-bootstrap-pile-depile-batch-1"
+    ],
+    "research-watch": [
+      "log/2026-05-16-flagged-pages-cline-sdk",
+      "log/2026-05-16-flagged-pages-gemini-spark"
+    ],
+    "cline-sdk": [
+      "log/2026-05-16-flagged-pages-cline-sdk",
+      "log/2026-05-16-purge-summary",
+      "sources/tools-integration/src-cline-sdk-open-source-agent-runtime-2026-05-13"
+    ],
+    "flagged-pages": [
+      "log/2026-05-16-flagged-pages-cline-sdk",
+      "log/2026-05-16-flagged-pages-gemini-spark"
+    ],
+    "terminal-bench-2-0": [
+      "log/2026-05-16-flagged-pages-cline-sdk",
+      "sources/tools-integration/src-cline-sdk-open-source-agent-runtime-2026-05-13"
+    ],
+    "claude-opus-4-7": [
+      "log/2026-05-16-flagged-pages-cline-sdk",
+      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16",
+      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16",
+      "sources/tools-integration/src-cline-sdk-open-source-agent-runtime-2026-05-13"
+    ],
+    "follow-up": [
+      "log/2026-05-16-flagged-pages-cline-sdk"
+    ],
+    "frontier-delta-2026-05-16": [
+      "log/2026-05-16-flagged-pages-gemini-spark",
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
+    ],
+    "gemini-spark": [
+      "log/2026-05-16-flagged-pages-gemini-spark",
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
+    ],
+    "gemini-intelligence": [
+      "log/2026-05-16-flagged-pages-gemini-spark",
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
+    ],
+    "agent-runtime": [
+      "log/2026-05-16-flagged-pages-gemini-spark",
+      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02",
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14",
+      "sources/tools-integration/src-cline-sdk-open-source-agent-runtime-2026-05-13"
+    ],
+    "vendor-agent-tier": [
+      "log/2026-05-16-flagged-pages-gemini-spark",
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
+    ],
+    "2026-05-16": [
+      "log/2026-05-16-flagged-pages-gemini-spark",
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
+    ],
+    "purge-summary": [
+      "log/2026-05-16-purge-summary"
+    ],
+    "ephemeral-raws": [
+      "log/2026-05-16-purge-summary"
     ],
     "ck-v3": [
       "log/2026-05-16-strong-handoff-ck-v3-live-cr-ps-still-broken"
@@ -73927,9 +74295,6 @@
     "runtime-security": [
       "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
     ],
-    "agent-runtime": [
-      "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
-    ],
     "policy-as-code": [
       "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
     ],
@@ -74042,6 +74407,7 @@
       "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15",
       "sources/ai-models/src-anthropic-spacex-colossus-claude-code-limits-doubled-2026-05-06",
       "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16",
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14",
       "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05",
       "sources/ai-models/src-gpt-5-5-openai-frontier-2026-04-23",
       "sources/ecosystem-projects/src-openarms-v10-enforcement",
@@ -74064,10 +74430,6 @@
       "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05",
       "sources/ai-models/src-gpt-5-5-openai-frontier-2026-04-23",
       "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
-    ],
-    "claude-opus-4-7": [
-      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16",
-      "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16"
     ],
     "claude-opus-4-6": [
       "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16"
@@ -74189,7 +74551,8 @@
       "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15"
     ],
     "2026-05-14": [
-      "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15"
+      "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15",
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
     ],
     "api-rates": [
       "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15"
@@ -74265,6 +74628,58 @@
     "rigor": [
       "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16"
     ],
+    "gemini": [
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14",
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07",
+      "sources/tools-integration/src-multica-managed-agents-platform",
+      "spine/references/ai-model-provider-harness-decision-matrix-2026"
+    ],
+    "gemini-agent": [
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
+    ],
+    "android": [
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
+    ],
+    "pixel-10": [
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
+    ],
+    "galaxy-s26": [
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
+    ],
+    "multi-step-automation": [
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
+    ],
+    "chrome-auto-browse": [
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
+    ],
+    "personal-intelligence": [
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
+    ],
+    "autofill": [
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
+    ],
+    "rambler": [
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
+    ],
+    "create-my-widget": [
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
+    ],
+    "material-3-expressive": [
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
+    ],
+    "2026-05-12": [
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
+    ],
+    "vision-relevant-agent-runtime": [
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14",
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "pre-io-2026": [
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
+    ],
+    "leak-corroborated": [
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
+    ],
     "gpt-5-5-instant": [
       "sources/ai-models/src-gpt-5-5-instant-chatgpt-default-2026-05-05"
     ],
@@ -74319,6 +74734,7 @@
       "sources/ai-models/src-gpt-5-5-openai-frontier-2026-04-23",
       "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
       "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
+      "sources/tools-integration/src-cline-sdk-open-source-agent-runtime-2026-05-13",
       "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
       "sources/tools-integration/src-multica-managed-agents-platform",
       "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build",
@@ -74702,7 +75118,8 @@
     ],
     "cline": [
       "sources/src-cline-agentic-coding-ide-extension",
-      "sources/tools-integration/src-agentic-coding-harness-landscape-2026"
+      "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
+      "sources/tools-integration/src-cline-sdk-open-source-agent-runtime-2026-05-13"
     ],
     "vs-code-extension": [
       "sources/src-cline-agentic-coding-ide-extension"
@@ -74712,6 +75129,7 @@
     ],
     "multi-provider": [
       "sources/src-cline-agentic-coding-ide-extension",
+      "sources/tools-integration/src-cline-sdk-open-source-agent-runtime-2026-05-13",
       "sources/tools-integration/src-cloudflare-ai-platform-unified-inference-layer-12-providers-automatic-failover-2026-04-16"
     ],
     "ecosystem-comparison": [
@@ -74996,6 +75414,7 @@
     ],
     "open-source": [
       "sources/src-vercel-opensrc-toolkit",
+      "sources/tools-integration/src-cline-sdk-open-source-agent-runtime-2026-05-13",
       "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04",
       "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04",
       "sources/tools-integration/src-opencode-harness-features"
@@ -75010,7 +75429,8 @@
       "sources/src-vercel-opensrc-toolkit"
     ],
     "npm": [
-      "sources/src-vercel-opensrc-toolkit"
+      "sources/src-vercel-opensrc-toolkit",
+      "sources/tools-integration/src-cline-sdk-open-source-agent-runtime-2026-05-13"
     ],
     "crates": [
       "sources/src-vercel-opensrc-toolkit"
@@ -75065,11 +75485,6 @@
     ],
     "google-deepmind": [
       "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
-    ],
-    "gemini": [
-      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07",
-      "sources/tools-integration/src-multica-managed-agents-platform",
-      "spine/references/ai-model-provider-harness-decision-matrix-2026"
     ],
     "gemini-flash": [
       "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
@@ -75151,9 +75566,6 @@
       "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
     ],
     "2025-12-09": [
-      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
-    ],
-    "vision-relevant-agent-runtime": [
       "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
     ],
     "vision-relevant-tools-platforms": [
@@ -75383,6 +75795,7 @@
     ],
     "plugins": [
       "sources/tools-integration/src-claude-code-harness-features",
+      "sources/tools-integration/src-cline-sdk-open-source-agent-runtime-2026-05-13",
       "sources/tools-integration/src-opencode-harness-features"
     ],
     "agent-skills-standard": [
@@ -75455,6 +75868,23 @@
     ],
     "vector-embeddings": [
       "sources/tools-integration/src-claude-os-persistent-memory-brobertsaz"
+    ],
+    "agent-harness": [
+      "sources/tools-integration/src-cline-sdk-open-source-agent-runtime-2026-05-13"
+    ],
+    "droid": [
+      "sources/tools-integration/src-cline-sdk-open-source-agent-runtime-2026-05-13"
+    ],
+    "apache-2-0": [
+      "sources/tools-integration/src-cline-sdk-open-source-agent-runtime-2026-05-13",
+      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
+      "sources/tools-integration/src-multica-managed-agents-platform"
+    ],
+    "layered-architecture": [
+      "sources/tools-integration/src-cline-sdk-open-source-agent-runtime-2026-05-13"
+    ],
+    "browser-compatible": [
+      "sources/tools-integration/src-cline-sdk-open-source-agent-runtime-2026-05-13"
     ],
     "cloudflare": [
       "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17",
@@ -75828,10 +76258,6 @@
     ],
     "paper-grade-evidence": [
       "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
-    ],
-    "apache-2-0": [
-      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
-      "sources/tools-integration/src-multica-managed-agents-platform"
     ],
     "mxfp4": [
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
@@ -77913,6 +78339,19 @@
       ]
     },
     {
+      "target": "Cline SDK Synthesis",
+      "referenced_by": [
+        "research-watch \u2014 Cline SDK 2026-05-13 \u2014 affected pages flagged for update",
+        "purge-summary 2026-05-16 \u2014 Cline SDK ephemeral raws"
+      ]
+    },
+    {
+      "target": "Cline SDK flagged-pages log",
+      "referenced_by": [
+        "purge-summary 2026-05-16 \u2014 Cline SDK ephemeral raws"
+      ]
+    },
+    {
       "target": "Cloudflare Agents Week 2026 Summary",
       "referenced_by": [
         "Synthesis \u2014 Cloudflare AI Platform (Apr 16 2026): Unified Inference Layer for 12+ Providers + 70+ Models with Automatic Failover + Bring-Your-Own-Model via Replicate Cog"
@@ -79399,6 +79838,12 @@
       "target": "Operator directive \u2014 2026-04-25",
       "referenced_by": [
         "2026-04-25 Session Handoff \u2014 Qwen3.6-27B Ingestion Batch + Mission-Critical Spine Update"
+      ]
+    },
+    {
+      "target": "Opus 4.7 surfacing log",
+      "referenced_by": [
+        "research-watch \u2014 Cline SDK 2026-05-13 \u2014 affected pages flagged for update"
       ]
     },
     {
