@@ -221,6 +221,65 @@ projects:
     patterns: {}
     note: "PRE-SFIF-INFRASTRUCTURE. Two pending work streams (future session, NOT this preparation session): (1) Stream 2 — pure SFIF project base (CLAUDE.md, AGENTS.md, methodology layer, Infrastructure tooling, Features modules suricata + polarproxy). (2) Stream 1 — second-brain integration (`tools/setup.py --connect-project <path>` to install MCP entry + gateway/view forwarders + AGENTS.md `## Second Brain Connection` block). Stream 1 depends on Stream 2 Scaffold (AGENTS.md must exist first). See: raw/notes/2026-05-04-prepare-root-ghostproxy-as-sister-type-root-group-operating-system-setup.md and the SFIF rollout epic."
 
+  # ---------------------------------------------------------------------------
+  # Added 2026-05-15 per operator: "its a new sister project."
+  #
+  # selfdef = operator-authored self-defense service for Linux hosts.
+  # Rust workspace (39+ crates) + eBPF (aya). README declares M1-M16 +
+  # AI-machine track shipped; Phase 1 architecture audit closeout complete.
+  #
+  # Per selfdef/README.md the project ships:
+  #   - 9-module catalog (selfdefctl modules apply): detect-host (daemon),
+  #     bridge-l2, suricata, polarproxy, vpn-bridge, integrity-sentinel,
+  #     tetragon, agent-guard, observability
+  #   - 7 collectors: auditd, journald, tetragon, suricata, canary,
+  #     eventstream, eBPF (custom aya)
+  #   - 12 integration crates: ntfy, signal, smtp, twilio, slack, discord,
+  #     wall, pagerduty, loki, opensearch, thehive, write
+  #   - 6 Phase-1 SDDs at docs/sdd/ (all implemented)
+  #   - Operator CLI surface: selfdefctl with init / doctor / events /
+  #     modules / keys / api / rbac / forensics / panic / reload
+  #
+  # Description below is quoted verbatim from selfdef/README.md.
+  # ---------------------------------------------------------------------------
+  selfdef:
+    description: "Self-defense service for Linux hosts (Debian 13+, Ubuntu 24.04+). A multi-layered host detection, deception, and response platform aimed at personal workstations, home servers, public VPSes, and AI-machine hosts running containerised agents."
+    path: ~/selfdef
+    wiki_dir: docs
+    auto_connect: false                  # PENDING operator authorization — use `--connect-project ~/selfdef` to connect explicitly
+    remote:
+      type: github
+      owner: cyberpunk042
+      repo: selfdef
+      default_branch: main
+      url: https://github.com/cyberpunk042/selfdef
+    aliases:
+      - selfdef
+    layout:
+      # PATHS RELATIVE TO wiki_dir (which is `docs` for this project).
+      # `../` escapes upward to selfdef repo root for the Rust workspace /
+      # modules / packaging / rules / bpf / ansible / tests siblings.
+      root_docs: ..                      # README, ARCHITECTURE, SECURITY, CHANGELOG at repo root
+      sdd: sdd                           # Software Design Documents (docs/sdd/)
+      dev_runbooks: dev                  # Operator runbooks (docs/dev/): first-run, doctor, signing, rbac-posture, module-helpers, test-contract, integrations
+      review: review                     # Phase 1 audit findings ledger (docs/review/99-findings-ledger.md)
+      crates: ../crates                  # Rust workspace crates
+      modules: ../modules                # 9-module catalog with install/check/apply scripts
+      rules: ../rules                    # Sigma detection rules + Suricata signatures
+      bpf: ../bpf                        # eBPF programs (aya)
+      selfdef_ebpf: ../selfdef-ebpf      # eBPF build outputs
+      packaging: ../packaging            # systemd units + lib/module-lib.sh (SDD-006)
+      ansible: ../ansible                # Ansible playbooks for fleet deployment
+      tests: ../tests                    # Integration test corpus
+      dashboard: ../dashboard            # PWA dashboard
+      config: ../config                  # Config templates (selfdef.toml.example, modules.toml.example)
+      supply_chain: ../supply-chain      # cargo-vet / supply-chain config
+    queryable_frontmatter: []            # selfdef docs are Markdown without wiki-style YAML frontmatter
+    patterns:
+      sdd: "\\d{3}-.*\\.md"              # SDD numbering: 001-ai-machine-end-to-end.md etc.
+      runbook: ".*\\.md"                 # docs/dev/*.md operator runbooks
+    note: "Operator-authored Rust+eBPF self-defense system. Detect → Correlate → Respond → Defend (per its README): host-level intrusion detection across kernel (Tetragon + custom eBPF), system (auditd, journald), network (Suricata); time-windowed Sigma correlation; active response (lockdown egress, freeze logins, snapshot state, notify, engage deception). Explicit non-goal: offensive action against attackers. Maturity per its own README: M1-M16 + AI-machine track shipped; Phase 1 architecture audit closeout complete; 9-module catalog + 12 integrations + 7 collectors + 6 SDDs (all implemented). Operator-verbatim 2026-05-15: 'its a new sister project.' Cross-project boundary: read-only from this wiki via the standard source-resolver backends (local / gh_api / raw_github)."
+
 # Write policy — this wiki never writes to sister projects via these tools.
 # Cross-project contributions go through each project's own contribution flow.
 # NO TRUNCATION policy: the sister_project tool does not apply default caps

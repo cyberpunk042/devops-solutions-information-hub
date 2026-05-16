@@ -24,45 +24,119 @@ profile: pipeline-synthesis
 
 jobs:
 
-  # ─── Hourly: process top-of-backlog ───────────────────────────────────
+  # ─── Hourly: drain the unsynthesized-raw backlog ──────────────────────
   - name: backlog-process-top
-    enabled: true                # autonomous AI assistant — runs by default; opt OUT only if you specifically want this job silent
-    schedule: "hourly"            # systemd OnCalendar: hourly
+    enabled: true
+    schedule: "hourly"
     trigger:
       type: openclaw-task
       prompt: |
-        Process the top item of the unsynthesized-raw backlog. Scan raw/articles/,
-        raw/transcripts/, raw/papers/, raw/dumps/ for files that have NO
-        corresponding wiki/sources/<domain>/src-*.md page. Pick the OLDEST
-        unsynthesized raw (FIFO discipline). Read it in FULL (Hard Rule 1).
-        Author source-synthesis at wiki/sources/<domain>/src-<slug>.md per
-        template + schema (≥0.25 ratio, all 9 frontmatter fields, required
-        sections). Run pipeline crossref + pipeline post. Verify 0 errors
-        before claiming completion. Budget cap: process 1 raw per hourly tick
-        (avoid backing up the queue with heavy multi-raw batches).
+        Operator-stated job (verbatim, sacrosanct): "Another could be synthesize
+        the ingested information still not at the end of the pipeline...."
 
-        SKIP raw/notes/ files (forbidden_inputs — sacrosanct operator directives).
-    description: "Hourly backlog-FIFO — process the oldest unsynthesized raw. Drains the backlog steadily."
+        This is NOT "process 1 raw and defer the rest." The job is to DRAIN the
+        backlog steadily — process as many raws as you can in a reasonable budget.
+        Single-raw budget-capped processing creates silent-tyranny backlog growth.
 
-  # ─── Morning: daily batch process ─────────────────────────────────────
+        Workflow per tick:
+
+        0. **Operator-directives check (FIRST thing on wake).** Read
+           .assistant/_state/pipeline-synthesis-operator-directives.md (if it
+           exists). NEVER overwrite this file — only append `> [!processed]`
+           markers below directives you handle.
+
+           a. `> [!directive]` callouts NOT already followed by `> [!processed]`.
+              Process WITHIN autonomy (AUTONOMY.md). Surfacing-required ones
+              get a `> [!info]` follow-up. Mark `> [!processed]` when done.
+
+           b. `> [!resolved] Q##` callouts. Don't re-surface these.
+
+           After step 0, proceed with normal backlog drain:
+
+        1. Scan raw/articles/, raw/transcripts/, raw/papers/, raw/dumps/.
+           SKIP raw/notes/ (forbidden_inputs — sacrosanct operator-directive records).
+
+        2. For each raw file, check if a corresponding wiki/sources/<domain>/src-*.md
+           exists (use wiki_search by raw filename slug; check the actual filesystem).
+           Build a set of unsynthesized raws.
+
+        3. Pick the 3-5 OLDEST unsynthesized raws (FIFO discipline).
+
+        4. For EACH selected raw:
+           a. Read it IN FULL (Hard Rule 1; wc -l first; offset reads for >200 lines).
+           b. Determine target domain (ai-models / tools-integration / wiki-methodology / ecosystem-projects).
+           c. Author source-synthesis at wiki/sources/<domain>/src-<slug>.md per template:
+              - 9 required frontmatter fields (title, type=source-synthesis, domain, status, confidence, created, updated, sources, tags)
+              - Summary (≥30 words) + Key Insights + Relationships sections
+              - ≥1 explicit relationship verb to an existing wiki page (BUILDS ON · COMPLEMENTS · RELATES TO · etc.)
+              - ≥0.25 line ratio (page lines / raw lines)
+              - Reference card callout with source URL + ingest date
+
+        5. Run pipeline_crossref to discover additional connections.
+
+        6. Run pipeline_post — 0 errors required. If errors, fix them in your
+           synthesis (don't bypass; don't claim done with errors).
+
+        7. Append one line to .assistant/_state/pipeline-synthesis-inbox.md:
+           "HH:MM | <count> raws synthesized | <count> cross-refs added | pipeline_post status"
+
+        Budget: target 5-10 minutes model time per tick. Larger raws (arxiv
+        papers) may consume the whole budget on one item — that's fine. Smaller
+        articles (3-5K word blogs) should process 3-5 per tick.
+
+        ANTI-PATTERN: writing a wiki/log/ entry that says "I noted N unsynthesized
+        raws, processed 1, deferring the rest." Don't. Either you processed them
+        or you didn't surface that you saw them. The backlog drain rate is the
+        success metric — slower drainage than ingestion is a failure_signal.
+    description: "Hourly backlog drainage — process 3-5 oldest unsynthesized raws end-to-end (no diary-defer)."
+    timeout_seconds: 1200  # 20 min — processing 3-5 raws each ~3-5 min
+
+  # ─── Morning: deep batch drain of yesterday's accumulated backlog ─────
   - name: morning-batch-process
     enabled: true
-    schedule: "*-*-* 07:00:00"    # daily at 07:00 (before morning-scan of Continuous Research)
+    schedule: "*-*-* 07:00:00"
     trigger:
       type: openclaw-task
       prompt: |
-        Daily morning batch. Process raws ingested by Continuous Research
-        Profile during the past 16 hours (since yesterday evening). Targets
-        the freshest batch first (LIFO for newly-fetched, FIFO for the rest
-        of the backlog). Author syntheses + cross-references. Pipeline post.
-        Write a wiki/log/<date>-pipeline-synthesis-morning.md summary:
-          - raws processed (count + slugs)
-          - syntheses authored (count + ratios)
-          - cross-references added (count)
-          - pipeline post status (must be 0 errors)
-          - promotion candidates surfaced (count + slugs)
-          - deduplication candidates surfaced (count + slugs)
-    description: "Daily morning batch — process overnight-fetched raws + summary log."
+        Daily morning batch — drain ALL accumulated unsynthesized raws from the
+        previous 16-24 hours. Hourly ticks process 3-5 raws; this morning batch
+        is the catch-up that ensures the backlog actually shrinks vs grows.
+
+        Workflow:
+
+        1. Scan raw/articles/, raw/transcripts/, raw/papers/, raw/dumps/.
+           SKIP raw/notes/ (forbidden_inputs).
+
+        2. Identify the FRESH batch (mtime within last 16 hours — these are
+           raws Continuous Research fetched overnight) AND any stragglers
+           from the older backlog.
+
+        3. Process the fresh batch FIRST (LIFO for newly-fetched). Process
+           older stragglers after, FIFO. Goal: by end of run, the count of
+           unsynthesized raws older than 24h is 0 or near-0.
+
+        4. For each raw, follow steps 4a-4c from backlog-process-top
+           (read-in-full, author source-synthesis per template, pipeline_crossref).
+
+        5. Run pipeline_post after the batch (not after every single file —
+           batch the validation pass).
+
+        6. Write a wiki/log/<date>-pipeline-synthesis-morning.md summary
+           (this is a session-summary log, NOT a diary-defer log — it
+           reports actual work done, with counts + file paths):
+             - raws processed (count + slugs)
+             - syntheses authored (count + average ratio)
+             - cross-references added (count)
+             - pipeline_post status (must be 0 errors)
+             - promotion candidates surfaced (count + slugs) — to operator-decision-queue.md
+             - deduplication candidates surfaced (count + slugs)
+             - remaining unsynthesized count (target: trending toward 0)
+
+        Budget: target up to 30 minutes model time. If backlog is large, prioritize
+        breadth (synthesize all freshly-fetched raws shallow first) over depth
+        (long synthesis of one item). The hourly ticks fill in depth.
+    description: "Daily morning batch — drains yesterday's accumulated backlog; ensures shrink > growth."
+    timeout_seconds: 2700  # 45 min — large batch drain
 
   # ─── Evening: backlog status report ───────────────────────────────────
   - name: evening-backlog-report
@@ -80,6 +154,7 @@ jobs:
         backlog is growing instead of shrinking, surface as anti-signal in
         operator-decision-queue.md.
     description: "Daily evening backlog metrics — drain rate + anti-signal surfacing."
+    timeout_seconds: 600  # 10 min — metrics + summary log
 
   # ─── Weekly Monday: backlog deep-audit ────────────────────────────────
   - name: start-of-week-backlog-audit
@@ -99,6 +174,7 @@ jobs:
              too thin) — surface as quality-floor candidates (drop or augment)
         Write wiki/log/<date>-pipeline-synthesis-weekly-audit.md.
     description: "Weekly Monday deep-audit — stale / dedup / promotion / schema-failing surfacing."
+    timeout_seconds: 1800  # 30 min — backlog audit work
 
   # ─── Weekly Friday: synthesis output digest ───────────────────────────
   - name: end-of-week-synthesis-digest
@@ -118,6 +194,7 @@ jobs:
         Write to wiki/log/<date>-pipeline-synthesis-weekly-digest.md. Flag any
         anti-signals from Profile.success_criteria.anti_signals_to_watch.
     description: "Weekly Friday digest — synthesis output metrics + anti-signal surfacing."
+    timeout_seconds: 1200  # 20 min — weekly digest
 
   # ─── Monthly: budget audit ────────────────────────────────────────────
   - name: monthly-budget-audit
@@ -132,6 +209,7 @@ jobs:
         synthesis-count value-equivalent. If over hard_stop, alert. Report to
         wiki/log/<date>-pipeline-synthesis-monthly-budget.md.
     description: "Monthly cost/value audit per Profile.success_criteria.measurable_value_per_month."
+    timeout_seconds: 600  # 10 min — monthly audit
 
 # =============================================================================
 # Job-design rules

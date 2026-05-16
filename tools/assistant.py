@@ -138,9 +138,13 @@ def translate_schedule(schedule: str) -> tuple[str, str] | None:
       "hourly"               → ("--every", "1h")
       "daily"                → ("--every", "1d")
       "weekly"               → ("--every", "7d")
+      "every:Xm" / "every:Xs" / "every:Xh" / "every:Xd"
+                             → ("--every", "Xm")    (pass-through interval; openclaw supports e.g. 10m, 1h)
       "*-*-* HH:MM:SS"       → ("--cron", "M H * * *")
       "DOW *-*-* HH:MM:SS"   → ("--cron", "M H * * D")   (Mon/Tue/.../Sun)
       "*-*-DD HH:MM:SS"      → ("--cron", "M H D * *")
+      "first-fire"           → None (intentional skip; bootstrap fires once
+                                     manually via `openclaw cron add --at`)
     """
     s = schedule.strip()
     if s == "hourly":
@@ -149,6 +153,15 @@ def translate_schedule(schedule: str) -> tuple[str, str] | None:
         return ("--every", "1d")
     if s == "weekly":
         return ("--every", "7d")
+    # every:<N>{s|m|h|d}  (interval form — passes through to openclaw --every)
+    m = re.fullmatch(r"every:(\d+)([smhd])", s)
+    if m:
+        return ("--every", f"{m.group(1)}{m.group(2)}")
+    # "first-fire" is intentionally NOT a recurring schedule. The bootstrap
+    # is a one-shot fired manually after install. Return None to skip; the
+    # install caller handles bootstrap firing separately.
+    if s == "first-fire":
+        return None
     # *-*-* HH:MM:SS  (daily at HH:MM)
     m = re.fullmatch(r"\*-\*-\* (\d{2}):(\d{2}):\d{2}", s)
     if m:
@@ -429,9 +442,13 @@ specific success criteria. You wake on heartbeat and on scheduled cron jobs.
 
 1. `IDENTITY.md` (here in workspace) — who you are
 2. `AGENTS.md` (here in workspace) — your system prompt + behavioral discipline
-3. `SOUL.md` (here in workspace) — principles you operate under
-4. `TOOLS.md` (here in workspace) — what you can and cannot do
-5. `HEARTBEAT.md` (here in workspace) — your autonomous schedule + recurring tasks
+3. `WORKFLOW.md` — the structured pipeline contract you MUST follow when doing work
+4. `AUTONOMY.md` — what you decide alone vs what you surface to operator
+5. `LIFECYCLE.md` — raw retention policy (purge ephemeral noise; keep reference)
+6. `SUBAGENTS.md` — declared sub-agent helpers you can dispatch
+7. `SOUL.md` — principles you operate under
+8. `TOOLS.md` — what you can and cannot do
+9. `HEARTBEAT.md` — your autonomous schedule + recurring tasks
 
 ## Your operating environment (workspace_mode = {workspace_mode})
 
@@ -483,6 +500,16 @@ These ALWAYS apply, even when you're firing autonomously from a cron job:
 8. Behave FROM the project, not OVER it
 9. Don't fabricate — investigate via project tools first
 10. `pipeline post` after every wiki change (0 errors required)
+
+## Workflow contract (READ `WORKFLOW.md` IN FULL)
+
+When you do substantive work — finding novelty, processing raws, authoring a
+synthesis — you MUST follow the canonical pipeline declared in `WORKFLOW.md`.
+Each step has a success gate. Each step's artifact must exist before you
+advance. The anti-patterns section names failure modes (diary_defer,
+fabricated_claim, synthesize_from_description, skip_pipeline_post) with their
+detectors — the operator runs `bin/assistant activity` periodically and the
+auditor will flag any of these. You are accountable to that audit.
 """
 
     # ─── SOUL.md ──────────────────────────────────────────────────────────
@@ -634,6 +661,218 @@ ecosystem: this research wiki (the second brain) · OpenArms · OpenFleet · AIC
 - Operator-stated directive → log to `raw/notes/YYYY-MM-DD-*.md` verbatim BEFORE acting
 """
 
+    # ─── WORKFLOW.md ──────────────────────────────────────────────────────
+    workflow = profile.get("workflow", {})
+    pipeline = workflow.get("canonical_pipeline", [])
+    anti_patterns = workflow.get("anti_patterns", [])
+    workflow_md = f"""# WORKFLOW — {name}
+
+The canonical pipeline you MUST follow when doing work. This is a STRUCTURED
+CONTRACT, not optional guidance. Every tick where you do substantive work
+follows these steps in order. Each step is gated by a success criterion.
+
+## Canonical pipeline ({len(pipeline)} steps)
+
+"""
+    for s in pipeline:
+        step_name = s.get("step", "?")
+        purpose = s.get("purpose", "")
+        tools = ", ".join(s.get("tools", [])) if isinstance(s.get("tools"), list) else s.get("tools", "")
+        forbidden = ", ".join(s.get("forbidden_tools", [])) if s.get("forbidden_tools") else ""
+        target = s.get("target", "")
+        output = s.get("output", "")
+        gate = s.get("success_gate", "")
+        workflow_md += f"### {step_name} — {purpose}\n\n"
+        if tools:
+            workflow_md += f"- **Tools:** {tools}\n"
+        if forbidden:
+            workflow_md += f"- **Forbidden tools:** {forbidden}\n"
+        if target:
+            workflow_md += f"- **Target:** `{target}`\n"
+        if output:
+            workflow_md += f"- **Output:** {output}\n"
+        if gate:
+            if isinstance(gate, list):
+                workflow_md += "- **Success gate:**\n"
+                for g in gate:
+                    workflow_md += f"  - {g}\n"
+            else:
+                workflow_md += f"- **Success gate:** {gate}\n"
+        if s.get("schema"):
+            workflow_md += f"- **Schema:** {s['schema']}\n"
+        if s.get("forbidden_inputs"):
+            forb_in = ", ".join(s["forbidden_inputs"]) if isinstance(s["forbidden_inputs"], list) else s["forbidden_inputs"]
+            workflow_md += f"- **Forbidden inputs:** {forb_in}\n"
+        workflow_md += "\n"
+
+    if anti_patterns:
+        workflow_md += "## Anti-patterns (NEVER do these)\n\n"
+        for ap in anti_patterns:
+            workflow_md += f"### {ap.get('name', '?')}\n\n"
+            workflow_md += f"- **Description:** {ap.get('description', '')}\n"
+            workflow_md += f"- **Why forbidden:** {ap.get('why_forbidden', '')}\n"
+            workflow_md += f"- **Detector:** {ap.get('detector', '')}\n\n"
+
+    workflow_md += """## Discipline
+
+- You ALWAYS verify the previous step's artifact exists before advancing
+- You NEVER claim a step complete without inline tool-output evidence
+- If a step's success_gate fails, you root-cause + fix; you do not bypass
+- The operator-stated job is sacrosanct; the workflow exists to deliver that job
+- Diary-defer is silent tyranny — produce real artifacts or report nothing
+"""
+
+    # ─── LIFECYCLE.md (raw retention policy — what survives ingestion) ───
+    lifecycle = knowledge_scope.get("raw_lifecycle", {})
+    lifecycle_md = f"""# LIFECYCLE — {name}
+
+Raw retention policy. Operator 2026-05-15: *"some type of ingested data need to
+purged almost once we have extracted what is relevant. not everything but I
+saw some news stuff and it contains a lot of noise."*
+
+This declares what survives ingestion and what gets purged after the signal
+is extracted. Pipeline Synthesis (or Continuous Research, depending on which
+profile authored the synthesis) is responsible for purging ephemeral raws
+once the source-synthesis page is in place + pipeline_post is clean.
+
+## Retention by raw path
+
+| Path | Retention | Rationale |
+|---|---|---|
+"""
+    for path, spec in lifecycle.get("by_path", {}).items():
+        ret = spec.get("default_retention", "?")
+        rat = spec.get("rationale", "")
+        lifecycle_md += f"| `{path}` | **{ret}** | {rat} |\n"
+    lifecycle_md += "\n## Retention by source domain (used when path-default is `conditional`)\n\n"
+    domain = lifecycle.get("by_domain_hint", {})
+    lifecycle_md += "### Always keep (reference value)\n\n"
+    for d in domain.get("always_keep", []):
+        lifecycle_md += f"- `{d}`\n"
+    lifecycle_md += "\n### Ephemeral news (purge after synthesis)\n\n"
+    for d in domain.get("ephemeral_news", []):
+        lifecycle_md += f"- `{d}`\n"
+    lifecycle_md += f"""
+
+## Purge criteria (ALL must hold)
+
+1. The raw's path/domain matches an `ephemeral` retention
+2. A corresponding `wiki/sources/<domain>/src-<slug>.md` exists
+3. The synthesis page has line-ratio ≥0.25 (signal preserved)
+4. `pipeline_post` in this tick was 0-error
+5. The raw does NOT have `lifecycle: keep` frontmatter (operator override)
+
+## Purge action
+
+- `rm <raw-path>` via Bash
+- Append to `wiki/log/<YYYY-MM-DD>-purge-summary.md` with: purged paths,
+  corresponding synthesis paths, ratios at purge time, rationale per file
+
+## Operator override
+
+To pin a specific raw (prevent purge even if it would otherwise qualify):
+
+```yaml
+---
+lifecycle: keep
+reason: "<why this raw must be retained>"
+---
+```
+
+Add this frontmatter to the raw file. The agent reads it before purge and
+respects the override.
+
+## What NEVER gets purged
+
+- `raw/notes/` — sacrosanct operator verbatim directives. Purge of these is
+  a forbidden_scope action.
+- Any raw the operator has explicitly pinned with `lifecycle: keep`.
+- Anything in `raw/papers/` (academic — long-term reference value).
+"""
+
+    # ─── AUTONOMY.md (what the agent decides alone vs needs operator) ────
+    autonomy = action_surface.get("autonomy_levels", {})
+    promotion = action_surface.get("promotion_policy", {})
+    autonomy_md = f"""# AUTONOMY — {name}
+
+Operator 2026-05-15: *"You do not need my confirmation for the first stages
+of ingestion. if I asked you to ingest its that I selected... once its ready
+we can discuss it and see if and what move forward and then later if and
+what is integrated and how and then later what model and/or pattern or
+principles and so on."*
+
+The autonomy hierarchy: agent runs autonomously through ingestion → synthesis
+→ purge. Promotion to higher tiers (lesson / pattern / decision / principle)
+is operator-only — agent surfaces candidates, agent NEVER acts.
+
+## Full autonomous (do it; no operator confirmation needed)
+
+"""
+    for a in autonomy.get("full_autonomous", []):
+        autonomy_md += f"- {a}\n"
+    autonomy_md += "\n## Surfacing required (write a candidate; do NOT act)\n\nWrite to `wiki/backlog/operator-decision-queue.md` per the format below.\n\n"
+    for a in autonomy.get("surfacing_required", []):
+        autonomy_md += f"- {a}\n"
+    autonomy_md += "\n## Forbidden (never, even if asked in chat)\n\n"
+    for a in autonomy.get("forbidden", []):
+        autonomy_md += f"- {a}\n"
+    autonomy_md += "\n## Promotion candidate format\n\nWhen surfacing a promotion candidate, the entry MUST include:\n\n"
+    for f in promotion.get("candidate_format", []):
+        autonomy_md += f"- {f}\n"
+    autonomy_md += f"""
+
+## Cadence
+
+- **Hourly ticks:** surface promotion candidates the moment you find them; don't batch
+- **End-of-day:** evening report includes "promotion-candidates this day" section
+- **End-of-week:** weekly digest reviews unattended-by-operator candidates older than 7 days
+
+## The four-stage promotion hierarchy (you do NOT act on these)
+
+1. **source-synthesis** (Layer 1) — your output. wiki/sources/<domain>/src-*.md
+2. **validated lesson** (Layer 2) — requires ≥3 convergent sources + operator approval
+3. **pattern / decision** (Layer 3) — operator-authored from convergent lessons
+4. **principle** (Layer 4) — operator-authored from cross-cutting patterns
+
+Your job ends at Layer 1. You SURFACE candidates for Layer 2+ to
+`operator-decision-queue.md`. The operator authors / promotes / integrates
+above Layer 1 — possibly with a future operator-led promotion Profile.
+"""
+
+    # ─── SUBAGENTS.md (declared specialized helpers the main agent dispatches) ─
+    subagents_list = profile.get("subagents", [])
+    subagents_md = f"""# SUBAGENTS — {name}
+
+Operator 2026-05-15: *"AI assistant profile can have sub-agents configs and
+stuff too. like for batch fs search or online search and stuff like that."*
+
+Sub-agents are scoped, bounded helpers you dispatch for specialized tasks.
+Each has a clear PURPOSE, a TIME BUDGET, and an OUTPUT CONTRACT. Use them
+to keep your main session focused while delegating mechanical work.
+
+"""
+    for sa in subagents_list:
+        sa_name = sa.get("name", "?")
+        purpose = sa.get("purpose", "")
+        when_to_use = sa.get("when_to_use", [])
+        invocation = sa.get("invocation_pattern", {})
+        output_contract = sa.get("output_contract", "")
+        subagents_md += f"## `{sa_name}`\n\n"
+        subagents_md += f"**Purpose:** {purpose}\n\n"
+        if when_to_use:
+            subagents_md += "**When to use:**\n\n"
+            for w in when_to_use:
+                subagents_md += f"- {w}\n"
+            subagents_md += "\n"
+        if invocation:
+            subagents_md += f"**Tools:** {', '.join(invocation.get('tools', []))}\n\n"
+            if invocation.get("forbidden_tools"):
+                subagents_md += f"**Forbidden tools:** {', '.join(invocation['forbidden_tools'])}\n\n"
+            subagents_md += f"**Budget:** {invocation.get('budget', 'unspecified')}\n\n"
+        if output_contract:
+            subagents_md += f"**Output contract:** {output_contract}\n\n"
+        subagents_md += "---\n\n"
+
     # ─── Write all files ──────────────────────────────────────────────────
     files = {
         "IDENTITY.md": identity_md,
@@ -643,6 +882,10 @@ ecosystem: this research wiki (the second brain) · OpenArms · OpenFleet · AIC
         "TOOLS.md": tools_md,
         "HEARTBEAT.md": heartbeat_md,
         "USER.md": user_md,
+        "WORKFLOW.md": workflow_md,
+        "LIFECYCLE.md": lifecycle_md,
+        "AUTONOMY.md": autonomy_md,
+        "SUBAGENTS.md": subagents_md,
     }
     for fname, content in files.items():
         (workspace_path / fname).write_text(content)
@@ -914,6 +1157,41 @@ def cmd_install(args: argparse.Namespace) -> int:
             else:
                 warn(f"auth: {message}")
 
+    # 3c. Auto-scale gateway concurrency based on profile count
+    if not args.no_openclaw and have("openclaw") and not args.dry_run:
+        stage("[3c/6] Auto-scale gateway concurrency for installed profiles")
+        n_profiles = max(1, len(list_profiles()))
+        # Heuristic: agents.maxConcurrent ≈ 8 + 4 per profile (covers 3 profiles + global cron + main + headroom)
+        # subagents.maxConcurrent ≈ 2× agents (each cron task may spawn 1-2 subagent helpers)
+        desired_agents = max(16, 8 + n_profiles * 4)
+        desired_subagents = desired_agents * 2
+        proc = run(["openclaw", "config", "get", "agents.defaults.maxConcurrent"], check=False)
+        try:
+            current_agents = int(proc.stdout.strip()) if proc.returncode == 0 else 4
+        except ValueError:
+            current_agents = 4
+        proc = run(["openclaw", "config", "get", "agents.defaults.subagents.maxConcurrent"], check=False)
+        try:
+            current_subagents = int(proc.stdout.strip()) if proc.returncode == 0 else 8
+        except ValueError:
+            current_subagents = 8
+        bumped = False
+        if current_agents < desired_agents:
+            run(["openclaw", "config", "set", "agents.defaults.maxConcurrent", str(desired_agents)], check=False)
+            ok(f"agents.maxConcurrent: {current_agents} → {desired_agents} ({n_profiles} profile(s) × headroom)")
+            bumped = True
+        else:
+            info(f"agents.maxConcurrent: {current_agents} already ≥ desired {desired_agents}")
+        if current_subagents < desired_subagents:
+            run(["openclaw", "config", "set", "agents.defaults.subagents.maxConcurrent", str(desired_subagents)], check=False)
+            ok(f"subagents.maxConcurrent: {current_subagents} → {desired_subagents}")
+            bumped = True
+        else:
+            info(f"subagents.maxConcurrent: {current_subagents} already ≥ desired {desired_subagents}")
+        if bumped and have("systemctl"):
+            run(["systemctl", "--user", "restart", "openclaw-gateway"], check=False)
+            ok("openclaw-gateway restarted to pick up new concurrency limits")
+
     # 3b. Wire project's MCP server (this project's wiki tools — 28 tools)
     if not args.no_mcp and have("openclaw"):
         stage("[3b/6] Wire project MCP server (`openclaw mcp set wiki-llm`)")
@@ -997,6 +1275,7 @@ def cmd_install(args: argparse.Namespace) -> int:
                 warn(f"  - {j['name']}: unrecognized schedule '{schedule}' — skipping (translate manually with `openclaw cron add ...`)")
                 continue
             flag, value = translated
+            timeout_seconds = int(j.get("timeout_seconds", 900))  # default 15 min if not specified
             cmd = [
                 "openclaw", "cron", "add",
                 "--name", job_name,
@@ -1007,7 +1286,17 @@ def cmd_install(args: argparse.Namespace) -> int:
                 "--session", "isolated",     # cron-driven runs use isolated sessions, not main
                 "--expect-final",            # wait for agent response
                 "--best-effort-deliver",     # do not fail the job if delivery channel is unavailable
+                "--timeout", str(timeout_seconds * 1000),     # ms — overall job timeout
+                "--timeout-seconds", str(timeout_seconds),    # s — agent-job-specific timeout
             ]
+            # Stagger window — spreads firings across the hour so concurrent profile + global
+            # cron loads don't pile up at the top of the hour. Only valid for `--cron` schedules
+            # (NOT `--every`); openclaw rejects --stagger on --every jobs.
+            if flag == "--cron":
+                profile_count = max(1, len(list_profiles()))
+                stagger_minutes = min(30, max(5, profile_count * 5))  # 5 min per profile, capped at 30
+                stagger = j.get("stagger", f"{stagger_minutes}m")
+                cmd.extend(["--stagger", stagger])
             if not enabled_in_yaml:
                 cmd.append("--disabled")
             info(f"  - {job_name}: {schedule} → {flag} {value}  ({'enabled' if enabled_in_yaml else 'disabled'})")
@@ -1412,22 +1701,87 @@ def cmd_surfaces(args: argparse.Namespace) -> int:
 
 
 def cmd_uninstall(args: argparse.Namespace) -> int:
+    """Reverse install completely. Idempotent — leaves nothing per-profile behind in
+    openclaw gateway / openclaw agent state / systemd / .assistant/_state.
+
+    Order matters: cron jobs (gateway-side) → `openclaw agents delete --force`
+    (canonical prune of workspace + state + registry) → manual fallback for
+    leftover state from prior broken uninstalls → systemd → .assistant/_state.
+    Profile YAML / vendor configs in .assistant/ are PRESERVED — operator
+    source-of-truth.
+    """
     name = args.profile
     stage(f"Uninstall {name} (preserves Profile YAML + vendor configs)")
     # Determine workspace_mode from Profile (need it to decide whether to remove worktree/clone)
     profile = load_yaml(profile_path(name)) if profile_path(name).exists() else {}
     ws_mode = profile.get("workspace_mode", "shared")
-    # Remove from openclaw config
+
+    # ─── 1. Remove per-profile cron jobs from openclaw gateway ─────────────
+    # Mirrors install-time cleanup. Find every gateway job whose agentId matches
+    # OR whose name starts with "<profile>-" (canonical install-time namespacing).
+    if have("openclaw"):
+        proc = openclaw_run(["openclaw", "cron", "list", "--json"])
+        try:
+            data = json.loads(proc.stdout) if proc.returncode == 0 and proc.stdout.strip() else {}
+            to_remove = []
+            for entry in data.get("jobs", []):
+                jname = entry.get("name") or entry.get("jobName") or ""
+                jaid = entry.get("agentId") or ""
+                jid = entry.get("id") or entry.get("jobId")
+                if not jid:
+                    continue
+                if jaid == name or jname.startswith(f"{name}-"):
+                    to_remove.append((jname, jid))
+            if to_remove:
+                info(f"Removing {len(to_remove)} cron job(s) owned by '{name}' from gateway")
+                for jn, jid in to_remove:
+                    proc_rm = openclaw_run(["openclaw", "cron", "rm", jid])
+                    if proc_rm.returncode == 0:
+                        info(f"  - removed: {jn} (id={jid})")
+                    else:
+                        warn(f"  - rm failed for {jn} (id={jid}): {proc_rm.stderr.strip()[:120]}")
+                ok(f"Removed {len(to_remove)} cron job(s) for '{name}'")
+            else:
+                info(f"No cron jobs registered for '{name}' in gateway (already clean)")
+        except Exception as e:
+            warn(f"Could not parse cron list (skipping cron cleanup): {e}")
+    else:
+        info("openclaw CLI not on PATH — skipping cron cleanup")
+
+    # ─── 2. Delete agent via `openclaw agents delete --force` (canonical) ──
+    # OpenClaw documents `agents delete` as "Delete an agent and prune
+    # workspace/state". MUST run BEFORE we touch openclaw.json directly,
+    # otherwise the CLI says "not found" and skips workspace/state pruning.
+    # This is what makes uninstall actually clean — prior versions edited
+    # the JSON first and left ~/.openclaw/agents/<name>/ orphaned on disk.
+    agent_dir = Path.home() / ".openclaw" / "agents" / name
+    if have("openclaw"):
+        proc = openclaw_run(["openclaw", "agents", "delete", name, "--force"])
+        if proc.returncode == 0:
+            ok(f"openclaw agents delete --force: pruned workspace + state + registry for '{name}'")
+        else:
+            stderr = (proc.stderr or "").strip()
+            info(f"openclaw agents delete: {stderr[:160] or '(agent not registered)'} — running manual fallback")
+
+    # ─── 3. Manual fallback cleanup (idempotent — runs regardless) ─────────
+    # Belt-and-suspenders: if `openclaw agents delete` already cleaned, these
+    # are no-ops. Cleans orphaned state from prior broken uninstalls.
     cfg = load_openclaw_config()
     agents = cfg.get("agents", {}).get("list", [])
     before = len(agents)
     cfg["agents"]["list"] = [a for a in agents if a.get("id") != name]
     if len(cfg["agents"]["list"]) < before:
         save_openclaw_config(cfg)
-        ok(f"Removed agent entry from {OPENCLAW_CONFIG}")
-    else:
-        info("Agent entry not present in OpenClaw config")
-    # Disable + remove systemd unit
+        ok(f"Removed leftover agent entry from {OPENCLAW_CONFIG}")
+    if agent_dir.exists():
+        info(f"Removing leftover agent dir at {agent_dir}")
+        shutil.rmtree(agent_dir, ignore_errors=True)
+        if agent_dir.exists():
+            warn(f"  could not fully remove {agent_dir} (check perms)")
+        else:
+            ok(f"Removed {agent_dir}")
+
+    # ─── 4. Disable + remove systemd unit ──────────────────────────────────
     unit = f"assistant-{name}"
     if have("systemctl"):
         run(["systemctl", "--user", "stop", unit], check=False)
@@ -1437,29 +1791,605 @@ def cmd_uninstall(args: argparse.Namespace) -> int:
         unit_file.unlink()
         ok(f"Removed {unit_file}")
         run(["systemctl", "--user", "daemon-reload"], check=False)
-    # Workspace cleanup — only for non-shared modes (shared mode = project folder, NEVER delete)
-    if ws_mode == "shared":
-        info("workspace_mode=shared — project folder is the workspace; NOT touching it")
-    elif ws_mode == "worktree":
+
+    # ─── 5. Remove .assistant/_state/<profile>-*.md ────────────────────────
+    # Operator-directives + agent inbox: per-profile runtime scratch, NOT
+    # source-of-truth. Should not persist after uninstall.
+    state_dir = ASSISTANT_DIR / "_state"
+    if state_dir.exists():
+        state_files = list(state_dir.glob(f"{name}-*.md"))
+        if state_files:
+            info(f"Removing {len(state_files)} state file(s) from .assistant/_state/")
+            for f in state_files:
+                f.unlink()
+                info(f"  - removed: {f.relative_to(PROJECT_ROOT)}")
+            ok(f"Cleaned .assistant/_state/{name}-*.md")
+
+    # ─── 6. Worktree-mode workspace cleanup (legacy --remove-workspace flag) ─
+    # For shared mode the project folder IS the workspace — never touched.
+    # For worktree/own-workspace, the isolated workspace at compute_workspace_path
+    # is OUTSIDE the agent_dir handled above; only remove if flag set.
+    if ws_mode == "worktree":
         ws_path = compute_workspace_path(name, ws_mode)
-        if ws_path.exists():
-            if args.remove_workspace:
-                info(f"Removing git worktree at {ws_path}")
-                run(["git", "-C", str(PROJECT_ROOT), "worktree", "remove", "--force", str(ws_path)], check=False)
-                ok(f"git worktree removed")
-            else:
-                info(f"worktree preserved at {ws_path} (use --remove-workspace to delete)")
+        if ws_path.exists() and args.remove_workspace:
+            info(f"Removing git worktree at {ws_path}")
+            run(["git", "-C", str(PROJECT_ROOT), "worktree", "remove", "--force", str(ws_path)], check=False)
     elif ws_mode == "own-workspace":
         ws_path = compute_workspace_path(name, ws_mode)
-        if ws_path.exists():
-            if args.remove_workspace:
-                info(f"Removing own-workspace clone at {ws_path}")
-                shutil.rmtree(ws_path)
-                ok(f"clone removed")
-            else:
-                info(f"clone preserved at {ws_path} (use --remove-workspace to delete)")
+        if ws_path.exists() and args.remove_workspace:
+            info(f"Removing own-workspace clone at {ws_path}")
+            shutil.rmtree(ws_path, ignore_errors=True)
+
     info("Profile YAML + vendor configs preserved at .assistant/ (not deleted)")
     return 0
+
+
+def _load_lifecycle_policy() -> dict:
+    """Merge raw_lifecycle from all installed Profile YAMLs.
+
+    Returns {by_path: {path: {default_retention, rationale}}, by_domain_hint: {...}}.
+    Used by `bin/assistant raw list` and the purge-dry-run command.
+    """
+    merged = {"by_path": {}, "by_domain_hint": {"always_keep": [], "ephemeral_news": []}}
+    for name in list_profiles():
+        profile = load_yaml(profile_path(name))
+        lc = (profile.get("knowledge_scope") or {}).get("raw_lifecycle", {})
+        for p, spec in lc.get("by_path", {}).items():
+            # Last-write-wins is fine; profiles should agree on these
+            merged["by_path"][p] = spec
+        domain = lc.get("by_domain_hint", {})
+        for d in domain.get("always_keep", []):
+            if d not in merged["by_domain_hint"]["always_keep"]:
+                merged["by_domain_hint"]["always_keep"].append(d)
+        for d in domain.get("ephemeral_news", []):
+            if d not in merged["by_domain_hint"]["ephemeral_news"]:
+                merged["by_domain_hint"]["ephemeral_news"].append(d)
+    return merged
+
+
+def _classify_raw(raw_path: Path, policy: dict) -> tuple[str, str]:
+    """Classify a raw file's lifecycle status. Returns (status, rationale).
+
+    Status one of: ephemeral · permanent · conditional · pinned · forbidden.
+    """
+    # Operator override: `lifecycle: keep` frontmatter
+    try:
+        text = raw_path.read_text(errors="ignore")[:2000]
+        if text.startswith("---") and "\nlifecycle: keep" in text:
+            return ("pinned", "operator override: `lifecycle: keep` frontmatter")
+    except Exception:
+        pass
+    # raw/notes/ is sacrosanct
+    rel = str(raw_path.relative_to(PROJECT_ROOT))
+    if rel.startswith("raw/notes/"):
+        return ("forbidden", "raw/notes/ is sacrosanct — NEVER purge")
+    # Match by_path
+    for prefix, spec in policy.get("by_path", {}).items():
+        if rel.startswith(prefix.rstrip("/") + "/") or rel == prefix.rstrip("/"):
+            ret = spec.get("default_retention", "conditional")
+            rat = spec.get("rationale", "")
+            return (ret, rat)
+    return ("conditional", "no matching path policy; conditional by default")
+
+
+def _has_synthesis(raw_path: Path) -> tuple[bool, str | None]:
+    """Check whether a corresponding wiki/sources/<domain>/src-<slug>.md exists.
+
+    Authoritative source: synthesis page frontmatter declares `sources: - file: raw/<path>`.
+    Once `bin/assistant retroactive link-sources` has run, this matches accurately.
+
+    Fallback heuristic: slug-overlap match (used for raws without frontmatter linkage
+    yet — conservative; may produce false negatives, which is safe for purge).
+    """
+    # 1. Authoritative: frontmatter linkage
+    via_fm = _find_synthesis_for_raw_via_frontmatter(raw_path)
+    if via_fm:
+        return (True, str(via_fm.relative_to(PROJECT_ROOT)))
+    # 2. Slug-overlap fallback
+    slug = raw_path.stem
+    candidates = [slug, slug.replace("_", "-"), slug.lower()]
+    for c in candidates:
+        for match in (PROJECT_ROOT / "wiki" / "sources").rglob(f"src-*{c[:30]}*.md"):
+            return (True, str(match.relative_to(PROJECT_ROOT)))
+    parts = slug.replace("_", "-").split("-")
+    if len(parts) >= 3:
+        keyword = "-".join(parts[:3])
+        for match in (PROJECT_ROOT / "wiki" / "sources").rglob(f"src-*{keyword}*.md"):
+            return (True, str(match.relative_to(PROJECT_ROOT)))
+    return (False, None)
+
+
+def cmd_raw(args: argparse.Namespace) -> int:
+    """Manage raw/ lifecycle: list / pin / unpin / purge-dry-run / purge-execute."""
+    action = args.action
+    policy = _load_lifecycle_policy()
+    if action == "list":
+        stage("Raw lifecycle inventory")
+        filter_ret = getattr(args, "retention", None)
+        raw_dirs = ["raw/articles", "raw/papers", "raw/transcripts", "raw/dumps", "raw/notes"]
+        groups: dict[str, list] = {}
+        for d in raw_dirs:
+            full = PROJECT_ROOT / d
+            if not full.exists():
+                continue
+            for p in sorted(full.glob("*.md")):
+                status, rationale = _classify_raw(p, policy)
+                has_synth, synth_path = _has_synthesis(p)
+                groups.setdefault(d, []).append((p, status, rationale, has_synth, synth_path))
+        for d, items in groups.items():
+            print()
+            print(f"  {BOLD}{d}/{RESET} — {len(items)} file(s)")
+            for p, status, rationale, has_synth, synth_path in items:
+                if filter_ret and status != filter_ret:
+                    continue
+                rel = p.relative_to(PROJECT_ROOT / d)
+                size_kb = p.stat().st_size // 1024
+                color = {
+                    "ephemeral": YELLOW,
+                    "permanent": GREEN,
+                    "conditional": DIM,
+                    "pinned": GREEN,
+                    "forbidden": RED,
+                }.get(status, "")
+                synth_mark = f"{GREEN}✓ synthesis{RESET}" if has_synth else f"{DIM}— no synthesis{RESET}"
+                purge_mark = ""
+                if status == "ephemeral" and has_synth:
+                    purge_mark = f" {YELLOW}→ purge-eligible{RESET}"
+                elif status == "pinned":
+                    purge_mark = f" {GREEN}→ operator-pinned{RESET}"
+                elif status == "forbidden":
+                    purge_mark = f" {RED}→ never-purge{RESET}"
+                print(f"    {color}● {status}{RESET} {rel} ({size_kb}KB) · {synth_mark}{purge_mark}")
+        return 0
+    if action == "pin":
+        raw_path = PROJECT_ROOT / args.path
+        if not raw_path.exists():
+            err(f"raw file not found: {raw_path}")
+            return 1
+        reason = args.reason or "operator override"
+        text = raw_path.read_text()
+        if text.startswith("---"):
+            # Has frontmatter — inject lifecycle key
+            lines = text.splitlines()
+            end = next((i for i, l in enumerate(lines[1:], start=1) if l == "---"), -1)
+            if end > 0:
+                lines.insert(end, f"lifecycle: keep")
+                lines.insert(end + 1, f"keep_reason: \"{reason}\"")
+                raw_path.write_text("\n".join(lines) + "\n")
+                ok(f"pinned: {args.path} (reason: {reason})")
+                return 0
+        # No frontmatter — prepend one
+        new_text = f"---\nlifecycle: keep\nkeep_reason: \"{reason}\"\n---\n\n" + text
+        raw_path.write_text(new_text)
+        ok(f"pinned: {args.path} (reason: {reason})")
+        return 0
+    if action == "unpin":
+        raw_path = PROJECT_ROOT / args.path
+        if not raw_path.exists():
+            err(f"raw file not found: {raw_path}")
+            return 1
+        text = raw_path.read_text()
+        if not text.startswith("---"):
+            info(f"{args.path}: no frontmatter; nothing to unpin")
+            return 0
+        new_lines = [l for l in text.splitlines() if not (l.startswith("lifecycle:") or l.startswith("keep_reason:"))]
+        raw_path.write_text("\n".join(new_lines) + "\n")
+        ok(f"unpinned: {args.path}")
+        return 0
+    if action in ("purge-dry-run", "purge-execute"):
+        dry = (action == "purge-dry-run")
+        stage("Purge {} (raws meeting ephemeral + has-synthesis criteria)".format("DRY RUN" if dry else "EXECUTE"))
+        candidates = []
+        for d in ["raw/articles", "raw/transcripts", "raw/dumps"]:
+            full = PROJECT_ROOT / d
+            if not full.exists():
+                continue
+            for p in full.glob("*.md"):
+                status, _ = _classify_raw(p, policy)
+                if status not in ("ephemeral",):
+                    continue
+                has_synth, synth_path = _has_synthesis(p)
+                if not has_synth:
+                    continue
+                candidates.append((p, synth_path))
+        if not candidates:
+            info("  no purge candidates (need ephemeral + has-synthesis + no pin)")
+            return 0
+        for p, synth_path in candidates:
+            rel = str(p.relative_to(PROJECT_ROOT))
+            print(f"  {YELLOW}● purge{RESET} {rel}")
+            print(f"     {DIM}signal preserved at: {synth_path}{RESET}")
+            if not dry:
+                p.unlink()
+        if dry:
+            info(f"\nDRY RUN — {len(candidates)} files would be purged. Run with `purge-execute` to actually delete.")
+        else:
+            ok(f"purged {len(candidates)} raws")
+        return 0
+    err(f"unknown raw action: {action}")
+    return 1
+
+
+def _extract_synthesis_sources(synth_path: Path) -> list[dict]:
+    """Parse a wiki/sources/src-*.md page's frontmatter, return its sources list."""
+    if not synth_path.exists():
+        return []
+    text = synth_path.read_text(errors="ignore")
+    if not text.startswith("---"):
+        return []
+    end = text.find("\n---", 4)
+    if end < 0:
+        return []
+    fm = text[4:end]
+    try:
+        import yaml
+        data = yaml.safe_load(fm) or {}
+        return data.get("sources") or []
+    except Exception:
+        return []
+
+
+def _find_synthesis_for_raw_via_frontmatter(raw_path: Path) -> Path | None:
+    """Scan wiki/sources/ for any synthesis page that declares `sources: - file: <raw>`.
+
+    This is the ACCURATE replacement for the slug-based _has_synthesis heuristic
+    once retroactive link-sources has backfilled the frontmatter.
+    """
+    rel = str(raw_path.relative_to(PROJECT_ROOT))
+    for synth in (PROJECT_ROOT / "wiki" / "sources").rglob("src-*.md"):
+        sources = _extract_synthesis_sources(synth)
+        for s in sources:
+            if isinstance(s, dict) and s.get("file") == rel:
+                return synth
+    return None
+
+
+def _operator_directives_path(profile: str) -> Path:
+    """Operator-write-only file the agent reads on wake (step 0).
+
+    Operator-decision-queue.md is the AGENT'S append surface — it can be
+    rewritten by the agent during a tick, which would clobber operator writes
+    (race condition observed 2026-05-15). This separate file is operator-write,
+    agent-read-only; the agent appends `> [!processed]` markers under each
+    directive it handles, but never replaces the file body.
+    """
+    state_dir = ASSISTANT_DIR / "_state"
+    state_dir.mkdir(parents=True, exist_ok=True)
+    return state_dir / f"{profile}-operator-directives.md"
+
+
+def _ensure_directives_file_header(path: Path, profile: str) -> None:
+    if path.exists():
+        return
+    header = f"""# Operator directives for {profile}
+
+This file is the operator-write surface for instructing the agent.
+The agent reads it on every wake (workflow step 0) and processes unmarked
+directives within its autonomy bounds (see AUTONOMY.md).
+
+**Format:** each directive is a `> [!directive]` callout. The agent appends
+a `> [!processed]` callout immediately below each directive it handles, with
+a one-line summary of what was done (or surfaced if out-of-autonomy). The
+agent NEVER deletes directives or rewrites this file's body — it only
+appends `> [!processed]` markers.
+
+**Operator commands:**
+- `bin/assistant directive {profile} "<text>"` — inject a directive
+- `bin/assistant resolve <Q##> <verb> "<rationale>"` — resolve a promotion candidate
+
+---
+
+"""
+    path.write_text(header)
+    path.chmod(0o644)
+
+
+def cmd_directive(args: argparse.Namespace) -> int:
+    """Inject an operator directive that the agent reads on next wake."""
+    profile = args.profile
+    text = args.text
+    if not text:
+        err("directive text required: bin/assistant directive <profile> \"<text>\"")
+        return 1
+    path = _operator_directives_path(profile)
+    _ensure_directives_file_header(path, profile)
+    import datetime
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M ET")
+    callout = (
+        f"\n> [!directive] operator directive ({timestamp})\n"
+        f">\n"
+        f"> {text}\n"
+        f">\n"
+        f"> Operator: {os.environ.get('USER', 'operator')} · injected via `bin/assistant directive`\n"
+    )
+    with open(path, "a") as f:
+        f.write(callout)
+    ok(f"directive injected at {path.relative_to(PROJECT_ROOT)}")
+    info(f"agent '{profile}' will read this on next wake (workflow step 0)")
+    info(f"or fire immediately: bin/assistant manage --action fire --profile {profile} --job <job-name>")
+    return 0
+
+
+def cmd_resolve(args: argparse.Namespace) -> int:
+    """Mark a promotion candidate (Q##) as decided in the agent's directives file."""
+    qn = args.qn
+    verb = args.verb
+    rationale = args.rationale or ""
+    # Resolutions go to BOTH continuous-research and pipeline-synthesis directives files
+    # so whichever profile surfaced the question knows the operator decided.
+    import datetime
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M ET")
+    callout = (
+        f"\n> [!resolved] Q{qn} — operator decision: **{verb}** ({timestamp})\n"
+        f">\n"
+        f"> {rationale or '(no rationale provided)'}\n"
+        f">\n"
+        f"> Resolved via `bin/assistant resolve {qn} {verb}`. Agent skips this on subsequent surfacings.\n"
+    )
+    profiles_touched = []
+    for profile in list_profiles():
+        path = _operator_directives_path(profile)
+        _ensure_directives_file_header(path, profile)
+        with open(path, "a") as f:
+            f.write(callout)
+        profiles_touched.append(profile)
+    ok(f"resolved Q{qn} as `{verb}` for {len(profiles_touched)} profile(s)")
+    info(f"agents will skip this entry on subsequent surfacings")
+    return 0
+
+
+def cmd_retroactive(args: argparse.Namespace) -> int:
+    """Apply newly-defined rules to existing files — retroactive sweeps.
+
+    Each rule the system has should also have a way to apply it to state that
+    existed before the rule. Categories:
+
+      - link-sources    : backfill raw↔synthesis frontmatter linkage
+      - purge-stale-raws: apply lifecycle policy retroactively (with age filter)
+      - surface-promotions: agent-fired sweep of wiki/sources/ for promotion candidates
+      - audit-pseudo-work: scan past wiki/log/ for diary-defer / silent-tyranny patterns
+    """
+    action = args.action
+
+    if action == "link-sources":
+        stage("Retroactive — backfill raw↔synthesis frontmatter linkage")
+        # Strategy: for each raw, find its synthesis via slug heuristic; if found and the
+        # synthesis lacks a `file: raw/<path>` entry, propose adding it (dry-run by default).
+        dry = not getattr(args, "execute", False)
+        proposed: list[tuple[Path, Path]] = []
+        for d in ["raw/articles", "raw/papers", "raw/transcripts", "raw/dumps"]:
+            full = PROJECT_ROOT / d
+            if not full.exists():
+                continue
+            for raw_path in full.glob("*.md"):
+                # Skip if already accurately linked
+                if _find_synthesis_for_raw_via_frontmatter(raw_path):
+                    continue
+                # Use slug heuristic to find candidate
+                has_synth, synth_path_str = _has_synthesis(raw_path)
+                if not has_synth or not synth_path_str:
+                    continue
+                synth_path = PROJECT_ROOT / synth_path_str
+                proposed.append((raw_path, synth_path))
+        if not proposed:
+            ok("All syntheses already have accurate file: linkage (or no slug matches found).")
+            return 0
+        ok(f"Proposed {len(proposed)} linkage backfill(s) {'(DRY RUN)' if dry else '(EXECUTE)'}")
+        applied = 0
+        for raw_path, synth_path in proposed:
+            raw_rel = str(raw_path.relative_to(PROJECT_ROOT))
+            synth_rel = str(synth_path.relative_to(PROJECT_ROOT))
+            print(f"  {DIM}link{RESET} {synth_rel} ← {raw_rel}")
+            if dry:
+                continue
+            # Read synth, parse frontmatter, add file: entry if not present
+            try:
+                text = synth_path.read_text()
+                if not text.startswith("---"):
+                    warn(f"    no frontmatter on {synth_rel}; skipping")
+                    continue
+                end = text.find("\n---", 4)
+                if end < 0:
+                    warn(f"    malformed frontmatter on {synth_rel}; skipping")
+                    continue
+                fm_str = text[4:end]
+                body = text[end+4:]
+                import yaml
+                data = yaml.safe_load(fm_str) or {}
+                sources = data.get("sources") or []
+                # Check if already has this file entry
+                already = any(isinstance(s, dict) and s.get("file") == raw_rel for s in sources)
+                if already:
+                    continue
+                # Append the linkage
+                new_entry = {"id": f"retro-link-{Path(raw_rel).stem[:30]}", "type": "file", "file": raw_rel,
+                             "description": "Backfilled by `bin/assistant retroactive link-sources`"}
+                sources.append(new_entry)
+                data["sources"] = sources
+                new_fm = yaml.dump(data, sort_keys=False, allow_unicode=True).strip()
+                synth_path.write_text(f"---\n{new_fm}\n---\n{body}")
+                applied += 1
+                ok(f"    wrote linkage to {synth_rel}")
+            except Exception as e:
+                warn(f"    failed to write linkage for {synth_rel}: {e}")
+        if dry:
+            info(f"\nDRY RUN — no files modified. Run `bin/assistant retroactive link-sources --execute` to apply.")
+        else:
+            ok(f"Applied {applied}/{len(proposed)} linkage backfills.")
+        return 0
+
+    if action == "purge-stale-raws":
+        stage("Retroactive — purge stale ephemeral raws with synthesis")
+        older_than_days = getattr(args, "older_than", 0) or 0
+        execute = getattr(args, "execute", False)
+        policy = _load_lifecycle_policy()
+        import time
+        cutoff = time.time() - older_than_days * 86400 if older_than_days else float("inf")
+        candidates = []
+        for d in ["raw/articles", "raw/transcripts", "raw/dumps"]:
+            full = PROJECT_ROOT / d
+            if not full.exists():
+                continue
+            for p in full.glob("*.md"):
+                status, _ = _classify_raw(p, policy)
+                if status != "ephemeral":
+                    continue
+                # Use BOTH heuristic and frontmatter linkage
+                if not (_has_synthesis(p)[0] or _find_synthesis_for_raw_via_frontmatter(p)):
+                    continue
+                # Apply age filter (negative = always, positive = only files older than N days)
+                if older_than_days and p.stat().st_mtime > cutoff:
+                    continue
+                candidates.append(p)
+        if not candidates:
+            ok(f"No purge candidates matching filter (older-than: {older_than_days}d).")
+            return 0
+        ok(f"Found {len(candidates)} stale ephemeral raws with synthesis {'(EXECUTE)' if execute else '(DRY RUN)'}")
+        import time as _t
+        for p in candidates:
+            age_days = int((_t.time() - p.stat().st_mtime) / 86400)
+            rel = str(p.relative_to(PROJECT_ROOT))
+            print(f"  {YELLOW}purge{RESET} {rel} ({age_days}d old)")
+            if execute:
+                p.unlink()
+        if not execute:
+            info(f"\nDRY RUN — run `bin/assistant retroactive purge-stale-raws --execute [--older-than N]` to delete.")
+        else:
+            ok(f"Purged {len(candidates)} stale raws.")
+        return 0
+
+    if action == "surface-promotions":
+        stage("Retroactive — fire agent sweep for promotion candidates across existing wiki/sources/")
+        # Fire a one-off agent turn directing the agent to do a retroactive sweep
+        if not have("openclaw"):
+            err("openclaw not on PATH")
+            return 1
+        profile = getattr(args, "profile", "continuous-research") or "continuous-research"
+        message = (
+            "RETROACTIVE SWEEP — promotion-candidate audit.\n\n"
+            "Scan wiki/sources/ai-models/, wiki/sources/tools-integration/, wiki/sources/wiki-methodology/, "
+            "wiki/sources/ecosystem-projects/ for source-synthesis pages authored over the past N weeks.\n\n"
+            "For each, evaluate against promotion-candidate criteria (per AUTONOMY.md):\n"
+            "  - ≥3 convergent existing wiki sources support a generalizable claim\n"
+            "  - OR a strategic shift is implied (vendor change, model tier shift, architectural decision)\n"
+            "  - OR an existing decision page needs re-opening\n\n"
+            "Use wiki_search to find convergences. Use wiki_read_page to read existing related content.\n"
+            "Use convergence_scout subagent if available.\n\n"
+            "Surface candidates to wiki/backlog/operator-decision-queue.md per promotion_policy.candidate_format. "
+            "DO NOT auto-promote — this is a surface-only sweep.\n\n"
+            "If you find 0 candidates that meet the floor, write a single line to "
+            ".assistant/_state/continuous-research-inbox.md saying 'retroactive sweep: N pages reviewed, "
+            "0 promotion candidates met the floor'.\n\n"
+            "Budget: 10 minutes. Process breadth over depth — review more, deep-evaluate fewer."
+        )
+        info(f"firing agent turn against {profile}...")
+        proc = run(["openclaw", "agent", "--agent", profile, "--message", message, "--timeout", "900000"], check=False)
+        if proc.returncode == 0:
+            ok(f"agent sweep fired; results will land in operator-decision-queue.md + inbox over next ~10min")
+            info(f"watch via: bin/assistant activity")
+        else:
+            err(f"sweep failed: {proc.stderr.strip()[:200]}")
+        return 0
+
+    if action == "audit-pseudo-work":
+        stage("Retroactive — scan past wiki/log/ for diary-defer / silent-tyranny patterns")
+        # Heuristic: research-watch logs with phrases like "deferred", "noted-but-skipped", "future run"
+        # that wrote to wiki/log/ but produced no corresponding raws / syntheses in same time window
+        log_dir = PROJECT_ROOT / "wiki" / "log"
+        if not log_dir.exists():
+            err("wiki/log/ not found")
+            return 1
+        defer_keywords = ["noted-but-skipped", "deferring to a future", "deferred to next",
+                          "future non-budget-capped", "carry-forward to next", "deferred to next run"]
+        suspect = []
+        for log_file in log_dir.glob("*.md"):
+            try:
+                text = log_file.read_text(errors="ignore").lower()
+                if any(kw in text for kw in defer_keywords):
+                    suspect.append(log_file)
+            except Exception:
+                continue
+        if not suspect:
+            ok("No diary-defer patterns detected in wiki/log/.")
+            return 0
+        warn(f"Found {len(suspect)} log file(s) with diary-defer patterns:")
+        for s in suspect:
+            print(f"  {YELLOW}suspect{RESET} {s.relative_to(PROJECT_ROOT)}")
+        info(f"\nThese are HISTORICAL pseudo-work logs (from before the anti-diary clause was codified).")
+        info(f"They're not necessarily wrong — they may contain genuine 'next-cycle' hand-offs.")
+        info(f"Operator action: review whether the deferred work was ever done. If not, queue it for the agent.")
+        return 0
+
+    err(f"unknown retroactive action: {action}")
+    return 1
+
+
+def cmd_promotions(args: argparse.Namespace) -> int:
+    """Manage operator-decision-queue.md: list candidates / show one / open in editor."""
+    queue_path = PROJECT_ROOT / "wiki" / "backlog" / "operator-decision-queue.md"
+    action = args.action
+    if not queue_path.exists():
+        err(f"queue file not found: {queue_path}")
+        return 1
+    # Parse the queue into callout-based entries
+    text = queue_path.read_text()
+    import re
+    # Match Obsidian-style callouts: > [!<type>] <title>\n followed by > body lines
+    entries = []
+    current = None
+    for line in text.splitlines():
+        m = re.match(r"^>\s*\[!(?P<kind>[a-z-]+)\]\s*(?P<title>.*)$", line)
+        if m:
+            if current:
+                entries.append(current)
+            current = {"kind": m.group("kind"), "title": m.group("title").strip(), "body": []}
+        elif current is not None:
+            if line.startswith(">"):
+                current["body"].append(line[1:].lstrip())
+            else:
+                # End of callout
+                entries.append(current)
+                current = None
+    if current:
+        entries.append(current)
+    if action == "list":
+        stage(f"Operator decision queue — {len(entries)} entries")
+        kind_filter = getattr(args, "kind", None)
+        shown = 0
+        for i, e in enumerate(entries):
+            if kind_filter and e["kind"] != kind_filter:
+                continue
+            shown += 1
+            color = {
+                "warning": RED,
+                "danger": RED,
+                "question": YELLOW,
+                "info": BLUE,
+                "tip": GREEN,
+                "promotion-candidate": YELLOW,
+            }.get(e["kind"], "")
+            preview = " ".join(e["body"][:3]).strip()[:150]
+            print(f"  {color}[{i+1}] {e['kind']}{RESET}: {BOLD}{e['title'][:80]}{RESET}")
+            if preview:
+                print(f"      {DIM}{preview}{'…' if len(preview) >= 150 else ''}{RESET}")
+        info(f"\n{shown}/{len(entries)} shown. Filter by --kind <type> (warning|info|question|promotion-candidate|tip|danger)")
+        info(f"Show full entry: bin/assistant promotions show <N>")
+        info(f"Open queue in editor: $EDITOR wiki/backlog/operator-decision-queue.md")
+        return 0
+    if action == "show":
+        n = args.index
+        if n < 1 or n > len(entries):
+            err(f"index {n} out of range (1..{len(entries)})")
+            return 1
+        e = entries[n - 1]
+        print()
+        print(f"{BOLD}[{n}] {e['kind']}{RESET}: {e['title']}")
+        print()
+        for line in e["body"]:
+            print(f"  {line}")
+        return 0
+    err(f"unknown promotions action: {action}")
+    return 1
 
 
 def cmd_cron_install_global(args: argparse.Namespace) -> int:
@@ -1582,6 +2512,114 @@ def cmd_cron_install_global(args: argparse.Namespace) -> int:
     return 0
 
 
+def _diagnose_gateway_health(recent_errors: list[str]) -> list[str]:
+    """Detect known error patterns in recent cron runs and emit operator-actionable diagnoses.
+
+    Returns a list of one-line diagnoses with remediation suggestions. Empty list = nothing wrong.
+    """
+    suggestions = []
+    error_text = "\n".join(recent_errors).lower()
+
+    # Pattern 1: gateway concurrency throttle
+    if "isolated agent setup timed out before runner start" in error_text:
+        proc = run(["openclaw", "config", "get", "agents.defaults.maxConcurrent"], check=False)
+        try:
+            current = int(proc.stdout.strip()) if proc.returncode == 0 else 4
+        except ValueError:
+            current = 4
+        n_profiles = len(list_profiles())
+        desired = max(16, 8 + n_profiles * 4)
+        if current < desired:
+            suggestions.append(
+                f"GATEWAY CONCURRENCY THROTTLE detected: 'agent setup timed out before runner start'. "
+                f"agents.maxConcurrent={current}; with {n_profiles} profile(s) + global cron + main, desired ≥ {desired}. "
+                f"Fix: openclaw config set agents.defaults.maxConcurrent {desired} && systemctl --user restart openclaw-gateway"
+            )
+
+    # Pattern 2: auth expiry
+    if "no credentials found" in error_text or "failoverror" in error_text or "auth" in error_text and "expired" in error_text:
+        suggestions.append(
+            "AUTH EXPIRED detected: agent ran without valid Anthropic credentials. "
+            "Fix: openclaw models auth login --provider anthropic; then re-fire the failed job."
+        )
+
+    # Pattern 3: scope upgrade pending
+    if "scope upgrade pending approval" in error_text:
+        suggestions.append(
+            "GATEWAY SCOPE UPGRADE PENDING detected. The CLI device hasn't been granted write scope. "
+            "Fix: bin/assistant install <profile> (re-runs the auth upgrade), or operator approves the pending request."
+        )
+
+    # Pattern 4: pipeline_post validation failures
+    if "validation errors found" in error_text and "pipeline" in error_text:
+        suggestions.append(
+            "PIPELINE_POST FAILURES detected. Some recent runs hit wiki schema errors. "
+            "Fix: review with `.venv/bin/python -m tools.pipeline post` and inspect which file errored."
+        )
+
+    # Pattern 5: cron job interrupted by restart (transient — usually fine on next tick)
+    if "job interrupted by gateway restart" in error_text:
+        suggestions.append(
+            "GATEWAY RESTART interrupted a job mid-run (transient). "
+            "No action needed — the next scheduled tick will succeed."
+        )
+
+    return suggestions
+
+
+def _audit_run_for_pseudo_work(run_entry: dict, profile: str) -> tuple[str, str]:
+    """Compute real-work score for a cron run.
+
+    Returns (verdict, evidence) where verdict is one of:
+      - "real"     — the run produced actual artifacts (raws, syntheses, crossrefs, or pipeline_post)
+      - "pseudo"   — claimed ok but produced nothing demonstrable (silent tyranny pattern)
+      - "fabricated" — summary claims work but filesystem disagrees
+      - "unknown"  — couldn't determine
+
+    Heuristic: the run's session is associated with a time window. We check
+    whether any files under raw/, wiki/sources/, wiki/log/, wiki/manifest.json
+    were modified in that window AND whether the summary claims plausible work.
+    """
+    import time
+    summary = (run_entry.get("summary") or "").lower()
+    error = (run_entry.get("error") or "").lower()
+    status = run_entry.get("status", "")
+    run_at_ms = run_entry.get("runAtMs", 0)
+    duration_ms = run_entry.get("durationMs", 0)
+    if status != "ok":
+        return ("error", error[:100] or "(no error message)")
+    # Find files modified during the run window (with 30s slack)
+    window_start = (run_at_ms - 30_000) / 1000
+    window_end = (run_at_ms + duration_ms + 30_000) / 1000
+    artifact_dirs = ["raw/articles", "raw/papers", "raw/transcripts", "raw/dumps",
+                     "wiki/sources", "wiki/log", "wiki/spine"]
+    files_touched = []
+    for d in artifact_dirs:
+        full = PROJECT_ROOT / d
+        if not full.exists():
+            continue
+        for p in full.rglob("*.md"):
+            try:
+                mt = p.stat().st_mtime
+                if window_start <= mt <= window_end:
+                    files_touched.append(str(p.relative_to(PROJECT_ROOT)))
+            except Exception:
+                continue
+    # Detect claims in summary
+    work_words = ["authored", "fetched", "synthesized", "wrote", "crossref", "pipeline_post", "pipeline post"]
+    defer_words = ["deferred", "deferring", "noted-but-skipped", "noted but skipped", "next run", "future run", "carry-forward"]
+    claims_work = any(w in summary for w in work_words)
+    defers = any(w in summary for w in defer_words)
+    if files_touched:
+        return ("real", f"{len(files_touched)} file(s) touched: {', '.join(files_touched[:3])}{'…' if len(files_touched) > 3 else ''}")
+    # No files touched. Did the agent claim it did work anyway?
+    if claims_work and not defers:
+        return ("fabricated", f"summary claims work but no files modified in window {duration_ms//1000}s")
+    if defers:
+        return ("pseudo", "diary-defer pattern — no actual artifacts produced")
+    return ("unknown", "no clear evidence of work or claim")
+
+
 def cmd_activity(args: argparse.Namespace) -> int:
     """Show what the AI assistant(s) have ACTUALLY done — files authored, cron runs, sessions.
 
@@ -1656,6 +2694,9 @@ def cmd_activity(args: argparse.Namespace) -> int:
             if not all_runs:
                 info(f"  (no cron runs in the last {hours}h)")
             else:
+                pseudo_count = 0
+                fabricated_count = 0
+                real_count = 0
                 for r in all_runs:
                     status = r.get("status", "?")
                     dur_s = (r.get("durationMs", 0) // 1000)
@@ -1664,13 +2705,40 @@ def cmd_activity(args: argparse.Namespace) -> int:
                     age_str = (f"{int(age_s/60)}m ago" if age_s < 3600
                                else f"{int(age_s/3600)}h ago" if age_s < 86400
                                else f"{int(age_s/86400)}d ago")
-                    status_color = GREEN if status == "ok" else RED
+                    # Audit: did this run actually produce work?
+                    verdict, evidence = _audit_run_for_pseudo_work(r, r['_agent'])
+                    if verdict == "real":
+                        verdict_mark = f"{GREEN}● ok{RESET}"
+                        real_count += 1
+                    elif verdict == "pseudo":
+                        verdict_mark = f"{YELLOW}● pseudo-work{RESET}"
+                        pseudo_count += 1
+                    elif verdict == "fabricated":
+                        verdict_mark = f"{RED}● FABRICATED{RESET}"
+                        fabricated_count += 1
+                    elif verdict == "error":
+                        verdict_mark = f"{RED}● error{RESET}"
+                    else:
+                        verdict_mark = f"{DIM}● ?{RESET}"
                     summary = r.get("summary", "") or r.get("error", "(no summary)")
                     summary = summary.replace("\n", " ").strip()
-                    if len(summary) > 200:
-                        summary = summary[:200] + "…"
-                    print(f"  {status_color}● {status}{RESET} {r['_job_name']} · {dur_s}s · {age_str}")
-                    print(f"     {DIM}{summary}{RESET}")
+                    if len(summary) > 160:
+                        summary = summary[:160] + "…"
+                    print(f"  {verdict_mark} {r['_job_name']} · {dur_s}s · {age_str}")
+                    print(f"     {DIM}evidence: {evidence}{RESET}")
+                    print(f"     {DIM}summary:  {summary}{RESET}")
+                # Aggregate verdict
+                if pseudo_count or fabricated_count:
+                    print()
+                    warn(f"AUDIT: {pseudo_count} pseudo-work run(s), {fabricated_count} fabricated claim(s), {real_count} real run(s) in last {hours}h")
+                # Gateway-health diagnoses based on known error patterns
+                recent_errors = [r.get("error", "") for r in all_runs if r.get("status") == "error" and r.get("error")]
+                diagnoses = _diagnose_gateway_health(recent_errors)
+                if diagnoses:
+                    print()
+                    print(f"{BOLD}{YELLOW}Gateway health diagnostics{RESET}")
+                    for d in diagnoses:
+                        warn(f"  {d}")
         except Exception as e:
             warn(f"  could not fetch cron runs: {e}")
     print()
@@ -1694,10 +2762,105 @@ def cmd_activity(args: argparse.Namespace) -> int:
                        else f"{int(age_s/3600)}h ago" if age_s < 86400
                        else f"{int(age_s/86400)}d ago")
             print(f"     {f.name[:40]}  ({age_str}, {f.stat().st_size // 1024}KB)")
+    # ── 3a. Operator directives pending agent processing ─────────────
+    print(f"{BOLD}Pending operator directives (per profile){RESET}")
+    state_dir = ASSISTANT_DIR / "_state"
+    any_directives = False
+    for name in profiles:
+        dpath = state_dir / f"{name}-operator-directives.md"
+        if not dpath.exists():
+            continue
+        import re as _re
+        text = dpath.read_text()
+        directives = len(_re.findall(r"^>\s*\[!directive\]", text, _re.MULTILINE))
+        processed = len(_re.findall(r"^>\s*\[!processed\]", text, _re.MULTILINE))
+        resolved = len(_re.findall(r"^>\s*\[!resolved\]", text, _re.MULTILINE))
+        pending = max(0, directives - processed)
+        if directives + resolved > 0:
+            any_directives = True
+            mark = (f"{YELLOW}!{RESET}" if pending > 0 else f"{GREEN}✓{RESET}")
+            print(f"  {mark} {name}: {pending} pending / {processed} processed (of {directives} directive(s)) + {resolved} resolved Q-decisions")
+    if not any_directives:
+        info("  (no operator directives yet — inject with `bin/assistant directive <profile> \"<text>\"`)")
+    print()
+
+    # ── 3b. Operator decisions awaiting review (in the queue file) ────
+    print(f"{BOLD}Operator decisions awaiting review{RESET}")
+    queue_path = PROJECT_ROOT / "wiki" / "backlog" / "operator-decision-queue.md"
+    if queue_path.exists():
+        text = queue_path.read_text()
+        import re as _re
+        callouts = _re.findall(r"^>\s*\[!([a-z-]+)\]", text, _re.MULTILINE)
+        by_kind: dict[str, int] = {}
+        for c in callouts:
+            by_kind[c] = by_kind.get(c, 0) + 1
+        if by_kind:
+            info(f"  {sum(by_kind.values())} total entries in operator-decision-queue.md:")
+            for kind, count in sorted(by_kind.items(), key=lambda x: -x[1]):
+                mark = {"warning": "⚠", "danger": "⚠", "question": "?", "info": "ℹ",
+                        "promotion-candidate": "↑", "tip": "💡", "directive": "→",
+                        "resolved": "✓", "processed": "✓"}.get(kind, "·")
+                print(f"    {mark} {count} {kind}")
+            # Highlight pending operator-action work
+            unresolved_promotions = by_kind.get("info", 0) + by_kind.get("question", 0) + by_kind.get("promotion-candidate", 0) - by_kind.get("resolved", 0)
+            pending_directives = by_kind.get("directive", 0) - by_kind.get("processed", 0)
+            if pending_directives > 0:
+                warn(f"  → {pending_directives} pending directive(s) the agent will process on next wake")
+            if unresolved_promotions > 0:
+                info(f"  ↑ {unresolved_promotions} unresolved promotion candidate(s) awaiting your decision")
+                info(f"    Decide via: bin/assistant resolve <N> <accept|defer|reject|...> \"<rationale>\"")
+            info(f"  Review with: bin/assistant promotions list  (or `show <N>` for detail)")
+            info(f"  Inject directive: bin/assistant directive <profile> \"<text>\"")
+        else:
+            info("  (no entries)")
+    print()
+    # ── 3c. Raw lifecycle — what's pending purge ──────────────────────
+    print(f"{BOLD}Raw lifecycle (purge candidates){RESET}")
+    policy = _load_lifecycle_policy()
+    purge_count = 0
+    pinned_count = 0
+    permanent_count = 0
+    for d in ["raw/articles", "raw/transcripts", "raw/dumps"]:
+        full = PROJECT_ROOT / d
+        if not full.exists():
+            continue
+        for p in full.glob("*.md"):
+            status, _ = _classify_raw(p, policy)
+            if status == "pinned":
+                pinned_count += 1
+            elif status == "permanent":
+                permanent_count += 1
+            elif status == "ephemeral":
+                has_synth, _ = _has_synthesis(p)
+                if has_synth:
+                    purge_count += 1
+    if purge_count:
+        warn(f"  {purge_count} raw(s) eligible for purge — preview with: bin/assistant raw purge-dry-run")
+    else:
+        ok("  no purge-eligible raws (all ephemeral raws synthesized cleanly OR no synthesis yet)")
+    if pinned_count:
+        info(f"  {pinned_count} operator-pinned raw(s) (protected from purge)")
+    print()
+    # ── 4. Per-profile inbox (the agent's self-reported tick log) ─────
+    print(f"{BOLD}Per-profile inbox (agent's self-report){RESET}")
+    state_dir = ASSISTANT_DIR / "_state"
+    for name in profiles:
+        inbox = state_dir / f"{name}-inbox.md"
+        if not inbox.exists():
+            info(f"  {name}: (no inbox yet — will appear after first tick that uses the new prompt)")
+            continue
+        lines = inbox.read_text().splitlines()
+        recent = [l for l in lines if l.strip() and not l.startswith("#")][-10:]
+        if not recent:
+            info(f"  {name}: (inbox exists but empty)")
+            continue
+        print(f"  {name}:")
+        for line in recent:
+            print(f"    {line}")
     print()
     info("Drill into a specific run: bin/assistant manage --action history --profile <p> --job <j>")
     info("View a session file directly: openclaw sessions --agent <p> --verbose")
-    info("Open a wiki/log/ file the agent authored: any editor — they're regular Markdown")
+    info("Tail the live inbox: tail -f .assistant/_state/<profile>-inbox.md")
     return 0
 
 
@@ -2247,6 +3410,44 @@ def build_parser() -> argparse.ArgumentParser:
 
     sp = sub.add_parser("pace", help="Show the full schedule timeline across all assistants + global cron")
     sp.set_defaults(func=cmd_pace)
+
+    sp = sub.add_parser("raw", help="Manage raw/ lifecycle: list / pin / unpin / purge-dry-run / purge-execute")
+    sp.add_argument("action", choices=["list", "pin", "unpin", "purge-dry-run", "purge-execute"])
+    sp.add_argument("path", nargs="?", help="Raw file path (relative to project root) for pin/unpin")
+    sp.add_argument("reason", nargs="?", help="Optional reason for pin")
+    sp.add_argument("--retention", choices=["ephemeral", "permanent", "conditional", "pinned", "forbidden"],
+                    help="Filter `list` by retention status")
+    sp.set_defaults(func=cmd_raw)
+
+    sp = sub.add_parser("promotions", help="Manage wiki/backlog/operator-decision-queue.md: list candidates / show one")
+    sp.add_argument("action", choices=["list", "show"])
+    sp.add_argument("index", nargs="?", type=int, help="Entry index (for show)")
+    sp.add_argument("--kind", help="Filter by callout kind: warning|info|question|promotion-candidate|tip|danger")
+    sp.set_defaults(func=cmd_promotions)
+
+    sp = sub.add_parser("directive",
+                        help="Inject an operator directive into operator-decision-queue.md that the agent reads on next wake")
+    sp.add_argument("profile", help="Profile name (e.g. continuous-research) — agent that should process it")
+    sp.add_argument("text", help="Directive text — what you want the agent to do")
+    sp.set_defaults(func=cmd_directive)
+
+    sp = sub.add_parser("resolve",
+                        help="Mark a promotion candidate (Q##) as decided so the agent stops resurfacing it")
+    sp.add_argument("qn", type=int, help="Question number (e.g. 77)")
+    sp.add_argument("verb", choices=["accept", "accept-as-concept", "accept-as-pattern", "accept-as-lesson",
+                                      "accept-as-decision", "reject", "defer", "merge"],
+                    help="Resolution verb")
+    sp.add_argument("rationale", nargs="?", default="", help="Optional rationale text")
+    sp.set_defaults(func=cmd_resolve)
+
+    sp = sub.add_parser("retroactive",
+                        help="Apply newly-defined rules to existing files (sweeps for state that pre-dates the rule)")
+    sp.add_argument("action", choices=["link-sources", "purge-stale-raws", "surface-promotions", "audit-pseudo-work"])
+    sp.add_argument("--execute", action="store_true", help="Actually apply changes (default = dry-run preview)")
+    sp.add_argument("--older-than", type=int, default=0,
+                    help="Days threshold for purge-stale-raws (default 0 = no age filter)")
+    sp.add_argument("--profile", help="Profile to fire sweep against (for surface-promotions; default continuous-research)")
+    sp.set_defaults(func=cmd_retroactive)
 
     sp = sub.add_parser("activity", help="Show what the assistants have ACTUALLY done — files + cron runs + sessions")
     sp.add_argument("profile", nargs="?", help="Limit to a specific profile (default: all)")
