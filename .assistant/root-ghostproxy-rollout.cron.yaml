@@ -1,395 +1,185 @@
 # =============================================================================
-# .assistant/root-ghostproxy-rollout.cron.yaml
+# .assistant/root-ghostproxy-rollout.cron.yaml  (v3 — 2026-05-16)
 # =============================================================================
 # Per-profile CRON jobs for the root-ghostproxy-rollout assistant.
 #
-# OPERATOR-DIRECTED SPRINT (2026-05-15 night → 2026-05-16 morning):
-#   Operator verbatim: "create a hard working AI assistant for tonight that
-#   will make sure that the root-ghostproxy is in a complete new state in
-#   the morning on my machine" + "I would not want it to freeze for not
-#   reason for example" + "I would not want it to work slow either" + "or
-#   do little change and stop"
+# Cadence philosophy (operator-verbatim 2026-05-16, sacrosanct):
+#   "THE ONLY FUCKING THING WHICH COULD BE FAST LIKE THIS IS THE
+#    root-ghostproxy ai assistant" — but ONLY when operator invokes sprint
+#    via .assistant/_state/root-ghostproxy-rollout-operator-directives.md.
+#    Hardcoded 3min cron rejected (was v1 anti-pattern). Sprint = mode,
+#    not schedule.
 #
-# Cadence philosophy: HARD WORK overnight, steady-state after.
-#   - bootstrap-observation: fires on install (first-fire) — primes the
-#     inbox with sprint plan; reads all 10 modules + directive notes
-#   - sprint-tick: every 30m — processes 1-3 ripe modules per tick;
-#     agent-gates short-circuit when sprint complete (build forward, never
-#     freeze, never stop with TODOs remaining)
-#   - morning-briefing: 08:30 ET — writes the morning report
-#   - daily-light-check: 14:00 ET — steady-state Goldilocks (0-2/day)
-#   - weekly-module-deep: Tue 09:00 — deeper module-progress drafting
+# Default cadence: daily-light + weekly-module-deep + bootstrap-on-install.
+# Sprint mode = operator-invoked, processed at step 1 branch decision.
+#
+# 3 jobs total (down from v1's 6 — removed: sprint-tick every:3m,
+# morning-briefing (sprint-specific), monthly-sfif-tier-audit (over-engineered)).
 # =============================================================================
 
 profile: root-ghostproxy-rollout
 
 jobs:
 
-  # ─── Bootstrap: fires once on install (--first-fire) ──────────────────
+  # ─── Bootstrap — fires once on install (first-fire) ──────────────────
   - name: bootstrap-observation
     enabled: true
-    schedule: "first-fire"   # one-shot on install; openclaw immediate kick
+    schedule: "first-fire"
     trigger:
       type: openclaw-task
       prompt: |
-        SPRINT BOOTSTRAP — operator-directed sprint 2026-05-15 night.
+        BOOTSTRAP — first-fire on install. Primes the inbox + drafts first
+        1-2 cascade-candidates if ripe modules exist.
 
-        Operator-verbatim (sacrosanct): "create a hard working AI assistant
-        for tonight that will make sure that the root-ghostproxy is in a
-        complete new state in the morning on my machine" + "I would not
-        want it to freeze for not reason for example" + "I would not want
-        it to work slow either" + "or do little change and stop".
+        Follow workflow.canonical_pipeline (10 steps).
 
-        ONE-SHOT BOOTSTRAP — execute now, prime the sprint:
+        STEP 0 — operator_directives: read
+          .assistant/_state/root-ghostproxy-rollout-operator-directives.md
+          (create if absent). Process unmarked; append [!processed].
 
-        STEP 0: Read .assistant/_state/root-ghostproxy-rollout-operator-directives.md
-        (create if absent). Process any unmarked directives; append [!processed].
+        STEP 1 — inbox_state_check: no prior state on bootstrap. Branch:
+          OPERATOR_DIRECTED_SPRINT if step 0 found an unprocessed sprint
+          directive; else FRESH_SIGNAL (treat as fresh — primes inbox).
 
-        STEP 1 — INVENTORY (read all of these IN FULL, no truncation):
-          - raw/notes/2026-05-04-prepare-root-ghostproxy-as-sister-type-root-group-operating-system-setup.md
-          - raw/notes/2026-05-04-custom-tailored-model-group-moe-intelligence-layer-and-root-ghostproxy-pain-point.md
-          - wiki/backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05.md
-          - wiki/backlog/modules/root-ghostproxy-m001 through m010 (10 files)
-          - wiki/config/sister-projects.yaml (root-ghostproxy + selfdef entries)
-          - wiki/log/2026-05-15-PRE-COMPACT-HANDOFF-three-profiles-live-plus-root-ghostproxy-profile-spec.md
+        STEP 2 — observe: operator_record_reader on 2 directive notes
+          + epic + 10 modules + sister-projects entry. Identify ripeness
+          per module.
 
-        STEP 2 — READ-ONLY ROOT-GHOSTPROXY STATE (gh CLI, NEVER write):
-          Run: gh api repos/cyberpunk042/root-ghostproxy/contents/ (root listing)
-          Cache result in .assistant/_state/root-ghostproxy-rollout-repo-snapshot.md
-          If gh auth fails, write that fact to the snapshot file and continue
-          (DO NOT FREEZE — operator-directive). The wiki record is sufficient
-          substrate; gh data is enrichment.
+        STEP 3 — observe_root_ghostproxy_read_only: root_ghostproxy_state_reader
+          (gh CLI). If auth fails: log + continue (do NOT freeze).
 
-        STEP 3 — RIPENESS ASSESSMENT:
-          For each module M001-M010, classify as RIPE / PARTIAL / UNCLEAR
-          based on whether the directive notes + epic + module's own Done
-          When section give enough operator-stated requirements to draft
-          a cascade-candidate. Use multi-vision discipline.
+        STEP 4 — pick: 1-2 ripest candidates (1-3 if sprint mode).
+          Priority: operator-explicit → M001 → scope-clarification →
+          selfdef-boundary → M002-M010 → self-improvement.
 
-          Plus identify these candidates explicitly:
-          - scope-clarification-candidate: operator said "root-ghostproxy
-            can focus more on its thing" — surface as multi-vision question
-          - selfdef-boundary-candidate: operator said "not just going to
-            use the selfdef project" — surface relationship question
+        STEP 5 — draft: per-candidate subagent (module_progress_drafter /
+          scope_clarification_proposer / selfdef_boundary_proposer).
+          Output: wiki/domains/cross-domain/cascade-candidate-root-ghostproxy-<slug>.md
+          with mandatory 9 frontmatter fields, ≥3 relationships,
+          ## Context Boundaries, ## Alternative Visions (if multi-vision),
+          ## Cascade Marker, operator-verbatim quotes from raw/notes/.
+          NEVER edit root-ghostproxy.
 
-        STEP 4 — WRITE SPRINT PLAN to .assistant/_state/root-ghostproxy-rollout-inbox.md:
-          Header: "SPRINT 2026-05-15→16 PLAN"
-          Then a checklist of all ~13 candidates with RIPE/PARTIAL/UNCLEAR
-          status. This is what subsequent sprint-tick firings will check
-          and process.
+        STEP 6 — boundary_guard: cross_project_boundary_guard verifies
+          ZERO writes outside repo + ZERO forbidden phrases. If violated:
+          revert + log anti-pattern.
 
-        STEP 5 — DO THE FIRST 1-3 DRAFTS NOW (don't wait for next tick).
-          Pick the 1-3 ripest candidates. Author each as:
-            wiki/domains/cross-domain/cascade-candidate-root-ghostproxy-<slug>.md
-          Each draft MUST contain:
-            - 9 required frontmatter fields (title, type=concept, domain=cross-domain,
-              status=draft, confidence, created=2026-05-15, updated=2026-05-15,
-              sources [≥1], tags including cascade-root-ghostproxy)
-            - Summary ≥30 words
-            - Operator-verbatim requirements quoted from raw/notes/ (sacrosanct)
-            - "## Context Boundaries" section (what this draft does NOT decide)
-            - "## Alternative Visions" section IF multi-vision (mandatory for
-              scope-clarification / selfdef-boundary candidates)
-            - "## Cascade Marker" section with `cascade: root-ghostproxy`
-            - ≥3 relationships (BUILDS ON / IMPLEMENTS / RELATES TO module/epic/directive)
+        STEP 7 — r20_gate: if any rm action, verify untracked via
+          `git ls-files --error-unmatch`. Tracked → surface batch Q##,
+          NEVER auto-rm.
 
-        STEP 6 — pipeline_post (mandatory). 0 NEW validation errors required.
-          (Note: brain has 13 pre-existing errors at sprint start; your work
-          must not add to that count.)
+        STEP 8 — self_improvement_check: light at bootstrap (no signal
+          history yet); log "no signal" and continue.
 
-        STEP 7 — SURFACE to wiki/backlog/operator-decision-queue.md:
-          Header callout: "Q85 root-ghostproxy-rollout sprint 2026-05-15 BOOTSTRAP"
-          List the 1-3 drafts authored + the sprint plan (link to inbox).
-          Mark each candidate with `cascade: root-ghostproxy` and
-          `decision_needed: <slug>`.
+        STEP 9 — pipeline_post. 0 NEW errors.
 
-        STEP 8 — DECLARE to inbox:
-          HH:MM ET | BOOTSTRAP | obs:<n_files> | repo_state:<ok|gh_failed>
-          | ripe:<n> partial:<n> unclear:<n> | drafted_this_tick:<n>
-          | surfaced:<n> | post: <ok|err N> | next_tick:<HH:MM>
+        STEP 10 — surface_and_declare: append to operator-decision-queue.md
+          under cascade marker. Write inbox:
+            HH:MM ET | BOOTSTRAP | drafted:<n> | self:skip
+            | surfaced:<n> | r20_gated:0 | post:<ok|err N>
 
-        ANTI-FREEZE: if step 2 (gh CLI) fails OR step 1 finds a missing
-        module file, do NOT stall — log the issue, continue with what IS
-        available, surface the gap as a multi-vision candidate. Build forward.
+        ANTI-FREEZE: if no module is ripe, draft scope-clarification-candidate
+        + selfdef-boundary-candidate as bootstrap baseline. NEVER exit
+        with 0 drafts. Build forward.
 
-        ANTI-SLOW: budget 45min for bootstrap. If 45min not enough for 1-3
-        drafts, write what you have and let sprint-tick continue.
-
-        ANTI-STOP: do NOT exit bootstrap with 0 drafts. Even if all 10
-        modules are UNCLEAR, the scope-clarification + selfdef-boundary
-        + self-improvement-check candidates are always drafable.
-    description: "One-shot bootstrap on install — inventory 10 modules + 2 directive notes + epic + sister registry + repo snapshot; draft first 1-3 cascade-candidates immediately."
-    timeout_seconds: 3600  # 60 min for bootstrap (longer than steady-state)
-
-  # ─── Sprint tick — every 30m, agent-gated for sprint-window + completion ─
-  # 3min cadence: operator 2026-05-15 verbatim "WHY ARE MAKING IT SLOW?
-  # WTF???? PUT IT EVERY 3min if we need". 20 firings/hour = 200 firings
-  # overnight. Sprint completes in ~40min when 1 draft/tick; ~15min when
-  # 3 drafts/tick. Post-sprint ticks short-circuit on inbox state check.
-  - name: sprint-tick
-    enabled: true
-    schedule: "every:3m"
-    trigger:
-      type: openclaw-task
-      prompt: |
-        SPRINT TICK — operator-directed sprint 2026-05-15 night → 2026-05-16 morning.
-
-        Operator-verbatim (sacrosanct): "I would not want it to freeze for
-        not reason for example" + "I would not want it to work slow either"
-        + "or do little change and stop" + "PUT IT EVERY 3min if we need".
-
-        Follow WORKFLOW.md canonical_pipeline (10 steps, 0-10). Tight tick
-        budget (10 min). Build forward.
-
-        STEP 0 — operator-directives: read
-          .assistant/_state/root-ghostproxy-rollout-operator-directives.md;
-          process unmarked; append [!processed]. NEW directive arrived since
-          sprint start → raise priority above queue, process at step 4.
-
-        STEP 1 — inbox_state_check: read inbox tail (20 lines) +
-          ls wiki/domains/cross-domain/cascade-candidate-root-ghostproxy-*.md
-          BRANCH:
-            SPRINT-COMPLETE-PAUSE → invoke work_completion_detector;
-              verify pause_conditions; if all hold → on_sprint_completion;
-              END tick.
-            SPRINT-WORK → continue to step 2.
-            STEADY-STATE-LIGHT (post-08:30 if pause not engaged) → END;
-              let daily-light-check handle.
-
-        STEP 2 — observe: operator_record_reader subagent on 2 directive
-          notes + epic + 10 modules + sister-projects.yaml entry.
-
-        STEP 3 — observe-root-ghostproxy-read-only:
-          root_ghostproxy_state_reader subagent (gh CLI read-only).
-          If gh auth fails: log + continue (DO NOT FREEZE).
-
-        STEP 4 — pick_next_candidates: 1-3 ripest per priority order
-          (operator-explicit → M001 → scope-clarification → selfdef-boundary
-          → M002-M010 → self-improvement). goldilocks_sizer +
-          stage_discipline_check subagents gate each.
-
-        STEP 5 — draft_cascade_candidates: invoke per-candidate subagent
-          (module_progress_drafter / scope_clarification_proposer /
-          selfdef_boundary_proposer). Output at
-          wiki/domains/cross-domain/cascade-candidate-root-ghostproxy-<slug>.md.
-
-          Contract (mandatory):
-            - 9 required frontmatter fields per wiki-schema.yaml
-            - Summary ≥30 words
-            - ≥3 relationships (BUILDS ON / IMPLEMENTS module/epic/directive)
-            - Operator-stated requirements quoted verbatim
-            - ## Context Boundaries section
-            - ## Alternative Visions section (mandatory for multi-vision)
-            - ## Cascade Marker: cascade: root-ghostproxy + target_module: M00X
-
-          ANTI-FREEZE: ambiguous candidate → author multi-vision draft and
-          MOVE TO NEXT in same tick.
-          ANTI-SLOW: 2+ ripe → draft 2-3 this tick (Goldilocks per-draft holds).
-          ANTI-STOP: 0 drafts when work remains → run anti_pattern_diagnostician.
-
-        STEP 6 — boundary_guard: cross_project_boundary_guard subagent.
-          Verify ZERO writes outside this repo. Verify NO scope-decision
-          phrases in drafts. If violated → revert + surface anti-pattern.
-
-        STEP 7 — self_improvement_check: self_improvement_proposer subagent.
-          Apply autonomous updates within full_autonomous. Surface
-          substantive proposals.
-
-        STEP 8 — pipeline_post: 0 NEW errors. If NEW errors detected →
-          anti_pattern_diagnostician + revert / retry / surface.
-
-        STEP 9 — surface: append callouts under
-          wiki/backlog/operator-decision-queue.md Q85 section per
-          promotion_policy.candidate_format.
-
-        STEP 10 — declare_and_completion_check: write inbox one-liner +
-          run work_completion_detector. If verdict=sprint_complete →
-          next tick takes PAUSE branch.
-
-        Inbox format:
-          HH:MM ET | TICK | branch:<sprint_work|pause|steady> | drafted:<n>
-          | self:<applied|surfaced|skip> | surfaced:<n> | post:<ok|err N>
-          | completion:<in_progress|complete>
-
-        AUTOADAPTATION (continuous self-tuning per workflow.autoadaptation):
-          Observe signals each tick → apply response. Autonomous adjustments
-          to cadence / per-tick cap / subagent declarations allowed within
-          full_autonomous bound. Substantive changes → surface as
-          `target: self` self-update proposal.
-
-        BUILD FORWARD: never revert and restart. If a draft was wrong, the
-        FIX is a follow-up draft that supersedes it (mark SUPERSEDES).
-    description: "Every-30min sprint tick — processes 1-3 ripe cascade-candidates per fire during sprint window; short-circuits when sprint complete."
-    timeout_seconds: 600  # 10 min/tick — tight; bigger drafts span multiple ticks via inbox progress
-
-  # ─── Morning briefing — 08:30 ET ──────────────────────────────────────
-  - name: morning-briefing
-    enabled: true
-    schedule: "*-*-* 08:30:00"
-    trigger:
-      type: openclaw-task
-      prompt: |
-        SPRINT MORNING BRIEFING — operator-directed sprint 2026-05-15→16.
-
-        STEP 0: Read .assistant/_state/root-ghostproxy-rollout-operator-directives.md.
-
-        STEP 1 — TALLY:
-          Count cascade-candidates at wiki/domains/cross-domain/cascade-candidate-root-ghostproxy-*.md
-          Read inbox tail (sprint ticks since bootstrap).
-          Read operator-decision-queue.md Q85 section.
-
-        STEP 2 — WRITE wiki/log/2026-05-16-root-ghostproxy-rollout-sprint-morning-briefing.md:
-          - title, type=note, note_type=session, status=active, etc.
-          - Section: "Sprint operator directive (verbatim)"
-              The 4 quoted directives from 2026-05-15
-          - Section: "Sprint output"
-              Table of all cascade-candidates: slug | path | target_module |
-              status (ripe/partial/multi-vision) | operator_action_needed
-          - Section: "Operator-decision items"
-              Each candidate with cascade marker + decision_needed slug
-          - Section: "Sprint anti-patterns observed (if any)"
-              Honest reporting of freezes, slows, stops, single-truth slips
-          - Section: "What the operator can do this morning"
-              1. Review Q85 cascade items
-              2. Copy approved drafts from wiki/domains/cross-domain/
-                 cascade-candidate-root-ghostproxy-*.md into the actual
-                 root-ghostproxy repo if/when installed (operator-territory)
-              3. Decide scope-clarification + selfdef-boundary questions
-
-        STEP 3 — pipeline_post. 0 NEW errors.
-
-        STEP 4 — DECLARE to inbox:
-          HH:MM ET | MORNING-BRIEFING | candidates_total:<n>
-          | new_overnight:<n> | self_updates_applied:<n>
-          | sprint_anti_patterns:<n> | briefing_path:<wiki/log/...>
-          | revert_to_steady_state:<14:00>
-
-        ANTI-FREEZE / ANTI-STOP apply: ALWAYS write the briefing even if
-        sprint output was thin. Operator deserves the honest tally.
-    description: "08:30 ET morning briefing — tallies overnight sprint output, writes wiki/log/ briefing, surfaces operator-decision items, reverts to steady state."
+        BUDGET: 30 min for bootstrap.
+    description: "First-fire on install — observe + draft 1-2 cascade-candidates + surface. Sprint mode picked up automatically if operator-directives.md has unprocessed sprint directive."
     timeout_seconds: 1800
 
-  # ─── Steady-state daily light check — 14:00 ET ────────────────────────
+  # ─── Daily light check — 14:00 ET ────────────────────────────────────
   - name: daily-light-check
     enabled: true
     schedule: "*-*-* 14:00:00"
     trigger:
       type: openclaw-task
       prompt: |
-        DAILY LIGHT CHECK — post-sprint steady-state.
+        DAILY LIGHT CHECK — steady-state.
 
-        Per default Goldilocks: 0-2 cascade-candidates per tick; never batch.
+        Follow workflow.canonical_pipeline. Goldilocks: 0-1 cascade-candidate
+        per tick (steady) or 1-2 (fresh signal) or 1-3 (operator-invoked sprint).
 
-        STEP 0: process operator directives.
+        STEP 0 — operator_directives: process unmarked.
 
-        STEP 1 — observe: re-read recent wiki/log/ + operator-decision-queue
-          Q85 status; check if operator has decided / copied any cascade
-          candidates into root-ghostproxy.
+        STEP 1 — inbox_state_check: branch decision:
+          OPERATOR_DIRECTED_SPRINT — step 0 found sprint directive →
+            cap raised, draft 1-3 candidates
+          FRESH_SIGNAL — new operator-directive in raw/notes/ since last
+            tick OR operator hand-edited a cascade-candidate → draft 1-2
+          STEADY_LIGHT — no fresh signal → draft 0-1 if module ripe; else
+            log "nothing fresh — Goldilocks-under-budget" and END
+          READY_FOR_REVIEW — all 10 modules + scope-clarification +
+            selfdef-boundary surfaced AND no fresh signal → log
+            "awaiting operator review" and END (pause = correct, NOT freeze)
 
-        STEP 2 — evaluate: is there a fresh signal (new operator directive,
-          accepted cascade candidate, new module rip-up) warranting a new
-          draft? If yes (1-2 candidates), draft.
+        STEPS 2-10: follow canonical_pipeline as appropriate to branch.
 
-        STEP 3 — self-improvement check (light).
+        ANTI-FREEZE: uncertainty on a module → author multi-vision draft +
+          continue to next candidate same tick.
+        ANTI-STOP: never terminate with TODOs remaining AND no rationale.
+          Surface gaps to queue with reason before ending.
 
-        STEP 4 — pipeline_post.
+        Inbox one-liner:
+          HH:MM ET | <branch> | drafted:<n> | self:<applied|surfaced|skip>
+          | surfaced:<n> | r20_gated:<n> | post:<ok|err N>
 
-        STEP 5 — surface (0-2 drafts max).
+        BUDGET: 30 min steady / 60 min sprint.
+    description: "14:00 ET daily light check — steady-state Goldilocks; branches to sprint-mode if operator-directives.md has unprocessed sprint directive."
+    timeout_seconds: 3600
 
-        STEP 6 — declare to inbox.
-
-        ANTI-FREEZE / ANTI-STOP: if NO fresh signal, write inbox "nothing
-        fresh today — Goldilocks-under-budget" and END. That's NOT a stop;
-        that's correct daily steady-state.
-    description: "14:00 ET daily light check — steady-state Goldilocks; 0-2 cascade-candidates if fresh signal exists."
-    timeout_seconds: 1800
-
-  # ─── Weekly deeper module-progress drafting — Tue 09:00 ──────────────
+  # ─── Weekly module-progress deep drafting — Tue 09:00 ET ─────────────
   - name: weekly-module-deep
     enabled: true
     schedule: "Tue *-*-* 09:00:00"
     trigger:
       type: openclaw-task
       prompt: |
-        WEEKLY DEEP MODULE PROGRESS — Tuesday 09:00 ET.
+        WEEKLY MODULE-PROGRESS DEEP — Tuesday 09:00 ET.
 
-        STEP 0: process operator directives.
+        Follow workflow.canonical_pipeline. This tick allows DEEPER drafting
+        on ONE module (multiple supporting cascade-candidates per single
+        module is OK; Goldilocks per-proposal still ONE module per draft).
 
-        STEP 1 — observe: full re-read of root-ghostproxy state (gh CLI),
-          all 10 modules, recent operator-decision-queue accepts/rejects
-          on Q85.
+        STEP 0 — operator_directives: process unmarked.
 
-        STEP 2 — pick ONE module that has the highest unblocked work value
-          (operator-decided OR clearest operator-stated requirements OR
-          highest-priority per epic).
+        STEP 1 — inbox_state_check: branch as usual. If READY_FOR_REVIEW
+          (all 10 + scope + selfdef surfaced), END.
 
-        STEP 3 — author up to 3 DEEPER cascade-candidates for that module:
-          - the main module draft (CLAUDE.md content, AGENTS.md content,
-            methodology decision rationale, etc.)
-          - supporting drafts (e.g., a "## Operator Decisions Needed"
-            cascade-candidate enumerating sub-decisions)
+        STEP 2 — observe: re-read 2 directive notes + epic + 10 modules
+          + sister-projects + recent operator-decision-queue resolutions
+          (which cascade-candidates accepted / rejected since last week).
 
-        STEP 4 — self-improvement check (weekly depth).
+        STEP 3 — observe_root_ghostproxy_read_only: full gh CLI re-fetch.
 
-        STEP 5 — pipeline_post.
+        STEP 4 — pick: ONE module with highest unblocked value (operator-
+          decided OR clearest operator-stated requirements OR highest-
+          priority per epic). Author up to 3 SUPPORTING cascade-candidates
+          for that module (main draft + sub-decisions surfacing + open-
+          questions surfacing).
 
-        STEP 6 — surface to operator-decision-queue.md.
+        STEPS 5-10: follow canonical_pipeline.
 
-        STEP 7 — declare to inbox (include the weekly summary).
+        WEEKLY-DEEP DISTINCTIVE: more time per draft (5-7 min substantive
+        vs 3-4 min daily). Goldilocks per-proposal still holds (ONE module
+        per draft).
 
-        BUDGET: 60-90 min. ANTI-FREEZE / ANTI-SLOW / ANTI-STOP apply.
-    description: "Tue 09:00 weekly module-progress deep drafting — one module per week, up to 3 cascade-candidates."
+        BUDGET: 60-90 min.
+    description: "Tue 09:00 weekly module-progress deep drafting — one module per week, up to 3 supporting cascade-candidates for that module."
     timeout_seconds: 5400
 
-  # ─── Monthly SFIF-tier audit — 1st of month 16:00 ────────────────────
-  - name: monthly-sfif-tier-audit
-    enabled: true
-    schedule: "*-*-01 16:00:00"
-    trigger:
-      type: openclaw-task
-      prompt: |
-        MONTHLY SFIF TIER AUDIT — 1st of month 16:00 ET.
-
-        STEP 0: process operator directives.
-
-        STEP 1 — observe: root-ghostproxy current state (gh CLI), all
-          cascade-candidates accepted this month, all sister-projects.yaml
-          changes.
-
-        STEP 2 — assess: where on the SFIF ladder is root-ghostproxy now?
-          Scaffold (current) → Foundation → Infrastructure → Features.
-          What modules / decisions advanced the tier this month?
-
-        STEP 3 — author monthly SFIF-tier-audit cascade-candidate at
-          wiki/domains/cross-domain/cascade-candidate-root-ghostproxy-sfif-monthly-<YYYY-MM>.md
-          summarizing: tier-progress, blockers, recommendations
-          (operator-stated requirements quoted verbatim where applicable).
-
-        STEP 4 — self-improvement (monthly depth audit).
-
-        STEP 5 — pipeline_post.
-
-        STEP 6 — surface to operator-decision-queue.md with
-          `cascade: root-ghostproxy` + `target: sfif-tier-audit` markers.
-
-        STEP 7 — declare to inbox.
-
-        BUDGET: 60 min.
-    description: "*-*-01 16:00 monthly SFIF-tier audit — tier-progress assessment + cascade-candidate audit page."
-    timeout_seconds: 4500
-
 # =============================================================================
-# Job-design rules (this Profile)
+# Cron design rules (this Profile v3)
 # =============================================================================
-# 1. ALL jobs autonomous (enabled: true) — agent operates 24/7
-# 2. Schedules: bootstrap (first-fire) + 30min sprint-tick + 08:30 morning
-#    + 14:00 daily + Tue 09:00 weekly + 1st 16:00 monthly
-# 3. Sprint cap PER PROPOSAL: Goldilocks (one module per draft). Sprint cap
-#    PER TICK: 1-3 (multi-module per tick authorized in sprint mode).
-#    Daily steady-state cap PER TICK: 0-2.
-# 4. Each tick processes operator-directives FIRST (step 0)
-# 5. Self-improvement check is non-skippable every tick
-# 6. NO auto-promotion EVER (DRAFTS + surfacing only)
-# 7. NO cross-project edits (cascade = surface + draft LOCALLY)
-# 8. ANTI-FREEZE / ANTI-SLOW / ANTI-STOP rules apply during sprint
-#    (operator amendments 2026-05-15)
+# 1. 3 jobs (down from v1's 6). No hardcoded sprint-tick — sprint = operator-
+#    invoked mode, picked up at step 1 branch.
+# 2. NO hardcoded date windows. Sprint is content-of-operator-directives.md,
+#    not a schedule.
+# 3. NO every:3m cadence. Operator-verbatim 2026-05-16: "PUT IT EVERY 3min
+#    if we need" — IF needed, i.e., when operator invokes sprint, NOT default.
+# 4. ALL jobs autonomous (enabled: true). Operator can disable via _state
+#    file or by editing this cron.yaml.
+# 5. Each tick processes operator-directives FIRST (step 0).
+# 6. R20 sacrosanct enforced at step 7 in every workflow path.
+# 7. NO auto-promotion. NO cross-project edits. NO scope-decisions in drafts.
+# 8. Anti-freeze / anti-slow / anti-stop apply throughout (not just sprint).
+#    Goldilocks scales: 0-1 steady → 1-2 fresh → 1-3 sprint.
+# =============================================================================
