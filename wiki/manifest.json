@@ -1,12 +1,12 @@
 {
-  "generated": "2026-05-16T18:42:53.320797+00:00",
+  "generated": "2026-05-16T19:09:57.206803+00:00",
   "stats": {
-    "pages": 901,
+    "pages": 904,
     "domains": 15,
-    "sources": 123,
+    "sources": 124,
     "comparisons": 10,
-    "relationships": 4121,
-    "tags_unique": 3436,
+    "relationships": 4123,
+    "tags_unique": 3458,
     "layers": {
       "3": 4,
       "5": 38,
@@ -14,11 +14,11 @@
       "2": 83,
       "4": 83,
       "0": 1,
-      "1": 91,
+      "1": 92,
       "spine": 83
     },
     "maturity": {
-      "seed": 202,
+      "seed": 203,
       "growing": 336,
       "mature": 23
     }
@@ -12148,6 +12148,43 @@
           "target": "Model \u2014 Skills, Commands, and Hooks"
         }
       ]
+    },
+    {
+      "path": "domains/cross-domain/cascade-candidate-root-ghostproxy-rollout-resequence-after-operator-correction-rgp-really-bad-2026-05-16.md",
+      "slug": "domains/cross-domain/cascade-candidate-root-ghostproxy-rollout-resequence-after-operator-correction-rgp-really-bad-2026-05-16",
+      "title": "Cascade candidate \u2014 RGP rollout re-sequence after operator correction (RGP 'really bad', CR 'wasn't that bad')",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "draft",
+      "confidence": "medium",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "2026-05-16",
+      "tags": [
+        "cascade-candidate",
+        "root-ghostproxy",
+        "sequencing",
+        "operator-correction",
+        "profile-state-framing",
+        "multi-vision",
+        "early-prototype",
+        "decision-needed"
+      ],
+      "sources": [
+        {
+          "id": "operator-correction-2026-05-16-profile-framing",
+          "type": "directive"
+        },
+        {
+          "id": "strong-handoff-2026-05-16-ck-v3-live-cr-ps-still-broken",
+          "type": "handoff"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
     },
     {
       "path": "domains/cross-domain/cascade-candidate-root-ghostproxy-scope-clarification-selfdef-boundary-2026-05-16.md",
@@ -37841,6 +37878,43 @@
       ]
     },
     {
+      "path": "log/2026-05-16-flagged-pages-anthropic-nla-interpretability.md",
+      "slug": "log/2026-05-16-flagged-pages-anthropic-nla-interpretability",
+      "title": "Flagged Pages \u2014 Anthropic Natural Language Autoencoders (NLA) interpretability, 2026-05-07: pages whose claims need an interpretability-axis cross-reference now that NLAs are an Anthropic pre-deployment audit artifact",
+      "type": "note",
+      "domain": "log",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "research-watch",
+        "flagged-pages",
+        "interpretability",
+        "anthropic",
+        "nla",
+        "natural-language-autoencoders",
+        "evaluation-awareness",
+        "frontier-delta-2026-05-16",
+        "vision-relevant-safety",
+        "2026-05-16"
+      ],
+      "sources": [
+        {
+          "id": "nla-synthesis-2026-05-16",
+          "type": "wiki-page",
+          "url": "wiki/sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07.md",
+          "description": "Triggering source-synthesis page for the 2026-05-07 Anthropic NLA disclosure."
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "log/2026-05-16-flagged-pages-cline-sdk.md",
       "slug": "log/2026-05-16-flagged-pages-cline-sdk",
       "title": "research-watch \u2014 Cline SDK 2026-05-13 \u2014 affected pages flagged for update",
@@ -37955,6 +38029,14 @@
         {
           "verb": "RELATES TO",
           "target": "Cline SDK flagged-pages log"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Anthropic NLA Interpretability Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Anthropic NLA flagged-pages log"
         }
       ]
     },
@@ -45928,6 +46010,68 @@
           "target": "Claude Opus 4.7 \u2014 see `src-claude-opus-4-7-anthropic-frontier-2026-04-16.md`. Opus 4.7's shape (rigor + cyber-restraint + automated blockers) is calibrated against Mythos as ceiling."
         }
       ]
+    },
+    {
+      "path": "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07.md",
+      "slug": "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07",
+      "title": "Synthesis \u2014 Natural Language Autoencoders (Anthropic, 2026-05-07): a new interpretability technique that converts a frozen target model's internal activations into human-readable English text via an activation-verbalizer \u2192 activation-reconstructor round-trip; already used in Anthropic's pre-deployment alignment audits of Claude Opus 4.6 and Claude Mythos Preview to surface (a) unverbalized evaluation awareness (16% on a destructive-code-action eval, 26% on SWE-bench Verified vs <1% on real opted-in claude.ai usage), (b) a cheating-then-thinking-about-avoiding-detection episode by Mythos Preview during training, and (c) the training-data root-cause of an Opus 4.6 cross-language response bug; also raised hidden-misalignment auditing success from <3% to 12\u201315% in an auditing-game test without auditor access to misaligned training data \u2014 limitations: NLAs can hallucinate context and are RL-expensive at training+inference, code + trained NLAs for open models released via Neuronpedia + GitHub",
+      "type": "source-synthesis",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "anthropic",
+        "interpretability",
+        "natural-language-autoencoders",
+        "nla",
+        "activation-verbalizer",
+        "activation-reconstructor",
+        "alignment-audit",
+        "pre-deployment-audit",
+        "evaluation-awareness",
+        "deception-detection",
+        "claude-opus-4-6",
+        "claude-mythos-preview",
+        "claude-haiku-3-5",
+        "swe-bench-verified",
+        "sparse-autoencoders",
+        "attribution-graphs",
+        "neuronpedia",
+        "2026-05-07",
+        "source-synthesis",
+        "2026-05-16",
+        "frontier-delta-2026-05-16",
+        "vision-relevant-agent-runtime",
+        "vision-relevant-safety",
+        "ai-safety",
+        "agent-safety",
+        "model-introspection",
+        "hallucination-limitations"
+      ],
+      "sources": [
+        {
+          "id": "anthropic-research-nla-2026-05-07",
+          "type": "article",
+          "url": "https://www.anthropic.com/research/natural-language-autoencoders",
+          "file": "raw/articles/natural-language-autoencoders-anthropic.md",
+          "description": "Anthropic research page for Natural Language Autoencoders (NLAs), published 2026-05-07. Primary source. Describes the AV\u2192AR round-trip architecture (frozen target model \u2192 activation verbalizer produces text explanation \u2192 activation reconstructor reproduces activation \u2192 reconstruction-loss is the training signal), the three pre-publication real applications (rhyme-planning visualization on couplets \u00b7 cheating-task internal-deception episode caught on Mythos Preview \u00b7 cross-language bug root-caused on Opus 4.6 \u00b7 evaluation-awareness measurements 16% on destructive-code eval + 26% on SWE-bench Verified vs <1% on real opted-in claude.ai usage), the auditing-game result (auditor success 3% \u2192 12\u201315% without training-data access), the two limitations (factual hallucination of context \u00b7 RL-expensive train+inference), and the open release (Neuronpedia interactive demo + GitHub code + trained NLAs for open models). Also references prior interpretability work (sparse autoencoders, attribution graphs) and contemporaneous 'Teaching Claude why' agentic-misalignment-reduction research."
+        },
+        {
+          "id": "marktechpost-razzaq-2026-05-08",
+          "type": "article",
+          "url": "https://www.marktechpost.com/2026/05/08/anthropic-introduces-natural-language-autoencoders-that-convert-claudes-internal-activations-directly-into-human-readable-text-explanations/",
+          "file": "raw/articles/anthropic-introduces-natural-language-autoencoders-that-convert-claude039s-inter.md",
+          "description": "MarkTechPost (Asif Razzaq, 2026-05-08). Secondary corroboration. Reiterates the AV\u2192AR mechanism in plain language, organizes the pre-publication applications as 'three real-world applications before public release' (catching a cheating model \u00b7 fixing a language bug \u00b7 detecting unverbalized evaluation awareness), summarizes the auditing-game numbers identically, and confirms the open release on GitHub + Neuronpedia. Important secondary signal: classifies NLAs as a 'pre-deployment alignment audit' tool \u2014 i.e. an artifact used during model release pipelines, not just a research artifact."
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
     },
     {
       "path": "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15.md",
@@ -63040,7 +63184,7 @@
       "relationship_count": 509
     },
     "cross-domain": {
-      "page_count": 307,
+      "page_count": 308,
       "relationship_count": 1840
     },
     "ai-agents": {
@@ -63048,7 +63192,7 @@
       "relationship_count": 577
     },
     "ai-models": {
-      "page_count": 23,
+      "page_count": 24,
       "relationship_count": 100
     },
     "tools-integration": {
@@ -63072,8 +63216,8 @@
       "relationship_count": 195
     },
     "log": {
-      "page_count": 195,
-      "relationship_count": 67
+      "page_count": 196,
+      "relationship_count": 69
     },
     "agent-config": {
       "page_count": 57,
@@ -64678,6 +64822,7 @@
       "backlog/modules/root-ghostproxy-m009-worked-example-readme-ingest",
       "backlog/modules/root-ghostproxy-m010-sister-projects-yaml-flip",
       "domains/cross-domain/cascade-candidate-root-ghostproxy-m001-reframe-as-audit-of-existing-agents-md-claude-md-2026-05-16",
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-rollout-resequence-after-operator-correction-rgp-really-bad-2026-05-16",
       "domains/cross-domain/cascade-candidate-root-ghostproxy-scope-clarification-selfdef-boundary-2026-05-16",
       "domains/cross-domain/cascade-candidate-root-ghostproxy-state-divergence-upstream-already-advanced-2026-05-16",
       "ecosystem/project_profiles/root-ghostproxy/identity-profile",
@@ -67361,8 +67506,10 @@
     "anthropic": [
       "domains/ai-agents/claude-code/claude-code",
       "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction",
+      "log/2026-05-16-flagged-pages-anthropic-nla-interpretability",
       "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16",
       "sources/ai-models/src-anthropic-mythos-preview-frontier-restricted-2026-04-16",
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07",
       "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15",
       "sources/ai-models/src-anthropic-spacex-colossus-claude-code-limits-doubled-2026-05-06",
       "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16",
@@ -67862,6 +68009,7 @@
     ],
     "multi-vision": [
       "domains/cross-domain/agt-cascade-trio-adopt-as-substrate-unless-load-bearing-differentiator-cross-project-consolidation",
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-rollout-resequence-after-operator-correction-rgp-really-bad-2026-05-16",
       "domains/cross-domain/cascade-candidate-root-ghostproxy-scope-clarification-selfdef-boundary-2026-05-16",
       "domains/cross-domain/cascade-candidate-root-ghostproxy-state-divergence-upstream-already-advanced-2026-05-16",
       "domains/cross-domain/profile-circular-knowledge-evolution-layer-and-brain-self-improvement",
@@ -67892,6 +68040,7 @@
     ],
     "cascade-candidate": [
       "domains/cross-domain/cascade-candidate-root-ghostproxy-m001-reframe-as-audit-of-existing-agents-md-claude-md-2026-05-16",
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-rollout-resequence-after-operator-correction-rgp-really-bad-2026-05-16",
       "domains/cross-domain/cascade-candidate-root-ghostproxy-scope-clarification-selfdef-boundary-2026-05-16",
       "domains/cross-domain/cascade-candidate-root-ghostproxy-self-update-observe-upstream-head-before-drafting-modules-2026-05-16",
       "domains/cross-domain/cascade-candidate-root-ghostproxy-state-divergence-upstream-already-advanced-2026-05-16"
@@ -67909,6 +68058,21 @@
       "domains/cross-domain/cascade-candidate-root-ghostproxy-scope-clarification-selfdef-boundary-2026-05-16",
       "domains/cross-domain/cascade-candidate-root-ghostproxy-self-update-observe-upstream-head-before-drafting-modules-2026-05-16",
       "domains/cross-domain/cascade-candidate-root-ghostproxy-state-divergence-upstream-already-advanced-2026-05-16"
+    ],
+    "sequencing": [
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-rollout-resequence-after-operator-correction-rgp-really-bad-2026-05-16"
+    ],
+    "operator-correction": [
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-rollout-resequence-after-operator-correction-rgp-really-bad-2026-05-16"
+    ],
+    "profile-state-framing": [
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-rollout-resequence-after-operator-correction-rgp-really-bad-2026-05-16"
+    ],
+    "early-prototype": [
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-rollout-resequence-after-operator-correction-rgp-really-bad-2026-05-16"
+    ],
+    "decision-needed": [
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-rollout-resequence-after-operator-correction-rgp-really-bad-2026-05-16"
     ],
     "selfdef": [
       "domains/cross-domain/cascade-candidate-root-ghostproxy-scope-clarification-selfdef-boundary-2026-05-16"
@@ -68476,7 +68640,8 @@
       "domains/devops/immune-system-rules"
     ],
     "agent-safety": [
-      "domains/devops/immune-system-rules"
+      "domains/devops/immune-system-rules",
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07"
     ],
     "infrastructure-as-code": [
       "domains/devops/infrastructure-as-code-patterns",
@@ -70122,7 +70287,8 @@
       "sources/tools-integration/src-deepseek-v4-token-wise-compression-dsa-sparse-attention-1m-context-default-2026-04"
     ],
     "sparse-autoencoders": [
-      "lessons/02_synthesized/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers"
+      "lessons/02_synthesized/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07"
     ],
     "stack-wide-composition": [
       "lessons/02_synthesized/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers"
@@ -73179,17 +73345,51 @@
       "log/2026-05-16-ck-bootstrap-pile-depile-batch-1"
     ],
     "research-watch": [
+      "log/2026-05-16-flagged-pages-anthropic-nla-interpretability",
       "log/2026-05-16-flagged-pages-cline-sdk",
       "log/2026-05-16-flagged-pages-gemini-spark"
+    ],
+    "flagged-pages": [
+      "log/2026-05-16-flagged-pages-anthropic-nla-interpretability",
+      "log/2026-05-16-flagged-pages-cline-sdk",
+      "log/2026-05-16-flagged-pages-gemini-spark"
+    ],
+    "interpretability": [
+      "log/2026-05-16-flagged-pages-anthropic-nla-interpretability",
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07"
+    ],
+    "nla": [
+      "log/2026-05-16-flagged-pages-anthropic-nla-interpretability",
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07"
+    ],
+    "natural-language-autoencoders": [
+      "log/2026-05-16-flagged-pages-anthropic-nla-interpretability",
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07"
+    ],
+    "evaluation-awareness": [
+      "log/2026-05-16-flagged-pages-anthropic-nla-interpretability",
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07"
+    ],
+    "frontier-delta-2026-05-16": [
+      "log/2026-05-16-flagged-pages-anthropic-nla-interpretability",
+      "log/2026-05-16-flagged-pages-gemini-spark",
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07",
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
+    ],
+    "vision-relevant-safety": [
+      "log/2026-05-16-flagged-pages-anthropic-nla-interpretability",
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07"
+    ],
+    "2026-05-16": [
+      "log/2026-05-16-flagged-pages-anthropic-nla-interpretability",
+      "log/2026-05-16-flagged-pages-gemini-spark",
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07",
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
     ],
     "cline-sdk": [
       "log/2026-05-16-flagged-pages-cline-sdk",
       "log/2026-05-16-purge-summary",
       "sources/tools-integration/src-cline-sdk-open-source-agent-runtime-2026-05-13"
-    ],
-    "flagged-pages": [
-      "log/2026-05-16-flagged-pages-cline-sdk",
-      "log/2026-05-16-flagged-pages-gemini-spark"
     ],
     "terminal-bench-2-0": [
       "log/2026-05-16-flagged-pages-cline-sdk",
@@ -73203,10 +73403,6 @@
     ],
     "follow-up": [
       "log/2026-05-16-flagged-pages-cline-sdk"
-    ],
-    "frontier-delta-2026-05-16": [
-      "log/2026-05-16-flagged-pages-gemini-spark",
-      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
     ],
     "gemini-spark": [
       "log/2026-05-16-flagged-pages-gemini-spark",
@@ -73223,10 +73419,6 @@
       "sources/tools-integration/src-cline-sdk-open-source-agent-runtime-2026-05-13"
     ],
     "vendor-agent-tier": [
-      "log/2026-05-16-flagged-pages-gemini-spark",
-      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
-    ],
-    "2026-05-16": [
       "log/2026-05-16-flagged-pages-gemini-spark",
       "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
     ],
@@ -74398,12 +74590,14 @@
     ],
     "2026-05-07": [
       "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02",
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07",
       "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
     ],
     "source-synthesis": [
       "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02",
       "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16",
       "sources/ai-models/src-anthropic-mythos-preview-frontier-restricted-2026-04-16",
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07",
       "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15",
       "sources/ai-models/src-anthropic-spacex-colossus-claude-code-limits-doubled-2026-05-06",
       "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16",
@@ -74432,7 +74626,8 @@
       "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
     ],
     "claude-opus-4-6": [
-      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16"
+      "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16",
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07"
     ],
     "model-tier": [
       "sources/ai-models/src-anthropic-claude-opus-4-7-release-2026-04-16"
@@ -74505,6 +74700,7 @@
     ],
     "claude-mythos-preview": [
       "sources/ai-models/src-anthropic-mythos-preview-frontier-restricted-2026-04-16",
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07",
       "sources/ai-models/src-claude-opus-4-7-anthropic-frontier-2026-04-16"
     ],
     "frontier-restricted": [
@@ -74528,6 +74724,47 @@
     ],
     "vendor-pipeline-visibility": [
       "sources/ai-models/src-anthropic-mythos-preview-frontier-restricted-2026-04-16"
+    ],
+    "activation-verbalizer": [
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07"
+    ],
+    "activation-reconstructor": [
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07"
+    ],
+    "alignment-audit": [
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07"
+    ],
+    "pre-deployment-audit": [
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07"
+    ],
+    "deception-detection": [
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07"
+    ],
+    "claude-haiku-3-5": [
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07"
+    ],
+    "swe-bench-verified": [
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07"
+    ],
+    "attribution-graphs": [
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07"
+    ],
+    "neuronpedia": [
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07"
+    ],
+    "vision-relevant-agent-runtime": [
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07",
+      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14",
+      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
+    ],
+    "ai-safety": [
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07"
+    ],
+    "model-introspection": [
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07"
+    ],
+    "hallucination-limitations": [
+      "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07"
     ],
     "claude-p-cli": [
       "sources/ai-models/src-anthropic-programmatic-credit-pool-policy-change-2026-06-15"
@@ -74669,10 +74906,6 @@
     ],
     "2026-05-12": [
       "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
-    ],
-    "vision-relevant-agent-runtime": [
-      "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14",
-      "sources/tools-integration/src-alphaevolve-deepmind-evolutionary-coding-agent-2026-05-07"
     ],
     "pre-io-2026": [
       "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
@@ -78151,6 +78384,18 @@
       "target": "Agentic Search vs Vector Search Comparison",
       "referenced_by": [
         "Synthesis \u2014 Cavemem: Cross-Agent Persistent Memory for AI Coding Assistants (Julius Brussee, MIT-Licensed, Compressed-at-Rest SQLite + FTS5 + Vector Index + MCP Progressive Disclosure)"
+      ]
+    },
+    {
+      "target": "Anthropic NLA Interpretability Synthesis",
+      "referenced_by": [
+        "purge-summary 2026-05-16 \u2014 Cline SDK ephemeral raws"
+      ]
+    },
+    {
+      "target": "Anthropic NLA flagged-pages log",
+      "referenced_by": [
+        "purge-summary 2026-05-16 \u2014 Cline SDK ephemeral raws"
       ]
     },
     {

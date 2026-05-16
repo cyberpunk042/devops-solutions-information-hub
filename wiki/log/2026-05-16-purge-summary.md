@@ -41,12 +41,30 @@ Per LIFECYCLE.md ephemeral-raw policy. Synthesis `wiki/sources/tools-integration
 
 The synthesis frontmatter `sources[].file` fields retain references to the purged raw paths as provenance markers — standard practice (cf. prior purge logs `2026-05-15-purge-summary*`). Auditor can reconstruct via the source URL fields if re-fetch needed.
 
+## Addendum — NLA tick (2026-05-16 14:45 ET)
+
+Second synthesis shipped this date: `wiki/sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07.md` (Anthropic Natural Language Autoencoders, 2026-05-07). Pipeline post: 0 errors / PASS / 903 pages / 4121 relationships. Two raws fetched; one purged, one retained per always-keep list.
+
+| Purged raw | Domain | Raw lines | Synthesis line-ratio | Lifecycle list | Rationale |
+|---|---|---|---|---|---|
+| `raw/articles/anthropic-introduces-natural-language-autoencoders-that-convert-claude039s-inter.md` | marktechpost.com | 8 | 103/16 = 6.44 (combined) | path-default ephemeral (raw/articles/) | Trade press; signal fully extracted into NLA source-synthesis Key Insights + Reference card; no always-keep override |
+
+| Retained raw | Domain | Reason |
+|---|---|---|
+| `raw/articles/natural-language-autoencoders-anthropic.md` | www.anthropic.com/research | LIFECYCLE.md `always_keep` list (anthropic.com/research) — reference-value, retained |
+
+Purge criteria check for the marktechpost raw: (1) path/domain ephemeral ✓ (raw/articles/ + marktechpost.com not on always-keep) (2) corresponding synthesis exists ✓ (3) line-ratio 6.44 ≥ 0.25 ✓ (4) pipeline_post 0-error this tick ✓ (5) no `lifecycle: keep` frontmatter ✓. All five hold.
+
 ## Relationships
 
 - RELATES TO: [[src-cline-sdk-open-source-agent-runtime-2026-05-13|Cline SDK Synthesis]]
 - RELATES TO: [[2026-05-16-flagged-pages-cline-sdk|Cline SDK flagged-pages log]]
+- RELATES TO: [[src-anthropic-natural-language-autoencoders-interpretability-2026-05-07|Anthropic NLA Interpretability Synthesis]]
+- RELATES TO: [[2026-05-16-flagged-pages-anthropic-nla-interpretability|Anthropic NLA flagged-pages log]]
 
 ## Backlinks
 
 [[Cline SDK Synthesis]]
 [[Cline SDK flagged-pages log]]
+[[Anthropic NLA Interpretability Synthesis]]
+[[Anthropic NLA flagged-pages log]]

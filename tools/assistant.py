@@ -1030,6 +1030,99 @@ def cmd_profiles(_args: argparse.Namespace) -> int:
 
 
 # ───────────────────────────────────────────────────────────────────────
+# Gateway preflight (shared by install / uninstall / status)
+# ───────────────────────────────────────────────────────────────────────
+
+
+def _preflight_gateway_health(auto_fix: bool = False) -> int:
+    """Detect the two failure modes that silently break isolated-agent setup:
+      (A) legacy `agents.defaults.agentRuntime` key in ~/.openclaw/openclaw.json
+          → ignored by gateway 2026.5.12+, causes isolated cron setup to hang ~55s
+      (B) gateway systemd service using a version-managed Node binary (nvm path)
+          → service breaks after Node upgrades; runner spawn intermittently fails
+
+    Returns 0 if healthy or fixed. Returns 1 (non-fatal) if issues found and
+    auto_fix=False; the caller may proceed but operator was warned.
+    """
+    issues: list[tuple[str, str]] = []  # (label, remediation)
+
+    # (A) Legacy config key probe
+    try:
+        cfg_path = Path.home() / ".openclaw" / "openclaw.json"
+        if cfg_path.exists():
+            cfg = json.loads(cfg_path.read_text())
+            if cfg.get("agents", {}).get("defaults", {}).get("agentRuntime"):
+                issues.append((
+                    "Legacy `agents.defaults.agentRuntime` key present (ignored by gateway 2026.5.12+).",
+                    "openclaw doctor --fix --non-interactive",
+                ))
+    except Exception:
+        pass  # don't fail preflight on a config read error — let install proceed
+
+    # (B) Gateway service Node-binary probe
+    try:
+        svc = Path.home() / ".config" / "systemd" / "user" / "openclaw-gateway.service"
+        if svc.exists():
+            svc_text = svc.read_text()
+            # version-manager signatures: nvm, asdf, nodenv, fnm, volta
+            for marker in (".nvm/", ".asdf/", ".nodenv/", ".fnm/", ".volta/"):
+                if marker in svc_text:
+                    issues.append((
+                        f"Gateway systemd service uses version-managed Node ({marker.strip('/')}). "
+                        "Risk: isolated agent setup hangs ~55s when runner spawn fails to resolve.",
+                        "openclaw gateway install --force  (after ensuring a system Node ≥22 LTS or 24 is on PATH)",
+                    ))
+                    break
+    except Exception:
+        pass
+
+    if not issues:
+        return 0
+
+    warn("Gateway preflight — issues detected that will silently break isolated cron runs:")
+    for label, fix in issues:
+        warn(f"  - {label}")
+        info(f"    Fix: {fix}")
+
+    if auto_fix:
+        info("Auto-fix requested — applying remediations now…")
+        rc = 0
+        # Apply doctor --fix only if legacy key issue was the trigger
+        for label, _fix in issues:
+            if "Legacy" in label:
+                proc = run(["openclaw", "doctor", "--fix", "--non-interactive"], check=False)
+                if proc.returncode != 0:
+                    warn(f"    openclaw doctor --fix returned {proc.returncode}")
+                    rc = 1
+                break
+        # Service-config issue requires a system Node; we don't auto-install Node.
+        # If --force install is safe (system Node already present), apply it.
+        for label, _fix in issues:
+            if "version-managed Node" in label:
+                # Probe: is there a non-version-managed Node on PATH?
+                node_proc = run(["bash", "-lc", "command -v node"], check=False)
+                node_path = node_proc.stdout.strip() if node_proc.returncode == 0 else ""
+                vm = any(m in node_path for m in (".nvm/", ".asdf/", ".nodenv/", ".fnm/", ".volta/"))
+                if node_path and not vm:
+                    proc = run(["openclaw", "gateway", "install", "--force"], check=False)
+                    if proc.returncode == 0:
+                        ok("    gateway service re-installed against system Node")
+                        # Restart gateway so the new service definition takes effect
+                        run(["systemctl", "--user", "restart", "openclaw-gateway"], check=False)
+                    else:
+                        warn(f"    openclaw gateway install --force returned {proc.returncode}")
+                        rc = 1
+                else:
+                    warn("    no system Node detected on PATH — install Node ≥22 LTS first, then re-run with --auto-fix-gateway")
+                    rc = 1
+                break
+        return rc
+
+    info("Proceeding without auto-fix. Re-run with `--auto-fix-gateway` to remediate, or apply manually before installing.")
+    return 1  # non-fatal — caller decides
+
+
+# ───────────────────────────────────────────────────────────────────────
 # Subcommand: install
 # ───────────────────────────────────────────────────────────────────────
 
@@ -1037,11 +1130,16 @@ def cmd_profiles(_args: argparse.Namespace) -> int:
 def cmd_install(args: argparse.Namespace) -> int:
     name = args.profile
     stage(f"Install assistant Profile: {name}")
-    info("Stages: 1) validate profile + workspace · 2) validate vendor config · 3) register")
-    info("        agent via `openclaw agents add` · 3b) wire project MCP server")
+    info("Stages: 0) preflight gateway health · 1) validate profile + workspace · 2) validate vendor")
+    info("        config · 3) register agent via `openclaw agents add` · 3b) wire project MCP server")
     info("        · 4) register cron jobs via `openclaw cron add` · 5) install systemd unit")
     info("        for the gateway daemon · 6) wire surfaces. Idempotent: re-running is safe.")
     print()
+
+    # 0. Gateway health preflight (skip silently if --skip-preflight)
+    if not getattr(args, "skip_preflight", False):
+        stage("[0/6] Preflight: gateway health")
+        _preflight_gateway_health(auto_fix=getattr(args, "auto_fix_gateway", False))
 
     # 1. validate profile
     stage("[1/6] Validate Profile YAML")
@@ -1744,6 +1842,13 @@ def cmd_uninstall(args: argparse.Namespace) -> int:
     """
     name = args.profile
     stage(f"Uninstall {name} (preserves Profile YAML + vendor configs)")
+
+    # ─── 0. Gateway health preflight ───────────────────────────────────────
+    # Same surface as install — surface stale gateway state so the operator
+    # knows BEFORE we issue uninstall RPCs that may silently no-op.
+    if not getattr(args, "skip_preflight", False):
+        _preflight_gateway_health(auto_fix=False)
+
     # Determine workspace_mode from Profile (need it to decide whether to remove worktree/clone)
     profile = load_yaml(profile_path(name)) if profile_path(name).exists() else {}
     ws_mode = profile.get("workspace_mode", "shared")
@@ -3387,6 +3492,8 @@ def build_parser() -> argparse.ArgumentParser:
     sp.add_argument("--no-mcp", action="store_true", help="Skip wiring this project's MCP server into OpenClaw gateway")
     sp.add_argument("--no-cron", action="store_true", help="Skip registering per-profile cron jobs into the gateway")
     sp.add_argument("--no-wake", action="store_true", help="Skip firing the first cron job immediately after install (the 'agent comes alive' step)")
+    sp.add_argument("--skip-preflight", action="store_true", help="Skip the gateway health preflight (legacy keys + nvm Node detection)")
+    sp.add_argument("--auto-fix-gateway", action="store_true", help="If preflight finds gateway issues, auto-apply remediations (doctor --fix + gateway install --force when system Node present)")
     sp.set_defaults(func=cmd_install)
 
     sp = sub.add_parser("up", help="Start the assistant")
@@ -3431,6 +3538,7 @@ def build_parser() -> argparse.ArgumentParser:
     sp.add_argument("profile")
     sp.add_argument("--remove-workspace", action="store_true",
                     help="For worktree/own-workspace modes, also delete the workspace directory.")
+    sp.add_argument("--skip-preflight", action="store_true", help="Skip the gateway health preflight check")
     sp.set_defaults(func=cmd_uninstall)
 
     sp = sub.add_parser("modes", help="Show available workspace_mode values + tradeoffs")
