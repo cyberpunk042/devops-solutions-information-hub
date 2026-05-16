@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-16T19:09:57.206803+00:00",
+  "generated": "2026-05-16T20:00:56.204139+00:00",
   "stats": {
     "pages": 904,
     "domains": 15,
@@ -12173,11 +12173,13 @@
       "sources": [
         {
           "id": "operator-correction-2026-05-16-profile-framing",
-          "type": "directive"
+          "type": "directive",
+          "file": "raw/notes/2026-05-16-operator-correction-profile-state-framing-cr-wasnt-that-bad-rgp-really-bad-all-early-prototypes.md"
         },
         {
           "id": "strong-handoff-2026-05-16-ck-v3-live-cr-ps-still-broken",
-          "type": "handoff"
+          "type": "handoff",
+          "file": "wiki/log/2026-05-16-strong-handoff-ck-v3-live-cr-ps-still-broken.md"
         }
       ],
       "layer": "",

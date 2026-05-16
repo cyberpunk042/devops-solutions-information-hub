@@ -16,8 +16,10 @@ decision_needed: rgp-rollout-resequence-after-operator-correction-2026-05-16
 sources:
   - id: operator-correction-2026-05-16-profile-framing
     type: directive
+    file: raw/notes/2026-05-16-operator-correction-profile-state-framing-cr-wasnt-that-bad-rgp-really-bad-all-early-prototypes.md
   - id: strong-handoff-2026-05-16-ck-v3-live-cr-ps-still-broken
     type: handoff
+    file: wiki/log/2026-05-16-strong-handoff-ck-v3-live-cr-ps-still-broken.md
 related:
   - "[[cascade-candidate-root-ghostproxy-state-divergence-upstream-already-advanced-2026-05-16|Q86 — state-divergence]]"
   - "[[cascade-candidate-root-ghostproxy-m001-reframe-as-audit-of-existing-agents-md-claude-md-2026-05-16|Q87 — M001 reframe]]"
@@ -28,6 +30,10 @@ tags: [cascade-candidate, root-ghostproxy, sequencing, operator-correction, prof
 ---
 
 # Cascade candidate — RGP rollout re-sequence after operator correction
+
+## Summary
+
+A fresh operator-correction at 2026-05-16 12:44 ET reframes the four AI-assistant Profile states: RGP is "really bad" (not the handoff's "minor bugs only"), CR "wasn't that bad" (not the handoff's "STILL has the trash bugs"), all four are "very early prototype" with ongoing evolution. This inverts the strong-handoff's premise that drove the sequence *"RGP install AFTER CR + PS v3 verified"*. RGP-rollout profile surfaces 5 visions (A unchanged / B RGP-earlier / C halt-pending-clarification / D drop-sequencing / E defer) for operator decision; profile makes NO sequence change until operator picks a vision. Cross-project boundary intact (no proposed edits to root-ghostproxy repo). R20 sacrosanct (no deletions).
 
 > [!signal] FRESH operator-correction (2026-05-16, 12:44 ET) reframes the RGP-readiness substrate that the strong handoff (same morning, 09:xx ET) used to set "RGP install AFTER CR + PS v3 verified". This candidate surfaces — does NOT decide — what that reframing implies for RGP sequencing.
 
