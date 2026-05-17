@@ -94,9 +94,7 @@ The sovereign-os arc's harness applied this rule and surfaced two real wiring bu
 ## Relationships
 
 - BUILDS ON: [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]] — A harness that declares Layer 3 coverage but ships only Layer 1+2 fails this principle.
-- BUILDS ON: P4 (Declarations Are Aspirational Until Infrastructure Verifies Them) — schema-conformance is a declaration; on-disk behavior is the verification.
-- BUILDS ON: SFIF / [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers]] — Layer 1 ships first; Layer 3 ships during Infrastructure tier, not deferred to "post-Gate-5".
-- ENABLES: future projects' TDD planning — Layer 3 is non-optional; budget it from the start.
+- BUILDS ON: [[SFIF / [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers]] — Layer 1 ships first; Layer 3 ships during Infrastructure tier, not deferred to "post-Gate-5".]]
 - RELATES TO: [[infrastructure-must-be-reproducible-not-manual|Infrastructure Must Be Reproducible]] — the tested artifact must be reproducibly buildable in CI for Layer 3 to be repeatable.
 
 ## Source — the sovereign-os arc concrete instance
@@ -116,3 +114,9 @@ This draft promotes to `02_synthesized` after:
 - A second project (not sovereign-os) applies the rule and reports whether Layer 3 substantive tests catch bugs the schema+unit layers missed. If yes → synthesized. If no over 3 projects → re-examine the lesson.
 - The arc's Stage-2 follow-up rounds confirm Layer 3 keeps catching wiring bugs as scripts evolve (not a one-time fluke).
 - The selfdef Stage-2 work (SDDs 013-016) similarly applies the rule.
+
+## Backlinks
+
+[[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
+[[Models Are Built in Layers]]
+[[Infrastructure Must Be Reproducible]]

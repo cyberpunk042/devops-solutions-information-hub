@@ -112,4 +112,17 @@ See Done When — verifiable CPU-inference throughput + pinning correctness chec
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[sain-01-sovereign-node|Milestone — SAIN-01 Sovereign AI Node]]
+[[e101-sovereign-os-build|E101 — Sovereign OS Build]]
+[[e102-zfs-storage-layout|E102 — ZFS Storage Layout]]
+[[e100-hardware-foundation|E100 — Hardware Foundation]]
+[[e107-weaver-state-fabric|E107 — Weaver State Fabric]]
+[[e108-load-balancing-profiles|E108 — Load-Balancing Profiles]]
+[[Concept — SRP Trinity (Pulse module)]]
+[[Concept — 1-bit Ternary Weights]]
+[[Concept — Dual-CCD Cache Partitioning]]
+[[SAIN-01 Sovereign Node Spec]]
+[[17.1]]
+[[19]]
+[[20]]
+[[e109-dflash-integration|E109 — DFlash Integration]]

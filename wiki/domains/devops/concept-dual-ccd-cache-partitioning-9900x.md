@@ -202,11 +202,15 @@ The `friction-audit` script in the SAIN-01 spec is the equivalent boot-time chec
 - IMPLEMENTS: CCD-aware thread pinning for cache-locality preservation
 - ENABLES: [[concept-srp-trinity-pulse-weaver-auditor|SRP Trinity]] (physical realization of the software SRP boundary)
 - ENABLES: [[concept-1bit-ternary-weights|1-bit Ternary Weights]] (Pulse's L3-resident inference path)
-- CONSTRAINS: 9900X minimum CPU (lower SKUs lack dual-CCD; partition collapses)
 - CONSTRAINED BY: SMT policy (thread masks change if SMT is disabled)
 - RELATES TO: [[concept-zfs-tiered-storage-llm-inference|ZFS Tiered Storage]] (compression threads sit on the partition's host cores)
-- RELATES TO: NUMA scheduling concepts more broadly (dual-CCD is NUMA-like at the cache level, even on a single-socket part)
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[Zen 5 AVX-512 single-cycle datapath]]
+[[SAIN-01 Sovereign Node Spec]]
+[[CCD-aware thread pinning for cache-locality preservation]]
+[[SRP Trinity]]
+[[concept-1bit-ternary-weights|1-bit Ternary Weights]]
+[[SMT policy (thread masks change if SMT is disabled)]]
+[[ZFS Tiered Storage]]

@@ -97,4 +97,15 @@ See Done When criteria — each is a verifiable storage-layer checkpoint.
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[sain-01-sovereign-node|Milestone — SAIN-01 Sovereign AI Node]]
+[[e101-sovereign-os-build|E101 — Sovereign OS Build]]
+[[e104-tetragon-guardian-perimeter|E104 — Tetragon + Guardian Perimeter]]
+[[e106-pulse-vector-runtime|E106 — Pulse Vector Runtime]]
+[[e107-weaver-state-fabric|E107 — Weaver State Fabric]]
+[[e108-load-balancing-profiles|E108 — Load-Balancing Profiles]]
+[[e110-model-catalog|E110 — Model Catalog]]
+[[SAIN-01 Sovereign Node Spec]]
+[[4.1]]
+[[7.2]]
+[[Concept — ZFS Tiered Storage for LLM Inference]]
+[[e109-dflash-integration|E109 — DFlash Integration]]

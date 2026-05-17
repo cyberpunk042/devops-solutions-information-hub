@@ -266,16 +266,16 @@ Tetragon is fundamentally faster than the userspace mechanisms because it operat
 
 ## Relationships
 
-- COMPARES TO: `wall(1)` broadcast TTY notification mechanism
-- COMPARES TO: `write(1)` per-user TTY notification mechanism
 - COMPARES TO: Tetragon eBPF kernel enforcement framework
 - BUILDS ON: [[concept-srp-trinity-pulse-weaver-auditor|SRP Trinity concept]] (Auditor module = Tetragon substrate)
 - BUILDS ON: [[concept-vfio-gpu-isolation-amd-iommu|VFIO GPU Isolation]] (kernel-space isolation pattern; Tetragon enforces inside the VFIO-sandboxed container)
 - COMPLEMENTS: [[cmp-bitnet-vs-fp16-execution-cost|BitNet vs FP16]] (orthogonal — execution-cost choice; this is perimeter choice)
 - USED BY: [[src-sain-01-sovereign-node-spec|SAIN-01 Sovereign Node Spec]] (Auditor = Tetragon; Weaver could fire wall/write)
-- RELATES TO: existing `cyberpunk042/selfdef` notifier chain (wall + write are 2 of 12 selfdef channels; Tetragon is the enforcement layer used by selfdef's `agent-guard` module — same pattern)
-- ENABLES: future SAIN-01 + selfdef cross-repo policy merge (single Tetragon daemon authoring authority)
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[Tetragon eBPF kernel enforcement framework]]
+[[SRP Trinity concept]]
+[[VFIO GPU Isolation]]
+[[BitNet vs FP16]]
+[[SAIN-01 Sovereign Node Spec]]

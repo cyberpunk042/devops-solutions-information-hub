@@ -210,4 +210,22 @@ Stage-2 is **not** part of this milestone. This milestone delivers the host; Sta
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[e100-hardware-foundation|E100 — Hardware Foundation]]
+[[e101-sovereign-os-build|E101 — Sovereign OS Build]]
+[[e102-zfs-storage-layout|E102 — ZFS Storage Layout]]
+[[e103-vfio-isolation|E103 — VFIO Isolation]]
+[[e104-tetragon-guardian-perimeter|E104 — Tetragon + Guardian Perimeter]]
+[[e105-network-segregation|E105 — Network Segregation]]
+[[e106-pulse-vector-runtime|E106 — Pulse Vector Runtime]]
+[[e107-weaver-state-fabric|E107 — Weaver State Fabric]]
+[[e108-load-balancing-profiles|E108 — Load-Balancing Profiles]]
+[[e109-dflash-integration|E109 — DFlash Integration]]
+[[E110 — Model Catalog (Ling / Nemotron / etc.)]]
+[[Synthesis — SAIN-01 Sovereign Node Master Spec]]
+[[Concept — SRP Trinity (Pulse, Weaver, Auditor)]]
+[[Synthesis — BitNet b1.58 family]]
+[[Synthesis — DFlash]]
+[[Synthesis — Zen 5 AVX-512]]
+[[L0 verbatim dump]]
+[[Operator-directive log]]
+[[e110-model-catalog|E110 — Model Catalog]]

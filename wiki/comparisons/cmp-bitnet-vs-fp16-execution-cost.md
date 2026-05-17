@@ -216,7 +216,6 @@ Both paths cost roughly the same to train when amortized across model size. Tern
 
 ## Relationships
 
-- COMPARES TO: ternary `{−1, 0, +1}` weight representation vs FP16 full-precision baseline (logical model architecture held constant; execution path varies)
 - BUILDS ON: [[src-bitnet-b158-ternary-llm|BitNet b1.58 synthesis]]
 - BUILDS ON: [[concept-1bit-ternary-weights|1-bit Ternary Weights concept]]
 - BUILDS ON: [[src-zen5-avx512-single-cycle|Zen 5 AVX-512 synthesis]]
@@ -227,4 +226,10 @@ Both paths cost roughly the same to train when amortized across model size. Tern
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[BitNet b1.58 synthesis]]
+[[1-bit Ternary Weights concept]]
+[[Zen 5 AVX-512 synthesis]]
+[[SAIN-01 Sovereign Node Spec]]
+[[DFlash vs EAGLE-3 vs MEDUSA comparison]]
+[[local-llm-quantization|Local LLM Quantization]]
+[[Dual-CCD Cache Partitioning]]

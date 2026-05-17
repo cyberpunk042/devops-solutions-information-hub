@@ -89,4 +89,13 @@ See Done When — verifiable per-profile resource allocation + runtime switching
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[sain-01-sovereign-node|Milestone — SAIN-01 Sovereign AI Node]]
+[[e103-vfio-isolation|E103 — VFIO Isolation]]
+[[e104-tetragon-guardian-perimeter|E104 — Tetragon + Guardian Perimeter]]
+[[e106-pulse-vector-runtime|E106 — Pulse Vector Runtime]]
+[[e107-weaver-state-fabric|E107 — Weaver State Fabric]]
+[[e109-dflash-integration|E109 — DFlash Integration]]
+[[e110-model-catalog|E110 — Model Catalog]]
+[[SAIN-01 Sovereign Node Spec]]
+[[e102-zfs-storage-layout|E102 — ZFS Storage Layout]]
+[[e105-network-segregation|E105 — Network Segregation]]

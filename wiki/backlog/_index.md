@@ -5,7 +5,7 @@ domain: backlog
 status: active
 confidence: high
 created: 2026-04-09
-updated: 2026-05-16
+updated: 2026-05-17
 sources: []
 tags: [backlog, planning, epics, roadmap]
 ---
@@ -19,12 +19,24 @@ All planned work, organized by milestones, epics, modules, and tasks.
 | Milestone | Target | Status | Epics |
 |-----------|--------|--------|-------|
 | [Milestone: Post-Anthropic Self-Autonomous AI Stack](milestones/post-anthropic-self-autonomous-stack.md) | 2026-04-27 | draft | E007, E008, E009, E010, E011, E012, post-anthropic-stack-3-layer-assembly-multica-aicp-3090, secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04, custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05 |
+| [Milestone — SAIN-01 Sovereign AI Node](milestones/sain-01-sovereign-node.md) | 2026-Q3 | draft | E100, E101, E102, E103, E104, E105, E106, E107, E108, E109, E110 |
 | [Milestone — Second Brain Complete System — v2.0](milestones/second-brain-complete-system-v2-0.md) | 2026-05-15 | draft | E010, E011, E012, E013, E014, E015, E016, E017, E018, E019, E020, E021, E022, E023 |
 
 ## Epics
 
 | ID | Epic | Priority | Status | Readiness |
 |----|------|----------|--------|-----------|
+| E100 | [E100 — Hardware Foundation](epics/milestone-sain01/e100-hardware-foundation.md) | P0 | draft | 30 |
+| E101 | [E101 — Sovereign OS Build](epics/milestone-sain01/e101-sovereign-os-build.md) | P0 | draft | 30 |
+| E102 | [E102 — ZFS Storage Layout](epics/milestone-sain01/e102-zfs-storage-layout.md) | P0 | draft | 30 |
+| E103 | [E103 — VFIO Isolation](epics/milestone-sain01/e103-vfio-isolation.md) | P0 | draft | 30 |
+| E104 | [E104 — Tetragon + Guardian Perimeter](epics/milestone-sain01/e104-tetragon-guardian-perimeter.md) | P0 | draft | 30 |
+| E105 | [E105 — Network Segregation](epics/milestone-sain01/e105-network-segregation.md) | P1 | draft | 30 |
+| E106 | [E106 — Pulse Vector Runtime](epics/milestone-sain01/e106-pulse-vector-runtime.md) | P0 | draft | 35 |
+| E107 | [E107 — Weaver State Fabric](epics/milestone-sain01/e107-weaver-state-fabric.md) | P0 | draft | 30 |
+| E108 | [E108 — Load-Balancing Profiles](epics/milestone-sain01/e108-load-balancing-profiles.md) | P1 | draft | 30 |
+| E109 | [E109 — DFlash Integration](epics/milestone-sain01/e109-dflash-integration.md) | P1 | draft | 30 |
+| E110 | [E110 — Model Catalog](epics/milestone-sain01/e110-model-catalog.md) | P1 | draft | 30 |
 | E010 | [E010 — Model Updates — All 16 Models Reflect Current Knowledge](epics/milestone-v2/e010-model-updates-all-15-models-reflect-current-knowledge.md) | P0 | active | 80 |
 | E011 | [E011 — Standards Exemplification — All 15 Per-Type Standards with Inline Annotated Exemplars](epics/milestone-v2/e011-standards-exemplification-all-15-per-type-standards-with-inline-annotated-e.md) | P0 | active | 80 |
 | E012 | [E012 — Template Enrichment — Rich Proto-Programming Examples](epics/milestone-v2/e012-template-enrichment-rich-proto-programming-examples.md) | P0 | active | 75 |

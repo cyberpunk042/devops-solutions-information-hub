@@ -162,14 +162,16 @@ The three can stack: deploy a Q4-quantized target with fp8 KV cache and a block-
 ## Relationships
 
 - BUILDS ON: [[src-dflash-block-diffusion-spec-dec|Synthesis — DFlash: Block-Diffusion Flash Speculative Decoding]]
-- IMPLEMENTS: block-diffusion speculative-decoding pattern
 - USED BY: [[src-sain-01-sovereign-node-spec|SAIN-01 Sovereign Node Spec]] (Logic Engine + Oracle Core tiers on code/math workloads)
 - COMPLEMENTS: [[concept-1bit-ternary-weights|1-bit Ternary Weights]] (orthogonal acceleration; composable on different tiers)
-- CONTRASTS WITH: classical autoregressive speculative decoding (EAGLE, MEDUSA, S3D)
 - RELATES TO: [[local-llm-quantization|Local LLM Quantization]] (broader acceleration landscape; SpecDec stacks with quantization)
 - RELATES TO: [[src-hrm-trm-tiny-recursion-models|HRM/TRM Tiny Recursion Models]] (alternative compute-efficiency strategy)
-- ENABLED BY: deep draft models + bidirectional attention (architectural prerequisites)
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[src-dflash-block-diffusion-spec-dec|Synthesis — DFlash: Block-Diffusion Flash Speculative Decoding]]
+[[SAIN-01 Sovereign Node Spec]]
+[[concept-1bit-ternary-weights|1-bit Ternary Weights]]
+[[local-llm-quantization|Local LLM Quantization]]
+[[HRM/TRM Tiny Recursion Models]]
+[[concept-srp-trinity-pulse-weaver-auditor|SRP Trinity — Pulse, Weaver, Auditor]]

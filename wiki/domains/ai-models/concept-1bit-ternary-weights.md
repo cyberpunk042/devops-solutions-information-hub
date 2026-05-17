@@ -161,13 +161,19 @@ The technique is not universal:
 
 - BUILDS ON: [[src-bitnet-b158-ternary-llm|Synthesis — BitNet b1.58 Ternary LLM Family and bitnet.cpp Inference]]
 - ENABLED BY: [[src-zen5-avx512-single-cycle|Synthesis — Zen 5 Single-Cycle 512-bit AVX-512]]
-- IMPLEMENTS: ternary-weight inference paradigm (BitNet line of research from Microsoft Research)
 - RELATES TO: [[local-llm-quantization|Local LLM Quantization]] (broader landscape — 4-bit, 8-bit; ternary is the most aggressive end)
 - RELATES TO: [[concept-speculative-decoding-block-diffusion|Speculative Decoding via Block Diffusion]] (orthogonal acceleration: bit-width compression vs draft-target acceleration)
 - USED BY: [[src-sain-01-sovereign-node-spec|SAIN-01 Sovereign Node Spec]] (Pulse module / Conductor Agent runtime selection)
-- CONTRASTS WITH: standard FP16 / BF16 / INT8 weight quantization (less aggressive than ternary; preserves multiplication in the matmul path)
 - RELATES TO: [[src-hrm-trm-tiny-recursion-models|HRM/TRM Tiny Recursion Models]] (alternative cost-efficiency strategy — recursion vs quantization)
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[src-bitnet-b158-ternary-llm|Synthesis — BitNet b1.58 Ternary LLM Family and bitnet.cpp Inference]]
+[[Synthesis — Zen 5 Single-Cycle 512-bit AVX-512]]
+[[local-llm-quantization|Local LLM Quantization]]
+[[concept-speculative-decoding-block-diffusion|Speculative Decoding via Block Diffusion]]
+[[SAIN-01 Sovereign Node Spec]]
+[[HRM/TRM Tiny Recursion Models]]
+[[concept-dual-ccd-cache-partitioning-9900x|Dual-CCD Cache Partitioning (Zen 5 9900X)]]
+[[concept-srp-trinity-pulse-weaver-auditor|SRP Trinity — Pulse, Weaver, Auditor]]
+[[concept-zfs-tiered-storage-llm-inference|ZFS Tiered Storage for LLM Inference]]

@@ -173,8 +173,6 @@ The original paper and the inference-framework paper are conservative about wher
 - RELATES TO: [[src-dflash-block-diffusion-spec-dec|DFlash speculative decoding]] (different acceleration technique — orthogonal to bit-width compression)
 - RELATES TO: [[src-llm-architecture-gallery-raschka|LLM Architecture Gallery]] (b1.58 fits into the broader landscape of architectural innovation)
 - RELATES TO: [[src-hrm-trm-tiny-recursion-models|HRM/TRM Tiny Recursion Models]] (alternative small-model strategy — recursion vs quantization for cost-efficient inference)
-- COMPARES TO: standard FP16 / BF16 transformer baselines (the b1.58 line's reference comparison)
-- CONTRASTS WITH: 4-bit and 8-bit weight quantization schemes (BitNet's ternary is more aggressive; the technique is structurally different — no de-quantization in the inference path)
 
 ## Source Notes
 
@@ -186,4 +184,9 @@ The five-paper progression also tracks the technique's maturity arc: the origina
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[Zen 5 AVX-512 single-cycle 512-bit datapath]]
+[[SAIN-01 Sovereign Node Master Spec]]
+[[DFlash speculative decoding]]
+[[LLM Architecture Gallery]]
+[[HRM/TRM Tiny Recursion Models]]
+[[concept-1bit-ternary-weights|1-bit Ternary Weights]]

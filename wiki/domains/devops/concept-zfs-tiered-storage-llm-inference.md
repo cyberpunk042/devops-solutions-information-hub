@@ -165,10 +165,14 @@ The stratification is a system-level design choice, not just a storage tuning. C
 - ENABLES: [[concept-srp-trinity-pulse-weaver-auditor|SRP Trinity]] (the Weaver's atomic state-handoff contract; the Auditor's append-only audit log)
 - USED BY: [[concept-1bit-ternary-weights|1-bit Ternary Weights]] (model weights stored on `tank/models`)
 - USED BY: [[concept-vfio-gpu-isolation-amd-iommu|VFIO GPU Isolation]] (sandboxed agents' runtime cache on `tank/agents`)
-- CONSTRAINED BY: OpenZFS version (`O_DIRECT` semantics; ≥2.2 required for the atomic-state pattern's clean implementation)
-- CONSTRAINS: Backup posture (RAID 0 = no native redundancy; external backup mandatory)
 - RELATES TO: [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]] (ZFS dataset properties as declarative state)
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[SAIN-01 Sovereign Node Spec]]
+[[ZFS dataset stratification by workload access pattern]]
+[[SRP Trinity]]
+[[concept-1bit-ternary-weights|1-bit Ternary Weights]]
+[[VFIO GPU Isolation]]
+[[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+[[concept-srp-trinity-pulse-weaver-auditor|SRP Trinity — Pulse, Weaver, Auditor]]

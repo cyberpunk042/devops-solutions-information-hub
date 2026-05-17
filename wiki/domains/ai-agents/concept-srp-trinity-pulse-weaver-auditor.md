@@ -203,16 +203,17 @@ This is the lens through which any SAIN-01 hardware or OS variant is reviewed.
 ## Relationships
 
 - DERIVED FROM: [[src-sain-01-sovereign-node-spec|SAIN-01 Sovereign Node Spec]] (Block 6 "The Genesis: Trinity Framework")
-- IMPLEMENTS: Single Responsibility Principle at the system level (hardware-mapped)
 - ENABLED BY: [[concept-dual-ccd-cache-partitioning-9900x|Dual-CCD Cache Partitioning]]
 - ENABLED BY: [[concept-vfio-gpu-isolation-amd-iommu|VFIO GPU Isolation]]
 - ENABLED BY: [[concept-zfs-tiered-storage-llm-inference|ZFS Tiered Storage for LLM Inference]]
-- USED BY: future `wiki/backlog/milestones/sain-01-sovereign-node.md` (each Trinity module ↔ one epic)
 - RELATES TO: [[concept-1bit-ternary-weights|1-bit Ternary Weights]] (the Pulse's runtime)
 - RELATES TO: [[concept-speculative-decoding-block-diffusion|Speculative Decoding via Block Diffusion]] (deployed by the Weaver on the Logic Engine + Oracle Core tiers)
-- CONSTRAINS: future SAIN-01 hardware variants (Trinity boundaries are the evaluation criteria)
-- CONSTRAINS: Stage-2 selfdef integration (the Auditor's Tetragon policies must coexist with selfdef's agent-guard policies)
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[SAIN-01 Sovereign Node Spec]]
+[[Dual-CCD Cache Partitioning]]
+[[VFIO GPU Isolation]]
+[[concept-zfs-tiered-storage-llm-inference|ZFS Tiered Storage for LLM Inference]]
+[[concept-1bit-ternary-weights|1-bit Ternary Weights]]
+[[concept-speculative-decoding-block-diffusion|Speculative Decoding via Block Diffusion]]

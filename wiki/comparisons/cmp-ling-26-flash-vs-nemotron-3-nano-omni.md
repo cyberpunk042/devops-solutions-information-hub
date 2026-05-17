@@ -247,8 +247,6 @@ The choice between resident-deployment patterns is workload-conditioned. Both mo
 
 ## Relationships
 
-- COMPARES TO: inclusionAI/Ling-2.6-flash (107B, MoE, MIT, text)
-- COMPARES TO: nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16 (33B, hybrid Mamba-Transformer MoE, multimodal)
 - BUILDS ON: [[src-sain-01-sovereign-node-spec|SAIN-01 Sovereign Node Spec]] (Oracle Core tier identification)
 - COMPLEMENTS: [[cmp-bitnet-vs-fp16-execution-cost|BitNet vs FP16]] (Oracle Core uses FP16; this comparison picks which FP16 model)
 - COMPLEMENTS: [[cmp-dflash-vs-eagle3-vs-medusa|DFlash vs EAGLE-3 vs MEDUSA]] (speculative-decoding stacks on top of whichever model wins this comparison)
@@ -258,4 +256,9 @@ The choice between resident-deployment patterns is workload-conditioned. Both mo
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[SAIN-01 Sovereign Node Spec]]
+[[BitNet vs FP16]]
+[[DFlash vs EAGLE-3 vs MEDUSA]]
+[[VFIO GPU Isolation]]
+[[ZFS Tiered Storage]]
+[[local-llm-quantization|Local LLM Quantization]]

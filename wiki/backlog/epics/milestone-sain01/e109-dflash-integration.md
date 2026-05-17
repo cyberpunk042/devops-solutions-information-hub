@@ -100,4 +100,12 @@ See Done When — verifiable per-workload speedup checkpoints.
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[sain-01-sovereign-node|Milestone — SAIN-01 Sovereign AI Node]]
+[[e102-zfs-storage-layout|E102 — ZFS Storage Layout]]
+[[e103-vfio-isolation|E103 — VFIO Isolation]]
+[[e108-load-balancing-profiles|E108 — Load-Balancing Profiles]]
+[[e110-model-catalog|E110 — Model Catalog]]
+[[Synthesis — DFlash block-diffusion]]
+[[Concept — Speculative Decoding via Block Diffusion]]
+[[Comparison — DFlash vs EAGLE-3 vs MEDUSA]]
+[[e106-pulse-vector-runtime|E106 — Pulse Vector Runtime]]
