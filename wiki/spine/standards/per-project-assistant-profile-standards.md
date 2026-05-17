@@ -202,6 +202,7 @@ These four together comprise this project's unique contribution to the Profile e
 [[infrastructure-over-instructions-for-process-enforcement|Principle 1 — Infrastructure Over Instructions]]
 [[structured-context-governs-agent-behavior-more-than-content|Principle 2 — Structured Context Governs Agent Behavior]]
 [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4 — Declarations Aspirational Until Verified]]
+[[2026-05-16-rgp-profile-v5-evening-overcorrection-revert-and-comprehensive-augmentation|2026-05-16 — RGP profile v5-evening SFIF-overcorrection revert + comprehensive augmentation (17 surgical edits + 3 planning artifacts)]]
 [[profile-integration-into-the-knowledge-cross-reference-topology-with-existing-wiki-layers|Concept — Profile Integration into the Knowledge: cross-reference topology between Per-Project Assistant Profiles and existing this project wiki layers (lessons · patterns · decisions · models · standards · super-model)]]
 [[cursor-state-folder-standards-common-cross-project-runtime-state-surface|Cursor State Folder Standards (`.cursor/`) — Common Cross-Project Runtime State Surface for /view · /questions · vision · focus · trace]]
 [[e024-m006-cross-project-profile-catalog-everywhere-integration|E024-M006 — this-project Meta-Layer for Per-Project Profiles (standards · model · integration · super-model) — the unique this project contribution; sister projects author their OWN Profiles consuming this meta-layer]]

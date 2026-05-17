@@ -1,23 +1,45 @@
 # =============================================================================
-# .assistant/root-ghostproxy-rollout.cron.yaml  (v5 — 2026-05-16)
+# .assistant/root-ghostproxy-rollout.cron.yaml  (v5.2 — 2026-05-16)
 # =============================================================================
 # Per-profile CRON jobs for the root-ghostproxy-rollout assistant.
-# v5 = worker mode + driven-tick cadence (every:15m) + SFIF soft-priority +
-#      bootstrap-idempotency + mutual-exclusion lock + 4-level pick logic.
-# v5-evening SFIF hard-scope-lock corrected per operator 2026-05-16:
-#   "this does not mean it completley block tasks either..."
+# v5 = worker mode + SFIF soft-priority + bootstrap-idempotency + mutual-
+#      exclusion lock + 4-level pick logic.
+# v5.2 (2026-05-16 evening 2) = cadence 15m→5m + remove per-tick time-anxiety
+#                                + "do big chunks of substantive work" framing.
 #
 # Cadence philosophy (operator-verbatim 2026-05-16, sacrosanct):
-#   "THE ONLY FUCKING THING WHICH COULD BE FAST LIKE THIS IS THE
-#    root-ghostproxy ai assistant" — driven-worker-tick = every 15m.
-#    Sprint mode (faster cadence) is operator-invoked via
-#    .assistant/_state/root-ghostproxy-rollout-operator-directives.md.
-#    Hardcoded 3min cron rejected (v1 anti-pattern; sprint = mode, not schedule).
+#   "5m is probably the sweetpot for an active worker main CRON and the agent
+#    is not directed to worry about time. to not minimize and do big chunks
+#    of work and respect the workflow and etc... this is also important
+#    otherwise what could take 1h would take 4-5 hours.... its complex but
+#    little but little."
+#
+# Mental model — 5m cadence + mutual-exclusion lock is "CHECK OFTEN, WORK
+# DEEP ONCE ACTIVE":
+#   - Every 5 minutes a cron fire ATTEMPTS to acquire the worker lock
+#   - If another fire is in-flight (lock held; PID alive; age < 30 min) →
+#     SHORT-CIRCUIT this fire (no work)
+#   - If lock is free → acquire + do the substantive work AS LONG AS IT
+#     NATURALLY TAKES (no artificial time-budget cap)
+#   - In-flight fire releases lock at natural completion → next 5m tick
+#     picks up the next work
+#   This pattern means: a 1-hour substantive task runs naturally (1h fire);
+#   12 subsequent 5m ticks during that hour defer via lock (no overlap,
+#   no fragmentation). Operator framing: "what could take 1h would take
+#   4-5 hours" if artificially fragmented — 5m + lock prevents that.
+#
+# Hardcoded 3m cron remains rejected (operator v1 anti-pattern: 3m is too
+# tight even for substantive work; 5m is the calibrated sweet spot).
+# Sprint mode (operator-invoked via _state file) is just "MORE WORK PER
+# ACQUISITION", not a cadence change — the worker reads sprint directive
+# at STEP 0 and may chain multiple substantive tasks within the natural
+# fire duration.
 #
 # Default cadence: bootstrap-on-install (one-shot, idempotency-gated) +
-#   driven-worker-tick (every:15m) + weekly-module-deep (Tue 09:00 ET).
+#   driven-worker-tick (every:5m) + weekly-module-deep (Tue 09:00 ET).
 # All 3 cron variants share the mutual-exclusion lock-file (per profile
-# concurrency_control.lock_file) to prevent races on git stage in target project.
+# concurrency_control.lock_file) — critical at 5m cadence to prevent
+# fire-overlap races on git stage in target project.
 #
 # 3 jobs total. Removed (v1 anti-patterns): sprint-tick every:3m hardcoded,
 # morning-briefing sprint-specific, monthly-sfif-tier-audit over-engineered.
@@ -170,15 +192,21 @@ jobs:
     description: "First fire after install — WORKER mode. Verify install + identify first-pick + produce planning artifact for operator review. Executes first-pick only if operator-directives.md contains 'BOOTSTRAP-EXECUTE: GO'."
     timeout_seconds: 5400
 
-  # ─── Driven worker tick — every 15 min ───────────────────────────────
-  # Operator-doctrine 2026-05-16 (sacrosanct): worker assistant must be DRIVEN.
-  # Daily cadence = 1 task/day = 100+ days to clear the 100+ task backlog =
-  # unacceptable for a worker. Worker-pace = 10-30 min per substantive task;
-  # 15-min cron tick gives queue depth ≤ 1 + immediate response to operator
-  # directives via operator-directives.md step 0 reads.
+  # ─── Driven worker tick — every 5 min (check-often-work-deep pattern) ──
+  # Operator-doctrine 2026-05-16 (sacrosanct, this /goal):
+  #   "5m is probably the sweetpot for an active worker main CRON and the agent
+  #    is not directed to worry about time. to not minimize and do big chunks
+  #    of work and respect the workflow and etc..."
+  #
+  # Pattern: every 5 min CHECK; if lock held → defer (do nothing this fire);
+  # if lock free → acquire + do the SUBSTANTIVE work AS LONG AS IT NATURALLY
+  # TAKES (10-30 min simple / 30-90 min deep / etc.). No artificial per-tick
+  # time-budget cap. Lock release at natural completion enables next 5m tick
+  # to pick up next work. Per operator: "what could take 1h would take 4-5
+  # hours" if artificially fragmented → 5m + lock prevents fragmentation.
   - name: driven-worker-tick
     enabled: true
-    schedule: "every:15m"
+    schedule: "every:5m"
     trigger:
       type: openclaw-task
       prompt: |
@@ -204,9 +232,11 @@ jobs:
           B. root-ghostproxy's OWN project-lifecycle SFIF (E001-E007 features at
              Project-Features tier) = THE primary purpose. Worker DEFAULTS HERE.
 
-        Per-tick output: 1 substantive E001-E007 feature task (10-30 min) OR 2-4
-        simple feature tasks within same E00x. Pick logic uses the 4-level priority
-        order from sfif_binding.pick_filter (see profile YAML):
+        Per-acquisition output (NO per-fire time-budget cap — per operator 2026-05-16
+        sacrosanct, this /goal): 1 substantive E001-E007 feature task done FULLY (TDD
+        red→green→refactor through completion; takes as long as it naturally takes)
+        OR 2-4 simple feature tasks within same E00x. Pick logic uses the 4-level
+        priority order from sfif_binding.pick_filter (see profile YAML):
           Level 1: operator-explicit override in operator-directives.md
           Level 2: DEFAULT in_scope_default (E001-E007, severity-then-priority order,
                    within-feature sub-cycle SFIF soft priority)
@@ -254,17 +284,17 @@ jobs:
             - If .assistant/_state/root-ghostproxy-rollout.lock exists:
                 * Check lock-PID alive via `kill -0 <pid>` (no-op signal test)
                 * Check lock-timestamp age
-                * If PID alive AND age < 30 min → SHORT-CIRCUIT: log "lock held by PID <n> since <ts>; driven-tick deferring to next 15m tick"; END (no work this fire — bootstrap or prior driven-tick still running on target)
-                * If PID dead OR age ≥ 30 min → consider lock stale; LOG warning + acquire fresh lock (write current PID + ISO timestamp); proceed
+                * If PID alive AND age < 90 min → SHORT-CIRCUIT: log "lock held by PID <n> since <ts>; driven-tick deferring to next 5m tick (overlap with in-flight substantive fire is correct lock behavior — work continues in the in-flight fire)"; END (no work this fire — bootstrap or prior driven-tick still doing substantive work on target)
+                * If PID dead OR age ≥ 90 min → consider lock stale (assume hung process); LOG warning + acquire fresh lock (write current PID + ISO timestamp); proceed
             - Else: acquire lock (write PID + ISO timestamp); proceed
             - At END of fire (in step 10 loop_or_declare): release lock (rm the file)
 
           BRANCH decision:
             OPERATOR_DIRECTED_SPRINT — explicit sprint directive in operator-directives.md
-              → cap raised, multi-task per tick (2-5 tasks)
+              → process more substantive work per acquisition (sprint = MORE WORK PER LOCK-HOLD, not faster cadence)
             FRESH_SIGNAL — new operator-directive in raw/notes/ since last fire OR
-              operator-staged-changes pending in ~/root-ghostproxy/ → re-prioritize
-            STEADY_WORK — no fresh signal → pick next-ready, loop within budget
+              operator-staged-changes pending in ~/root-ghostproxy/ → re-prioritize next pick
+            STEADY_WORK — no fresh signal → pick next-ready substantive task, do it well
             BLOCKED — prior task verification failed 2× OR operator-review-pending tasks
               accumulating > 3 → stage current + log + release lock + END
             RETIRED — self_deprecation criteria met (install.sh --check exits 0 + all P0
@@ -285,7 +315,7 @@ jobs:
               a. Audit-cluster severity (C01-C15 per pain-points-inventory); C14 (catastrophic) > C04 (input discipline) > others
               b. P0 → P1 → P2 → P3 within severity class
               c. Within-feature sub-cycle SFIF soft priority — when multiple ready sub-tasks share parent E00x, prefer Scaffold sub-tasks → Foundation → Infrastructure → Features-implementation (soft; not hard-block; per operator "this does not mean it completley block tasks either")
-              d. Smallest-scope ready task wins ties (Goldilocks per-tick)
+              d. Smallest-scope ready task wins ties (Goldilocks scope-sizing per-acquisition — pick the right-sized task; once picked, DO IT FULLY without time-fragmentation)
               e. Skip operator-in-progress tasks (status:in-progress) — step-on-toes avoidance
 
           LEVEL 3 — AUTHOR FROM PAIN-POINTS (when levels 1+2 yield zero ready):
@@ -379,20 +409,29 @@ jobs:
 
         STEP 10 loop_or_declare:
           - LOOP CONDITIONS (continue to step 2 if ALL true):
-            1. Budget remains (< 12 min used of 15-min tick budget; reserve 3 min for stage + log)
-            2. Next-ready task exists (any P0/P1 task at status:not-started or status:in-progress with operator-side blockers cleared)
-            3. Last task reached status:review (NCs surfaced ≠ failure — task is DONE for worker purposes once status:review + Resolution + R20 staged)
+            1. Next-ready substantive task exists (any P0/P1 task at status:not-started or status:in-progress with operator-side blockers cleared)
+            2. Last task reached status:review (NCs surfaced ≠ failure — task is DONE for worker purposes once status:review + Resolution + R20 staged)
+            3. No operator-stop signal in operator-directives.md since this fire started
+          - NO PER-FIRE TIME BUDGET CAP. Per operator 2026-05-16 (sacrosanct, this /goal):
+            "the agent is not directed to worry about time. to not minimize and do big
+            chunks of work and respect the workflow and etc... otherwise what could
+            take 1h would take 4-5 hours." Do the substantive work in front of you AS
+            LONG AS IT NATURALLY TAKES. The mutual-exclusion lock + 5m cadence handle
+            overlap — subsequent 5m ticks defer via lock while this fire is in-flight.
           - SURFACING NCs / [NEEDS OPERATOR REVIEW] markers is NOT an exit condition.
             The driven-worker pattern is: complete current task → surface what's
             ambiguous → CONTINUE to next task. Operator reads queue async + writes
-            RESOLVE blocks; worker reads RESOLVE blocks at step 0 of NEXT tick.
+            RESOLVE blocks; worker reads RESOLVE blocks at step 0 of NEXT acquisition.
             Freezing on "NCs need operator" = anti-pattern (operator-doctrine 2026-05-16:
             "why block when its not block").
-          - If LOOP CONDITIONS all true → step 2 (pick next-ready)
-          - Else: append inbox one-liner (v5 worker format):
+          - If LOOP CONDITIONS all true → step 2 (pick next-ready) AND continue
+            substantive work without time-budget-driven exit
+          - Else: append inbox one-liner (v5.2 worker format — no time fields):
             HH:MM ET | <branch> | tasks_executed:<n> | tasks_staged:<n> |
             blocked:<n> | retired:false | post:<ok|err N>
-          - END
+          - Append per_fire_summary (per profile workflow.canonical_pipeline.step_10.per_fire_summary)
+          - Release mutual-exclusion lock (rm .assistant/_state/root-ghostproxy-rollout.lock)
+          - END (natural completion; next 5m tick picks up next work)
 
         ANTI-PATTERNS (refuse — per profile anti_patterns; full list reproduced here for explicit driven-tick reference):
           - wholesale_rewrite_instead_of_augment (Edit not Write for existing files; operator 2026-05-16)
@@ -417,15 +456,20 @@ jobs:
           - Surface scope question in wiki/backlog/operator-decision-queue.md (cascade:root-ghostproxy)
           - Move to NEXT task. Build forward. NEVER freeze. NEVER revert-and-restart.
 
-        BUDGET (per 15-min tick):
-          - STEADY_WORK: 8-12 min (1 substantive task) — reserve 3 min for stage+log
-          - FRESH_SIGNAL: 12-14 min (re-prioritize + start 1 task; next tick continues)
-          - OPERATOR_DIRECTED_SPRINT: 13-14 min (chained operator-directives; next tick picks up remainder)
-          - If a substantive task exceeds 12 min: complete current sub-step (4a/b/c/d/e),
-            stage best-effort, log, exit. Next tick resumes from current_stage.
-          - Tasks naturally chunked across ticks; queue depth ≤ 1 keeps work flowing.
-    description: "every 15min — WORKER driven tick. Picks next-ready P0 task per SFIF, executes SDD+TDD per tick budget, stages for operator commit, loops in same tick if budget remains. Branches to sprint mode if operator-directives.md has unprocessed sprint directive."
-    timeout_seconds: 900
+        SUBSTANTIVE-DEPTH FRAMING (NOT a time budget — per operator 2026-05-16 sacrosanct, this /goal):
+          "the agent is not directed to worry about time. to not minimize and do big
+           chunks of work and respect the workflow and etc... otherwise what could
+           take 1h would take 4-5 hours."
+
+          Per-acquisition guidance (use as DEPTH CALIBRATION, not time-fragmentation cap):
+          - STEADY_WORK: do 1 substantive task FULLY (10-90 min natural — TDD red/green/refactor cycle through completion; stage; log; release lock). Don't chunk; complete it.
+          - FRESH_SIGNAL: re-prioritize first, then do the new top task FULLY.
+          - OPERATOR_DIRECTED_SPRINT: chain multiple substantive tasks within THIS acquisition (sprint = MORE WORK PER LOCK-HOLD, not faster cadence). Continue until LOOP CONDITIONS go false OR lock-stale-window approaches (90 min) — at which point stage current state + release lock + END (next 5m tick acquires fresh + continues).
+          - A substantive task that takes 60+ min is FINE. Do it. The mutual-exclusion lock prevents overlap; subsequent 5m ticks defer until this fire releases.
+          - Anti-pattern (operator-named): "fragmenting a 1h task into 4-5 fifteen-min chunks adds overhead AND defeats SDD+TDD natural cycle" — work the substance through to completion.
+          - Edge: if a single task GENUINELY takes longer than ~90 min, that's a SIGNAL it should have been decomposed into multiple tasks at the spec_check stage (4a). Stage best-effort + surface scope question to operator-decision-queue; next acquisition continues from the BLOCKED-PENDING-CLARIFICATION state.
+    description: "every 5min — WORKER driven tick (check-often-work-deep pattern). Acquires mutual-exclusion lock; if lock held, defers to next 5m tick. If lock acquired, picks next-ready substantive task per 4-level priority_order + does the work AS LONG AS IT NATURALLY TAKES (no per-tick time-budget cap). Stages for operator commit. Loops within acquisition until LOOP CONDITIONS go false. Releases lock at natural completion. Branches to sprint mode (MORE WORK PER ACQUISITION) if operator-directives.md has unprocessed sprint directive."
+    timeout_seconds: 5400  # 90 min ceiling — generous for substantive deep work + matches lock-stale window so timed-out fires don't keep lock held
 
   # ─── Weekly module-progress deep drafting — Tue 09:00 ET ─────────────
   - name: weekly-module-deep
@@ -465,9 +509,10 @@ jobs:
 
         STEP 1 state_check: branch as in driven-worker-tick step 1, INCLUDING the
           mutual-exclusion lock pre-check (.assistant/_state/root-ghostproxy-rollout.lock).
-          If lock held + PID alive + age < 30 min → SHORT-CIRCUIT (defer this weekly fire
-          to next Tuesday; weekly cadence is not budget-critical). Else acquire lock +
-          proceed. Release lock at END. RETIRED short-circuit honored.
+          If lock held + PID alive + age < 90 min → SHORT-CIRCUIT (defer this weekly fire
+          to next Tuesday — weekly cadence allows deferral since substantive deep work
+          on the in-flight fire is the right outcome). Else acquire lock + proceed.
+          Release lock at END. RETIRED short-circuit honored.
 
         STEP 2 pick_module (NOT just task) — 4-level priority_order from sfif_binding.pick_filter:
           Scan ~/root-ghostproxy/wiki/backlog/modules/*.md
@@ -558,12 +603,20 @@ jobs:
         STEP 7-9 as usual.
 
         STEP 10 loop_or_declare:
-          - If budget remains AND module has more ready tasks AND last task succeeded → LOOP
-            within module (NOT cross-module; weekly-deep is module-focused)
+          - LOOP CONDITIONS (continue to step 4 next task within module if ALL true):
+            1. Module has more ready tasks (NOT cross-module; weekly-deep is module-focused)
+            2. Last task reached status:review (NCs are not failure)
+            3. No operator-stop signal in operator-directives.md since this fire started
+          - NO PER-FIRE TIME BUDGET CAP. Per operator 2026-05-16 sacrosanct (this /goal):
+            do substantive deep work AS LONG AS IT NATURALLY TAKES. The mutual-exclusion
+            lock prevents next-Tuesday-fire-overlap (highly unlikely given weekly cadence
+            but the discipline is the same as driven-tick).
           - Module completion → update parent epic if applicable
-          - Append inbox one-liner:
+          - Append inbox one-liner (no time fields):
             HH:MM ET | WEEKLY_DEEP | tasks_executed:<n> | tasks_staged:<n> |
             module:<id> | module_complete:<bool> | blocked:<n> | post:<ok|err N>
+          - Append per_fire_summary (per profile workflow.canonical_pipeline.step_10.per_fire_summary)
+          - Release mutual-exclusion lock (rm .assistant/_state/root-ghostproxy-rollout.lock)
 
         ANTI-PATTERNS (refuse — base set + weekly-specific additions):
           BASE SET (same as driven-worker-tick — read driven-tick step 2 ANTI-PATTERNS block in full):
@@ -576,12 +629,12 @@ jobs:
           WEEKLY-SPECIFIC ADDITIONS (elevated quality bar):
           - shallow_test_coverage (weekly bar is HIGHER than driven-tick; ≥1 edge case per Done When item)
           - missing_cross_cluster_integration (Resolution must cite related C##/SB-### when applicable)
-          - module_incomplete_at_budget_end (acceptable IF tasks remaining are explicitly state-stage-blocked; NOT acceptable if simply ran out of time within a substantive task)
+          - module_incomplete_at_natural_end (acceptable IF tasks remaining are explicitly state-stage-blocked; NOT acceptable if substantive deep work was artificially time-fragmented — per operator-doctrine 2026-05-16 do big chunks)
           - cross_module_drift (weekly is ONE module focus per fire; cross-module → next weekly fire)
 
-        BUDGET: 60-120 min substantive on one module. Multi-task within module OK; multi-module forbidden.
-    description: "Tue 09:00 weekly — WORKER deep mode on ONE module. Higher quality bar, deeper SDD+TDD, multi-task sequencing within module; may complete a module per fire."
-    timeout_seconds: 10800
+        SUBSTANTIVE-DEPTH FRAMING: deep mode legitimately runs 1-3 hours per fire for a fully-elevated module. NO time budget cap. Per operator: do the work AS LONG AS IT NATURALLY TAKES; lock handles overlap (next-Tuesday fire defers via lock-stale check if needed). Edge: if a module GENUINELY needs >3h, decompose at spec_check stage; this is a signal the module is too big.
+    description: "Tue 09:00 weekly — WORKER deep mode on ONE module. Higher quality bar, deeper SDD+TDD, multi-task sequencing within module; may complete a module per fire. Substantive deep work AS LONG AS IT NATURALLY TAKES (no time-budget cap); lock handles overlap."
+    timeout_seconds: 10800  # 3h ceiling — generous for substantive deep work on one module; matches lock-stale window for weekly cadence
 
 # =============================================================================
 # Cron design rules (this Profile v3)

@@ -95,6 +95,88 @@ concurrency_control:
   why_lock_file_vs_systemd_unit_dependency: "Per operator no-OpenClaw-touch doctrine: the fix lives in the profile/state-file layer, not the systemd unit. Lock-file is profile-level + portable across OpenClaw runtime changes."
 
 # -----------------------------------------------------------------------------
+# Worker Cadence Doctrine (v5.2 — 2026-05-16 evening 2)
+# -----------------------------------------------------------------------------
+# Operator-verbatim mandate (sacrosanct, this /goal 2026-05-16):
+#   "5m is probably the sweetpot for an active worker main CRON and the agent
+#    is not directed to worry about time. to not minimize and do big chunks
+#    of work and respect the workflow and etc... this is also important
+#    otherwise what could take 1h would take 4-5 hours.... its complex but
+#    little but little. We apply the knowledge of the second-brain to keep
+#    improving. so lets continue till we fill confident into our triggers,
+#    prompts and directives and the synergy."
+#
+# This block consolidates the cadence + lock + do-big-chunks + sprint-semantics
+# doctrine into one navigable section that all the prompts + workflow steps +
+# anti-patterns reference. Earlier v5 sections (bootstrap_idempotency +
+# concurrency_control + announce_channel_policy) compose with this doctrine —
+# this block is the WORKER-TIME-PHILOSOPHY layer that frames them.
+worker_cadence_doctrine:
+
+  cadence:
+    driven_worker_tick: "every:5m"
+    weekly_module_deep: "Tue 09:00 ET"
+    bootstrap_observation: "first-fire (one-shot, idempotency-gated per bootstrap_idempotency)"
+    rationale: "5m is the operator-stated SWEET SPOT for the worker's main cron. Faster (3m hardcoded) was rejected v1 anti-pattern; slower (15m+) causes unnecessary defer-delay on operator-stage-changes."
+
+  mental_model: "CHECK OFTEN, WORK DEEP ONCE ACTIVE"
+  mental_model_explained: |
+    Every 5 min, a cron fire ATTEMPTS to acquire the worker mutual-exclusion lock
+    (per concurrency_control.lock_file). If lock held + PID alive + age < 90 min →
+    SHORT-CIRCUIT this fire (no work; in-flight fire continues substantive work).
+    If lock acquired → do the SUBSTANTIVE work AS LONG AS IT NATURALLY TAKES (no
+    artificial per-tick time-budget cap). In-flight fire releases lock at natural
+    completion (STEP 10 loop_or_declare END) → next 5m tick picks up next work.
+
+    Net behavior: a 1-hour substantive task runs naturally in 1 fire; 12 subsequent
+    5m ticks during that hour defer via lock (no overlap, no fragmentation).
+    Operator framing: "what could take 1h would take 4-5 hours" if artificially
+    fragmented — 5m + lock prevents that.
+
+  do_big_chunks_directive:
+    operator_quote_sacrosanct: "the agent is not directed to worry about time. to not minimize and do big chunks of work and respect the workflow and etc..."
+    operative_meaning: "Per-fire and per-acquisition prompts MUST NOT contain time-budget caps that would cause the worker to fragment substantive work. The worker picks the right-sized task (Goldilocks scope-sizing) THEN DOES IT FULLY (TDD red→green→refactor through completion). Time anxiety = work fragmentation = the 4-5× wasted hours operator warned about."
+    encoded_in:
+      - "workflow.canonical_pipeline step 10_loop_or_declare (purpose + LOOP CONDITIONS rewritten with no-time-budget-cap)"
+      - "cron driven-worker-tick STEP 10 LOOP CONDITIONS + SUBSTANTIVE-DEPTH FRAMING block"
+      - "cron weekly-module-deep STEP 10 LOOP CONDITIONS + SUBSTANTIVE-DEPTH FRAMING block"
+      - "prompt_templates.system principle 5 (Goldilocks scope-sizing + substantive depth)"
+      - "openclaw.json5 systemPromptOverride principle 6 (Goldilocks scope-sizing + 5m + lock)"
+      - "10 subagents' scope_tier fields (replacing time-minute budgets per this doctrine)"
+
+  sprint_semantics:
+    sprint_is_NOT: "faster cron cadence (3m / 1m / etc.)"
+    sprint_IS: "MORE WORK PER ACQUISITION — operator-directives.md unprocessed sprint directive → STEP 1 BRANCH OPERATOR_DIRECTED_SPRINT → chain multiple substantive tasks within ONE lock-hold (until LOOP CONDITIONS go false OR lock-stale-window approaches 90 min)"
+    operator_quote_sacrosanct_2026_05_15: "PUT IT EVERY 3min if we need"  # operator gave 3m permission FOR sprint mode, but sprint = mode not schedule; v5.2 resolves this by saying sprint = more-work-per-acquisition
+
+  lock_stale_window: "90 min (was 30 min in v5; raised in v5.2 to accommodate substantive deep work without false-stale recovery)"
+  timeout_seconds_per_variant:
+    bootstrap_observation: 5400  # 90 min (matches lock-stale window)
+    driven_worker_tick: 5400     # 90 min (matches lock-stale window; allows full substantive deep work without lock-stale false-positive)
+    weekly_module_deep: 10800    # 180 min (3h ceiling; matches deep-mode natural cadence; substantive elevated-quality work on one module)
+
+  synergy_check:
+    # The trigger × prompt × directive × workflow synergy operator wants confidence in
+    # (per this /goal: "lets continue till we fill confident into our triggers, prompts
+    # and directives and the synergy"). Each row maps a layer to its v5.2 encoding.
+    triggers:
+      - "cron schedule: every:5m (driven) + Tue 09:00 (weekly) + first-fire (bootstrap)"
+      - "lock-file: acquire at STEP 1; release at STEP 10; 90-min stale recovery"
+      - "bootstrap-marker: idempotency-gate on re-install"
+    prompts:
+      - "cron prompts (3 variants) all reference 4-level priority_order + lock-aware STEP 1 + SUBSTANTIVE-DEPTH FRAMING at STEP 10"
+      - "systemPromptOverride 17 principles include cadence + lock + do-big-chunks doctrine (principle 5 + 11)"
+      - "workflow.canonical_pipeline 10 steps with augment-not-rewrite + audit-anchored + R20 throughout"
+    directives:
+      - "raw/notes/2026-05-16-operator-directive-*-do-not-minimize-workflow.md verbatim"
+      - "wiki/log/2026-05-16-rgp-profile-* arc tracking"
+      - "wiki/lessons/01_drafts/overcorrection-binary-fix-* meta-lesson"
+      - "this worker_cadence_doctrine block (one navigable home for cadence semantics)"
+    synergy:
+      - "triggers acquire/defer via lock → prompts direct deep substantive work → directives anchor the why (operator-stated doctrine) → workflow.canonical_pipeline executes the how"
+      - "diagnostic: when this synergy holds, a fire that acquires lock does big-chunk-substantive-work and the next 5m tick defers correctly; when synergy fails, fires fragment work OR overlap on git stage OR miss operator-directives. Each failure mode has a specific anti-pattern + remediation in this profile."
+
+# -----------------------------------------------------------------------------
 # Announce Channel Policy (Item 8 — fix: announce → no route delivery error)
 # -----------------------------------------------------------------------------
 announce_channel_policy:
@@ -593,7 +675,7 @@ model_routing:
     hard_stop_monthly_usd_equivalent: "150"
   principles:
     - "Absorb operator-verbatim; never reframe"
-    - "Goldilocks per-tick — substantive tasks 1/tick; simple tasks may batch within same module"
+    - "Goldilocks scope-sizing per acquisition — pick the right-sized task (small vs medium vs large per novelty + audit-cluster severity); then DO IT FULLY (TDD red→green→refactor through completion; no per-fire time-budget cap). Simple tasks in same module may batch within one lock-hold. Per operator 2026-05-16 (this /goal): 'do big chunks of work and respect the workflow.'"
     - "Build forward — uncertainty → best-effort + stage + surface; never freeze"
     - "R20 sacrosanct — operator commits; tracked rm gated by Q##"
     - "Cross-project boundary — OPEN for root-ghostproxy; ABSOLUTE for other sisters"
@@ -850,7 +932,7 @@ methodology_binding:
         - "2. DEFAULT — task whose parent_epic ∈ in_scope_default.epics (E001-E007), highest audit-cluster severity first (C14 catastrophic > C04 input-discipline > ... per pain-points-inventory severity-map), then P0→P1→P2→P3 within severity class"
         - "3. AUTHOR FROM PAIN-POINTS — if no ready in_scope_default task: author a new task from the highest-severity unfixed pain-point in audit_substrate.pain_points_inventory, map to appropriate E00x epic, place under wiki/backlog/modules/root-ghostproxy-m-e0##-* (create sub-module if needed); then execute it per SDD+TDD"
         - "4. CROSS-CYCLE FALLBACK (rare; with justification chain) — if 1+2+3 yield nothing AND a default_lower_priority_sister_integration task is genuinely prerequisite to an in_scope_default task that ISN'T currently ready (i.e., the setup work would unblock the feature work), pick the prerequisite setup task; stage audit-cluster + prerequisite-feature justification in Resolution; SURFACE to wiki/backlog/operator-decision-queue.md as soft-signal Q## with cascade:root-ghostproxy + decision_needed:cross-cycle-justification"
-        - "5. Within-scope tiebreaker — smallest-scope ready task wins (Goldilocks per-tick); skip operator-in-progress tasks (status:in-progress) to avoid step-on-toes"
+        - "5. Within-scope tiebreaker — smallest-scope ready task wins (Goldilocks scope-sizing per acquisition — pick the right-sized task; once picked, DO IT FULLY without time-fragmentation per worker_cadence_doctrine); skip operator-in-progress tasks (status:in-progress) to avoid step-on-toes"
 
       within_feature_sub_cycle_priority:
         # When picking among multiple ready sub-tasks WITHIN an E00x feature's sub-modules
@@ -971,9 +1053,9 @@ workflow:
     - step: 1_state_check
       purpose: "Inspect ~/root-ghostproxy/ state + inbox tail (last 20 lines). Decide branch."
       branches:
-        OPERATOR_DIRECTED_SPRINT: "operator-directives contains unprocessed sprint directive → process priority, cap raised, multi-task per tick"
+        OPERATOR_DIRECTED_SPRINT: "operator-directives contains unprocessed sprint directive → process priority; SPRINT = MORE WORK PER ACQUISITION (chain multiple substantive tasks within one lock-hold), NOT faster cadence; continue until LOOP CONDITIONS go false OR lock-stale-window approaches (90 min)"
         FRESH_SIGNAL: "new operator-directive in raw/notes/ OR operator-staged-changes pending in ~/root-ghostproxy/ → re-prioritize"
-        STEADY_WORK: "no fresh signal → pick next-ready task by priority order, execute, loop until budget exhausted"
+        STEADY_WORK: "no fresh signal → pick next-ready substantive task per priority_order, do it FULLY (TDD red→green→refactor through natural completion; no per-fire time-budget cap per operator 2026-05-16 'do big chunks of work'), then loop while LOOP CONDITIONS hold"
         BLOCKED: "previous task verification failed twice OR operator-staged-changes await review → stage current state + log + END"
         RETIRED: "self_deprecation criteria all met → log retirement + END all future ticks"
 
@@ -995,7 +1077,7 @@ workflow:
           within_level_ordering:
             - "Audit-cluster severity highest first (C14 catastrophic > C04 input-discipline > ... per pain-points-inventory severity-map)"
             - "P0 → P1 → P2 → P3 within severity class"
-            - "Smallest-scope ready task wins ties (Goldilocks per-tick)"
+            - "Smallest-scope ready task wins ties (Goldilocks scope-sizing per acquisition; once picked, the worker does it FULLY without time-fragmentation per worker_cadence_doctrine)"
             - "Skip operator-in-progress tasks (status:in-progress) to avoid step-on-toes"
           within_feature_sub_cycle:
             # When multiple ready sub-tasks share the same E00x parent epic:
@@ -1200,7 +1282,7 @@ workflow:
       gate: "0 NEW validation errors attributable to this tick (in second-brain)"
 
     - step: 10_loop_or_declare
-      purpose: "If budget remains AND next-ready task exists AND last task succeeded, LOOP to step 2. Else write inbox one-liner + per-fire summary + release lock + END."
+      purpose: "If next-ready task exists AND last task succeeded AND no operator-stop signal, LOOP to step 2. NO per-fire time-budget cap (per operator 2026-05-16 sacrosanct: 'the agent is not directed to worry about time. to not minimize and do big chunks of work'). Do substantive work as long as it naturally takes; lock + 5m cadence handle overlap. Else write inbox one-liner + per-fire summary + release lock + END."
       inbox_one_liner: "HH:MM ET | <branch> | tasks_executed:<n> | tasks_staged:<n> | blocked:<n> | retired:<bool> | post:<ok|err N>"
       per_fire_summary:
         # Item 24 (handoff) — operator-facing 'did THIS, surfaced THAT, next plans THIS'
@@ -1212,7 +1294,7 @@ workflow:
         required_subsections:
           did: "What this fire actually executed (3-7 lines max; per output_prose_density_policy). Bullet list: task IDs + audit-cluster cites + files staged in target project. If level_3 authoring fired: also list the new task ID + its parent E00x + the pain-point cluster sourced. If level_4 cross-cycle fallback fired: also list the prerequisite chain + Q## surfaced."
           surfaced: "What was surfaced for operator review (bullet list: task status:review + new operator-decision-queue Q##s + bootstrap-marker writes + NC items). 'none' if nothing surfaced this fire."
-          next_plans: "What the next fire intends if budget were unlimited (bullet list: next-ready task IDs by priority level 1-4; OR 'BLOCKED-PENDING-CLARIFICATION on <Q##>'; OR 'RETIRED'). Operator can pre-empt by editing operator-directives.md."
+          next_plans: "What the next acquisition intends (bullet list: next-ready task IDs by priority level 1-4; OR 'BLOCKED-PENDING-CLARIFICATION on <Q##>'; OR 'RETIRED'). No 'if budget were unlimited' caveat — there is no per-fire time-budget cap; the next acquisition does substantive work as long as it naturally takes. Operator can pre-empt by editing operator-directives.md."
           friction_observed: "Any friction this fire encountered (lock-stale recovery / verification-retry / pipeline-post-err / authoring-template-gap / etc.). 'none' if smooth. Worker uses this for step 8_self_improvement_check next tick."
         retention: "Last 30 days; older sections compressed to one-liners (operator-action OR cron-driven cleanup task TBD)"
       lock_release: "rm .assistant/_state/root-ghostproxy-rollout.lock (per concurrency_control.release_at_end happy_path)"
@@ -1233,7 +1315,7 @@ requirements_mapping:
   R10_build_forward: "Uncertainty → best-effort + stage + surface; never revert+restart"
   R11_no_freeze: "step 4 anti_freeze — stage partial work; never empty tick when ready tasks exist"
   R12_pause_ready_for_review: "step 1 RETIRED = correct end-state; BLOCKED = correct pause; freeze ≠ pause"
-  R13_anti_pollution: "Single substantive task per tick; multi-task only when simple + same module"
+  R13_anti_pollution: "Substantive depth per acquisition; pick the right-sized task (Goldilocks scope-sizing) and DO IT FULLY without time-fragmentation. Anti-pollution is about output QUALITY (no thin/repeated work), not about output COUNT-per-fire. Per operator 2026-05-16 (sacrosanct, this /goal): 'the agent is not directed to worry about time' — focus on substance, not chunk-size optimization."
   R14_retroactive: "step 7 R20 gate + autonomous untracked rm of superseded files"
   R15_online_research_when_applies: "wiki_fetch for operator-anchored verification; NOT mass external ingestion"
   R16_cross_project_root_ghostproxy_open: "Worker edits root-ghostproxy directly. Other sisters still forbidden."
@@ -1342,10 +1424,10 @@ anti_patterns:
     why: "Operator 2026-05-16: 'not receive GARBAGE' — garbage-in → garbage-out unless gap-filling at spec_check. Per SDD signature_practice checklist_as_unit_tests."
 
   - name: cron_cadence_spam
-    description: "Cron schedule firing more often than the work shape requires (e.g., every 3min hardcoded; or daily-light at multiple times per day). Sprint = MODE (operator-invoked via _state/operator-directives.md), NOT a hardcoded schedule."
-    detector: "cron.yaml schedule interval shorter than the natural cadence of work (substantive task takes 30-75 min; firing every 5-10 min produces overlap + waste) AND operator-directives.md has NO sprint directive"
-    response: "Reject hardcoded fast schedule; sprint mode picked up at step 1 branch (OPERATOR_DIRECTED_SPRINT) when operator-directives.md contains explicit sprint directive. Default cadence: daily-light + weekly-module-deep + bootstrap-on-install."
-    why: "Operator 2026-05-16: 'too SPAMMED' — over-firing wastes model time + produces low-value batched output + violates Goldilocks per-tick budget"
+    description: "Cron schedule firing OVERLAPPING fires that violate the mutual-exclusion lock pattern (e.g., every:30s hardcoded that overruns lock-acquire). The 5m sweet-spot cadence per worker_cadence_doctrine + mutual-exclusion lock = correct shape (check-often-work-deep). Sprint = MORE WORK PER ACQUISITION (operator-invoked via _state/operator-directives.md), NOT a faster cadence schedule."
+    detector: "cron.yaml schedule interval shorter than lock-acquire+release roundtrip (~10s) → fires overlap before lock state is consistent. Per operator-doctrine 2026-05-16 (this /goal): 5m IS the sweet spot for the worker's main cron; faster cadence does NOT mean faster work (lock+overlap defeats it); slower cadence (15m+) causes unnecessary defer-delay on operator-stage-changes."
+    response: "Use 5m cadence for driven-worker-tick (per worker_cadence_doctrine); rely on mutual-exclusion lock + 90-min lock-stale-window to handle fire overlap correctly. Sprint mode = more substantive work per acquisition (chain tasks within one lock-hold), picked up at STEP 1 BRANCH (OPERATOR_DIRECTED_SPRINT) when operator-directives.md contains explicit sprint directive."
+    why: "Operator 2026-05-16 (this /goal, sacrosanct): '5m is probably the sweetpot for an active worker main CRON' + 'the agent is not directed to worry about time' + 'what could take 1h would take 4-5 hours' if artificially fragmented. The cadence is for CHECK-FREQUENCY, the substantive work happens AS LONG AS IT NATURALLY TAKES within each acquisition."
 
   - name: poke_deficit
     description: "Cron prompt too thin to drive work — agent fires, reads vague prompt, doesn't know what to do, drifts into random tool calls OR surfaces multi-vision as default work-avoidance"
@@ -1407,8 +1489,18 @@ prompt_templates:
     4. **Build forward.** Uncertainty → stage best-effort fix + surface
        in inbox. NEVER freeze. NEVER revert-and-restart.
 
-    5. **Goldilocks per-tick.** Substantive tasks: 1/tick. Simple tasks
-       in same module: may batch. Sprint mode (operator-invoked): cap raised.
+    5. **Goldilocks scope-sizing per acquisition; substantive depth NOT
+       time-fragmented.** Per operator 2026-05-16 (sacrosanct, this /goal):
+       *"the agent is not directed to worry about time. to not minimize and
+       do big chunks of work and respect the workflow and etc... otherwise
+       what could take 1h would take 4-5 hours."* Pick the right-sized task
+       (Goldilocks scope sizing — small vs medium vs large per novelty +
+       audit-cluster severity), THEN DO IT FULLY (TDD red→green→refactor
+       through completion; no per-fire time-budget cap). The 5m cron cadence
+       + mutual-exclusion lock prevent overlap; the next 5m tick picks up
+       next work after this fire's natural completion. Sprint mode (operator-
+       invoked) = MORE WORK PER ACQUISITION (chain substantive tasks within
+       one lock-hold), not faster cadence.
 
     6. **Self-deprecating.** Retire when install.sh --check passes + all P0
        tasks done + operator confirms.
@@ -1742,11 +1834,17 @@ success_criteria:
 # -----------------------------------------------------------------------------
 subagents:
 
+  # NOTE on subagent scope_tier (per operator 2026-05-16 sacrosanct this /goal:
+  # "the agent is not directed to worry about time. to not minimize and do big chunks
+  # of work"). Scope_tier characterizes the WORK SHAPE (verification vs substantive),
+  # NOT a time budget cap. Each subagent does its work AS LONG AS IT NATURALLY TAKES.
+  # The parent fire's mutual-exclusion lock + 5m cron cadence handle overlap.
+
   - name: task_picker
     purpose: "step 2 — read ~/root-ghostproxy/wiki/backlog/tasks/_index.md + frontmatter scan; rank ready tasks by priority + scope; return next-pick + rationale"
-    when_to_use: ["step 2 — every tick"]
+    when_to_use: ["step 2 — every acquisition"]
     tools: [Bash (ls + grep frontmatter), Read]
-    budget: "1-2 minutes"
+    scope_tier: "verification (frontmatter scan + ranking; short by nature, not deep analysis)"
     output: "{picked_task_path, priority, parent_module, parent_epic, audit_cluster, rationale}"
 
   - name: task_executor
@@ -1754,7 +1852,7 @@ subagents:
     when_to_use: ["step 4 — primary worker"]
     inputs: [task_path, module_path, epic_path, audit_cluster_findings]
     tools: [Read, Edit, Write, Bash (for tests/install.sh inside ~/root-ghostproxy/)]
-    budget: "10-30 minutes (substantive) / 3-10 minutes (simple)"
+    scope_tier: "substantive (TDD red→green→refactor through completion; takes as long as it naturally takes; do BIG CHUNKS per operator 2026-05-16 this /goal — no per-fire time-budget cap)"
     style: ["Edit in place", "No scope inventions", "Reference audit cluster in Resolution"]
     output: "{files_edited[], verification_command, anti_pattern_detected: bool}"
 
@@ -1762,21 +1860,21 @@ subagents:
     purpose: "step 5 — run task-specific verification gate; capture output"
     when_to_use: ["step 5 — after every executor run"]
     tools: [Bash (~/root-ghostproxy/install.sh --check / --dry-run / regression / lint)]
-    budget: "1-5 minutes"
+    scope_tier: "verification (run gate commands + capture output; short by nature, waits on command completion)"
     output: "{gate_passed: bool, output_excerpt, retry_needed: bool}"
 
   - name: r20_gate
     purpose: "step 7 — verify tracked/untracked before ANY rm; gate tracked on accepted Q##"
     when_to_use: ["step 7 — every rm action"]
     tools: ["Bash (git ls-files --error-unmatch <path>)", "Read operator-decision-queue.md for accepted Q##"]
-    budget: "30 seconds per file"
+    scope_tier: "verification (single git ls-files check per path + Q## lookup)"
     output: "{path, status: untracked|tracked|tracked_with_accepted_q, action: autonomous_rm|surface_q|execute_q_rm|block}"
 
   - name: self_improvement_proposer
     purpose: "step 8 — inspect own profile + inbox + recent runs; propose profile updates"
     when_to_use: ["step 8 — every active session"]
     tools: [Read on own profile + inbox + recent state]
-    budget: "1-2 minutes"
+    scope_tier: "light (inspect own state + propose IF signal exists; no signal → 'no signal' log + skip)"
     output: "{target_field, current, proposed, rationale, autonomy_class}"
 
   # ─── v5 NEW SUBAGENTS (operator-doctrine 2026-05-16: research-online + research-local
@@ -1792,7 +1890,7 @@ subagents:
       - "Bash (gh repo view cyberpunk042/root-ghostproxy)"
       - "wiki_fetch MCP (operator-anchored URLs only)"
     forbidden_tools: [WebFetch on corpus URLs, mass URL fetching, gh-api-PATCH-POST-DELETE]
-    budget: "2-5 minutes per operator-anchored verification"
+    scope_tier: "verification (operator-anchored gh/wiki_fetch; bounded to the specific claim being verified; not deep)"
     output: "{operator_anchor_source, fetched_content_excerpt, claim_status: confirmed|contradicted|inconclusive}"
 
   - name: research_local
@@ -1802,7 +1900,7 @@ subagents:
       - "step 4a spec_check — resolve [NEEDS CLARIFICATION] from existing wiki content before surfacing to operator-decision-queue"
       - "step 4b test_list — find similar test patterns already authored in target project or sister projects (read-only for non-root-ghostproxy)"
     tools: [Read, Grep, Glob, wiki_search MCP, wiki_read_page MCP, wiki_list_pages MCP]
-    budget: "2-5 minutes per task (steady); 5-10 minutes on weekly-module-deep fires (deeper)"
+    scope_tier: "bounded research (DEEP-ENOUGH-TO-RESOLVE the spec_check / load_context need; not speculative deep-dive; weekly-deep fires get deeper research naturally — no time cap)"
     output: "{relevant_second_brain_pages[], relevant_target_project_files[], cross_cluster_references[], prior_art_summary}"
 
   - name: adr_author
@@ -1813,7 +1911,7 @@ subagents:
     inputs: [task_path, design_question, alternatives_evaluated, evidence_sources]
     tools: [Read, Write (brand-new ADRs only), Edit (ADR amendments via supersedes chain)]
     forbidden_tools: ["Write over existing ADRs without explicit SUPERSEDES relationship"]
-    budget: "5-10 minutes per ADR (sub-step of step 4 in feature-development model with design stage)"
+    scope_tier: "substantive (architecture decision must be deep enough to bind to decision-page-standards exemplar quality bar: ≥2 rejected alternatives with reasons + evidence-backed rationale + honest reversibility; takes as long as it naturally takes; no time-cap per operator 2026-05-16)"
     style:
       - "Decision section: ONE clear statement (imperative; not 'we should consider...')"
       - "Alternatives: ≥2 rejected with concrete reasons (not 'other options exist')"
@@ -1830,7 +1928,7 @@ subagents:
       - "Weekly-module-deep tick: extended regression suite authoring + coverage expansion"
     inputs: [task_path, sb_id, bug_reproduction_steps, expected_behavior]
     tools: [Read, Write (new test files), Edit (adding to existing regression suite), Bash (running tests + verifying Red→Green transitions)]
-    budget: "5-15 minutes per regression test (sub-step of step 4 for bug-class tasks); 15-30 minutes on weekly-deep coverage expansion"
+    scope_tier: "substantive (bug-test-first regression — REAL Red→Green verification captured inline + committed permanently to suite; weekly-deep coverage-expansion is even deeper; takes as long as it naturally takes — no time-cap per operator 2026-05-16)"
     style:
       - "Test reproduces bug FIRST (Red verified — assertion failure captured)"
       - "Test name + leading comment cite the SB-### it addresses"
@@ -1847,11 +1945,11 @@ subagents:
       - "step 10 loop_or_declare — surface to operator-decision-queue when task is BLOCKED-PENDING-CLARIFICATION OR scope-ambiguous"
     tools: [Read, Edit (task/module/epic frontmatter + Tasks sections), wiki_log MCP (operator-decision-queue surfacings)]
     forbidden_tools: ["Write over operator-decision-queue.md (Edit only — append to preserve operator-curated content)"]
-    budget: "1-3 minutes per task (daily-light); 3-5 minutes for module readiness recomputation (weekly-deep)"
+    scope_tier: "bounded (per-task queue management + Done When audit; deeper on weekly-deep when recomputing module readiness aggregates; takes as long as it naturally takes — no time-cap per operator 2026-05-16)"
     style:
       - "Done When items: each verifiable (no 'improve quality' vagueness)"
       - "Readiness derived from stages_completed (not subjective; never claimed)"
       - "Progress derived from execution evidence (Resolution sections + verification output)"
       - "Q## surfacings include: cascade marker · decision_needed slug · operator-verbatim quotes · multi-vision when GENUINE scope ambiguity"
-      - "Sprint-mode detection: operator-directives.md unprocessed sprint directive → cap raised at step 1 branch"
+      - "Sprint-mode detection: operator-directives.md unprocessed sprint directive → MORE WORK PER ACQUISITION at step 1 branch (chain substantive tasks within one lock-hold; NOT faster cadence)"
     output: "{task_done_when_constitutive: bool, augmented_checklist_items_count: int, module_readiness_delta, surfaced_to_queue_count: int, sprint_mode_detected: bool}"

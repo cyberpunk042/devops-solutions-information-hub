@@ -1,25 +1,25 @@
 {
-  "generated": "2026-05-17T00:00:55.430265+00:00",
+  "generated": "2026-05-17T00:36:52.303831+00:00",
   "stats": {
-    "pages": 904,
+    "pages": 907,
     "domains": 15,
     "sources": 124,
     "comparisons": 10,
-    "relationships": 4123,
-    "tags_unique": 3458,
+    "relationships": 4139,
+    "tags_unique": 3475,
     "layers": {
       "3": 4,
       "5": 38,
       "6": 26,
       "2": 83,
-      "4": 83,
+      "4": 84,
       "0": 1,
       "1": 92,
       "spine": 83
     },
     "maturity": {
-      "seed": 203,
-      "growing": 336,
+      "seed": 204,
+      "growing": 338,
       "mature": 23
     }
   },
@@ -20963,6 +20963,91 @@
       ]
     },
     {
+      "path": "lessons/01_drafts/overcorrection-binary-fix-without-nuance-when-correcting-over-permissive-into-over-restrictive.md",
+      "slug": "lessons/01_drafts/overcorrection-binary-fix-without-nuance-when-correcting-over-permissive-into-over-restrictive",
+      "title": "Lesson \u2014 Overcorrection as binary fix: when correcting over-permissive into over-restrictive without preserving nuance (the CROSS-SCOPE hard-block vs WITHIN-SCOPE soft-priority distinction)",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "draft",
+      "confidence": "medium",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "lesson",
+        "overcorrection",
+        "binary-correction",
+        "pendulum-anti-pattern",
+        "scope-distinction",
+        "sfif",
+        "soft-priority-vs-hard-block",
+        "spec-evolution",
+        "draft"
+      ],
+      "sources": [
+        {
+          "id": "rgp-v5-evening-overcorrection-arc",
+          "type": "file",
+          "file": "docs/SESSION-2026-05-16-final.md",
+          "description": "Original handoff documenting the v5-evening hard-scope-lock overcorrection following the wrong-scope T014/T015 fires"
+        },
+        {
+          "id": "rgp-v5-revert-arc",
+          "type": "file",
+          "file": "docs/SESSION-2026-05-16-v2.md",
+          "description": "The corrected-revert arc 17 augmentations + 3 planning artifacts implementing the operator-corrected SFIF framing"
+        },
+        {
+          "id": "operator-correction-2026-05-16-sfif-not-block",
+          "type": "directive",
+          "file": "raw/notes/2026-05-16-operator-directive-focus-profile-not-openclaw-do-not-decide-do-not-minimize-workflow.md",
+          "description": "Operator-verbatim 2026-05-16 (sacrosanct): 'SFIF also mean that you priritize Skffold before fundation before infrastructure before future... obviously.... this does not mean it completley block tasks either...'"
+        },
+        {
+          "id": "enforcement-must-be-mindful-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/methodology-process/enforcement-must-be-mindful-hard-blocks-need-justified-bypass.md",
+          "description": "Pre-existing lesson on T086 OpenArms \u2014 correct fix reverted twice because hook looked like scope creep without explanation"
+        },
+        {
+          "id": "going-to-extremes-pendulum-pain-cluster",
+          "type": "file",
+          "file": "raw/notes/2026-05-08-pain-points-inventory-from-root-failed-conversation-master-aggregate.md",
+          "description": "Pain-points-inventory cluster C08 (going-to-extremes) \u2014 every correction swings fully opposite; pendulum-shape, never one-notch"
+        }
+      ],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [
+        "Enforcement Must Be Mindful \u2014 Hard Blocks Need Justified Bypass",
+        "Going-to-Extremes Pendulum \u2014 Correction as Calibration Not Swing",
+        "Right Process for Right Context (Goldilocks Imperative)",
+        "Spec-Driven Evolution \u2014 The project evolves its own spec to fix bugs it exhibits"
+      ],
+      "aliases": [
+        "Lesson \u2014 Overcorrection without nuance",
+        "Overcorrection anti-pattern"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Enforcement Must Be Mindful \u2014 Hard Blocks Need Justified Bypass"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle \u2014 Right Process for Right Context"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle \u2014 Spec-Driven Evolution"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "enforcement-must-be-mindful-hard-blocks-need-justified-bypass"
+        }
+      ]
+    },
+    {
       "path": "lessons/01_drafts/p5-candidate-defense-in-depth-required-for-cross-cutting-failure-modes-hypothesis.md",
       "slug": "lessons/01_drafts/p5-candidate-defense-in-depth-required-for-cross-cutting-failure-modes-hypothesis",
       "title": "P5 Candidate Hypothesis \u2014 Defense-in-Depth Required for Cross-Cutting Failure Modes",
@@ -38039,6 +38124,195 @@
         {
           "verb": "RELATES TO",
           "target": "Anthropic NLA flagged-pages log"
+        }
+      ]
+    },
+    {
+      "path": "log/2026-05-16-rgp-profile-v5-evening-overcorrection-revert-and-comprehensive-augmentation.md",
+      "slug": "log/2026-05-16-rgp-profile-v5-evening-overcorrection-revert-and-comprehensive-augmentation",
+      "title": "2026-05-16 \u2014 RGP profile v5-evening SFIF-overcorrection revert + comprehensive augmentation (17 surgical edits + 3 planning artifacts)",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "session",
+        "rgp",
+        "root-ghostproxy-rollout",
+        "ai-assistant-profile",
+        "sfif-revert",
+        "workflow-evolution",
+        "augment-not-rewrite",
+        "planning-artifacts",
+        "2026-05-16"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive-2026-05-16-focus-profile-not-openclaw",
+          "type": "directive",
+          "file": "raw/notes/2026-05-16-operator-directive-focus-profile-not-openclaw-do-not-decide-do-not-minimize-workflow.md"
+        },
+        {
+          "id": "prior-handoff-2026-05-16-final",
+          "type": "file",
+          "file": "docs/SESSION-2026-05-16-final.md"
+        },
+        {
+          "id": "this-arc-handoff-2026-05-16-v2",
+          "type": "file",
+          "file": "docs/SESSION-2026-05-16-v2.md"
+        },
+        {
+          "id": "pain-points-inventory-2026-05-08",
+          "type": "file",
+          "file": "raw/notes/2026-05-08-pain-points-inventory-from-root-failed-conversation-master-aggregate.md"
+        },
+        {
+          "id": "sfif-model",
+          "type": "wiki",
+          "file": "wiki/spine/models/quality/model-sfif-architecture.md"
+        },
+        {
+          "id": "per-project-assistant-profile-standards",
+          "type": "wiki",
+          "file": "wiki/spine/standards/per-project-assistant-profile-standards.md"
+        },
+        {
+          "id": "sdd-methodology-profile",
+          "type": "wiki",
+          "file": "wiki/config/methodology-profiles/spec-driven.yaml"
+        },
+        {
+          "id": "tdd-methodology-profile",
+          "type": "wiki",
+          "file": "wiki/config/methodology-profiles/test-driven.yaml"
+        }
+      ],
+      "layer": "",
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "2026-05-16-strong-handoff-ck-v3-live-cr-ps-still-broken"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Per-Project Assistant Profile Standards"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "SFIF Model"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Per-Project Assistant Profile Model"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 3"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 5"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Pain-Points Inventory"
+        }
+      ]
+    },
+    {
+      "path": "log/2026-05-16-rgp-profile-v5.2-cadence-doctrine-5m-sweetspot-do-big-chunks-no-time-anxiety.md",
+      "slug": "log/2026-05-16-rgp-profile-v5.2-cadence-doctrine-5m-sweetspot-do-big-chunks-no-time-anxiety",
+      "title": "2026-05-16 \u2014 RGP profile v5.2 cadence-doctrine: 5m sweet spot + do big chunks + no time-anxiety (worker_cadence_doctrine block + 24 surgical edits)",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "session",
+        "rgp",
+        "root-ghostproxy-rollout",
+        "ai-assistant-profile",
+        "cadence-doctrine",
+        "5m-sweetspot",
+        "do-big-chunks",
+        "no-time-anxiety",
+        "lock-handles-overlap",
+        "workflow-evolution",
+        "spec-evolution",
+        "2026-05-16"
+      ],
+      "sources": [
+        {
+          "id": "operator-goal-2026-05-16-evening-2-cadence-doctrine",
+          "type": "directive",
+          "file": "raw/notes/2026-05-16-operator-goal-5m-sweetspot-no-time-worry-do-big-chunks-confident-synergy.md",
+          "description": "Operator /goal 2026-05-16 evening 2 (sacrosanct, verbatim quoted in the raw note): 5m cron sweet spot + agent not directed to worry about time + do big chunks of work + respect workflow + confidence in triggers/prompts/directives/synergy"
+        },
+        {
+          "id": "v5-evening-overcorrection-arc-prior",
+          "type": "file",
+          "file": "wiki/log/2026-05-16-rgp-profile-v5-evening-overcorrection-revert-and-comprehensive-augmentation.md"
+        },
+        {
+          "id": "v5-evening-overcorrection-handoff",
+          "type": "file",
+          "file": "docs/SESSION-2026-05-16-v2.md"
+        },
+        {
+          "id": "overcorrection-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/overcorrection-binary-fix-without-nuance-when-correcting-over-permissive-into-over-restrictive.md"
+        },
+        {
+          "id": "goldilocks-principle",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/right-process-for-right-context-the-goldilocks-imperative.md"
+        },
+        {
+          "id": "spec-driven-evolution-principle",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/spec-driven-evolution-the-project-evolves-its-own-spec-to-fix-bugs-it-exhibits.md"
+        },
+        {
+          "id": "enforcement-must-be-mindful",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/methodology-process/enforcement-must-be-mindful-hard-blocks-need-justified-bypass.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Principle 3 Goldilocks"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 5 P5"
         }
       ]
     },
@@ -63186,8 +63460,8 @@
       "relationship_count": 509
     },
     "cross-domain": {
-      "page_count": 308,
-      "relationship_count": 1840
+      "page_count": 311,
+      "relationship_count": 1856
     },
     "ai-agents": {
       "page_count": 77,
@@ -63864,6 +64138,7 @@
       "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
       "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache",
       "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction",
+      "lessons/01_drafts/overcorrection-binary-fix-without-nuance-when-correcting-over-permissive-into-over-restrictive",
       "patterns/01_drafts/per-project-assistant-profile-pattern-tailored-config-to-spawn-ecosystem-runtimes",
       "patterns/01_drafts/skill-systems-orchestrator-plus-modular-child-skills-the-architecture-pattern-anthropic-wont-solve-for-you",
       "patterns/01_drafts/spawn-protocol-multica-the-runtime-agnostic-bridge-from-per-project-profile-to-multicas-10-cli-daemon"
@@ -64843,6 +65118,7 @@
       "domains/ai-agents/patterns/task-lifecycle-stage-gating",
       "domains/cross-domain/methodology-framework/global-standards-adherence",
       "domains/cross-domain/methodology-framework/methodology-framework",
+      "lessons/01_drafts/overcorrection-binary-fix-without-nuance-when-correcting-over-permissive-into-over-restrictive",
       "lessons/03_validated/methodology-quality/models-are-built-in-layers-not-all-at-once",
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features",
       "spine/models/quality/model-sfif-architecture"
@@ -66580,6 +66856,7 @@
       "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
       "lessons/01_drafts/mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive",
       "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction",
+      "lessons/01_drafts/overcorrection-binary-fix-without-nuance-when-correcting-over-permissive-into-over-restrictive",
       "lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths",
       "lessons/01_drafts/quality-per-position-compounds-quantity-per-position-diminishes-convergent-pattern",
       "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work",
@@ -68097,7 +68374,9 @@
       "domains/cross-domain/cascade-candidate-root-ghostproxy-self-update-observe-upstream-head-before-drafting-modules-2026-05-16"
     ],
     "root-ghostproxy-rollout": [
-      "domains/cross-domain/cascade-candidate-root-ghostproxy-self-update-observe-upstream-head-before-drafting-modules-2026-05-16"
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-self-update-observe-upstream-head-before-drafting-modules-2026-05-16",
+      "log/2026-05-16-rgp-profile-v5-evening-overcorrection-revert-and-comprehensive-augmentation",
+      "log/2026-05-16-rgp-profile-v5.2-cadence-doctrine-5m-sweetspot-do-big-chunks-no-time-anxiety"
     ],
     "state-divergence": [
       "domains/cross-domain/cascade-candidate-root-ghostproxy-state-divergence-upstream-already-advanced-2026-05-16"
@@ -70067,6 +70346,25 @@
     "vendor-policy": [
       "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction"
     ],
+    "overcorrection": [
+      "lessons/01_drafts/overcorrection-binary-fix-without-nuance-when-correcting-over-permissive-into-over-restrictive"
+    ],
+    "binary-correction": [
+      "lessons/01_drafts/overcorrection-binary-fix-without-nuance-when-correcting-over-permissive-into-over-restrictive"
+    ],
+    "pendulum-anti-pattern": [
+      "lessons/01_drafts/overcorrection-binary-fix-without-nuance-when-correcting-over-permissive-into-over-restrictive"
+    ],
+    "scope-distinction": [
+      "lessons/01_drafts/overcorrection-binary-fix-without-nuance-when-correcting-over-permissive-into-over-restrictive"
+    ],
+    "soft-priority-vs-hard-block": [
+      "lessons/01_drafts/overcorrection-binary-fix-without-nuance-when-correcting-over-permissive-into-over-restrictive"
+    ],
+    "spec-evolution": [
+      "lessons/01_drafts/overcorrection-binary-fix-without-nuance-when-correcting-over-permissive-into-over-restrictive",
+      "log/2026-05-16-rgp-profile-v5.2-cadence-doctrine-5m-sweetspot-do-big-chunks-no-time-anxiety"
+    ],
     "p5-candidate": [
       "lessons/01_drafts/p5-candidate-defense-in-depth-required-for-cross-cutting-failure-modes-hypothesis"
     ],
@@ -71115,6 +71413,8 @@
       "log/2026-05-15-ck-weekly-distillation-surfacings",
       "log/2026-05-15-research-watch-lightweight-scan-4-cron-18-32-et-noted-but-sk",
       "log/2026-05-15-weekly-research-digest-2026-05-09-2026-05-15",
+      "log/2026-05-16-rgp-profile-v5-evening-overcorrection-revert-and-comprehensive-augmentation",
+      "log/2026-05-16-rgp-profile-v5.2-cadence-doctrine-5m-sweetspot-do-big-chunks-no-time-anxiety",
       "log/2026-05-16-strong-handoff-ck-v3-live-cr-ps-still-broken"
     ],
     "summary": [
@@ -73385,6 +73685,8 @@
     "2026-05-16": [
       "log/2026-05-16-flagged-pages-anthropic-nla-interpretability",
       "log/2026-05-16-flagged-pages-gemini-spark",
+      "log/2026-05-16-rgp-profile-v5-evening-overcorrection-revert-and-comprehensive-augmentation",
+      "log/2026-05-16-rgp-profile-v5.2-cadence-doctrine-5m-sweetspot-do-big-chunks-no-time-anxiety",
       "sources/ai-models/src-anthropic-natural-language-autoencoders-interpretability-2026-05-07",
       "sources/ai-models/src-gemini-spark-intelligence-google-agent-tier-2026-05-12-14"
     ],
@@ -73429,6 +73731,42 @@
     ],
     "ephemeral-raws": [
       "log/2026-05-16-purge-summary"
+    ],
+    "rgp": [
+      "log/2026-05-16-rgp-profile-v5-evening-overcorrection-revert-and-comprehensive-augmentation",
+      "log/2026-05-16-rgp-profile-v5.2-cadence-doctrine-5m-sweetspot-do-big-chunks-no-time-anxiety"
+    ],
+    "ai-assistant-profile": [
+      "log/2026-05-16-rgp-profile-v5-evening-overcorrection-revert-and-comprehensive-augmentation",
+      "log/2026-05-16-rgp-profile-v5.2-cadence-doctrine-5m-sweetspot-do-big-chunks-no-time-anxiety"
+    ],
+    "sfif-revert": [
+      "log/2026-05-16-rgp-profile-v5-evening-overcorrection-revert-and-comprehensive-augmentation"
+    ],
+    "workflow-evolution": [
+      "log/2026-05-16-rgp-profile-v5-evening-overcorrection-revert-and-comprehensive-augmentation",
+      "log/2026-05-16-rgp-profile-v5.2-cadence-doctrine-5m-sweetspot-do-big-chunks-no-time-anxiety"
+    ],
+    "augment-not-rewrite": [
+      "log/2026-05-16-rgp-profile-v5-evening-overcorrection-revert-and-comprehensive-augmentation"
+    ],
+    "planning-artifacts": [
+      "log/2026-05-16-rgp-profile-v5-evening-overcorrection-revert-and-comprehensive-augmentation"
+    ],
+    "cadence-doctrine": [
+      "log/2026-05-16-rgp-profile-v5.2-cadence-doctrine-5m-sweetspot-do-big-chunks-no-time-anxiety"
+    ],
+    "5m-sweetspot": [
+      "log/2026-05-16-rgp-profile-v5.2-cadence-doctrine-5m-sweetspot-do-big-chunks-no-time-anxiety"
+    ],
+    "do-big-chunks": [
+      "log/2026-05-16-rgp-profile-v5.2-cadence-doctrine-5m-sweetspot-do-big-chunks-no-time-anxiety"
+    ],
+    "no-time-anxiety": [
+      "log/2026-05-16-rgp-profile-v5.2-cadence-doctrine-5m-sweetspot-do-big-chunks-no-time-anxiety"
+    ],
+    "lock-handles-overlap": [
+      "log/2026-05-16-rgp-profile-v5.2-cadence-doctrine-5m-sweetspot-do-big-chunks-no-time-anxiety"
     ],
     "ck-v3": [
       "log/2026-05-16-strong-handoff-ck-v3-live-cr-ps-still-broken"
@@ -78321,6 +78659,12 @@
       ]
     },
     {
+      "target": "2026-05-16-strong-handoff-ck-v3-live-cr-ps-still-broken",
+      "referenced_by": [
+        "2026-05-16 \u2014 RGP profile v5-evening SFIF-overcorrection revert + comprehensive augmentation (17 surgical edits + 3 planning artifacts)"
+      ]
+    },
+    {
       "target": "AI Model Provider Harness Decision Matrix",
       "referenced_by": [
         "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)",
@@ -80126,6 +80470,12 @@
       ]
     },
     {
+      "target": "Pain-Points Inventory",
+      "referenced_by": [
+        "2026-05-16 \u2014 RGP profile v5-evening SFIF-overcorrection revert + comprehensive augmentation (17 surgical edits + 3 planning artifacts)"
+      ]
+    },
+    {
       "target": "Parent state-divergence cascade-candidate",
       "referenced_by": [
         "Cascade candidate \u2014 M001 reframe: audit (not author) existing AGENTS.md (34KB) + CLAUDE.md (38KB) at upstream root-ghostproxy"
@@ -80203,6 +80553,12 @@
       "target": "Per-Project Assistant Profile",
       "referenced_by": [
         "Profile \u2014 Circular Knowledge (evolution-layer; observes convergence + proposes promotion through the stages + cascades self \u2192 second-brain \u2192 ecosystem)"
+      ]
+    },
+    {
+      "target": "Per-Project Assistant Profile Model",
+      "referenced_by": [
+        "2026-05-16 \u2014 RGP profile v5-evening SFIF-overcorrection revert + comprehensive augmentation (17 surgical edits + 3 planning artifacts)"
       ]
     },
     {
@@ -80297,6 +80653,24 @@
       ]
     },
     {
+      "target": "Principle 3 Goldilocks",
+      "referenced_by": [
+        "2026-05-16 \u2014 RGP profile v5.2 cadence-doctrine: 5m sweet spot + do big chunks + no time-anxiety (worker_cadence_doctrine block + 24 surgical edits)"
+      ]
+    },
+    {
+      "target": "Principle 5",
+      "referenced_by": [
+        "2026-05-16 \u2014 RGP profile v5-evening SFIF-overcorrection revert + comprehensive augmentation (17 surgical edits + 3 planning artifacts)"
+      ]
+    },
+    {
+      "target": "Principle 5 P5",
+      "referenced_by": [
+        "2026-05-16 \u2014 RGP profile v5.2 cadence-doctrine: 5m sweet spot + do big chunks + no time-anxiety (worker_cadence_doctrine block + 24 surgical edits)"
+      ]
+    },
+    {
       "target": "Principle \u2014 Infrastructure Over Instructions",
       "referenced_by": [
         "Defense Layer Progression Is Expensive \u2014 Prevention Is Cheap, Detection and Correction Are Milestones",
@@ -80311,7 +80685,14 @@
     {
       "target": "Principle \u2014 Right Process for Right Context",
       "referenced_by": [
+        "Lesson \u2014 Overcorrection as binary fix: when correcting over-permissive into over-restrictive without preserving nuance (the CROSS-SCOPE hard-block vs WITHIN-SCOPE soft-priority distinction)",
         "Principle \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them"
+      ]
+    },
+    {
+      "target": "Principle \u2014 Spec-Driven Evolution",
+      "referenced_by": [
+        "Lesson \u2014 Overcorrection as binary fix: when correcting over-permissive into over-restrictive without preserving nuance (the CROSS-SCOPE hard-block vs WITHIN-SCOPE soft-priority distinction)"
       ]
     },
     {
@@ -80454,6 +80835,12 @@
       "target": "SDLC Customization Framework",
       "referenced_by": [
         "Profile as Coordination Bundle"
+      ]
+    },
+    {
+      "target": "SFIF Model",
+      "referenced_by": [
+        "2026-05-16 \u2014 RGP profile v5-evening SFIF-overcorrection revert + comprehensive augmentation (17 surgical edits + 3 planning artifacts)"
       ]
     },
     {
@@ -81389,6 +81776,12 @@
       "referenced_by": [
         "E012 M001 \u2014 Unsloth Toolchain Install (GPU build, 19 GB VRAM)",
         "T070 \u2014 Design 3 Adapter Training Datasets (methodology, compliance, relationship)"
+      ]
+    },
+    {
+      "target": "enforcement-must-be-mindful-hard-blocks-need-justified-bypass",
+      "referenced_by": [
+        "Lesson \u2014 Overcorrection as binary fix: when correcting over-permissive into over-restrictive without preserving nuance (the CROSS-SCOPE hard-block vs WITHIN-SCOPE soft-priority distinction)"
       ]
     },
     {
