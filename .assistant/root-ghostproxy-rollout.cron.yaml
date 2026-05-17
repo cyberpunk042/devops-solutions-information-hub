@@ -1,20 +1,26 @@
 # =============================================================================
-# .assistant/root-ghostproxy-rollout.cron.yaml  (v3 — 2026-05-16)
+# .assistant/root-ghostproxy-rollout.cron.yaml  (v5 — 2026-05-16)
 # =============================================================================
 # Per-profile CRON jobs for the root-ghostproxy-rollout assistant.
+# v5 = worker mode + driven-tick cadence (every:15m) + SFIF soft-priority +
+#      bootstrap-idempotency + mutual-exclusion lock + 4-level pick logic.
+# v5-evening SFIF hard-scope-lock corrected per operator 2026-05-16:
+#   "this does not mean it completley block tasks either..."
 #
 # Cadence philosophy (operator-verbatim 2026-05-16, sacrosanct):
 #   "THE ONLY FUCKING THING WHICH COULD BE FAST LIKE THIS IS THE
-#    root-ghostproxy ai assistant" — but ONLY when operator invokes sprint
-#    via .assistant/_state/root-ghostproxy-rollout-operator-directives.md.
-#    Hardcoded 3min cron rejected (was v1 anti-pattern). Sprint = mode,
-#    not schedule.
+#    root-ghostproxy ai assistant" — driven-worker-tick = every 15m.
+#    Sprint mode (faster cadence) is operator-invoked via
+#    .assistant/_state/root-ghostproxy-rollout-operator-directives.md.
+#    Hardcoded 3min cron rejected (v1 anti-pattern; sprint = mode, not schedule).
 #
-# Default cadence: daily-light + weekly-module-deep + bootstrap-on-install.
-# Sprint mode = operator-invoked, processed at step 1 branch decision.
+# Default cadence: bootstrap-on-install (one-shot, idempotency-gated) +
+#   driven-worker-tick (every:15m) + weekly-module-deep (Tue 09:00 ET).
+# All 3 cron variants share the mutual-exclusion lock-file (per profile
+# concurrency_control.lock_file) to prevent races on git stage in target project.
 #
-# 3 jobs total (down from v1's 6 — removed: sprint-tick every:3m,
-# morning-briefing (sprint-specific), monthly-sfif-tier-audit (over-engineered)).
+# 3 jobs total. Removed (v1 anti-patterns): sprint-tick every:3m hardcoded,
+# morning-briefing sprint-specific, monthly-sfif-tier-audit over-engineered.
 # =============================================================================
 
 profile: root-ghostproxy-rollout
@@ -70,7 +76,23 @@ jobs:
           - Verify ~/root-ghostproxy/ readable+writable + git clean
           - Verify all 14 second-brain bindings present (per profile pre_launch_readiness.second_brain_binding_verification)
           - Read inbox tail (.assistant/_state/root-ghostproxy-rollout-inbox.md last 50 lines)
-          - Branch: FRESH_SIGNAL (bootstrap on v5 install IS fresh signal)
+          - Already-bootstrapped detection (per profile bootstrap_idempotency.detect_already_bootstrapped):
+              * If .assistant/_state/root-ghostproxy-rollout-bootstrap-marker.md exists with status:complete → BRANCH: ALREADY_BOOTSTRAPPED
+              * If inbox contains ≥1 prior "BOOTSTRAP" entry with post:ok in last 14 days → BRANCH: ALREADY_BOOTSTRAPPED
+              * Else → BRANCH: FRESH_SIGNAL (first bootstrap fire)
+          - Mutual-exclusion lock (per profile concurrency_control.lock_file):
+              * If .assistant/_state/root-ghostproxy-rollout.lock exists AND lock-PID is alive AND lock-timestamp < 30 min old → SHORT-CIRCUIT: log "lock held by PID <n> since <ts>; bootstrap deferring to next install"; END (no work this fire)
+              * Else: acquire lock (write PID + ISO timestamp); proceed; release lock at END
+
+          BRANCH ALREADY_BOOTSTRAPPED behavior:
+            - Skip full planning artifact regeneration (waste of compute on re-install)
+            - Run lightweight verification only: confirm 14 second-brain bindings still present + target_project still accessible + git state still clean + last bootstrap planning artifact still applicable (no major operator-directives.md updates since last bootstrap)
+            - Append inbox one-liner: HH:MM ET | BOOTSTRAP-SKIP | reason:already_bootstrapped_<marker_or_inbox_evidence> | verification:<pass|fail> | post:ok
+            - END
+
+          BRANCH FRESH_SIGNAL behavior:
+            - Continue to STEP 2 pick_next_task; proceed with full bootstrap planning artifact per existing logic
+            - At END of fire: write .assistant/_state/root-ghostproxy-rollout-bootstrap-marker.md with status:complete + timestamp + first-pick-task-id + planning-artifact-path
 
         STEP 2 pick_next_task (per sfif_binding.work_order_discipline):
           - Scan ~/root-ghostproxy/wiki/backlog/tasks/T*.md frontmatter for: status,
@@ -128,16 +150,20 @@ jobs:
           - END
 
         ANTI-PATTERNS (refuse — per profile anti_patterns):
-          - wholesale_rewrite_instead_of_augment (use Edit, not Write, for existing files)
-          - methodology_bypass (must cite C##/SB-### + use SDD+TDD discipline)
-          - sfif_tier_jumping (no cross-tier without operator-explicit override)
-          - freeze_disguised_as_surfacing (multi-vision is for GENUINE scope ambiguity only)
+          - wholesale_rewrite_instead_of_augment (use Edit, not Write, for existing files; operator 2026-05-16: "make augmentations, improvements, upgrades, evolutions")
+          - methodology_bypass (must cite C##/SB-### + use SDD+TDD discipline + bind to per-type page-standards)
+          - sfif_sub_cycle_tier_jumping (WITHIN an E00x feature's sub-cycle, prefer Scaffold sub-tasks → Foundation → Infrastructure → Features-implementation when multiple ready sub-tasks share the E00x parent; soft priority, NOT cross-task hard block per operator 2026-05-16 "this does not mean it completley block tasks either")
+          - cross_sfif_cycle_default_inversion (picking sister-integration M0## / T001-T067 BEFORE exhausting Levels 1+2+3 of pick_filter.priority_order — DEFAULT is E001-E007 per operator "THE GOAL IS ALL AROUND IT.. NONE OF IT IS AROUND INSTALL")
+          - freeze_disguised_as_surfacing (multi-vision is for GENUINE scope ambiguity only; surfacing as work-avoidance defeats build_forward)
           - scope_decision_in_execution (don't invent scope task didn't state)
-          - skip_verification (task can't reach status:review without verification output)
-          - gold_plating_in_green (no code beyond what current failing test requires)
+          - skip_verification (task can't reach status:review without verification output in Resolution)
+          - gold_plating_in_green (no code beyond what current failing test requires; TDD Green = minimum)
           - orphan_implementation (verify integration wiring at step 4f — OpenArms Bug 6 lesson)
-          - commit_attempt (R20 — agent NEVER commits)
-          - rm_tracked_without_q (R20 — Q## gate first)
+          - commit_attempt (R20 sacrosanct — agent NEVER commits in either repo)
+          - rm_tracked_without_q (R20 sacrosanct — Q## gate first for tracked rm)
+          - mindless_execution (skip step 4a spec_check / no audit anchor / no methodology binding citation)
+          - accept_garbage_input (vague Done When → AUGMENT it per spec_check, don't proceed with garbage)
+          - poke_deficit / direction_deficit (cron prompts must be substantive; this very prompt IS the GOAL mechanism that drives the fire)
 
         BUDGET: 30-45 min default (verification + planning, no execution);
         60-90 min with GO marker (full first task execution).
@@ -158,11 +184,49 @@ jobs:
       prompt: |
         WORKER fire — root-ghostproxy. VARIANT: DRIVEN WORKER TICK (every 15m, steady-state).
 
-        GOAL: Execute next-ready task end-to-end per SDD+TDD discipline. Goldilocks
-        per-tick: 1 substantive task (10-30 min) OR 2-4 simple tasks within same
-        module. CRITICAL: surfacing NCs / [NEEDS OPERATOR REVIEW] markers is NOT
-        an exit condition — surface + continue to next-ready task per build_forward.
-        The next 15-min tick will pick up whatever's left.
+        GOAL — operator-doctrinal 2026-05-16, SACROSANCT (the WHOLE point of this profile):
+        Fix root-ghostproxy's FEATURES + BUGS in E001-E007 epics — this is the worker's
+        PRIMARY PURPOSE. Operator-verbatim (sacrosanct, complete framing):
+          "ITS NOT THE INSTALL THE PROBLEM ITS WHAT WE INSTALL.. ITS THE PROJECT ITSELF
+           AND ALL ITS FEATURES"
+          "AS IF I WAS GONG TO FUCKIGN INSTALL It"
+          "THE ONLY PURPOSE OF THIS AI ASSISTANT IS EXACTLY WHAT I TOLD YOU.. THE GOAL
+           IS ALL AROUND IT.. NONE OF IT IS AROUND INSTALL OR ANY OTHER RANDOM TASKS"
+          "SFIF IS NOT A MATTER OF PRIORITY RETARD.. ITS PART OF THE WORKFLOW OF
+           EVERYTHING..."
+          "SFIF also mean that you priritize Skffold before fundation before
+           infrastructure before future... obviously.... this does not mean it
+           completley block tasks either..."
+
+        Two SFIF cycles in play (per profile sfif_binding.two_sfif_cycles_in_play):
+          A. Sister-integration SFIF (M001-M014 / T001-T067 / sfif-rollout epic) =
+             DONE OR DOES NOT MATTER per operator. Worker DEFAULTS AWAY from it.
+          B. root-ghostproxy's OWN project-lifecycle SFIF (E001-E007 features at
+             Project-Features tier) = THE primary purpose. Worker DEFAULTS HERE.
+
+        Per-tick output: 1 substantive E001-E007 feature task (10-30 min) OR 2-4
+        simple feature tasks within same E00x. Pick logic uses the 4-level priority
+        order from sfif_binding.pick_filter (see profile YAML):
+          Level 1: operator-explicit override in operator-directives.md
+          Level 2: DEFAULT in_scope_default (E001-E007, severity-then-priority order,
+                   within-feature sub-cycle SFIF soft priority)
+          Level 3: AUTHOR FROM PAIN-POINTS when levels 1+2 yield no ready task
+                   (raw/notes/2026-05-08-pain-points-inventory — 180 items × 15
+                   clusters; map to right E00x; place under
+                   root-ghostproxy-m-e0##-* sub-module; then execute)
+          Level 4: CROSS-CYCLE FALLBACK (rare) when levels 1+2+3 truly exhausted AND
+                   sister-integration task is GENUINELY prerequisite to an unblocked
+                   E001-E007 task AND audit-cluster justification stages in Resolution
+                   AND surface as soft-signal Q## to operator-decision-queue. Per
+                   operator: "this does not mean it completley block tasks either"
+                   — fallback is allowed (with the full justification chain), not
+                   absolutely forbidden.
+
+        Surfacing NCs / [NEEDS OPERATOR REVIEW] is NOT an exit condition — surface +
+        continue to next-ready feature task per build_forward.
+
+        Surfacing NCs / [NEEDS OPERATOR REVIEW] is NOT an exit condition — surface +
+        continue to next-ready feature task per build_forward.
 
         BOUND TO (load at fire start):
           Profile: .assistant/root-ghostproxy-rollout.yaml (v5 worker)
@@ -184,28 +248,73 @@ jobs:
           - Read operator-directives.md + recent raw/notes/2026-*-operator-*
           - Mark [!processed] on unmarked items
 
-        STEP 1 state_check: branch decision:
-          OPERATOR_DIRECTED_SPRINT — explicit sprint directive in operator-directives.md
-            → cap raised, multi-task per tick (2-5 tasks)
-          FRESH_SIGNAL — new operator-directive in raw/notes/ since last fire OR
-            operator-staged-changes pending in ~/root-ghostproxy/ → re-prioritize
-          STEADY_WORK — no fresh signal → pick next-ready, loop within budget
-          BLOCKED — prior task verification failed 2× OR operator-review-pending tasks
-            accumulating > 3 → stage current + log + END
-          RETIRED — self_deprecation criteria met (install.sh --check exits 0 + all P0
-            done + operator confirmation in operator-directives.md) → log + END all
-            future ticks
+        STEP 1 state_check:
 
-        STEP 2 pick_next_task (per sfif_binding.work_order_discipline):
-          - Scan ~/root-ghostproxy/wiki/backlog/tasks/T*.md frontmatter
-          - Priority order:
-            1. Operator-explicit priority in operator-directives.md
-            2. Foundational-triplet (C04 / C02 / C09)
-            3. P0 Scaffold → Foundation → Infrastructure → Features tier sequence
-            4. P0 → P1 → P2 → P3 within each tier
-          - Smallest-scope ready task wins ties (Goldilocks)
-          - Skip operator-in-progress tasks (status:in-progress; avoid step-on-toes)
-          - Identify audit cluster (C##/SB-###)
+          PRE-CHECK — Mutual-exclusion lock (per profile concurrency_control.lock_file):
+            - If .assistant/_state/root-ghostproxy-rollout.lock exists:
+                * Check lock-PID alive via `kill -0 <pid>` (no-op signal test)
+                * Check lock-timestamp age
+                * If PID alive AND age < 30 min → SHORT-CIRCUIT: log "lock held by PID <n> since <ts>; driven-tick deferring to next 15m tick"; END (no work this fire — bootstrap or prior driven-tick still running on target)
+                * If PID dead OR age ≥ 30 min → consider lock stale; LOG warning + acquire fresh lock (write current PID + ISO timestamp); proceed
+            - Else: acquire lock (write PID + ISO timestamp); proceed
+            - At END of fire (in step 10 loop_or_declare): release lock (rm the file)
+
+          BRANCH decision:
+            OPERATOR_DIRECTED_SPRINT — explicit sprint directive in operator-directives.md
+              → cap raised, multi-task per tick (2-5 tasks)
+            FRESH_SIGNAL — new operator-directive in raw/notes/ since last fire OR
+              operator-staged-changes pending in ~/root-ghostproxy/ → re-prioritize
+            STEADY_WORK — no fresh signal → pick next-ready, loop within budget
+            BLOCKED — prior task verification failed 2× OR operator-review-pending tasks
+              accumulating > 3 → stage current + log + release lock + END
+            RETIRED — self_deprecation criteria met (install.sh --check exits 0 + all P0
+              done + operator confirmation in operator-directives.md) → log + release lock + END all
+              future ticks
+
+        STEP 2 pick_next_task (per sfif_binding.pick_filter — 4-level priority_order; soft default + fallback):
+          Scan ~/root-ghostproxy/wiki/backlog/tasks/T*.md
+
+          LEVEL 1 — OPERATOR EXPLICIT OVERRIDE:
+            - Read .assistant/_state/root-ghostproxy-rollout-operator-directives.md
+            - If operator named a specific task ID OR topic, pick that — wins above all (operator can pick any task regardless of cycle membership)
+
+          LEVEL 2 — DEFAULT IN-SCOPE (root-ghostproxy's own project-lifecycle SFIF, Features tier):
+            - Match: task.epic ∈ {E001, E002, E003, E004, E005, E006, E007}
+                     OR task.parent_module matches glob `root-ghostproxy-m-e0##-#-*`
+            - Within match, ordering:
+              a. Audit-cluster severity (C01-C15 per pain-points-inventory); C14 (catastrophic) > C04 (input discipline) > others
+              b. P0 → P1 → P2 → P3 within severity class
+              c. Within-feature sub-cycle SFIF soft priority — when multiple ready sub-tasks share parent E00x, prefer Scaffold sub-tasks → Foundation → Infrastructure → Features-implementation (soft; not hard-block; per operator "this does not mean it completley block tasks either")
+              d. Smallest-scope ready task wins ties (Goldilocks per-tick)
+              e. Skip operator-in-progress tasks (status:in-progress) — step-on-toes avoidance
+
+          LEVEL 3 — AUTHOR FROM PAIN-POINTS (when levels 1+2 yield zero ready):
+            - Read raw/notes/2026-05-08-pain-points-inventory-from-root-failed-conversation-master-aggregate.md (180 items × 15 clusters)
+            - Pick highest-severity unfixed pain-point (cross-check: does any existing E001-E007 task already address it? If yes, skip to next pain-point)
+            - Map pain-point to appropriate E00x epic per sfif_binding.in_scope_default.epic_names (stamp-saga C01 → E001/E005; freeze patterns C09 → E006; agent-deciding C02 → E007; etc.)
+            - Author new task at ~/root-ghostproxy/wiki/backlog/tasks/T<next-id>-<slug>.md per wiki/spine/standards/task-page-standards.md
+              (Summary + Done When verifiable checklist + frontmatter with epic ∈ E001-E007 + parent_module + audit-cluster cite C##/SB-### + status:draft initially)
+            - Place under appropriate `root-ghostproxy-m-e0##-*` sub-module (create one if needed per pattern-page-standards)
+            - Then proceed to step 3_load_context with the just-authored task
+            - Per operator 2026-05-16: "EVERYTHING IN THE FUCKING 150+ tasks and more since it was incomplete..." — authoring is PREFERRED over cross-cycle pick
+
+          LEVEL 4 — CROSS-CYCLE FALLBACK (rare; ALL conditions required):
+            - Levels 1+2+3 yielded zero ready tasks
+            - Pain-points-inventory authoring is genuinely exhausted (all 180 items either addressed by existing E001-E007 tasks, in-progress, or blocked-pending-clarification)
+            - A specific sister-integration task (M001-M014 / T001-T067 range) is GENUINELY PREREQUISITE to an E001-E007 task that ISN'T currently ready
+            - Audit-cluster justification + prerequisite chain (sister-integration task X unblocks E00x task Y addressing pain-point Z) can be staged in Resolution
+            - SURFACE to wiki/backlog/operator-decision-queue.md as soft-signal Q## with cascade:root-ghostproxy + decision_needed:cross-cycle-justification + the prerequisite chain explained
+            - Per operator 2026-05-16: "SFIF also mean that you priritize Skffold before fundation before infrastructure before future... obviously.... this does not mean it completley block tasks either..." — fallback is allowed when truly necessary + justified, not absolutely forbidden
+
+          ANTI-PATTERNS REFUSED:
+            - Picking from Level 4 (sister-integration) BEFORE exhausting levels 2+3 — DEFAULT is E001-E007, not setup (operator: "THE GOAL IS ALL AROUND IT.. NONE OF IT IS AROUND INSTALL")
+            - Picking from Level 4 WITHOUT the full justification chain (prerequisite + audit anchor + surface-to-queue Q##)
+            - Treating cross-cycle pick as ABSOLUTELY forbidden when levels 1+2+3 are TRULY exhausted (operator-corrected: "this does not mean it completley block tasks either")
+            - Freezing because in-scope substrate is sparse — instead: Level 3 author from pain-points + build forward
+            - Treating SFIF tiers as a CROSS-SCOPE pick priority (SFIF is per-scope recursive workflow, not cross-scope priority across the two cycles)
+            - Skipping within-feature sub-cycle soft priority when multiple ready sub-tasks share an E00x parent
+
+          Identify audit cluster (C##/SB-###) for picked/authored task. Stage the level (1-4) used in Resolution.
 
         STEP 3 load_context: task + module + epic + audit cluster narrative +
           target-project files the task names + relevant raw notes.
@@ -285,10 +394,21 @@ jobs:
             blocked:<n> | retired:false | post:<ok|err N>
           - END
 
-        ANTI-PATTERNS (refuse — per profile anti_patterns):
-          [same set as bootstrap — wholesale_rewrite / methodology_bypass / sfif_tier_jumping /
-           freeze_disguised_as_surfacing / scope_decision_in_execution / skip_verification /
-           gold_plating_in_green / orphan_implementation / commit_attempt / rm_tracked_without_q]
+        ANTI-PATTERNS (refuse — per profile anti_patterns; full list reproduced here for explicit driven-tick reference):
+          - wholesale_rewrite_instead_of_augment (Edit not Write for existing files; operator 2026-05-16)
+          - methodology_bypass (cite C##/SB-### + use SDD+TDD discipline + bind to per-type page-standards)
+          - sfif_sub_cycle_tier_jumping (within an E00x feature's sub-cycle, soft prefer Scaffold sub-tasks → Foundation → Infrastructure → Features-impl when multiple ready sub-tasks share parent; NOT cross-task hard block per operator 2026-05-16 "this does not mean it completley block tasks either")
+          - cross_sfif_cycle_default_inversion (picking sister-integration M0## / T001-T067 before exhausting Levels 1+2+3 of pick_filter.priority_order)
+          - freeze_disguised_as_surfacing (multi-vision is for GENUINE scope ambiguity only)
+          - scope_decision_in_execution (don't invent scope task didn't state)
+          - skip_verification (status:review requires verification output inline in Resolution)
+          - gold_plating_in_green (TDD Green = minimum code to pass current failing test)
+          - orphan_implementation (verify integration wiring at step 4f — OpenArms Bug 6 lesson)
+          - commit_attempt (R20 sacrosanct — agent NEVER commits in either repo)
+          - rm_tracked_without_q (R20 sacrosanct — tracked-rm requires accepted Q## first)
+          - mindless_execution (no audit anchor / no methodology binding citation in Resolution)
+          - accept_garbage_input (vague Done When → AUGMENT first per spec_check, don't proceed)
+          - poke_deficit / direction_deficit (this prompt IS the GOAL that drives the fire — read it in full at fire start)
 
         ANTI-FREEZE: step 4a reveals genuine scope ambiguity:
           - Author best-faith fix matching operator principles + audit findings
@@ -343,16 +463,47 @@ jobs:
 
         STEP 0 operator_directives: as in daily-light.
 
-        STEP 1 state_check: branch as usual. RETIRED short-circuit honored.
+        STEP 1 state_check: branch as in driven-worker-tick step 1, INCLUDING the
+          mutual-exclusion lock pre-check (.assistant/_state/root-ghostproxy-rollout.lock).
+          If lock held + PID alive + age < 30 min → SHORT-CIRCUIT (defer this weekly fire
+          to next Tuesday; weekly cadence is not budget-critical). Else acquire lock +
+          proceed. Release lock at END. RETIRED short-circuit honored.
 
-        STEP 2 pick_module (NOT just task):
-          - Per sfif_binding.work_order_discipline: priority order at MODULE level
-          - Highest unblocked module with ≥2 ready P0 tasks (operator-decided OR clearest
-            stated requirements OR highest-priority per epic)
-          - Foundational-triplet modules preferred when ready (M003 foundation hardening;
-            M004 infrastructure tooling)
-          - Identify module's full task chain: which tasks ready, which blocked, which sequenced
-          - Output: picked_module_path, parent_epic, task_chain[], audit_cluster_map[]
+        STEP 2 pick_module (NOT just task) — 4-level priority_order from sfif_binding.pick_filter:
+          Scan ~/root-ghostproxy/wiki/backlog/modules/*.md
+
+          LEVEL 1 — OPERATOR EXPLICIT OVERRIDE:
+            - operator-directives.md may name a specific module → pick that (wins above all)
+
+          LEVEL 2 — DEFAULT (root-ghostproxy's own project-lifecycle SFIF, Features tier):
+            - Match: module name matches glob `root-ghostproxy-m-e0##-#-*` (per-feature sub-modules)
+                     AND its parent_epic ∈ {E001, E002, E003, E004, E005, E006, E007}
+            - Within match, ordering:
+              a. Audit-cluster severity of module's task chain (C14 > C04 > ...)
+              b. Highest unblocked module with most ready P0/P1 tasks under it (deep mode = batch-friendly)
+              c. Within-feature sub-cycle soft priority — modules sequenced Scaffold-feature → Foundation-feature → Infrastructure-feature → Features-impl when multiple modules share an E00x parent
+
+          LEVEL 3 — AUTHOR MISSING TASKS WITHIN PICKED MODULE:
+            - If <2 ready tasks under the highest-priority filtered module: AUTHOR the missing tasks from pain-points-inventory FIRST (per sfif_binding.pick_filter.level_3 + task-page-standards)
+            - Deep mode may legitimately build out a module's task chain from pain-points (180 items × 15 clusters) before executing it
+            - Authoring follows wiki/spine/standards/task-page-standards.md; each authored task cites C##/SB-### audit cluster + maps to module's parent E00x epic
+
+          LEVEL 4 — CROSS-CYCLE FALLBACK (rare; ALL conditions required):
+            - Levels 1+2+3 yielded zero ready in-scope modules
+            - Pain-points-authoring would not unblock anything (all 180 items addressed or blocked)
+            - A specific sister-integration module (M001-M014) is GENUINELY prerequisite to an E001-E007 module's task chain
+            - Audit-cluster + prerequisite chain justification staged in module's Resolution
+            - Soft-signal Q## surfaced to operator-decision-queue per cross_sfif_cycle_default_inversion anti-pattern's bypass rule
+            - Per operator 2026-05-16: "this does not mean it completley block tasks either" — allowed when truly prerequisite + justified + surfaced
+
+          ANTI-PATTERNS REFUSED (per profile anti_patterns):
+            - cross_sfif_cycle_default_inversion (picking sister-integration M0## module BEFORE exhausting in-scope E00x modules + Level 3 authoring)
+            - sfif_sub_cycle_tier_jumping (picking a Features-impl sub-task while earlier-tier sub-tasks under same E00x are ready)
+            - freeze_disguised_as_surfacing (multi-vision when work is clear)
+            - Treating SFIF cross-scope as cross-task pick priority (SFIF is per-scope recursive workflow)
+
+          Identify module's full task chain: which tasks ready, which blocked, which sequenced. Stage the level (1-4) of pick logic used.
+          Output: picked_module_path, parent_epic, task_chain[], audit_cluster_map[], pick_level (1|2|3|4), within_feature_sub_cycle_position (if level_2).
 
         STEP 3 deep_context_load:
           - Read picked module in full
@@ -414,13 +565,19 @@ jobs:
             HH:MM ET | WEEKLY_DEEP | tasks_executed:<n> | tasks_staged:<n> |
             module:<id> | module_complete:<bool> | blocked:<n> | post:<ok|err N>
 
-        ANTI-PATTERNS (refuse — base set + weekly-specific):
-          [base set: same as daily-light]
-          + shallow_test_coverage (weekly bar is HIGHER than daily; ≥1 edge case per Done When item)
-          + missing_cross_cluster_integration (Resolution must cite related C##/SB-### when applicable)
-          + module_incomplete_at_budget_end (acceptable IF tasks remaining are explicitly
-            state-stage-blocked; NOT acceptable if simply ran out of time within a substantive task)
-          + cross_module_drift (weekly is ONE module focus; cross-module → next weekly fire)
+        ANTI-PATTERNS (refuse — base set + weekly-specific additions):
+          BASE SET (same as driven-worker-tick — read driven-tick step 2 ANTI-PATTERNS block in full):
+            wholesale_rewrite_instead_of_augment / methodology_bypass / sfif_sub_cycle_tier_jumping /
+            cross_sfif_cycle_default_inversion / freeze_disguised_as_surfacing /
+            scope_decision_in_execution / skip_verification / gold_plating_in_green /
+            orphan_implementation / commit_attempt / rm_tracked_without_q / mindless_execution /
+            accept_garbage_input / poke_deficit + direction_deficit
+
+          WEEKLY-SPECIFIC ADDITIONS (elevated quality bar):
+          - shallow_test_coverage (weekly bar is HIGHER than driven-tick; ≥1 edge case per Done When item)
+          - missing_cross_cluster_integration (Resolution must cite related C##/SB-### when applicable)
+          - module_incomplete_at_budget_end (acceptable IF tasks remaining are explicitly state-stage-blocked; NOT acceptable if simply ran out of time within a substantive task)
+          - cross_module_drift (weekly is ONE module focus per fire; cross-module → next weekly fire)
 
         BUDGET: 60-120 min substantive on one module. Multi-task within module OK; multi-module forbidden.
     description: "Tue 09:00 weekly — WORKER deep mode on ONE module. Higher quality bar, deeper SDD+TDD, multi-task sequencing within module; may complete a module per fire."
