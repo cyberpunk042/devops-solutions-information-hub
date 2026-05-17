@@ -1,12 +1,12 @@
 {
-  "generated": "2026-05-17T13:00:42.857114+00:00",
+  "generated": "2026-05-17T14:00:42.461098+00:00",
   "stats": {
-    "pages": 934,
+    "pages": 935,
     "domains": 15,
     "sources": 128,
     "comparisons": 14,
-    "relationships": 4343,
-    "tags_unique": 3624,
+    "relationships": 4351,
+    "tags_unique": 3634,
     "layers": {
       "3": 8,
       "5": 38,
@@ -19,7 +19,7 @@
     },
     "maturity": {
       "seed": 209,
-      "growing": 348,
+      "growing": 349,
       "mature": 23
     }
   },
@@ -21230,12 +21230,16 @@
       ],
       "relationships": [
         {
-          "verb": "BUILDS ON",
-          "target": "The Agent Must Practice What It Documents"
+          "verb": "DERIVED FROM",
+          "target": "P4 \u2014 Declarations Are Aspirational Until Verified"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Models Are Built in Layers, Not All at Once"
         },
         {
           "verb": "BUILDS ON",
-          "target": "Models Are Built in Layers"
+          "target": "The Agent Must Practice What It Documents"
         },
         {
           "verb": "RELATES TO",
@@ -40403,6 +40407,113 @@
       "derived_from": [],
       "aliases": [],
       "relationships": []
+    },
+    {
+      "path": "log/2026-05-17-rgp-profile-v5.3-synergy-iteration-output-governance-gates-mcp-runtime-model-scope-tier.md",
+      "slug": "log/2026-05-17-rgp-profile-v5.3-synergy-iteration-output-governance-gates-mcp-runtime-model-scope-tier",
+      "title": "2026-05-17 \u2014 RGP profile v5.3 synergy iteration: output_governance + STEP 0 gates + mcp_discipline + worker_runtime_model + scope_tier_definitions + density_targets + operator_territory_overstep anti-pattern",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-17",
+      "updated": "2026-05-17",
+      "last_reviewed": "",
+      "tags": [
+        "session",
+        "rgp",
+        "root-ghostproxy-rollout",
+        "ai-assistant-profile",
+        "v5.3",
+        "synergy-iteration",
+        "output-governance",
+        "step-0-gates",
+        "mcp-discipline",
+        "worker-runtime-model",
+        "scope-tier-enum",
+        "density-targets",
+        "operator-territory-overstep",
+        "spec-evolution-cycle-4",
+        "2026-05-17"
+      ],
+      "sources": [
+        {
+          "id": "operator-goal-2026-05-16-confident-synergy",
+          "type": "directive",
+          "file": "raw/notes/2026-05-16-operator-goal-5m-sweetspot-no-time-worry-do-big-chunks-confident-synergy.md",
+          "description": "Operator /goal 2026-05-16 evening 2 (sacrosanct, active): 'lets continue till we fill confident into our triggers, prompts and directives and the synergy' \u2014 drives this v5.3 iteration"
+        },
+        {
+          "id": "operator-no-decide-2026-05-16",
+          "type": "directive",
+          "file": "raw/notes/2026-05-16-operator-directive-focus-profile-not-openclaw-do-not-decide-do-not-minimize-workflow.md",
+          "description": "Operator 2026-05-16 (sacrosanct, verbatim): 'YOU DO NOT DECIDE.. DID I SAY ANYTHING ABOUT DISABLING ANY CRON? NO...' \u2014 motivated output_governance.operator_territory_overstep_filter"
+        },
+        {
+          "id": "prior-handoff-2026-05-16-v3",
+          "type": "file",
+          "file": "docs/SESSION-2026-05-16-v3.md",
+          "description": "Cumulative handoff for arcs 1+2+3 of 2026-05-16; documented 5 'what could improve' gaps that this v5.3 iteration addresses"
+        },
+        {
+          "id": "arc-3-cadence-doctrine-log",
+          "type": "file",
+          "file": "wiki/log/2026-05-16-rgp-profile-v5.2-cadence-doctrine-5m-sweetspot-do-big-chunks-no-time-anxiety.md",
+          "description": "v5.2 arc log; this v5.3 builds on the cadence-doctrine substrate (synergy_check matrix; do-big-chunks directive)"
+        },
+        {
+          "id": "enforcement-must-be-mindful",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/enforcement-compliance/enforcement-must-be-mindful-hard-blocks-need-justified-bypass.md",
+          "description": "Second-brain anchor for output_governance, in_session_directive_gate, mcp_discipline \u2014 every block needs reason + remediation + bypass"
+        },
+        {
+          "id": "declarations-aspirational-principle",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md",
+          "description": "P4 \u2014 anchors mcp_discipline 3-predicate gate (declarations of available tools aspirational until invocation-verified) + scope_tier_definitions acceptance criteria (declared tier aspirational until acceptance met)"
+        },
+        {
+          "id": "spec-driven-evolution-principle",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/spec-driven-evolution-the-project-evolves-its-own-spec-to-fix-bugs-it-exhibits.md",
+          "description": "P5 \u2014 this is the 4th cycle of 2026-05-16+17 spec evolution: observed-gap \u2192 spec-evolution \u2192 tracked-artifact \u2192 next-cycle-builds-on"
+        }
+      ],
+      "layer": "",
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Principle 3 Goldilocks"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Principle 1 Infrastructure > Instructions"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Principle 4 Declarations Aspirational"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Principle 2 Structured Context"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 5 P5"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "v5.2 cadence-doctrine arc"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Enforcement Must Be Mindful"
+        }
+      ]
     },
     {
       "path": "log/5-candidate-behavioral-failure-detection-rules-from-openflee.md",
@@ -65882,8 +65993,8 @@
       "relationship_count": 632
     },
     "cross-domain": {
-      "page_count": 312,
-      "relationship_count": 1859
+      "page_count": 313,
+      "relationship_count": 1867
     },
     "ai-agents": {
       "page_count": 78,
@@ -71338,7 +71449,8 @@
     "root-ghostproxy-rollout": [
       "domains/cross-domain/cascade-candidate-root-ghostproxy-self-update-observe-upstream-head-before-drafting-modules-2026-05-16",
       "log/2026-05-16-rgp-profile-v5-evening-overcorrection-revert-and-comprehensive-augmentation",
-      "log/2026-05-16-rgp-profile-v5.2-cadence-doctrine-5m-sweetspot-do-big-chunks-no-time-anxiety"
+      "log/2026-05-16-rgp-profile-v5.2-cadence-doctrine-5m-sweetspot-do-big-chunks-no-time-anxiety",
+      "log/2026-05-17-rgp-profile-v5.3-synergy-iteration-output-governance-gates-mcp-runtime-model-scope-tier"
     ],
     "state-divergence": [
       "domains/cross-domain/cascade-candidate-root-ghostproxy-state-divergence-upstream-already-advanced-2026-05-16"
@@ -73284,7 +73396,8 @@
       "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability"
     ],
     "mcp-discipline": [
-      "lessons/01_drafts/mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive"
+      "lessons/01_drafts/mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive",
+      "log/2026-05-17-rgp-profile-v5.3-synergy-iteration-output-governance-gates-mcp-runtime-model-scope-tier"
     ],
     "no-overflow": [
       "lessons/01_drafts/mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive"
@@ -74457,7 +74570,8 @@
       "log/2026-05-15-weekly-research-digest-2026-05-09-2026-05-15",
       "log/2026-05-16-rgp-profile-v5-evening-overcorrection-revert-and-comprehensive-augmentation",
       "log/2026-05-16-rgp-profile-v5.2-cadence-doctrine-5m-sweetspot-do-big-chunks-no-time-anxiety",
-      "log/2026-05-16-strong-handoff-ck-v3-live-cr-ps-still-broken"
+      "log/2026-05-16-strong-handoff-ck-v3-live-cr-ps-still-broken",
+      "log/2026-05-17-rgp-profile-v5.3-synergy-iteration-output-governance-gates-mcp-runtime-model-scope-tier"
     ],
     "summary": [
       "log/2026-04-09/system/2026-04-09-session-summary",
@@ -76776,11 +76890,13 @@
     ],
     "rgp": [
       "log/2026-05-16-rgp-profile-v5-evening-overcorrection-revert-and-comprehensive-augmentation",
-      "log/2026-05-16-rgp-profile-v5.2-cadence-doctrine-5m-sweetspot-do-big-chunks-no-time-anxiety"
+      "log/2026-05-16-rgp-profile-v5.2-cadence-doctrine-5m-sweetspot-do-big-chunks-no-time-anxiety",
+      "log/2026-05-17-rgp-profile-v5.3-synergy-iteration-output-governance-gates-mcp-runtime-model-scope-tier"
     ],
     "ai-assistant-profile": [
       "log/2026-05-16-rgp-profile-v5-evening-overcorrection-revert-and-comprehensive-augmentation",
-      "log/2026-05-16-rgp-profile-v5.2-cadence-doctrine-5m-sweetspot-do-big-chunks-no-time-anxiety"
+      "log/2026-05-16-rgp-profile-v5.2-cadence-doctrine-5m-sweetspot-do-big-chunks-no-time-anxiety",
+      "log/2026-05-17-rgp-profile-v5.3-synergy-iteration-output-governance-gates-mcp-runtime-model-scope-tier"
     ],
     "sfif-revert": [
       "log/2026-05-16-rgp-profile-v5-evening-overcorrection-revert-and-comprehensive-augmentation"
@@ -76833,6 +76949,36 @@
     ],
     "rgp-uninstalled": [
       "log/2026-05-16-strong-handoff-ck-v3-live-cr-ps-still-broken"
+    ],
+    "v5.3": [
+      "log/2026-05-17-rgp-profile-v5.3-synergy-iteration-output-governance-gates-mcp-runtime-model-scope-tier"
+    ],
+    "synergy-iteration": [
+      "log/2026-05-17-rgp-profile-v5.3-synergy-iteration-output-governance-gates-mcp-runtime-model-scope-tier"
+    ],
+    "output-governance": [
+      "log/2026-05-17-rgp-profile-v5.3-synergy-iteration-output-governance-gates-mcp-runtime-model-scope-tier"
+    ],
+    "step-0-gates": [
+      "log/2026-05-17-rgp-profile-v5.3-synergy-iteration-output-governance-gates-mcp-runtime-model-scope-tier"
+    ],
+    "worker-runtime-model": [
+      "log/2026-05-17-rgp-profile-v5.3-synergy-iteration-output-governance-gates-mcp-runtime-model-scope-tier"
+    ],
+    "scope-tier-enum": [
+      "log/2026-05-17-rgp-profile-v5.3-synergy-iteration-output-governance-gates-mcp-runtime-model-scope-tier"
+    ],
+    "density-targets": [
+      "log/2026-05-17-rgp-profile-v5.3-synergy-iteration-output-governance-gates-mcp-runtime-model-scope-tier"
+    ],
+    "operator-territory-overstep": [
+      "log/2026-05-17-rgp-profile-v5.3-synergy-iteration-output-governance-gates-mcp-runtime-model-scope-tier"
+    ],
+    "spec-evolution-cycle-4": [
+      "log/2026-05-17-rgp-profile-v5.3-synergy-iteration-output-governance-gates-mcp-runtime-model-scope-tier"
+    ],
+    "2026-05-17": [
+      "log/2026-05-17-rgp-profile-v5.3-synergy-iteration-output-governance-gates-mcp-runtime-model-scope-tier"
     ],
     "correction": [
       "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
@@ -82643,6 +82789,12 @@
       ]
     },
     {
+      "target": "Enforcement Must Be Mindful",
+      "referenced_by": [
+        "2026-05-17 \u2014 RGP profile v5.3 synergy iteration: output_governance + STEP 0 gates + mcp_discipline + worker_runtime_model + scope_tier_definitions + density_targets + operator_territory_overstep anti-pattern"
+      ]
+    },
+    {
       "target": "Epic Readiness Math",
       "referenced_by": [
         "Per-task cost grows monotonically across multi-task runs (context accumulation)",
@@ -83571,12 +83723,6 @@
       ]
     },
     {
-      "target": "Models Are Built in Layers",
-      "referenced_by": [
-        "Build Pipeline via SDD+TDD \u2014 Real Bugs Surface Only When Tests Execute Actual Renderers (Not Just Schema-Validate)"
-      ]
-    },
-    {
       "target": "Multi-Layer Compression Lesson",
       "referenced_by": [
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
@@ -83757,6 +83903,12 @@
       ]
     },
     {
+      "target": "P4 \u2014 Declarations Are Aspirational Until Verified",
+      "referenced_by": [
+        "Build Pipeline via SDD+TDD \u2014 Real Bugs Surface Only When Tests Execute Actual Renderers (Not Just Schema-Validate)"
+      ]
+    },
+    {
       "target": "P5 candidate principle endorsement",
       "referenced_by": [
         "Foundational-Cluster-Prioritized Enforcement-Layer Pattern \u2014 C04+C02 Coverage Maximizes Cross-Cutting Prevention"
@@ -83931,6 +84083,18 @@
       ]
     },
     {
+      "target": "Principle 1 Infrastructure > Instructions",
+      "referenced_by": [
+        "2026-05-17 \u2014 RGP profile v5.3 synergy iteration: output_governance + STEP 0 gates + mcp_discipline + worker_runtime_model + scope_tier_definitions + density_targets + operator_territory_overstep anti-pattern"
+      ]
+    },
+    {
+      "target": "Principle 2 Structured Context",
+      "referenced_by": [
+        "2026-05-17 \u2014 RGP profile v5.3 synergy iteration: output_governance + STEP 0 gates + mcp_discipline + worker_runtime_model + scope_tier_definitions + density_targets + operator_territory_overstep anti-pattern"
+      ]
+    },
+    {
       "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior More Than Content",
       "referenced_by": [
         "Spec-Driven Agentic Build Is the 2026 Convergent Pattern \u2014 Eight+ Independent Practitioners Treat Prompts/Specs/Contexts as Version-Controlled First-Class Artifacts (Not Ad-Hoc Chat)"
@@ -83948,7 +84112,14 @@
     {
       "target": "Principle 3 Goldilocks",
       "referenced_by": [
-        "2026-05-16 \u2014 RGP profile v5.2 cadence-doctrine: 5m sweet spot + do big chunks + no time-anxiety (worker_cadence_doctrine block + 24 surgical edits)"
+        "2026-05-16 \u2014 RGP profile v5.2 cadence-doctrine: 5m sweet spot + do big chunks + no time-anxiety (worker_cadence_doctrine block + 24 surgical edits)",
+        "2026-05-17 \u2014 RGP profile v5.3 synergy iteration: output_governance + STEP 0 gates + mcp_discipline + worker_runtime_model + scope_tier_definitions + density_targets + operator_territory_overstep anti-pattern"
+      ]
+    },
+    {
+      "target": "Principle 4 Declarations Aspirational",
+      "referenced_by": [
+        "2026-05-17 \u2014 RGP profile v5.3 synergy iteration: output_governance + STEP 0 gates + mcp_discipline + worker_runtime_model + scope_tier_definitions + density_targets + operator_territory_overstep anti-pattern"
       ]
     },
     {
@@ -83960,7 +84131,8 @@
     {
       "target": "Principle 5 P5",
       "referenced_by": [
-        "2026-05-16 \u2014 RGP profile v5.2 cadence-doctrine: 5m sweet spot + do big chunks + no time-anxiety (worker_cadence_doctrine block + 24 surgical edits)"
+        "2026-05-16 \u2014 RGP profile v5.2 cadence-doctrine: 5m sweet spot + do big chunks + no time-anxiety (worker_cadence_doctrine block + 24 surgical edits)",
+        "2026-05-17 \u2014 RGP profile v5.3 synergy iteration: output_governance + STEP 0 gates + mcp_discipline + worker_runtime_model + scope_tier_definitions + density_targets + operator_territory_overstep anti-pattern"
       ]
     },
     {
@@ -85299,6 +85471,12 @@
       "target": "root-ghostproxy operating-principles.md Principle #11 anti-pattern \"verbal-only\" entry",
       "referenced_by": [
         "Lesson \u2014 Verbal acknowledgment is not a fix: every bug-fix must produce a structural artefact (rule, file, hook, code)"
+      ]
+    },
+    {
+      "target": "v5.2 cadence-doctrine arc",
+      "referenced_by": [
+        "2026-05-17 \u2014 RGP profile v5.3 synergy iteration: output_governance + STEP 0 gates + mcp_discipline + worker_runtime_model + scope_tier_definitions + density_targets + operator_territory_overstep anti-pattern"
       ]
     },
     {

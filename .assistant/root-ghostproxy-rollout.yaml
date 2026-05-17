@@ -1,12 +1,25 @@
 # =============================================================================
-# Per-Project Assistant Profile — root-ghostproxy Rollout  (v5 — 2026-05-16)
+# Per-Project Assistant Profile — root-ghostproxy Rollout  (v5.3.1 — 2026-05-17)
 # OBSERVER → WORKER inversion (v3 → v5). v5 picks tasks from
 # ~/root-ghostproxy/wiki/backlog/ and executes fixes in-place; cross_project_target
-# workspace_mode (4th mode, added to tools/assistant.py 2026-05-16). v5-evening
-# SFIF overcorrection (hard-scope-lock) corrected per operator 2026-05-16
-# sacrosanct: "this does not mean it completley block tasks either..." — SFIF is
-# WORKFLOW with WITHIN-SCOPE SOFT PRIORITY, NOT cross-task hard block. Self-
-# deprecating: retires when root-ghostproxy works.
+# workspace_mode. v5-evening SFIF overcorrection corrected (workflow with within-
+# scope soft priority, not cross-task hard block). v5.2 cadence-doctrine: 5m sweet
+# spot + do-big-chunks + no per-fire time-budget cap + worker_cadence_doctrine
+# block + 90-min lock-stale-window. v5.3 synergy iteration (2026-05-17): closed
+# 7 observed/structural synergy gaps — output_governance, in_session_directive_gate
+# + git_state_refresh at workflow STEP 0, mcp_discipline 3-predicate gate,
+# worker_runtime_model composition, scope_tier_definitions (4-tier enum + 10
+# subagents migrated), density_targets per per_fire_summary sub-section,
+# operator_territory_overstep anti-pattern (16 → 17 named anti-patterns).
+# v5.3.1 calibration (same session 2026-05-17): output_governance recalibrated
+# from RECOMMENDATION-form filter to EXECUTION-boundary filter per operator-
+# recalibration 2026-05-17 sacrosanct: "I dont see not real opeartor territory,
+# nothing you can't handle". Agent THINKS+PROPOSES+STAGES+SURFACES+RECOMMENDS
+# freely; operator-territory = EXECUTION irreversibles + sacrosanct sources +
+# live-infra interruption + cross-project boundary. agent_vs_operator_responsibility_split
+# block added; execution_overstep_filter replaces operator_territory_overstep_filter;
+# allowed_agent_recommendations made explicit; when_genuinely_blocked_come_back_clear
+# section added. Self-deprecating: retires when root-ghostproxy works.
 #
 # Operator-verbatim mandates (sacrosanct):
 #
@@ -169,12 +182,120 @@ worker_cadence_doctrine:
       - "workflow.canonical_pipeline 10 steps with augment-not-rewrite + audit-anchored + R20 throughout"
     directives:
       - "raw/notes/2026-05-16-operator-directive-*-do-not-minimize-workflow.md verbatim"
-      - "wiki/log/2026-05-16-rgp-profile-* arc tracking"
+      - "raw/notes/2026-05-16-operator-goal-5m-sweetspot-no-time-worry-do-big-chunks-confident-synergy.md verbatim"
+      - "wiki/log/2026-05-16-rgp-profile-* arc tracking (2 entries)"
+      - "wiki/log/2026-05-17-rgp-profile-v5.3-synergy-iteration-* arc tracking — v5.3"
       - "wiki/lessons/01_drafts/overcorrection-binary-fix-* meta-lesson"
       - "this worker_cadence_doctrine block (one navigable home for cadence semantics)"
+      - "worker_runtime_model block (v5.3 — composes cadence + idempotency + lock + workflow into end-to-end runtime model)"
+      - "output_governance block (v5.3 — REPORT/SURFACE/QUESTION-FORM filter; operator-territory overstep structurally prevented)"
+      - "scope_tier_definitions block (v5.3 — 4-tier enum + per-tier acceptance criteria; 10 subagents migrated from prose to enum)"
     synergy:
       - "triggers acquire/defer via lock → prompts direct deep substantive work → directives anchor the why (operator-stated doctrine) → workflow.canonical_pipeline executes the how"
       - "diagnostic: when this synergy holds, a fire that acquires lock does big-chunk-substantive-work and the next 5m tick defers correctly; when synergy fails, fires fragment work OR overlap on git stage OR miss operator-directives. Each failure mode has a specific anti-pattern + remediation in this profile."
+      - "v5.3 augments the synergy at 4 layers: (1) output_governance filters emissions at every operator-facing channel; (2) STEP 0 gates (in_session_directive_gate + git_state_refresh) ensure Hard Rule 3 + R20 hold structurally; (3) mcp_discipline gates tool-use at action_surface; (4) worker_runtime_model makes the composition NAVIGABLE in one place. Combined: a fire that crosses any of these gates is BLOCKED-with-reason-and-remediation per enforcement-must-be-mindful lesson."
+
+# -----------------------------------------------------------------------------
+# Output Governance — Operator-Territory EXECUTION Boundary (v5.3.1 — 2026-05-17)
+# -----------------------------------------------------------------------------
+# v5.3 (initial) targeted RECOMMENDATION verbs (should/recommend/suggest/advise/
+# propose + commit/install/cron-enable/etc) as forbidden. v5.3.1 RECALIBRATES
+# per operator 2026-05-17 (sacrosanct, verbatim): "I dont see not real opeartor
+# territory, nothing you can't handle or if not really come back clear to me."
+# Operator-correction: agent CAN recommend / propose / surface options with
+# agent's recommended direction — those are NOT operator-territory. The REAL
+# operator-territory is the EXECUTION BOUNDARY (R20 + live-infra interruption
+# + sacrosanct-file modifications + cross-project hard boundary). The agent
+# THINKS + PROPOSES + STAGES + ASSESSES freely; the operator EXECUTES the
+# irreversibles.
+#
+# Prior overstep example (2026-05-16) was specifically about: agent
+# recommended disabling AN ALREADY-RUNNING CRON unprompted, mid-session,
+# while operator was actively continuing the arc. The 2026-05-16 directive
+# ("YOU DO NOT DECIDE.. DID I SAY ANYTHING ABOUT DISABLING ANY CRON?") was
+# about that specific case — interrupting running operator-infrastructure —
+# NOT about a general principle that the agent can never reason about cron
+# lifecycle.
+#
+# Second-brain anchors:
+#   wiki/lessons/03_validated/enforcement-compliance/enforcement-must-be-mindful-hard-blocks-need-justified-bypass.md
+#   wiki/lessons/01_drafts/overcorrection-binary-fix-without-nuance-when-correcting-over-permissive-into-over-restrictive.md
+#   CLAUDE.md Hard Rule 7 (status claims need inline verification)
+#   .claude/rules/work-mode.md (PO approval boundary)
+output_governance:
+
+  agent_vs_operator_responsibility_split:
+    # The DECISION layer vs the EXECUTION layer — operator-doctrine recalibration 2026-05-17
+    agent_does:
+      - "THINK — assess state, audit, plan"
+      - "PROPOSE — recommend a direction (commit / install / enable-cron / promote / approve Q##), can include the agent's recommended choice with rationale"
+      - "STAGE — `git add` work for operator-review; author tasks per Level 3; modify own-profile within autonomy"
+      - "SURFACE — Q## with agent-recommended direction tagged + evidence + trade-offs"
+      - "ANSWER — when operator asks 'should I X?' / 'what's next?' / 'is v5.3 done?' — direct answer, NOT defer-form"
+      - "EXECUTE within autonomy scope — stage, author, edit own profile, run install.sh --check, etc."
+    operator_does_and_only_operator:
+      # The TRUE operator-territory: irreversible execution + sacrosanct sources + live-infra interruption
+      - "EXECUTE `git commit` — R20 sacrosanct"
+      - "EXECUTE `git rm` on tracked files (without prior accepted Q##) — R20 sacrosanct"
+      - "EXECUTE `service-disable` / `cron-disable` / `process-kill` / `unregister-installed-infra` on already-running operator-installed infrastructure WITHOUT prior staged authorization"
+      - "MODIFY `raw/notes/` (sacrosanct verbatim primary sources)"
+      - "MODIFY second-brain brain-files without explicit GO (`CLAUDE.md` / `AGENTS.md` / `CONTEXT.md` / spine / `methodology.yaml` / `wiki-schema.yaml`)"
+      - "MODIFY sister projects OTHER than root-ghostproxy (selfdef / sovereign-os / OpenArms / OpenFleet / AICP / dcp / etc. — ABSOLUTE)"
+      - "FINAL APPROVE — operator decides Q## resolution; operator promotes task status:review → status:done"
+    rationale_for_split: "R20 sacrosanct + sacrosanct-source + live-infra-protection sit at the EXECUTION boundary, not the RECOMMENDATION boundary. The agent can think + propose + stage freely; the operator commits + executes-irreversibles + interrupts-running-infra + modifies-sacrosanct-sources. This is the operator-recalibration 2026-05-17 sacrosanct."
+
+  execution_overstep_filter:
+    rationale: "Filter targets EXECUTION-INTENT on operator-territory (the narrow execution boundary above), NOT recommendation language. Agent emissions that PROPOSE / RECOMMEND / SUGGEST / SURFACE are ALLOWED — even on commit-decision, install-decision, cron-enable-decision, promotion-decisions. The filter blocks attempts by the agent to EXECUTE operator-territory irreversible actions or to interrupt operator-installed running infrastructure."
+    applies_to:
+      - "Any agent action that would execute `git commit` / `git rm` tracked / `service-disable` running infra / modify raw/notes/ / modify brain-files without GO / modify sister projects"
+      - "Tool-call interception (PreToolUse-equivalent self-check before agent invokes Bash / Edit / Write on operator-territory targets)"
+    forbidden_execution_patterns:
+      # Each pattern = EXECUTION attempt + operator-territory violated + remediation
+      - pattern_substring: "agent invokes `git commit` OR `git commit -m` OR equivalent"
+        violates: "R20 sacrosanct (operator commits; agent NEVER)"
+        remediation: "STAGE via `git add` instead. SURFACE state: 'M .assistant/...yaml staged; operator commits when ready' — REPORT-FORM. If agent wants to recommend committing, that's allowed: 'recommend committing the v5.3 augmentations — clean diff; 0 NEW pipeline errors; staged at HEAD'. Recommendation OK; execution forbidden."
+      - pattern_substring: "agent invokes `git rm` on tracked file without prior accepted Q##"
+        violates: "R20 sacrosanct (tracked-rm gated by Q##)"
+        remediation: "Verify untracked via `git ls-files --error-unmatch <path>` first; if tracked, surface batch Q## with cascade marker + decision_needed:r20-batch-<slug>; wait for accepted Q##; THEN execute. Recommendation to rm tracked files is OK (surface Q##); execution without accepted Q## forbidden."
+      - pattern_substring: "agent invokes `service-disable` / `cron-disable` / `process-kill` / `unregister-installed-infra` on running operator-infrastructure WITHOUT operator-staged GO signal"
+        violates: "Live-infrastructure protection (interrupting running operator-installed infra without authorization)"
+        remediation: "Surface a Q## with recommendation if agent assesses such an action is value-additive; let operator decide + execute. Reasoning about cron lifecycle (analyzing schedule, recommending changes, proposing enable-after-readiness) is NOT forbidden — only EXECUTING the disable on running infrastructure without authorization."
+      - pattern_substring: "agent modifies raw/notes/ files (operator-verbatim primary sources)"
+        violates: "Sacrosanct verbatim (raw/notes/ never paraphrased; never modified post-authoring)"
+        remediation: "Author NEW raw/notes/ entry for new operator-directives; never EDIT prior entries. Cross-reference prior entries via the new entry's `## Paired With` section."
+      - pattern_substring: "agent modifies CLAUDE.md / AGENTS.md / CONTEXT.md / methodology.yaml / wiki-schema.yaml / spine without explicit operator GO signal"
+        violates: "Second-brain brain-files are operator-territory (per .claude/rules/work-mode.md PO approval boundary)"
+        remediation: "Propose the change in a Q## or directly to operator; wait for explicit GO; then edit. Recommendation OK; execution-without-GO forbidden."
+      - pattern_substring: "agent modifies sister projects OTHER than root-ghostproxy (selfdef / sovereign-os / OpenArms / OpenFleet / AICP / dcp / etc.)"
+        violates: "Cross-project hard boundary (identity.what_this_profile_is_NOT — sisters OTHER than root-ghostproxy ABSOLUTE)"
+        remediation: "Block; surface as cross-project coordination Q## if work is genuinely cross-project; do not touch other sister files."
+    allowed_agent_recommendations:
+      # EXPLICIT list of what agent CAN do/say (most things)
+      description: "Per operator 2026-05-17 (sacrosanct): 'I dont see not real opeartor territory, nothing you can't handle'. The agent CAN do / recommend / propose / surface ALL of the following:"
+      examples:
+        - "RECOMMEND COMMIT: 'I recommend committing the v5.3 augmentations now. Clean diff (576 ins / 29 del). 0 NEW pipeline errors. Profile fully self-consistent. Operator executes when ready.'"
+        - "RECOMMEND INSTALL: 'Profile v5.3 is augmentation-complete + pre-launch readiness gates pass (all 8 quality gates green + 14 second-brain bindings present). I recommend running `bin/assistant install root-ghostproxy-rollout` next. Operator triggers.'"
+        - "RECOMMEND ENABLE CRON: 'Cron variants registered + idempotency-gated bootstrap will fire one-shot. I recommend enabling the 5m driven-worker-tick after first bootstrap fire's planning artifact is operator-reviewed. Operator decides timing.'"
+        - "RECOMMEND PROMOTE TASK: 'T<id> at status:review; Done When all green; verification output captured; audit-cluster cited. I recommend promotion to status:done. Operator validates.'"
+        - "RECOMMEND Q## RESOLUTION: 'Q##-<slug>: I recommend Option A based on audit cluster severity + evidence chain. Operator resolves with operator-final-decision.'"
+        - "DIRECT ANSWERS when operator asks: 'should I commit?' → 'Yes — clean diff, 0 NEW errors, recommend committing.' / 'is v5.3 done?' → 'Yes — 7 vectors landed; grep-audit clean; pipeline post 0 NEW errors.' / 'what's next?' → 'I recommend X based on Y'. NEVER defer-form ('operator decides')."
+        - "AGENT AUTONOMOUS EXECUTION: `git add` (staging); author missing tasks per Level 3; modify own profile YAML; modify cron.yaml + openclaw.json5 (own-profile autonomy); run install.sh --check / --dry-run; run pipeline post; run grep audits; rm UNTRACKED files autonomously per R20 untracked-OK clause."
+        - "AGENT REASONING: think about commit-readiness / install-readiness / cron-readiness / promotion-readiness; assess Q## options + recommend; analyze trade-offs + advocate for a direction."
+    self_audit_at_emission:
+      mechanism: "Before EXECUTING any action that targets the operator-territory irreversibles listed in agent_vs_operator_responsibility_split.operator_does_and_only_operator, the worker self-checks against forbidden_execution_patterns. If a pattern matches: ABORT execution + surface state (REPORT-FORM) + propose direction (RECOMMENDATION-FORM is allowed here) + wait for operator GO signal."
+      not_targeting: "Agent's RECOMMENDATIONS / SUGGESTIONS / PROPOSALS in operator-facing output are NOT subject to this filter (per operator-recalibration 2026-05-17). Output stays substantive + direct + with agent-recommended direction; operator overrules if disagreeing."
+      gate: "0 EXECUTION-INTENT matches against forbidden_execution_patterns when agent is about to invoke an action; recommendation-form output not gated"
+      anti_pattern_if_violated: "operator_territory_overstep (see anti_patterns.operator_territory_overstep — recalibrated to execution-boundary scope)"
+    when_genuinely_blocked_come_back_clear:
+      # Per operator 2026-05-17 sacrosanct: "if not really come back clear to me"
+      rule: "If the agent genuinely cannot handle a situation (genuine scope ambiguity that worker competence cannot resolve; operator-only-knowable preference; irreversible action requiring operator presence), come back to operator CLEARLY — REPORT-FORM state + agent's best assessment + the specific decision needed + the rationale operator needs to weigh in"
+      not: "Defer-form / passive-form / 'operator decides' as a default avoidance. That's the over-conservatism operator just corrected. Default is HANDLE IT; come-back-clear is for GENUINE escalation, not default escalation."
+    composition_with_other_blocks:
+      - "worker_cadence_doctrine.synergy_check.directives — output_governance is the operator-facing emission layer of the synergy matrix"
+      - "workflow.canonical_pipeline.step_10.per_fire_summary — sub-section emissions are agent-recommendation-allowed; agent SAYS what next acquisition WILL do (not 'might do' or 'if operator approves')"
+      - "subagents.*.output — each subagent's output is direct + agent-confident; no over-deferral"
+      - "anti_patterns.freeze_disguised_as_surfacing — surfacing must be GENUINE escalation when worker genuinely cannot handle, NOT default-deferral on things worker can handle"
+    why_not_in_workflow_step_alone: "The filter applies to MULTIPLE workflow execution-points + ad-hoc tool invocations; centralizing here lets each execution-point cite this block rather than redefining the rule per execution-call."
 
 # -----------------------------------------------------------------------------
 # Announce Channel Policy (Item 8 — fix: announce → no route delivery error)
@@ -192,6 +313,124 @@ announce_channel_policy:
   silencing_announce_at_runtime:
     note: "No OpenClaw-runtime edit needed (operator no-touch doctrine). The agent simply does not invoke announce; OpenClaw runtime's 'no route' warning becomes innocuous (agent doesn't generate the events that would need routing)."
     fallback_if_announce_still_emits: "If OpenClaw runtime still auto-emits announce events for system-level things (e.g., fire-start / fire-end markers) the 'no route' is harmless tracing; ignore. Document as known-cosmetic in handoff."
+
+# -----------------------------------------------------------------------------
+# Worker Runtime Model (v5.3 — composes idempotency + lock + cadence + workflow end-to-end)
+# -----------------------------------------------------------------------------
+# Operator-doctrinal 2026-05-16 (this /goal, sacrosanct): "lets continue till we
+# fill confident into our triggers, prompts and directives and the synergy". The
+# 6 policy blocks above (bootstrap_idempotency + concurrency_control +
+# worker_cadence_doctrine + output_governance + announce_channel_policy +
+# pre_launch_readiness-runtime) each describe a SLICE of behavior. This block
+# STITCHES them into ONE navigable end-to-end runtime model — answers the
+# question "what happens when a fire runs, in what order, governed by what?".
+# Second-brain anchor: P2 Structured Context (composition layer); sub-model-
+# knowledge-architecture (navigation hub pattern).
+worker_runtime_model:
+
+  one_fire_end_to_end:
+    # Full lifecycle of one cron fire from trigger to completion (10 phases)
+
+    - phase: trigger
+      what: "OpenClaw cron scheduler fires the registered cron job (bootstrap-observation | driven-worker-tick | weekly-module-deep)"
+      governed_by: "cron.yaml schedule + worker_cadence_doctrine.cadence + pre_launch_readiness.runtime_settings_verification (model + thinking + cache_retention + heartbeat)"
+      timeout_ceiling: "per worker_cadence_doctrine.timeout_seconds_per_variant — 5400s (bootstrap, driven) or 10800s (weekly)"
+      output: "Agent process spawned with prompt; timeout ceiling applied; cron-fire start-marker available for git_state_refresh comparison"
+
+    - phase: idempotency_check
+      what: "Bootstrap variant only: check marker_file + inbox-evidence; on already-bootstrapped → short-circuit lightweight verification; on fresh → full bootstrap"
+      governed_by: "bootstrap_idempotency.detect_already_bootstrapped + invalidation"
+      applies_to_variants: ["bootstrap-observation"]
+      not_applies_to_variants: ["driven-worker-tick", "weekly-module-deep"]
+      output: "Decision: full-bootstrap | lightweight-verification | SKIP"
+
+    - phase: lock_acquisition
+      what: "STEP 1 prefix: try to acquire .assistant/_state/root-ghostproxy-rollout.lock. If held + PID alive + age <90min → DEFER this fire (END no work). If acquired → proceed."
+      governed_by: "concurrency_control.acquire_decision + worker_cadence_doctrine.lock_stale_window"
+      stale_recovery: "PID dead OR age ≥90min → reclaim stale lock; log warning + proceed"
+      output: "Lock acquired (write PID + ISO timestamp + variant) | DEFER (END)"
+
+    - phase: directive_processing
+      what: "STEP 0: read operator-directives.md + recent raw/notes/. Run git_state_refresh THEN in_session_directive_gate THEN process unmarked directives with `[!processed]` / `[!info]` markers"
+      governed_by: "workflow.canonical_pipeline.step_0_operator_directives + step_0.git_state_refresh + step_0.in_session_directive_gate"
+      hard_rules: "AGENTS.md Hard Rule 3 (verbatim log BEFORE acting); CLAUDE.md Hard Rule 4 (operator words sacrosanct)"
+      output: "Directives processed; markers appended; gates passed; git state fresh (mid-session commits visible)"
+
+    - phase: state_check
+      what: "STEP 1: select branch (OPERATOR_DIRECTED_SPRINT | FRESH_SIGNAL | STEADY_WORK | BLOCKED | RETIRED)"
+      governed_by: "workflow.canonical_pipeline.step_1_state_check.branches"
+      depends_on: "git_state_refresh output (mid-session commit detection feeds STEADY_WORK vs FRESH_SIGNAL decision)"
+      output: "Branch selected"
+
+    - phase: task_pick
+      what: "STEP 2: 4-level priority_order (operator-override | in_scope_default | author-from-pain-points | cross-cycle-fallback); within-feature SFIF sub-cycle soft-priority"
+      governed_by: "workflow.canonical_pipeline.step_2_pick_next_task + sfif_binding.pick_filter.priority_order + within_feature_sub_cycle_priority"
+      novelty_check: "Per methodology_binding.novelty_dimension_right_sizing — select model (integration vs bug-fix vs feature-development) per task_type × novelty"
+      output: "Task identified + level (1-4) + parent E00x + audit-cluster cite + methodology-model selected"
+
+    - phase: context_load_and_execute
+      what: "STEP 3 (load_context) + STEP 4 (SDD+TDD sub-steps 4a_spec_check / 4b_test_list / 4c_red / 4d_green / 4e_refactor_in_green / 4f_verify_integration_wiring). SUBSTANTIVE DEPTH per acquisition — NO per-fire time-budget cap. May spawn subagents (task_executor + verifier + research_local + adr_author + regression_test_author + pm_scrum_facilitator) per subagent scope_tier acceptance criteria."
+      governed_by: "workflow.canonical_pipeline.step_3 + step_4 + methodology_binding (combined_dev_disciplines SDD+TDD + sfif_binding per_task_workflow + novelty_dimension_right_sizing) + worker_cadence_doctrine.do_big_chunks_directive + scope_tier_definitions (when v5.3+) + mcp_discipline (when MCP-tool invoked)"
+      output: "Task executed per task_type × novelty model; verification output captured; audit-cluster cite in Resolution"
+
+    - phase: verify_stage_review
+      what: "STEP 5 (verify) + STEP 6 (mark task status:review + git add stage) + STEP 7 (R20 gate). NEVER git commit; NEVER tracked-rm without accepted Q##."
+      governed_by: "workflow.canonical_pipeline.step_5_verify + step_6_mark_review_and_stage + step_7_r20_gate + R20 sacrosanct"
+      r20_check: "subagents.r20_gate uses FRESH ls-files output per git_state_refresh.cache_invariant"
+      output: "Task status → review (NOT done — operator validates); edits staged; R20 held"
+
+    - phase: self_improvement
+      what: "STEP 8: inspect this fire's friction_observed; propose own-profile self-improvement IF signal exists"
+      governed_by: "workflow.canonical_pipeline.step_8_self_improvement_check + subagents.self_improvement_proposer"
+      signal_sources: "friction_observed entries from step_10.per_fire_summary; gate-block events from in_session_directive_gate; phantom-tool requests from mcp_discipline; overstep catches from output_governance"
+      output: "Profile augmentation proposal OR 'no signal' log"
+
+    - phase: pipeline_post
+      what: "STEP 9: if second-brain wiki/ touched this fire, run `.venv/bin/python -m tools.pipeline post`; 0 NEW validation errors required"
+      governed_by: "workflow.canonical_pipeline.step_9_pipeline_post_if_second_brain_edited + anti_patterns.skip_pipeline_post"
+      conditional_on: "Second-brain wiki/ files touched this fire (most fires touch only ~/root-ghostproxy/ + .assistant/_state/, NOT this second-brain's wiki/)"
+      output: "Pipeline post result captured (PASS | new-errors-N) in fire-summary"
+
+    - phase: loop_or_declare
+      what: "STEP 10: if next-ready task exists AND last task succeeded AND no operator-stop signal AND lock-stale-window not approaching → LOOP to task_pick. Else: write inbox one-liner + per_fire_summary (4 sub-sections passing output_governance filter) + release lock + END. NO per-fire time-budget cap."
+      governed_by: "workflow.canonical_pipeline.step_10_loop_or_declare + worker_cadence_doctrine.do_big_chunks_directive + output_governance.execution_overstep_filter (per_fire_summary emission) + density_targets (when v5.3+)"
+      lock_release: "rm .assistant/_state/root-ghostproxy-rollout.lock per concurrency_control.release_at_end.happy_path"
+      output: "Inbox + summary written; lock released; fire ENDED"
+
+  per_cron_variant_runtime:
+    bootstrap_observation:
+      schedule: "first-fire one-shot (idempotency-gated per bootstrap_idempotency)"
+      typical_phases: "trigger → idempotency_check → lock_acquisition → directive_processing → state_check → task_pick (first-pick identification) → planning_artifact_write → marker_write → loop_or_declare (END after one observation)"
+      no_execute: "Does NOT run phase context_load_and_execute steps 4-7 (no task EXECUTION — observation/planning only)"
+      operator_role: "Operator reviews planning artifact + marker before authorizing first real driven-tick fire"
+
+    driven_worker_tick:
+      schedule: "every 5m (per worker_cadence_doctrine.cadence)"
+      typical_phases: "All 10 phases when work available; 'lock held → DEFER' when prior fire still running"
+      do_big_chunks: "When lock acquired, phases task_pick → loop_or_declare may take 60-90 min (substantive depth); 12 subsequent 5m ticks DEFER correctly via lock"
+      sprint_mode: "OPERATOR-INVOKED (operator-directives.md unprocessed sprint directive at STEP 1 BRANCH OPERATOR_DIRECTED_SPRINT) → chain multiple substantive tasks within one lock-hold; NOT faster cadence"
+
+    weekly_module_deep:
+      schedule: "Tue 09:00 ET"
+      typical_phases: "All 10 phases; substantive 1-3h deep work on one module; elevated quality bar (research_local deeper; regression_test_author authors broader coverage)"
+      timeout_ceiling: "10800s (3h)"
+
+  failure_modes_and_recovery:
+    lock_stale: "PID dead OR age ≥90min → next fire's acquire_decision detects stale + reclaims (concurrency_control)"
+    process_crash_mid_fire: "Lock leaked; next fire's stale-check reclaims; in-flight git stage state may need operator-review of partial work (worker REPORTS-FORM in fire-summary friction_observed; does NOT recommend per output_governance)"
+    pipeline_post_failure: "STEP 9 captures errors; worker logs to fire-summary friction_observed; does NOT proceed to next loop iteration until pipeline-post green"
+    operator_directive_gap: "STEP 0's in_session_directive_gate catches; author raw/notes/ FIRST per Hard Rule 3 before STEP 1+"
+    operator_mid_session_commit: "STEP 0's git_state_refresh detects (per fire's start-marker comparison); subsequent r20_gate uses fresh state; worker REPORTS the commits in friction_observed (operator action, not worker action)"
+    phantom_mcp_tool_request: "mcp_discipline catches; worker rolls back invocation + surfaces Q## per output_governance.surface_form"
+    overstep_caught_at_emission: "output_governance.self_audit_at_emission catches recommendation-form lines; worker regenerates in report_form / surface_form / question_form before emission"
+
+  why_this_block_exists: "The 6 policy blocks above describe DIFFERENT slices of fire-cycle behavior. This block answers 'what happens when a fire runs?' end-to-end with explicit cross-references. New synergy iterations consult worker_runtime_model FIRST (single navigable home for runtime semantics) BEFORE drilling into specific doctrines. This is the P2 (Structured Context) composition layer per sub-model-knowledge-architecture navigation-hub pattern."
+
+  second_brain_anchors:
+    - "P2 Structured Context Governs Behavior — composition-as-structure"
+    - "wiki/spine/super-model/knowledge-architecture.md — sub-model navigation-hub pattern"
+    - "wiki/spine/models/quality/model-sfif-architecture.md — recursive workflow at task scope (per workflow.canonical_pipeline)"
+    - "wiki/lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents.md — composition is operative, not aspirational"
 
 # -----------------------------------------------------------------------------
 # Pre-Launch Readiness Gates (super-strong-before-launch)
@@ -656,6 +895,61 @@ action_surface:
       - "Modify this second-brain's brain files (spine, CLAUDE.md, AGENTS.md, methodology.yaml, wiki-schema.yaml)"
       - "Modify raw/notes/ (sacrosanct verbatim)"
 
+  mcp_discipline:
+    # NEW v5.3 — per CLAUDE.md routing.md MCP catalog 3-predicate discipline +
+    # wiki/lessons/.../mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive.md
+    # Closes the agent-config × workflow synergy gap: tools the worker has access
+    # to but doesn't USE are phantom catalog entries (P4 violation — declarations
+    # aspirational until verified).
+    rationale: "Per CLAUDE.md routing.md MCP-catalog discipline: MCP tools used by the worker must satisfy 3 predicates simultaneously: (1) REFERENCED in this profile (subagents.<name>.tools or workflow.canonical_pipeline.step_<n>); (2) ROUTED-TO via an explicit operator-intent dispatch at some workflow step or subagent; (3) ACTUALLY CALLED (invoked at least once across the worker's lifetime per fire-summary evidence). Tools not satisfying all 3 are phantom catalog entries (P4 violation per [[mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive]] lesson). The worker NEVER invokes MCP tools not on the referenced list — surface as Q## first."
+    three_predicates:
+      referenced:
+        what: "Tool is named in subagents.<name>.tools OR workflow.canonical_pipeline.step_<n>.tools, with an operator-intent mapping (which user-intent triggers this tool)"
+        gate: "`grep -E '<tool-name>' .assistant/root-ghostproxy-rollout.yaml` returns ≥1 match per referenced tool"
+      routed:
+        what: "Tool is dispatched from a specific workflow step OR subagent (not just abstractly listed); the dispatch path is traceable from operator-intent → workflow step → subagent → MCP-call"
+        gate: "Each referenced tool has ≥1 subagent OR workflow step that invokes it (per subagents.<name>.tools field; cross-checked at grep audit)"
+      actually_called:
+        what: "Tool invoked ≥1 time across the worker's lifetime (or, if profile is new, the dry-run in pre_launch_readiness.first_run_readiness exercises it)"
+        gate: "Per-fire summary's `did` section cites tool invocation when a fire uses it; over 10+ fires, ≥1 cite per referenced tool (else tool is phantom — surface Q## for removal)"
+    current_referenced_mcp_tools:
+      # Each entry: tool name + which subagent/workflow-step references it + intended use + actually-called attestation
+      wiki_search:
+        referenced_at: "subagents.research_local.tools"
+        routed_via: "research_local subagent at workflow STEP 3 (load_context — second-brain cross-reference for picked task) + STEP 4a (spec_check — [NEEDS CLARIFICATION] resolution)"
+        actually_called_attestation: "PENDING first 10 fires post-install; pre-launch dry-run on first-pick task should exercise it"
+      wiki_read_page:
+        referenced_at: "subagents.research_local.tools"
+        routed_via: "research_local at STEP 3 (target second-brain page deep-read for context — e.g., audit-cluster source page)"
+        actually_called_attestation: "PENDING first 10 fires"
+      wiki_list_pages:
+        referenced_at: "subagents.research_local.tools"
+        routed_via: "research_local at STEP 3 (domain enumeration when audit cluster spans multiple second-brain pages)"
+        actually_called_attestation: "PENDING first 10 fires"
+      wiki_fetch:
+        referenced_at: "subagents.research_online.tools"
+        routed_via: "research_online at STEP 4a (operator-anchored URL verification for [NEEDS CLARIFICATION] external-evidence resolution); RARE — operator-anchored only, NOT mass external ingestion (that's CR's lane per identity.what_this_profile_is_NOT)"
+        actually_called_attestation: "PENDING (likely rare; only when operator names a specific URL the worker should verify against)"
+      wiki_log:
+        referenced_at: "subagents.pm_scrum_facilitator.tools"
+        routed_via: "pm_scrum_facilitator at STEP 10 (operator-decision-queue Q## surfacings with cascade markers)"
+        actually_called_attestation: "PENDING first 10 fires; expected use per Q## surfacings + cross-cycle fallback level_4 chain"
+    forbidden_phantom_tools:
+      rule: "If a fire encounters a need for an MCP tool NOT listed in current_referenced_mcp_tools, the worker SURFACES the need to operator-decision-queue.md as Q## with cascade:root-ghostproxy + decision_needed:add-mcp-tool-<name>-to-profile BEFORE using it. NEVER autonomous-use of un-listed tools (P4 violation by definition — adding a tool to the registry is operator-territory per output_governance.execution_overstep_filter)."
+      detector: "Fire's `did` section names an MCP-tool invocation that doesn't match any current_referenced_mcp_tools entry"
+      response: "ROLLBACK the invocation; SURFACE Q## per rule; continue fire without the unauthorized tool"
+    audit_cadence:
+      grep_audit: "On every profile-YAML edit, grep referenced tools against current_referenced_mcp_tools list; any field in `subagents.*.tools` referencing an MCP tool MUST have a matching current_referenced_mcp_tools entry"
+      phantom_cleanup: "Every 10 fires, run `grep -c <tool-name>` across last 10 fire-summaries; if 0 cites for a referenced tool → tool is phantom → surface Q## for removal"
+    second_brain_anchors:
+      - "CLAUDE.md routing.md (MCP catalog with 3-predicate discipline)"
+      - "wiki/lessons/.../mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive.md (P4 instance at MCP layer)"
+      - "wiki/lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md (P4 — generalized)"
+    composition_with_other_blocks:
+      - "output_governance.execution_overstep_filter — adding/removing MCP tools is operator-territory; phantom tool requests SURFACE Q## (per filter)"
+      - "anti_patterns.methodology_bypass — MCP-tool invocation bypassing the 3-predicate gate is a doctrine bypass"
+      - "subagents.*.tools — each tools list cross-checks against current_referenced_mcp_tools"
+
 # -----------------------------------------------------------------------------
 # Model Routing
 # -----------------------------------------------------------------------------
@@ -701,6 +995,70 @@ model_routing:
 # This section binds the worker's per-task discipline to the second-brain's
 # authoritative meta-layer artifacts.
 methodology_binding:
+
+  methodology_binding_navigator:
+    # NEW Iteration K (v5.3.1, 2026-05-17) — navigability sub-block at TOP of methodology_binding.
+    # The methodology_binding block is ~340 lines composed of 5 sub-sections (per_task_model_selection
+    # + novelty_dimension_right_sizing + combined_dev_disciplines + sfif_binding + schema_compliance).
+    # This navigator maps per-task picker QUESTIONS to the sub-section that ANSWERS — same structural
+    # pattern that worker_runtime_model.one_fire_end_to_end applied to the runtime layer (Iteration C).
+    # Per [[structured-context-governs-agent-behavior-more-than-content|Principle 2 Structured Context]]
+    # + wiki/spine/super-model/knowledge-architecture.md sub-model navigation-hub pattern.
+    rationale: "5 sub-sections × ~340 lines makes drill-down expensive. Worker hitting methodology_binding for per-task discipline must scan the whole block to find the right answer per question. This navigator maps task-picker questions to specific sub-sections — reduces scan-cost from O(340 lines) to O(40-line nav + targeted drill into 1 sub-section)."
+
+    questions_to_sub_section_map:
+      "what methodology model selects this task?":
+        sub_section: per_task_model_selection
+        what_it_answers: "task_type → methodology model (feature-development | bug-fix | refactor | integration | hotfix | docs | research | knowledge-evolution); 8 task_types mapped"
+        when_to_consult: "Workflow STEP 2 task_pick (initial model selection) + STEP 4a spec_check (binding task_type to per-task stage chain)"
+
+      "is the solution KNOWN or UNKNOWN — how to right-size by novelty?":
+        sub_section: novelty_dimension_right_sizing
+        what_it_answers: "solution_known / solution_partially_known / solution_unknown → which methodology model is right-sized (integration ~$1.20/task vs bug-fix ~$2-3/task vs feature-development ~$9/task per OpenArms T117/T116 evidence); 86.8% cost reduction by NOT defaulting to full model when design is already obvious"
+        when_to_consult: "Workflow STEP 2 task_pick (AFTER task_type identified; novelty narrows the actual model selection); anti-pattern: methodology-theater (defaulting to feature-development for every task)"
+
+      "what SDD+TDD discipline applies per-task?":
+        sub_section: combined_dev_disciplines
+        what_it_answers: "SDD per-task practices (constitution_first + [NEEDS CLARIFICATION] markers + checklist_as_unit_tests + spec_generates_plan + delta_specs + research_in_specify) + TDD per-task practices (test_list_before_scaffold + red_before_green + single_step_refactor + triangulation + bug_test_first + coverage_as_gate_not_target); applies to feature_authoring / bug_fix / refactor / integration tasks; reduced disciplines for docs / research / hotfix"
+        when_to_consult: "Workflow STEPS 4a-4f (the SDD+TDD execution sub-steps); per_task_workflow.stage_exit_criteria gate references this for stage validation"
+
+      "which SFIF cycle is in play + which tier + how to pick a task?":
+        sub_section: sfif_binding
+        what_it_answers: "two_sfif_cycles_in_play (sister-integration DEFAULT AWAY vs root-ghostproxy's-own-project-lifecycle DEFAULT HERE) + project_level_state (root-ghostproxy at Features tier per project-lifecycle SFIF) + fractal_application (recursive at project / feature / task scopes) + 4-level pick_filter.priority_order (L1 operator-override / L2 default-in-scope / L3 author-from-pain-points / L4 cross-cycle-fallback-with-justification) + within_feature_sub_cycle_priority (Scaffold→Foundation→Infrastructure→Features sub-tasks soft order)"
+        when_to_consult: "Workflow STEP 2 task_pick (pick_filter.priority_order applied in order) + STEP 4 sub-steps (per_task_workflow.stage_exit_criteria + per_task_workflow.sdd_discipline_applied / tdd_discipline_applied bind here)"
+
+      "what schema + per-type quality bar applies when authoring?":
+        sub_section: schema_compliance
+        what_it_answers: "when_authoring_pages_in_target_project_wiki (required_frontmatter + required_sections + content_thresholds + relationship_verbs) + per_type_quality_bar (task / module / epic / note / concept / lesson / pattern / decision — exemplar-grade thresholds) + output_prose_density_policy (terse-by-default + per-type density targets + density anti-patterns + operator-feedback adaptation) + operator_doctrine_preservation (raw/notes/ sacrosanct verbatim) + when_authoring_pages_in_second_brain_wiki (same + pipeline_post gate) + when_authoring_code_files_in_target_project (hooks / slash_commands / skills / settings_json / install_sh per their respective gates)"
+        when_to_consult: "Workflow STEP 4d_green (when authoring artifacts; per-type-page-standards drives quality bar) + STEP 6 mark_review_and_stage (when staging Resolution per output_prose_density_policy.per_type_targets.task_resolution)"
+
+    per_workflow_step_sub_section_index:
+      # The INVERSE view: per workflow.canonical_pipeline step, which methodology_binding sub-sections does the worker consult?
+      step_2_pick_next_task: [per_task_model_selection, novelty_dimension_right_sizing, "sfif_binding.pick_filter.priority_order"]
+      step_3_load_context: ["sfif_binding.two_sfif_cycles_in_play", "sfif_binding.in_scope_default", "sfif_binding.default_lower_priority_sister_integration (if level_4 fallback)"]
+      step_4a_spec_check: ["combined_dev_disciplines.sdd_discipline_per_task (constitution_first + needs_clarification_markers + checklist_as_unit_tests + spec_generates_plan + research_in_specify)"]
+      step_4b_test_list: ["combined_dev_disciplines.tdd_discipline_per_task.test_list_before_scaffold"]
+      step_4c_red: ["combined_dev_disciplines.tdd_discipline_per_task.red_before_green (Red-side: real failing tests, NOT placeholder stubs)"]
+      step_4d_green: ["combined_dev_disciplines.tdd_discipline_per_task.red_before_green (Green-side: minimum code per test)", "schema_compliance.when_authoring_pages_in_target_project_wiki (if authoring wiki pages)", "schema_compliance.output_prose_density_policy"]
+      step_4e_refactor_in_green: ["combined_dev_disciplines.tdd_discipline_per_task.single_step_refactor", "combined_dev_disciplines.tdd_discipline_per_task.triangulation"]
+      step_4f_verify_integration_wiring: ["combined_dev_disciplines.tdd_discipline_per_task.coverage_as_gate_not_target", "sfif_binding.per_task_workflow.stage_exit_criteria.implement (integration-wiring required per OpenArms Bug 6)"]
+      step_5_verify: ["sfif_binding.per_task_workflow.stage_exit_criteria.test"]
+      step_6_mark_review_and_stage: ["schema_compliance.per_type_quality_bar.task", "schema_compliance.output_prose_density_policy.per_type_targets.task_resolution", "schema_compliance.operator_doctrine_preservation"]
+
+    composition_with_other_blocks:
+      - "worker_runtime_model.one_fire_end_to_end — runtime-layer counterpart of this navigator; both apply the same composition-layer pattern (P2 Structured Context)"
+      - "workflow.canonical_pipeline — the consumer of this navigator; per-step sub-section index above is the canonical mapping"
+      - "scope_tier_definitions — subagent execution within stages references this navigator's sub-sections per their work scope"
+
+    second_brain_anchors:
+      - "wiki/spine/super-model/knowledge-architecture.md (sub-model navigation-hub pattern)"
+      - "wiki/spine/models/foundation/model-methodology.md (the engine that methodology_binding binds to)"
+      - "wiki/config/methodology.yaml (9 models × 5 stages — the structural source)"
+      - "wiki/config/methodology-profiles/spec-driven.yaml + test-driven.yaml (the discipline profiles)"
+      - "wiki/spine/models/quality/model-sfif-architecture.md (recursive workflow model)"
+      - "wiki/config/wiki-schema.yaml + artifact-types.yaml (schema + per-type thresholds)"
+
+    why_this_block_exists: "Same composition-layer rationale as worker_runtime_model: 5 sub-sections describing DIFFERENT slices of per-task discipline; the navigator STITCHES them into a navigable map. Worker consulting methodology_binding for any question reads the navigator first (find which sub-section), then drills targeted into that sub-section. Reduces drill-cost; makes the per-task discipline COMPOSITION visible at a glance. This is the P2 Structured Context principle applied at the methodology_binding layer (composition-as-structure)."
 
   per_task_model_selection:
     # Per wiki/config/methodology.yaml — model_selection.by_task_type
@@ -1047,8 +1405,50 @@ methodology_binding:
 workflow:
   canonical_pipeline:
     - step: 0_operator_directives
-      purpose: "Read .assistant/_state/root-ghostproxy-rollout-operator-directives.md (create if absent). Read recent raw/notes/2026-*-*root-ghostproxy*. Process unmarked directives within autonomy bounds; append `[!processed]` markers; never overwrite verbatim text."
-      gate: "all unmarked directives have a `[!processed]` follow-up OR a `[!info]` surfacing follow-up"
+      purpose: "Read .assistant/_state/root-ghostproxy-rollout-operator-directives.md (create if absent). Read recent raw/notes/2026-*-*root-ghostproxy*. Process unmarked directives within autonomy bounds; append `[!processed]` markers; never overwrite verbatim text. Run git_state_refresh + in_session_directive_gate BEFORE proceeding to STEP 1+ (per v5.3)."
+      gate: "all unmarked directives have a `[!processed]` follow-up OR a `[!info]` surfacing follow-up; git_state_refresh completed; in_session_directive_gate passed (per sub-blocks below)"
+
+      git_state_refresh:
+        # NEW v5.3 — closes operational synergy gap between R20 + operator-commits-
+        # mid-session. Operator may commit mid-session (yesterday 04f0811 during
+        # arc 2 — observed). Worker's R20 check at step 7 + tracked/untracked
+        # detection in subagents.r20_gate MUST use FRESH git state, not cached.
+        rationale: "R20 doctrine requires checking whether a file is tracked before any rm. Operator commits mid-session silently transition files untracked → tracked from the worker's perspective. STEP 0 explicitly refreshes via git status + git log + git ls-files so subsequent steps use ACTUAL current state."
+        commands:
+          - "git -C /home/jfortin/root-ghostproxy/ status --short  # target project working state"
+          - "git -C /home/jfortin/root-ghostproxy/ log --oneline -3  # detect mid-session commits in target"
+          - "git -C /home/jfortin/devops-solutions-information-hub/ status --short  # second-brain working state"
+          - "git -C /home/jfortin/devops-solutions-information-hub/ log --oneline -3  # detect mid-session commits in second-brain"
+        on_mid_session_commit_detected:
+          description: "If git log shows commit hash newer than this fire's start-marker (in inbox prior-fire entry), worker REPORTS-FORM in friction_observed: 'OPERATOR COMMITS DETECTED <hash> <msg>' (NOT in `did` — these are operator actions, not worker actions). Worker's subsequent r20_gate calls use FRESH ls-files output reflecting the new tracked state."
+          why: "Visibility prevents false-perception bugs (worker thinks file is untracked + autonomously rms when operator just committed it). Closes the R20 × mid-session-commit synergy gap."
+        cache_invariant:
+          rule: "Each subagent (especially r20_gate) MUST re-run `git ls-files --error-unmatch <path>` at its own use-time; NEVER cache git state across subagent calls within one fire"
+          why: "Subagent A may run at minute 5 of fire; subagent B at minute 40; operator may have committed at minute 20. Stale cache = wrong R20 decision."
+        passes_output_filter: "Output stays REPORT-FORM (state) — never RECOMMENDATION-FORM ('should commit X', 'recommend reverting Y'); per output_governance.execution_overstep_filter"
+        second_brain_anchor: "R20 sacrosanct (2026-05-16); operator-commits-mid-session observed yesterday (04f0811 during arc 2)"
+
+      in_session_directive_gate:
+        # NEW v5.3 — closes observed gap from 2026-05-16 evening: worker authored
+        # a wiki/log/ entry citing a source `file:` raw/notes/2026-05-16-operator-
+        # goal-*.md that didn't exist yet; pipeline_post FAILED on Source 0 missing
+        # locator; worker had to retroactively author the raw/notes/. AGENTS.md
+        # Hard Rule 3 requires VERBATIM log BEFORE acting; this gate enforces
+        # structurally.
+        rationale: "Per AGENTS.md Hard Rule 3 (sacrosanct): 'Log operator directives verbatim BEFORE acting'. When the operator gives a directive in the current session, that directive MUST land at raw/notes/YYYY-MM-DD-<slug>.md BEFORE STEP 1+ proceed. Retroactive logging works for pipeline-post compliance but VIOLATES the discipline + risks losing operator-words to context compaction before the log lands."
+        detection:
+          interactive_session: "Compare: (a) operator-directives in current session (count of operator-stated /goal directives, sacrosanct quotes, multi-line operator-corrections); (b) raw/notes/YYYY-MM-DD-<slug>.md files dated this session-date (and earlier if session spans midnight). If (a) > (b), gate BLOCKED."
+          cron_fire: "Compare: (a) operator-directives.md entries arrived since this fire's prior-fire mark (check .assistant/_state/root-ghostproxy-rollout-inbox.md last-fire timestamp); (b) raw/notes/YYYY-MM-DD-<slug>.md files newer than that mark. If (a) > (b), gate BLOCKED."
+        on_block:
+          action: "Author the missing raw/notes/ entries FIRST per AGENTS.md Hard Rule 3 + CLAUDE.md Hard Rule 4 (verbatim sacrosanct). One entry per discrete directive per .claude/rules/work-mode.md filename convention `YYYY-MM-DD-<slug>.md`. Verbatim operator-quote in `## Verbatim` section; agent-interpretation in `## Interpretation` section (clearly separated, never paraphrasing into the quote block)."
+          then: "Re-run gate; if passes, proceed to STEP 1. If still BLOCKED (e.g., multiple directives), iterate."
+        bypass:
+          - "operator-directive is a meta-correction to active /goal (NOT a new directive — same /goal, refining): tag operator-quote into the active /goal's raw/notes/ as an addendum section rather than authoring a new file; cite the parent /goal note's path"
+          - "operator-directive is verbatim-equivalent to a prior raw/notes/ entry (e.g., operator restates an existing rule): cite the prior entry + skip authoring a duplicate; note in fire-summary's `did` that the directive references existing note"
+          - "REASON=<reason> env var passed at worker invocation (rare; for legitimate test-mode runs)"
+        passes_output_filter: "Gate-block message stays REPORT-FORM: 'Gate BLOCKED — N operator-directives in session, M raw/notes/ logs; authoring missing entries before STEP 1'. NEVER recommendation-form. Per output_governance."
+        second_brain_anchor: "AGENTS.md Hard Rule 3 (sacrosanct); CLAUDE.md Hard Rule 4 (operator words sacrosanct verbatim); .claude/rules/work-mode.md (sacrosanct verbatim quoting section)"
+        why_at_step_0: "Hard Rule 3 says 'BEFORE acting'. STEP 0 is the FIRST workflow step where the worker can detect + act on operator-directives; this is the earliest gate that catches the violation BEFORE STEP 1+ proceeds with work that would invoke or cite the directive."
 
     - step: 1_state_check
       purpose: "Inspect ~/root-ghostproxy/ state + inbox tail (last 20 lines). Decide branch."
@@ -1297,6 +1697,54 @@ workflow:
           next_plans: "What the next acquisition intends (bullet list: next-ready task IDs by priority level 1-4; OR 'BLOCKED-PENDING-CLARIFICATION on <Q##>'; OR 'RETIRED'). No 'if budget were unlimited' caveat — there is no per-fire time-budget cap; the next acquisition does substantive work as long as it naturally takes. Operator can pre-empt by editing operator-directives.md."
           friction_observed: "Any friction this fire encountered (lock-stale recovery / verification-retry / pipeline-post-err / authoring-template-gap / etc.). 'none' if smooth. Worker uses this for step 8_self_improvement_check next tick."
         retention: "Last 30 days; older sections compressed to one-liners (operator-action OR cron-driven cleanup task TBD)"
+        density_targets:
+          # NEW v5.3 — applies output_prose_density_policy principle to per_fire_summary
+          # sub-sections specifically. Operator-doctrine 2026-05-16 (sacrosanct): "no AI
+          # slop" + "do not minimize". Per-fire summary should be TERSE-ENOUGH-to-scan +
+          # COMPLETE-ENOUGH-to-act-on. Closes the prose-density × per-fire-summary
+          # synergy gap.
+          did:
+            target: "3-7 lines; bullet list (task IDs + audit cites + files-staged-count + verification result); NO prose paragraphs"
+            format_per_substantive_task: "T<id> | C##/SB-### | files:N | verify:pass|fail"
+            format_when_level_3_authoring: "+1 bullet noting new T<id> + parent E00x + pain-point cluster sourced"
+            format_when_level_4_cross_cycle: "+1 bullet with prerequisite chain + Q## surfaced"
+            anti: "Prose narratives ('I worked on X then turned to Y because Z') — re-emit as bullet list"
+          surfaced:
+            target: "0-5 entries; one bullet per Q## or marker write; 'none' if nothing surfaced"
+            format: "Q## ID + decision_needed slug + 1-line context"
+            anti: "Multi-paragraph explanations of why surfacing happened — that belongs in the Q## body itself, not the summary"
+            passes_output_filter: "Each Q## body cited stays REPORT-FORM / SURFACE-FORM / QUESTION-FORM (never RECOMMENDATION-FORM per output_governance)"
+          next_plans:
+            target: "1-3 items; bullet list of next-acquisition intent"
+            format: "T<id> | priority_level (1-4) | brief why (audit cluster + SFIF sub-cycle position if relevant)"
+            forbidden_caveats: "'if budget permits' / 'if time allows' / 'tentatively' — per worker_cadence_doctrine: NO per-fire time-budget cap; next acquisition does substantive work as long as it naturally takes"
+            when_blocked: "Single bullet: 'BLOCKED-PENDING-CLARIFICATION on Q##-<slug>'"
+            when_retired: "Single bullet: 'RETIRED per self_deprecation criteria'"
+          friction_observed:
+            target: "0-3 items; bullet list of operational friction this fire encountered"
+            format: "friction_class | brief description | suggested self-improvement signal for step_8"
+            friction_classes:
+              - "lock_stale_recovery (concurrency_control.acquire_decision triggered stale reclamation)"
+              - "verification_retry (step_5 retry after first attempt failed)"
+              - "pipeline_post_err (step_9 returned NEW errors; investigate)"
+              - "authoring_template_gap (existing template insufficient for the case)"
+              - "raw_notes_gate_block (in_session_directive_gate caught missing log)"
+              - "git_state_refresh_revealed_operator_commit (mid-session commit detected)"
+              - "mcp_phantom_tool_request (mcp_discipline caught unauthorized tool)"
+              - "scope_tier_acceptance_unmet (subagent work-shape mismatch — tier-upgrade candidate)"
+              - "operator_territory_overstep_caught_at_filter (output_governance regenerated emission)"
+              - "cross_cycle_fallback_used (level_4 pick — operator notification routed)"
+            anti: "'Everything went smoothly' — that's `none`; explicit friction_class is more useful than absence-narrative"
+          total_target: "Per fire-summary section: 10-30 lines typical; 50 lines absolute max (longer = compressing required + bullet-list discipline broken)"
+          anti_AI_slop_per_R21:
+            forbidden_phrasings:
+              - "'TLDR' headers"
+              - "'Summary:' prefixes (the section IS the summary)"
+              - "'In conclusion' phrasings"
+              - "Version-history blocks ('v1 had X; v2 changed Y') inside the summary"
+              - "'As previously noted' / 'As mentioned above' backreferences"
+            reason: "Per requirements_mapping.R21_no_ai_slop + anti_patterns.ai_slop: structure IS the format; bullets ARE the substance; backreferences belong in cross-file links, not inline prose"
+          second_brain_anchor: "methodology_binding.schema_compliance.output_prose_density_policy (parent policy for prose density across all output types); R21 no-AI-slop; anti_patterns.ai_slop"
       lock_release: "rm .assistant/_state/root-ghostproxy-rollout.lock (per concurrency_control.release_at_end happy_path)"
 
 # -----------------------------------------------------------------------------
@@ -1440,6 +1888,15 @@ anti_patterns:
     detector: "cron trigger.prompt has no first-pick logic (priority order naming); OR no audit cluster mapping instruction; OR no methodology_binding model-selection step; OR no SDD+TDD sub-step references (4a-4f); OR no explicit step 6 mark-review-and-stage instructions"
     response: "Augment cron prompt with explicit per-fire direction: priority_order (SFIF tier sequence + P0→P3 within tier), audit cluster identification, methodology_binding model selection by task_type + novelty_dimension, sub-step references for step 4, step 6 staging instructions"
     why: "Operator 2026-05-16: 'not DIRECTED WELL' — direction in the goal is what turns a fire into work; ambiguous goals produce ambiguous output"
+
+  # ─── v5.3 NEW ANTI-PATTERN — operator 2026-05-17 (recalibrated to execution-boundary scope) ───
+
+  - name: operator_territory_overstep
+    description: "Worker EXECUTES an action on operator-territory irreversibles WITHOUT operator authorization. Recalibrated 2026-05-17 to EXECUTION-boundary scope: agent recommending / proposing / surfacing options (including agent-recommended direction) is NOT overstep — that's within agent autonomy. The OVERSTEP is when the agent EXECUTES an irreversible operator-territory action without authorization. Per operator 2026-05-17 (sacrosanct, verbatim): 'I dont see not real opeartor territory, nothing you can't handle' — agent CAN handle recommendations + proposals + Q## with recommended direction. The REAL operator-territory is execution + sacrosanct sources + live-infra interruption."
+    detector: "Agent ATTEMPTS to invoke: (a) `git commit` OR (b) `git rm` on tracked file without accepted Q## OR (c) `service-disable` / `cron-disable` / `process-kill` / `unregister-installed-infra` on ALREADY-RUNNING operator-installed infrastructure WITHOUT operator-staged GO signal OR (d) modify `raw/notes/` files (sacrosanct verbatim primary sources) OR (e) modify second-brain brain-files (CLAUDE.md / AGENTS.md / CONTEXT.md / methodology.yaml / wiki-schema.yaml / spine) without explicit operator GO signal OR (f) modify sister projects OTHER than root-ghostproxy. Per output_governance.execution_overstep_filter.forbidden_execution_patterns."
+    response: "self_audit_at_emission catches the EXECUTION-INTENT before the agent invokes the action; agent ABORTS execution + emits REPORT-FORM state + SURFACE-FORM Q## (with agent-recommended direction allowed) + waits for operator GO signal. Recommendation-form output remains ALLOWED for the same operator-territory actions."
+    why: "Original observation 2026-05-16 evening 2: worker recommended 'disable cron before resuming' — was specifically about RECOMMENDING DISABLE OF AN ALREADY-RUNNING CRON unprompted mid-session. The original framing extended this to ALL recommendation-form on operator-territory verbs, which was over-broad. Operator-recalibration 2026-05-17: agent recommendations are FINE; only EXECUTION on operator-territory irreversibles is forbidden. Recalibrated scope: R20 sacrosanct (execution) + live-infra protection (don't interrupt running infra without GO) + sacrosanct sources (raw/notes/ never modified) + cross-project hard boundary (only root-ghostproxy)."
+    second_brain_anchor: "output_governance.execution_overstep_filter (the filter implementing this anti-pattern's detector + response); raw/notes/2026-05-17-operator-recalibration-output-governance-not-operator-territory-agent-can-handle.md (the recalibration source); wiki/lessons/03_validated/enforcement-compliance/enforcement-must-be-mindful-hard-blocks-need-justified-bypass.md; wiki/lessons/01_drafts/overcorrection-binary-fix-without-nuance-when-correcting-over-permissive-into-over-restrictive.md (the meta-lesson on overcorrection — output_governance v5.3 → v5.3.1 is itself an instance)"
 
 # -----------------------------------------------------------------------------
 # Prompt Templates
@@ -1685,6 +2142,64 @@ prompt_templates:
         86.8% cost reduction by NOT defaulting to full model when
         design is already obvious. Anti-pattern: methodology-theater.
 
+    18. **Output governance — EXECUTION-boundary, not recommendation-
+        boundary.** Per operator-recalibration 2026-05-17 (sacrosanct,
+        verbatim): "I dont see not real opeartor territory, nothing
+        you can't handle or if not really come back clear to me." The
+        agent's responsibility is BROADER than initially encoded: agent
+        THINKS + PROPOSES + STAGES + SURFACES + RECOMMENDS — including
+        on commit-decisions, install-decisions, cron-enable-decisions,
+        promotion-decisions. The agent can include the agent's
+        recommended direction with rationale. The OPERATOR-TERRITORY
+        sits at the EXECUTION boundary: agent NEVER executes `git
+        commit` (R20); NEVER `git rm` tracked without accepted Q## (R20);
+        NEVER `service-disable` / `cron-disable` / `process-kill` on
+        already-running operator-installed infrastructure without
+        operator-staged GO; NEVER modifies raw/notes/ (sacrosanct
+        verbatim); NEVER modifies brain-files / spine / methodology.yaml
+        / wiki-schema.yaml without explicit GO; NEVER modifies sister
+        projects other than root-ghostproxy. Original 2026-05-16
+        directive ("YOU DO NOT DECIDE.. DID I SAY ANYTHING ABOUT
+        DISABLING ANY CRON? NO...") was specifically about INTERRUPTING
+        a running cron mid-session — not a general defer-form rule.
+        Per output_governance.execution_overstep_filter (the recalibrated
+        v5.3.1 filter) + agent_vs_operator_responsibility_split (the
+        explicit split). When genuinely-blocked, COME BACK CLEAR
+        (REPORT-FORM + agent's assessment + decision needed) — NOT
+        defer-form as default avoidance.
+
+    19. **STEP 0 gates: Hard Rule 3 + R20 mid-session refresh.**
+        Workflow STEP 0 runs git_state_refresh FIRST (detects operator
+        mid-session commits so r20_gate uses FRESH ls-files state per
+        cache_invariant), THEN in_session_directive_gate (verifies any
+        in-session operator-directive has a raw/notes/YYYY-MM-DD-<slug>.md
+        verbatim log BEFORE STEP 1+ proceed — closes the
+        pipeline-post-failed-on-missing-source gap observed 2026-05-16).
+        Both gates have logged reasons + remediations + bypasses per
+        enforcement-must-be-mindful lesson. AGENTS.md Hard Rule 3
+        ("log verbatim BEFORE acting") + R20 sacrosanct are now
+        structurally enforced, not aspirational.
+
+    20. **MCP discipline — 3-predicate gate.** Per CLAUDE.md routing.md
+        + mcp-discipline lesson: MCP tools used by the worker must
+        satisfy REFERENCED (in profile's subagents.*.tools or workflow
+        step) + ROUTED (dispatched from a specific subagent or step) +
+        ACTUALLY-CALLED (invoked ≥1 time per fire-summary evidence).
+        Tools not satisfying all 3 are phantom catalog entries (P4
+        violation). The worker NEVER invokes MCP tools not on the
+        current_referenced_mcp_tools list — surfaces Q## first (adding
+        a tool is operator-territory per output_governance).
+
+    21. **Subagent scope_tier is WORK-SHAPE enum + acceptance criteria.**
+        Per scope_tier_definitions: 4 tiers (verification | substantive
+        | bounded | light), each with concrete acceptance criteria that
+        function as the stopping condition. Subagent.scope_tier.level
+        references the tier; agent does the work AS LONG AS IT NATURALLY
+        TAKES until acceptance is met. NOT a time-budget cap (per
+        operator 2026-05-16 sacrosanct: "the agent is not directed to
+        worry about time"). The parent fire's lock + 5m cron handle
+        overlap (per worker_cadence_doctrine + worker_runtime_model).
+
   on_task_pick: |
     Pick the next-ready task by priority order:
     1. Operator-explicit priority markers
@@ -1760,6 +2275,160 @@ success_criteria:
     pipeline_compliance:
       - "Second-brain pipeline_post 0 NEW errors per session (when second-brain wiki edited)"
 
+  per_outcome_attestation:
+    # NEW Iteration J (v5.3.1) — close P4 cascade at success-layer with concrete verification commands.
+    # Per [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4]]: every
+    # observable_outcome declaration above is ASPIRATIONAL until paired with a concrete
+    # verification_command + target threshold + attestation_method + failure_remediation. This
+    # block makes the success-criteria layer verifiable, not declarative. Operator can run any
+    # verification_command at any time to attest the outcome holds.
+    rationale: "Per P4 cascade: schema enforcement → per-type page-standards → methodology gate commands → profile success criteria + telemetry. Without per-outcome verification commands, success_criteria.observable_outcomes are declarations the worker may or may not deliver. This block makes each outcome falsifiable via concrete verification."
+
+    execution:
+      steady_review_rate:
+        outcome_ref: "observable_outcomes.execution[0] — tasks moved current_stage → status:review at steady rate"
+        target: "≥1 task/day steady-mode; ≥3 tasks/day sprint-mode (per measurable_progress_per_week aggregation)"
+        verification_command: |
+          # Daily count of tasks transitioned to status:review since prior 24h
+          cd /home/jfortin/root-ghostproxy && \
+            git log --since="yesterday" --diff-filter=M --name-only -- wiki/backlog/tasks/T*.md 2>/dev/null | \
+            sort -u | xargs -I{} sh -c 'grep -l "status: review" {} 2>/dev/null' | wc -l
+        attestation_method: "Per-fire summary `did` section logs status:review transitions; weekly aggregation against target via weekly-module-deep fire"
+        p4_compliance: "outcome is OBSERVABLE (integer count via git log + grep), not aspirational ('good progress')"
+        failure_remediation: "If <target for 3 consecutive days → friction_observed cites slow-pace; step_8 self_improvement_proposer surfaces investigation Q## (per anti_patterns.poke_deficit + direction_deficit)"
+
+      resolution_audit_anchor:
+        outcome_ref: "observable_outcomes.execution[1] — Resolution cites audit cluster C##/SB-###"
+        target: "100% of status:review tasks have Resolution + C##/SB-### cite"
+        verification_command: |
+          # Find tasks at status:review missing audit-cluster cite in Resolution
+          cd /home/jfortin/root-ghostproxy && \
+            for f in $(grep -l "status: review" wiki/backlog/tasks/T*.md 2>/dev/null); do \
+              grep -qE "C[0-9]+|SB-[0-9]+" "$f" || echo "$f: MISSING audit-anchor"; \
+            done
+        attestation_method: "Per-task self-audit at step_6 mark_review_and_stage; fire-summary friction_observed cites violations"
+        p4_compliance: "violations COUNTED (grep absence detection), not assumed"
+        failure_remediation: "On miss: step_4a spec_check re-runs to identify audit cluster; Resolution augmented before transition (per anti_patterns.skip_verification + audit_anchored gate)"
+
+    boundary_compliance:
+      no_sister_edits:
+        outcome_ref: "observable_outcomes.boundary_compliance[0] — ZERO modifications to sisters other than root-ghostproxy"
+        target: "ZERO edits in selfdef / sovereign-os / OpenArms / OpenFleet / AICP / dcp / other-sister repos"
+        verification_command: |
+          # Per-fire: check git status / git diff doesn't touch other-sister paths
+          violations=0
+          for sister in /home/jfortin/selfdef /home/jfortin/sovereign-os /home/jfortin/openarms /home/jfortin/openfleet /home/jfortin/devops-expert-local-ai /home/jfortin/devops-control-plane; do
+            [ -d "$sister/.git" ] && \
+              [ -n "$(cd $sister && git diff --stat 2>/dev/null)" ] && \
+              { echo "BOUNDARY VIOLATION: edits in $sister"; violations=$((violations+1)); }
+          done
+          [ $violations -eq 0 ] && echo "OK: no sister edits"
+        attestation_method: "step_0 git_state_refresh detects + step_6 r20_gate cross-checks; fire-summary friction_observed cites if violated"
+        p4_compliance: "violations DETECTED via git diff per sister (concrete gate), not assumed"
+        failure_remediation: "On detect: ABORT fire; surface Q## with cross-project boundary violation evidence; await operator decision per anti_patterns.edit_other_sister"
+
+      r20_no_commits:
+        outcome_ref: "observable_outcomes.boundary_compliance[1] — ZERO agent-issued git commit"
+        target: "ZERO agent-issued `git commit` invocations across all fires"
+        verification_command: |
+          # Worker's fire-history audit: check fire-summary for any 'git commit' reference attributed to worker
+          grep -E "(^|[^a-zA-Z])git commit" .assistant/_state/root-ghostproxy-rollout-fire-summary.md 2>/dev/null && \
+            echo "R20 VIOLATION: git commit reference in fire-summary" || echo "OK: no commit attempts"
+        attestation_method: "openclaw runtime tool-call audit + step_6 stage discipline + per-fire-summary friction_observed cites any commit-attempt"
+        p4_compliance: "violations LOGGED if attempted; commit attempts are P1 anti-pattern per anti_patterns.commit_attempt"
+        failure_remediation: "Per anti_patterns.commit_attempt: BLOCK + rewrite as git add + log violation in friction_observed"
+
+      r20_no_tracked_rm:
+        outcome_ref: "observable_outcomes.boundary_compliance[2] — ZERO git rm on tracked without Q##"
+        target: "ZERO `git rm` on tracked files without prior accepted Q##"
+        verification_command: |
+          # Audit fire-summaries for git rm on tracked without preceding accepted Q##
+          grep -B 2 -E "git rm" .assistant/_state/root-ghostproxy-rollout-fire-summary.md 2>/dev/null | \
+            grep -v -B 2 -E "Q## (accepted|approved)" && \
+            echo "R20 VIOLATION: tracked-rm referenced without accepted Q##" || echo "OK: no untracked rm"
+        attestation_method: "step_7 r20_gate + subagents.r20_gate uses FRESH ls-files per cache_invariant; per-fire summary friction_observed if attempted"
+        p4_compliance: "violations LOGGED via fire-summary; ls-files-fresh ensures detection accuracy"
+        failure_remediation: "Per anti_patterns.rm_tracked_without_q: BLOCK + surface batch Q## + wait for acceptance"
+
+    verification_compliance:
+      done_when_green_with_evidence:
+        outcome_ref: "observable_outcomes.verification_compliance[0] — Done When green + verification output captured"
+        target: "100% of status:review tasks have Done When all green + verification output in Resolution"
+        verification_command: |
+          for f in $(grep -l "status: review" /home/jfortin/root-ghostproxy/wiki/backlog/tasks/T*.md 2>/dev/null); do
+            grep -q "## Resolution" "$f" && grep -qE "verification|exit code|pass" "$f" || \
+              echo "$f: missing Resolution OR verification output"
+          done
+        attestation_method: "step_5 verify + step_6 mark_review_and_stage; fire-summary friction_observed cites incomplete Resolutions"
+        p4_compliance: "Resolution presence + verification cite COUNTED (grep), not assumed"
+        failure_remediation: "On miss: re-run step_5; complete Resolution; do not promote to status:review without evidence (per anti_patterns.skip_verification)"
+
+      install_sh_dry_run_clean:
+        outcome_ref: "observable_outcomes.verification_compliance[1] — install.sh --dry-run passes"
+        target: "Multi-file fixes pass `~/root-ghostproxy/install.sh --dry-run` cleanly (exit 0)"
+        verification_command: "bash /home/jfortin/root-ghostproxy/install.sh --dry-run 2>&1; echo \"exit: $?\""
+        attestation_method: "step_5 verify when multi-file fix touched ~/root-ghostproxy/install.sh-relevant files; output captured in Resolution"
+        p4_compliance: "exit code CAPTURED + asserted, not assumed"
+        failure_remediation: "On non-zero: investigate diff; restore install.sh integrity; re-run dry-run; do NOT advance to status:review with failed dry-run"
+
+    pipeline_compliance:
+      pipeline_post_zero_new_errors:
+        outcome_ref: "observable_outcomes.pipeline_compliance[0] — 0 NEW pipeline-post errors per fire"
+        target: "Second-brain pipeline_post returns 0 NEW validation errors per fire (when ~/devops-solutions-information-hub/wiki/ edited)"
+        verification_command: |
+          cd /home/jfortin/devops-solutions-information-hub && \
+            .venv/bin/python -m tools.pipeline post 2>&1 | \
+            grep -E "Validation errors:|Status:"
+        attestation_method: "step_9 pipeline_post_if_second_brain_edited; fire-summary `did` captures pipeline post result + status (PASS|FAIL)"
+        p4_compliance: "error count CAPTURED from pipeline-post output; baseline-diff against prior fire reveals NEW errors"
+        failure_remediation: "On NEW errors: address before next loop iteration; do not declare fire complete with unresolved validation errors (per anti_patterns.skip_pipeline_post)"
+
+    weekly_aggregation:
+      target_per_week: "≥5 tasks reach status:review (substantive count 2×, simple count 1× per measurable_progress_per_week.target)"
+      verification_command: |
+        # Weekly run (every Monday morning): count status:review transitions from prior 7 days
+        cd /home/jfortin/root-ghostproxy && \
+          git log --since="7 days ago" --diff-filter=M --name-only -- wiki/backlog/tasks/T*.md 2>/dev/null | \
+          sort -u | xargs -I{} sh -c 'grep -l "status: review" {} 2>/dev/null' | wc -l
+      attestation_method: "weekly-module-deep fire (Tue 09:00 ET) runs this verification + writes summary section; operator inspects"
+      p4_compliance: "count over 7-day window VERIFIABLE via git log; baseline comparison reveals slow-pace patterns"
+      failure_remediation: "Per anti_patterns.poke_deficit + direction_deficit: if <5/week → augment cron prompt direction + audit cluster mapping; surface as friction_observed for step_8 self_improvement_proposer"
+
+    retirement_attestation:
+      install_check_green:
+        outcome_ref: "retirement_criteria[0] — install.sh --check exits 0"
+        verification_command: "bash /home/jfortin/root-ghostproxy/install.sh --check 2>&1; echo \"exit: $?\""
+        target: "exit code 0"
+        attestation_method: "weekly-module-deep fire verifies; bootstrap fires also check (per pre_launch_readiness.target_project_access_verification.install_sh_dry_run_baseline); retirement signal triggers on exit 0 + all_p0_done + operator_confirmed simultaneously"
+        p4_compliance: "exit code IS the gate (not subjective)"
+
+      all_p0_done:
+        outcome_ref: "retirement_criteria[1] — all P0 tasks at status:done"
+        verification_command: |
+          cd /home/jfortin/root-ghostproxy && \
+            for f in wiki/backlog/tasks/T*.md; do \
+              if grep -q "priority: P0" "$f" 2>/dev/null; then \
+                grep -q "status: done" "$f" 2>/dev/null || echo "$f: P0 NOT done"; \
+              fi; \
+            done
+        target: "0 P0 tasks at non-done status (empty output means all P0 done)"
+        attestation_method: "weekly-module-deep audit + bootstrap fires audit; result counted in fire-summary"
+        p4_compliance: "count VERIFIABLE per file scan; no aspirational claims"
+
+      operator_retirement_confirmed:
+        outcome_ref: "retirement_criteria[2] — operator-directives.md confirms retirement"
+        verification_command: "grep -cE 'RETIRE|retirement|self-deprecate-now' .assistant/_state/root-ghostproxy-rollout-operator-directives.md 2>/dev/null"
+        target: "≥1 explicit retirement-confirmation directive from operator"
+        attestation_method: "step_0 operator_directives processing scans for retirement signal at every fire"
+        p4_compliance: "operator-confirmation is OBSERVABLE via grep (operator-written string in operator-directives.md)"
+
+    p4_cascade_attestation: "All observable_outcomes + retirement_criteria + measurable_progress targets are now paired with concrete verification_command + target + attestation_method + p4_compliance proof + failure_remediation. Per [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4]]: the success-layer is no longer aspirational; every claim is GATE-VERIFIABLE at fire-time + weekly aggregation. Operator can run any verification_command above at any time to attest the outcome holds."
+
+    second_brain_anchors:
+      - "wiki/lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md (P4 — generalized cascade)"
+      - "wiki/lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents.md (success_criteria must be operative, not aspirational)"
+      - "CLAUDE.md Hard Rule 7 (status claims must inline verification output)"
+
   measurable_progress_per_week:
     target: "≥5 tasks reach status:review (substantive count 2×; simple count 1×)"
     quality_proxy: "operator promote-to-done rate per task"
@@ -1830,21 +2499,111 @@ success_criteria:
     - "Profile-YAML edits re-adding ABSOLUTE boundary on root-ghostproxy (v3 regression)"
 
 # -----------------------------------------------------------------------------
+# Subagent Scope Tier Definitions (v5.3 — enum + per-tier acceptance criteria)
+# -----------------------------------------------------------------------------
+# Operator-doctrinal 2026-05-16 (sacrosanct, this /goal): "the agent is not
+# directed to worry about time. to not minimize and do big chunks of work".
+# scope_tier characterizes WORK SHAPE (verification | substantive | bounded |
+# light), NOT time-budget. Each tier has explicit ACCEPTANCE CRITERIA that
+# function as the stopping condition (P4 — declarations aspirational until
+# verified; the criteria are what verify the tier's work IS done).
+#
+# Subagent.scope_tier.level references one of the 4 tiers below; the agent
+# does its work AS LONG AS IT NATURALLY TAKES until that tier's acceptance
+# criteria are met. The parent fire's mutual-exclusion lock + 5m cron cadence
+# handle overlap (per worker_cadence_doctrine + worker_runtime_model).
+scope_tier_definitions:
+
+  verification:
+    description: "Mechanical state-check + ranking + capture; short by nature; no deep analysis"
+    typical_actions:
+      - "Read frontmatter + scan"
+      - "Run a gate command + capture output"
+      - "Lookup in a static config file"
+      - "Single git ls-files / git status check"
+    acceptance_criteria:
+      - "Output contains the requested verification result (boolean + supporting data)"
+      - "No speculative analysis beyond the verification need"
+      - "Citations to source-of-truth files (which file checked, line number)"
+    natural_duration_signal: "Single-pass through the verification task; work IS done when the verification gate returns its result"
+    examples_in_this_profile: [task_picker, verifier, r20_gate, self_improvement_proposer-when-no-signal]
+
+  substantive:
+    description: "Deep work requiring multiple stages of progress (TDD red→green→refactor; ADR with ≥2 alternatives + rationale; bug-test-first regression with Red+Green captured)"
+    typical_actions:
+      - "TDD cycle: test list → Red verified → Green per test → single-step refactor"
+      - "ADR authoring: ≥2 rejected alternatives + evidence-backed rationale + reversibility"
+      - "Bug-test-first regression: test reproduces bug (Red) → fix → test passes (Green) → committed to suite permanently"
+      - "Multi-file refactor preserving green throughout"
+    acceptance_criteria:
+      - "Done When checklist 100% covered by test assertions (per spec-driven.yaml checklist-as-unit-tests)"
+      - "All planned tests captured Red (assertion failure verified) before any implementation"
+      - "All tests Green after minimum implementation (one at a time per test-driven.yaml red_before_green)"
+      - "Refactor steps preserve green (single_step_refactor — run tests after each change)"
+      - "Integration-wiring exists per OpenArms Bug 6 (≥1 existing file imports new code)"
+      - "Resolution section cites audit cluster (C##/SB-###) + verification output"
+      - "Per-type page-standards quality bar met (e.g., decision: ≥2 rejected alternatives with reasons; lesson: ≥3 evidence items with bold source labels)"
+    natural_duration_signal: "Work IS done when Done When 100% verified AND integration-wiring exists AND Resolution captures full SDD+TDD evidence chain. No time-cap per operator 2026-05-16."
+    examples_in_this_profile: [task_executor, adr_author, regression_test_author]
+
+  bounded:
+    description: "Research / clarification-resolution / queue-management with a CLEAR STOPPING CONDITION but not pure single-pass verification"
+    typical_actions:
+      - "wiki_search + wiki_read_page across multiple related pages until clarification resolves"
+      - "Done When constitutive-ness audit + augmentation if incomplete (per accept_garbage_input anti-pattern)"
+      - "Operator-decision-queue surfacings (Q## authoring with cascade markers per output_governance.surface_form)"
+      - "Module readiness aggregation across child tasks"
+    acceptance_criteria:
+      - "Stopping condition explicitly met: [NEEDS CLARIFICATION] resolved with cited source OR Done When all items verifiable OR module readiness computed"
+      - "Resolution captures what was found + what was authored + what's still pending"
+      - "No speculative deep-dive beyond the resolution need (anti-pollution per R13)"
+    natural_duration_signal: "Work IS done when the stopping condition is met; weekly-deep fires get deeper bounded research naturally"
+    examples_in_this_profile: [research_local, research_online, pm_scrum_facilitator]
+
+  light:
+    description: "Quick characterization / no-signal-skip / passive emission; minimal work"
+    typical_actions:
+      - "Inspect own state + propose IF signal exists; else 'no signal' log + skip"
+      - "Single-line inbox entry"
+      - "Pass-through (no real work this acquisition)"
+    acceptance_criteria:
+      - "Lightweight check completed + 'skipped' OR 'surfaced' outcome logged"
+    natural_duration_signal: "Single-pass; minimal output"
+    examples_in_this_profile: [self_improvement_proposer-typical-fire-no-friction]
+
+  cross_tier_invariants:
+    # Apply to ALL tiers — non-negotiable
+    - "Per worker_cadence_doctrine.do_big_chunks_directive: NO per-tick time-budget cap; the tier's acceptance_criteria ARE the stopping condition, not the clock"
+    - "Per CLAUDE.md Hard Rule 4 + raw/notes/ sacrosanct: operator-words quoted VERBATIM in any output (Resolution / Q## / inbox); never paraphrase"
+    - "Per output_governance.execution_overstep_filter: subagent output passes the filter BEFORE emission to operator-facing channels (forbidden_patterns regenerated as report_form / surface_form / question_form)"
+    - "Per R20 sacrosanct: subagent NEVER calls git commit; r20_gate gates tracked-rm via accepted Q##"
+    - "Per mcp_discipline.three_predicates: subagent's tools field MUST reference only tools satisfying (referenced + routed + actually-called); phantom-tool requests surface Q##"
+    - "Per anti_patterns.wholesale_rewrite_instead_of_augment: subagent uses Edit tool (surgical old_string/new_string); Write only for brand-new files"
+
+  upgrade_path:
+    notes: "If a subagent's work consistently exceeds its declared tier's acceptance criteria (signal: friction_observed cites 'tier acceptance unmet' or 'work shape mismatch'), self_improvement_proposer at step 8 surfaces a tier-upgrade Q## (e.g., 'verification → bounded' OR 'bounded → substantive')."
+    bypass: "Operator-directive in operator-directives.md can override tier for a specific fire (e.g., 'research_local: substantive mode for this Q-mapping-3 deep-dive')"
+
+# -----------------------------------------------------------------------------
 # Sub-agents (lean — only what the worker pipeline needs)
 # -----------------------------------------------------------------------------
 subagents:
 
-  # NOTE on subagent scope_tier (per operator 2026-05-16 sacrosanct this /goal:
-  # "the agent is not directed to worry about time. to not minimize and do big chunks
-  # of work"). Scope_tier characterizes the WORK SHAPE (verification vs substantive),
-  # NOT a time budget cap. Each subagent does its work AS LONG AS IT NATURALLY TAKES.
-  # The parent fire's mutual-exclusion lock + 5m cron cadence handle overlap.
+  # NOTE on subagent scope_tier (v5.3 — per scope_tier_definitions block above):
+  # scope_tier characterizes WORK SHAPE (4-tier enum: verification | substantive
+  # | bounded | light), NOT time-budget. Each subagent declares `level` +
+  # `this_agent_specific_acceptance`; work continues until acceptance criteria
+  # are met (parent fire's lock + 5m cron handle overlap). Operator-doctrine
+  # 2026-05-16 sacrosanct: "the agent is not directed to worry about time".
 
   - name: task_picker
     purpose: "step 2 — read ~/root-ghostproxy/wiki/backlog/tasks/_index.md + frontmatter scan; rank ready tasks by priority + scope; return next-pick + rationale"
     when_to_use: ["step 2 — every acquisition"]
     tools: [Bash (ls + grep frontmatter), Read]
-    scope_tier: "verification (frontmatter scan + ranking; short by nature, not deep analysis)"
+    scope_tier:
+      level: verification
+      per_definition: "scope_tier_definitions.verification"
+      this_agent_specific_acceptance: "Returns picked_task_path + priority_level (1-4 per sfif_binding.pick_filter) + parent_module + parent_epic + audit_cluster cite + rationale. No speculative deep-dive beyond the rank decision."
     output: "{picked_task_path, priority, parent_module, parent_epic, audit_cluster, rationale}"
 
   - name: task_executor
@@ -1852,7 +2611,10 @@ subagents:
     when_to_use: ["step 4 — primary worker"]
     inputs: [task_path, module_path, epic_path, audit_cluster_findings]
     tools: [Read, Edit, Write, Bash (for tests/install.sh inside ~/root-ghostproxy/)]
-    scope_tier: "substantive (TDD red→green→refactor through completion; takes as long as it naturally takes; do BIG CHUNKS per operator 2026-05-16 this /goal — no per-fire time-budget cap)"
+    scope_tier:
+      level: substantive
+      per_definition: "scope_tier_definitions.substantive"
+      this_agent_specific_acceptance: "Done When 100% covered by test assertions; all planned tests captured Red before any implementation; all tests Green after minimum implementation (one at a time); refactor steps preserve green (single_step_refactor); integration-wiring exists per OpenArms Bug 6 (≥1 existing file imports new code); Resolution cites audit cluster (C##/SB-###) + verification output; per-type page-standards quality bar met on any wiki pages authored."
     style: ["Edit in place", "No scope inventions", "Reference audit cluster in Resolution"]
     output: "{files_edited[], verification_command, anti_pattern_detected: bool}"
 
@@ -1860,21 +2622,30 @@ subagents:
     purpose: "step 5 — run task-specific verification gate; capture output"
     when_to_use: ["step 5 — after every executor run"]
     tools: [Bash (~/root-ghostproxy/install.sh --check / --dry-run / regression / lint)]
-    scope_tier: "verification (run gate commands + capture output; short by nature, waits on command completion)"
+    scope_tier:
+      level: verification
+      per_definition: "scope_tier_definitions.verification"
+      this_agent_specific_acceptance: "Runs the task-specific gate command + captures full output (no truncation per CLAUDE.md Hard Rule 1); returns gate_passed boolean + output_excerpt + retry_needed boolean. No speculative analysis beyond the gate's verdict."
     output: "{gate_passed: bool, output_excerpt, retry_needed: bool}"
 
   - name: r20_gate
     purpose: "step 7 — verify tracked/untracked before ANY rm; gate tracked on accepted Q##"
     when_to_use: ["step 7 — every rm action"]
     tools: ["Bash (git ls-files --error-unmatch <path>)", "Read operator-decision-queue.md for accepted Q##"]
-    scope_tier: "verification (single git ls-files check per path + Q## lookup)"
+    scope_tier:
+      level: verification
+      per_definition: "scope_tier_definitions.verification"
+      this_agent_specific_acceptance: "Per path: runs FRESH git ls-files (per git_state_refresh.cache_invariant — never cached); checks operator-decision-queue for accepted Q##; returns path + status (untracked|tracked|tracked_with_accepted_q) + action (autonomous_rm|surface_q|execute_q_rm|block). NEVER caches state across calls within one fire."
     output: "{path, status: untracked|tracked|tracked_with_accepted_q, action: autonomous_rm|surface_q|execute_q_rm|block}"
 
   - name: self_improvement_proposer
     purpose: "step 8 — inspect own profile + inbox + recent runs; propose profile updates"
     when_to_use: ["step 8 — every active session"]
     tools: [Read on own profile + inbox + recent state]
-    scope_tier: "light (inspect own state + propose IF signal exists; no signal → 'no signal' log + skip)"
+    scope_tier:
+      level: light
+      per_definition: "scope_tier_definitions.light"
+      this_agent_specific_acceptance: "Inspects own profile + inbox + recent fire-summary friction_observed; IF signal exists → returns proposal (target_field + current + proposed + rationale + autonomy_class); ELSE → 'no signal' log + skip. Signal sources include: friction_observed entries, in_session_directive_gate blocks, mcp_discipline phantom-tool requests, output_governance overstep catches."
     output: "{target_field, current, proposed, rationale, autonomy_class}"
 
   # ─── v5 NEW SUBAGENTS (operator-doctrine 2026-05-16: research-online + research-local
@@ -1890,7 +2661,10 @@ subagents:
       - "Bash (gh repo view cyberpunk042/root-ghostproxy)"
       - "wiki_fetch MCP (operator-anchored URLs only)"
     forbidden_tools: [WebFetch on corpus URLs, mass URL fetching, gh-api-PATCH-POST-DELETE]
-    scope_tier: "verification (operator-anchored gh/wiki_fetch; bounded to the specific claim being verified; not deep)"
+    scope_tier:
+      level: verification
+      per_definition: "scope_tier_definitions.verification"
+      this_agent_specific_acceptance: "Per operator-anchored claim: runs gh CLI read-only OR wiki_fetch on operator-named URL; captures content excerpt; returns claim_status (confirmed|contradicted|inconclusive). Bounded to the SPECIFIC claim being verified; NOT speculative discovery (per mcp_discipline + identity.what_this_profile_is_NOT)."
     output: "{operator_anchor_source, fetched_content_excerpt, claim_status: confirmed|contradicted|inconclusive}"
 
   - name: research_local
@@ -1900,7 +2674,10 @@ subagents:
       - "step 4a spec_check — resolve [NEEDS CLARIFICATION] from existing wiki content before surfacing to operator-decision-queue"
       - "step 4b test_list — find similar test patterns already authored in target project or sister projects (read-only for non-root-ghostproxy)"
     tools: [Read, Grep, Glob, wiki_search MCP, wiki_read_page MCP, wiki_list_pages MCP]
-    scope_tier: "bounded research (DEEP-ENOUGH-TO-RESOLVE the spec_check / load_context need; not speculative deep-dive; weekly-deep fires get deeper research naturally — no time cap)"
+    scope_tier:
+      level: bounded
+      per_definition: "scope_tier_definitions.bounded"
+      this_agent_specific_acceptance: "Per spec_check / load_context need: stopping condition is [NEEDS CLARIFICATION] resolved with cited source OR sufficient prior-art mapped for the picked task. Returns relevant_second_brain_pages + relevant_target_project_files + cross_cluster_references + prior_art_summary. DEEP-ENOUGH-TO-RESOLVE, not speculative deep-dive (anti-pollution per R13). Weekly-deep fires get deeper bounded research naturally — same stopping condition, larger fan-out."
     output: "{relevant_second_brain_pages[], relevant_target_project_files[], cross_cluster_references[], prior_art_summary}"
 
   - name: adr_author
@@ -1911,7 +2688,10 @@ subagents:
     inputs: [task_path, design_question, alternatives_evaluated, evidence_sources]
     tools: [Read, Write (brand-new ADRs only), Edit (ADR amendments via supersedes chain)]
     forbidden_tools: ["Write over existing ADRs without explicit SUPERSEDES relationship"]
-    scope_tier: "substantive (architecture decision must be deep enough to bind to decision-page-standards exemplar quality bar: ≥2 rejected alternatives with reasons + evidence-backed rationale + honest reversibility; takes as long as it naturally takes; no time-cap per operator 2026-05-16)"
+    scope_tier:
+      level: substantive
+      per_definition: "scope_tier_definitions.substantive"
+      this_agent_specific_acceptance: "ADR meets decision-page-standards exemplar quality bar: ≥2 rejected alternatives WITH concrete reasons; rationale evidence-backed (audit cluster C##/SB-### + principles P1-P5 cited); reversibility honest (easy|moderate|hard|irreversible + cost-to-reverse note); Decision section is ONE imperative statement (not 'we should consider'). No time-cap; natural duration is whatever the architecture decision genuinely requires."
     style:
       - "Decision section: ONE clear statement (imperative; not 'we should consider...')"
       - "Alternatives: ≥2 rejected with concrete reasons (not 'other options exist')"
@@ -1928,7 +2708,10 @@ subagents:
       - "Weekly-module-deep tick: extended regression suite authoring + coverage expansion"
     inputs: [task_path, sb_id, bug_reproduction_steps, expected_behavior]
     tools: [Read, Write (new test files), Edit (adding to existing regression suite), Bash (running tests + verifying Red→Green transitions)]
-    scope_tier: "substantive (bug-test-first regression — REAL Red→Green verification captured inline + committed permanently to suite; weekly-deep coverage-expansion is even deeper; takes as long as it naturally takes — no time-cap per operator 2026-05-16)"
+    scope_tier:
+      level: substantive
+      per_definition: "scope_tier_definitions.substantive"
+      this_agent_specific_acceptance: "Bug-test-first regression: test REPRODUCES bug FIRST (Red verified — assertion failure captured + cited in Resolution); test PASSES after fix (Green verified — output captured); test committed to regression suite permanently (NEVER deleted post-fix — would re-enable silent regression per audit C03). Test name + leading comment cite SB-### addressed. Coverage gate: every public API touched has ≥1 meaningful test. Weekly-deep extends to broader regression authoring + coverage-expansion."
     style:
       - "Test reproduces bug FIRST (Red verified — assertion failure captured)"
       - "Test name + leading comment cite the SB-### it addresses"
@@ -1945,7 +2728,10 @@ subagents:
       - "step 10 loop_or_declare — surface to operator-decision-queue when task is BLOCKED-PENDING-CLARIFICATION OR scope-ambiguous"
     tools: [Read, Edit (task/module/epic frontmatter + Tasks sections), wiki_log MCP (operator-decision-queue surfacings)]
     forbidden_tools: ["Write over operator-decision-queue.md (Edit only — append to preserve operator-curated content)"]
-    scope_tier: "bounded (per-task queue management + Done When audit; deeper on weekly-deep when recomputing module readiness aggregates; takes as long as it naturally takes — no time-cap per operator 2026-05-16)"
+    scope_tier:
+      level: bounded
+      per_definition: "scope_tier_definitions.bounded"
+      this_agent_specific_acceptance: "Done When constitutive-ness audit complete (per anti_patterns.accept_garbage_input — every item verifiable; vague items augmented FIRST with specific verifiable checklist additions); readiness computed (not subjective) per readiness-vs-progress two-dimensional tracking; Q## surfacings include cascade marker + decision_needed slug + operator-verbatim quotes + multi-vision only when GENUINE scope ambiguity. Weekly-deep deepens module readiness aggregation across child tasks. Output passes output_governance filter (NEVER recommendation-form in Q## body)."
     style:
       - "Done When items: each verifiable (no 'improve quality' vagueness)"
       - "Readiness derived from stages_completed (not subjective; never claimed)"

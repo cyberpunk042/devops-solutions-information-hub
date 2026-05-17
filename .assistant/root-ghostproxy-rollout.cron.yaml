@@ -1,11 +1,24 @@
 # =============================================================================
-# .assistant/root-ghostproxy-rollout.cron.yaml  (v5.2 — 2026-05-16)
+# .assistant/root-ghostproxy-rollout.cron.yaml  (v5.3.1 — 2026-05-17)
 # =============================================================================
 # Per-profile CRON jobs for the root-ghostproxy-rollout assistant.
 # v5 = worker mode + SFIF soft-priority + bootstrap-idempotency + mutual-
 #      exclusion lock + 4-level pick logic.
 # v5.2 (2026-05-16 evening 2) = cadence 15m→5m + remove per-tick time-anxiety
 #                                + "do big chunks of substantive work" framing.
+# v5.3 (2026-05-17) = synergy iteration: STEP 0 gates (git_state_refresh +
+#                     in_session_directive_gate) propagated; output_governance
+#                     filter referenced; mcp_discipline 3-predicate gate
+#                     referenced; worker_runtime_model navigation hub referenced.
+#                     Cron prompts now cite v5.3 gates explicitly at STEP 0 of
+#                     every fire (Iteration I — trigger-prompt-doctrine symmetry).
+# v5.3.1 (2026-05-17 same session) = output_governance recalibrated to
+#                     EXECUTION-boundary scope per operator-recalibration 2026-05-17
+#                     ("I dont see not real opeartor territory, nothing you can't
+#                     handle"). Agent THINKS+PROPOSES+STAGES+SURFACES+RECOMMENDS
+#                     freely; operator-territory = EXECUTION irreversibles +
+#                     sacrosanct sources + live-infra interruption + cross-project.
+#                     STEP 0 prompts now reflect the recalibrated doctrine.
 #
 # Cadence philosophy (operator-verbatim 2026-05-16, sacrosanct):
 #   "5m is probably the sweetpot for an active worker main CRON and the agent
@@ -86,13 +99,26 @@ jobs:
 
         WALK (workflow.canonical_pipeline):
 
-        STEP 0 operator_directives:
+        STEP 0 operator_directives + v5.3 GATES:
           - Read .assistant/_state/root-ghostproxy-rollout-operator-directives.md
             (create if absent: write empty placeholder file)
-          - Read 3 directive raws from today: raw/notes/2026-05-16-operator-directive-*.md
+          - Read directive raws: raw/notes/2026-05-1[6-9]-operator-directive-*.md +
+            raw/notes/2026-05-17-operator-recalibration-output-governance-not-operator-territory-agent-can-handle.md
           - Read raw/notes/2026-05-16-operator-correction-profile-state-framing-*.md
           - Mark [!processed] follow-ups
-          - Gate: all unmarked directives have follow-up markers
+          - v5.3 GATE — git_state_refresh (per profile workflow.canonical_pipeline.step_0.git_state_refresh):
+              * `git -C ~/root-ghostproxy/ status --short` + `git log --oneline -3` (detect mid-session commits)
+              * `git -C ~/devops-solutions-information-hub/ status --short` + `git log --oneline -3` (second-brain mid-session commits)
+              * On mid-session-commit detected: REPORT in friction_observed (per v5.3.1 output_governance — operator action, REPORT-FORM); r20_gate uses FRESH ls-files at use-time (cache_invariant)
+          - v5.3 GATE — in_session_directive_gate (per profile workflow.canonical_pipeline.step_0.in_session_directive_gate):
+              * Compare: (a) operator-directive count in this fire's loaded directives, (b) raw/notes/YYYY-MM-DD-<slug>.md files newer than prior-fire mark in inbox
+              * If (a) > (b) AND no bypass condition: BLOCK STEP 1+; author missing raw/notes/ entries FIRST per AGENTS.md Hard Rule 3 ("log verbatim BEFORE acting"); ## Verbatim section + ## Interpretation clearly separated; re-run gate
+              * Bypass: meta-correction to active /goal → tag into existing /goal's raw/notes/ as addendum (not new file); verbatim-equivalent to prior raw → cite prior + skip duplicate
+          - v5.3.1 OUTPUT GOVERNANCE IN EFFECT (per profile output_governance.agent_vs_operator_responsibility_split):
+              * Agent THINKS + PROPOSES + STAGES + SURFACES + RECOMMENDS freely (including on commit / install / cron / promotion / Q## resolution decisions; agent can include recommended direction)
+              * Operator-territory = EXECUTION irreversibles only: agent NEVER `git commit` (R20); NEVER `git rm` tracked without accepted Q## (R20); NEVER `service-disable` / `cron-disable` / `process-kill` on already-running operator-installed infra without staged GO; NEVER modifies raw/notes/ (sacrosanct verbatim) / brain-files / spine / methodology.yaml / wiki-schema.yaml without explicit GO; NEVER modifies sister projects other than root-ghostproxy
+              * When genuinely blocked: COME BACK CLEAR (REPORT-FORM + agent's assessment + decision needed) — NOT defer-form as default
+          - Gate: all unmarked directives have follow-up markers + v5.3 gates passed
 
         STEP 1 state_check:
           - Verify ~/root-ghostproxy/ readable+writable + git clean
@@ -274,9 +300,12 @@ jobs:
 
         WALK (workflow.canonical_pipeline — steady-state execution):
 
-        STEP 0 operator_directives:
+        STEP 0 operator_directives + v5.3 GATES:
           - Read operator-directives.md + recent raw/notes/2026-*-operator-*
           - Mark [!processed] on unmarked items
+          - v5.3 GATE — git_state_refresh: `git -C ~/root-ghostproxy/ status --short` + `git log --oneline -3` + same for ~/devops-solutions-information-hub/. On mid-session-commit detected: REPORT in friction_observed (per v5.3.1 output_governance); r20_gate uses FRESH ls-files at use-time (cache_invariant).
+          - v5.3 GATE — in_session_directive_gate: if new operator-directives this fire AND no matching raw/notes/YYYY-MM-DD-<slug>.md log: BLOCK STEP 1+; author raw/notes/ FIRST per AGENTS.md Hard Rule 3; verbatim ## Verbatim + ## Interpretation. Bypass: meta-correction to active /goal → addendum to existing /goal's raw/notes/. Per profile workflow.canonical_pipeline.step_0.in_session_directive_gate.
+          - v5.3.1 OUTPUT GOVERNANCE IN EFFECT: agent THINKS+PROPOSES+STAGES+SURFACES+RECOMMENDS freely (commit/install/cron/promotion/Q## with recommended direction). Operator-territory = EXECUTION irreversibles only (git commit / git rm tracked without Q## / service-disable on running infra / modify raw/notes/ / modify brain-files without GO / modify sisters other than root-ghostproxy). When genuinely blocked: COME BACK CLEAR (REPORT + assessment + decision needed); NOT defer-form. Per profile output_governance.agent_vs_operator_responsibility_split + execution_overstep_filter.
 
         STEP 1 state_check:
 
@@ -505,7 +534,7 @@ jobs:
 
         WALK:
 
-        STEP 0 operator_directives: as in daily-light.
+        STEP 0 operator_directives + v5.3 GATES: as in driven-worker-tick STEP 0 (read directives + v5.3 git_state_refresh + v5.3 in_session_directive_gate + v5.3.1 output_governance in effect). Weekly cadence: same gate discipline applies; depth of substantive work is elevated per weekly-deep budget (3h timeout).
 
         STEP 1 state_check: branch as in driven-worker-tick step 1, INCLUDING the
           mutual-exclusion lock pre-check (.assistant/_state/root-ghostproxy-rollout.lock).
