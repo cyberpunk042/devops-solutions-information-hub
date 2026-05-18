@@ -50,18 +50,29 @@ readonly -a FILES=(
   "CLAUDE.md:644"
   "stop-hook-git-check.sh:755"
   "validate-stop-hook-fix.sh:755"
+  "post-compact-reorient.sh:755"
 )
+
+readonly BOOTSTRAP_DIR="${TARGET_DIR}/env-bootstrap"
 
 dry_run=false
 run_validator=true
+quiet=false
 for arg in "$@"; do
   case "${arg}" in
     --dry-run) dry_run=true ;;
     --no-validate) run_validator=false ;;
+    --quiet) quiet=true ;;
     -h|--help) sed -n '2,40p' "$0"; exit 0 ;;
     *) echo "unknown arg: ${arg}" >&2; exit 2 ;;
   esac
 done
+
+# When --quiet, route all stdout (but not stderr) to /dev/null. Validator
+# is still invoked with --quiet so its exit code propagates.
+if [ "${quiet}" = "true" ]; then
+  exec > /dev/null
+fi
 
 mark() { [ "$1" = "ok" ] && printf "  ✓ " || printf "  ✗ "; }
 
@@ -142,6 +153,45 @@ echo "  installed/updated: ${installed}"
 echo "  skipped (already current): ${skipped}"
 echo "  backed up: ${backed_up}"
 
+# --- Bootstrap mirror: copy apply.sh + templates/ to ~/.claude/env-bootstrap/ ---
+# The SessionStart hook (wired in settings.json) invokes the bootstrap copy,
+# so it works even on fresh containers where the info-hub repo isn't cloned
+# (after the first successful apply.sh run from any location).
+echo
+echo "── bootstrap mirror → ${BOOTSTRAP_DIR} ──"
+if [ "${dry_run}" = "true" ]; then
+  mark ok; echo "WOULD mkdir -p ${BOOTSTRAP_DIR}/templates"
+  mark ok; echo "WOULD copy apply.sh → ${BOOTSTRAP_DIR}/apply.sh (mode 755)"
+  mark ok; echo "WOULD mirror ${TEMPLATES_DIR}/* → ${BOOTSTRAP_DIR}/templates/"
+else
+  mkdir -p "${BOOTSTRAP_DIR}/templates"
+  # apply.sh self-copy
+  if ! cmp -s "${SCRIPT_DIR}/apply.sh" "${BOOTSTRAP_DIR}/apply.sh" 2>/dev/null; then
+    cp "${SCRIPT_DIR}/apply.sh" "${BOOTSTRAP_DIR}/apply.sh"
+    chmod 755 "${BOOTSTRAP_DIR}/apply.sh"
+    mark ok; echo "apply.sh installed → ${BOOTSTRAP_DIR}/apply.sh"
+  else
+    mark ok; echo "apply.sh: identical (skip)"
+  fi
+  # templates mirror
+  for entry in "${FILES[@]}"; do
+    tname="${entry%:*}"
+    tsrc="${TEMPLATES_DIR}/${tname}"
+    tdst="${BOOTSTRAP_DIR}/templates/${tname}"
+    if [ -f "${tsrc}" ] && ! cmp -s "${tsrc}" "${tdst}" 2>/dev/null; then
+      cp "${tsrc}" "${tdst}"
+      # Match perms convention: scripts 755, others 644 (bootstrap templates
+      # are READ by apply.sh; live mode is set by the install step above).
+      case "${tname}" in
+        *.sh) chmod 755 "${tdst}" ;;
+        *)    chmod 644 "${tdst}" ;;
+      esac
+      mark ok; echo "templates/${tname}: mirrored"
+    fi
+  done
+  mark ok; echo "bootstrap mirror complete (${BOOTSTRAP_DIR})"
+fi
+
 if [ "${run_validator}" = "false" ]; then
   echo "  (post-install validator skipped per --no-validate)"
   exit 0
@@ -155,7 +205,11 @@ fi
 echo
 echo "── post-install validator ──"
 if [ -x "${TARGET_DIR}/validate-stop-hook-fix.sh" ]; then
-  "${TARGET_DIR}/validate-stop-hook-fix.sh"
+  if [ "${quiet}" = "true" ]; then
+    "${TARGET_DIR}/validate-stop-hook-fix.sh" --quiet
+  else
+    "${TARGET_DIR}/validate-stop-hook-fix.sh"
+  fi
   rc=$?
   exit "${rc}"
 else

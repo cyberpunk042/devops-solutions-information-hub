@@ -69,3 +69,109 @@ replies only.
 Quote the operator verbatim when their words shape a rule, decision, or
 piece of work. Never paraphrase, dilute, or summarize. Layer new direction
 ON TOP OF prior direction — never discard.
+
+## Multi-hour autonomous cycles (2h / 4h / 8h / 16h)
+
+The operator runs perpetual `/goal` sessions in cycles of 2, 4, 8, and up
+to 16 hours. The harness MUST stay configured and the AI MUST stay on
+trajectory across all cycle lengths. Operator standing direction (verbatim,
+2026-05-18):
+
+> "lets make sure that the environmnet is bulletproff and lets make sure
+>  there is a template version and a script so we can instantly reapply
+>  it all"
+> "lets make sure its to my tailoring right ? I have the right workflow
+>  and SDD AND TDD and so much clear requirements and a vision that it
+>  should be made to be able to run in batch of 2, 4 and even 8 and 16
+>  hours cycles. You wont believe it when I give you the next chunk of
+>  requirements and milestones... you wont.. so we need everything to
+>  be ready."
+> "Ready for the future and the way I want the harness to be configured
+>  and always remain configured as, new session or post compaction or
+>  whatever the response of the AI that may think its done or blocked or
+>  should stop somehow."
+
+**The "always remain configured" mechanism:**
+
+| Lifecycle event | How the harness re-asserts itself |
+|---|---|
+| New session start | `SessionStart` hook in `~/.claude/settings.json` runs `~/.claude/env-bootstrap/apply.sh --quiet` — idempotently reinstalls all templates if any file has drifted |
+| Post-compaction | `PostCompact` hook runs `~/.claude/post-compact-reorient.sh` — emits a `systemMessage` re-injecting standing directives + perpetual-mandate semantics so they survive the summary |
+| Container rebuild / fresh clone | `bash scripts/claude-code-env/apply.sh` from any ecosystem repo's checkout — single command bring-up |
+| AI completion self-assessment | `/goal` is the operator-controlled mandate; AI does NOT decide when it's complete (see "never stop" section below) |
+| Drift detection | `~/.claude/validate-stop-hook-fix.sh` runs 8 checks (caps, hooks, mirror, scripts); exits 1 on drift |
+
+## SDD + TDD as standing methodology
+
+The operator's workflow is SDD (Specification-Driven Development) +
+TDD (Test-Driven Development). Standing methodology directives, layered
+across all ecosystem projects:
+
+| Principle | Application |
+|---|---|
+| **Spec before code** | New work begins with a written SDD in `docs/sdd/` (per-project convention) OR a clear operator-stated spec. No speculative implementation. |
+| **Tests before implementation** | Failing test exists FIRST, then implementation makes it pass. L1-L5 layered test harness pattern (used in `cyberpunk042/sovereign-os`). |
+| **Real-substrate execution** | L3+ tests must execute the actual code path, not stubs. The sovereign-os arc proved: L1+L2 passed while L3 caught 8 real bugs. |
+| **Direct-to-main on `sovereign-os`** | Per operator directive; small substantive commits, one round per logical unit, L3-gated. Other ecosystem repos use feature branch + normal PR when ready. |
+| **Layer 0 = operator words verbatim** | All operator directives logged verbatim to `raw/notes/` before acting. Sacrosanct. |
+
+Operator will expand these with concrete requirements + milestones —
+when that chunk arrives, add it BELOW this section, don't overwrite.
+
+## "Never stop" — three anti-patterns the AI must not exhibit
+
+When the operator has invoked perpetual `/goal`, the AI's session-end is
+operator-controlled. The AI MUST NOT exit on its own judgment. Three
+specific anti-patterns to refuse:
+
+1. **"I think I'm done"** — completion self-assessment is NOT a stop
+   trigger. The operator decides what "done" means via `/goal` semantics.
+   If a logical unit is complete, surface it + propose the next unit;
+   do NOT stop.
+
+2. **"I think I'm blocked"** — blockers are tasks to investigate, not
+   reasons to halt. If genuinely uncertain about a destructive action
+   or major architectural decision, ask via `AskUserQuestion` and then
+   continue with other tractable work in parallel while waiting. Do NOT
+   sit silent.
+
+3. **"I think I should stop somehow"** — the harness's `blocking_limit`,
+   `max_turns`, `prompt_too_long`, and `stop_hook_*` stop-reasons have
+   already been raised/neutralized. If the AI feels a pull to stop that
+   isn't one of those, it's most likely a behavioral hallucination, not
+   a real signal. Continue.
+
+Exceptions (legitimate stops):
+- Operator explicitly says "stop" / "pause" / "wait" / "let me check"
+- Service-side `rapid_refill_breaker` (rate-limit; out of operator's control)
+- A destructive irreversible action that requires operator confirmation
+  per the harness's "Executing actions with care" guidance — ask, then
+  continue with non-blocking work in parallel
+
+## Self-healing infrastructure (read-only summary)
+
+What's wired automatically — these are the mechanisms that make the
+harness "always remain configured":
+
+| Path | Role |
+|---|---|
+| `~/.claude/settings.json` `hooks.SessionStart` | Calls `~/.claude/env-bootstrap/apply.sh --quiet` at every session start. Idempotent. Auto-heals any drift. |
+| `~/.claude/settings.json` `hooks.PostCompact` | Calls `~/.claude/post-compact-reorient.sh`. Emits `systemMessage` re-injecting standing directives. |
+| `~/.claude/env-bootstrap/apply.sh` | Mirror of `cyberpunk042/devops-solutions-information-hub` `scripts/claude-code-env/apply.sh`. Self-contained — works without info-hub repo cloned. |
+| `~/.claude/env-bootstrap/templates/` | Canonical templates (mirror of info-hub `scripts/claude-code-env/templates/`). |
+| `~/.claude/validate-stop-hook-fix.sh` | 8-check validator (settings.json structure + caps + hooks wired + bootstrap installed). Exit 0/1/2. |
+| `~/.claude/backups/` | Timestamped backups of any clobbered live file (apply.sh creates these on drift detection). |
+
+To reapply manually:
+```bash
+bash ~/.claude/env-bootstrap/apply.sh             # or from info-hub clone:
+bash ~/devops-solutions-information-hub/scripts/claude-code-env/apply.sh
+```
+
+To inspect without applying:
+```bash
+bash ~/.claude/env-bootstrap/apply.sh --dry-run
+~/.claude/validate-stop-hook-fix.sh               # human report
+~/.claude/validate-stop-hook-fix.sh --json        # JSON report
+```
+

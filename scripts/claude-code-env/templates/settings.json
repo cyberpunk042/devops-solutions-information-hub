@@ -11,6 +11,28 @@
     },
     "hooks": {
         "Stop": [],
-        "SubagentStop": []
+        "SubagentStop": [],
+        "SessionStart": [
+            {
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "bash $HOME/.claude/env-bootstrap/apply.sh --quiet 2>/dev/null || true",
+                        "timeout": 15
+                    }
+                ]
+            }
+        ],
+        "PostCompact": [
+            {
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "bash $HOME/.claude/post-compact-reorient.sh",
+                        "timeout": 5
+                    }
+                ]
+            }
+        ]
     }
 }

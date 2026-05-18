@@ -169,6 +169,46 @@ else
   check5_detail="configured=${configured_window:-MISSING}; live=${live_window:-unset}; expected ≥${RECOMMENDED_COMPACT_WINDOW}"
 fi
 
+# --- Check 6: SessionStart hook wired (auto-heal on every session) ---
+check6_pass=false
+check6_detail=""
+ss_cmd=$(jq -r '.hooks.SessionStart[0].hooks[0].command // ""' \
+         "${SETTINGS}" 2>&1)
+if echo "${ss_cmd}" | grep -q "env-bootstrap/apply.sh"; then
+  check6_pass=true
+  check6_detail="SessionStart → env-bootstrap/apply.sh (auto-heal on session start)"
+else
+  check6_detail="SessionStart hook missing or doesn't call env-bootstrap/apply.sh (got: ${ss_cmd:-MISSING})"
+fi
+
+# --- Check 7: PostCompact hook wired (re-orient after compaction) ---
+check7_pass=false
+check7_detail=""
+pc_cmd=$(jq -r '.hooks.PostCompact[0].hooks[0].command // ""' \
+         "${SETTINGS}" 2>&1)
+if echo "${pc_cmd}" | grep -q "post-compact-reorient.sh"; then
+  check7_pass=true
+  check7_detail="PostCompact → post-compact-reorient.sh (anti-amnesia)"
+else
+  check7_detail="PostCompact hook missing or doesn't call post-compact-reorient.sh (got: ${pc_cmd:-MISSING})"
+fi
+
+# --- Check 8: env-bootstrap mirror present + executable ---
+check8_pass=false
+check8_detail=""
+BOOTSTRAP_APPLY="${HOME}/.claude/env-bootstrap/apply.sh"
+REORIENT="${HOME}/.claude/post-compact-reorient.sh"
+if [ -x "${BOOTSTRAP_APPLY}" ] && [ -d "${HOME}/.claude/env-bootstrap/templates" ] && [ -x "${REORIENT}" ]; then
+  check8_pass=true
+  check8_detail="env-bootstrap/{apply.sh,templates/} + post-compact-reorient.sh installed + executable"
+else
+  missing=""
+  [ ! -x "${BOOTSTRAP_APPLY}" ] && missing="${missing} env-bootstrap/apply.sh"
+  [ ! -d "${HOME}/.claude/env-bootstrap/templates" ] && missing="${missing} env-bootstrap/templates/"
+  [ ! -x "${REORIENT}" ] && missing="${missing} post-compact-reorient.sh"
+  check8_detail="missing/non-exec:${missing}; run 'bash scripts/claude-code-env/apply.sh' to install"
+fi
+
 # --- Report ---
 overall_pass=true
 [ "${check1_pass}" = "false" ] && overall_pass=false
@@ -176,6 +216,9 @@ overall_pass=true
 [ "${check3_pass}" = "false" ] && overall_pass=false
 [ "${check4_pass}" = "false" ] && overall_pass=false
 [ "${check5_pass}" = "false" ] && overall_pass=false
+[ "${check6_pass}" = "false" ] && overall_pass=false
+[ "${check7_pass}" = "false" ] && overall_pass=false
+[ "${check8_pass}" = "false" ] && overall_pass=false
 
 if [ "${mode}" = "json" ]; then
   jq -n \
@@ -184,6 +227,9 @@ if [ "${mode}" = "json" ]; then
     --arg c3 "${check3_pass}" --arg c3d "${check3_detail}" \
     --arg c4 "${check4_pass}" --arg c4d "${check4_detail}" \
     --arg c5 "${check5_pass}" --arg c5d "${check5_detail}" \
+    --arg c6 "${check6_pass}" --arg c6d "${check6_detail}" \
+    --arg c7 "${check7_pass}" --arg c7d "${check7_detail}" \
+    --arg c8 "${check8_pass}" --arg c8d "${check8_detail}" \
     --arg overall "${overall_pass}" \
     '{
        overall: ($overall == "true"),
@@ -197,7 +243,13 @@ if [ "${mode}" = "json" ]; then
          { id: "max-turns-raised",
            passed: ($c4 == "true"), detail: $c4d },
          { id: "auto-compact-window-raised",
-           passed: ($c5 == "true"), detail: $c5d }
+           passed: ($c5 == "true"), detail: $c5d },
+         { id: "session-start-auto-heal-wired",
+           passed: ($c6 == "true"), detail: $c6d },
+         { id: "post-compact-reorient-wired",
+           passed: ($c7 == "true"), detail: $c7d },
+         { id: "env-bootstrap-mirror-installed",
+           passed: ($c8 == "true"), detail: $c8d }
        ]
      }'
 elif [ "${quiet}" = "false" ]; then
@@ -208,8 +260,11 @@ elif [ "${quiet}" = "false" ]; then
   printf "  %s  CLAUDE_CODE_STOP_HOOK_BLOCK_CAP ≥%d — %s\n" "$(m "${check3_pass}")" "${REQUIRED_CAP}" "${check3_detail}"
   printf "  %s  CLAUDE_CODE_MAX_TURNS ≥%d — %s\n" "$(m "${check4_pass}")" "${RECOMMENDED_MAX_TURNS}" "${check4_detail}"
   printf "  %s  CLAUDE_CODE_AUTO_COMPACT_WINDOW ≥%d — %s\n" "$(m "${check5_pass}")" "${RECOMMENDED_COMPACT_WINDOW}" "${check5_detail}"
+  printf "  %s  SessionStart auto-heal hook wired — %s\n" "$(m "${check6_pass}")" "${check6_detail}"
+  printf "  %s  PostCompact re-orient hook wired — %s\n" "$(m "${check7_pass}")" "${check7_detail}"
+  printf "  %s  env-bootstrap mirror installed — %s\n" "$(m "${check8_pass}")" "${check8_detail}"
   if [ "${overall_pass}" = "true" ]; then
-    echo "  ✓ ALL CHECKS PASSED — env-runner stop-hook restage fix + long-session caps intact"
+    echo "  ✓ ALL CHECKS PASSED — harness configured + self-healing + post-compact-resilient"
   else
     echo "  ✗ AT LEAST ONE CHECK FAILED — see info-hub lesson"
     echo "    claude-code-env-runner-restages-stop-hook-script-from-baked-"
