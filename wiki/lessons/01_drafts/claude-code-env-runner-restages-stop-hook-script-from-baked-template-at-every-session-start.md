@@ -22,7 +22,7 @@ sources:
     type: empirical
     file: /root/.claude/stop-hook-git-check.sh
     note: "/root/.claude/stop-hook-git-check.sh Birth = 0.467s BEFORE session start; /home/claude/.claude/stop-hook-git-check.sh = May 16 (container build); user override at /root/.claude/settings.json survives across sessions"
-tags: [claude-code, hooks, stop-hook, goal, env-runner, environment-manager, template, baked-image, session-start, perpetual-mandate, agent-loop, second-brain]
+tags: [claude-code, hooks, stop-hook, goal, env-runner, environment-manager, template, baked-image, session-start, post-compact, perpetual-mandate, agent-loop, second-brain, self-healing, bootstrap-mirror, multi-hour-cycles]
 relates_to:
   - lesson: claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch
   - lesson: claude-code-settings-local-hot-reload-vs-settings-cache
@@ -118,12 +118,20 @@ When does this lesson apply?
     },
     "hooks": {
         "Stop": [],         // ← explicit empty array; defeats template merge
-        "SubagentStop": []  // ← belt-and-braces for subagent stops too
+        "SubagentStop": [], // ← belt-and-braces for subagent stops too
+        "SessionStart": [{ "hooks": [{ "type": "command",
+            "command": "bash $HOME/.claude/env-bootstrap/apply.sh --quiet 2>/dev/null || true",
+            "timeout": 15 }] }],     // ← auto-heal drift at every session start
+        "PostCompact": [{ "hooks": [{ "type": "command",
+            "command": "bash $HOME/.claude/post-compact-reorient.sh",
+            "timeout": 5 }] }]        // ← re-inject standing directives after compaction
     }
 }
 ```
 
 The explicit empty arrays mean even if a future merge layer combines template + user settings, the empty arrays win (user-side takes precedence per the standard settings precedence rules: user > project > org > policy).
+
+The `SessionStart` and `PostCompact` hooks are the **self-healing mechanism**: every new session re-runs the idempotent installer (from a bootstrap mirror at `~/.claude/env-bootstrap/` so the harness works even without the info-hub repo cloned), and every compaction event re-injects the standing operator directives via `systemMessage` so multi-hour perpetual `/goal` sessions don't lose trajectory.
 
 **Why three env vars, not just one:** the original investigation surfaced `CLAUDE_CODE_STOP_HOOK_BLOCK_CAP` (default 8 → `blocking_limit` stop-reason cuts long sessions short). Two sibling caps address other stop-reasons surfaced in the Go binary's stop-reason enum:
 
@@ -149,7 +157,7 @@ exit 0
 
 The script is re-staged each session, so this content only persists for the current session. But it makes the file PROVABLY inert RIGHT NOW: even if some quirk wires it up mid-session, it can only return 0 (= "stop allowed").
 
-## Bulletproof reapply (one command, idempotent)
+## Bulletproof reapply (one command, idempotent) + self-healing mirror
 
 Canonical install lives in this repo at `scripts/claude-code-env/`:
 
@@ -160,14 +168,34 @@ bash scripts/claude-code-env/apply.sh --dry-run   # report-only
 bash scripts/claude-code-env/apply.sh --help      # inline docs
 ```
 
-The script installs four files into `~/.claude/` (`settings.json`,
-`CLAUDE.md`, `stop-hook-git-check.sh` neutralized, `validate-stop-hook-fix.sh`),
-backs up any pre-existing-but-different live files to
-`~/.claude/backups/<file>.<UTC-timestamp>.bak`, fixes perms, and runs
-the validator. Running it twice is a no-op the second time.
+The script installs five files into `~/.claude/` (`settings.json`,
+`CLAUDE.md`, `stop-hook-git-check.sh` neutralized,
+`validate-stop-hook-fix.sh`, `post-compact-reorient.sh`), backs up any
+pre-existing-but-different live files to
+`~/.claude/backups/<file>.<UTC-timestamp>.bak`, **also mirrors itself
+into `~/.claude/env-bootstrap/{apply.sh,templates/}`** so the
+self-heal mechanism is self-contained (works without the info-hub
+repo being checked out), fixes perms, and runs the 8-check validator.
+Running it twice is a no-op the second time.
 
-Use cases for reapply:
-- Fresh container / new cloud session VM
+**Self-healing via SessionStart hook:** once installed, the
+`SessionStart` hook in `~/.claude/settings.json` calls
+`~/.claude/env-bootstrap/apply.sh --quiet` at every session start. Any
+drift (clobbered template, missing file, perms regressed) auto-heals
+within milliseconds of the session opening. The operator no longer has
+to remember to reapply manually.
+
+**Post-compaction re-orient:** the `PostCompact` hook calls
+`~/.claude/post-compact-reorient.sh`, which emits a JSON
+`systemMessage` re-injecting the standing operator directives
+(perpetual `/goal` semantics, sacrosanct verbatim quoting, model-
+identifier hygiene, direct-push policy, drift-detection commands).
+Critical for multi-hour cycles (2h / 4h / 8h / 16h) where the AI
+would otherwise lose behavioral state across compaction summaries.
+
+Use cases for manual reapply (still useful for):
+- Fresh container / new cloud session VM (first-time bring-up — the
+  `SessionStart` hook isn't wired yet until the first apply.sh runs)
 - `~/.claude/settings.json` got clobbered (e.g. via Claude Code's `/config` UI)
 - Stop-hook validator reports drift
 - New override added to `templates/` — push template change, run apply on each environment
@@ -179,7 +207,7 @@ list of harness defaults this overrides (e.g. the cloud harness's
 
 ## How to detect this at session-start (validator script)
 
-A full 5-check validator is staged at `~/.claude/validate-stop-hook-fix.sh`:
+A full 8-check validator is staged at `~/.claude/validate-stop-hook-fix.sh`:
 
 ```text
 ── validate-stop-hook-fix ──
@@ -188,16 +216,22 @@ A full 5-check validator is staged at `~/.claude/validate-stop-hook-fix.sh`:
   ✓  CLAUDE_CODE_STOP_HOOK_BLOCK_CAP ≥1000 — configured=1000 (≥1000)
   ✓  CLAUDE_CODE_MAX_TURNS ≥10000 — configured=10000 (≥10000)
   ✓  CLAUDE_CODE_AUTO_COMPACT_WINDOW ≥180000 — configured=180000 (≥180000)
-  ✓ ALL CHECKS PASSED — env-runner stop-hook restage fix + long-session caps intact
+  ✓  SessionStart → env-bootstrap/apply.sh (auto-heal on session start)
+  ✓  PostCompact → post-compact-reorient.sh (anti-amnesia)
+  ✓  env-bootstrap/{apply.sh,templates/} + post-compact-reorient.sh installed + executable
+  ✓ ALL CHECKS PASSED — env-runner stop-hook restage fix + long-session caps + self-healing infra intact
 ```
 
-The validator's 5 checks:
+The validator's 8 checks:
 
 1. **settings.json has explicit empty `Stop` + `SubagentStop` arrays** — defeats any future template merge.
 2. **`~/.claude/stop-hook-git-check.sh` is neutralized** — runs synthetic input through the script (with safe `set +e` exit-code capture, NOT `if echo | script` which clobbers `$?`) AND source-scans for `exit 2` lines.
 3. **`CLAUDE_CODE_STOP_HOOK_BLOCK_CAP` ≥1000** — prevents `blocking_limit` stop-reason.
 4. **`CLAUDE_CODE_MAX_TURNS` ≥10000** — prevents `max_turns` stop-reason.
 5. **`CLAUDE_CODE_AUTO_COMPACT_WINDOW` ≥180000** — reduces `prompt_too_long` stop-reason.
+6. **`SessionStart` hook wired to `env-bootstrap/apply.sh`** — auto-heals any drift the moment a new session opens.
+7. **`PostCompact` hook wired to `post-compact-reorient.sh`** — re-injects standing operator directives via `systemMessage` after every compaction, so multi-hour cycles don't lose trajectory.
+8. **Bootstrap mirror present** — `~/.claude/env-bootstrap/apply.sh` + `~/.claude/env-bootstrap/templates/` + `~/.claude/post-compact-reorient.sh` all installed + executable. Means the self-heal mechanism works even if the info-hub repo isn't cloned.
 
 Three modes:
 - `~/.claude/validate-stop-hook-fix.sh` — human report (default)
@@ -206,12 +240,7 @@ Three modes:
 
 Exit codes: `0` all pass / `1` at least one check failed / `2` jq missing or settings.json unreadable.
 
-Suggested `SessionStart` hook wiring in `~/.claude/settings.json` (runs the validator at every session start):
-
-```json
-"SessionStart": [{ "hooks": [{ "type": "command",
-    "command": "$HOME/.claude/validate-stop-hook-fix.sh --quiet" }] }]
-```
+The `SessionStart` hook (check 6) is wired by `apply.sh` automatically; the validator confirms it stays wired across `/config` UI edits or template-merge accidents.
 
 ### Quick one-liner audit (if validator unavailable)
 
@@ -219,10 +248,15 @@ Suggested `SessionStart` hook wiring in `~/.claude/settings.json` (runs the vali
 jq -e '.hooks.Stop == [] and .hooks.SubagentStop == []
        and (.env.CLAUDE_CODE_STOP_HOOK_BLOCK_CAP | tonumber) >= 1000
        and (.env.CLAUDE_CODE_MAX_TURNS | tonumber) >= 10000
-       and (.env.CLAUDE_CODE_AUTO_COMPACT_WINDOW | tonumber) >= 180000' \
+       and (.env.CLAUDE_CODE_AUTO_COMPACT_WINDOW | tonumber) >= 180000
+       and (.hooks.SessionStart[0].hooks[0].command // "" | contains("env-bootstrap/apply.sh"))
+       and (.hooks.PostCompact[0].hooks[0].command // "" | contains("post-compact-reorient.sh"))' \
    ~/.claude/settings.json >/dev/null \
-   && echo "✓ all caps + hooks override intact" \
-   || echo "✗ drift detected"
+   && [ -x ~/.claude/env-bootstrap/apply.sh ] \
+   && [ -d ~/.claude/env-bootstrap/templates ] \
+   && [ -x ~/.claude/post-compact-reorient.sh ] \
+   && echo "✓ all caps + hooks + self-heal infra intact" \
+   || echo "✗ drift detected — run: bash ~/.claude/env-bootstrap/apply.sh"
 ```
 
 ### Critical bash gotcha caught while building the validator

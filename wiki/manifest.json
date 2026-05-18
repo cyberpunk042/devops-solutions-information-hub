@@ -1,12 +1,12 @@
 {
-  "generated": "2026-05-18T17:50:07.164687+00:00",
+  "generated": "2026-05-18T18:22:52.125308+00:00",
   "stats": {
     "pages": 902,
     "domains": 14,
     "sources": 114,
     "comparisons": 14,
     "relationships": 4278,
-    "tags_unique": 3381,
+    "tags_unique": 3383,
     "layers": {
       "3": 8,
       "5": 38,
@@ -20828,9 +20828,13 @@
         "template",
         "baked-image",
         "session-start",
+        "post-compact",
         "perpetual-mandate",
         "agent-loop",
-        "second-brain"
+        "second-brain",
+        "self-healing",
+        "bootstrap-mirror",
+        "multi-hour-cycles"
       ],
       "sources": [
         {
@@ -68929,7 +68933,8 @@
       "domains/ai-agents/patterns/llm-knowledge-linting"
     ],
     "self-healing": [
-      "domains/ai-agents/patterns/llm-knowledge-linting"
+      "domains/ai-agents/patterns/llm-knowledge-linting",
+      "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start"
     ],
     "contradiction-resolution": [
       "domains/ai-agents/patterns/llm-knowledge-linting"
@@ -70871,6 +70876,13 @@
     "session-start": [
       "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start"
     ],
+    "post-compact": [
+      "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start",
+      "log/2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1",
+      "log/2026-05-08-worked-example-4-post-compact-detection-failure-real-session-empirical-evidence-impl-spec-10-stress-test",
+      "patterns/01_drafts/post-compact-orientation-gate-implementation-spec-handoff-and-mirror-enforcement",
+      "patterns/01_drafts/post-compact-stress-test-scenario-spec-real-session-test-plan"
+    ],
     "perpetual-mandate": [
       "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start",
       "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch"
@@ -70878,6 +70890,12 @@
     "agent-loop": [
       "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start",
       "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch"
+    ],
+    "bootstrap-mirror": [
+      "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start"
+    ],
+    "multi-hour-cycles": [
+      "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start"
     ],
     "hookSpecificOutput": [
       "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it"
@@ -72489,12 +72507,6 @@
     ],
     "continuation": [
       "log/2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1"
-    ],
-    "post-compact": [
-      "log/2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1",
-      "log/2026-05-08-worked-example-4-post-compact-detection-failure-real-session-empirical-evidence-impl-spec-10-stress-test",
-      "patterns/01_drafts/post-compact-orientation-gate-implementation-spec-handoff-and-mirror-enforcement",
-      "patterns/01_drafts/post-compact-stress-test-scenario-spec-real-session-test-plan"
     ],
     "5-artifacts": [
       "log/2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1"
