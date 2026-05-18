@@ -20,6 +20,7 @@ sources:
     note: "Go binary on read-only squashfs (/opt/claude-code type squashfs ro). Strings dump shows full template settings.json + stop-hook-git-check.sh content as embedded constants. session-start orchestrator process tree: /bin/sh -c → environment-manager task-run → claude --resume"
   - id: filesystem-forensic-timeline-2026-05-18
     type: empirical
+    file: /root/.claude/stop-hook-git-check.sh
     note: "/root/.claude/stop-hook-git-check.sh Birth = 0.467s BEFORE session start; /home/claude/.claude/stop-hook-git-check.sh = May 16 (container build); user override at /root/.claude/settings.json survives across sessions"
 tags: [claude-code, hooks, stop-hook, goal, env-runner, environment-manager, template, baked-image, session-start, perpetual-mandate, agent-loop, second-brain]
 relates_to:
@@ -107,7 +108,9 @@ When does this lesson apply?
 {
     "$schema": "https://json.schemastore.org/claude-code-settings.json",
     "env": {
-        "CLAUDE_CODE_STOP_HOOK_BLOCK_CAP": "1000"
+        "CLAUDE_CODE_STOP_HOOK_BLOCK_CAP": "1000",
+        "CLAUDE_CODE_MAX_TURNS": "10000",
+        "CLAUDE_CODE_AUTO_COMPACT_WINDOW": "180000"
     },
     "permissions": {
         "allow": ["Skill"],
@@ -122,6 +125,18 @@ When does this lesson apply?
 
 The explicit empty arrays mean even if a future merge layer combines template + user settings, the empty arrays win (user-side takes precedence per the standard settings precedence rules: user > project > org > policy).
 
+**Why three env vars, not just one:** the original investigation surfaced `CLAUDE_CODE_STOP_HOOK_BLOCK_CAP` (default 8 → `blocking_limit` stop-reason cuts long sessions short). Two sibling caps address other stop-reasons surfaced in the Go binary's stop-reason enum:
+
+| Env var | Default | Override | Stop-reason it raises the ceiling for |
+|---------|---------|----------|---------------------------------------|
+| `CLAUDE_CODE_STOP_HOOK_BLOCK_CAP` | 8 | 1000 | `blocking_limit` (stop-hook returns block too many times) |
+| `CLAUDE_CODE_MAX_TURNS` | (varies, often low) | 10000 | `max_turns` (assistant-turn budget exhausted) |
+| `CLAUDE_CODE_AUTO_COMPACT_WINDOW` | (varies) | 180000 | `prompt_too_long` (proactively compacts before hitting context-window wall) |
+
+**Out of scope:** `rapid_refill_breaker` stop-reason is service-side rate-limiting; `CLAUDE_CODE_RATE_LIMIT_TIER` is observation-only, NOT client-tunable. No env-var override exists.
+
+**Settings.json applies at next session start.** Confirmed empirically: settings.json is read once at session start and cached. Changes to env-var entries in settings.json mid-session do NOT apply to the live session — the new caps activate on the NEXT session. The empty-array hooks override is similarly session-bound at start.
+
 **Part 2 — neutralize the script in-place each session:**
 
 ```bash
@@ -134,20 +149,72 @@ exit 0
 
 The script is re-staged each session, so this content only persists for the current session. But it makes the file PROVABLY inert RIGHT NOW: even if some quirk wires it up mid-session, it can only return 0 (= "stop allowed").
 
-## How to detect this at session-start (audit script)
+## How to detect this at session-start (validator script)
+
+A full 5-check validator is staged at `~/.claude/validate-stop-hook-fix.sh`:
+
+```text
+── validate-stop-hook-fix ──
+  ✓  settings.json explicit empty Stop arrays — explicit empty arrays defeat any template merge
+  ✓  ~/.claude/stop-hook-git-check.sh neutralized — script returns 0 + body has no 'exit 2' code paths
+  ✓  CLAUDE_CODE_STOP_HOOK_BLOCK_CAP ≥1000 — configured=1000 (≥1000)
+  ✓  CLAUDE_CODE_MAX_TURNS ≥10000 — configured=10000 (≥10000)
+  ✓  CLAUDE_CODE_AUTO_COMPACT_WINDOW ≥180000 — configured=180000 (≥180000)
+  ✓ ALL CHECKS PASSED — env-runner stop-hook restage fix + long-session caps intact
+```
+
+The validator's 5 checks:
+
+1. **settings.json has explicit empty `Stop` + `SubagentStop` arrays** — defeats any future template merge.
+2. **`~/.claude/stop-hook-git-check.sh` is neutralized** — runs synthetic input through the script (with safe `set +e` exit-code capture, NOT `if echo | script` which clobbers `$?`) AND source-scans for `exit 2` lines.
+3. **`CLAUDE_CODE_STOP_HOOK_BLOCK_CAP` ≥1000** — prevents `blocking_limit` stop-reason.
+4. **`CLAUDE_CODE_MAX_TURNS` ≥10000** — prevents `max_turns` stop-reason.
+5. **`CLAUDE_CODE_AUTO_COMPACT_WINDOW` ≥180000** — reduces `prompt_too_long` stop-reason.
+
+Three modes:
+- `~/.claude/validate-stop-hook-fix.sh` — human report (default)
+- `~/.claude/validate-stop-hook-fix.sh --json` — JSON report (CI-friendly)
+- `~/.claude/validate-stop-hook-fix.sh --quiet` — exit-code only
+
+Exit codes: `0` all pass / `1` at least one check failed / `2` jq missing or settings.json unreadable.
+
+Suggested `SessionStart` hook wiring in `~/.claude/settings.json` (runs the validator at every session start):
+
+```json
+"SessionStart": [{ "hooks": [{ "type": "command",
+    "command": "$HOME/.claude/validate-stop-hook-fix.sh --quiet" }] }]
+```
+
+### Quick one-liner audit (if validator unavailable)
 
 ```bash
-# Verify the durable fix is intact at any time:
-jq -e '.hooks.Stop == [] and .hooks.SubagentStop == []' \
+jq -e '.hooks.Stop == [] and .hooks.SubagentStop == []
+       and (.env.CLAUDE_CODE_STOP_HOOK_BLOCK_CAP | tonumber) >= 1000
+       and (.env.CLAUDE_CODE_MAX_TURNS | tonumber) >= 10000
+       and (.env.CLAUDE_CODE_AUTO_COMPACT_WINDOW | tonumber) >= 180000' \
    ~/.claude/settings.json >/dev/null \
-   && echo "✓ user override has explicit empty Stop arrays" \
-   || echo "✗ user override missing explicit empty Stop arrays — template could win"
-
-# Verify the staged script is neutral:
-grep -F "exit 0" ~/.claude/stop-hook-git-check.sh | head -1 >/dev/null \
-   && echo "✓ staged script neutralized (returns 0)" \
-   || echo "✗ staged script has logic that could exit non-zero — risk"
+   && echo "✓ all caps + hooks override intact" \
+   || echo "✗ drift detected"
 ```
+
+### Critical bash gotcha caught while building the validator
+
+The naive pattern fails silently:
+
+```bash
+# ❌ WRONG — $? inside `then` is the if-condition's 0, NOT the pipeline's exit code
+if echo '{}' | "${ORPHAN}" >/dev/null 2>&1; then
+  actual_exit=$?   # always 0 here — bug
+fi
+
+# ✅ RIGHT — capture exit code OUTSIDE the if-condition
+set +e
+echo '{}' | "${ORPHAN}" >/dev/null 2>&1
+actual_exit=$?
+set -e
+```
+
+This was a real false-pass in the validator's first revision before being caught by a negative test.
 
 ## Why this lesson exists
 
