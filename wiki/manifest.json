@@ -1,11 +1,11 @@
 {
-  "generated": "2026-05-18T14:25:46.986763+00:00",
+  "generated": "2026-05-18T14:35:43.526136+00:00",
   "stats": {
     "pages": 901,
     "domains": 14,
     "sources": 114,
     "comparisons": 14,
-    "relationships": 4328,
+    "relationships": 4286,
     "tags_unique": 3376,
     "layers": {
       "3": 8,
@@ -473,10 +473,6 @@
         {
           "verb": "RELATES TO",
           "target": "Comparison \u2014 wall vs write vs Tetragon"
-        },
-        {
-          "verb": "CONSTRAINS",
-          "target": "future Stage-2 selfdef integration (selfdef `agent-guard` policies must merge cleanly with `sovereign-kernel-fence`)"
         }
       ]
     },
@@ -8432,18 +8428,6 @@
       ],
       "relationships": [
         {
-          "verb": "COMPARES TO",
-          "target": "ternary `{\u22121"
-        },
-        {
-          "verb": "COMPARES TO",
-          "target": "0"
-        },
-        {
-          "verb": "COMPARES TO",
-          "target": "+1}` weight representation vs FP16 full-precision baseline (logical model architecture held constant; execution path varies)"
-        },
-        {
           "verb": "BUILDS ON",
           "target": "BitNet b1.58 synthesis"
         },
@@ -8533,34 +8517,6 @@
         "Speculative Decoding Comparison"
       ],
       "relationships": [
-        {
-          "verb": "COMPARES TO",
-          "target": "MEDUSA (arXiv:2401.10774) \u2014 simplest"
-        },
-        {
-          "verb": "COMPARES TO",
-          "target": "mature"
-        },
-        {
-          "verb": "COMPARES TO",
-          "target": "multi-head approach"
-        },
-        {
-          "verb": "COMPARES TO",
-          "target": "EAGLE-3 (arXiv:2503.01840) \u2014 autoregressive draft"
-        },
-        {
-          "verb": "COMPARES TO",
-          "target": "training-time test"
-        },
-        {
-          "verb": "COMPARES TO",
-          "target": "DFlash (arXiv:2602.06036) \u2014 block-diffusion draft"
-        },
-        {
-          "verb": "COMPARES TO",
-          "target": "bidirectional attention"
-        },
         {
           "verb": "BUILDS ON",
           "target": "DFlash synthesis"
@@ -8669,14 +8625,6 @@
       ],
       "relationships": [
         {
-          "verb": "COMPARES TO",
-          "target": "inclusionAI/Ling-2.6-flash (107B, MoE, MIT, text)"
-        },
-        {
-          "verb": "COMPARES TO",
-          "target": "nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16 (33B, hybrid Mamba-Transformer MoE, multimodal)"
-        },
-        {
           "verb": "BUILDS ON",
           "target": "SAIN-01 Sovereign Node Spec"
         },
@@ -8772,14 +8720,6 @@
       "relationships": [
         {
           "verb": "COMPARES TO",
-          "target": "`wall(1)` broadcast TTY notification mechanism"
-        },
-        {
-          "verb": "COMPARES TO",
-          "target": "`write(1)` per-user TTY notification mechanism"
-        },
-        {
-          "verb": "COMPARES TO",
           "target": "Tetragon eBPF kernel enforcement framework"
         },
         {
@@ -8797,14 +8737,6 @@
         {
           "verb": "USED BY",
           "target": "SAIN-01 Sovereign Node Spec"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "existing `cyberpunk042/selfdef` notifier chain (wall + write are 2 of 12 selfdef channels; Tetragon is the enforcement layer used by selfdef's `agent-guard` module \u2014 same pattern)"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "future SAIN-01 + selfdef cross-repo policy merge (single Tetragon daemon authoring authority)"
         }
       ]
     },
@@ -9987,6 +9919,8 @@
         {
           "id": "operator-decision-2026-05-18",
           "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "wiki/log/",
           "note": "Operator selected 'Raise the cap to 1000 (Recommended)' option in live AskUserQuestion during the perpetual /goal investigation session"
         }
       ],
@@ -9996,7 +9930,40 @@
         "wiki/lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch.md"
       ],
       "aliases": [],
-      "relationships": []
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "claude-code-settings-local-hot-reload-vs-settings-cache"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "P1 (Infrastructure > Instructions) \u2014 moves runaway-hook safety from prose enforcement (\"don't make perpetual goals\") to configuration enforcement (`CLAUDE_CODE_STOP_HOOK_BLOCK_CAP=\"1000\"`)."
+        },
+        {
+          "verb": "ENABLES",
+          "target": "long-running perpetual `/goal` mandates"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "multi-stage automation runs"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "PR-babysitting + main-branch progression in parallel."
+        },
+        {
+          "verb": "CONSTRAINED BY",
+          "target": "settings.json caching behavior (cold-load required at session start)."
+        }
+      ]
     },
     {
       "path": "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config.md",
@@ -12089,10 +12056,6 @@
           "target": "SAIN-01 Sovereign Node Spec"
         },
         {
-          "verb": "IMPLEMENTS",
-          "target": "Single Responsibility Principle at the system level (hardware-mapped)"
-        },
-        {
           "verb": "ENABLED BY",
           "target": "Dual-CCD Cache Partitioning"
         },
@@ -12105,24 +12068,12 @@
           "target": "ZFS Tiered Storage for LLM Inference"
         },
         {
-          "verb": "USED BY",
-          "target": "future `wiki/backlog/milestones/sain-01-sovereign-node.md` (each Trinity module \u2194 one epic)"
-        },
-        {
           "verb": "RELATES TO",
           "target": "1-bit Ternary Weights"
         },
         {
           "verb": "RELATES TO",
           "target": "Speculative Decoding via Block Diffusion"
-        },
-        {
-          "verb": "CONSTRAINS",
-          "target": "future SAIN-01 hardware variants (Trinity boundaries are the evaluation criteria)"
-        },
-        {
-          "verb": "CONSTRAINS",
-          "target": "Stage-2 selfdef integration (the Auditor's Tetragon policies must coexist with selfdef's agent-guard policies)"
         }
       ]
     },
@@ -13317,10 +13268,6 @@
           "target": "Synthesis \u2014 Zen 5 Single-Cycle 512-bit AVX-512"
         },
         {
-          "verb": "IMPLEMENTS",
-          "target": "ternary-weight inference paradigm (BitNet line of research from Microsoft Research)"
-        },
-        {
           "verb": "RELATES TO",
           "target": "Local LLM Quantization"
         },
@@ -13331,10 +13278,6 @@
         {
           "verb": "USED BY",
           "target": "SAIN-01 Sovereign Node Spec"
-        },
-        {
-          "verb": "CONTRASTS WITH",
-          "target": "standard FP16 / BF16 / INT8 weight quantization (less aggressive than ternary; preserves multiplication in the matmul path)"
         },
         {
           "verb": "RELATES TO",
@@ -13396,10 +13339,6 @@
           "target": "Synthesis \u2014 DFlash: Block-Diffusion Flash Speculative Decoding"
         },
         {
-          "verb": "IMPLEMENTS",
-          "target": "block-diffusion speculative-decoding pattern"
-        },
-        {
           "verb": "USED BY",
           "target": "SAIN-01 Sovereign Node Spec"
         },
@@ -13408,20 +13347,12 @@
           "target": "1-bit Ternary Weights"
         },
         {
-          "verb": "CONTRASTS WITH",
-          "target": "classical autoregressive speculative decoding (EAGLE, MEDUSA, S3D)"
-        },
-        {
           "verb": "RELATES TO",
           "target": "Local LLM Quantization"
         },
         {
           "verb": "RELATES TO",
           "target": "HRM/TRM Tiny Recursion Models"
-        },
-        {
-          "verb": "ENABLED BY",
-          "target": "deep draft models + bidirectional attention (architectural prerequisites)"
         }
       ]
     },
@@ -17347,20 +17278,12 @@
           "target": "1-bit Ternary Weights"
         },
         {
-          "verb": "CONSTRAINS",
-          "target": "9900X minimum CPU (lower SKUs lack dual-CCD; partition collapses)"
-        },
-        {
           "verb": "CONSTRAINED BY",
           "target": "SMT policy (thread masks change if SMT is disabled)"
         },
         {
           "verb": "RELATES TO",
           "target": "ZFS Tiered Storage"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "NUMA scheduling concepts more broadly (dual-CCD is NUMA-like at the cache level, even on a single-socket part)"
         }
       ]
     },
@@ -17431,20 +17354,8 @@
           "target": "ZFS Tiered Storage"
         },
         {
-          "verb": "CONSTRAINED BY",
-          "target": "ASUS ProArt X870E-Creator PCIe topology (M.2_2 must remain empty for x8/x8 + clean IOMMU split)"
-        },
-        {
-          "verb": "CONSTRAINED BY",
-          "target": "Secure Boot + MOK enrollment (custom kernel + DKMS modules need signing)"
-        },
-        {
           "verb": "RELATES TO",
           "target": "Infrastructure as Code Patterns"
-        },
-        {
-          "verb": "CONTRASTS WITH",
-          "target": "Software-only container isolation (no IOMMU = no hardware DMA isolation)"
         }
       ]
     },
@@ -17518,14 +17429,6 @@
         {
           "verb": "USED BY",
           "target": "VFIO GPU Isolation"
-        },
-        {
-          "verb": "CONSTRAINED BY",
-          "target": "OpenZFS version (`O_DIRECT` semantics; \u22652.2 required for the atomic-state pattern's clean implementation)"
-        },
-        {
-          "verb": "CONSTRAINS",
-          "target": "Backup posture (RAID 0 = no native redundancy; external backup mandatory)"
         },
         {
           "verb": "RELATES TO",
@@ -20929,15 +20832,7 @@
         },
         {
           "verb": "BUILDS ON",
-          "target": "P4 (Declarations Are Aspirational Until Infrastructure Verifies Them) \u2014 schema-conformance is a declaration; on-disk behavior is the verification."
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "SFIF / [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers]]"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "future projects' TDD planning \u2014 Layer 3 is non-optional; budget it from the start."
+          "target": "Models Are Built in Layers"
         },
         {
           "verb": "RELATES TO",
@@ -21104,6 +20999,8 @@
         {
           "id": "operator-investigation-2026-05-18",
           "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "wiki/log/",
           "note": "Operator reported '/goal keeps being removed and conversation stops' glitch during perpetual mandate work; investigation requested"
         },
         {
@@ -48917,14 +48814,6 @@
         {
           "verb": "RELATES TO",
           "target": "HRM/TRM Tiny Recursion Models"
-        },
-        {
-          "verb": "COMPARES TO",
-          "target": "standard FP16 / BF16 transformer baselines (the b1.58 line's reference comparison)"
-        },
-        {
-          "verb": "CONTRASTS WITH",
-          "target": "4-bit and 8-bit weight quantization schemes (BitNet's ternary is more aggressive; the technique is structurally different \u2014 no de-quantization in the inference path)"
         }
       ]
     },
@@ -49316,24 +49205,12 @@
           "target": "BitNet b1.58 ternary LLM"
         },
         {
-          "verb": "CONTRASTS WITH",
-          "target": "classical autoregressive speculative decoding (EAGLE, MEDUSA, S3D) \u2014 DFlash's block-diffusion draft is the differentiator"
-        },
-        {
           "verb": "COMPARES TO",
           "target": "LLM Architecture Gallery"
         },
         {
           "verb": "RELATES TO",
           "target": "HRM/TRM Tiny Recursion Models"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "future `wiki/comparisons/cmp-dflash-vs-eagle3-vs-medusa.md` (L3 head-to-head comparison)"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "future `wiki/comparisons/cmp-ling-26-flash-vs-nemotron-3-nano-omni.md` (model-catalog comparison; DFlash candidates may apply to one or both)"
         }
       ]
     },
@@ -50114,24 +49991,12 @@
           "target": "Zen 5 microarchitecture and AVX-512 single-cycle path"
         },
         {
-          "verb": "FEEDS INTO",
-          "target": "future `wiki/backlog/milestones/sain-01-sovereign-node.md` (milestone)"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "future `wiki/backlog/epics/milestone-sain01/epic-*.md` (11 planned epics)"
-        },
-        {
           "verb": "RELATES TO",
           "target": "HRM/TRM Tiny Recursion Models"
         },
         {
           "verb": "RELATES TO",
           "target": "LLM Architecture Gallery"
-        },
-        {
-          "verb": "CONSTRAINS",
-          "target": "future `cyberpunk042/selfdef` Epics on SAIN-01 host deployment (Tetragon policy cross-link, state-fabric integration)"
         }
       ]
     },
@@ -50553,34 +50418,6 @@
         {
           "verb": "RELATES TO",
           "target": "DFlash block-diffusion speculative decoding"
-        },
-        {
-          "verb": "COMPARES TO",
-          "target": "Intel Lunar Lake (consumer AVX-512 returned)"
-        },
-        {
-          "verb": "COMPARES TO",
-          "target": "Intel Sapphire Rapids / Granite Rapids server (AVX-512 + more cores)"
-        },
-        {
-          "verb": "COMPARES TO",
-          "target": "Zen 4 (double-pumped AVX-512)"
-        },
-        {
-          "verb": "COMPARES TO",
-          "target": "Apple M-series (different SIMD architecture entirely)"
-        },
-        {
-          "verb": "CONTRASTS WITH",
-          "target": "Intel Alder/Raptor/Arrow Lake consumer (no AVX-512) \u2014 Zen 5 is the only first-class AVX-512 consumer desktop option as of 2026"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "future `wiki/comparisons/cmp-zen5-vs-zen4-vs-sapphire-rapids-low-bit.md` (L3 head-to-head for low-bit inference targets)"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "future `wiki/domains/devops/concept-dual-ccd-cache-partitioning-9900x.md` (L2 concept page on CCD-aware scheduling)"
         }
       ]
     },
@@ -64043,23 +63880,23 @@
   "domains": {
     "backlog": {
       "page_count": 125,
-      "relationship_count": 633
+      "relationship_count": 632
     },
     "cross-domain": {
       "page_count": 298,
-      "relationship_count": 1814
+      "relationship_count": 1812
     },
     "ai-agents": {
       "page_count": 79,
-      "relationship_count": 587
+      "relationship_count": 591
     },
     "ai-models": {
       "page_count": 25,
-      "relationship_count": 174
+      "relationship_count": 142
     },
     "devops": {
       "page_count": 18,
-      "relationship_count": 133
+      "relationship_count": 122
     },
     "tools-integration": {
       "page_count": 38,
@@ -78594,18 +78431,6 @@
   },
   "orphaned_refs": [
     {
-      "target": "+1}` weight representation vs FP16 full-precision baseline",
-      "referenced_by": [
-        "BitNet b1.58 Ternary vs FP16 Baseline \u2014 Execution Cost Comparison"
-      ]
-    },
-    {
-      "target": "0",
-      "referenced_by": [
-        "BitNet b1.58 Ternary vs FP16 Baseline \u2014 Execution Cost Comparison"
-      ]
-    },
-    {
       "target": "1-bit Ternary Weights concept",
       "referenced_by": [
         "BitNet b1.58 Ternary vs FP16 Baseline \u2014 Execution Cost Comparison"
@@ -78961,12 +78786,6 @@
       ]
     },
     {
-      "target": "4-bit and 8-bit weight quantization schemes",
-      "referenced_by": [
-        "Synthesis \u2014 BitNet b1.58 Ternary LLM Family and bitnet.cpp Inference"
-      ]
-    },
-    {
       "target": "4.1",
       "referenced_by": [
         "E102 \u2014 ZFS Storage Layout"
@@ -78982,12 +78801,6 @@
       "target": "7.2",
       "referenced_by": [
         "E102 \u2014 ZFS Storage Layout"
-      ]
-    },
-    {
-      "target": "9900X minimum CPU",
-      "referenced_by": [
-        "Dual-CCD Cache Partitioning (Zen 5 9900X)"
       ]
     },
     {
@@ -79019,12 +78832,6 @@
       "target": "ALL 12 impl-specs declaring REASON= bypass paths",
       "referenced_by": [
         "Bypass-Discipline Operationalization \u2014 Unified REASON= Protocol with Abuse Detection"
-      ]
-    },
-    {
-      "target": "ASUS ProArt X870E-Creator PCIe topology",
-      "referenced_by": [
-        "VFIO GPU Isolation with AMD IOMMU"
       ]
     },
     {
@@ -79134,22 +78941,10 @@
       ]
     },
     {
-      "target": "Apple M-series",
-      "referenced_by": [
-        "Synthesis \u2014 AMD Zen 5 Single-Cycle 512-bit AVX-512 and Dual-CCD Topology"
-      ]
-    },
-    {
       "target": "BMAD Synthesis",
       "referenced_by": [
         "Synthesis \u2014 Structured Prompt-Driven Development (SPDD): Thoughtworks' REASONS Canvas + Workflow for Governable AI-Assisted Delivery (Wei Zhang + Jessie Jie Xia, martinfowler.com 2026-04-28)",
         "Synthesis \u2014 JS Mastery Six-File Context System: Spec-Driven Agentic Build Methodology (project-overview \u00b7 architecture \u00b7 code-standards \u00b7 ai-workflow-rules \u00b7 ui-context \u00b7 progress-tracker + AGENTS.md, 2026 video tutorial + downloadable templates)"
-      ]
-    },
-    {
-      "target": "Backup posture",
-      "referenced_by": [
-        "ZFS Tiered Storage for LLM Inference"
       ]
     },
     {
@@ -79452,12 +79247,6 @@
         "2026-05-09 Session Log \u2014 9 Pending Decisions Resolved (5 Executed \u00b7 3 Defer-Track \u00b7 1 Boundary-Correction) + 5-Channel RRF Retrieval Landed + Schema Extension + AVX512 Machine Plan Captured",
         "Synthesis \u2014 Anthropic Programmatic Credit Pool (effective 2026-06-15): separate metered budget for Claude Agent SDK / `claude -p` CLI / GitHub Actions / third-party Agent SDK apps, at API rates, with $20\u2013$200/month tier-by-tier allowance that does NOT roll over",
         "Synthesis \u2014 Strands Agents (AWS): Intent-Based Tool Design Cuts Token Usage 96% (52K \u2192 2K) via Narrow Scope + Semantic-Search MCP Gateway"
-      ]
-    },
-    {
-      "target": "DFlash (arXiv:2602.06036) \u2014 block-diffusion draft",
-      "referenced_by": [
-        "DFlash vs EAGLE-3 vs MEDUSA \u2014 Speculative Decoding Family"
       ]
     },
     {
@@ -79827,12 +79616,6 @@
       "referenced_by": [
         "T078 \u2014 Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermes variants)",
         "Pattern \u2014 Spawn protocol for Multica: bridge a Per-Project Assistant Profile to a running Assistant instance on Multica's 10-CLI daemon (operator-adopted runtime)"
-      ]
-    },
-    {
-      "target": "EAGLE-3 (arXiv:2503.01840) \u2014 autoregressive draft",
-      "referenced_by": [
-        "DFlash vs EAGLE-3 vs MEDUSA \u2014 Speculative Decoding Family"
       ]
     },
     {
@@ -80238,24 +80021,6 @@
       ]
     },
     {
-      "target": "Intel Alder/Raptor/Arrow Lake consumer (no AVX-512) \u2014 Zen 5 is the only first-class AVX-512 consumer desktop option as of 2026",
-      "referenced_by": [
-        "Synthesis \u2014 AMD Zen 5 Single-Cycle 512-bit AVX-512 and Dual-CCD Topology"
-      ]
-    },
-    {
-      "target": "Intel Lunar Lake",
-      "referenced_by": [
-        "Synthesis \u2014 AMD Zen 5 Single-Cycle 512-bit AVX-512 and Dual-CCD Topology"
-      ]
-    },
-    {
-      "target": "Intel Sapphire Rapids / Granite Rapids server",
-      "referenced_by": [
-        "Synthesis \u2014 AMD Zen 5 Single-Cycle 512-bit AVX-512 and Dual-CCD Topology"
-      ]
-    },
-    {
       "target": "JS Mastery Six-File Context System",
       "referenced_by": [
         "Synthesis \u2014 Cavekit v4: Compressed Spec-Driven Development for Claude Code (Julius Brussee, MIT-Licensed, SPEC.md + 3 Commands + Caveman Encoding + Backprop Reflex)",
@@ -80590,12 +80355,6 @@
       ]
     },
     {
-      "target": "MEDUSA (arXiv:2401.10774) \u2014 simplest",
-      "referenced_by": [
-        "DFlash vs EAGLE-3 vs MEDUSA \u2014 Speculative Decoding Family"
-      ]
-    },
-    {
       "target": "MLMastery Context Engineering Synthesis",
       "referenced_by": [
         "Synthesis \u2014 Cloudflare Agent Memory (Apr 17 2026): 5-Channel RRF Retrieval + Multi-Stage Ingestion Pipeline = Solving Context Rot for Long-Running AI Agents",
@@ -80762,6 +80521,12 @@
       ]
     },
     {
+      "target": "Models Are Built in Layers",
+      "referenced_by": [
+        "Build Pipeline via SDD+TDD \u2014 Real Bugs Surface Only When Tests Execute Actual Renderers (Not Just Schema-Validate)"
+      ]
+    },
+    {
       "target": "Multi-Layer Compression Lesson",
       "referenced_by": [
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
@@ -80782,12 +80547,6 @@
       "target": "Multica self-hosted memory",
       "referenced_by": [
         "Comparison \u2014 Assistant Platforms & Frameworks Frontier (2026-05-09): Claude OS \u00b7 Obsidian PM \u00b7 Multica \u00b7 OpenClaw Command Center / OCMC \u2014 by Type and Frontier"
-      ]
-    },
-    {
-      "target": "NUMA scheduling concepts more broadly",
-      "referenced_by": [
-        "Dual-CCD Cache Partitioning (Zen 5 9900X)"
       ]
     },
     {
@@ -80838,12 +80597,6 @@
       "referenced_by": [
         "Synthesis \u2014 Structured Prompt-Driven Development (SPDD): Thoughtworks' REASONS Canvas + Workflow for Governable AI-Assisted Delivery (Wei Zhang + Jessie Jie Xia, martinfowler.com 2026-04-28)",
         "Synthesis \u2014 JS Mastery Six-File Context System: Spec-Driven Agentic Build Methodology (project-overview \u00b7 architecture \u00b7 code-standards \u00b7 ai-workflow-rules \u00b7 ui-context \u00b7 progress-tracker + AGENTS.md, 2026 video tutorial + downloadable templates)"
-      ]
-    },
-    {
-      "target": "OpenZFS version",
-      "referenced_by": [
-        "ZFS Tiered Storage for LLM Inference"
       ]
     },
     {
@@ -80916,15 +80669,15 @@
       ]
     },
     {
-      "target": "P1 + P4 governing principles",
+      "target": "P1 (Infrastructure > Instructions) \u2014 moves runaway-hook safety from prose enforcement (\"don't make perpetual goals\") to configuration enforcement (`CLAUDE_CODE_STOP_HOOK_BLOCK_CAP=\"1000\"`).",
       "referenced_by": [
-        "Learning Path v2 \u2014 Multi-Day Pain-Point Resolution Comprehensive 9-Phase Body of Work (Mission Arc 2026-05-08)"
+        "Decision: raise CLAUDE_CODE_STOP_HOOK_BLOCK_CAP to 1000 (default 8) for any operator using perpetual `/goal` mandates"
       ]
     },
     {
-      "target": "P4 (Declarations Are Aspirational Until Infrastructure Verifies Them) \u2014 schema-conformance is a declaration; on-disk behavior is the verification.",
+      "target": "P1 + P4 governing principles",
       "referenced_by": [
-        "Build Pipeline via SDD+TDD \u2014 Real Bugs Surface Only When Tests Execute Actual Renderers (Not Just Schema-Validate)"
+        "Learning Path v2 \u2014 Multi-Day Pain-Point Resolution Comprehensive 9-Phase Body of Work (Mission Arc 2026-05-08)"
       ]
     },
     {
@@ -80937,6 +80690,12 @@
       "target": "P5 candidate principle endorsement",
       "referenced_by": [
         "Foundational-Cluster-Prioritized Enforcement-Layer Pattern \u2014 C04+C02 Coverage Maximizes Cross-Cutting Prevention"
+      ]
+    },
+    {
+      "target": "PR-babysitting + main-branch progression in parallel.",
+      "referenced_by": [
+        "Decision: raise CLAUDE_CODE_STOP_HOOK_BLOCK_CAP to 1000 (default 8) for any operator using perpetual `/goal` mandates"
       ]
     },
     {
@@ -81278,12 +81037,6 @@
       ]
     },
     {
-      "target": "SFIF / [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers]]",
-      "referenced_by": [
-        "Build Pipeline via SDD+TDD \u2014 Real Bugs Surface Only When Tests Execute Actual Renderers (Not Just Schema-Validate)"
-      ]
-    },
-    {
       "target": "SMT policy",
       "referenced_by": [
         "Dual-CCD Cache Partitioning (Zen 5 9900X)"
@@ -81349,12 +81102,6 @@
       ]
     },
     {
-      "target": "Secure Boot + MOK enrollment",
-      "referenced_by": [
-        "VFIO GPU Isolation with AMD IOMMU"
-      ]
-    },
-    {
       "target": "Self-Reference Drift Lesson",
       "referenced_by": [
         "Saturation Declarations Are P4 Aspirational \u2014 Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal",
@@ -81370,21 +81117,9 @@
       ]
     },
     {
-      "target": "Single Responsibility Principle at the system level",
-      "referenced_by": [
-        "SRP Trinity \u2014 Pulse, Weaver, Auditor"
-      ]
-    },
-    {
       "target": "Skyscraper / Pyramid / Mountain Pattern",
       "referenced_by": [
         "Synthesis \u2014 Cavekit v4: Compressed Spec-Driven Development for Claude Code (Julius Brussee, MIT-Licensed, SPEC.md + 3 Commands + Caveman Encoding + Backprop Reflex)"
-      ]
-    },
-    {
-      "target": "Software-only container isolation",
-      "referenced_by": [
-        "VFIO GPU Isolation with AMD IOMMU"
       ]
     },
     {
@@ -81411,12 +81146,6 @@
         "Synthesis \u2014 How To Train Your GPT (Raiyan Yahya): 12-Chapter Pedagogical Guide to Building a LLaMA-3-Style 124M GPT From Scratch",
         "Synthesis \u2014 Effective Context Engineering for AI Agents (MachineLearningMastery, April 2026): Treat Context Window as RAM, Token Budgets Across Agent Loops, Probe-Based Evaluation, 60-80% Utilization Target",
         "Learning Path \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer (Mission Arc 2026-05-04)"
-      ]
-    },
-    {
-      "target": "Stage-2 selfdef integration",
-      "referenced_by": [
-        "SRP Trinity \u2014 Pulse, Weaver, Auditor"
       ]
     },
     {
@@ -82070,12 +81799,6 @@
       ]
     },
     {
-      "target": "Zen 4",
-      "referenced_by": [
-        "Synthesis \u2014 AMD Zen 5 Single-Cycle 512-bit AVX-512 and Dual-CCD Topology"
-      ]
-    },
-    {
       "target": "Zen 5 AVX-512 single-cycle 512-bit datapath",
       "referenced_by": [
         "Synthesis \u2014 BitNet b1.58 Ternary LLM Family and bitnet.cpp Inference",
@@ -82107,12 +81830,6 @@
       ]
     },
     {
-      "target": "`wall(1)` broadcast TTY notification mechanism",
-      "referenced_by": [
-        "wall(1) vs write(1) vs Tetragon eBPF \u2014 Operator-Perimeter Mechanisms"
-      ]
-    },
-    {
       "target": "`wiki/spine/references/model-weights-manifest.md`",
       "referenced_by": [
         "E010 M004 \u2014 Model Weights Inventory Tool and Manifest"
@@ -82125,39 +81842,15 @@
       ]
     },
     {
-      "target": "`write(1)` per-user TTY notification mechanism",
-      "referenced_by": [
-        "wall(1) vs write(1) vs Tetragon eBPF \u2014 Operator-Perimeter Mechanisms"
-      ]
-    },
-    {
       "target": "awslabs/aidlc-workflows GitHub Repository",
       "referenced_by": [
         "Synthesis \u2014 AWS AI-DLC: AI-Driven Development Lifecycle (Methodology, Not a Tool)"
       ]
     },
     {
-      "target": "bidirectional attention",
+      "target": "claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
       "referenced_by": [
-        "DFlash vs EAGLE-3 vs MEDUSA \u2014 Speculative Decoding Family"
-      ]
-    },
-    {
-      "target": "block-diffusion speculative-decoding pattern",
-      "referenced_by": [
-        "Speculative Decoding via Block Diffusion"
-      ]
-    },
-    {
-      "target": "classical autoregressive speculative decoding",
-      "referenced_by": [
-        "Speculative Decoding via Block Diffusion"
-      ]
-    },
-    {
-      "target": "classical autoregressive speculative decoding (EAGLE, MEDUSA, S3D) \u2014 DFlash's block-diffusion draft is the differentiator",
-      "referenced_by": [
-        "Synthesis \u2014 DFlash: Block-Diffusion Flash Speculative Decoding"
+        "Decision: raise CLAUDE_CODE_STOP_HOOK_BLOCK_CAP to 1000 (default 8) for any operator using perpetual `/goal` mandates"
       ]
     },
     {
@@ -82167,15 +81860,21 @@
       ]
     },
     {
-      "target": "decision-territory implementation-spec (sibling #2) \u2014 RULE 3 boundary classification consumes authorship taxonomy from this gate",
+      "target": "claude-code-settings-local-hot-reload-vs-settings-cache",
       "referenced_by": [
-        "Authorship-Classification Gate \u2014 Implementation Spec for Frontmatter Taxonomy Enforcement"
+        "Decision: raise CLAUDE_CODE_STOP_HOOK_BLOCK_CAP to 1000 (default 8) for any operator using perpetual `/goal` mandates"
       ]
     },
     {
-      "target": "deep draft models + bidirectional attention",
+      "target": "claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch",
       "referenced_by": [
-        "Speculative Decoding via Block Diffusion"
+        "Decision: raise CLAUDE_CODE_STOP_HOOK_BLOCK_CAP to 1000 (default 8) for any operator using perpetual `/goal` mandates"
+      ]
+    },
+    {
+      "target": "decision-territory implementation-spec (sibling #2) \u2014 RULE 3 boundary classification consumes authorship taxonomy from this gate",
+      "referenced_by": [
+        "Authorship-Classification Gate \u2014 Implementation Spec for Frontmatter Taxonomy Enforcement"
       ]
     },
     {
@@ -82378,82 +82077,9 @@
       ]
     },
     {
-      "target": "existing `cyberpunk042/selfdef` notifier chain",
-      "referenced_by": [
-        "wall(1) vs write(1) vs Tetragon eBPF \u2014 Operator-Perimeter Mechanisms"
-      ]
-    },
-    {
       "target": "fake-blockers-vs-real-blockers",
       "referenced_by": [
         "Lesson \u2014 Anti-minimizing: don't undercount systemic bugs; blocker register self-filters before surfacing"
-      ]
-    },
-    {
-      "target": "future SAIN-01 + selfdef cross-repo policy merge",
-      "referenced_by": [
-        "wall(1) vs write(1) vs Tetragon eBPF \u2014 Operator-Perimeter Mechanisms"
-      ]
-    },
-    {
-      "target": "future SAIN-01 hardware variants",
-      "referenced_by": [
-        "SRP Trinity \u2014 Pulse, Weaver, Auditor"
-      ]
-    },
-    {
-      "target": "future Stage-2 selfdef integration",
-      "referenced_by": [
-        "E104 \u2014 Tetragon + Guardian Perimeter"
-      ]
-    },
-    {
-      "target": "future `cyberpunk042/selfdef` Epics on SAIN-01 host deployment",
-      "referenced_by": [
-        "Synthesis \u2014 SAIN-01 Sovereign AI Node Master Specification"
-      ]
-    },
-    {
-      "target": "future `wiki/backlog/epics/milestone-sain01/epic-*.md`",
-      "referenced_by": [
-        "Synthesis \u2014 SAIN-01 Sovereign AI Node Master Specification"
-      ]
-    },
-    {
-      "target": "future `wiki/backlog/milestones/sain-01-sovereign-node.md`",
-      "referenced_by": [
-        "SRP Trinity \u2014 Pulse, Weaver, Auditor",
-        "Synthesis \u2014 SAIN-01 Sovereign AI Node Master Specification"
-      ]
-    },
-    {
-      "target": "future `wiki/comparisons/cmp-dflash-vs-eagle3-vs-medusa.md`",
-      "referenced_by": [
-        "Synthesis \u2014 DFlash: Block-Diffusion Flash Speculative Decoding"
-      ]
-    },
-    {
-      "target": "future `wiki/comparisons/cmp-ling-26-flash-vs-nemotron-3-nano-omni.md`",
-      "referenced_by": [
-        "Synthesis \u2014 DFlash: Block-Diffusion Flash Speculative Decoding"
-      ]
-    },
-    {
-      "target": "future `wiki/comparisons/cmp-zen5-vs-zen4-vs-sapphire-rapids-low-bit.md`",
-      "referenced_by": [
-        "Synthesis \u2014 AMD Zen 5 Single-Cycle 512-bit AVX-512 and Dual-CCD Topology"
-      ]
-    },
-    {
-      "target": "future `wiki/domains/devops/concept-dual-ccd-cache-partitioning-9900x.md`",
-      "referenced_by": [
-        "Synthesis \u2014 AMD Zen 5 Single-Cycle 512-bit AVX-512 and Dual-CCD Topology"
-      ]
-    },
-    {
-      "target": "future projects' TDD planning \u2014 Layer 3 is non-optional; budget it from the start.",
-      "referenced_by": [
-        "Build Pipeline via SDD+TDD \u2014 Real Bugs Surface Only When Tests Execute Actual Renderers (Not Just Schema-Validate)"
       ]
     },
     {
@@ -82463,21 +82089,15 @@
       ]
     },
     {
-      "target": "inclusionAI/Ling-2.6-flash",
+      "target": "long-running perpetual `/goal` mandates",
       "referenced_by": [
-        "Ling-2.6-flash vs Nemotron-3-Nano-Omni \u2014 Blackwell 96GB Resident Model Comparison"
+        "Decision: raise CLAUDE_CODE_STOP_HOOK_BLOCK_CAP to 1000 (default 8) for any operator using perpetual `/goal` mandates"
       ]
     },
     {
-      "target": "mature",
+      "target": "multi-stage automation runs",
       "referenced_by": [
-        "DFlash vs EAGLE-3 vs MEDUSA \u2014 Speculative Decoding Family"
-      ]
-    },
-    {
-      "target": "multi-head approach",
-      "referenced_by": [
-        "DFlash vs EAGLE-3 vs MEDUSA \u2014 Speculative Decoding Family"
+        "Decision: raise CLAUDE_CODE_STOP_HOOK_BLOCK_CAP to 1000 (default 8) for any operator using perpetual `/goal` mandates"
       ]
     },
     {
@@ -82490,12 +82110,6 @@
       "target": "not the label",
       "referenced_by": [
         "Right-size the methodology model to the actual work, not the structural category"
-      ]
-    },
-    {
-      "target": "nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16",
-      "referenced_by": [
-        "Ling-2.6-flash vs Nemotron-3-Nano-Omni \u2014 Blackwell 96GB Resident Model Comparison"
       ]
     },
     {
@@ -82549,33 +82163,9 @@
       ]
     },
     {
-      "target": "standard FP16 / BF16 / INT8 weight quantization",
+      "target": "settings.json caching behavior (cold-load required at session start).",
       "referenced_by": [
-        "1-bit Ternary Weights"
-      ]
-    },
-    {
-      "target": "standard FP16 / BF16 transformer baselines",
-      "referenced_by": [
-        "Synthesis \u2014 BitNet b1.58 Ternary LLM Family and bitnet.cpp Inference"
-      ]
-    },
-    {
-      "target": "ternary `{\u22121",
-      "referenced_by": [
-        "BitNet b1.58 Ternary vs FP16 Baseline \u2014 Execution Cost Comparison"
-      ]
-    },
-    {
-      "target": "ternary-weight inference paradigm",
-      "referenced_by": [
-        "1-bit Ternary Weights"
-      ]
-    },
-    {
-      "target": "training-time test",
-      "referenced_by": [
-        "DFlash vs EAGLE-3 vs MEDUSA \u2014 Speculative Decoding Family"
+        "Decision: raise CLAUDE_CODE_STOP_HOOK_BLOCK_CAP to 1000 (default 8) for any operator using perpetual `/goal` mandates"
       ]
     },
     {

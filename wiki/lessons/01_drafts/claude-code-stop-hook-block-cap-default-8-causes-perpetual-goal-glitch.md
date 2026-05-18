@@ -152,6 +152,45 @@ Per the operator's reaction ("this means I could unlock a lot of conversation"):
 - **Don't conflate `max_turns` with `block_cap`**. They're separate. `max_turns` is a session-wide turn ceiling; `block_cap` is a per-loop consecutive-block ceiling. Configure both deliberately.
 - **Don't expect editing `~/.claude/settings.json` to take effect mid-session.** The env block is read at session start, per the caching asymmetry. Restart or use `~/.claude/settings.local.json` for hot-reload of env (note: env-var hot-reload behavior of `settings.local.json` was not verified in this investigation; assume cold-only for safety).
 
+## Evidence
+
+Three independent sources confirm the mechanism:
+
+1. **Binary strings dump** (`strings /opt/claude-code/bin/claude`):
+   - `"CLAUDE_CODE_STOP_HOOK_BLOCK_CAP"` env var name
+   - `"A hook blocked the turn from ending ${p$} consecutive times — overriding and ending turn."` operator-visible warning text
+   - `"For Stop/SubagentStop hooks, check stop_hook_active in the input and return success while it's true. Set CLAUDE_CODE_STOP_HOOK_BLOCK_CAP to raise this limit."` (instructional text confirming env var is the override)
+
+2. **Decompiled JavaScript control flow** (minified bundle, variable names from binary):
+   ```js
+   let l$ = parseInt(process.env.CLAUDE_CODE_STOP_HOOK_BLOCK_CAP ?? "", 10),
+       B$ = Number.isNaN(l$) ? 8 : l$;
+   if (B$ > 0 && p$ > B$)
+     return ..., { reason: "completed" };
+   ```
+   Confirms: default `8`; cap of `0` disables the check; cap of `> 0` triggers turn-end when consecutive blocks exceed it.
+
+3. **Telemetry event name**: `tengu_stop_hook_block_count` with payload fields `{count, is_subagent, hit_max_turns, hit_cap}`. Operators with telemetry access can verify cap hits in production logs.
+
+4. **Live operator observation** (2026-05-18 session): operator reported "/goal keeps being removed and conversation stops" — symptom-pattern consistent with hitting the 8-block cap every ~8 perpetual-mandate rounds.
+
+## Applicability
+
+This lesson applies when ALL of the following hold:
+
+- You use Claude Code (any version that honors `CLAUDE_CODE_STOP_HOOK_BLOCK_CAP` — May 2026+ verified).
+- You issue `/goal <condition>` where the condition is unsatisfiable (perpetual mandates, "Continue Endlessly", "work until X" with no halt criterion).
+- The agent runs in auto-loop mode (back-to-back rounds without operator interjection) for ≥8 consecutive turns.
+
+The lesson does NOT apply when:
+
+- `/goal` is given a satisfiable condition (e.g., "until tests pass") — the hook clears naturally before the cap.
+- Operator sends a user message between every agent round — the consecutive-block counter resets to 0 on each new prompt.
+- A different Stop hook (not `/goal`) is the one blocking — same mechanism, different trigger, same fix.
+
+## Relationships
+
+
 ## Cross-references
 
 - `wiki/lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache.md` — settings file caching asymmetry; relevant for understanding when the cap-raise takes effect.

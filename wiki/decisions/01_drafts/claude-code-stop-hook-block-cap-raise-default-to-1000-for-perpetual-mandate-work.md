@@ -8,12 +8,14 @@ confidence: high
 maturity: seed
 derived_from:
   - "wiki/lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch.md"
-reversibility: fully-reversible
+reversibility: easy
 created: 2026-05-18
 updated: 2026-05-18
 sources:
   - id: operator-decision-2026-05-18
     type: directive
+    project: devops-solutions-information-hub
+    path: wiki/log/
     note: "Operator selected 'Raise the cap to 1000 (Recommended)' option in live AskUserQuestion during the perpetual /goal investigation session"
 tags: [claude-code, stop-hook, goal, settings, environment, decision, operator-directive]
 ---
@@ -81,6 +83,30 @@ Add to `~/.claude/settings.json` under the `env` block (preserving existing keys
 - ❌ Setting `"0"` as the default recommendation. It removes ALL safety; only choose it if you've audited your hooks and accept the trade-off.
 - ❌ Editing settings.json mid-session and expecting immediate effect. The env block is cold-read at session start.
 - ❌ Combining cap-raise with a known-broken hook. If a hook always-blocks erroneously, raise the cap LAST, after fixing the hook.
+
+## Alternatives
+
+Three values were live-considered (operator chose option 2 via AskUserQuestion):
+
+| Option | Value | Trade-off |
+|---|---|---|
+| 1. Disable cap | `"0"` | Fully unlimited; loses the runaway-hook safety entirely. Choose if you've audited all hooks and accept the risk. |
+| 2. Raise cap (chosen) | `"1000"` ⭐ | Practically unlimited for perpetual `/goal`; keeps a safety floor for truly stuck hooks. |
+| 3. Keep default | `"8"` | Status quo; perpetual `/goal` operators hit the glitch every 8 rounds. |
+
+Adjacent alternatives (not chosen but reasonable):
+- `"50"` / `"100"`: tighter safety margin than 1000 but more permissive than 8. Reasonable if the operator wants the cap to be a meaningful kill-switch within a single auto-loop.
+- `max_turns`: a SEPARATE kill switch. Not an alternative to this cap; can be configured independently for a different protection layer.
+
+## Dependencies
+
+- **Requires**: Claude Code harness that honors `CLAUDE_CODE_STOP_HOOK_BLOCK_CAP` env var. Verified in `/opt/claude-code/bin/claude` (May 2026 build). Earlier builds may not honor it.
+- **Requires**: settings.json `env` block reading at session start (cold-load semantics — see sibling lesson on settings caching).
+- **Does NOT depend on**: any specific `/goal` text, any specific Stop hook implementation, any plugin or MCP server. Pure runtime config.
+- **Coordinates with**: `max_turns` (separate per-session turn ceiling), `/goal clear` (manual hook cleanup), `subscribe_pr_activity` (webhook-driven session wakes — independent of cap).
+
+## Relationships
+
 
 ## Cross-references
 
