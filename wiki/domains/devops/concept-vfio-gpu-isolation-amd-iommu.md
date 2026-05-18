@@ -230,11 +230,12 @@ The two GPUs are **architecturally different tiers**, not just "more GPUs." The 
 - IMPLEMENTS: Hardware-level GPU isolation via Linux VFIO + AMD IOMMU
 - ENABLES: [[concept-srp-trinity-pulse-weaver-auditor|SRP Trinity (Weaver)]] (sub-agent sandboxing on isolated GPU)
 - USED BY: [[concept-zfs-tiered-storage-llm-inference|ZFS Tiered Storage]] (`tank/agents` is the sandboxed agents' runtime dataset)
-- CONSTRAINED BY: ASUS ProArt X870E-Creator PCIe topology (M.2_2 must remain empty for x8/x8 + clean IOMMU split)
-- CONSTRAINED BY: Secure Boot + MOK enrollment (custom kernel + DKMS modules need signing)
 - RELATES TO: [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]] (GRUB parameters as declarative isolation state)
-- CONTRASTS WITH: Software-only container isolation (no IOMMU = no hardware DMA isolation)
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[SAIN-01 Sovereign Node Spec]]
+[[Hardware-level GPU isolation via Linux VFIO + AMD IOMMU]]
+[[SRP Trinity (Weaver)]]
+[[ZFS Tiered Storage]]
+[[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]

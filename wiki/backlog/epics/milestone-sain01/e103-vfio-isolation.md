@@ -97,4 +97,13 @@ See Done When criteria — verifiable kernel-isolation checkpoints.
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[sain-01-sovereign-node|Milestone — SAIN-01 Sovereign AI Node]]
+[[e100-hardware-foundation|E100 — Hardware Foundation]]
+[[e101-sovereign-os-build|E101 — Sovereign OS Build]]
+[[e104-tetragon-guardian-perimeter|E104 — Tetragon + Guardian Perimeter]]
+[[e107-weaver-state-fabric|E107 — Weaver State Fabric]]
+[[e108-load-balancing-profiles|E108 — Load-Balancing Profiles]]
+[[e109-dflash-integration|E109 — DFlash Integration]]
+[[e110-model-catalog|E110 — Model Catalog]]
+[[Concept — VFIO GPU Isolation with AMD IOMMU]]
+[[SAIN-01 Sovereign Node Spec]]

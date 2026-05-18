@@ -98,4 +98,10 @@ See Done When criteria — each is a verifiable hardware-assembly checkpoint.
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[sain-01-sovereign-node|Milestone — SAIN-01 Sovereign AI Node]]
+[[e101-sovereign-os-build|E101 — Sovereign OS Build]]
+[[e103-vfio-isolation|E103 — VFIO Isolation]]
+[[e106-pulse-vector-runtime|E106 — Pulse Vector Runtime]]
+[[SAIN-01 Sovereign Node Spec]]
+[[Concept — Dual-CCD Cache Partitioning]]
+[[Synthesis — Zen 5 AVX-512 single-cycle]]

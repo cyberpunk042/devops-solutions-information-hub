@@ -219,9 +219,6 @@ The map matters: speculative decoding is not a universal acceleration — it's a
 
 ## Relationships
 
-- COMPARES TO: MEDUSA (arXiv:2401.10774) — simplest, mature, multi-head approach
-- COMPARES TO: EAGLE-3 (arXiv:2503.01840) — autoregressive draft, training-time test
-- COMPARES TO: DFlash (arXiv:2602.06036) — block-diffusion draft, bidirectional attention
 - BUILDS ON: [[src-dflash-block-diffusion-spec-dec|DFlash synthesis]]
 - BUILDS ON: [[concept-speculative-decoding-block-diffusion|Concept — Speculative Decoding via Block Diffusion]]
 - COMPLEMENTS: [[cmp-bitnet-vs-fp16-execution-cost|BitNet vs FP16 comparison]] (orthogonal acceleration on CPU vs GPU; the two stack on different tiers)
@@ -230,4 +227,8 @@ The map matters: speculative decoding is not a universal acceleration — it's a
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[DFlash synthesis]]
+[[Concept — Speculative Decoding via Block Diffusion]]
+[[BitNet vs FP16 comparison]]
+[[SAIN-01 Sovereign Node Spec]]
+[[VFIO GPU Isolation]]

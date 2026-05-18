@@ -101,4 +101,15 @@ See Done When — verifiable atomic-state + sub-agent-routing checkpoints.
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[sain-01-sovereign-node|Milestone — SAIN-01 Sovereign AI Node]]
+[[e102-zfs-storage-layout|E102 — ZFS Storage Layout]]
+[[e103-vfio-isolation|E103 — VFIO Isolation]]
+[[e104-tetragon-guardian-perimeter|E104 — Tetragon + Guardian Perimeter]]
+[[e106-pulse-vector-runtime|E106 — Pulse Vector Runtime]]
+[[e108-load-balancing-profiles|E108 — Load-Balancing Profiles]]
+[[e110-model-catalog|E110 — Model Catalog]]
+[[Concept — SRP Trinity (Weaver module)]]
+[[Concept — ZFS Tiered Storage]]
+[[SAIN-01 Sovereign Node Spec]]
+[[21]]
+[[e101-sovereign-os-build|E101 — Sovereign OS Build]]

@@ -1,29 +1,1041 @@
 {
-  "generated": "2026-05-15T22:35:28.873101+00:00",
+  "generated": "2026-05-18T14:25:46.986763+00:00",
   "stats": {
-    "pages": 872,
+    "pages": 901,
     "domains": 14,
-    "sources": 110,
-    "comparisons": 10,
-    "relationships": 4074,
-    "tags_unique": 3221,
+    "sources": 114,
+    "comparisons": 14,
+    "relationships": 4328,
+    "tags_unique": 3376,
     "layers": {
-      "3": 4,
+      "3": 8,
       "5": 38,
-      "6": 26,
-      "2": 82,
-      "4": 83,
+      "6": 27,
+      "2": 88,
+      "4": 85,
       "0": 1,
       "1": 81,
       "spine": 83
     },
     "maturity": {
-      "seed": 186,
-      "growing": 331,
+      "seed": 193,
+      "growing": 341,
       "mature": 23
     }
   },
   "pages": [
+    {
+      "path": "backlog/epics/milestone-sain01/e100-hardware-foundation.md",
+      "slug": "backlog/epics/milestone-sain01/e100-hardware-foundation",
+      "title": "E100 \u2014 Hardware Foundation",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "epic",
+        "sain-01",
+        "hardware",
+        "pcie",
+        "mok",
+        "secure-boot",
+        "friction-audit"
+      ],
+      "sources": [
+        {
+          "id": "milestone",
+          "type": "file",
+          "file": "wiki/backlog/milestones/sain-01-sovereign-node.md"
+        },
+        {
+          "id": "src-sain-01-sovereign-node-spec",
+          "type": "wiki",
+          "file": "wiki/sources/src-sain-01-sovereign-node-spec.md"
+        },
+        {
+          "id": "src-zen5-avx512-single-cycle",
+          "type": "wiki",
+          "file": "wiki/sources/src-zen5-avx512-single-cycle.md"
+        },
+        {
+          "id": "concept-dual-ccd-cache-partitioning-9900x",
+          "type": "wiki",
+          "file": "wiki/domains/devops/concept-dual-ccd-cache-partitioning-9900x.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "E100 \u2014 Hardware Foundation",
+        "E100 \u2014 Hardware Foundation: Iron + PCIe + MOK"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Milestone \u2014 SAIN-01 Sovereign AI Node"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E101 \u2014 Sovereign OS Build"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E103 \u2014 VFIO Isolation"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E106 \u2014 Pulse Vector Runtime"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "SAIN-01 Sovereign Node Spec"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Concept \u2014 Dual-CCD Cache Partitioning"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 Zen 5 AVX-512 single-cycle"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/milestone-sain01/e101-sovereign-os-build.md",
+      "slug": "backlog/epics/milestone-sain01/e101-sovereign-os-build",
+      "title": "E101 \u2014 Sovereign OS Build",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "epic",
+        "sain-01",
+        "kernel",
+        "debian",
+        "trixie",
+        "live-build",
+        "znver5",
+        "gcc14",
+        "dkms"
+      ],
+      "sources": [
+        {
+          "id": "milestone",
+          "type": "file",
+          "file": "wiki/backlog/milestones/sain-01-sovereign-node.md"
+        },
+        {
+          "id": "src-sain-01-sovereign-node-spec",
+          "type": "wiki",
+          "file": "wiki/sources/src-sain-01-sovereign-node-spec.md"
+        },
+        {
+          "id": "src-zen5-avx512-single-cycle",
+          "type": "wiki",
+          "file": "wiki/sources/src-zen5-avx512-single-cycle.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "E101 \u2014 Sovereign OS Build",
+        "E101 \u2014 Custom Zen-5-Tuned Kernel + live-build ISO"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Milestone \u2014 SAIN-01 Sovereign AI Node"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E100 \u2014 Hardware Foundation"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E102 \u2014 ZFS Storage Layout"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E103 \u2014 VFIO Isolation"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E104 \u2014 Tetragon + Guardian Perimeter"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E105 \u2014 Network Segregation"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E106 \u2014 Pulse Vector Runtime"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E107 \u2014 Weaver State Fabric"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "SAIN-01 Sovereign Node Spec"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 Zen 5 AVX-512 single-cycle"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/milestone-sain01/e102-zfs-storage-layout.md",
+      "slug": "backlog/epics/milestone-sain01/e102-zfs-storage-layout",
+      "title": "E102 \u2014 ZFS Storage Layout",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "epic",
+        "sain-01",
+        "zfs",
+        "storage",
+        "nvme",
+        "raid-0",
+        "recordsize",
+        "sync-always",
+        "arc",
+        "openzfs"
+      ],
+      "sources": [
+        {
+          "id": "milestone",
+          "type": "file",
+          "file": "wiki/backlog/milestones/sain-01-sovereign-node.md"
+        },
+        {
+          "id": "src-sain-01-sovereign-node-spec",
+          "type": "wiki",
+          "file": "wiki/sources/src-sain-01-sovereign-node-spec.md"
+        },
+        {
+          "id": "concept-zfs-tiered-storage-llm-inference",
+          "type": "wiki",
+          "file": "wiki/domains/devops/concept-zfs-tiered-storage-llm-inference.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "E102 \u2014 ZFS Storage Layout",
+        "E102 \u2014 Tiered ZFS Datasets + ARC Tuning"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Milestone \u2014 SAIN-01 Sovereign AI Node"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E101 \u2014 Sovereign OS Build"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E104 \u2014 Tetragon + Guardian Perimeter"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E106 \u2014 Pulse Vector Runtime"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E107 \u2014 Weaver State Fabric"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E108 \u2014 Load-Balancing Profiles"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E110 \u2014 Model Catalog"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "SAIN-01 Sovereign Node Spec"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "4.1"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "7.2"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Concept \u2014 ZFS Tiered Storage for LLM Inference"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/milestone-sain01/e103-vfio-isolation.md",
+      "slug": "backlog/epics/milestone-sain01/e103-vfio-isolation",
+      "title": "E103 \u2014 VFIO Isolation",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "epic",
+        "sain-01",
+        "vfio",
+        "iommu",
+        "amd-iommu",
+        "gpu-isolation",
+        "rtx-3090",
+        "blackwell",
+        "sandbox",
+        "podman"
+      ],
+      "sources": [
+        {
+          "id": "milestone",
+          "type": "file",
+          "file": "wiki/backlog/milestones/sain-01-sovereign-node.md"
+        },
+        {
+          "id": "src-sain-01-sovereign-node-spec",
+          "type": "wiki",
+          "file": "wiki/sources/src-sain-01-sovereign-node-spec.md"
+        },
+        {
+          "id": "concept-vfio-gpu-isolation-amd-iommu",
+          "type": "wiki",
+          "file": "wiki/domains/devops/concept-vfio-gpu-isolation-amd-iommu.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "E103 \u2014 VFIO Isolation",
+        "E103 \u2014 VFIO Isolation: RTX 3090 Sandbox + AMD IOMMU"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Milestone \u2014 SAIN-01 Sovereign AI Node"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E100 \u2014 Hardware Foundation"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E101 \u2014 Sovereign OS Build"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E104 \u2014 Tetragon + Guardian Perimeter"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E107 \u2014 Weaver State Fabric"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E108 \u2014 Load-Balancing Profiles"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E109 \u2014 DFlash Integration"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E110 \u2014 Model Catalog"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Concept \u2014 VFIO GPU Isolation with AMD IOMMU"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "SAIN-01 Sovereign Node Spec"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/milestone-sain01/e104-tetragon-guardian-perimeter.md",
+      "slug": "backlog/epics/milestone-sain01/e104-tetragon-guardian-perimeter",
+      "title": "E104 \u2014 Tetragon + Guardian Perimeter",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "epic",
+        "sain-01",
+        "tetragon",
+        "ebpf",
+        "guardian",
+        "auditor",
+        "kernel-perimeter",
+        "sigkill",
+        "security-audit-log",
+        "defense-in-depth"
+      ],
+      "sources": [
+        {
+          "id": "milestone",
+          "type": "file",
+          "file": "wiki/backlog/milestones/sain-01-sovereign-node.md"
+        },
+        {
+          "id": "src-sain-01-sovereign-node-spec",
+          "type": "wiki",
+          "file": "wiki/sources/src-sain-01-sovereign-node-spec.md"
+        },
+        {
+          "id": "concept-srp-trinity-pulse-weaver-auditor",
+          "type": "wiki",
+          "file": "wiki/domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor.md"
+        },
+        {
+          "id": "cmp-wall-vs-write-vs-tetragon",
+          "type": "wiki",
+          "file": "wiki/comparisons/cmp-wall-vs-write-vs-tetragon-for-perimeter.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "E104 \u2014 Tetragon + Guardian Perimeter",
+        "E104 \u2014 Tetragon + Guardian: Kernel-Level Auditor"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Milestone \u2014 SAIN-01 Sovereign AI Node"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E101 \u2014 Sovereign OS Build"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E102 \u2014 ZFS Storage Layout"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E103 \u2014 VFIO Isolation"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E107 \u2014 Weaver State Fabric"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E108 \u2014 Load-Balancing Profiles"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Concept \u2014 SRP Trinity (Auditor)"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "SAIN-01 Sovereign Node Spec"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "6"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "10"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Comparison \u2014 wall vs write vs Tetragon"
+        },
+        {
+          "verb": "CONSTRAINS",
+          "target": "future Stage-2 selfdef integration (selfdef `agent-guard` policies must merge cleanly with `sovereign-kernel-fence`)"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/milestone-sain01/e105-network-segregation.md",
+      "slug": "backlog/epics/milestone-sain01/e105-network-segregation",
+      "title": "E105 \u2014 Network Segregation",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "epic",
+        "sain-01",
+        "network",
+        "marvell",
+        "intel",
+        "opnsense",
+        "vlan",
+        "jumbo-frames",
+        "atlantic",
+        "igc",
+        "mgmt-vs-data"
+      ],
+      "sources": [
+        {
+          "id": "milestone",
+          "type": "file",
+          "file": "wiki/backlog/milestones/sain-01-sovereign-node.md"
+        },
+        {
+          "id": "src-sain-01-sovereign-node-spec",
+          "type": "wiki",
+          "file": "wiki/sources/src-sain-01-sovereign-node-spec.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "E105 \u2014 Network Segregation",
+        "E105 \u2014 Network Segregation: Marvell 10GbE + Intel 2.5GbE"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Milestone \u2014 SAIN-01 Sovereign AI Node"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E101 \u2014 Sovereign OS Build"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E110 \u2014 Model Catalog"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E108 \u2014 Load-Balancing Profiles"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "SAIN-01 Sovereign Node Spec"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Infrastructure as Code Patterns"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/milestone-sain01/e106-pulse-vector-runtime.md",
+      "slug": "backlog/epics/milestone-sain01/e106-pulse-vector-runtime",
+      "title": "E106 \u2014 Pulse Vector Runtime",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "epic",
+        "sain-01",
+        "pulse",
+        "conductor",
+        "bitnet",
+        "ternary",
+        "1bit",
+        "avx512",
+        "vnni",
+        "ccd-pinning",
+        "wasm",
+        "aot",
+        "cranelift",
+        "wasmtime"
+      ],
+      "sources": [
+        {
+          "id": "milestone",
+          "type": "file",
+          "file": "wiki/backlog/milestones/sain-01-sovereign-node.md"
+        },
+        {
+          "id": "src-sain-01-sovereign-node-spec",
+          "type": "wiki",
+          "file": "wiki/sources/src-sain-01-sovereign-node-spec.md"
+        },
+        {
+          "id": "src-bitnet-b158-ternary-llm",
+          "type": "wiki",
+          "file": "wiki/sources/src-bitnet-b158-ternary-llm.md"
+        },
+        {
+          "id": "src-zen5-avx512-single-cycle",
+          "type": "wiki",
+          "file": "wiki/sources/src-zen5-avx512-single-cycle.md"
+        },
+        {
+          "id": "concept-1bit-ternary-weights",
+          "type": "wiki",
+          "file": "wiki/domains/ai-models/concept-1bit-ternary-weights.md"
+        },
+        {
+          "id": "concept-dual-ccd-cache-partitioning-9900x",
+          "type": "wiki",
+          "file": "wiki/domains/devops/concept-dual-ccd-cache-partitioning-9900x.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "E106 \u2014 Pulse Vector Runtime",
+        "E106 \u2014 Pulse: bitnet.cpp + AVX-512 + AOT Wasm"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Milestone \u2014 SAIN-01 Sovereign AI Node"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E101 \u2014 Sovereign OS Build"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E102 \u2014 ZFS Storage Layout"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E100 \u2014 Hardware Foundation"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E107 \u2014 Weaver State Fabric"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E108 \u2014 Load-Balancing Profiles"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Concept \u2014 SRP Trinity (Pulse module)"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Concept \u2014 1-bit Ternary Weights"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Concept \u2014 Dual-CCD Cache Partitioning"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "SAIN-01 Sovereign Node Spec"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "17.1"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "19"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "20"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/milestone-sain01/e107-weaver-state-fabric.md",
+      "slug": "backlog/epics/milestone-sain01/e107-weaver-state-fabric",
+      "title": "E107 \u2014 Weaver State Fabric",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "epic",
+        "sain-01",
+        "weaver",
+        "state-fabric",
+        "atomic-writes",
+        "sync-always",
+        "podman",
+        "grpc",
+        "ccd-pinning",
+        "claude-md",
+        "soul-md",
+        "identity-md",
+        "agents-md"
+      ],
+      "sources": [
+        {
+          "id": "milestone",
+          "type": "file",
+          "file": "wiki/backlog/milestones/sain-01-sovereign-node.md"
+        },
+        {
+          "id": "src-sain-01-sovereign-node-spec",
+          "type": "wiki",
+          "file": "wiki/sources/src-sain-01-sovereign-node-spec.md"
+        },
+        {
+          "id": "concept-srp-trinity-pulse-weaver-auditor",
+          "type": "wiki",
+          "file": "wiki/domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor.md"
+        },
+        {
+          "id": "concept-zfs-tiered-storage-llm-inference",
+          "type": "wiki",
+          "file": "wiki/domains/devops/concept-zfs-tiered-storage-llm-inference.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "E107 \u2014 Weaver State Fabric",
+        "E107 \u2014 Weaver: Atomic State + Sub-Agent Routing"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Milestone \u2014 SAIN-01 Sovereign AI Node"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E102 \u2014 ZFS Storage Layout"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E103 \u2014 VFIO Isolation"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E104 \u2014 Tetragon + Guardian Perimeter"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E106 \u2014 Pulse Vector Runtime"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E108 \u2014 Load-Balancing Profiles"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E110 \u2014 Model Catalog"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Concept \u2014 SRP Trinity (Weaver module)"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Concept \u2014 ZFS Tiered Storage"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "SAIN-01 Sovereign Node Spec"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "21"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/milestone-sain01/e108-load-balancing-profiles.md",
+      "slug": "backlog/epics/milestone-sain01/e108-load-balancing-profiles",
+      "title": "E108 \u2014 Load-Balancing Profiles",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "epic",
+        "sain-01",
+        "profiles",
+        "load-balancing",
+        "runtime-profiles",
+        "orchestration",
+        "ultra-sovereign",
+        "asymmetric-burst",
+        "deep-context-synthesis"
+      ],
+      "sources": [
+        {
+          "id": "milestone",
+          "type": "file",
+          "file": "wiki/backlog/milestones/sain-01-sovereign-node.md"
+        },
+        {
+          "id": "src-sain-01-sovereign-node-spec",
+          "type": "wiki",
+          "file": "wiki/sources/src-sain-01-sovereign-node-spec.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "E108 \u2014 Load-Balancing Profiles",
+        "E108 \u2014 Profiles: Ultra-Sovereign + Asymmetric-Burst + Deep-Context"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Milestone \u2014 SAIN-01 Sovereign AI Node"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E103 \u2014 VFIO Isolation"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E104 \u2014 Tetragon + Guardian Perimeter"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E106 \u2014 Pulse Vector Runtime"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E107 \u2014 Weaver State Fabric"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E109 \u2014 DFlash Integration"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E110 \u2014 Model Catalog"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "SAIN-01 Sovereign Node Spec"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/milestone-sain01/e109-dflash-integration.md",
+      "slug": "backlog/epics/milestone-sain01/e109-dflash-integration",
+      "title": "E109 \u2014 DFlash Integration",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "epic",
+        "sain-01",
+        "dflash",
+        "speculative-decoding",
+        "block-diffusion",
+        "code-math-acceleration",
+        "vllm",
+        "qwen3",
+        "blackwell",
+        "rtx-3090"
+      ],
+      "sources": [
+        {
+          "id": "milestone",
+          "type": "file",
+          "file": "wiki/backlog/milestones/sain-01-sovereign-node.md"
+        },
+        {
+          "id": "src-dflash-block-diffusion-spec-dec",
+          "type": "wiki",
+          "file": "wiki/sources/src-dflash-block-diffusion-spec-dec.md"
+        },
+        {
+          "id": "concept-speculative-decoding-block-diffusion",
+          "type": "wiki",
+          "file": "wiki/domains/ai-models/concept-speculative-decoding-block-diffusion.md"
+        },
+        {
+          "id": "cmp-dflash-vs-eagle3-vs-medusa",
+          "type": "wiki",
+          "file": "wiki/comparisons/cmp-dflash-vs-eagle3-vs-medusa.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "E109 \u2014 DFlash Integration",
+        "E109 \u2014 DFlash: Block-Diffusion Speculative Decoding"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Milestone \u2014 SAIN-01 Sovereign AI Node"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E102 \u2014 ZFS Storage Layout"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E103 \u2014 VFIO Isolation"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E108 \u2014 Load-Balancing Profiles"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "E110 \u2014 Model Catalog"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Synthesis \u2014 DFlash block-diffusion"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Concept \u2014 Speculative Decoding via Block Diffusion"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Comparison \u2014 DFlash vs EAGLE-3 vs MEDUSA"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "E106 \u2014 Pulse Vector Runtime"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/milestone-sain01/e110-model-catalog.md",
+      "slug": "backlog/epics/milestone-sain01/e110-model-catalog",
+      "title": "E110 \u2014 Model Catalog",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "epic",
+        "sain-01",
+        "model-catalog",
+        "ling-2-6-flash",
+        "nemotron-3-nano-omni",
+        "blackwell-resident",
+        "oracle-core",
+        "vllm",
+        "moe",
+        "quantization"
+      ],
+      "sources": [
+        {
+          "id": "milestone",
+          "type": "file",
+          "file": "wiki/backlog/milestones/sain-01-sovereign-node.md"
+        },
+        {
+          "id": "cmp-ling-vs-nemotron",
+          "type": "wiki",
+          "file": "wiki/comparisons/cmp-ling-26-flash-vs-nemotron-3-nano-omni.md"
+        },
+        {
+          "id": "ling-hf",
+          "type": "documentation",
+          "url": "https://hf.co/inclusionAI/Ling-2.6-flash"
+        },
+        {
+          "id": "nemotron-hf",
+          "type": "documentation",
+          "url": "https://hf.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16"
+        },
+        {
+          "id": "operator-model-candidate-directive",
+          "type": "directive",
+          "file": "raw/notes/2026-05-15-user-directive-sain01-info-hub-ingestion.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "E110 \u2014 Model Catalog",
+        "E110 \u2014 Model Catalog: Ling + Nemotron + Resident Selection"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Milestone \u2014 SAIN-01 Sovereign AI Node"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E102 \u2014 ZFS Storage Layout"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E103 \u2014 VFIO Isolation"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E105 \u2014 Network Segregation"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E107 \u2014 Weaver State Fabric"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E108 \u2014 Load-Balancing Profiles"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E109 \u2014 DFlash Integration"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Comparison \u2014 Ling vs Nemotron"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Local LLM Quantization"
+        }
+      ]
+    },
     {
       "path": "backlog/epics/milestone-v2/e010-model-updates-all-15-models-reflect-current-knowledge.md",
       "slug": "backlog/epics/milestone-v2/e010-model-updates-all-15-models-reflect-current-knowledge",
@@ -2636,6 +3648,138 @@
         {
           "verb": "DEMONSTRATES",
           "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        }
+      ]
+    },
+    {
+      "path": "backlog/milestones/sain-01-sovereign-node.md",
+      "slug": "backlog/milestones/sain-01-sovereign-node",
+      "title": "Milestone \u2014 SAIN-01 Sovereign AI Node",
+      "type": "milestone",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "milestone",
+        "sain-01",
+        "sovereign-os",
+        "hardware",
+        "kernel",
+        "zfs",
+        "vfio",
+        "tetragon",
+        "bitnet",
+        "dflash",
+        "avx512",
+        "zen5",
+        "model-catalog"
+      ],
+      "sources": [
+        {
+          "id": "src-sain-01-sovereign-node-spec",
+          "type": "wiki",
+          "file": "wiki/sources/src-sain-01-sovereign-node-spec.md",
+          "title": "Synthesis \u2014 SAIN-01 Sovereign AI Node Master Specification"
+        },
+        {
+          "id": "l0-dump",
+          "type": "file",
+          "file": "raw/dumps/2026-05-15-sain-01-master-spec-other-conversation-transposition.md"
+        },
+        {
+          "id": "operator-directive",
+          "type": "directive",
+          "file": "raw/notes/2026-05-15-user-directive-sain01-info-hub-ingestion.md"
+        },
+        {
+          "id": "concept-srp-trinity",
+          "type": "wiki",
+          "file": "wiki/domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "Milestone \u2014 SAIN-01 Sovereign AI Node",
+        "Milestone: SAIN-01 Sovereign AI Node",
+        "SAIN-01 Milestone"
+      ],
+      "relationships": [
+        {
+          "verb": "CONTAINS",
+          "target": "E100 \u2014 Hardware Foundation"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "E101 \u2014 Sovereign OS Build"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "E102 \u2014 ZFS Storage Layout"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "E103 \u2014 VFIO Isolation"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "E104 \u2014 Tetragon + Guardian Perimeter"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "E105 \u2014 Network Segregation"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "E106 \u2014 Pulse Vector Runtime"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "E107 \u2014 Weaver State Fabric"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "E108 \u2014 Load-Balancing Profiles"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "E109 \u2014 DFlash Integration"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "E110 \u2014 Model Catalog (Ling / Nemotron / etc.)"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Synthesis \u2014 SAIN-01 Sovereign Node Master Spec"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Concept \u2014 SRP Trinity (Pulse, Weaver, Auditor)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 BitNet b1.58 family"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 DFlash"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 Zen 5 AVX-512"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "L0 verbatim dump"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Operator-directive log"
         }
       ]
     },
@@ -7234,6 +8378,437 @@
       ]
     },
     {
+      "path": "comparisons/cmp-bitnet-vs-fp16-execution-cost.md",
+      "slug": "comparisons/cmp-bitnet-vs-fp16-execution-cost",
+      "title": "BitNet b1.58 Ternary vs FP16 Baseline \u2014 Execution Cost Comparison",
+      "type": "comparison",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "comparison",
+        "ai-models",
+        "bitnet",
+        "ternary",
+        "fp16",
+        "quantization",
+        "cpu-inference",
+        "gpu-inference",
+        "execution-cost",
+        "memory-bandwidth",
+        "energy-efficiency",
+        "sain-01"
+      ],
+      "sources": [
+        {
+          "id": "src-bitnet-b158-ternary-llm",
+          "type": "wiki",
+          "file": "wiki/sources/src-bitnet-b158-ternary-llm.md",
+          "title": "Synthesis \u2014 BitNet b1.58 Ternary LLM Family and bitnet.cpp Inference"
+        },
+        {
+          "id": "concept-1bit-ternary-weights",
+          "type": "wiki",
+          "file": "wiki/domains/ai-models/concept-1bit-ternary-weights.md",
+          "title": "Concept \u2014 1-bit Ternary Weights"
+        },
+        {
+          "id": "src-zen5-avx512-single-cycle",
+          "type": "wiki",
+          "file": "wiki/sources/src-zen5-avx512-single-cycle.md",
+          "title": "Synthesis \u2014 AMD Zen 5 Single-Cycle 512-bit AVX-512"
+        }
+      ],
+      "layer": 3,
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "BitNet b1.58 Ternary vs FP16 Baseline \u2014 Execution Cost Comparison",
+        "Ternary vs FP16",
+        "BitNet b1.58 vs FP16"
+      ],
+      "relationships": [
+        {
+          "verb": "COMPARES TO",
+          "target": "ternary `{\u22121"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "0"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "+1}` weight representation vs FP16 full-precision baseline (logical model architecture held constant; execution path varies)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "BitNet b1.58 synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "1-bit Ternary Weights concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Zen 5 AVX-512 synthesis"
+        },
+        {
+          "verb": "USED BY",
+          "target": "SAIN-01 Sovereign Node Spec"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "DFlash vs EAGLE-3 vs MEDUSA comparison"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Local LLM Quantization"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Dual-CCD Cache Partitioning"
+        }
+      ]
+    },
+    {
+      "path": "comparisons/cmp-dflash-vs-eagle3-vs-medusa.md",
+      "slug": "comparisons/cmp-dflash-vs-eagle3-vs-medusa",
+      "title": "DFlash vs EAGLE-3 vs MEDUSA \u2014 Speculative Decoding Family",
+      "type": "comparison",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "comparison",
+        "ai-models",
+        "speculative-decoding",
+        "inference-acceleration",
+        "dflash",
+        "eagle-3",
+        "medusa",
+        "block-diffusion",
+        "autoregressive-drafting",
+        "parallel-drafting",
+        "acceptance-rate",
+        "sain-01"
+      ],
+      "sources": [
+        {
+          "id": "src-dflash-block-diffusion-spec-dec",
+          "type": "wiki",
+          "file": "wiki/sources/src-dflash-block-diffusion-spec-dec.md",
+          "title": "Synthesis \u2014 DFlash: Block-Diffusion Flash Speculative Decoding"
+        },
+        {
+          "id": "concept-speculative-decoding-block-diffusion",
+          "type": "wiki",
+          "file": "wiki/domains/ai-models/concept-speculative-decoding-block-diffusion.md",
+          "title": "Concept \u2014 Speculative Decoding via Block Diffusion"
+        },
+        {
+          "id": "eagle3-paper",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2503.01840",
+          "title": "EAGLE-3: Scaling up Inference Acceleration of Large Language Models via Training-Time Test"
+        },
+        {
+          "id": "medusa-paper",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2401.10774",
+          "title": "MEDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads"
+        }
+      ],
+      "layer": 3,
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "DFlash vs EAGLE-3 vs MEDUSA \u2014 Speculative Decoding Family",
+        "DFlash vs EAGLE-3",
+        "Speculative Decoding Comparison"
+      ],
+      "relationships": [
+        {
+          "verb": "COMPARES TO",
+          "target": "MEDUSA (arXiv:2401.10774) \u2014 simplest"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "mature"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "multi-head approach"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "EAGLE-3 (arXiv:2503.01840) \u2014 autoregressive draft"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "training-time test"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "DFlash (arXiv:2602.06036) \u2014 block-diffusion draft"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "bidirectional attention"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "DFlash synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Concept \u2014 Speculative Decoding via Block Diffusion"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "BitNet vs FP16 comparison"
+        },
+        {
+          "verb": "USED BY",
+          "target": "SAIN-01 Sovereign Node Spec"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "VFIO GPU Isolation"
+        }
+      ]
+    },
+    {
+      "path": "comparisons/cmp-ling-26-flash-vs-nemotron-3-nano-omni.md",
+      "slug": "comparisons/cmp-ling-26-flash-vs-nemotron-3-nano-omni",
+      "title": "Ling-2.6-flash vs Nemotron-3-Nano-Omni \u2014 Blackwell 96GB Resident Model Comparison",
+      "type": "comparison",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "comparison",
+        "ai-models",
+        "model-catalog",
+        "ling",
+        "nemotron",
+        "bailing-hybrid",
+        "mamba-transformer",
+        "moe",
+        "multimodal",
+        "blackwell",
+        "96gb",
+        "rtx-pro-6000",
+        "sain-01",
+        "oracle-core"
+      ],
+      "sources": [
+        {
+          "id": "ling-2-6-flash-hf",
+          "type": "documentation",
+          "url": "https://hf.co/inclusionAI/Ling-2.6-flash",
+          "title": "inclusionAI/Ling-2.6-flash on Hugging Face"
+        },
+        {
+          "id": "nemotron-3-nano-omni-hf",
+          "type": "documentation",
+          "url": "https://hf.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16",
+          "title": "nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16 on Hugging Face"
+        },
+        {
+          "id": "ling-bailing-paper",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2503.05139",
+          "title": "Every FLOP Counts: Scaling a 300B Mixture-of-Experts LING LLM without Premium GPUs"
+        },
+        {
+          "id": "nemotron-3-nano-omni-paper",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2604.24954",
+          "title": "Nemotron 3 Nano Omni: Efficient and Open Multimodal Intelligence"
+        },
+        {
+          "id": "nemotron-3-nano-base-paper",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2512.20848",
+          "title": "Nemotron 3 Nano: Open, Efficient MoE Hybrid Mamba-Transformer Model for Agentic Reasoning"
+        },
+        {
+          "id": "nemotron-3-family-whitepaper",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2512.20856",
+          "title": "NVIDIA Nemotron 3: Efficient and Open Intelligence"
+        },
+        {
+          "id": "src-sain-01-sovereign-node-spec",
+          "type": "wiki",
+          "file": "wiki/sources/src-sain-01-sovereign-node-spec.md",
+          "title": "Synthesis \u2014 SAIN-01 Sovereign Node Master Spec"
+        },
+        {
+          "id": "operator-model-candidate-directive",
+          "type": "directive",
+          "file": "raw/notes/2026-05-15-user-directive-sain01-info-hub-ingestion.md"
+        }
+      ],
+      "layer": 3,
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "Ling-2.6-flash vs Nemotron-3-Nano-Omni \u2014 Blackwell 96GB Resident Model Comparison",
+        "Ling vs Nemotron",
+        "Blackwell 96GB Model Catalog Comparison"
+      ],
+      "relationships": [
+        {
+          "verb": "COMPARES TO",
+          "target": "inclusionAI/Ling-2.6-flash (107B, MoE, MIT, text)"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16 (33B, hybrid Mamba-Transformer MoE, multimodal)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "SAIN-01 Sovereign Node Spec"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "BitNet vs FP16"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "DFlash vs EAGLE-3 vs MEDUSA"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "VFIO GPU Isolation"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "ZFS Tiered Storage"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Local LLM Quantization"
+        }
+      ]
+    },
+    {
+      "path": "comparisons/cmp-wall-vs-write-vs-tetragon-for-perimeter.md",
+      "slug": "comparisons/cmp-wall-vs-write-vs-tetragon-for-perimeter",
+      "title": "wall(1) vs write(1) vs Tetragon eBPF \u2014 Operator-Perimeter Mechanisms",
+      "type": "comparison",
+      "domain": "devops",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "",
+      "tags": [
+        "comparison",
+        "devops",
+        "perimeter",
+        "operator-notification",
+        "kernel-enforcement",
+        "tetragon",
+        "ebpf",
+        "wall",
+        "write",
+        "selfdef",
+        "sain-01",
+        "security",
+        "defense-in-depth"
+      ],
+      "sources": [
+        {
+          "id": "src-sain-01-sovereign-node-spec",
+          "type": "wiki",
+          "file": "wiki/sources/src-sain-01-sovereign-node-spec.md",
+          "title": "Synthesis \u2014 SAIN-01 Sovereign Node Master Spec"
+        },
+        {
+          "id": "concept-srp-trinity-pulse-weaver-auditor",
+          "type": "wiki",
+          "file": "wiki/domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor.md",
+          "title": "Concept \u2014 SRP Trinity (Pulse, Weaver, Auditor)"
+        },
+        {
+          "id": "concept-vfio-gpu-isolation-amd-iommu",
+          "type": "wiki",
+          "file": "wiki/domains/devops/concept-vfio-gpu-isolation-amd-iommu.md",
+          "title": "Concept \u2014 VFIO GPU Isolation with AMD IOMMU"
+        },
+        {
+          "id": "selfdef-notify-channels",
+          "type": "project",
+          "project": "selfdef",
+          "path": "docs/operator/channels.md",
+          "title": "selfdef \u2014 notification channels (wall + write among 12 channels)"
+        },
+        {
+          "id": "tetragon-docs",
+          "type": "documentation",
+          "url": "https://tetragon.io/docs/",
+          "title": "Tetragon documentation \u2014 eBPF-based runtime security"
+        }
+      ],
+      "layer": 3,
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "wall(1) vs write(1) vs Tetragon eBPF \u2014 Operator-Perimeter Mechanisms",
+        "Operator Perimeter Comparison",
+        "Notification vs Enforcement"
+      ],
+      "relationships": [
+        {
+          "verb": "COMPARES TO",
+          "target": "`wall(1)` broadcast TTY notification mechanism"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "`write(1)` per-user TTY notification mechanism"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Tetragon eBPF kernel enforcement framework"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "SRP Trinity concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "VFIO GPU Isolation"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "BitNet vs FP16"
+        },
+        {
+          "verb": "USED BY",
+          "target": "SAIN-01 Sovereign Node Spec"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "existing `cyberpunk042/selfdef` notifier chain (wall + write are 2 of 12 selfdef channels; Tetragon is the enforcement layer used by selfdef's `agent-guard` module \u2014 same pattern)"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "future SAIN-01 + selfdef cross-repo policy merge (single Tetragon daemon authoring authority)"
+        }
+      ]
+    },
+    {
       "path": "comparisons/cross-domain-patterns.md",
       "slug": "comparisons/cross-domain-patterns",
       "title": "Cross-Domain Patterns",
@@ -8387,6 +9962,41 @@
           "target": "Single-Active Backend with LRU Eviction"
         }
       ]
+    },
+    {
+      "path": "decisions/01_drafts/claude-code-stop-hook-block-cap-raise-default-to-1000-for-perpetual-mandate-work.md",
+      "slug": "decisions/01_drafts/claude-code-stop-hook-block-cap-raise-default-to-1000-for-perpetual-mandate-work",
+      "title": "Decision: raise CLAUDE_CODE_STOP_HOOK_BLOCK_CAP to 1000 (default 8) for any operator using perpetual `/goal` mandates",
+      "type": "decision",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-18",
+      "updated": "2026-05-18",
+      "last_reviewed": "",
+      "tags": [
+        "claude-code",
+        "stop-hook",
+        "goal",
+        "settings",
+        "environment",
+        "decision",
+        "operator-directive"
+      ],
+      "sources": [
+        {
+          "id": "operator-decision-2026-05-18",
+          "type": "directive",
+          "note": "Operator selected 'Raise the cap to 1000 (Recommended)' option in live AskUserQuestion during the perpetual /goal investigation session"
+        }
+      ],
+      "layer": 6,
+      "maturity": "seed",
+      "derived_from": [
+        "wiki/lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch.md"
+      ],
+      "aliases": [],
+      "relationships": []
     },
     {
       "path": "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config.md",
@@ -10414,6 +12024,109 @@
       ]
     },
     {
+      "path": "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor.md",
+      "slug": "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor",
+      "title": "SRP Trinity \u2014 Pulse, Weaver, Auditor",
+      "type": "concept",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "ai-agents",
+        "srp",
+        "single-responsibility-principle",
+        "hardware-mapping",
+        "sain-01",
+        "pulse",
+        "weaver",
+        "auditor",
+        "trinity",
+        "sovereign-node",
+        "vector-core",
+        "sandboxed-fabric",
+        "immutable-gatekeeper",
+        "tetragon",
+        "ebpf",
+        "zfs",
+        "vfio"
+      ],
+      "sources": [
+        {
+          "id": "src-sain-01-sovereign-node-spec",
+          "type": "wiki",
+          "file": "wiki/sources/src-sain-01-sovereign-node-spec.md",
+          "title": "Synthesis \u2014 SAIN-01 Sovereign AI Node Master Specification"
+        },
+        {
+          "id": "src-zen5-avx512-single-cycle",
+          "type": "wiki",
+          "file": "wiki/sources/src-zen5-avx512-single-cycle.md",
+          "title": "Synthesis \u2014 AMD Zen 5 Single-Cycle 512-bit AVX-512 and Dual-CCD Topology"
+        },
+        {
+          "id": "src-bitnet-b158-ternary-llm",
+          "type": "wiki",
+          "file": "wiki/sources/src-bitnet-b158-ternary-llm.md",
+          "title": "Synthesis \u2014 BitNet b1.58 Ternary LLM Family and bitnet.cpp Inference"
+        }
+      ],
+      "layer": 2,
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "SRP Trinity \u2014 Pulse, Weaver, Auditor",
+        "The Sovereign Trinity",
+        "Pulse Weaver Auditor",
+        "SAIN-01 Trinity",
+        "SRP Hardware Mapping"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "SAIN-01 Sovereign Node Spec"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Single Responsibility Principle at the system level (hardware-mapped)"
+        },
+        {
+          "verb": "ENABLED BY",
+          "target": "Dual-CCD Cache Partitioning"
+        },
+        {
+          "verb": "ENABLED BY",
+          "target": "VFIO GPU Isolation"
+        },
+        {
+          "verb": "ENABLED BY",
+          "target": "ZFS Tiered Storage for LLM Inference"
+        },
+        {
+          "verb": "USED BY",
+          "target": "future `wiki/backlog/milestones/sain-01-sovereign-node.md` (each Trinity module \u2194 one epic)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "1-bit Ternary Weights"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Speculative Decoding via Block Diffusion"
+        },
+        {
+          "verb": "CONSTRAINS",
+          "target": "future SAIN-01 hardware variants (Trinity boundaries are the evaluation criteria)"
+        },
+        {
+          "verb": "CONSTRAINS",
+          "target": "Stage-2 selfdef integration (the Auditor's Tetragon policies must coexist with selfdef's agent-guard policies)"
+        }
+      ]
+    },
+    {
       "path": "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools.md",
       "slug": "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
       "title": "Concept \u2014 The Declarative Agent Programming Spectrum: 5 layers (SDD \u00b7 Skills \u00b7 Context/Context-Injection \u00b7 Hooks \u00b7 Harness) unified, with integration matrix across tools (Claude OS \u00b7 Multica \u00b7 OpenClaw \u00b7 Claude Code \u00b7 OpenCode \u00b7 Hermes \u00b7 Codex \u00b7 Gemini) and destinations (Wiki LLM \u00b7 PM tools)",
@@ -11535,6 +13248,180 @@
         {
           "verb": "CONTRADICTS",
           "target": "Task Lifecycle Stage-Gating"
+        }
+      ]
+    },
+    {
+      "path": "domains/ai-models/concept-1bit-ternary-weights.md",
+      "slug": "domains/ai-models/concept-1bit-ternary-weights",
+      "title": "1-bit Ternary Weights",
+      "type": "concept",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "ai-models",
+        "quantization",
+        "ternary",
+        "bitnet",
+        "bitlinear",
+        "low-bit-inference",
+        "1bit",
+        "mpgemm",
+        "lookup-table",
+        "cpu-inference",
+        "avx512-vnni",
+        "vpdpbusd",
+        "integer-arithmetic",
+        "energy-efficiency"
+      ],
+      "sources": [
+        {
+          "id": "src-bitnet-b158-ternary-llm",
+          "type": "wiki",
+          "file": "wiki/sources/src-bitnet-b158-ternary-llm.md",
+          "title": "Synthesis \u2014 BitNet b1.58 Ternary LLM Family and bitnet.cpp Inference"
+        },
+        {
+          "id": "src-zen5-avx512-single-cycle",
+          "type": "wiki",
+          "file": "wiki/sources/src-zen5-avx512-single-cycle.md",
+          "title": "Synthesis \u2014 AMD Zen 5 Single-Cycle 512-bit AVX-512 and Dual-CCD Topology"
+        },
+        {
+          "id": "src-sain-01-sovereign-node-spec",
+          "type": "wiki",
+          "file": "wiki/sources/src-sain-01-sovereign-node-spec.md",
+          "title": "Synthesis \u2014 SAIN-01 Sovereign AI Node Master Specification"
+        }
+      ],
+      "layer": 2,
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "1-bit Ternary Weights",
+        "1.58-bit Weights",
+        "BitLinear",
+        "Ternary Quantization"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 BitNet b1.58 Ternary LLM Family and bitnet.cpp Inference"
+        },
+        {
+          "verb": "ENABLED BY",
+          "target": "Synthesis \u2014 Zen 5 Single-Cycle 512-bit AVX-512"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "ternary-weight inference paradigm (BitNet line of research from Microsoft Research)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Local LLM Quantization"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Speculative Decoding via Block Diffusion"
+        },
+        {
+          "verb": "USED BY",
+          "target": "SAIN-01 Sovereign Node Spec"
+        },
+        {
+          "verb": "CONTRASTS WITH",
+          "target": "standard FP16 / BF16 / INT8 weight quantization (less aggressive than ternary; preserves multiplication in the matmul path)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "HRM/TRM Tiny Recursion Models"
+        }
+      ]
+    },
+    {
+      "path": "domains/ai-models/concept-speculative-decoding-block-diffusion.md",
+      "slug": "domains/ai-models/concept-speculative-decoding-block-diffusion",
+      "title": "Speculative Decoding via Block Diffusion",
+      "type": "concept",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "ai-models",
+        "inference-acceleration",
+        "speculative-decoding",
+        "block-diffusion",
+        "parallel-drafting",
+        "bidirectional-attention",
+        "eagle-3",
+        "draft-target-architecture",
+        "acceptance-rate",
+        "lossless-acceleration",
+        "code-generation",
+        "math-reasoning"
+      ],
+      "sources": [
+        {
+          "id": "src-dflash-block-diffusion-spec-dec",
+          "type": "wiki",
+          "file": "wiki/sources/src-dflash-block-diffusion-spec-dec.md",
+          "title": "Synthesis \u2014 DFlash: Block-Diffusion Flash Speculative Decoding"
+        },
+        {
+          "id": "src-sain-01-sovereign-node-spec",
+          "type": "wiki",
+          "file": "wiki/sources/src-sain-01-sovereign-node-spec.md",
+          "title": "Synthesis \u2014 SAIN-01 Sovereign AI Node Master Specification"
+        }
+      ],
+      "layer": 2,
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "Speculative Decoding via Block Diffusion",
+        "Block-Diffusion Speculative Decoding",
+        "Flash Speculative Decoding",
+        "Parallel Drafting"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 DFlash: Block-Diffusion Flash Speculative Decoding"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "block-diffusion speculative-decoding pattern"
+        },
+        {
+          "verb": "USED BY",
+          "target": "SAIN-01 Sovereign Node Spec"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "1-bit Ternary Weights"
+        },
+        {
+          "verb": "CONTRASTS WITH",
+          "target": "classical autoregressive speculative decoding (EAGLE, MEDUSA, S3D)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Local LLM Quantization"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "HRM/TRM Tiny Recursion Models"
+        },
+        {
+          "verb": "ENABLED BY",
+          "target": "deep draft models + bidirectional attention (architectural prerequisites)"
         }
       ]
     },
@@ -15388,6 +17275,265 @@
       ]
     },
     {
+      "path": "domains/devops/concept-dual-ccd-cache-partitioning-9900x.md",
+      "slug": "domains/devops/concept-dual-ccd-cache-partitioning-9900x",
+      "title": "Dual-CCD Cache Partitioning (Zen 5 9900X)",
+      "type": "concept",
+      "domain": "devops",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "devops",
+        "cpu",
+        "amd",
+        "zen5",
+        "ryzen-9-9900x",
+        "ccd",
+        "dual-ccd",
+        "infinity-fabric",
+        "l3-cache",
+        "core-pinning",
+        "taskset",
+        "numa",
+        "sain-01",
+        "cache-locality",
+        "srp"
+      ],
+      "sources": [
+        {
+          "id": "src-zen5-avx512-single-cycle",
+          "type": "wiki",
+          "file": "wiki/sources/src-zen5-avx512-single-cycle.md",
+          "title": "Synthesis \u2014 AMD Zen 5 Single-Cycle 512-bit AVX-512 and Dual-CCD Topology"
+        },
+        {
+          "id": "src-sain-01-sovereign-node-spec",
+          "type": "wiki",
+          "file": "wiki/sources/src-sain-01-sovereign-node-spec.md",
+          "title": "Synthesis \u2014 SAIN-01 Sovereign AI Node Master Specification"
+        }
+      ],
+      "layer": 2,
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "Dual-CCD Cache Partitioning (Zen 5 9900X)",
+        "Dual-CCD Topology",
+        "Infinity Fabric Crossing",
+        "CCD-Aware Scheduling"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Zen 5 AVX-512 single-cycle datapath"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "SAIN-01 Sovereign Node Spec"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "CCD-aware thread pinning for cache-locality preservation"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "SRP Trinity"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "1-bit Ternary Weights"
+        },
+        {
+          "verb": "CONSTRAINS",
+          "target": "9900X minimum CPU (lower SKUs lack dual-CCD; partition collapses)"
+        },
+        {
+          "verb": "CONSTRAINED BY",
+          "target": "SMT policy (thread masks change if SMT is disabled)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "ZFS Tiered Storage"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "NUMA scheduling concepts more broadly (dual-CCD is NUMA-like at the cache level, even on a single-socket part)"
+        }
+      ]
+    },
+    {
+      "path": "domains/devops/concept-vfio-gpu-isolation-amd-iommu.md",
+      "slug": "domains/devops/concept-vfio-gpu-isolation-amd-iommu",
+      "title": "VFIO GPU Isolation with AMD IOMMU",
+      "type": "concept",
+      "domain": "devops",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "devops",
+        "vfio",
+        "gpu-isolation",
+        "amd-iommu",
+        "iommu",
+        "pci-passthrough",
+        "vfio-pci",
+        "sandboxing",
+        "sain-01",
+        "rtx-3090",
+        "blackwell",
+        "hardware-isolation",
+        "kernel",
+        "grub"
+      ],
+      "sources": [
+        {
+          "id": "src-sain-01-sovereign-node-spec",
+          "type": "wiki",
+          "file": "wiki/sources/src-sain-01-sovereign-node-spec.md",
+          "title": "Synthesis \u2014 SAIN-01 Sovereign AI Node Master Specification"
+        },
+        {
+          "id": "vfio-kernel-docs",
+          "type": "documentation",
+          "url": "https://docs.kernel.org/driver-api/vfio.html",
+          "title": "Linux kernel VFIO documentation"
+        }
+      ],
+      "layer": 2,
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "VFIO GPU Isolation with AMD IOMMU",
+        "VFIO Passthrough",
+        "GPU Sandboxing via vfio-pci"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "SAIN-01 Sovereign Node Spec"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Hardware-level GPU isolation via Linux VFIO + AMD IOMMU"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "SRP Trinity (Weaver)"
+        },
+        {
+          "verb": "USED BY",
+          "target": "ZFS Tiered Storage"
+        },
+        {
+          "verb": "CONSTRAINED BY",
+          "target": "ASUS ProArt X870E-Creator PCIe topology (M.2_2 must remain empty for x8/x8 + clean IOMMU split)"
+        },
+        {
+          "verb": "CONSTRAINED BY",
+          "target": "Secure Boot + MOK enrollment (custom kernel + DKMS modules need signing)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Infrastructure as Code Patterns"
+        },
+        {
+          "verb": "CONTRASTS WITH",
+          "target": "Software-only container isolation (no IOMMU = no hardware DMA isolation)"
+        }
+      ]
+    },
+    {
+      "path": "domains/devops/concept-zfs-tiered-storage-llm-inference.md",
+      "slug": "domains/devops/concept-zfs-tiered-storage-llm-inference",
+      "title": "ZFS Tiered Storage for LLM Inference",
+      "type": "concept",
+      "domain": "devops",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "devops",
+        "zfs",
+        "storage",
+        "nvme",
+        "llm-inference",
+        "dataset-stratification",
+        "recordsize",
+        "compression",
+        "sync-always",
+        "atomic-state",
+        "copies-2",
+        "sain-01",
+        "tank-models",
+        "tank-context",
+        "tank-agents"
+      ],
+      "sources": [
+        {
+          "id": "src-sain-01-sovereign-node-spec",
+          "type": "wiki",
+          "file": "wiki/sources/src-sain-01-sovereign-node-spec.md",
+          "title": "Synthesis \u2014 SAIN-01 Sovereign AI Node Master Specification"
+        },
+        {
+          "id": "openzfs-direct-io-2-2",
+          "type": "documentation",
+          "url": "https://openzfs.org/wiki/Documentation",
+          "title": "OpenZFS documentation (O_DIRECT support landed in 2.2)"
+        }
+      ],
+      "layer": 2,
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "ZFS Tiered Storage for LLM Inference",
+        "ZFS Dataset Stratification",
+        "Tiered NVMe Storage for AI Workloads"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "SAIN-01 Sovereign Node Spec"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "ZFS dataset stratification by workload access pattern"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "SRP Trinity"
+        },
+        {
+          "verb": "USED BY",
+          "target": "1-bit Ternary Weights"
+        },
+        {
+          "verb": "USED BY",
+          "target": "VFIO GPU Isolation"
+        },
+        {
+          "verb": "CONSTRAINED BY",
+          "target": "OpenZFS version (`O_DIRECT` semantics; \u22652.2 required for the atomic-state pattern's clean implementation)"
+        },
+        {
+          "verb": "CONSTRAINS",
+          "target": "Backup posture (RAID 0 = no native redundancy; external backup mandatory)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Infrastructure as Code Patterns"
+        }
+      ]
+    },
+    {
       "path": "domains/devops/devops-control-plane.md",
       "slug": "domains/devops/devops-control-plane",
       "title": "devops-control-plane",
@@ -18720,6 +20866,86 @@
       ]
     },
     {
+      "path": "lessons/01_drafts/build-pipeline-via-sdd-tdd-real-bugs-caught-only-when-tests-execute-actual-renderers.md",
+      "slug": "lessons/01_drafts/build-pipeline-via-sdd-tdd-real-bugs-caught-only-when-tests-execute-actual-renderers",
+      "title": "Build Pipeline via SDD+TDD \u2014 Real Bugs Surface Only When Tests Execute Actual Renderers (Not Just Schema-Validate)",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-16",
+      "updated": "2026-05-16",
+      "last_reviewed": "2026-05-16",
+      "tags": [
+        "sdd",
+        "tdd",
+        "layer-3-tests",
+        "substantive-tests",
+        "schema-vs-runtime",
+        "quality-bar",
+        "sovereign-os-arc",
+        "cross-domain"
+      ],
+      "sources": [
+        {
+          "id": "sovereign-os-main",
+          "type": "project",
+          "project": "cyberpunk042/sovereign-os",
+          "path": "main"
+        },
+        {
+          "id": "sain-01-milestone",
+          "type": "wiki",
+          "file": "wiki/backlog/milestones/sain-01-sovereign-node.md"
+        },
+        {
+          "id": "sdd-008-test-harness",
+          "type": "project",
+          "project": "cyberpunk042/sovereign-os",
+          "path": "docs/sdd/008-test-harness.md"
+        },
+        {
+          "id": "directive-2026-05-16",
+          "type": "directive",
+          "file": "raw/notes/2026-05-16-user-directive-sovereign-os-arc-opening.md"
+        }
+      ],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [
+        "P4 \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them (PRIMARY parent \u2014 schema-conformance is a declaration; runtime behavior is the verification)",
+        "Models Are Built in Layers, Not All at Once (SFIF specialization \u2014 Layer 1 schema before Layer 3 execution; both must ship)",
+        "Infrastructure Must Be Reproducible, Not Manual (build pipeline as the manifestation)"
+      ],
+      "aliases": [
+        "Substantive vs scaffold tests",
+        "Layer 3 catches what Layer 1 cannot",
+        "Sovereign-OS arc Lesson 1"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "The Agent Must Practice What It Documents"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "P4 (Declarations Are Aspirational Until Infrastructure Verifies Them) \u2014 schema-conformance is a declaration; on-disk behavior is the verification."
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "SFIF / [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers]]"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "future projects' TDD planning \u2014 Layer 3 is non-optional; budget it from the start."
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Infrastructure Must Be Reproducible"
+        }
+      ]
+    },
+    {
       "path": "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it.md",
       "slug": "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
       "title": "Lesson \u2014 Claude Code hook output channel is event-specific; `hookSpecificOutput.additionalContext` is valid for only 6 events (PostCompact / Stop / SessionEnd / others reject it)",
@@ -18847,6 +21073,52 @@
         }
       ],
       "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch.md",
+      "slug": "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch",
+      "title": "Claude Code Stop hook block cap defaults to 8 \u2014 perpetual `/goal` appears to stop after ~8 rounds",
+      "type": "lesson",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-18",
+      "updated": "2026-05-18",
+      "last_reviewed": "",
+      "tags": [
+        "claude-code",
+        "hooks",
+        "stop-hook",
+        "goal",
+        "settings",
+        "environment",
+        "perpetual-mandate",
+        "safety-cap",
+        "agent-loop"
+      ],
+      "sources": [
+        {
+          "id": "operator-investigation-2026-05-18",
+          "type": "directive",
+          "note": "Operator reported '/goal keeps being removed and conversation stops' glitch during perpetual mandate work; investigation requested"
+        },
+        {
+          "id": "claude-code-binary-decompilation-2026-05-18",
+          "type": "empirical",
+          "file": "/opt/claude-code/bin/claude",
+          "note": "Strings dump + control-flow window around blocking_limit / CLAUDE_CODE_STOP_HOOK_BLOCK_CAP"
+        },
+        {
+          "id": "claude-code-hooks-reference",
+          "type": "external",
+          "url": "https://code.claude.com/docs/en/hooks"
+        }
+      ],
+      "layer": 4,
       "maturity": "seed",
       "derived_from": [],
       "aliases": [],
@@ -46556,6 +48828,107 @@
       ]
     },
     {
+      "path": "sources/src-bitnet-b158-ternary-llm.md",
+      "slug": "sources/src-bitnet-b158-ternary-llm",
+      "title": "Synthesis \u2014 BitNet b1.58 Ternary LLM Family and bitnet.cpp Inference",
+      "type": "source-synthesis",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "ai-models",
+        "quantization",
+        "1bit",
+        "ternary",
+        "bitnet",
+        "bitlinear",
+        "low-bit-inference",
+        "cpu-inference",
+        "microsoft-research",
+        "lookup-table",
+        "edge-inference",
+        "energy-efficiency",
+        "mpgemm",
+        "avx512-vnni"
+      ],
+      "sources": [
+        {
+          "id": "bitnet-b158-arxiv-2402-17764",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2402.17764"
+        },
+        {
+          "id": "bitnet-cpp-1bit-ai-infra-arxiv-2410-16144",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2410.16144"
+        },
+        {
+          "id": "bitnet-cpp-paper-arxiv-2502-11880",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2502.11880"
+        },
+        {
+          "id": "bitnet-b158-2b4t-arxiv-2504-12285",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2504.12285"
+        },
+        {
+          "id": "bitnet-bottom-up-arxiv-2411-05882",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2411.05882"
+        },
+        {
+          "id": "microsoft-bitnet-github",
+          "type": "documentation",
+          "url": "https://github.com/microsoft/BitNet"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 BitNet b1.58 Ternary LLM Family and bitnet.cpp Inference",
+        "BitNet b1.58",
+        "1-bit LLM",
+        "1.58-bit LLM",
+        "bitnet.cpp",
+        "ternary LLM"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Zen 5 AVX-512 single-cycle 512-bit datapath"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "SAIN-01 Sovereign Node Master Spec"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "DFlash speculative decoding"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "LLM Architecture Gallery"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "HRM/TRM Tiny Recursion Models"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "standard FP16 / BF16 transformer baselines (the b1.58 line's reference comparison)"
+        },
+        {
+          "verb": "CONTRASTS WITH",
+          "target": "4-bit and 8-bit weight quantization schemes (BitNet's ternary is more aggressive; the technique is structurally different \u2014 no de-quantization in the inference path)"
+        }
+      ]
+    },
+    {
       "path": "sources/src-bmad-method-agile-ai-development-framework.md",
       "slug": "sources/src-bmad-method-agile-ai-development-framework",
       "title": "Synthesis: BMAD-METHOD \u2014 Agile AI-Driven Development Framework",
@@ -46848,6 +49221,119 @@
         {
           "verb": "RELATES TO",
           "target": "Model \u2014 Ecosystem Architecture"
+        }
+      ]
+    },
+    {
+      "path": "sources/src-dflash-block-diffusion-spec-dec.md",
+      "slug": "sources/src-dflash-block-diffusion-spec-dec",
+      "title": "Synthesis \u2014 DFlash: Block-Diffusion Flash Speculative Decoding",
+      "type": "source-synthesis",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "ai-models",
+        "speculative-decoding",
+        "block-diffusion",
+        "dflash",
+        "eagle-3",
+        "parallel-drafting",
+        "inference-acceleration",
+        "qwen3",
+        "gemma-4",
+        "math-reasoning",
+        "code-generation",
+        "bidirectional-attention",
+        "z-lab",
+        "lossless-acceleration"
+      ],
+      "sources": [
+        {
+          "id": "dflash-arxiv-2602-06036",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2602.06036"
+        },
+        {
+          "id": "dflash-github-z-lab",
+          "type": "documentation",
+          "url": "https://github.com/z-lab/dflash"
+        },
+        {
+          "id": "dflash-zlab-project",
+          "type": "documentation",
+          "url": "https://z-lab.ai/projects/dflash/"
+        },
+        {
+          "id": "dflash-baseten-blog",
+          "type": "article",
+          "url": "https://www.baseten.co/blog/dflash-faster-llm-inference/"
+        },
+        {
+          "id": "dflash-spheron-blog",
+          "type": "article",
+          "url": "https://www.spheron.network/blog/dflash-block-diffusion-speculative-decoding-gpu-cloud/"
+        },
+        {
+          "id": "dflash-google-dev-blog",
+          "type": "article",
+          "url": "https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/"
+        },
+        {
+          "id": "dflash-luce-rits",
+          "type": "article",
+          "url": "https://rits.shanghai.nyu.edu/ai/luce-dflash-brings-2x-speculative-decoding-to-qwen3-6-27b-on-a-single-rtx-3090/"
+        },
+        {
+          "id": "operator-dflash-framing",
+          "type": "directive",
+          "file": "raw/notes/2026-05-15-user-directive-sain01-info-hub-ingestion.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 DFlash: Block-Diffusion Flash Speculative Decoding",
+        "DFlash",
+        "Block Diffusion Speculative Decoding",
+        "Flash Speculative Decoding"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Zen 5 AVX-512 single-cycle 512-bit datapath"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "SAIN-01 Sovereign Node Master Spec"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "BitNet b1.58 ternary LLM"
+        },
+        {
+          "verb": "CONTRASTS WITH",
+          "target": "classical autoregressive speculative decoding (EAGLE, MEDUSA, S3D) \u2014 DFlash's block-diffusion draft is the differentiator"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "LLM Architecture Gallery"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "HRM/TRM Tiny Recursion Models"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "future `wiki/comparisons/cmp-dflash-vs-eagle3-vs-medusa.md` (L3 head-to-head comparison)"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "future `wiki/comparisons/cmp-ling-26-flash-vs-nemotron-3-nano-omni.md` (model-catalog comparison; DFlash candidates may apply to one or both)"
         }
       ]
     },
@@ -47557,6 +50043,99 @@
       ]
     },
     {
+      "path": "sources/src-sain-01-sovereign-node-spec.md",
+      "slug": "sources/src-sain-01-sovereign-node-spec",
+      "title": "Synthesis \u2014 SAIN-01 Sovereign AI Node Master Specification",
+      "type": "source-synthesis",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "sain-01",
+        "sovereign-os",
+        "hardware",
+        "kernel",
+        "zfs",
+        "vfio",
+        "tetragon",
+        "bitnet",
+        "dflash",
+        "1bit",
+        "avx512",
+        "zen5",
+        "debian",
+        "infrastructure",
+        "operator-vision",
+        "sovereign-node"
+      ],
+      "sources": [
+        {
+          "id": "sain01-l0-dump",
+          "type": "file",
+          "file": "raw/dumps/2026-05-15-sain-01-master-spec-other-conversation-transposition.md"
+        },
+        {
+          "id": "sain01-operator-directive",
+          "type": "directive",
+          "file": "raw/notes/2026-05-15-user-directive-sain01-info-hub-ingestion.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 SAIN-01 Sovereign AI Node Master Specification",
+        "SAIN-01",
+        "Sovereign AI Node",
+        "Sovereign OS"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "L0 verbatim dump"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Operator-directive log"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "BitNet b1.58 ternary LLM family"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "DFlash block-diffusion speculative decoding"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Zen 5 microarchitecture and AVX-512 single-cycle path"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "future `wiki/backlog/milestones/sain-01-sovereign-node.md` (milestone)"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "future `wiki/backlog/epics/milestone-sain01/epic-*.md` (11 planned epics)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "HRM/TRM Tiny Recursion Models"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "LLM Architecture Gallery"
+        },
+        {
+          "verb": "CONSTRAINS",
+          "target": "future `cyberpunk042/selfdef` Epics on SAIN-01 host deployment (Tetragon policy cross-link, state-fabric integration)"
+        }
+      ]
+    },
+    {
       "path": "sources/src-skillmd-claudemd-agentsmd-three-layer-context.md",
       "slug": "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
       "title": "Synthesis \u2014 SKILL.md vs CLAUDE.md vs AGENTS.md \u2014 Three-Layer Agent Context Architecture",
@@ -47878,6 +50457,130 @@
         {
           "verb": "ENABLES",
           "target": "Never Synthesize From Descriptions Alone"
+        }
+      ]
+    },
+    {
+      "path": "sources/src-zen5-avx512-single-cycle.md",
+      "slug": "sources/src-zen5-avx512-single-cycle",
+      "title": "Synthesis \u2014 AMD Zen 5 Single-Cycle 512-bit AVX-512 and Dual-CCD Topology",
+      "type": "source-synthesis",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-15",
+      "updated": "2026-05-15",
+      "last_reviewed": "",
+      "tags": [
+        "hardware",
+        "cpu",
+        "microarchitecture",
+        "amd",
+        "zen5",
+        "ryzen-9000",
+        "9900x",
+        "avx-512",
+        "vnni",
+        "vpdpbusd",
+        "simd",
+        "zmm-registers",
+        "ccd",
+        "infinity-fabric",
+        "l3-cache",
+        "bitnet",
+        "low-bit-inference"
+      ],
+      "sources": [
+        {
+          "id": "zen5-wikipedia",
+          "type": "documentation",
+          "url": "https://en.wikipedia.org/wiki/Zen_5"
+        },
+        {
+          "id": "phoronix-zen5-avx512",
+          "type": "article",
+          "url": "https://www.phoronix.com/review/amd-zen5-avx-512-9950x"
+        },
+        {
+          "id": "hwcooling-zen5-avx512-x265",
+          "type": "article",
+          "url": "https://www.hwcooling.net/en/how-much-does-avx-512-help-zen-5-in-x265-and-how-to-turn-it-on/"
+        },
+        {
+          "id": "hwcooling-zen5-confirmed-details",
+          "type": "article",
+          "url": "https://www.hwcooling.net/en/amd-confirms-zen-5-details-6-alus-full-performance-avx-512en/"
+        },
+        {
+          "id": "chipsandcheese-zen5-avx512-frequency",
+          "type": "article",
+          "url": "https://chipsandcheese.com/p/zen-5s-avx-512-frequency-behavior"
+        },
+        {
+          "id": "tomshardware-zen5-avx512",
+          "type": "article",
+          "url": "https://www.tomshardware.com/pc-components/cpus/amds-zen-5-avx-512-performance-tested-zen-5-performs-significantly-better-than-zen-4-on-linux-without-consuming-any-more-power"
+        },
+        {
+          "id": "9meters-zen5-ryzen-9000",
+          "type": "article",
+          "url": "https://9meters.com/technology/pc/amd-ryzen-9000-series-zen-5-cpu-timeline-specs-and-performance"
+        },
+        {
+          "id": "hwcooling-zen5-ipc-specs",
+          "type": "article",
+          "url": "https://www.hwcooling.net/en/ryzen-9000-is-here-zen-5-architecture-ipc-and-power/"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 AMD Zen 5 Single-Cycle 512-bit AVX-512 and Dual-CCD Topology",
+        "Zen 5 AVX-512",
+        "9900X Microarchitecture",
+        "Single-Cycle AVX-512"
+      ],
+      "relationships": [
+        {
+          "verb": "ENABLES",
+          "target": "BitNet b1.58 ternary LLM family"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "SAIN-01 Sovereign Node Master Spec"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "DFlash block-diffusion speculative decoding"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Intel Lunar Lake (consumer AVX-512 returned)"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Intel Sapphire Rapids / Granite Rapids server (AVX-512 + more cores)"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Zen 4 (double-pumped AVX-512)"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Apple M-series (different SIMD architecture entirely)"
+        },
+        {
+          "verb": "CONTRASTS WITH",
+          "target": "Intel Alder/Raptor/Arrow Lake consumer (no AVX-512) \u2014 Zen 5 is the only first-class AVX-512 consumer desktop option as of 2026"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "future `wiki/comparisons/cmp-zen5-vs-zen4-vs-sapphire-rapids-low-bit.md` (L3 head-to-head for low-bit inference targets)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "future `wiki/domains/devops/concept-dual-ccd-cache-partitioning-9900x.md` (L2 concept page on CCD-aware scheduling)"
         }
       ]
     },
@@ -61339,20 +64042,24 @@
   ],
   "domains": {
     "backlog": {
-      "page_count": 113,
-      "relationship_count": 509
+      "page_count": 125,
+      "relationship_count": 633
     },
     "cross-domain": {
-      "page_count": 297,
-      "relationship_count": 1809
+      "page_count": 298,
+      "relationship_count": 1814
     },
     "ai-agents": {
-      "page_count": 76,
-      "relationship_count": 577
+      "page_count": 79,
+      "relationship_count": 587
     },
     "ai-models": {
-      "page_count": 16,
-      "relationship_count": 93
+      "page_count": 25,
+      "relationship_count": 174
+    },
+    "devops": {
+      "page_count": 18,
+      "relationship_count": 133
     },
     "tools-integration": {
       "page_count": 38,
@@ -61361,10 +64068,6 @@
     "tools-and-platforms": {
       "page_count": 29,
       "relationship_count": 195
-    },
-    "devops": {
-      "page_count": 14,
-      "relationship_count": 99
     },
     "automation": {
       "page_count": 7,
@@ -61397,6 +64100,17 @@
   },
   "tags": {
     "epic": [
+      "backlog/epics/milestone-sain01/e100-hardware-foundation",
+      "backlog/epics/milestone-sain01/e101-sovereign-os-build",
+      "backlog/epics/milestone-sain01/e102-zfs-storage-layout",
+      "backlog/epics/milestone-sain01/e103-vfio-isolation",
+      "backlog/epics/milestone-sain01/e104-tetragon-guardian-perimeter",
+      "backlog/epics/milestone-sain01/e105-network-segregation",
+      "backlog/epics/milestone-sain01/e106-pulse-vector-runtime",
+      "backlog/epics/milestone-sain01/e107-weaver-state-fabric",
+      "backlog/epics/milestone-sain01/e108-load-balancing-profiles",
+      "backlog/epics/milestone-sain01/e109-dflash-integration",
+      "backlog/epics/milestone-sain01/e110-model-catalog",
       "backlog/epics/milestone-v2/e010-model-updates-all-15-models-reflect-current-knowledge",
       "backlog/epics/milestone-v2/e011-standards-exemplification-all-15-per-type-standards-with-inline-annotated-e",
       "backlog/epics/milestone-v2/e012-template-enrichment-rich-proto-programming-examples",
@@ -61428,6 +64142,443 @@
       "domains/devops/task-type-artifact-matrix",
       "log/2026-04-10/2026-04-10-directive-quality-evolution-epic",
       "spine/standards/epic-page-standards"
+    ],
+    "sain-01": [
+      "backlog/epics/milestone-sain01/e100-hardware-foundation",
+      "backlog/epics/milestone-sain01/e101-sovereign-os-build",
+      "backlog/epics/milestone-sain01/e102-zfs-storage-layout",
+      "backlog/epics/milestone-sain01/e103-vfio-isolation",
+      "backlog/epics/milestone-sain01/e104-tetragon-guardian-perimeter",
+      "backlog/epics/milestone-sain01/e105-network-segregation",
+      "backlog/epics/milestone-sain01/e106-pulse-vector-runtime",
+      "backlog/epics/milestone-sain01/e107-weaver-state-fabric",
+      "backlog/epics/milestone-sain01/e108-load-balancing-profiles",
+      "backlog/epics/milestone-sain01/e109-dflash-integration",
+      "backlog/epics/milestone-sain01/e110-model-catalog",
+      "backlog/milestones/sain-01-sovereign-node",
+      "comparisons/cmp-bitnet-vs-fp16-execution-cost",
+      "comparisons/cmp-dflash-vs-eagle3-vs-medusa",
+      "comparisons/cmp-ling-26-flash-vs-nemotron-3-nano-omni",
+      "comparisons/cmp-wall-vs-write-vs-tetragon-for-perimeter",
+      "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor",
+      "domains/devops/concept-dual-ccd-cache-partitioning-9900x",
+      "domains/devops/concept-vfio-gpu-isolation-amd-iommu",
+      "domains/devops/concept-zfs-tiered-storage-llm-inference",
+      "sources/src-sain-01-sovereign-node-spec"
+    ],
+    "hardware": [
+      "backlog/epics/milestone-sain01/e100-hardware-foundation",
+      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
+      "backlog/milestones/sain-01-sovereign-node",
+      "backlog/modules/e010-m001-64gb-ram-install-and-verify",
+      "log/2026-04-23-ram-upgrade-48gb-wsl",
+      "sources/src-sain-01-sovereign-node-spec",
+      "sources/src-zen5-avx512-single-cycle",
+      "spine/references/operator-workstation-storage-tiering"
+    ],
+    "pcie": [
+      "backlog/epics/milestone-sain01/e100-hardware-foundation"
+    ],
+    "mok": [
+      "backlog/epics/milestone-sain01/e100-hardware-foundation"
+    ],
+    "secure-boot": [
+      "backlog/epics/milestone-sain01/e100-hardware-foundation"
+    ],
+    "friction-audit": [
+      "backlog/epics/milestone-sain01/e100-hardware-foundation"
+    ],
+    "kernel": [
+      "backlog/epics/milestone-sain01/e101-sovereign-os-build",
+      "backlog/milestones/sain-01-sovereign-node",
+      "domains/devops/concept-vfio-gpu-isolation-amd-iommu",
+      "sources/src-sain-01-sovereign-node-spec"
+    ],
+    "debian": [
+      "backlog/epics/milestone-sain01/e101-sovereign-os-build",
+      "sources/src-sain-01-sovereign-node-spec",
+      "sources/src-suricata-install-quickstart"
+    ],
+    "trixie": [
+      "backlog/epics/milestone-sain01/e101-sovereign-os-build"
+    ],
+    "live-build": [
+      "backlog/epics/milestone-sain01/e101-sovereign-os-build"
+    ],
+    "znver5": [
+      "backlog/epics/milestone-sain01/e101-sovereign-os-build"
+    ],
+    "gcc14": [
+      "backlog/epics/milestone-sain01/e101-sovereign-os-build"
+    ],
+    "dkms": [
+      "backlog/epics/milestone-sain01/e101-sovereign-os-build"
+    ],
+    "zfs": [
+      "backlog/epics/milestone-sain01/e102-zfs-storage-layout",
+      "backlog/milestones/sain-01-sovereign-node",
+      "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor",
+      "domains/devops/concept-zfs-tiered-storage-llm-inference",
+      "sources/src-sain-01-sovereign-node-spec"
+    ],
+    "storage": [
+      "backlog/epics/milestone-sain01/e102-zfs-storage-layout",
+      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
+      "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify",
+      "backlog/modules/e010-m002-dev-sdd-mount-procedure",
+      "backlog/modules/e010-m003-storage-tiering-documentation",
+      "backlog/tasks/T041-author-operator-workstation-storage-tiering-reference",
+      "domains/devops/concept-zfs-tiered-storage-llm-inference",
+      "spine/references/operator-workstation-storage-tiering"
+    ],
+    "nvme": [
+      "backlog/epics/milestone-sain01/e102-zfs-storage-layout",
+      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
+      "domains/devops/concept-zfs-tiered-storage-llm-inference",
+      "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
+      "spine/references/operator-workstation-storage-tiering"
+    ],
+    "raid-0": [
+      "backlog/epics/milestone-sain01/e102-zfs-storage-layout"
+    ],
+    "recordsize": [
+      "backlog/epics/milestone-sain01/e102-zfs-storage-layout",
+      "domains/devops/concept-zfs-tiered-storage-llm-inference"
+    ],
+    "sync-always": [
+      "backlog/epics/milestone-sain01/e102-zfs-storage-layout",
+      "backlog/epics/milestone-sain01/e107-weaver-state-fabric",
+      "domains/devops/concept-zfs-tiered-storage-llm-inference"
+    ],
+    "arc": [
+      "backlog/epics/milestone-sain01/e102-zfs-storage-layout"
+    ],
+    "openzfs": [
+      "backlog/epics/milestone-sain01/e102-zfs-storage-layout"
+    ],
+    "vfio": [
+      "backlog/epics/milestone-sain01/e103-vfio-isolation",
+      "backlog/milestones/sain-01-sovereign-node",
+      "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor",
+      "domains/devops/concept-vfio-gpu-isolation-amd-iommu",
+      "sources/src-sain-01-sovereign-node-spec"
+    ],
+    "iommu": [
+      "backlog/epics/milestone-sain01/e103-vfio-isolation",
+      "domains/devops/concept-vfio-gpu-isolation-amd-iommu"
+    ],
+    "amd-iommu": [
+      "backlog/epics/milestone-sain01/e103-vfio-isolation",
+      "domains/devops/concept-vfio-gpu-isolation-amd-iommu"
+    ],
+    "gpu-isolation": [
+      "backlog/epics/milestone-sain01/e103-vfio-isolation",
+      "domains/devops/concept-vfio-gpu-isolation-amd-iommu"
+    ],
+    "rtx-3090": [
+      "backlog/epics/milestone-sain01/e103-vfio-isolation",
+      "backlog/epics/milestone-sain01/e109-dflash-integration",
+      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
+      "domains/devops/concept-vfio-gpu-isolation-amd-iommu",
+      "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption"
+    ],
+    "blackwell": [
+      "backlog/epics/milestone-sain01/e103-vfio-isolation",
+      "backlog/epics/milestone-sain01/e109-dflash-integration",
+      "comparisons/cmp-ling-26-flash-vs-nemotron-3-nano-omni",
+      "domains/devops/concept-vfio-gpu-isolation-amd-iommu"
+    ],
+    "sandbox": [
+      "backlog/epics/milestone-sain01/e103-vfio-isolation",
+      "domains/tools-and-platforms/openarms",
+      "sources/wiki-methodology/src-context-mode",
+      "spine/models/ecosystem/model-mcp-cli-integration"
+    ],
+    "podman": [
+      "backlog/epics/milestone-sain01/e103-vfio-isolation",
+      "backlog/epics/milestone-sain01/e107-weaver-state-fabric"
+    ],
+    "tetragon": [
+      "backlog/epics/milestone-sain01/e104-tetragon-guardian-perimeter",
+      "backlog/milestones/sain-01-sovereign-node",
+      "comparisons/cmp-wall-vs-write-vs-tetragon-for-perimeter",
+      "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor",
+      "sources/src-sain-01-sovereign-node-spec"
+    ],
+    "ebpf": [
+      "backlog/epics/milestone-sain01/e104-tetragon-guardian-perimeter",
+      "comparisons/cmp-wall-vs-write-vs-tetragon-for-perimeter",
+      "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor"
+    ],
+    "guardian": [
+      "backlog/epics/milestone-sain01/e104-tetragon-guardian-perimeter"
+    ],
+    "auditor": [
+      "backlog/epics/milestone-sain01/e104-tetragon-guardian-perimeter",
+      "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor"
+    ],
+    "kernel-perimeter": [
+      "backlog/epics/milestone-sain01/e104-tetragon-guardian-perimeter"
+    ],
+    "sigkill": [
+      "backlog/epics/milestone-sain01/e104-tetragon-guardian-perimeter"
+    ],
+    "security-audit-log": [
+      "backlog/epics/milestone-sain01/e104-tetragon-guardian-perimeter"
+    ],
+    "defense-in-depth": [
+      "backlog/epics/milestone-sain01/e104-tetragon-guardian-perimeter",
+      "comparisons/cmp-wall-vs-write-vs-tetragon-for-perimeter",
+      "lessons/01_drafts/p5-candidate-defense-in-depth-required-for-cross-cutting-failure-modes-hypothesis",
+      "patterns/01_drafts/auto-compact-disable-implementation-spec-prevention-layer-for-impl-spec-10-defense-in-depth"
+    ],
+    "network": [
+      "backlog/epics/milestone-sain01/e105-network-segregation"
+    ],
+    "marvell": [
+      "backlog/epics/milestone-sain01/e105-network-segregation"
+    ],
+    "intel": [
+      "backlog/epics/milestone-sain01/e105-network-segregation"
+    ],
+    "opnsense": [
+      "backlog/epics/milestone-sain01/e105-network-segregation"
+    ],
+    "vlan": [
+      "backlog/epics/milestone-sain01/e105-network-segregation"
+    ],
+    "jumbo-frames": [
+      "backlog/epics/milestone-sain01/e105-network-segregation"
+    ],
+    "atlantic": [
+      "backlog/epics/milestone-sain01/e105-network-segregation"
+    ],
+    "igc": [
+      "backlog/epics/milestone-sain01/e105-network-segregation"
+    ],
+    "mgmt-vs-data": [
+      "backlog/epics/milestone-sain01/e105-network-segregation"
+    ],
+    "pulse": [
+      "backlog/epics/milestone-sain01/e106-pulse-vector-runtime",
+      "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor"
+    ],
+    "conductor": [
+      "backlog/epics/milestone-sain01/e106-pulse-vector-runtime"
+    ],
+    "bitnet": [
+      "backlog/epics/milestone-sain01/e106-pulse-vector-runtime",
+      "backlog/milestones/sain-01-sovereign-node",
+      "comparisons/cmp-bitnet-vs-fp16-execution-cost",
+      "domains/ai-models/concept-1bit-ternary-weights",
+      "sources/src-bitnet-b158-ternary-llm",
+      "sources/src-sain-01-sovereign-node-spec",
+      "sources/src-zen5-avx512-single-cycle"
+    ],
+    "ternary": [
+      "backlog/epics/milestone-sain01/e106-pulse-vector-runtime",
+      "comparisons/cmp-bitnet-vs-fp16-execution-cost",
+      "domains/ai-models/concept-1bit-ternary-weights",
+      "sources/src-bitnet-b158-ternary-llm"
+    ],
+    "1bit": [
+      "backlog/epics/milestone-sain01/e106-pulse-vector-runtime",
+      "domains/ai-models/concept-1bit-ternary-weights",
+      "sources/src-bitnet-b158-ternary-llm",
+      "sources/src-sain-01-sovereign-node-spec"
+    ],
+    "avx512": [
+      "backlog/epics/milestone-sain01/e106-pulse-vector-runtime",
+      "backlog/milestones/sain-01-sovereign-node",
+      "sources/src-sain-01-sovereign-node-spec"
+    ],
+    "vnni": [
+      "backlog/epics/milestone-sain01/e106-pulse-vector-runtime",
+      "sources/src-zen5-avx512-single-cycle"
+    ],
+    "ccd-pinning": [
+      "backlog/epics/milestone-sain01/e106-pulse-vector-runtime",
+      "backlog/epics/milestone-sain01/e107-weaver-state-fabric"
+    ],
+    "wasm": [
+      "backlog/epics/milestone-sain01/e106-pulse-vector-runtime"
+    ],
+    "aot": [
+      "backlog/epics/milestone-sain01/e106-pulse-vector-runtime"
+    ],
+    "cranelift": [
+      "backlog/epics/milestone-sain01/e106-pulse-vector-runtime"
+    ],
+    "wasmtime": [
+      "backlog/epics/milestone-sain01/e106-pulse-vector-runtime"
+    ],
+    "weaver": [
+      "backlog/epics/milestone-sain01/e107-weaver-state-fabric",
+      "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor"
+    ],
+    "state-fabric": [
+      "backlog/epics/milestone-sain01/e107-weaver-state-fabric"
+    ],
+    "atomic-writes": [
+      "backlog/epics/milestone-sain01/e107-weaver-state-fabric"
+    ],
+    "grpc": [
+      "backlog/epics/milestone-sain01/e107-weaver-state-fabric"
+    ],
+    "claude-md": [
+      "backlog/epics/milestone-sain01/e107-weaver-state-fabric",
+      "backlog/epics/pre-milestone/E005-agent-compliance-framework",
+      "backlog/modules/root-ghostproxy-m001-author-claude-md-and-agents-md",
+      "domains/ai-agents/patterns/design-md-pattern",
+      "domains/devops/infrastructure-as-code-patterns",
+      "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings",
+      "lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents",
+      "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
+      "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis",
+      "patterns/01_drafts/progressive-structural-enrichment-in-agent-config",
+      "patterns/01_drafts/three-layer-agent-context-architecture",
+      "patterns/03_validated/knowledge/claude-md-structural-patterns",
+      "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
+      "sources/tools-integration/src-playwright-mcp-visual-testing",
+      "spine/models/agent-config/model-markdown-as-iac"
+    ],
+    "soul-md": [
+      "backlog/epics/milestone-sain01/e107-weaver-state-fabric",
+      "spine/models/agent-config/model-markdown-as-iac"
+    ],
+    "identity-md": [
+      "backlog/epics/milestone-sain01/e107-weaver-state-fabric"
+    ],
+    "agents-md": [
+      "backlog/epics/milestone-sain01/e107-weaver-state-fabric",
+      "backlog/modules/root-ghostproxy-m001-author-claude-md-and-agents-md",
+      "patterns/01_drafts/progressive-structural-enrichment-in-agent-config",
+      "patterns/01_drafts/three-layer-agent-context-architecture",
+      "sources/src-cline-agentic-coding-ide-extension",
+      "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
+      "sources/tools-integration/src-opencode-harness-features",
+      "spine/models/agent-config/model-markdown-as-iac"
+    ],
+    "profiles": [
+      "backlog/epics/milestone-sain01/e108-load-balancing-profiles",
+      "backlog/tasks/T016-update-failover-chain-and-profiles",
+      "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing"
+    ],
+    "load-balancing": [
+      "backlog/epics/milestone-sain01/e108-load-balancing-profiles"
+    ],
+    "runtime-profiles": [
+      "backlog/epics/milestone-sain01/e108-load-balancing-profiles"
+    ],
+    "orchestration": [
+      "backlog/epics/milestone-sain01/e108-load-balancing-profiles",
+      "comparisons/cross-domain-patterns",
+      "domains/ai-agents/claude-code/claude-code-best-practices",
+      "domains/ai-agents/orchestration/agent-orchestration-patterns",
+      "domains/ai-agents/orchestration/openfleet",
+      "domains/automation/ai-driven-content-pipeline",
+      "domains/automation/research-pipeline-orchestration",
+      "lessons/03_validated/ingestion-research/multi-stage-ingestion-beats-single-pass",
+      "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
+      "lessons/03_validated/tools-architecture/always-plan-before-executing",
+      "patterns/03_validated/architecture/deterministic-shell-llm-core",
+      "patterns/03_validated/architecture/gateway-centric-routing",
+      "patterns/03_validated/architecture/plan-execute-review-cycle",
+      "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
+      "sources/claude-code/src-shanraisshan-claude-code-best-practice",
+      "sources/src-claude-agent-sdk-and-managed-agents",
+      "spine/models/ecosystem/model-automation-pipelines"
+    ],
+    "ultra-sovereign": [
+      "backlog/epics/milestone-sain01/e108-load-balancing-profiles"
+    ],
+    "asymmetric-burst": [
+      "backlog/epics/milestone-sain01/e108-load-balancing-profiles"
+    ],
+    "deep-context-synthesis": [
+      "backlog/epics/milestone-sain01/e108-load-balancing-profiles"
+    ],
+    "dflash": [
+      "backlog/epics/milestone-sain01/e109-dflash-integration",
+      "backlog/milestones/sain-01-sovereign-node",
+      "comparisons/cmp-dflash-vs-eagle3-vs-medusa",
+      "sources/src-dflash-block-diffusion-spec-dec",
+      "sources/src-sain-01-sovereign-node-spec",
+      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
+    ],
+    "speculative-decoding": [
+      "backlog/epics/milestone-sain01/e109-dflash-integration",
+      "comparisons/cmp-dflash-vs-eagle3-vs-medusa",
+      "domains/ai-models/concept-speculative-decoding-block-diffusion",
+      "sources/src-dflash-block-diffusion-spec-dec"
+    ],
+    "block-diffusion": [
+      "backlog/epics/milestone-sain01/e109-dflash-integration",
+      "comparisons/cmp-dflash-vs-eagle3-vs-medusa",
+      "domains/ai-models/concept-speculative-decoding-block-diffusion",
+      "sources/src-dflash-block-diffusion-spec-dec",
+      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
+    ],
+    "code-math-acceleration": [
+      "backlog/epics/milestone-sain01/e109-dflash-integration"
+    ],
+    "vllm": [
+      "backlog/epics/milestone-sain01/e109-dflash-integration",
+      "backlog/epics/milestone-sain01/e110-model-catalog",
+      "decisions/01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration",
+      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04",
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
+    ],
+    "qwen3": [
+      "backlog/epics/milestone-sain01/e109-dflash-integration",
+      "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
+      "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
+      "lessons/02_synthesized/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
+      "sources/src-dflash-block-diffusion-spec-dec",
+      "sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite",
+      "spine/references/local-training-playbook-2026"
+    ],
+    "model-catalog": [
+      "backlog/epics/milestone-sain01/e110-model-catalog",
+      "backlog/milestones/sain-01-sovereign-node",
+      "comparisons/cmp-ling-26-flash-vs-nemotron-3-nano-omni"
+    ],
+    "ling-2-6-flash": [
+      "backlog/epics/milestone-sain01/e110-model-catalog"
+    ],
+    "nemotron-3-nano-omni": [
+      "backlog/epics/milestone-sain01/e110-model-catalog"
+    ],
+    "blackwell-resident": [
+      "backlog/epics/milestone-sain01/e110-model-catalog"
+    ],
+    "oracle-core": [
+      "backlog/epics/milestone-sain01/e110-model-catalog",
+      "comparisons/cmp-ling-26-flash-vs-nemotron-3-nano-omni"
+    ],
+    "moe": [
+      "backlog/epics/milestone-sain01/e110-model-catalog",
+      "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier",
+      "backlog/modules/e008-m001-ktransformers-install-and-config",
+      "comparisons/cmp-ling-26-flash-vs-nemotron-3-nano-omni",
+      "domains/ai-models/local-llm-quantization",
+      "sources/src-llm-architecture-gallery-raschka",
+      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
+      "sources/tools-integration/src-turboquant-122b-macbook"
+    ],
+    "quantization": [
+      "backlog/epics/milestone-sain01/e110-model-catalog",
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
+      "comparisons/cmp-bitnet-vs-fp16-execution-cost",
+      "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
+      "domains/ai-models/concept-1bit-ternary-weights",
+      "domains/ai-models/local-llm-quantization",
+      "sources/src-bitnet-b158-ternary-llm",
+      "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
+      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms",
+      "sources/tools-integration/src-turboquant-122b-macbook",
+      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
     ],
     "models": [
       "backlog/epics/milestone-v2/e010-model-updates-all-15-models-reflect-current-knowledge",
@@ -61878,7 +65029,9 @@
     "srp": [
       "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
       "backlog/modules/e022-m003-what-do-i-need-upgrade",
+      "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor",
       "domains/cross-domain/methodology-framework/global-standards-adherence",
+      "domains/devops/concept-dual-ccd-cache-partitioning-9900x",
       "spine/standards/gateway-output-contract"
     ],
     "audit": [
@@ -62307,6 +65460,7 @@
       "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts",
       "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
       "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache",
+      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch",
       "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed",
       "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
       "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
@@ -62323,22 +65477,6 @@
       "spine/models/agent-config/model-skills-commands-hooks",
       "spine/standards/model-standards/model-claude-code-standards",
       "spine/standards/model-standards/model-skills-commands-hooks-standards"
-    ],
-    "claude-md": [
-      "backlog/epics/pre-milestone/E005-agent-compliance-framework",
-      "backlog/modules/root-ghostproxy-m001-author-claude-md-and-agents-md",
-      "domains/ai-agents/patterns/design-md-pattern",
-      "domains/devops/infrastructure-as-code-patterns",
-      "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings",
-      "lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents",
-      "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
-      "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis",
-      "patterns/01_drafts/progressive-structural-enrichment-in-agent-config",
-      "patterns/01_drafts/three-layer-agent-context-architecture",
-      "patterns/03_validated/knowledge/claude-md-structural-patterns",
-      "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
-      "sources/tools-integration/src-playwright-mcp-visual-testing",
-      "spine/models/agent-config/model-markdown-as-iac"
     ],
     "skills": [
       "backlog/epics/pre-milestone/E005-agent-compliance-framework",
@@ -62541,15 +65679,6 @@
       "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms",
       "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion"
     ],
-    "moe": [
-      "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier",
-      "backlog/modules/e008-m001-ktransformers-install-and-config",
-      "domains/ai-models/local-llm-quantization",
-      "sources/src-llm-architecture-gallery-raschka",
-      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
-      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
-      "sources/tools-integration/src-turboquant-122b-macbook"
-    ],
     "disk-offload": [
       "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier",
       "backlog/modules/e008-m001-ktransformers-install-and-config"
@@ -62581,29 +65710,10 @@
     "skills-portability": [
       "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity"
     ],
-    "hardware": [
-      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
-      "backlog/modules/e010-m001-64gb-ram-install-and-verify",
-      "log/2026-04-23-ram-upgrade-48gb-wsl",
-      "spine/references/operator-workstation-storage-tiering"
-    ],
-    "storage": [
-      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
-      "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify",
-      "backlog/modules/e010-m002-dev-sdd-mount-procedure",
-      "backlog/modules/e010-m003-storage-tiering-documentation",
-      "backlog/tasks/T041-author-operator-workstation-storage-tiering-reference",
-      "spine/references/operator-workstation-storage-tiering"
-    ],
     "ram": [
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
       "backlog/modules/e010-m001-64gb-ram-install-and-verify",
       "log/2026-04-23-ram-upgrade-48gb-wsl"
-    ],
-    "nvme": [
-      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
-      "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
-      "spine/references/operator-workstation-storage-tiering"
     ],
     "wsl": [
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
@@ -62898,10 +66008,6 @@
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
-    "rtx-3090": [
-      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
-      "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption"
-    ],
     "rlm-qwen3-8b": [
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
@@ -63064,6 +66170,7 @@
     ],
     "security": [
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
+      "comparisons/cmp-wall-vs-write-vs-tetragon-for-perimeter",
       "decisions/01_drafts/pretooluse-hooks-layered-approach",
       "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
       "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026"
@@ -63086,6 +66193,7 @@
     ],
     "compression": [
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
+      "domains/devops/concept-zfs-tiered-storage-llm-inference",
       "lessons/02_synthesized/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
       "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30"
@@ -63095,15 +66203,6 @@
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
       "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
       "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30"
-    ],
-    "quantization": [
-      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
-      "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
-      "domains/ai-models/local-llm-quantization",
-      "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
-      "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms",
-      "sources/tools-integration/src-turboquant-122b-macbook",
-      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
     ],
     "rlm": [
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
@@ -63195,6 +66294,7 @@
     ],
     "milestone": [
       "backlog/milestones/post-anthropic-self-autonomous-stack",
+      "backlog/milestones/sain-01-sovereign-node",
       "backlog/milestones/second-brain-complete-system-v2-0",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task"
     ],
@@ -63205,6 +66305,16 @@
     "5-day-plan": [
       "backlog/milestones/post-anthropic-self-autonomous-stack",
       "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure"
+    ],
+    "sovereign-os": [
+      "backlog/milestones/sain-01-sovereign-node",
+      "sources/src-sain-01-sovereign-node-spec"
+    ],
+    "zen5": [
+      "backlog/milestones/sain-01-sovereign-node",
+      "domains/devops/concept-dual-ccd-cache-partitioning-9900x",
+      "sources/src-sain-01-sovereign-node-spec",
+      "sources/src-zen5-avx512-single-cycle"
     ],
     "complete-system": [
       "backlog/milestones/second-brain-complete-system-v2-0"
@@ -63853,6 +66963,7 @@
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
       "comparisons/mcp-vs-cli-decision-vs-lesson",
       "comparisons/skills-architecture-patterns",
+      "decisions/01_drafts/claude-code-stop-hook-block-cap-raise-default-to-1000-for-perpetual-mandate-work",
       "decisions/01_drafts/pretooluse-hooks-layered-approach",
       "decisions/02_validated/tools/mcp-vs-cli-for-tool-integration",
       "domains/ai-agents/claude-code/claude-code-best-practices",
@@ -63869,6 +66980,7 @@
       "domains/tools-and-platforms/obsidian-skills-ecosystem",
       "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
       "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache",
+      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch",
       "lessons/03_validated/context-engineering/context-management-is-primary-productivity-lever",
       "lessons/03_validated/tools-architecture/always-plan-before-executing",
       "lessons/03_validated/tools-architecture/skills-architecture-is-dominant-extension-pattern",
@@ -63925,15 +67037,6 @@
     ],
     "sfif-scaffold": [
       "backlog/modules/root-ghostproxy-m001-author-claude-md-and-agents-md"
-    ],
-    "agents-md": [
-      "backlog/modules/root-ghostproxy-m001-author-claude-md-and-agents-md",
-      "patterns/01_drafts/progressive-structural-enrichment-in-agent-config",
-      "patterns/01_drafts/three-layer-agent-context-architecture",
-      "sources/src-cline-agentic-coding-ide-extension",
-      "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
-      "sources/tools-integration/src-opencode-harness-features",
-      "spine/models/agent-config/model-markdown-as-iac"
     ],
     "three-layer-context": [
       "backlog/modules/root-ghostproxy-m001-author-claude-md-and-agents-md"
@@ -64180,10 +67283,6 @@
     "tier-mapping": [
       "backlog/tasks/T015-extend-router-complexity-to-tier-mapping"
     ],
-    "profiles": [
-      "backlog/tasks/T016-update-failover-chain-and-profiles",
-      "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing"
-    ],
     "failover-chain": [
       "backlog/tasks/T016-update-failover-chain-and-profiles"
     ],
@@ -64418,6 +67517,10 @@
     "comparison": [
       "comparisons/agentic-search-vs-vector-search",
       "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09",
+      "comparisons/cmp-bitnet-vs-fp16-execution-cost",
+      "comparisons/cmp-dflash-vs-eagle3-vs-medusa",
+      "comparisons/cmp-ling-26-flash-vs-nemotron-3-nano-omni",
+      "comparisons/cmp-wall-vs-write-vs-tetragon-for-perimeter",
       "comparisons/kimi-k2-6-access-paths-openrouter-ollama-cloud-local",
       "comparisons/llm-wiki-vs-rag",
       "comparisons/mcp-vs-cli-decision-vs-lesson",
@@ -64470,6 +67573,7 @@
     "ai-agents": [
       "comparisons/assistant-platforms-and-frameworks-frontier-comparison-claude-os-obsidian-pm-multica-openclaw-command-center-2026-05-09",
       "comparisons/cross-domain-patterns",
+      "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor",
       "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
       "domains/ai-agents/orchestration/agent-orchestration-patterns",
       "domains/ai-agents/orchestration/openfleet",
@@ -64509,6 +67613,125 @@
       "patterns/01_drafts/agent-execution-cost-optimization-stack",
       "spine/standards/per-project-assistant-profile-standards"
     ],
+    "ai-models": [
+      "comparisons/cmp-bitnet-vs-fp16-execution-cost",
+      "comparisons/cmp-dflash-vs-eagle3-vs-medusa",
+      "comparisons/cmp-ling-26-flash-vs-nemotron-3-nano-omni",
+      "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles",
+      "domains/ai-models/concept-1bit-ternary-weights",
+      "domains/ai-models/concept-speculative-decoding-block-diffusion",
+      "sources/src-27-questions-llm-selection",
+      "sources/src-bitnet-b158-ternary-llm",
+      "sources/src-dflash-block-diffusion-spec-dec",
+      "sources/src-hrm-trm-tiny-recursion-models",
+      "sources/src-llm-architecture-gallery-raschka",
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding",
+      "spine/domain-overviews/ai-models-domain-overview",
+      "spine/references/ai-model-provider-harness-decision-matrix-2026"
+    ],
+    "fp16": [
+      "comparisons/cmp-bitnet-vs-fp16-execution-cost"
+    ],
+    "cpu-inference": [
+      "comparisons/cmp-bitnet-vs-fp16-execution-cost",
+      "domains/ai-models/concept-1bit-ternary-weights",
+      "sources/src-bitnet-b158-ternary-llm"
+    ],
+    "gpu-inference": [
+      "comparisons/cmp-bitnet-vs-fp16-execution-cost"
+    ],
+    "execution-cost": [
+      "comparisons/cmp-bitnet-vs-fp16-execution-cost"
+    ],
+    "memory-bandwidth": [
+      "comparisons/cmp-bitnet-vs-fp16-execution-cost"
+    ],
+    "energy-efficiency": [
+      "comparisons/cmp-bitnet-vs-fp16-execution-cost",
+      "domains/ai-models/concept-1bit-ternary-weights",
+      "sources/src-bitnet-b158-ternary-llm"
+    ],
+    "inference-acceleration": [
+      "comparisons/cmp-dflash-vs-eagle3-vs-medusa",
+      "domains/ai-models/concept-speculative-decoding-block-diffusion",
+      "sources/src-dflash-block-diffusion-spec-dec"
+    ],
+    "eagle-3": [
+      "comparisons/cmp-dflash-vs-eagle3-vs-medusa",
+      "domains/ai-models/concept-speculative-decoding-block-diffusion",
+      "sources/src-dflash-block-diffusion-spec-dec"
+    ],
+    "medusa": [
+      "comparisons/cmp-dflash-vs-eagle3-vs-medusa"
+    ],
+    "autoregressive-drafting": [
+      "comparisons/cmp-dflash-vs-eagle3-vs-medusa"
+    ],
+    "parallel-drafting": [
+      "comparisons/cmp-dflash-vs-eagle3-vs-medusa",
+      "domains/ai-models/concept-speculative-decoding-block-diffusion",
+      "sources/src-dflash-block-diffusion-spec-dec"
+    ],
+    "acceptance-rate": [
+      "comparisons/cmp-dflash-vs-eagle3-vs-medusa",
+      "domains/ai-models/concept-speculative-decoding-block-diffusion"
+    ],
+    "ling": [
+      "comparisons/cmp-ling-26-flash-vs-nemotron-3-nano-omni"
+    ],
+    "nemotron": [
+      "comparisons/cmp-ling-26-flash-vs-nemotron-3-nano-omni"
+    ],
+    "bailing-hybrid": [
+      "comparisons/cmp-ling-26-flash-vs-nemotron-3-nano-omni"
+    ],
+    "mamba-transformer": [
+      "comparisons/cmp-ling-26-flash-vs-nemotron-3-nano-omni"
+    ],
+    "multimodal": [
+      "comparisons/cmp-ling-26-flash-vs-nemotron-3-nano-omni",
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
+    ],
+    "96gb": [
+      "comparisons/cmp-ling-26-flash-vs-nemotron-3-nano-omni"
+    ],
+    "rtx-pro-6000": [
+      "comparisons/cmp-ling-26-flash-vs-nemotron-3-nano-omni"
+    ],
+    "devops": [
+      "comparisons/cmp-wall-vs-write-vs-tetragon-for-perimeter",
+      "decisions/02_validated/tools/polling-vs-event-driven-change-detection",
+      "domains/devops/concept-dual-ccd-cache-partitioning-9900x",
+      "domains/devops/concept-vfio-gpu-isolation-amd-iommu",
+      "domains/devops/concept-zfs-tiered-storage-llm-inference",
+      "domains/devops/devops-control-plane",
+      "domains/devops/four-project-ecosystem",
+      "domains/devops/immune-system-rules",
+      "domains/devops/infrastructure-as-code-patterns",
+      "domains/devops/stage-gate-methodology",
+      "domains/devops/wsl2-development-patterns",
+      "sources/wiki-methodology/methodology-artifact-taxonomy-research",
+      "spine/domain-overviews/devops-domain-overview"
+    ],
+    "perimeter": [
+      "comparisons/cmp-wall-vs-write-vs-tetragon-for-perimeter"
+    ],
+    "operator-notification": [
+      "comparisons/cmp-wall-vs-write-vs-tetragon-for-perimeter"
+    ],
+    "kernel-enforcement": [
+      "comparisons/cmp-wall-vs-write-vs-tetragon-for-perimeter"
+    ],
+    "wall": [
+      "comparisons/cmp-wall-vs-write-vs-tetragon-for-perimeter"
+    ],
+    "write": [
+      "comparisons/cmp-wall-vs-write-vs-tetragon-for-perimeter"
+    ],
+    "selfdef": [
+      "comparisons/cmp-wall-vs-write-vs-tetragon-for-perimeter"
+    ],
     "cross-domain": [
       "comparisons/cross-domain-patterns",
       "comparisons/llm-wiki-vs-rag",
@@ -64517,6 +67740,7 @@
       "domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current",
       "domains/cross-domain/profile-integration-into-the-knowledge-cross-reference-topology-with-existing-wiki-layers",
       "domains/cross-domain/profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline",
+      "lessons/01_drafts/build-pipeline-via-sdd-tdd-real-bugs-caught-only-when-tests-execute-actual-renderers",
       "lessons/01_drafts/if-you-can-verify-you-converge",
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
       "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
@@ -64553,24 +67777,6 @@
     "deferred-loading": [
       "comparisons/cross-domain-patterns",
       "patterns/03_validated/knowledge/context-aware-tool-loading"
-    ],
-    "orchestration": [
-      "comparisons/cross-domain-patterns",
-      "domains/ai-agents/claude-code/claude-code-best-practices",
-      "domains/ai-agents/orchestration/agent-orchestration-patterns",
-      "domains/ai-agents/orchestration/openfleet",
-      "domains/automation/ai-driven-content-pipeline",
-      "domains/automation/research-pipeline-orchestration",
-      "lessons/03_validated/ingestion-research/multi-stage-ingestion-beats-single-pass",
-      "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
-      "lessons/03_validated/tools-architecture/always-plan-before-executing",
-      "patterns/03_validated/architecture/deterministic-shell-llm-core",
-      "patterns/03_validated/architecture/gateway-centric-routing",
-      "patterns/03_validated/architecture/plan-execute-review-cycle",
-      "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
-      "sources/claude-code/src-shanraisshan-claude-code-best-practice",
-      "sources/src-claude-agent-sdk-and-managed-agents",
-      "spine/models/ecosystem/model-automation-pipelines"
     ],
     "knowledge-systems": [
       "comparisons/cross-domain-patterns",
@@ -64661,6 +67867,7 @@
       "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
       "decisions/01_drafts/aicp-active-state-mechanism-for-hooks",
       "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
+      "decisions/01_drafts/claude-code-stop-hook-block-cap-raise-default-to-1000-for-perpetual-mandate-work",
       "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
       "decisions/01_drafts/extended-to-adaptive-thinking-migration",
       "decisions/01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration",
@@ -65025,13 +68232,6 @@
       "sources/src-llm-architecture-gallery-raschka",
       "sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy"
     ],
-    "qwen3": [
-      "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
-      "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
-      "lessons/02_synthesized/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
-      "sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite",
-      "spine/references/local-training-playbook-2026"
-    ],
     "vram": [
       "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
       "patterns/01_drafts/single-active-backend-with-lru-eviction",
@@ -65039,6 +68239,28 @@
     ],
     "dual-gpu": [
       "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values"
+    ],
+    "stop-hook": [
+      "decisions/01_drafts/claude-code-stop-hook-block-cap-raise-default-to-1000-for-perpetual-mandate-work",
+      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
+      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch"
+    ],
+    "goal": [
+      "decisions/01_drafts/claude-code-stop-hook-block-cap-raise-default-to-1000-for-perpetual-mandate-work",
+      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch"
+    ],
+    "settings": [
+      "decisions/01_drafts/claude-code-stop-hook-block-cap-raise-default-to-1000-for-perpetual-mandate-work",
+      "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache",
+      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch"
+    ],
+    "environment": [
+      "decisions/01_drafts/claude-code-stop-hook-block-cap-raise-default-to-1000-for-perpetual-mandate-work",
+      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch"
+    ],
+    "operator-directive": [
+      "decisions/01_drafts/claude-code-stop-hook-block-cap-raise-default-to-1000-for-perpetual-mandate-work",
+      "lessons/03_validated/methodology-process/multi-branch-parallel-driving-options-mean-evaluate-not-freeze"
     ],
     "runtime": [
       "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
@@ -65095,11 +68317,6 @@
       "domains/ai-models/local-llm-quantization",
       "sources/tools-integration/src-gemma4-searxng-openclaw"
     ],
-    "vllm": [
-      "decisions/01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration",
-      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04",
-      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
-    ],
     "infrastructure": [
       "decisions/01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration",
       "decisions/02_validated/knowledge/wiki-first-with-lightrag-upgrade-path",
@@ -65113,7 +68330,8 @@
       "patterns/01_drafts/aspirational-declaration-without-enforcement",
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features",
       "patterns/03_validated/enforcement/enforcement-hook-patterns",
-      "sources/ecosystem-projects/src-openarms-v10-enforcement"
+      "sources/ecosystem-projects/src-openarms-v10-enforcement",
+      "sources/src-sain-01-sovereign-node-spec"
     ],
     "reasoning": [
       "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
@@ -65151,15 +68369,6 @@
     ],
     "anti-vendor-lock-in-strategic-alignment": [
       "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles"
-    ],
-    "ai-models": [
-      "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles",
-      "sources/src-27-questions-llm-selection",
-      "sources/src-hrm-trm-tiny-recursion-models",
-      "sources/src-llm-architecture-gallery-raschka",
-      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding",
-      "spine/domain-overviews/ai-models-domain-overview",
-      "spine/references/ai-model-provider-harness-decision-matrix-2026"
     ],
     "knowledge-interface": [
       "decisions/02_validated/knowledge/obsidian-vs-notebooklm-as-knowledge-interface"
@@ -65466,17 +68675,6 @@
       "decisions/02_validated/tools/polling-vs-event-driven-change-detection",
       "domains/devops/wsl2-development-patterns"
     ],
-    "devops": [
-      "decisions/02_validated/tools/polling-vs-event-driven-change-detection",
-      "domains/devops/devops-control-plane",
-      "domains/devops/four-project-ecosystem",
-      "domains/devops/immune-system-rules",
-      "domains/devops/infrastructure-as-code-patterns",
-      "domains/devops/stage-gate-methodology",
-      "domains/devops/wsl2-development-patterns",
-      "sources/wiki-methodology/methodology-artifact-taxonomy-research",
-      "spine/domain-overviews/devops-domain-overview"
-    ],
     "best-practices": [
       "domains/ai-agents/claude-code/claude-code-best-practices",
       "lessons/03_validated/context-engineering/context-management-is-primary-productivity-lever",
@@ -65639,6 +68837,28 @@
       "spine/domain-overviews/automation-domain-overview",
       "spine/models/ecosystem/model-automation-pipelines"
     ],
+    "single-responsibility-principle": [
+      "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor"
+    ],
+    "hardware-mapping": [
+      "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor"
+    ],
+    "trinity": [
+      "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor"
+    ],
+    "sovereign-node": [
+      "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor",
+      "sources/src-sain-01-sovereign-node-spec"
+    ],
+    "vector-core": [
+      "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor"
+    ],
+    "sandboxed-fabric": [
+      "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor"
+    ],
+    "immutable-gatekeeper": [
+      "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor"
+    ],
     "concept": [
       "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
       "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
@@ -65661,6 +68881,7 @@
     ],
     "sdd": [
       "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
+      "lessons/01_drafts/build-pipeline-via-sdd-tdd-real-bugs-caught-only-when-tests-execute-actual-renderers",
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
       "sources/src-github-spec-kit-specification-driven-development",
       "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee"
@@ -65969,6 +69190,54 @@
     "work-modes": [
       "domains/ai-agents/patterns/task-lifecycle-stage-gating",
       "domains/devops/stage-gate-methodology"
+    ],
+    "bitlinear": [
+      "domains/ai-models/concept-1bit-ternary-weights",
+      "sources/src-bitnet-b158-ternary-llm"
+    ],
+    "low-bit-inference": [
+      "domains/ai-models/concept-1bit-ternary-weights",
+      "sources/src-bitnet-b158-ternary-llm",
+      "sources/src-zen5-avx512-single-cycle"
+    ],
+    "mpgemm": [
+      "domains/ai-models/concept-1bit-ternary-weights",
+      "sources/src-bitnet-b158-ternary-llm"
+    ],
+    "lookup-table": [
+      "domains/ai-models/concept-1bit-ternary-weights",
+      "sources/src-bitnet-b158-ternary-llm"
+    ],
+    "avx512-vnni": [
+      "domains/ai-models/concept-1bit-ternary-weights",
+      "sources/src-bitnet-b158-ternary-llm"
+    ],
+    "vpdpbusd": [
+      "domains/ai-models/concept-1bit-ternary-weights",
+      "sources/src-zen5-avx512-single-cycle"
+    ],
+    "integer-arithmetic": [
+      "domains/ai-models/concept-1bit-ternary-weights"
+    ],
+    "bidirectional-attention": [
+      "domains/ai-models/concept-speculative-decoding-block-diffusion",
+      "sources/src-dflash-block-diffusion-spec-dec"
+    ],
+    "draft-target-architecture": [
+      "domains/ai-models/concept-speculative-decoding-block-diffusion"
+    ],
+    "lossless-acceleration": [
+      "domains/ai-models/concept-speculative-decoding-block-diffusion",
+      "sources/src-dflash-block-diffusion-spec-dec"
+    ],
+    "code-generation": [
+      "domains/ai-models/concept-speculative-decoding-block-diffusion",
+      "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
+      "sources/src-dflash-block-diffusion-spec-dec"
+    ],
+    "math-reasoning": [
+      "domains/ai-models/concept-speculative-decoding-block-diffusion",
+      "sources/src-dflash-block-diffusion-spec-dec"
     ],
     "local-llm": [
       "domains/ai-models/local-llm-quantization",
@@ -66533,6 +69802,80 @@
     "upward-aggregation": [
       "domains/devops/backlog-hierarchy-rules"
     ],
+    "cpu": [
+      "domains/devops/concept-dual-ccd-cache-partitioning-9900x",
+      "sources/src-zen5-avx512-single-cycle"
+    ],
+    "amd": [
+      "domains/devops/concept-dual-ccd-cache-partitioning-9900x",
+      "sources/src-zen5-avx512-single-cycle"
+    ],
+    "ryzen-9-9900x": [
+      "domains/devops/concept-dual-ccd-cache-partitioning-9900x"
+    ],
+    "ccd": [
+      "domains/devops/concept-dual-ccd-cache-partitioning-9900x",
+      "sources/src-zen5-avx512-single-cycle"
+    ],
+    "dual-ccd": [
+      "domains/devops/concept-dual-ccd-cache-partitioning-9900x"
+    ],
+    "infinity-fabric": [
+      "domains/devops/concept-dual-ccd-cache-partitioning-9900x",
+      "sources/src-zen5-avx512-single-cycle"
+    ],
+    "l3-cache": [
+      "domains/devops/concept-dual-ccd-cache-partitioning-9900x",
+      "sources/src-zen5-avx512-single-cycle"
+    ],
+    "core-pinning": [
+      "domains/devops/concept-dual-ccd-cache-partitioning-9900x"
+    ],
+    "taskset": [
+      "domains/devops/concept-dual-ccd-cache-partitioning-9900x"
+    ],
+    "numa": [
+      "domains/devops/concept-dual-ccd-cache-partitioning-9900x"
+    ],
+    "cache-locality": [
+      "domains/devops/concept-dual-ccd-cache-partitioning-9900x"
+    ],
+    "pci-passthrough": [
+      "domains/devops/concept-vfio-gpu-isolation-amd-iommu"
+    ],
+    "vfio-pci": [
+      "domains/devops/concept-vfio-gpu-isolation-amd-iommu"
+    ],
+    "sandboxing": [
+      "domains/devops/concept-vfio-gpu-isolation-amd-iommu"
+    ],
+    "hardware-isolation": [
+      "domains/devops/concept-vfio-gpu-isolation-amd-iommu"
+    ],
+    "grub": [
+      "domains/devops/concept-vfio-gpu-isolation-amd-iommu"
+    ],
+    "llm-inference": [
+      "domains/devops/concept-zfs-tiered-storage-llm-inference"
+    ],
+    "dataset-stratification": [
+      "domains/devops/concept-zfs-tiered-storage-llm-inference"
+    ],
+    "atomic-state": [
+      "domains/devops/concept-zfs-tiered-storage-llm-inference"
+    ],
+    "copies-2": [
+      "domains/devops/concept-zfs-tiered-storage-llm-inference"
+    ],
+    "tank-models": [
+      "domains/devops/concept-zfs-tiered-storage-llm-inference"
+    ],
+    "tank-context": [
+      "domains/devops/concept-zfs-tiered-storage-llm-inference"
+    ],
+    "tank-agents": [
+      "domains/devops/concept-zfs-tiered-storage-llm-inference"
+    ],
     "control-plane": [
       "domains/devops/devops-control-plane"
     ],
@@ -66971,11 +70314,6 @@
     ],
     "plugin-sdk": [
       "domains/tools-and-platforms/openarms"
-    ],
-    "sandbox": [
-      "domains/tools-and-platforms/openarms",
-      "sources/wiki-methodology/src-context-mode",
-      "spine/models/ecosystem/model-mcp-cli-integration"
     ],
     "media-pipeline": [
       "domains/tools-and-platforms/openarms"
@@ -67638,6 +70976,25 @@
       "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately",
       "lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents"
     ],
+    "tdd": [
+      "lessons/01_drafts/build-pipeline-via-sdd-tdd-real-bugs-caught-only-when-tests-execute-actual-renderers",
+      "sources/claude-code/src-superpowers-end-of-vibe-coding"
+    ],
+    "layer-3-tests": [
+      "lessons/01_drafts/build-pipeline-via-sdd-tdd-real-bugs-caught-only-when-tests-execute-actual-renderers"
+    ],
+    "substantive-tests": [
+      "lessons/01_drafts/build-pipeline-via-sdd-tdd-real-bugs-caught-only-when-tests-execute-actual-renderers"
+    ],
+    "schema-vs-runtime": [
+      "lessons/01_drafts/build-pipeline-via-sdd-tdd-real-bugs-caught-only-when-tests-execute-actual-renderers"
+    ],
+    "quality-bar": [
+      "lessons/01_drafts/build-pipeline-via-sdd-tdd-real-bugs-caught-only-when-tests-execute-actual-renderers"
+    ],
+    "sovereign-os-arc": [
+      "lessons/01_drafts/build-pipeline-via-sdd-tdd-real-bugs-caught-only-when-tests-execute-actual-renderers"
+    ],
     "hookSpecificOutput": [
       "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it"
     ],
@@ -67657,17 +71014,20 @@
     "postcompact": [
       "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it"
     ],
-    "stop-hook": [
-      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it"
-    ],
-    "settings": [
-      "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache"
-    ],
     "hot-reload": [
       "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache"
     ],
     "caching": [
       "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache"
+    ],
+    "perpetual-mandate": [
+      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch"
+    ],
+    "safety-cap": [
+      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch"
+    ],
+    "agent-loop": [
+      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch"
     ],
     "conflation-detection-at-hook": [
       "lessons/01_drafts/conflation-detection-at-hook-layer-the-rename-strategy-generalized"
@@ -67992,10 +71352,6 @@
     "p5-candidate": [
       "lessons/01_drafts/p5-candidate-defense-in-depth-required-for-cross-cutting-failure-modes-hypothesis"
     ],
-    "defense-in-depth": [
-      "lessons/01_drafts/p5-candidate-defense-in-depth-required-for-cross-cutting-failure-modes-hypothesis",
-      "patterns/01_drafts/auto-compact-disable-implementation-spec-prevention-layer-for-impl-spec-10-defense-in-depth"
-    ],
     "cross-cutting-failures": [
       "lessons/01_drafts/p5-candidate-defense-in-depth-required-for-cross-cutting-failure-modes-hypothesis"
     ],
@@ -68096,9 +71452,6 @@
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy"
     ],
     "inversion": [
-      "lessons/01_drafts/specs-as-code-source-inverts-hierarchy"
-    ],
-    "code-generation": [
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy"
     ],
     "stress-testing-validation": [
@@ -68672,9 +72025,6 @@
       "lessons/03_validated/methodology-process/multi-branch-parallel-driving-options-mean-evaluate-not-freeze"
     ],
     "options-not-blockers": [
-      "lessons/03_validated/methodology-process/multi-branch-parallel-driving-options-mean-evaluate-not-freeze"
-    ],
-    "operator-directive": [
       "lessons/03_validated/methodology-process/multi-branch-parallel-driving-options-mean-evaluate-not-freeze"
     ],
     "agent-self-discipline": [
@@ -72337,9 +75687,6 @@
     "development-workflows": [
       "sources/claude-code/src-shanraisshan-claude-code-best-practice"
     ],
-    "tdd": [
-      "sources/claude-code/src-superpowers-end-of-vibe-coding"
-    ],
     "git-worktrees": [
       "sources/claude-code/src-superpowers-end-of-vibe-coding"
     ],
@@ -72618,6 +75965,12 @@
     "retry-convergence": [
       "sources/src-autobe-compiler-verified-backend-generation"
     ],
+    "microsoft-research": [
+      "sources/src-bitnet-b158-ternary-llm"
+    ],
+    "edge-inference": [
+      "sources/src-bitnet-b158-ternary-llm"
+    ],
     "agile": [
       "sources/src-bmad-method-agile-ai-development-framework",
       "sources/wiki-methodology/methodology-artifact-taxonomy-research"
@@ -72712,6 +76065,13 @@
     "sqlite": [
       "sources/src-code-review-graph-automated-review",
       "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee"
+    ],
+    "gemma-4": [
+      "sources/src-dflash-block-diffusion-spec-dec"
+    ],
+    "z-lab": [
+      "sources/src-dflash-block-diffusion-spec-dec",
+      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
     ],
     "constitutional-compliance": [
       "sources/src-github-spec-kit-specification-driven-development"
@@ -72912,6 +76272,9 @@
     "six-x-performance": [
       "sources/src-rethinking-ai-agents-harness-engineering-rise"
     ],
+    "operator-vision": [
+      "sources/src-sain-01-sovereign-node-spec"
+    ],
     "cross-tool": [
       "sources/src-skillmd-claudemd-agentsmd-three-layer-context"
     ],
@@ -72926,9 +76289,6 @@
       "spine/models/agent-config/model-skills-commands-hooks"
     ],
     "quickstart": [
-      "sources/src-suricata-install-quickstart"
-    ],
-    "debian": [
       "sources/src-suricata-install-quickstart"
     ],
     "ubuntu": [
@@ -72993,6 +76353,24 @@
     ],
     "opensrc": [
       "sources/src-vercel-opensrc-toolkit"
+    ],
+    "microarchitecture": [
+      "sources/src-zen5-avx512-single-cycle"
+    ],
+    "ryzen-9000": [
+      "sources/src-zen5-avx512-single-cycle"
+    ],
+    "9900x": [
+      "sources/src-zen5-avx512-single-cycle"
+    ],
+    "avx-512": [
+      "sources/src-zen5-avx512-single-cycle"
+    ],
+    "simd": [
+      "sources/src-zen5-avx512-single-cycle"
+    ],
+    "zmm-registers": [
+      "sources/src-zen5-avx512-single-cycle"
     ],
     "codex": [
       "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
@@ -73659,9 +77037,6 @@
     "tool-calling": [
       "sources/tools-integration/src-gemma4-searxng-openclaw"
     ],
-    "dflash": [
-      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
-    ],
     "diffusion-style-speculative-decoding": [
       "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
     ],
@@ -73672,12 +77047,6 @@
       "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
     ],
     "ucsd": [
-      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
-    ],
-    "z-lab": [
-      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
-    ],
-    "block-diffusion": [
       "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
     ],
     "eagle-3-comparison": [
@@ -73753,10 +77122,6 @@
     ],
     "256k-context": [
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
-    ],
-    "multimodal": [
-      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
-      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
     ],
     "liquid-ai": [
       "sources/tools-integration/src-lfm2-liquid-ai-frontier-small-models-edge-deployment-maxime-labonne"
@@ -74931,9 +78296,6 @@
       "spine/models/agent-config/model-claude-code",
       "spine/standards/model-standards/model-skills-commands-hooks-standards"
     ],
-    "soul-md": [
-      "spine/models/agent-config/model-markdown-as-iac"
-    ],
     "ai-configuration": [
       "spine/models/agent-config/model-markdown-as-iac"
     ],
@@ -75232,9 +78594,51 @@
   },
   "orphaned_refs": [
     {
+      "target": "+1}` weight representation vs FP16 full-precision baseline",
+      "referenced_by": [
+        "BitNet b1.58 Ternary vs FP16 Baseline \u2014 Execution Cost Comparison"
+      ]
+    },
+    {
+      "target": "0",
+      "referenced_by": [
+        "BitNet b1.58 Ternary vs FP16 Baseline \u2014 Execution Cost Comparison"
+      ]
+    },
+    {
+      "target": "1-bit Ternary Weights concept",
+      "referenced_by": [
+        "BitNet b1.58 Ternary vs FP16 Baseline \u2014 Execution Cost Comparison"
+      ]
+    },
+    {
+      "target": "10",
+      "referenced_by": [
+        "E104 \u2014 Tetragon + Guardian Perimeter"
+      ]
+    },
+    {
+      "target": "17.1",
+      "referenced_by": [
+        "E106 \u2014 Pulse Vector Runtime"
+      ]
+    },
+    {
       "target": "18 Claude Code Token Hacks",
       "referenced_by": [
         "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)"
+      ]
+    },
+    {
+      "target": "19",
+      "referenced_by": [
+        "E106 \u2014 Pulse Vector Runtime"
+      ]
+    },
+    {
+      "target": "20",
+      "referenced_by": [
+        "E106 \u2014 Pulse Vector Runtime"
       ]
     },
     {
@@ -75551,6 +78955,42 @@
       ]
     },
     {
+      "target": "21",
+      "referenced_by": [
+        "E107 \u2014 Weaver State Fabric"
+      ]
+    },
+    {
+      "target": "4-bit and 8-bit weight quantization schemes",
+      "referenced_by": [
+        "Synthesis \u2014 BitNet b1.58 Ternary LLM Family and bitnet.cpp Inference"
+      ]
+    },
+    {
+      "target": "4.1",
+      "referenced_by": [
+        "E102 \u2014 ZFS Storage Layout"
+      ]
+    },
+    {
+      "target": "6",
+      "referenced_by": [
+        "E104 \u2014 Tetragon + Guardian Perimeter"
+      ]
+    },
+    {
+      "target": "7.2",
+      "referenced_by": [
+        "E102 \u2014 ZFS Storage Layout"
+      ]
+    },
+    {
+      "target": "9900X minimum CPU",
+      "referenced_by": [
+        "Dual-CCD Cache Partitioning (Zen 5 9900X)"
+      ]
+    },
+    {
       "target": "AI Model Provider Harness Decision Matrix",
       "referenced_by": [
         "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)",
@@ -75579,6 +79019,12 @@
       "target": "ALL 12 impl-specs declaring REASON= bypass paths",
       "referenced_by": [
         "Bypass-Discipline Operationalization \u2014 Unified REASON= Protocol with Abuse Detection"
+      ]
+    },
+    {
+      "target": "ASUS ProArt X870E-Creator PCIe topology",
+      "referenced_by": [
+        "VFIO GPU Isolation with AMD IOMMU"
       ]
     },
     {
@@ -75688,10 +79134,54 @@
       ]
     },
     {
+      "target": "Apple M-series",
+      "referenced_by": [
+        "Synthesis \u2014 AMD Zen 5 Single-Cycle 512-bit AVX-512 and Dual-CCD Topology"
+      ]
+    },
+    {
       "target": "BMAD Synthesis",
       "referenced_by": [
         "Synthesis \u2014 Structured Prompt-Driven Development (SPDD): Thoughtworks' REASONS Canvas + Workflow for Governable AI-Assisted Delivery (Wei Zhang + Jessie Jie Xia, martinfowler.com 2026-04-28)",
         "Synthesis \u2014 JS Mastery Six-File Context System: Spec-Driven Agentic Build Methodology (project-overview \u00b7 architecture \u00b7 code-standards \u00b7 ai-workflow-rules \u00b7 ui-context \u00b7 progress-tracker + AGENTS.md, 2026 video tutorial + downloadable templates)"
+      ]
+    },
+    {
+      "target": "Backup posture",
+      "referenced_by": [
+        "ZFS Tiered Storage for LLM Inference"
+      ]
+    },
+    {
+      "target": "BitNet b1.58 synthesis",
+      "referenced_by": [
+        "BitNet b1.58 Ternary vs FP16 Baseline \u2014 Execution Cost Comparison"
+      ]
+    },
+    {
+      "target": "BitNet b1.58 ternary LLM",
+      "referenced_by": [
+        "Synthesis \u2014 DFlash: Block-Diffusion Flash Speculative Decoding"
+      ]
+    },
+    {
+      "target": "BitNet b1.58 ternary LLM family",
+      "referenced_by": [
+        "Synthesis \u2014 SAIN-01 Sovereign AI Node Master Specification",
+        "Synthesis \u2014 AMD Zen 5 Single-Cycle 512-bit AVX-512 and Dual-CCD Topology"
+      ]
+    },
+    {
+      "target": "BitNet vs FP16",
+      "referenced_by": [
+        "Ling-2.6-flash vs Nemotron-3-Nano-Omni \u2014 Blackwell 96GB Resident Model Comparison",
+        "wall(1) vs write(1) vs Tetragon eBPF \u2014 Operator-Perimeter Mechanisms"
+      ]
+    },
+    {
+      "target": "BitNet vs FP16 comparison",
+      "referenced_by": [
+        "DFlash vs EAGLE-3 vs MEDUSA \u2014 Speculative Decoding Family"
       ]
     },
     {
@@ -75734,6 +79224,12 @@
         "Synthesis \u2014 LongBench v2 Paper Deep Dive: 503-Sample Multi-Choice Benchmark, 6\u00d720 Task Taxonomy, 17-Model Leaderboard, o1-Preview Beats Humans by 4%, RAG + Memorization + YaRN Ablations (Tsinghua + Zhipu.AI; arXiv 2412.15204 v2, Jan 2025)",
         "Synthesis \u2014 OOLONG Paper Deep Dive: 2-Split Aggregation Benchmark, 9-Model Leaderboard, Frontier Models Fail Below 50% at 128K, DeepSeek-R1 Pathology, Reasoning-Effort Counter-Intuition (CMU; arXiv 2511.02817 v1, Nov 2025)",
         "Learning Path \u2014 RLM Thread Evidence Chain (Session Arc 2026-04-27)"
+      ]
+    },
+    {
+      "target": "CCD-aware thread pinning for cache-locality preservation",
+      "referenced_by": [
+        "Dual-CCD Cache Partitioning (Zen 5 9900X)"
       ]
     },
     {
@@ -75819,6 +79315,30 @@
       ]
     },
     {
+      "target": "Comparison \u2014 DFlash vs EAGLE-3 vs MEDUSA",
+      "referenced_by": [
+        "E109 \u2014 DFlash Integration"
+      ]
+    },
+    {
+      "target": "Comparison \u2014 Ling vs Nemotron",
+      "referenced_by": [
+        "E110 \u2014 Model Catalog"
+      ]
+    },
+    {
+      "target": "Comparison \u2014 wall vs write vs Tetragon",
+      "referenced_by": [
+        "E104 \u2014 Tetragon + Guardian Perimeter"
+      ]
+    },
+    {
+      "target": "Concept \u2014 1-bit Ternary Weights",
+      "referenced_by": [
+        "E106 \u2014 Pulse Vector Runtime"
+      ]
+    },
+    {
       "target": "Concept \u2014 Declarative Agent Programming Spectrum",
       "referenced_by": [
         "E024 \u2014 Per-Project Assistant Configurations to Capture Programmatic Credit & Enable Ecosystem-Project Spawn (OpenClaw / OpenArms / Hermes)",
@@ -75829,12 +79349,53 @@
       ]
     },
     {
+      "target": "Concept \u2014 Dual-CCD Cache Partitioning",
+      "referenced_by": [
+        "E100 \u2014 Hardware Foundation",
+        "E106 \u2014 Pulse Vector Runtime"
+      ]
+    },
+    {
+      "target": "Concept \u2014 SRP Trinity",
+      "referenced_by": [
+        "E104 \u2014 Tetragon + Guardian Perimeter",
+        "E106 \u2014 Pulse Vector Runtime",
+        "E107 \u2014 Weaver State Fabric",
+        "Milestone \u2014 SAIN-01 Sovereign AI Node"
+      ]
+    },
+    {
       "target": "Concept \u2014 Secure Tamper-Proof Model on Shared GPU",
       "referenced_by": [
         "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
         "2026-04-30 Session Log \u2014 Trust-Layer Arc: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context)",
         "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)",
         "Learning Path \u2014 Trust Layer: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context, Session Arc 2026-04-30)"
+      ]
+    },
+    {
+      "target": "Concept \u2014 Speculative Decoding via Block Diffusion",
+      "referenced_by": [
+        "E109 \u2014 DFlash Integration",
+        "DFlash vs EAGLE-3 vs MEDUSA \u2014 Speculative Decoding Family"
+      ]
+    },
+    {
+      "target": "Concept \u2014 VFIO GPU Isolation with AMD IOMMU",
+      "referenced_by": [
+        "E103 \u2014 VFIO Isolation"
+      ]
+    },
+    {
+      "target": "Concept \u2014 ZFS Tiered Storage",
+      "referenced_by": [
+        "E107 \u2014 Weaver State Fabric"
+      ]
+    },
+    {
+      "target": "Concept \u2014 ZFS Tiered Storage for LLM Inference",
+      "referenced_by": [
+        "E102 \u2014 ZFS Storage Layout"
       ]
     },
     {
@@ -75891,6 +79452,43 @@
         "2026-05-09 Session Log \u2014 9 Pending Decisions Resolved (5 Executed \u00b7 3 Defer-Track \u00b7 1 Boundary-Correction) + 5-Channel RRF Retrieval Landed + Schema Extension + AVX512 Machine Plan Captured",
         "Synthesis \u2014 Anthropic Programmatic Credit Pool (effective 2026-06-15): separate metered budget for Claude Agent SDK / `claude -p` CLI / GitHub Actions / third-party Agent SDK apps, at API rates, with $20\u2013$200/month tier-by-tier allowance that does NOT roll over",
         "Synthesis \u2014 Strands Agents (AWS): Intent-Based Tool Design Cuts Token Usage 96% (52K \u2192 2K) via Narrow Scope + Semantic-Search MCP Gateway"
+      ]
+    },
+    {
+      "target": "DFlash (arXiv:2602.06036) \u2014 block-diffusion draft",
+      "referenced_by": [
+        "DFlash vs EAGLE-3 vs MEDUSA \u2014 Speculative Decoding Family"
+      ]
+    },
+    {
+      "target": "DFlash block-diffusion speculative decoding",
+      "referenced_by": [
+        "Synthesis \u2014 SAIN-01 Sovereign AI Node Master Specification",
+        "Synthesis \u2014 AMD Zen 5 Single-Cycle 512-bit AVX-512 and Dual-CCD Topology"
+      ]
+    },
+    {
+      "target": "DFlash speculative decoding",
+      "referenced_by": [
+        "Synthesis \u2014 BitNet b1.58 Ternary LLM Family and bitnet.cpp Inference"
+      ]
+    },
+    {
+      "target": "DFlash synthesis",
+      "referenced_by": [
+        "DFlash vs EAGLE-3 vs MEDUSA \u2014 Speculative Decoding Family"
+      ]
+    },
+    {
+      "target": "DFlash vs EAGLE-3 vs MEDUSA",
+      "referenced_by": [
+        "Ling-2.6-flash vs Nemotron-3-Nano-Omni \u2014 Blackwell 96GB Resident Model Comparison"
+      ]
+    },
+    {
+      "target": "DFlash vs EAGLE-3 vs MEDUSA comparison",
+      "referenced_by": [
+        "BitNet b1.58 Ternary vs FP16 Baseline \u2014 Execution Cost Comparison"
       ]
     },
     {
@@ -75991,6 +79589,13 @@
       "referenced_by": [
         "Synthesis \u2014 Google TPU + UCSD DFlash (May 4 2026): Diffusion-Style Speculative Decoding Achieves 3.13\u00d7 Average / 6\u00d7 Peak Speedup on TPU v5p \u2014 O(1) Block Drafting Replaces O(K) Sequential",
         "Synthesis \u2014 Quantization (YouTube, 2026): How a 280GB Model Runs on Your Laptop \u2014 Outliers as Central Villain \u00b7 5 Algorithms \u00b7 Bell-Curve Per-Group Scaling \u00b7 NF4 Smart Grid"
+      ]
+    },
+    {
+      "target": "Dual-CCD Cache Partitioning",
+      "referenced_by": [
+        "BitNet b1.58 Ternary vs FP16 Baseline \u2014 Execution Cost Comparison",
+        "SRP Trinity \u2014 Pulse, Weaver, Auditor"
       ]
     },
     {
@@ -76222,6 +79827,12 @@
       "referenced_by": [
         "T078 \u2014 Author spawn-protocol-generic-agent-sdk (the first runtime spawn protocol; foundation for OpenClaw/OpenArms/Hermes variants)",
         "Pattern \u2014 Spawn protocol for Multica: bridge a Per-Project Assistant Profile to a running Assistant instance on Multica's 10-CLI daemon (operator-adopted runtime)"
+      ]
+    },
+    {
+      "target": "EAGLE-3 (arXiv:2503.01840) \u2014 autoregressive draft",
+      "referenced_by": [
+        "DFlash vs EAGLE-3 vs MEDUSA \u2014 Speculative Decoding Family"
       ]
     },
     {
@@ -76521,6 +80132,16 @@
       ]
     },
     {
+      "target": "HRM/TRM Tiny Recursion Models",
+      "referenced_by": [
+        "1-bit Ternary Weights",
+        "Speculative Decoding via Block Diffusion",
+        "Synthesis \u2014 BitNet b1.58 Ternary LLM Family and bitnet.cpp Inference",
+        "Synthesis \u2014 DFlash: Block-Diffusion Flash Speculative Decoding",
+        "Synthesis \u2014 SAIN-01 Sovereign AI Node Master Specification"
+      ]
+    },
+    {
       "target": "Handoff #14 \u2014 S1 Close",
       "referenced_by": [
         "Saturation Declarations Are P4 Aspirational \u2014 Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal"
@@ -76548,6 +80169,12 @@
       "target": "Hanke integration pattern",
       "referenced_by": [
         "root-ghostproxy M005 \u2014 First Specialized Feature Module (Suricata or PolarProxy)"
+      ]
+    },
+    {
+      "target": "Hardware-level GPU isolation via Linux VFIO + AMD IOMMU",
+      "referenced_by": [
+        "VFIO GPU Isolation with AMD IOMMU"
       ]
     },
     {
@@ -76598,10 +80225,34 @@
       ]
     },
     {
+      "target": "Infrastructure Must Be Reproducible",
+      "referenced_by": [
+        "Build Pipeline via SDD+TDD \u2014 Real Bugs Surface Only When Tests Execute Actual Renderers (Not Just Schema-Validate)"
+      ]
+    },
+    {
       "target": "Infrastructure Over Instructions for Process Enforcement",
       "referenced_by": [
         "Harness Engineering Is the Dominant Performance Lever",
         "Synthesis \u2014 Natural-Language Agent Harnesses (NLAH) \u2014 Externalizing Harness Logic as Editable Artifacts"
+      ]
+    },
+    {
+      "target": "Intel Alder/Raptor/Arrow Lake consumer (no AVX-512) \u2014 Zen 5 is the only first-class AVX-512 consumer desktop option as of 2026",
+      "referenced_by": [
+        "Synthesis \u2014 AMD Zen 5 Single-Cycle 512-bit AVX-512 and Dual-CCD Topology"
+      ]
+    },
+    {
+      "target": "Intel Lunar Lake",
+      "referenced_by": [
+        "Synthesis \u2014 AMD Zen 5 Single-Cycle 512-bit AVX-512 and Dual-CCD Topology"
+      ]
+    },
+    {
+      "target": "Intel Sapphire Rapids / Granite Rapids server",
+      "referenced_by": [
+        "Synthesis \u2014 AMD Zen 5 Single-Cycle 512-bit AVX-512 and Dual-CCD Topology"
       ]
     },
     {
@@ -76646,9 +80297,19 @@
       ]
     },
     {
+      "target": "L0 verbatim dump",
+      "referenced_by": [
+        "Milestone \u2014 SAIN-01 Sovereign AI Node",
+        "Synthesis \u2014 SAIN-01 Sovereign AI Node Master Specification"
+      ]
+    },
+    {
       "target": "LLM Architecture Gallery",
       "referenced_by": [
-        "Synthesis \u2014 HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI"
+        "Synthesis \u2014 BitNet b1.58 Ternary LLM Family and bitnet.cpp Inference",
+        "Synthesis \u2014 DFlash: Block-Diffusion Flash Speculative Decoding",
+        "Synthesis \u2014 HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI",
+        "Synthesis \u2014 SAIN-01 Sovereign AI Node Master Specification"
       ]
     },
     {
@@ -76929,6 +80590,12 @@
       ]
     },
     {
+      "target": "MEDUSA (arXiv:2401.10774) \u2014 simplest",
+      "referenced_by": [
+        "DFlash vs EAGLE-3 vs MEDUSA \u2014 Speculative Decoding Family"
+      ]
+    },
+    {
       "target": "MLMastery Context Engineering Synthesis",
       "referenced_by": [
         "Synthesis \u2014 Cloudflare Agent Memory (Apr 17 2026): 5-Channel RRF Retrieval + Multi-Stage Ingestion Pipeline = Solving Context Rot for Long-Running AI Agents",
@@ -77118,6 +80785,12 @@
       ]
     },
     {
+      "target": "NUMA scheduling concepts more broadly",
+      "referenced_by": [
+        "Dual-CCD Cache Partitioning (Zen 5 9900X)"
+      ]
+    },
+    {
       "target": "Never Skip Stages",
       "referenced_by": [
         "Synthesis \u2014 JS Mastery Six-File Context System: Spec-Driven Agentic Build Methodology (project-overview \u00b7 architecture \u00b7 code-standards \u00b7 ai-workflow-rules \u00b7 ui-context \u00b7 progress-tracker + AGENTS.md, 2026 video tutorial + downloadable templates)"
@@ -77165,6 +80838,12 @@
       "referenced_by": [
         "Synthesis \u2014 Structured Prompt-Driven Development (SPDD): Thoughtworks' REASONS Canvas + Workflow for Governable AI-Assisted Delivery (Wei Zhang + Jessie Jie Xia, martinfowler.com 2026-04-28)",
         "Synthesis \u2014 JS Mastery Six-File Context System: Spec-Driven Agentic Build Methodology (project-overview \u00b7 architecture \u00b7 code-standards \u00b7 ai-workflow-rules \u00b7 ui-context \u00b7 progress-tracker + AGENTS.md, 2026 video tutorial + downloadable templates)"
+      ]
+    },
+    {
+      "target": "OpenZFS version",
+      "referenced_by": [
+        "ZFS Tiered Storage for LLM Inference"
       ]
     },
     {
@@ -77230,9 +80909,22 @@
       ]
     },
     {
+      "target": "Operator-directive log",
+      "referenced_by": [
+        "Milestone \u2014 SAIN-01 Sovereign AI Node",
+        "Synthesis \u2014 SAIN-01 Sovereign AI Node Master Specification"
+      ]
+    },
+    {
       "target": "P1 + P4 governing principles",
       "referenced_by": [
         "Learning Path v2 \u2014 Multi-Day Pain-Point Resolution Comprehensive 9-Phase Body of Work (Mission Arc 2026-05-08)"
+      ]
+    },
+    {
+      "target": "P4 (Declarations Are Aspirational Until Infrastructure Verifies Them) \u2014 schema-conformance is a declaration; on-disk behavior is the verification.",
+      "referenced_by": [
+        "Build Pipeline via SDD+TDD \u2014 Real Bugs Surface Only When Tests Execute Actual Renderers (Not Just Schema-Validate)"
       ]
     },
     {
@@ -77548,9 +81240,67 @@
       ]
     },
     {
+      "target": "SAIN-01 Sovereign Node Master Spec",
+      "referenced_by": [
+        "Synthesis \u2014 BitNet b1.58 Ternary LLM Family and bitnet.cpp Inference",
+        "Synthesis \u2014 DFlash: Block-Diffusion Flash Speculative Decoding",
+        "Synthesis \u2014 AMD Zen 5 Single-Cycle 512-bit AVX-512 and Dual-CCD Topology"
+      ]
+    },
+    {
+      "target": "SAIN-01 Sovereign Node Spec",
+      "referenced_by": [
+        "E100 \u2014 Hardware Foundation",
+        "E101 \u2014 Sovereign OS Build",
+        "E102 \u2014 ZFS Storage Layout",
+        "E103 \u2014 VFIO Isolation",
+        "E104 \u2014 Tetragon + Guardian Perimeter",
+        "E105 \u2014 Network Segregation",
+        "E106 \u2014 Pulse Vector Runtime",
+        "E107 \u2014 Weaver State Fabric",
+        "E108 \u2014 Load-Balancing Profiles",
+        "BitNet b1.58 Ternary vs FP16 Baseline \u2014 Execution Cost Comparison",
+        "DFlash vs EAGLE-3 vs MEDUSA \u2014 Speculative Decoding Family",
+        "Ling-2.6-flash vs Nemotron-3-Nano-Omni \u2014 Blackwell 96GB Resident Model Comparison",
+        "wall(1) vs write(1) vs Tetragon eBPF \u2014 Operator-Perimeter Mechanisms",
+        "SRP Trinity \u2014 Pulse, Weaver, Auditor",
+        "1-bit Ternary Weights",
+        "Speculative Decoding via Block Diffusion",
+        "Dual-CCD Cache Partitioning (Zen 5 9900X)",
+        "VFIO GPU Isolation with AMD IOMMU",
+        "ZFS Tiered Storage for LLM Inference"
+      ]
+    },
+    {
       "target": "SDLC Customization Framework",
       "referenced_by": [
         "Profile as Coordination Bundle"
+      ]
+    },
+    {
+      "target": "SFIF / [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers]]",
+      "referenced_by": [
+        "Build Pipeline via SDD+TDD \u2014 Real Bugs Surface Only When Tests Execute Actual Renderers (Not Just Schema-Validate)"
+      ]
+    },
+    {
+      "target": "SMT policy",
+      "referenced_by": [
+        "Dual-CCD Cache Partitioning (Zen 5 9900X)"
+      ]
+    },
+    {
+      "target": "SRP Trinity",
+      "referenced_by": [
+        "Dual-CCD Cache Partitioning (Zen 5 9900X)",
+        "VFIO GPU Isolation with AMD IOMMU",
+        "ZFS Tiered Storage for LLM Inference"
+      ]
+    },
+    {
+      "target": "SRP Trinity concept",
+      "referenced_by": [
+        "wall(1) vs write(1) vs Tetragon eBPF \u2014 Operator-Perimeter Mechanisms"
       ]
     },
     {
@@ -77599,6 +81349,12 @@
       ]
     },
     {
+      "target": "Secure Boot + MOK enrollment",
+      "referenced_by": [
+        "VFIO GPU Isolation with AMD IOMMU"
+      ]
+    },
+    {
       "target": "Self-Reference Drift Lesson",
       "referenced_by": [
         "Saturation Declarations Are P4 Aspirational \u2014 Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal",
@@ -77614,9 +81370,21 @@
       ]
     },
     {
+      "target": "Single Responsibility Principle at the system level",
+      "referenced_by": [
+        "SRP Trinity \u2014 Pulse, Weaver, Auditor"
+      ]
+    },
+    {
       "target": "Skyscraper / Pyramid / Mountain Pattern",
       "referenced_by": [
         "Synthesis \u2014 Cavekit v4: Compressed Spec-Driven Development for Claude Code (Julius Brussee, MIT-Licensed, SPEC.md + 3 Commands + Caveman Encoding + Backprop Reflex)"
+      ]
+    },
+    {
+      "target": "Software-only container isolation",
+      "referenced_by": [
+        "VFIO GPU Isolation with AMD IOMMU"
       ]
     },
     {
@@ -77643,6 +81411,12 @@
         "Synthesis \u2014 How To Train Your GPT (Raiyan Yahya): 12-Chapter Pedagogical Guide to Building a LLaMA-3-Style 124M GPT From Scratch",
         "Synthesis \u2014 Effective Context Engineering for AI Agents (MachineLearningMastery, April 2026): Treat Context Window as RAM, Token Budgets Across Agent Loops, Probe-Based Evaluation, 60-80% Utilization Target",
         "Learning Path \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer (Mission Arc 2026-05-04)"
+      ]
+    },
+    {
+      "target": "Stage-2 selfdef integration",
+      "referenced_by": [
+        "SRP Trinity \u2014 Pulse, Weaver, Auditor"
       ]
     },
     {
@@ -77756,6 +81530,12 @@
       ]
     },
     {
+      "target": "Synthesis \u2014 BitNet b1.58 family",
+      "referenced_by": [
+        "Milestone \u2014 SAIN-01 Sovereign AI Node"
+      ]
+    },
+    {
       "target": "Synthesis \u2014 Caveman",
       "referenced_by": [
         "2026-04-30 Session Log \u2014 Trust-Layer Arc: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context)"
@@ -77787,6 +81567,18 @@
       "target": "Synthesis \u2014 Context Mode",
       "referenced_by": [
         "Synthesis \u2014 Cavemem: Cross-Agent Persistent Memory for AI Coding Assistants (Julius Brussee, MIT-Licensed, Compressed-at-Rest SQLite + FTS5 + Vector Index + MCP Progressive Disclosure)"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 DFlash",
+      "referenced_by": [
+        "Milestone \u2014 SAIN-01 Sovereign AI Node"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 DFlash block-diffusion",
+      "referenced_by": [
+        "E109 \u2014 DFlash Integration"
       ]
     },
     {
@@ -77896,6 +81688,12 @@
       ]
     },
     {
+      "target": "Synthesis \u2014 SAIN-01 Sovereign Node Master Spec",
+      "referenced_by": [
+        "Milestone \u2014 SAIN-01 Sovereign AI Node"
+      ]
+    },
+    {
       "target": "Synthesis \u2014 SKILL.md vs CLAUDE.md vs AGENTS.md",
       "referenced_by": [
         "Three-Layer Agent Context Architecture",
@@ -77931,6 +81729,25 @@
         "Synthesis \u2014 OmniVoice: Open-Source TTS Supporting 600+ Languages",
         "Synthesis \u2014 Unsloth GGUF: 2-bit Qwen3.6-27B Made 26 Tool Calls",
         "Synthesis \u2014 Qwen3.6-27B: Dense 27B Beats 397B MoE on Agentic Coding"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 Zen 5 AVX-512",
+      "referenced_by": [
+        "Milestone \u2014 SAIN-01 Sovereign AI Node"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 Zen 5 AVX-512 single-cycle",
+      "referenced_by": [
+        "E100 \u2014 Hardware Foundation",
+        "E101 \u2014 Sovereign OS Build"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 Zen 5 Single-Cycle 512-bit AVX-512",
+      "referenced_by": [
+        "1-bit Ternary Weights"
       ]
     },
     {
@@ -78114,6 +81931,12 @@
       ]
     },
     {
+      "target": "Tetragon eBPF kernel enforcement framework",
+      "referenced_by": [
+        "wall(1) vs write(1) vs Tetragon eBPF \u2014 Operator-Perimeter Mechanisms"
+      ]
+    },
+    {
       "target": "The 2026 Consumer-Hardware AI Stack",
       "referenced_by": [
         "Milestone: Post-Anthropic Self-Autonomous AI Stack"
@@ -78197,6 +82020,16 @@
       ]
     },
     {
+      "target": "VFIO GPU Isolation",
+      "referenced_by": [
+        "DFlash vs EAGLE-3 vs MEDUSA \u2014 Speculative Decoding Family",
+        "Ling-2.6-flash vs Nemotron-3-Nano-Omni \u2014 Blackwell 96GB Resident Model Comparison",
+        "wall(1) vs write(1) vs Tetragon eBPF \u2014 Operator-Perimeter Mechanisms",
+        "SRP Trinity \u2014 Pulse, Weaver, Auditor",
+        "ZFS Tiered Storage for LLM Inference"
+      ]
+    },
+    {
       "target": "VentureBeat Agent-Integration-Layer Synthesis",
       "referenced_by": [
         "Synthesis \u2014 Cloudflare Markdown for Agents (Feb 2026): Server-Side HTML\u2192Markdown Content Negotiation Delivers 80% Token Reduction at the Content Source",
@@ -78223,9 +82056,60 @@
       ]
     },
     {
+      "target": "ZFS Tiered Storage",
+      "referenced_by": [
+        "Ling-2.6-flash vs Nemotron-3-Nano-Omni \u2014 Blackwell 96GB Resident Model Comparison",
+        "Dual-CCD Cache Partitioning (Zen 5 9900X)",
+        "VFIO GPU Isolation with AMD IOMMU"
+      ]
+    },
+    {
+      "target": "ZFS dataset stratification by workload access pattern",
+      "referenced_by": [
+        "ZFS Tiered Storage for LLM Inference"
+      ]
+    },
+    {
+      "target": "Zen 4",
+      "referenced_by": [
+        "Synthesis \u2014 AMD Zen 5 Single-Cycle 512-bit AVX-512 and Dual-CCD Topology"
+      ]
+    },
+    {
+      "target": "Zen 5 AVX-512 single-cycle 512-bit datapath",
+      "referenced_by": [
+        "Synthesis \u2014 BitNet b1.58 Ternary LLM Family and bitnet.cpp Inference",
+        "Synthesis \u2014 DFlash: Block-Diffusion Flash Speculative Decoding"
+      ]
+    },
+    {
+      "target": "Zen 5 AVX-512 single-cycle datapath",
+      "referenced_by": [
+        "Dual-CCD Cache Partitioning (Zen 5 9900X)"
+      ]
+    },
+    {
+      "target": "Zen 5 AVX-512 synthesis",
+      "referenced_by": [
+        "BitNet b1.58 Ternary vs FP16 Baseline \u2014 Execution Cost Comparison"
+      ]
+    },
+    {
+      "target": "Zen 5 microarchitecture and AVX-512 single-cycle path",
+      "referenced_by": [
+        "Synthesis \u2014 SAIN-01 Sovereign AI Node Master Specification"
+      ]
+    },
+    {
       "target": "`tools/inventory_models.sh`",
       "referenced_by": [
         "E010 M004 \u2014 Model Weights Inventory Tool and Manifest"
+      ]
+    },
+    {
+      "target": "`wall(1)` broadcast TTY notification mechanism",
+      "referenced_by": [
+        "wall(1) vs write(1) vs Tetragon eBPF \u2014 Operator-Perimeter Mechanisms"
       ]
     },
     {
@@ -78241,9 +82125,39 @@
       ]
     },
     {
+      "target": "`write(1)` per-user TTY notification mechanism",
+      "referenced_by": [
+        "wall(1) vs write(1) vs Tetragon eBPF \u2014 Operator-Perimeter Mechanisms"
+      ]
+    },
+    {
       "target": "awslabs/aidlc-workflows GitHub Repository",
       "referenced_by": [
         "Synthesis \u2014 AWS AI-DLC: AI-Driven Development Lifecycle (Methodology, Not a Tool)"
+      ]
+    },
+    {
+      "target": "bidirectional attention",
+      "referenced_by": [
+        "DFlash vs EAGLE-3 vs MEDUSA \u2014 Speculative Decoding Family"
+      ]
+    },
+    {
+      "target": "block-diffusion speculative-decoding pattern",
+      "referenced_by": [
+        "Speculative Decoding via Block Diffusion"
+      ]
+    },
+    {
+      "target": "classical autoregressive speculative decoding",
+      "referenced_by": [
+        "Speculative Decoding via Block Diffusion"
+      ]
+    },
+    {
+      "target": "classical autoregressive speculative decoding (EAGLE, MEDUSA, S3D) \u2014 DFlash's block-diffusion draft is the differentiator",
+      "referenced_by": [
+        "Synthesis \u2014 DFlash: Block-Diffusion Flash Speculative Decoding"
       ]
     },
     {
@@ -78256,6 +82170,12 @@
       "target": "decision-territory implementation-spec (sibling #2) \u2014 RULE 3 boundary classification consumes authorship taxonomy from this gate",
       "referenced_by": [
         "Authorship-Classification Gate \u2014 Implementation Spec for Frontmatter Taxonomy Enforcement"
+      ]
+    },
+    {
+      "target": "deep draft models + bidirectional attention",
+      "referenced_by": [
+        "Speculative Decoding via Block Diffusion"
       ]
     },
     {
@@ -78458,15 +82378,106 @@
       ]
     },
     {
+      "target": "existing `cyberpunk042/selfdef` notifier chain",
+      "referenced_by": [
+        "wall(1) vs write(1) vs Tetragon eBPF \u2014 Operator-Perimeter Mechanisms"
+      ]
+    },
+    {
       "target": "fake-blockers-vs-real-blockers",
       "referenced_by": [
         "Lesson \u2014 Anti-minimizing: don't undercount systemic bugs; blocker register self-filters before surfacing"
       ]
     },
     {
+      "target": "future SAIN-01 + selfdef cross-repo policy merge",
+      "referenced_by": [
+        "wall(1) vs write(1) vs Tetragon eBPF \u2014 Operator-Perimeter Mechanisms"
+      ]
+    },
+    {
+      "target": "future SAIN-01 hardware variants",
+      "referenced_by": [
+        "SRP Trinity \u2014 Pulse, Weaver, Auditor"
+      ]
+    },
+    {
+      "target": "future Stage-2 selfdef integration",
+      "referenced_by": [
+        "E104 \u2014 Tetragon + Guardian Perimeter"
+      ]
+    },
+    {
+      "target": "future `cyberpunk042/selfdef` Epics on SAIN-01 host deployment",
+      "referenced_by": [
+        "Synthesis \u2014 SAIN-01 Sovereign AI Node Master Specification"
+      ]
+    },
+    {
+      "target": "future `wiki/backlog/epics/milestone-sain01/epic-*.md`",
+      "referenced_by": [
+        "Synthesis \u2014 SAIN-01 Sovereign AI Node Master Specification"
+      ]
+    },
+    {
+      "target": "future `wiki/backlog/milestones/sain-01-sovereign-node.md`",
+      "referenced_by": [
+        "SRP Trinity \u2014 Pulse, Weaver, Auditor",
+        "Synthesis \u2014 SAIN-01 Sovereign AI Node Master Specification"
+      ]
+    },
+    {
+      "target": "future `wiki/comparisons/cmp-dflash-vs-eagle3-vs-medusa.md`",
+      "referenced_by": [
+        "Synthesis \u2014 DFlash: Block-Diffusion Flash Speculative Decoding"
+      ]
+    },
+    {
+      "target": "future `wiki/comparisons/cmp-ling-26-flash-vs-nemotron-3-nano-omni.md`",
+      "referenced_by": [
+        "Synthesis \u2014 DFlash: Block-Diffusion Flash Speculative Decoding"
+      ]
+    },
+    {
+      "target": "future `wiki/comparisons/cmp-zen5-vs-zen4-vs-sapphire-rapids-low-bit.md`",
+      "referenced_by": [
+        "Synthesis \u2014 AMD Zen 5 Single-Cycle 512-bit AVX-512 and Dual-CCD Topology"
+      ]
+    },
+    {
+      "target": "future `wiki/domains/devops/concept-dual-ccd-cache-partitioning-9900x.md`",
+      "referenced_by": [
+        "Synthesis \u2014 AMD Zen 5 Single-Cycle 512-bit AVX-512 and Dual-CCD Topology"
+      ]
+    },
+    {
+      "target": "future projects' TDD planning \u2014 Layer 3 is non-optional; budget it from the start.",
+      "referenced_by": [
+        "Build Pipeline via SDD+TDD \u2014 Real Bugs Surface Only When Tests Execute Actual Renderers (Not Just Schema-Validate)"
+      ]
+    },
+    {
       "target": "ijin/aidlc-cc-plugin GitHub Repository",
       "referenced_by": [
         "Synthesis \u2014 ijin/aidlc-cc-plugin: Community Claude Code Port of AWS AI-DLC (Grain of Salt)"
+      ]
+    },
+    {
+      "target": "inclusionAI/Ling-2.6-flash",
+      "referenced_by": [
+        "Ling-2.6-flash vs Nemotron-3-Nano-Omni \u2014 Blackwell 96GB Resident Model Comparison"
+      ]
+    },
+    {
+      "target": "mature",
+      "referenced_by": [
+        "DFlash vs EAGLE-3 vs MEDUSA \u2014 Speculative Decoding Family"
+      ]
+    },
+    {
+      "target": "multi-head approach",
+      "referenced_by": [
+        "DFlash vs EAGLE-3 vs MEDUSA \u2014 Speculative Decoding Family"
       ]
     },
     {
@@ -78479,6 +82490,12 @@
       "target": "not the label",
       "referenced_by": [
         "Right-size the methodology model to the actual work, not the structural category"
+      ]
+    },
+    {
+      "target": "nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16",
+      "referenced_by": [
+        "Ling-2.6-flash vs Nemotron-3-Nano-Omni \u2014 Blackwell 96GB Resident Model Comparison"
       ]
     },
     {
@@ -78529,6 +82546,36 @@
       "target": "root-ghostproxy operating-principles.md Principle #11 anti-pattern \"verbal-only\" entry",
       "referenced_by": [
         "Lesson \u2014 Verbal acknowledgment is not a fix: every bug-fix must produce a structural artefact (rule, file, hook, code)"
+      ]
+    },
+    {
+      "target": "standard FP16 / BF16 / INT8 weight quantization",
+      "referenced_by": [
+        "1-bit Ternary Weights"
+      ]
+    },
+    {
+      "target": "standard FP16 / BF16 transformer baselines",
+      "referenced_by": [
+        "Synthesis \u2014 BitNet b1.58 Ternary LLM Family and bitnet.cpp Inference"
+      ]
+    },
+    {
+      "target": "ternary `{\u22121",
+      "referenced_by": [
+        "BitNet b1.58 Ternary vs FP16 Baseline \u2014 Execution Cost Comparison"
+      ]
+    },
+    {
+      "target": "ternary-weight inference paradigm",
+      "referenced_by": [
+        "1-bit Ternary Weights"
+      ]
+    },
+    {
+      "target": "training-time test",
+      "referenced_by": [
+        "DFlash vs EAGLE-3 vs MEDUSA \u2014 Speculative Decoding Family"
       ]
     },
     {

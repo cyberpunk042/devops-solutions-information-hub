@@ -93,4 +93,9 @@ See Done When — verifiable network-isolation checkpoints.
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[sain-01-sovereign-node|Milestone — SAIN-01 Sovereign AI Node]]
+[[e101-sovereign-os-build|E101 — Sovereign OS Build]]
+[[e110-model-catalog|E110 — Model Catalog]]
+[[e108-load-balancing-profiles|E108 — Load-Balancing Profiles]]
+[[SAIN-01 Sovereign Node Spec]]
+[[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]

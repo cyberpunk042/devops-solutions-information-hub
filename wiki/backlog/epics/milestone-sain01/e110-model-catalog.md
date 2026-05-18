@@ -109,4 +109,12 @@ See Done When — verifiable resident-model deployment checkpoints.
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[sain-01-sovereign-node|Milestone — SAIN-01 Sovereign AI Node]]
+[[e102-zfs-storage-layout|E102 — ZFS Storage Layout]]
+[[e103-vfio-isolation|E103 — VFIO Isolation]]
+[[e105-network-segregation|E105 — Network Segregation]]
+[[e107-weaver-state-fabric|E107 — Weaver State Fabric]]
+[[e108-load-balancing-profiles|E108 — Load-Balancing Profiles]]
+[[e109-dflash-integration|E109 — DFlash Integration]]
+[[Comparison — Ling vs Nemotron]]
+[[local-llm-quantization|Local LLM Quantization]]

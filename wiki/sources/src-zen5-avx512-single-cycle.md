@@ -187,10 +187,6 @@ Zen 5 delivers all three in one chip. Zen 4 delivered only (2) — the double-pu
 - ENABLES: [[src-bitnet-b158-ternary-llm|BitNet b1.58 ternary LLM family]] — the AVX-512 + VNNI substrate is what makes ternary CPU inference viable
 - ENABLES: [[src-sain-01-sovereign-node-spec|SAIN-01 Sovereign Node Master Spec]] — the 9900X is selected for these microarchitectural properties
 - RELATES TO: [[src-dflash-block-diffusion-spec-dec|DFlash block-diffusion speculative decoding]] — DFlash runs on GPU but the host CPU's vector throughput affects orchestration latency
-- COMPARES TO: Intel Lunar Lake (consumer AVX-512 returned), Intel Sapphire Rapids / Granite Rapids server (AVX-512 + more cores), Zen 4 (double-pumped AVX-512), Apple M-series (different SIMD architecture entirely)
-- CONTRASTS WITH: Intel Alder/Raptor/Arrow Lake consumer (no AVX-512) — Zen 5 is the only first-class AVX-512 consumer desktop option as of 2026
-- FEEDS INTO: future `wiki/comparisons/cmp-zen5-vs-zen4-vs-sapphire-rapids-low-bit.md` (L3 head-to-head for low-bit inference targets)
-- RELATES TO: future `wiki/domains/devops/concept-dual-ccd-cache-partitioning-9900x.md` (L2 concept page on CCD-aware scheduling)
 
 ## Source Notes
 
@@ -202,4 +198,6 @@ The convergent picture across six independent sources is strong: Zen 5's full-ra
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[BitNet b1.58 ternary LLM family]]
+[[SAIN-01 Sovereign Node Master Spec]]
+[[DFlash block-diffusion speculative decoding]]

@@ -178,11 +178,8 @@ These belong in the eventual `wiki/backlog/epics/milestone-sain01/epic-*.md` set
 - BUILDS ON: [[src-bitnet-b158-ternary-llm|BitNet b1.58 ternary LLM family]]
 - BUILDS ON: [[src-dflash-block-diffusion-spec-dec|DFlash block-diffusion speculative decoding]]
 - BUILDS ON: [[src-zen5-avx512-single-cycle|Zen 5 microarchitecture and AVX-512 single-cycle path]]
-- FEEDS INTO: future `wiki/backlog/milestones/sain-01-sovereign-node.md` (milestone)
-- FEEDS INTO: future `wiki/backlog/epics/milestone-sain01/epic-*.md` (11 planned epics)
 - RELATES TO: [[src-hrm-trm-tiny-recursion-models|HRM/TRM Tiny Recursion Models]] (alternative small-model approach; could pair with the Conductor agent on CPU)
 - RELATES TO: [[src-llm-architecture-gallery-raschka|LLM Architecture Gallery]] (hybrid architectures relevant to the Blackwell's Oracle Core role)
-- CONSTRAINS: future `cyberpunk042/selfdef` Epics on SAIN-01 host deployment (Tetragon policy cross-link, state-fabric integration)
 
 ## Source Notes
 
@@ -194,4 +191,10 @@ The conversation's structural shape — escalating depth across seven blocks, wi
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[L0 verbatim dump]]
+[[Operator-directive log]]
+[[BitNet b1.58 ternary LLM family]]
+[[DFlash block-diffusion speculative decoding]]
+[[Zen 5 microarchitecture and AVX-512 single-cycle path]]
+[[HRM/TRM Tiny Recursion Models]]
+[[LLM Architecture Gallery]]

@@ -110,4 +110,13 @@ See Done When criteria — each is a verifiable build-pipeline checkpoint.
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[sain-01-sovereign-node|Milestone — SAIN-01 Sovereign AI Node]]
+[[e100-hardware-foundation|E100 — Hardware Foundation]]
+[[e102-zfs-storage-layout|E102 — ZFS Storage Layout]]
+[[e103-vfio-isolation|E103 — VFIO Isolation]]
+[[e104-tetragon-guardian-perimeter|E104 — Tetragon + Guardian Perimeter]]
+[[e105-network-segregation|E105 — Network Segregation]]
+[[e106-pulse-vector-runtime|E106 — Pulse Vector Runtime]]
+[[e107-weaver-state-fabric|E107 — Weaver State Fabric]]
+[[SAIN-01 Sovereign Node Spec]]
+[[Synthesis — Zen 5 AVX-512 single-cycle]]

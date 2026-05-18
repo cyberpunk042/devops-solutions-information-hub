@@ -169,11 +169,8 @@ EAGLE-3 remains the right comparison baseline for any future speculative-decodin
 - BUILDS ON: [[src-zen5-avx512-single-cycle|Zen 5 AVX-512 single-cycle 512-bit datapath]] (host system substrate, though DFlash itself runs on GPU)
 - FEEDS INTO: [[src-sain-01-sovereign-node-spec|SAIN-01 Sovereign Node Master Spec]] (relevant for the Logic Engine + Oracle Core tiers)
 - RELATES TO: [[src-bitnet-b158-ternary-llm|BitNet b1.58 ternary LLM]] (orthogonal acceleration — weight-width compression vs draft-acceleration; the two compose)
-- CONTRASTS WITH: classical autoregressive speculative decoding (EAGLE, MEDUSA, S3D) — DFlash's block-diffusion draft is the differentiator
 - COMPARES TO: [[src-llm-architecture-gallery-raschka|LLM Architecture Gallery]] (specifically the discussion of speculative decoding patterns + draft-target architectures)
 - RELATES TO: [[src-hrm-trm-tiny-recursion-models|HRM/TRM Tiny Recursion Models]] (alternative compute-efficiency strategy — recursion vs speculative decoding, both bounded-domain wins)
-- ENABLES: future `wiki/comparisons/cmp-dflash-vs-eagle3-vs-medusa.md` (L3 head-to-head comparison)
-- ENABLES: future `wiki/comparisons/cmp-ling-26-flash-vs-nemotron-3-nano-omni.md` (model-catalog comparison; DFlash candidates may apply to one or both)
 
 ## Source Notes
 
@@ -185,4 +182,9 @@ The operator's verbal framing arriving independently at the paper's reported pat
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[Zen 5 AVX-512 single-cycle 512-bit datapath]]
+[[SAIN-01 Sovereign Node Master Spec]]
+[[BitNet b1.58 ternary LLM]]
+[[LLM Architecture Gallery]]
+[[HRM/TRM Tiny Recursion Models]]
+[[concept-speculative-decoding-block-diffusion|Speculative Decoding via Block Diffusion]]

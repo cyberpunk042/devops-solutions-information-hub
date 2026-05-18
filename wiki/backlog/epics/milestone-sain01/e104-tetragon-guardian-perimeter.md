@@ -99,8 +99,17 @@ See Done When — verifiable kernel-perimeter integrity checkpoints.
 - IMPLEMENTS: [[concept-srp-trinity-pulse-weaver-auditor|Concept — SRP Trinity (Auditor)]]
 - IMPLEMENTS: [[src-sain-01-sovereign-node-spec|SAIN-01 Sovereign Node Spec]] §§ 4.1, 6, 10
 - RELATES TO: [[cmp-wall-vs-write-vs-tetragon-for-perimeter|Comparison — wall vs write vs Tetragon]] (Tetragon is the only prevention mechanism)
-- CONSTRAINS: future Stage-2 selfdef integration (selfdef `agent-guard` policies must merge cleanly with `sovereign-kernel-fence`)
 
 ## Backlinks
 
-(will be populated by `tools/obsidian.py backlinks` after pipeline post)
+[[sain-01-sovereign-node|Milestone — SAIN-01 Sovereign AI Node]]
+[[e101-sovereign-os-build|E101 — Sovereign OS Build]]
+[[e102-zfs-storage-layout|E102 — ZFS Storage Layout]]
+[[e103-vfio-isolation|E103 — VFIO Isolation]]
+[[e107-weaver-state-fabric|E107 — Weaver State Fabric]]
+[[e108-load-balancing-profiles|E108 — Load-Balancing Profiles]]
+[[Concept — SRP Trinity (Auditor)]]
+[[SAIN-01 Sovereign Node Spec]]
+[[6]]
+[[10]]
+[[Comparison — wall vs write vs Tetragon]]
