@@ -149,6 +149,34 @@ exit 0
 
 The script is re-staged each session, so this content only persists for the current session. But it makes the file PROVABLY inert RIGHT NOW: even if some quirk wires it up mid-session, it can only return 0 (= "stop allowed").
 
+## Bulletproof reapply (one command, idempotent)
+
+Canonical install lives in this repo at `scripts/claude-code-env/`:
+
+```bash
+# From the info-hub repo root:
+bash scripts/claude-code-env/apply.sh             # idempotent install
+bash scripts/claude-code-env/apply.sh --dry-run   # report-only
+bash scripts/claude-code-env/apply.sh --help      # inline docs
+```
+
+The script installs four files into `~/.claude/` (`settings.json`,
+`CLAUDE.md`, `stop-hook-git-check.sh` neutralized, `validate-stop-hook-fix.sh`),
+backs up any pre-existing-but-different live files to
+`~/.claude/backups/<file>.<UTC-timestamp>.bak`, fixes perms, and runs
+the validator. Running it twice is a no-op the second time.
+
+Use cases for reapply:
+- Fresh container / new cloud session VM
+- `~/.claude/settings.json` got clobbered (e.g. via Claude Code's `/config` UI)
+- Stop-hook validator reports drift
+- New override added to `templates/` — push template change, run apply on each environment
+- Onboarding a new ecosystem-project's container
+
+See `scripts/claude-code-env/README.md` for full detail including the
+list of harness defaults this overrides (e.g. the cloud harness's
+"always create draft PR" hardcode is overridden via `~/.claude/CLAUDE.md`).
+
 ## How to detect this at session-start (validator script)
 
 A full 5-check validator is staged at `~/.claude/validate-stop-hook-fix.sh`:
