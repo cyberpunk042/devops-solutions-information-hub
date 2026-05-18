@@ -11,6 +11,8 @@ updated: 2026-05-18
 sources:
   - id: operator-investigation-2026-05-18
     type: directive
+    project: devops-solutions-information-hub
+    path: wiki/log/
     note: "Operator reported '/goal keeps being removed and conversation stops' glitch during perpetual mandate work; investigation requested"
   - id: claude-code-binary-decompilation-2026-05-18
     type: empirical
