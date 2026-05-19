@@ -3,7 +3,7 @@
     "env": {
         "CLAUDE_CODE_STOP_HOOK_BLOCK_CAP": "1000",
         "CLAUDE_CODE_MAX_TURNS": "10000",
-        "CLAUDE_CODE_AUTO_COMPACT_WINDOW": "180000"
+        "DISABLE_AUTOCOMPACT": "1"
     },
     "permissions": {
         "allow": ["Skill"],
