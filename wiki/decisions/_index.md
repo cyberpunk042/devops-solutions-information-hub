@@ -18,6 +18,7 @@ Choice frameworks with alternatives, rationale, and reversibility assessment.
 - [Decision: Adopt Multica as Orchestrator Layer in the Post-Anthropic Stack (2026-04-28)](01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04.md) — Adopt **Multica** ([multica-ai/multica](https://github
 - [Decision — AICP Active-State Mechanism: `.aicp/state.yaml` Per-Repo with Git-Branch Fallback](01_drafts/aicp-active-state-mechanism-for-hooks.md) — To enable Layer B PreToolUse stage-gate hooks (block writes to forbidden paths per the active task's `current_stage`)...
 - [Decision — Asymmetric KV Cache Quantization (q4_0 Keys + q2_K Values) for Qwen3 Models](01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values.md) — AICP's Qwen3 model configs use **asymmetric KV cache quantization** — `cache_type_k: q4_0` paired with `cache_type_v:...
+- [Decision: raise CLAUDE_CODE_STOP_HOOK_BLOCK_CAP to 1000 (default 8) for any operator using perpetual `/goal` mandates](01_drafts/claude-code-stop-hook-block-cap-raise-default-to-1000-for-perpetual-mandate-work.md) — The Claude Code harness's Stop-hook consecutive-block cap defaults to **8** — perpetual `/goal` mandates ("Continue E...
 - [Decision — Consumer Runtime Signaling via MCP Config](01_drafts/consumer-runtime-signaling-via-mcp-config.md) — When a consumer (OpenArms harness, OpenFleet orchestrator, solo Claude session, or any other MCP client) connects to ...
 - [Decision — Extended Thinking to Adaptive Thinking Migration](01_drafts/extended-to-adaptive-thinking-migration.md) — Opus 4
 - [Decision — LocalAI v4.1.3 over Ollama / vLLM for multi-model orchestration under a VRAM constraint](01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration.md) — AICP uses **LocalAI v4
@@ -44,4 +45,4 @@ Choice frameworks with alternatives, rationale, and reversibility assessment.
 
 ## Tags
 
-`decision`, `aicp`, `design-decisions`, `transferable`, `pattern`, `hooks`, `architecture`, `skills`, `stage-gate`, `mcp`, `methodology`, `versioning`, `local-first`, `qwen3`, `runtime`, `localai`, `infrastructure`, `claude-code`, `quality-tiers`, `composition`
+`decision`, `aicp`, `design-decisions`, `transferable`, `pattern`, `hooks`, `architecture`, `skills`, `stage-gate`, `claude-code`, `mcp`, `methodology`, `versioning`, `local-first`, `qwen3`, `runtime`, `localai`, `infrastructure`, `quality-tiers`, `composition`

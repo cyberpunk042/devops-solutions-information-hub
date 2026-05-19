@@ -1,25 +1,25 @@
 {
-  "generated": "2026-05-18T15:00:38.341197+00:00",
+  "generated": "2026-05-18T18:22:52.125308+00:00",
   "stats": {
-    "pages": 935,
-    "domains": 15,
-    "sources": 128,
+    "pages": 902,
+    "domains": 14,
+    "sources": 114,
     "comparisons": 14,
-    "relationships": 4351,
-    "tags_unique": 3634,
+    "relationships": 4278,
+    "tags_unique": 3383,
     "layers": {
       "3": 8,
       "5": 38,
-      "6": 26,
-      "2": 89,
-      "4": 85,
+      "6": 27,
+      "2": 88,
+      "4": 86,
       "0": 1,
       "1": 92,
       "spine": 83
     },
     "maturity": {
-      "seed": 209,
-      "growing": 349,
+      "seed": 194,
+      "growing": 341,
       "mature": 23
     }
   },
@@ -9894,6 +9894,43 @@
           "target": "Single-Active Backend with LRU Eviction"
         }
       ]
+    },
+    {
+      "path": "decisions/01_drafts/claude-code-stop-hook-block-cap-raise-default-to-1000-for-perpetual-mandate-work.md",
+      "slug": "decisions/01_drafts/claude-code-stop-hook-block-cap-raise-default-to-1000-for-perpetual-mandate-work",
+      "title": "Decision: raise CLAUDE_CODE_STOP_HOOK_BLOCK_CAP to 1000 (default 8) for any operator using perpetual `/goal` mandates",
+      "type": "decision",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-18",
+      "updated": "2026-05-18",
+      "last_reviewed": "",
+      "tags": [
+        "claude-code",
+        "stop-hook",
+        "goal",
+        "settings",
+        "environment",
+        "decision",
+        "operator-directive"
+      ],
+      "sources": [
+        {
+          "id": "operator-decision-2026-05-18",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "wiki/log/",
+          "note": "Operator selected 'Raise the cap to 1000 (Recommended)' option in live AskUserQuestion during the perpetual /goal investigation session"
+        }
+      ],
+      "layer": 6,
+      "maturity": "seed",
+      "derived_from": [
+        "wiki/lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch.md"
+      ],
+      "aliases": [],
+      "relationships": []
     },
     {
       "path": "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config.md",
@@ -21248,6 +21285,62 @@
       ]
     },
     {
+      "path": "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start.md",
+      "slug": "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start",
+      "title": "Claude Code env-runner re-stages stop-hook-git-check.sh from baked template at every session start",
+      "type": "lesson",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-18",
+      "updated": "2026-05-18",
+      "last_reviewed": "",
+      "tags": [
+        "claude-code",
+        "hooks",
+        "stop-hook",
+        "goal",
+        "env-runner",
+        "environment-manager",
+        "template",
+        "baked-image",
+        "session-start",
+        "post-compact",
+        "perpetual-mandate",
+        "agent-loop",
+        "second-brain",
+        "self-healing",
+        "bootstrap-mirror",
+        "multi-hour-cycles"
+      ],
+      "sources": [
+        {
+          "id": "operator-investigation-2026-05-18",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "wiki/log/",
+          "note": "Operator reported orphan script reappearing despite prior-session deletion + 4-hour goal sessions degrading; deep forensic investigation requested"
+        },
+        {
+          "id": "claude-code-env-runner-binary-decompilation-2026-05-18",
+          "type": "empirical",
+          "file": "/opt/env-runner/environment-manager",
+          "note": "Go binary on read-only squashfs (/opt/claude-code type squashfs ro). Strings dump shows full template settings.json + stop-hook-git-check.sh content as embedded constants. session-start orchestrator process tree: /bin/sh -c \u2192 environment-manager task-run \u2192 claude --resume"
+        },
+        {
+          "id": "filesystem-forensic-timeline-2026-05-18",
+          "type": "empirical",
+          "file": "/root/.claude/stop-hook-git-check.sh",
+          "note": "/root/.claude/stop-hook-git-check.sh Birth = 0.467s BEFORE session start; /home/claude/.claude/stop-hook-git-check.sh = May 16 (container build); user override at /root/.claude/settings.json survives across sessions"
+        }
+      ],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it.md",
       "slug": "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
       "title": "Lesson \u2014 Claude Code hook output channel is event-specific; `hookSpecificOutput.additionalContext` is valid for only 6 events (PostCompact / Stop / SessionEnd / others reject it)",
@@ -21375,6 +21468,54 @@
         }
       ],
       "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch.md",
+      "slug": "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch",
+      "title": "Claude Code Stop hook block cap defaults to 8 \u2014 perpetual `/goal` appears to stop after ~8 rounds",
+      "type": "lesson",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-18",
+      "updated": "2026-05-18",
+      "last_reviewed": "",
+      "tags": [
+        "claude-code",
+        "hooks",
+        "stop-hook",
+        "goal",
+        "settings",
+        "environment",
+        "perpetual-mandate",
+        "safety-cap",
+        "agent-loop"
+      ],
+      "sources": [
+        {
+          "id": "operator-investigation-2026-05-18",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "wiki/log/",
+          "note": "Operator reported '/goal keeps being removed and conversation stops' glitch during perpetual mandate work; investigation requested"
+        },
+        {
+          "id": "claude-code-binary-decompilation-2026-05-18",
+          "type": "empirical",
+          "file": "/opt/claude-code/bin/claude",
+          "note": "Strings dump + control-flow window around blocking_limit / CLAUDE_CODE_STOP_HOOK_BLOCK_CAP"
+        },
+        {
+          "id": "claude-code-hooks-reference",
+          "type": "external",
+          "url": "https://code.claude.com/docs/en/hooks"
+        }
+      ],
+      "layer": 4,
       "maturity": "seed",
       "derived_from": [],
       "aliases": [],
@@ -65997,7 +66138,7 @@
       "relationship_count": 1867
     },
     "ai-agents": {
-      "page_count": 78,
+      "page_count": 80,
       "relationship_count": 583
     },
     "ai-models": {
@@ -67420,8 +67561,10 @@
       "domains/ai-agents/patterns/per-role-command-architecture",
       "domains/automation/wiki-event-driven-automation",
       "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts",
+      "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start",
       "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
       "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache",
+      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch",
       "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed",
       "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
       "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
@@ -68238,6 +68381,7 @@
       "domains/knowledge-systems/wiki-core/wiki-backlog-pattern",
       "domains/tools-and-platforms/obsidian-cli",
       "domains/tools-and-platforms/obsidian-knowledge-vault",
+      "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start",
       "lessons/03_validated/knowledge-systems/knowledge-systems-is-foundational-domain",
       "lessons/03_validated/knowledge-systems/obsidian-as-knowledge-infrastructure",
       "lessons/03_validated/knowledge-systems/schema-is-the-real-product",
@@ -68939,6 +69083,7 @@
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
       "comparisons/mcp-vs-cli-decision-vs-lesson",
       "comparisons/skills-architecture-patterns",
+      "decisions/01_drafts/claude-code-stop-hook-block-cap-raise-default-to-1000-for-perpetual-mandate-work",
       "decisions/01_drafts/pretooluse-hooks-layered-approach",
       "decisions/02_validated/tools/mcp-vs-cli-for-tool-integration",
       "domains/ai-agents/claude-code/claude-code-best-practices",
@@ -68953,8 +69098,10 @@
       "domains/knowledge-systems/wiki-core/wiki-ingestion-pipeline",
       "domains/tools-and-platforms/notebooklm-skills",
       "domains/tools-and-platforms/obsidian-skills-ecosystem",
+      "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start",
       "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
       "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache",
+      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch",
       "lessons/03_validated/context-engineering/context-management-is-primary-productivity-lever",
       "lessons/03_validated/tools-architecture/always-plan-before-executing",
       "lessons/03_validated/tools-architecture/skills-architecture-is-dominant-extension-pattern",
@@ -69856,6 +70003,7 @@
       "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
       "decisions/01_drafts/aicp-active-state-mechanism-for-hooks",
       "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
+      "decisions/01_drafts/claude-code-stop-hook-block-cap-raise-default-to-1000-for-perpetual-mandate-work",
       "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
       "decisions/01_drafts/extended-to-adaptive-thinking-migration",
       "decisions/01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration",
@@ -70231,6 +70379,30 @@
     ],
     "dual-gpu": [
       "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values"
+    ],
+    "stop-hook": [
+      "decisions/01_drafts/claude-code-stop-hook-block-cap-raise-default-to-1000-for-perpetual-mandate-work",
+      "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start",
+      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
+      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch"
+    ],
+    "goal": [
+      "decisions/01_drafts/claude-code-stop-hook-block-cap-raise-default-to-1000-for-perpetual-mandate-work",
+      "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start",
+      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch"
+    ],
+    "settings": [
+      "decisions/01_drafts/claude-code-stop-hook-block-cap-raise-default-to-1000-for-perpetual-mandate-work",
+      "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache",
+      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch"
+    ],
+    "environment": [
+      "decisions/01_drafts/claude-code-stop-hook-block-cap-raise-default-to-1000-for-perpetual-mandate-work",
+      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch"
+    ],
+    "operator-directive": [
+      "decisions/01_drafts/claude-code-stop-hook-block-cap-raise-default-to-1000-for-perpetual-mandate-work",
+      "lessons/03_validated/methodology-process/multi-branch-parallel-driving-options-mean-evaluate-not-freeze"
     ],
     "runtime": [
       "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
@@ -71060,7 +71232,8 @@
       "domains/ai-agents/patterns/llm-knowledge-linting"
     ],
     "self-healing": [
-      "domains/ai-agents/patterns/llm-knowledge-linting"
+      "domains/ai-agents/patterns/llm-knowledge-linting",
+      "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start"
     ],
     "contradiction-resolution": [
       "domains/ai-agents/patterns/llm-knowledge-linting"
@@ -73131,6 +73304,42 @@
     "sovereign-os-arc": [
       "lessons/01_drafts/build-pipeline-via-sdd-tdd-real-bugs-caught-only-when-tests-execute-actual-renderers"
     ],
+    "env-runner": [
+      "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start"
+    ],
+    "environment-manager": [
+      "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start"
+    ],
+    "template": [
+      "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start"
+    ],
+    "baked-image": [
+      "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start"
+    ],
+    "session-start": [
+      "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start"
+    ],
+    "post-compact": [
+      "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start",
+      "log/2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1",
+      "log/2026-05-08-worked-example-4-post-compact-detection-failure-real-session-empirical-evidence-impl-spec-10-stress-test",
+      "patterns/01_drafts/post-compact-orientation-gate-implementation-spec-handoff-and-mirror-enforcement",
+      "patterns/01_drafts/post-compact-stress-test-scenario-spec-real-session-test-plan"
+    ],
+    "perpetual-mandate": [
+      "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start",
+      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch"
+    ],
+    "agent-loop": [
+      "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start",
+      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch"
+    ],
+    "bootstrap-mirror": [
+      "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start"
+    ],
+    "multi-hour-cycles": [
+      "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start"
+    ],
     "hookSpecificOutput": [
       "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it"
     ],
@@ -73150,17 +73359,14 @@
     "postcompact": [
       "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it"
     ],
-    "stop-hook": [
-      "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it"
-    ],
-    "settings": [
-      "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache"
-    ],
     "hot-reload": [
       "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache"
     ],
     "caching": [
       "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache"
+    ],
+    "safety-cap": [
+      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch"
     ],
     "conflation-detection-at-hook": [
       "lessons/01_drafts/conflation-detection-at-hook-layer-the-rename-strategy-generalized"
@@ -74204,9 +74410,6 @@
     "options-not-blockers": [
       "lessons/03_validated/methodology-process/multi-branch-parallel-driving-options-mean-evaluate-not-freeze"
     ],
-    "operator-directive": [
-      "lessons/03_validated/methodology-process/multi-branch-parallel-driving-options-mean-evaluate-not-freeze"
-    ],
     "agent-self-discipline": [
       "lessons/03_validated/methodology-process/multi-branch-parallel-driving-options-mean-evaluate-not-freeze",
       "lessons/03_validated/methodology-process/structural-but-not-surfaced-failure-mode-fix-must-reach-the-operator-at-use-time",
@@ -74801,12 +75004,6 @@
     ],
     "continuation": [
       "log/2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1"
-    ],
-    "post-compact": [
-      "log/2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1",
-      "log/2026-05-08-worked-example-4-post-compact-detection-failure-real-session-empirical-evidence-impl-spec-10-stress-test",
-      "patterns/01_drafts/post-compact-orientation-gate-implementation-spec-handoff-and-mirror-enforcement",
-      "patterns/01_drafts/post-compact-stress-test-scenario-spec-real-session-test-plan"
     ],
     "5-artifacts": [
       "log/2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1"
@@ -78916,6 +79113,13 @@
       "sources/src-code-review-graph-automated-review",
       "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
       "sources/tools-integration/src-claude-os-persistent-memory-brobertsaz"
+    ],
+    "gemma-4": [
+      "sources/src-dflash-block-diffusion-spec-dec"
+    ],
+    "z-lab": [
+      "sources/src-dflash-block-diffusion-spec-dec",
+      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
     ],
     "gemma-4": [
       "sources/src-dflash-block-diffusion-spec-dec"
@@ -83723,6 +83927,12 @@
       ]
     },
     {
+      "target": "Models Are Built in Layers",
+      "referenced_by": [
+        "Build Pipeline via SDD+TDD \u2014 Real Bugs Surface Only When Tests Execute Actual Renderers (Not Just Schema-Validate)"
+      ]
+    },
+    {
       "target": "Multi-Layer Compression Lesson",
       "referenced_by": [
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
@@ -83871,12 +84081,6 @@
       ]
     },
     {
-      "target": "Opus 4.7 surfacing log",
-      "referenced_by": [
-        "research-watch \u2014 Cline SDK 2026-05-13 \u2014 affected pages flagged for update"
-      ]
-    },
-    {
       "target": "P1 + P4 governing principles",
       "referenced_by": [
         "Learning Path v2 \u2014 Multi-Day Pain-Point Resolution Comprehensive 9-Phase Body of Work (Mission Arc 2026-05-08)"
@@ -83912,18 +84116,6 @@
       "target": "P5 candidate principle endorsement",
       "referenced_by": [
         "Foundational-Cluster-Prioritized Enforcement-Layer Pattern \u2014 C04+C02 Coverage Maximizes Cross-Cutting Prevention"
-      ]
-    },
-    {
-      "target": "Pain-Points Inventory",
-      "referenced_by": [
-        "2026-05-16 \u2014 RGP profile v5-evening SFIF-overcorrection revert + comprehensive augmentation (17 surgical edits + 3 planning artifacts)"
-      ]
-    },
-    {
-      "target": "Parent state-divergence cascade-candidate",
-      "referenced_by": [
-        "Cascade candidate \u2014 M001 reframe: audit (not author) existing AGENTS.md (34KB) + CLAUDE.md (38KB) at upstream root-ghostproxy"
       ]
     },
     {
@@ -84573,6 +84765,12 @@
       "referenced_by": [
         "Comparison \u2014 Assistant Platforms & Frameworks Frontier (2026-05-09): Claude OS \u00b7 Obsidian PM \u00b7 Multica \u00b7 OpenClaw Command Center / OCMC \u2014 by Type and Frontier",
         "Lesson \u2014 Metered programmatic agentic economics is the 2026 convergent direction: subscription compute arbitrage is closing; programmatic agent use is being separated from interactive use and billed at marginal-cost-tracking rates"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 BitNet b1.58 family",
+      "referenced_by": [
+        "Milestone \u2014 SAIN-01 Sovereign AI Node"
       ]
     },
     {
@@ -85471,12 +85669,6 @@
       "target": "root-ghostproxy operating-principles.md Principle #11 anti-pattern \"verbal-only\" entry",
       "referenced_by": [
         "Lesson \u2014 Verbal acknowledgment is not a fix: every bug-fix must produce a structural artefact (rule, file, hook, code)"
-      ]
-    },
-    {
-      "target": "v5.2 cadence-doctrine arc",
-      "referenced_by": [
-        "2026-05-17 \u2014 RGP profile v5.3 synergy iteration: output_governance + STEP 0 gates + mcp_discipline + worker_runtime_model + scope_tier_definitions + density_targets + operator_territory_overstep anti-pattern"
       ]
     },
     {

@@ -127,6 +127,7 @@ Schema validation alone catches typo bugs. Unit tests alone catch logic bugs. La
 - DERIVED FROM: [[declarations-are-aspirational-until-infrastructure-verifies-them|P4 — Declarations Are Aspirational Until Verified]] — schema-conformance is a declaration; runtime behavior is the verification. Layer 3 is the P4 cascade at the test-harness layer.
 - DERIVED FROM: [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]] — SFIF specialization: Layer 1 schema ships first; Layer 3 ships during Infrastructure tier, not deferred to "post-Gate-5".
 - BUILDS ON: [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]] — A harness that declares Layer 3 coverage but ships only Layer 1+2 fails this principle.
+- BUILDS ON: [[SFIF / [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers]] — Layer 1 ships first; Layer 3 ships during Infrastructure tier, not deferred to "post-Gate-5".]]
 - RELATES TO: [[infrastructure-must-be-reproducible-not-manual|Infrastructure Must Be Reproducible]] — the tested artifact must be reproducibly buildable in CI for Layer 3 to be repeatable.
 
 ## Promotion criteria
@@ -139,6 +140,8 @@ This draft promotes to `02_synthesized` after:
 
 ## Backlinks
 
+[[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
+[[Models Are Built in Layers]]
 [[P4 — Declarations Are Aspirational Until Verified]]
 [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
 [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
