@@ -23,7 +23,7 @@ tags: [sister-project-investigation, root-ghostproxy, foundational-triplet-adapt
 
 ## Summary
 
-Per Fire 113: propagation per-project requires investigation phase. This Fire 189 specs the FIRST sister-project investigation: /root root-ghostproxy. /root is the primary sister to /opt per bidirectional inheritance (per /root .claude/rules/self-reference.md).
+Per Fire 113: propagation per-project requires investigation phase. This Fire 189 specs the FIRST sister-project investigation: /root root-ghostproxy. /root is the primary sister to the second-brain per bidirectional inheritance (per /root .claude/rules/self-reference.md).
 
 ## /root current state (per loaded knowledge)
 
@@ -35,7 +35,7 @@ Existing hooks (per /root .claude/rules/hook-architecture.md):
   - 10 wired matchers across 8 events
   - PreCompact hook ALREADY WIRED (parallel to Fire 105 design source)
   - PostCompact hook wired
-  - 3 PreToolUse hooks (similar to /opt's pre-bash, pre-webfetch, opt-write-block)
+  - 3 PreToolUse hooks (similar to the second-brain's pre-bash, pre-webfetch, opt-write-block)
   - SessionStart, UserPromptSubmit, Stop, SessionEnd hooks wired
 ```
 
@@ -43,7 +43,7 @@ Existing hooks (per /root .claude/rules/hook-architecture.md):
 
 ```
 ✓ /root has PreCompact hook (parallel to Fire 105/Fire 157 design source)
-✓ /root has PostCompact hook (parallel to /opt's post-compact.sh + post-orient.sh)
+✓ /root has PostCompact hook (parallel to the second-brain's post-compact.sh + post-orient.sh)
 ✓ /root has UserPromptSubmit 4-hook compound stack (per Fire 121 docs)
 ?  /root C04+C02+C09 hook coverage status: unknown empirically
 ?  /root auto-compact disable status: unknown empirically
@@ -57,7 +57,7 @@ Per Fire 113 dimensions:
   Identity: type=root, group=operating-system-setup, scale=micro, solo
   Phase: foundation
   Trust-tier: operator-supervised
-  Existing infrastructure: 10 wired hooks (vs /opt's 4)
+  Existing infrastructure: 10 wired hooks (vs the second-brain's 4)
   Conventions: $HOME paths; operational tooling source-of-truth (per bidirectional-inheritance)
 
 Per /root foundational-triplet adaptation:
@@ -82,12 +82,12 @@ Sister-project propagation Phase 1 (just /root):
   Calendar: 1-3 weeks at 50% engagement
 ```
 
-## Composition with /opt Phase 1
+## Composition with the second-brain Phase 1
 
 ```
 Sequencing options:
-  A. /opt Phase 1 first; then /root adaptation (Fire 113 sequential)
-  B. /opt + /root parallel (faster but operator-coordination heavier)
+  A. the second-brain Phase 1 first; then /root adaptation (Fire 113 sequential)
+  B. the second-brain + /root parallel (faster but operator-coordination heavier)
   C. /root first (operational tooling source-of-truth direction)
   
 Recommended: Option A per Fire 113 + Fire 137 sequencing

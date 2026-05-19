@@ -27,7 +27,7 @@ sources:
   - id: canonical-spine-update-preview
     type: wiki
     file: wiki/log/2026-05-08-canonical-spine-update-preview-post-promotion-spine-super-model-16-models.md
-    description: "Sibling preview — /opt canonical-spine post-promotion view; this preview covers /root rule files"
+    description: "Sibling preview — the second-brain canonical-spine post-promotion view; this preview covers /root rule files"
 tags: [root-standardize-preview, post-application, rule-extension, operator-territory, day-arc-2026-05-08, multi-day-pain-point-resolution]
 ---
 
@@ -149,10 +149,10 @@ methodology stage-class    context-engineering gate-mode tiers
         │ stage-class IS                        │ stage-class IS axis #7
         │ axis #7 of 4×7 matrix                 │ in 28-cell coverage
         ▼                                       ▼
-        13-gate composition pattern (canonical at /opt)
+        13-gate composition pattern (canonical at the second-brain)
 ```
 
-**Result: 4-rule cluster forms internal coherence + bidirectional cross-references to /opt 13-gate central pattern.**
+**Result: 4-rule cluster forms internal coherence + bidirectional cross-references to the second-brain 13-gate central pattern.**
 
 ## Per-rule application order (recommended substrate-first)
 
@@ -195,8 +195,8 @@ Per operating-principles principle #2 (always flexible):
   - Decision-logbook entry per /promote (mirror) / /demote ceremony
 
 **Tier consequence on reversal**:
-- /root rule extensions removed → cited /opt pieces remain at tier-2/tier-3 (still valuable as reference)
-- Sister-projects that adopted via /install-agent-brain → see canonical /opt continues; /root reversal is per-project decision
+- /root rule extensions removed → cited the second-brain pieces remain at tier-2/tier-3 (still valuable as reference)
+- Sister-projects that adopted via /install-agent-brain → see canonical the second-brain continues; /root reversal is per-project decision
 
 ## Operator-empirical preview-confirmation questions (mirror of canonical-spine preview)
 

@@ -15,7 +15,7 @@ sources:
   - id: canonical-spine-update-preview
     type: wiki
     file: wiki/log/2026-05-08-canonical-spine-update-preview-post-promotion-spine-super-model-16-models.md
-    description: "Sibling — /opt canonical-spine post-promotion preview"
+    description: "Sibling — the second-brain canonical-spine post-promotion preview"
   - id: implementation-roadmap-pattern
     type: wiki
     file: wiki/patterns/01_drafts/implementation-roadmap-pattern-sequenced-milestones-from-confirmation-to-tier-3.md
@@ -40,7 +40,7 @@ This snapshot captures the project state RIGHT NOW (M0 of implementation-roadmap
 ## Current state empirical markers
 
 ### Body of work
-- **71 substantive pieces authored** at /opt second-brain (this work block)
+- **71 substantive pieces authored** at the second-brain second-brain (this work block)
 - **All at tier-1 maturity** (`01_drafts/seed`, `authorship: agent-authored`)
 - **0 validation errors** across all pipeline post invocations
 - **0 orphan pieces** per piece #59 cross-reference validation matrix
@@ -49,12 +49,12 @@ This snapshot captures the project state RIGHT NOW (M0 of implementation-roadmap
 
 ### Project state at /root (root-ghostproxy)
 - **NO changes applied** to /root rule files
-- 4 standardize proposals authored at /opt awaiting operator-confirmation
+- 4 standardize proposals authored at the second-brain awaiting operator-confirmation
 - /root remains at pre-mandate state (rule files unchanged)
 
 ### Hook implementation
 - **NO hook scripts authored** (M1 not yet started)
-- 12 implementation-specs at /opt provide blueprint
+- 12 implementation-specs at the second-brain provide blueprint
 - 12 stress-test scenario specs provide test plans
 - Settings.json wiring NOT executed
 
@@ -71,7 +71,7 @@ This snapshot captures the project state RIGHT NOW (M0 of implementation-roadmap
 
 ### Sister-project state
 - **NO propagation has occurred** (post-tier-3 dependency)
-- Multi-project ecosystem index forward-anchored at /opt
+- Multi-project ecosystem index forward-anchored at the second-brain
 - /install-agent-brain not yet executed for any sister project
 
 ## Per-phase substantive output (10 phases)
@@ -100,7 +100,7 @@ This snapshot captures the project state RIGHT NOW (M0 of implementation-roadmap
 | Recursive-applicability audit | ✓ Ready | Provides empirical evidence of paired enforcement |
 | Cross-reference validation matrix | ✓ Ready | Empirical evidence of 0 orphans |
 | Traceability matrix (180/180) | ✓ Ready | Empirical evidence of strategic coverage |
-| Canonical-spine post-promotion preview | ✓ Ready | Operator visualizes /opt changes |
+| Canonical-spine post-promotion preview | ✓ Ready | Operator visualizes the second-brain changes |
 | /root standardize post-application preview | ✓ Ready | Operator visualizes /root changes |
 | Implementation-roadmap M1-M7 | ✓ Ready | Forward-anchor for post-confirmation work |
 | Multi-project ecosystem index | ✓ Ready | Forward-anchor for post-tier-3 propagation |
@@ -187,7 +187,7 @@ Form 3 — Apply standardize proposals:
 Form 4 — Apply modelize proposals:
   /apply-modelize <proposal-number>
   e.g.: /apply-modelize 1  (skills-commands-hooks)
-  → executes /opt canonical-spine extension
+  → executes the second-brain canonical-spine extension
   → spine model updated; pipeline post
 
 Form 5 — Operator-implicit confirmation:

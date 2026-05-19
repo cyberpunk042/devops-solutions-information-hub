@@ -183,7 +183,7 @@ Multi-iteration strong-loop arc spanning the ingest+synthesize+propagate+distill
 
 **Context**: 2 contributed lessons sitting at `wiki/lessons/00_inbox/` since 2026-04-27 (`audit-numbers-age-fast-rebaseline-before-execute.md` + `sunk-cost-in-technical-paths-prefer-root-switching.md`). Both substantively complete in their original "Pattern/Detection/How-to-apply" structure. Both have empty Context/Insight/Evidence sections (schema requires these for promotion past inbox). Per `contribution_status: pending-review`.
 
-**Guidance**: each requires section augmentation (~30 minutes per lesson) to satisfy /opt schema. Substantive content is solid — these are real lessons from AICP retrospectives.
+**Guidance**: each requires section augmentation (~30 minutes per lesson) to satisfy the second-brain schema. Substantive content is solid — these are real lessons from AICP retrospectives.
 
 **Recommendation**: promote both to `01_drafts/seed` with section augmentation. The substantive content is good; the schema fix is mechanical. Per `feedback_never_auto_swap_root_docs.md` discipline I'd want operator authorization for the augmentation; but this is contributed-from-AICP lesson promotion — different from root-doc swap. Light operator-authorization needed.
 
@@ -212,7 +212,7 @@ After 9 strong-loop iterations this turn + the prior session's 5 syntheses + 1 p
 | Decisions A-I above | Operator-decision | Each has context+guidance+recommendation; batched review feasible |
 | More ingestion (Cloudflare Agents Week 2026 carry-forward, ~20 unsynthesized) | Operator-supplied URLs | No URLs in operator's recent directives |
 | Custom-Tailored Model Group M001-M006 phase execution | Hardware-blocked (RTX 3090 ETA mid-May 2026) | Not actionable until hardware lands |
-| root-ghostproxy install + propagation | External (operator-side) | Triggers further /opt sync |
+| root-ghostproxy install + propagation | External (operator-side) | Triggers further the second-brain sync |
 | Cloudflare AI Gateway empirical comparison | Operator-decision per workload | Not blocking today |
 | AICP epic enrichments | Light propagation | Diminishing-returns territory |
 | Sister-project profile cross-references | Light propagation | Diminishing-returns territory |

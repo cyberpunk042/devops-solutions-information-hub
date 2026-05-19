@@ -191,7 +191,7 @@ The metric is itself an empirical measurement (per P1 quantified-evidence approa
 | PostCompact behavior gate (NEW) | new `.claude/hooks/post-compact-first-action-gate.sh` | /root | TO AUTHOR + WIRE (PreToolUse with first-post-compact-action condition) |
 | State-recovery-quality metric | extension to /orient command output OR new /state-recovery command | /root | TO AUTHOR |
 | Required state-layers spec | `tools/handoff_layers.py` (data structure) | /root | TO AUTHOR |
-| Audit aggregator | `tools/compaction_quality_audit.py` | /root + /opt | TO AUTHOR |
+| Audit aggregator | `tools/compaction_quality_audit.py` | /root + the second-brain | TO AUTHOR |
 | Test files | `.claude/hooks/tests/test-precompact-completeness-gate.py` + `test-postcompact-first-action-gate.py` + `test-state-recovery-metric.py` | /root | TO AUTHOR |
 
 All 7 components are forward-anchors — design specified here; authoring + tests-passing is the promotion-to-02_synthesized gate.
@@ -204,7 +204,7 @@ C05-cluster instances + recursive evidence from /root failed-conversation arc:
 |---|---|---|---|
 | **Compactions in arc** | 4+ compactions across May 4-8 (msgs 11, 93, 171, 214, 342, 439, 483 are compaction-summary records) | Multiple — varies per compaction | PreCompact completeness gate would have validated coverage; PostCompact behavior gate would have forced /orient |
 | **msg #41 (May 5 10:58)** | *"DID YOU REALLY FORGET EVERY FUCKING THING I TOLD YOU IN THIS CONVERSATION??? WTF HOW IS THAT POSSIBLE?????"* | recent operator-verbatim directives + active-mission + active-focus | Layer 6 + 2 — both critical-tier; would have blocked compaction |
-| **Brain-improvement mandate post-compact recovery (current arc 2026-05-07/08)** | Agent picked up post-compact and continued mandate work without re-orienting; pivoted to /opt instead of root when operator said "this side" | active-mission/focus + recent-operator-context | PostCompact behavior gate would have BLOCKED first action until /orient ran; /orient would have surfaced active-mission-still-set-to-mandate; agent wouldn't have pivoted away |
+| **Brain-improvement mandate post-compact recovery (current arc 2026-05-07/08)** | Agent picked up post-compact and continued mandate work without re-orienting; pivoted to the second-brain instead of root when operator said "this side" | active-mission/focus + recent-operator-context | PostCompact behavior gate would have BLOCKED first action until /orient ran; /orient would have surfaced active-mission-still-set-to-mandate; agent wouldn't have pivoted away |
 | **Multiple "did I not say" / "I already told you" recurrences** | Implicit pattern — operator re-explains; agent treats as new context | recent operator-verbatim directives | Layer 6 missing/stale; PreCompact completeness gate would have blocked compaction without those directives in handoff |
 | **Stale-cached settings.json across compactions** (per `claude-code-hook-stamp-bug-cached-config-vs-settings-local-hot-reload` raw note) | Agent operated on cached settings post-compact | Sister-issue: Claude Code itself caches settings; orthogonal to handoff state but related | Pattern's STATE-RECOVERY REPORT would surface stale-cached-state warning |
 

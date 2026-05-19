@@ -43,7 +43,7 @@ tags: [per-instance-evidence, c18-cross-cutting, multi-cluster-intersections, da
 
 ## Summary
 
-Per Fire 79 traceability matrix v2: 15 clusters listed including **C18 cross-cutting** — pain points that span MULTIPLE clusters simultaneously. Per Fires 93-96 + Fire 111: 5 clusters per-instance enumerated (C04+C02+C15+C07+C19 = 75 instances of 192). C18 was forward-anchored. This Fire 115 enumerates C18 with 15 instances, each mapped to its multi-cluster intersection. C18 distinct from single-axis clusters: each C18 instance is a cross-cluster failure mode that emerges when 2-4 cluster-failures stack. Per /loop directive *"no matter how many circle back and cross-referencing we need to do this right"*: cross-cutting cluster enumeration honors operator's directive about strategic coverage. Per /opt's behave-FROM-not-OVER doctrine: cross-cluster patterns reveal HOW failures compound — single-axis fixes may not catch cross-cutting failures.
+Per Fire 79 traceability matrix v2: 15 clusters listed including **C18 cross-cutting** — pain points that span MULTIPLE clusters simultaneously. Per Fires 93-96 + Fire 111: 5 clusters per-instance enumerated (C04+C02+C15+C07+C19 = 75 instances of 192). C18 was forward-anchored. This Fire 115 enumerates C18 with 15 instances, each mapped to its multi-cluster intersection. C18 distinct from single-axis clusters: each C18 instance is a cross-cluster failure mode that emerges when 2-4 cluster-failures stack. Per /loop directive *"no matter how many circle back and cross-referencing we need to do this right"*: cross-cutting cluster enumeration honors operator's directive about strategic coverage. Per the second-brain's behave-FROM-not-OVER doctrine: cross-cluster patterns reveal HOW failures compound — single-axis fixes may not catch cross-cutting failures.
 
 ## C18 cluster definition
 
@@ -370,7 +370,7 @@ required_gates:
 
 ## Closing framing
 
-Per Fire 79 traceability matrix: C18 was forward-anchored cluster awaiting per-instance enumeration. This Fire 115 establishes 15 instances with multi-cluster attribution. Per /loop directive *"the at least 100 pain point ... will need direct response"*: 90 instances now captured (47%) + methodology-demonstrated for remaining 9 clusters. Per /opt's substitution-pattern recursive-applicability: cross-cutting clusters reveal multi-axis failures that single-axis enforcement can't catch — validates operator-empirical preference for defense-in-depth (per Fire 107 Layer 1+2+3 triplet).
+Per Fire 79 traceability matrix: C18 was forward-anchored cluster awaiting per-instance enumeration. This Fire 115 establishes 15 instances with multi-cluster attribution. Per /loop directive *"the at least 100 pain point ... will need direct response"*: 90 instances now captured (47%) + methodology-demonstrated for remaining 9 clusters. Per the second-brain's substitution-pattern recursive-applicability: cross-cutting clusters reveal multi-axis failures that single-axis enforcement can't catch — validates operator-empirical preference for defense-in-depth (per Fire 107 Layer 1+2+3 triplet).
 
 Per cluster intersection-frequency: C04 (input-discipline) + C02 (decision-territory) are the FOUNDATIONAL failure modes — present in 80% / 73% of cross-cutting instances. Fixing C04 + C02 enforcement would reduce cross-cutting frequency dramatically.
 

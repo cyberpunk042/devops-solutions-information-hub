@@ -185,7 +185,7 @@ Per piece #61 traceability matrix: 180/180 pain-points have explicit traceabilit
 |---|---|
 | "clear plan with clear solution" | ✓ 12 impl-specs + 12 stress-tests + 11 cross-cutting integration patterns |
 | "clear root issues identified" | ✓ 15 clusters mapped to 5 underlying-failure categories |
-| "personal knowledge applied" (Insight 5b) | ✓ All 63 pieces extend existing /opt knowledge; 28 MCP tools mapped per gate |
+| "personal knowledge applied" (Insight 5b) | ✓ All 63 pieces extend existing the second-brain knowledge; 28 MCP tools mapped per gate |
 | "100+ pain points have direct response" | ✓ 180 pain-points 100% traceability per piece #61 |
 | "strategic coverage" | ✓ 15/15 clusters + 5/5 underlying + cross-cutting integration substrate |
 | "no laziness, no hack, no quickfix" | ✓ Full schema-validated artifacts; bypass-discipline + state-file + MCP-adoption all closed |

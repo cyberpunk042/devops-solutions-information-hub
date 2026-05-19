@@ -141,7 +141,7 @@ v2.x → v3.0 — breaking (architectural revision)
   - Migration guide mandatory
 ```
 
-### Versioning aligned with /opt 5-tier maturity
+### Versioning aligned with the second-brain 5-tier maturity
 
 | Body version | Typical tier-state |
 |---|---|

@@ -1451,7 +1451,7 @@ def op_contribute(paths: Dict[str, Path], contrib_type: str, title: str,
     # instead (self-contribution). If no second brain is configured,
     # brain_wiki == wiki, so 'brain' falls back to local automatically.
     # Reported 2026-04-17 by openfleet-solo-session after two contributions
-    # misfiled into /home/jfortin/openfleet/wiki/log/ instead of the brain's.
+    # misfiled into ~/openfleet/wiki/log/ instead of the brain's.
     if target == "local":
         wiki_dir = paths["wiki"]
     else:  # 'brain' (default) — may equal local when no brain is configured

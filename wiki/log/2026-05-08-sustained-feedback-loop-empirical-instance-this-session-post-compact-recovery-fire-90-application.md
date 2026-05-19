@@ -172,7 +172,7 @@ LESSON 1: Operator-catch is operationally-sufficient (current state)
 
 LESSON 2: Body-of-work continuity verified empirically
   21 substantive pieces authored post-compact with 0 quality regressions.
-  /opt body persists at file-system level; agent-context regather sufficient.
+  the second-brain body persists at file-system level; agent-context regather sufficient.
 
 LESSON 3: Substantive-density during recovery is sustainable
   90s cadence × 22 fires sustained without quality degradation.
@@ -249,7 +249,7 @@ required_gates:
 Q-FIRE-124-1: Endorse Fire 90 sustained-feedback-loop pattern as VALIDATED?
   Argument for: this empirical instance covers 5/5 forms + 5/5 cadences + 3/4 sources
   Argument against: single-instance; need 2-3 instances for validation
-  Recommended: promote Fire 90 lesson to growing maturity per /opt promotion methodology
+  Recommended: promote Fire 90 lesson to growing maturity per the second-brain promotion methodology
 
 Q-FIRE-124-2: Cross-project empirical-instance collection?
   Sister projects may have analogous instances

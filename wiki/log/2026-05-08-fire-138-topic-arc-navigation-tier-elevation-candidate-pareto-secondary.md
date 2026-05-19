@@ -45,7 +45,7 @@ T2 → T3: tools.navigation auto-update module
 
 - Fire 125 distillation pattern (Pareto-priority pathway)
 - Fire 116 wiki-schema field (per-piece metadata)
-- /opt tools.view (existing navigation source)
+- the second-brain tools.view (existing navigation source)
 
 ## Operator-pending
 

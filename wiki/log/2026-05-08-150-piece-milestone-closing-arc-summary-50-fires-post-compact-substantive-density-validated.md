@@ -104,7 +104,7 @@ Per Fire 102 incident → 150-piece milestone reached + sustained quality:
 
 ```
 COMPACTION SURVIVED:
-  - 100 pieces preserved at /opt file-system level
+  - 100 pieces preserved at the second-brain file-system level
   - Operator-catch + agent-regather closed recovery loop
   - Fire 124 sustained-feedback-loop pattern validated empirically
 

@@ -137,16 +137,16 @@ cd /root  # or wherever root-ghostproxy is on the host
 claude
 
 # 2. Read this epic for context
-cat /opt/devops-solutions-information-hub/wiki/backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05.md
+cat $HOME/devops-solutions-information-hub/wiki/backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05.md
 
 # 3. Read the operator directive verbatim
-cat /opt/devops-solutions-information-hub/raw/notes/2026-05-04-prepare-root-ghostproxy-as-sister-type-root-group-operating-system-setup.md
+cat $HOME/devops-solutions-information-hub/raw/notes/2026-05-04-prepare-root-ghostproxy-as-sister-type-root-group-operating-system-setup.md
 
 # 4. Read the identity profile (the brain's understanding of root-ghostproxy)
-cat /opt/devops-solutions-information-hub/wiki/ecosystem/project_profiles/root-ghostproxy/identity-profile.md
+cat $HOME/devops-solutions-information-hub/wiki/ecosystem/project_profiles/root-ghostproxy/identity-profile.md
 
 # 5. Read the SFIF model
-cat /opt/devops-solutions-information-hub/wiki/spine/models/quality/model-sfif-architecture.md
+cat $HOME/devops-solutions-information-hub/wiki/spine/models/quality/model-sfif-architecture.md
 
 # 6. Start with Stream 2 M1: author AGENTS.md + CLAUDE.md for root-ghostproxy
 # 7. Then M2 — methodology decision

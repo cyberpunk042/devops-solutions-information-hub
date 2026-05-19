@@ -253,6 +253,6 @@ Universal across the 5-project ecosystem:
 - **OpenFleet**: fleet orchestrator — per-agent task-shape classification
 - **AICP**: model-routing decisions — task-shape determines which model tier
 - **devops-control-plane**: IaC — task-shape determines change-window scope
-- **/opt second-brain**: this lesson IS authored from /opt; demonstrates self-application — /opt session committed C11 recursively in mandate scope-expansion
+- **the second-brain second-brain**: this lesson IS authored from the second-brain; demonstrates self-application — the second-brain session committed C11 recursively in mandate scope-expansion
 
 The cure (4-axis classifier + per-response substance measurement + cycle-output substance-line extension) is portable via `/install-agent-brain` per brain-inheritance pattern.

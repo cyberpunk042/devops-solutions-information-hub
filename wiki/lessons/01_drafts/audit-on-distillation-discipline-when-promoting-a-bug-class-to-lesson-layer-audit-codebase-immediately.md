@@ -116,7 +116,7 @@ This is exactly the failure mode this discipline prevents.
 | Authoring a new Layer-2 lesson (`01_drafts`) about a bug class | **YES** — the natural moment |
 | Promoting a raw note insight to a lesson | **YES** — distillation IS the moment |
 | Fixing a bug locally and authoring a lesson about it | **YES** — fix-then-audit-codebase before closing the arc |
-| Synthesizing a sister-project lesson into /opt's lesson layer | **YES** — audit /opt for the same bug class |
+| Synthesizing a sister-project lesson into the second-brain's lesson layer | **YES** — audit the second-brain for the same bug class |
 | Layer-4 principle (`04_principles/hypothesis/`) about a meta-pattern | PARTIAL — principles may be too abstract for direct code audit; instead, decompose into sub-lessons that ARE auditable |
 | Authoring a pattern (not a lesson) | PARTIAL — patterns capture solutions, not bug classes; audit applies if the pattern names anti-patterns it solves |
 | Trivial preference-style lessons (memory candidates) | NO — no codebase surface to audit |
@@ -126,7 +126,7 @@ This is exactly the failure mode this discipline prevents.
 1. **At distillation moment**, immediately after writing the lesson's frontmatter + summary + insight sections, **before** writing the relationships/cross-references, **schedule the audit step in your context**.
 2. **Define the audit scope**: what is the smallest set of files / directories where this bug class could occur? For hook bugs → `.claude/hooks/`. For YAML schema bugs → `wiki/config/*.yaml`. For raw-note ratio bugs → `wiki/sources/`. The scope is **bounded**, not "audit everything."
 3. **Execute the audit**: grep / read / pattern-match for the bug class against the scoped set. ~10-30 minutes is the typical window.
-4. **For each instance found**: fix if /opt-territory, flag if operator-territory.
+4. **For each instance found**: fix if second-brain-territory, flag if operator-territory.
 5. **Update the lesson** with the audit result as an Evidence row (count audited, count clean, count fixed, count flagged).
 6. **Pipeline post** to validate the lesson and pick up any new cross-references.
 
@@ -147,7 +147,7 @@ When authoring a lesson:
 1. **Recognize the audit moment**: distillation IS the right time. Not before (no lesson to apply yet); not later (knowledge cool, pattern faded).
 2. **Bound the scope**: define the smallest auditable surface. Resist scope creep.
 3. **Audit immediately**: ~10-30 minutes is the typical cost. Don't defer.
-4. **Fix instances found**: /opt-territory fix immediately; operator-territory flag.
+4. **Fix instances found**: second-brain-territory fix immediately; operator-territory flag.
 5. **Record the audit in the lesson**: add an Evidence row showing what was audited, what was found.
 6. **Pipeline post** to validate.
 
@@ -157,9 +157,9 @@ Universal across any project that maintains a knowledge layer + a codebase:
 
 | Project | Application |
 |---|---|
-| **/opt second-brain** (this) | Discipline demonstrated by this session's hook audit |
+| **the second-brain second-brain** (this) | Discipline demonstrated by this session's hook audit |
 | **root-ghostproxy** | Same discipline — when authoring a global hook/rule/principle, audit `~/.claude/`, `~/devops-control-plane/`, sister projects for instances |
-| **OpenArms / OpenFleet / AICP / devops-control-plane** | Same discipline — when authoring a lesson at /opt that applies cross-project, audit each sister codebase for instances of the bug class |
+| **OpenArms / OpenFleet / AICP / devops-control-plane** | Same discipline — when authoring a lesson at the second-brain that applies cross-project, audit each sister codebase for instances of the bug class |
 
 The discipline is event-driven (distillation moment), not calendar-driven (weekly audit) — that's what makes it cheap and reliable.
 

@@ -257,7 +257,7 @@ Operator can spot-check traceability per cluster:
 - Pick a pain-point instance from master aggregate
 - Verify cluster mapping per this matrix
 - Verify cluster → concept → impl-spec → stress-test chain
-- Verify each piece exists at /opt/.../wiki/lessons|patterns|log/
+- Verify each piece exists at $HOME/devops-solutions-information-hub/wiki/lessons|patterns|log/
 
 ## Sources
 

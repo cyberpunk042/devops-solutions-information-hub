@@ -134,7 +134,7 @@ Each implementation-spec gets a paired stress-test scenario spec — 5 named rea
 |---|---|
 | "clear plan with clear solution" | ✓ 12-spec roadmap + 12 stress-test plans |
 | "clear root issues identified" | ✓ 15 clusters mapped to 5 underlying-failure categories |
-| "personal knowledge applied" (Insight 5b) | ✓ Knowledge-reuse — extends existing /opt rather than duplicates |
+| "personal knowledge applied" (Insight 5b) | ✓ Knowledge-reuse — extends existing the second-brain rather than duplicates |
 | "100+ pain points have direct response" | ✓ 180 pain-points mapped 100% to 52 solution pieces |
 | "strategic coverage" | ✓ 15/15 clusters + 5/5 underlying + 7/7 operator-named structural-fix candidates |
 | "no laziness, no hack, no quickfix" | ✓ Each piece full schema-validated + REQUIRED-gates declarations + stress-test plans |

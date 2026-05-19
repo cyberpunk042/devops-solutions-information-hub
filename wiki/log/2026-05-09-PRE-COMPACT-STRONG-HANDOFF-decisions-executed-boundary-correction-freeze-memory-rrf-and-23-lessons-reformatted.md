@@ -28,7 +28,7 @@ sources:
   - id: root-ghostproxy-readme
     type: directive
     file: /tmp/rgp-readme.md
-    description: "Operator-explicit transient lookup of root-ghostproxy README confirming the boundary: root = harness/ecosystem at $HOME; /opt = knowledge"
+    description: "Operator-explicit transient lookup of root-ghostproxy README confirming the boundary: root = harness/ecosystem at $HOME; the second-brain = knowledge"
 tags: [pre-compact, handoff, "2026-05-09", post-compact-pickup, decisions-executed, boundary-correction-root-vs-opt, freeze-pattern-corrected, 5-channel-rrf-live, schema-extended, 23-lessons-reformatted, avx512-machine-plan, hardware-pending-flag, operator-forward-direction-signaled]
 ---
 
@@ -36,7 +36,7 @@ tags: [pre-compact, handoff, "2026-05-09", post-compact-pickup, decisions-execut
 
 ## ⚠️ POST-COMPACT AGENT — READ THIS FIRST ⚠️
 
-You are inside the **/opt second-brain** (research wiki) post-compact. Operator has stated forward plans for after this compaction (root-ghostproxy + SDD + enforcement + AVX512 machine plan + "ton of new artifacts we will discuss"). To pick up cold cleanly:
+You are inside the **the second-brain second-brain** (research wiki) post-compact. Operator has stated forward plans for after this compaction (root-ghostproxy + SDD + enforcement + AVX512 machine plan + "ton of new artifacts we will discuss"). To pick up cold cleanly:
 
 1. Run `.venv/bin/python -m tools.gateway orient` (cold-start orientation, ~1 min)
 2. Run `.venv/bin/python -m tools.pipeline status` (state verification)
@@ -50,7 +50,7 @@ You are inside the **/opt second-brain** (research wiki) post-compact. Operator 
 
 ## Summary
 
-Two-session arc 2026-05-08 → 2026-05-09 fully resolved. **All 9 pending operator-decisions executed or defer-tracked**: 5 executed (Layer-promotion · hardware-pending flag · 5-channel RRF retrieval · 2 inbox lessons promoted · schema extension), 3 defer-tracked (AI Gateway · Cloudflare Mesh · BYOM via Replicate Cog), 1 boundary-correction (root vs /opt — sacrosanct). **NEW infrastructure landed**: pure-Python 5-channel RRF retrieval (`tools/wiki_search.py`, ~340 LOC) wired into `mcp_server.py:wiki_search` · `wiki-schema.yaml` extended (+7 source types · +6 verbs, schema-follows-usage) · 23 operator-doctrinal lessons reformatted with admonition styling (operator words preserved verbatim) · hardware-pending flag added to Custom-Tailored Model Group concept. **NEW operator-stated forward direction**: AVX512 machine plan with custom strategy (details to discuss post-compact). **NEW memory entry**: freeze-pattern correction — context-pressure mentions don't authorize defer/conservation-mode; default to executing. **State**: 843 pages (was 614 at session start, +229 — substantial sync from operator-pushed content) · 3,925 relationships · 0 validation errors from session work (3 pre-existing operator-content errors remain operator-territory) · lint orphan_pages 0 · 0 unstyled lessons (was 26).
+Two-session arc 2026-05-08 → 2026-05-09 fully resolved. **All 9 pending operator-decisions executed or defer-tracked**: 5 executed (Layer-promotion · hardware-pending flag · 5-channel RRF retrieval · 2 inbox lessons promoted · schema extension), 3 defer-tracked (AI Gateway · Cloudflare Mesh · BYOM via Replicate Cog), 1 boundary-correction (root vs the second-brain — sacrosanct). **NEW infrastructure landed**: pure-Python 5-channel RRF retrieval (`tools/wiki_search.py`, ~340 LOC) wired into `mcp_server.py:wiki_search` · `wiki-schema.yaml` extended (+7 source types · +6 verbs, schema-follows-usage) · 23 operator-doctrinal lessons reformatted with admonition styling (operator words preserved verbatim) · hardware-pending flag added to Custom-Tailored Model Group concept. **NEW operator-stated forward direction**: AVX512 machine plan with custom strategy (details to discuss post-compact). **NEW memory entry**: freeze-pattern correction — context-pressure mentions don't authorize defer/conservation-mode; default to executing. **State**: 843 pages (was 614 at session start, +229 — substantial sync from operator-pushed content) · 3,925 relationships · 0 validation errors from session work (3 pre-existing operator-content errors remain operator-territory) · lint orphan_pages 0 · 0 unstyled lessons (was 26).
 
 ## State (verified inline 2026-05-09 18:00)
 
@@ -95,7 +95,7 @@ Two-session arc 2026-05-08 → 2026-05-09 fully resolved. **All 9 pending operat
 
 > *"H. Yes."* (schema extension authorized)
 
-> *"I: Do not conflate things... what is the link to lessons?... there is no standards in root-ghostproxy... I never said that... its global hooks, statusline profiles, skills, commands, etc... the harness and ecosystem... the $Home / user profile and global configuration that affect all project... there is nothing about knowledge... we absolutely never will replace the second-brain like this... why would you even think that... we are in the place of knowledge."* (boundary correction — root vs /opt)
+> *"I: Do not conflate things... what is the link to lessons?... there is no standards in root-ghostproxy... I never said that... its global hooks, statusline profiles, skills, commands, etc... the harness and ecosystem... the $Home / user profile and global configuration that affect all project... there is nothing about knowledge... we absolutely never will replace the second-brain like this... why would you even think that... we are in the place of knowledge."* (boundary correction — root vs the second-brain)
 
 > *"You can look biefly at it too, but dont exagerate we are over 3/4 of context use: https://github.com/cyberpunk042/root-ghostproxy"* (transient lookup with context-budget caveat)
 
@@ -108,7 +108,7 @@ Two-session arc 2026-05-08 → 2026-05-09 fully resolved. **All 9 pending operat
 | Layer | Owner | Examples |
 |---|---|---|
 | **OS / harness / ecosystem** | root-ghostproxy | global hooks · skills · commands · statusline profiles · `~/.claude/settings.json` · IPS modules (suricata/polarproxy) · cross-AI-tool deny-set · fail-closed tamper detection · network bridge (transparent L2) |
-| **Knowledge** | /opt second-brain (here) | lessons · patterns · principles · syntheses · methodology engine · wiki content · wiki-schema · admonition formatting standards · maturity ladder · cross-references |
+| **Knowledge** | the second-brain second-brain (here) | lessons · patterns · principles · syntheses · methodology engine · wiki content · wiki-schema · admonition formatting standards · maturity ladder · cross-references |
 
 **The two never overlap.** Verified via transient lookup of root-ghostproxy README (https://github.com/cyberpunk042/root-ghostproxy):
 - root-ghostproxy = "system AI safety setup project" — endpoint AI agent safety (Claude Code + opencode hardening at OS-root) + network inspection (transparent L2 bridge between OPNsense + first switch with Suricata/PolarProxy as facultative modules)
@@ -116,7 +116,7 @@ Two-session arc 2026-05-08 → 2026-05-09 fully resolved. **All 9 pending operat
 - $HOME-installable (not just root user)
 - Currently barely-started
 
-**Implication**: lesson-formatting standards / admonition styling / wiki content / methodology — all /opt-territory. Root will not propagate any of these.
+**Implication**: lesson-formatting standards / admonition styling / wiki content / methodology — all second-brain-territory. Root will not propagate any of these.
 
 ## Decisions Resolved (9 of 9)
 
@@ -142,7 +142,7 @@ Two-session arc 2026-05-08 → 2026-05-09 fully resolved. **All 9 pending operat
 
 | # | Action |
 |---|---|
-| **I** Conflation of root-propagation with lesson-formatting | Corrected (boundary table above); NEW memory entry; 26 unstyled lessons (was Decision I deferred subject) → reformatted unilaterally as /opt hygiene |
+| **I** Conflation of root-propagation with lesson-formatting | Corrected (boundary table above); NEW memory entry; 26 unstyled lessons (was Decision I deferred subject) → reformatted unilaterally as the second-brain hygiene |
 
 ## Infrastructure Landed This Arc
 
@@ -175,7 +175,7 @@ Two-session arc 2026-05-08 → 2026-05-09 fully resolved. **All 9 pending operat
 
 100+ pre-existing WARN-level warnings now pass.
 
-### 23 lessons reformatted (Decision I — operator-confirmed /opt hygiene)
+### 23 lessons reformatted (Decision I — operator-confirmed the second-brain hygiene)
 
 All operator-doctrinal central lessons now have admonition styling. Operator words preserved verbatim (admonition wrapping = augmentation, not modification).
 
@@ -194,7 +194,7 @@ Added warning callout to [Custom-Tailored Senior-Engineer-Tier Model Group Conce
 | Memory | Type | Why |
 |---|---|---|
 | [feedback_context_pressure_does_not_authorize_freeze.md](/home/jfortin/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/feedback_context_pressure_does_not_authorize_freeze.md) | feedback (NEW 2026-05-09) | Operator: *"its crazy how we have to be careful when we say things to the AI... see I should never have told you about the context... you completly froze...."* — context-pressure mentions ≠ defer authorization |
-| [feedback_root_propagates_agent_config_dont_author_project_local.md](/home/jfortin/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/feedback_root_propagates_agent_config_dont_author_project_local.md) | feedback (NEW 2026-05-08, refined 2026-05-09 with boundary correction) | root-ghostproxy = harness/ecosystem; /opt = knowledge; never overlap |
+| [feedback_root_propagates_agent_config_dont_author_project_local.md](/home/jfortin/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/feedback_root_propagates_agent_config_dont_author_project_local.md) | feedback (NEW 2026-05-08, refined 2026-05-09 with boundary correction) | root-ghostproxy = harness/ecosystem; the second-brain = knowledge; never overlap |
 
 ## AVX512 Machine Plan (NEW Operator-Stated Direction 2026-05-09)
 
@@ -214,7 +214,7 @@ Added warning callout to [Custom-Tailored Senior-Engineer-Tier Model Group Conce
 
 The post-compact session is signaled to engage with:
 
-1. **root-ghostproxy artifacts** — the operator has substantial work-in-flight on root-ghostproxy (verified via README: 1085 lines, 14 modules, SFIF rollout active). Discussion likely involves how /opt and root-ghostproxy interact (without conflation per the boundary correction).
+1. **root-ghostproxy artifacts** — the operator has substantial work-in-flight on root-ghostproxy (verified via README: 1085 lines, 14 modules, SFIF rollout active). Discussion likely involves how the second-brain and root-ghostproxy interact (without conflation per the boundary correction).
 2. **SDD (spec-driven development)** — operator-doctrinal: *"we prone spec driven development and a strong methodology and standards"* (2026-05-05 verbatim). 11-impact-area denotation captured in [Spec-Driven Convergence Lesson](../lessons/02_synthesized/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md).
 3. **Enforcement** — likely about structural enforcement gates (per Documentation-as-Substitute-for-Discipline lesson + P5 candidate Defense-in-Depth + the operating-principles framework).
 4. **AVX512 machine plan** — when operator engages, M001-M006 phases will likely be revisited.

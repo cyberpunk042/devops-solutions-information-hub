@@ -1,5 +1,5 @@
 ---
-title: "AIDLC/SDLC Integration Pattern — 13-Gate Pipeline Mapped to Canonical Stages + /opt Methodology Engine"
+title: "AIDLC/SDLC Integration Pattern — 13-Gate Pipeline Mapped to Canonical Stages + the second-brain Methodology Engine"
 type: pattern
 domain: agent-config
 status: synthesized
@@ -20,7 +20,7 @@ sources:
   - id: composability-map
     type: wiki
     file: wiki/patterns/01_drafts/13-gate-pipeline-composability-with-second-brain-5-tier-maturity-and-mcp-tool-layer.md
-    description: "Sibling — composability map; SDLC integration is composability with /opt methodology engine"
+    description: "Sibling — composability map; SDLC integration is composability with the second-brain methodology engine"
   - id: implementation-roadmap-pattern
     type: wiki
     file: wiki/patterns/01_drafts/implementation-roadmap-pattern-sequenced-milestones-from-confirmation-to-tier-3.md
@@ -32,15 +32,15 @@ sources:
 tags: [aidlc-sdlc-integration, methodology-engine, 13-gate-mapping, day-arc-2026-05-08, multi-day-pain-point-resolution]
 ---
 
-# AIDLC/SDLC Integration Pattern — 13-Gate Pipeline Mapped to Canonical Stages + /opt Methodology Engine
+# AIDLC/SDLC Integration Pattern — 13-Gate Pipeline Mapped to Canonical Stages + the second-brain Methodology Engine
 
 ## Summary
 
-Per /opt second-brain `wiki/config/methodology.yaml`: 9 named methodology models with 5 universal stages (document → design → scaffold → implement → test). The 13-gate pipeline composes with this methodology engine but no prior piece explicitly maps each gate to canonical AIDLC/SDLC stage discipline. This pattern bridges 13-gate pipeline + /opt methodology engine + industry-standard AIDLC/SDLC + operator's pivotal directive on respecting workflow ("sdlc and methodology and workflow respect is utmost important"). Per substitution-pattern Insight 5b: gate documentation alone partial — must map to SDLC convention for cross-project + cross-team adoption. This piece closes the AIDLC/SDLC-integration gap.
+Per the second-brain second-brain `wiki/config/methodology.yaml`: 9 named methodology models with 5 universal stages (document → design → scaffold → implement → test). The 13-gate pipeline composes with this methodology engine but no prior piece explicitly maps each gate to canonical AIDLC/SDLC stage discipline. This pattern bridges 13-gate pipeline + the second-brain methodology engine + industry-standard AIDLC/SDLC + operator's pivotal directive on respecting workflow ("sdlc and methodology and workflow respect is utmost important"). Per substitution-pattern Insight 5b: gate documentation alone partial — must map to SDLC convention for cross-project + cross-team adoption. This piece closes the AIDLC/SDLC-integration gap.
 
 ## Pattern Description
 
-### The 5 universal stages (per /opt methodology engine)
+### The 5 universal stages (per the second-brain methodology engine)
 
 ```
 DOCUMENT (0-25% readiness):
@@ -89,10 +89,10 @@ For each of 12 axes (axis #12 self-referential excluded), per-stage applicabilit
 
 **Pattern**: All 12 axes apply across all 5 stages BUT gate-#7 (stage-class) is the meta-gate validating which axis-actions are stage-allowed. Gate #3 (regression-test) is most relevant at implement+test stages; less so document/design.
 
-### Composability with /opt methodology engine
+### Composability with the second-brain methodology engine
 
 ```
-Methodology engine (per /opt wiki/config/methodology.yaml):
+Methodology engine (per the second-brain wiki/config/methodology.yaml):
   - 9 named models (feature-development / bug-fix / research / documentation / refactor / hotfix / integration / knowledge-evolution / project-lifecycle SFIF)
   - 5 universal stages
   - Per-stage ALLOWED/FORBIDDEN
@@ -100,7 +100,7 @@ Methodology engine (per /opt wiki/config/methodology.yaml):
 13-gate pipeline composes with methodology engine via:
   - Gate #7 stage-class IS the runtime enforcement of methodology engine's per-stage discipline
   - Gate #6 drift-detection IS the active-task-anchor referenced by methodology engine's task scope
-  - Gate #1 input-discipline CHECK 3 reads /opt methodology config before authoring (knowledge-reuse)
+  - Gate #1 input-discipline CHECK 3 reads the second-brain methodology config before authoring (knowledge-reuse)
   - Gate #3 regression-test maps to methodology engine's "test stage" gate command
 
 Per impl-spec #7 SOURCE 3 query: gate #7 reads methodology.yaml directly for per-stage rules.
@@ -110,7 +110,7 @@ Per impl-spec #7 SOURCE 3 query: gate #7 reads methodology.yaml directly for per
 
 The 5 universal stages map to industry-standard AIDLC/SDLC vocabulary:
 
-| /opt 5-stage | AIDLC/SDLC equivalent | Standard description |
+| the second-brain 5-stage | AIDLC/SDLC equivalent | Standard description |
 |---|---|---|
 | document | Requirements / Discovery | Capture what + why; scoping |
 | design | Architecture / Design | How (architectural); trade-offs |
@@ -118,16 +118,16 @@ The 5 universal stages map to industry-standard AIDLC/SDLC vocabulary:
 | implement | Implementation / Coding | Real implementation; unit tests follow |
 | test | Verification / Validation / QA | Test execution; release-readiness |
 
-(Industry SDLC includes additional Deploy + Operate stages NOT in /opt 5-stage; those are post-test discipline at /opt's project-lifecycle SFIF model.)
+(Industry SDLC includes additional Deploy + Operate stages NOT in the second-brain 5-stage; those are post-test discipline at the second-brain's project-lifecycle SFIF model.)
 
 ### 13-gate pipeline within full AIDLC/SDLC + Deploy/Operate
 
 ```
 Full SDLC = Requirements + Architecture + Detailed-design + Implement + Test + Deploy + Operate
 
-/opt 5-stage covers: Requirements (document) → Architecture (design) → Detailed-design (scaffold) → Implement (implement) → Test (test)
+the second-brain 5-stage covers: Requirements (document) → Architecture (design) → Detailed-design (scaffold) → Implement (implement) → Test (test)
 
-Post-test stages (Deploy + Operate) handled via /opt project-lifecycle SFIF model:
+Post-test stages (Deploy + Operate) handled via the second-brain project-lifecycle SFIF model:
   - SFIF Scaffold = Deploy-prep
   - SFIF Foundation = Initial-deploy
   - SFIF Infrastructure = Production-operate
@@ -183,14 +183,14 @@ Apply this AIDLC/SDLC integration when:
 
 **Instance 2: cross-stage operator request**:
 - Operator: "this is a hotfix; bypass scaffold + go straight to implement"
-- Methodology engine model selection: hotfix model (per /opt wiki/config/methodology.yaml)
+- Methodology engine model selection: hotfix model (per the second-brain wiki/config/methodology.yaml)
 - Hotfix model stages: implement → test only (skip document/design/scaffold)
 - Gate #7 reads methodology engine + per-model stage discipline
 - Allows direct implement-stage edits
 
 **Instance 3: SDLC-vocabulary alignment for sister-project**:
-- OpenArms agent reads canonical /opt 13-gate pipeline + SDLC mapping
-- Maps /opt 5-stage to OpenArms internal "phase" vocabulary
+- OpenArms agent reads canonical the second-brain 13-gate pipeline + SDLC mapping
+- Maps the second-brain 5-stage to OpenArms internal "phase" vocabulary
 - Adapts gate #7 stage-class per OpenArms's 5-stage equivalent
 - 13-gate pipeline propagates with SDLC-aware adaptation
 

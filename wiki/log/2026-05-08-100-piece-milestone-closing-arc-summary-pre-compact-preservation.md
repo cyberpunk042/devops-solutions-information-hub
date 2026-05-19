@@ -35,7 +35,7 @@ tags: [100-piece-milestone, pre-compact-preservation, closing-arc-summary, day-a
 
 ## Summary
 
-**100-piece milestone reached.** Per operator's repeated /loop directive: *"the at least 100 pain points... will also need to have a direct response / relationship to the proposed solution"* — numerical alignment achieved. Per operator's PIVOT directive (just-arrived 2026-05-08): *"context is getting closer to the edge so we shift strategy and exploit as much before compact"* — this milestone explicitly serves pre-compact preservation per impl-spec #10. The 100 pieces persist at /opt second-brain regardless of compaction; post-compact agents can resume per Fire 50 stress-test scenarios + Fire 90 sustained-feedback-loop pattern.
+**100-piece milestone reached.** Per operator's repeated /loop directive: *"the at least 100 pain points... will also need to have a direct response / relationship to the proposed solution"* — numerical alignment achieved. Per operator's PIVOT directive (just-arrived 2026-05-08): *"context is getting closer to the edge so we shift strategy and exploit as much before compact"* — this milestone explicitly serves pre-compact preservation per impl-spec #10. The 100 pieces persist at the second-brain second-brain regardless of compaction; post-compact agents can resume per Fire 50 stress-test scenarios + Fire 90 sustained-feedback-loop pattern.
 
 ## Pre-compact preservation framing
 
@@ -43,7 +43,7 @@ Per impl-spec #10 post-compact gate + Fire 50 stress-test + Fire 90 sustained-fe
 
 ```
 PRE-COMPACT PRESERVATION CHECKLIST:
-  ✓ Body of work persists at /opt at tier-1 — 100 pieces structured
+  ✓ Body of work persists at the second-brain at tier-1 — 100 pieces structured
   ✓ Pipeline post 0-error across all 100 fires
   ✓ Cross-references stable; 0 orphans (per Fire 78 v2 audit)
   ✓ Pain-point traceability 100% (per Fire 79 v2 + Fire 93 + Fire 94 + Fire 95 + Fire 96 per-instance)
@@ -114,7 +114,7 @@ DIRECTIVE 3 (Fire 98 trigger): "this notion the experts mode should exibit by na
   → ALSO: tighter pacing (1-hour → 60s wakeup) per "exploit before compact" PIVOT
 ```
 
-All three directives registered sacrosanct verbatim + operationalized via patterns at /opt.
+All three directives registered sacrosanct verbatim + operationalized via patterns at the second-brain.
 
 ## Per-instance pain-point evidence cumulative
 
@@ -154,7 +154,7 @@ Same 6 inheritances per Fire 80 + 4 NEW post-Fire-80 inheritances:
 ## Forward-anchored: post-compact recovery if it occurs
 
 Per impl-spec #10 + Fire 50 stress-test:
-- /opt body persists (100 pieces; 705 pages; 0 errors)
+- the second-brain body persists (100 pieces; 705 pages; 0 errors)
 - Pipeline post backlinks stable
 - Cross-references bidirectional + maintained
 - Per piece #91 versioning: body at v1.0.0 (initial release; tier-1)
@@ -181,7 +181,7 @@ Plus NEW operator-territory items:
 
 The 100-piece body addresses operator's "at least 100 pain points have direct response" criterion at numerical-alignment + cluster-coverage (15/15) + per-instance granularity (4 clusters fully enumerated; methodology demonstrated for remaining 11) + 4 NEW substantive directives registered post-Fire-80.
 
-Per operator's PIVOT directive: this milestone is pre-compact preservation framing. Body persists at /opt regardless of compaction. Operator's review can resume per /opt body-of-work-versioning v1.0.0 + composite-metric self-application 99.51% baseline + falsifiability criteria explicit.
+Per operator's PIVOT directive: this milestone is pre-compact preservation framing. Body persists at the second-brain regardless of compaction. Operator's review can resume per the second-brain body-of-work-versioning v1.0.0 + composite-metric self-application 99.51% baseline + falsifiability criteria explicit.
 
 **The agent stands by per /loop directive. Cron continues at 60s cadence. Operator-explicit clear or pivot at any moment.**
 

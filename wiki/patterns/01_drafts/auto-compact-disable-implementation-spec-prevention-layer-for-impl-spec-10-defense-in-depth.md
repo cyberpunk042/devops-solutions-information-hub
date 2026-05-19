@@ -32,7 +32,7 @@ sources:
   - id: opt-claude-settings-json
     type: file
     file: .claude/settings.json
-    description: "Existing /opt settings — investigation target for auto-compact-disable mechanism (location TBD)"
+    description: "Existing the second-brain settings — investigation target for auto-compact-disable mechanism (location TBD)"
 tags: [implementation-spec, auto-compact-disable, prevention-layer, defense-in-depth, opt-second-brain, harness-policy, day-arc-2026-05-08, multi-day-pain-point-resolution, fire-107]
 ---
 
@@ -157,8 +157,8 @@ PHASE 1: Investigation (Task #25 work)
   Sub-task 1.5: auto-dream definition (Task #29)
 
 PHASE 2: Layer 1A wiring (after Phase 1 complete)
-  Edit /opt/CLAUDE.md hot-path: add Hard Rule 16
-  Edit /opt/AGENTS.md: add Hard Rule 16 (cross-tool universal)
+  Edit CLAUDE.md hot-path: add Hard Rule 16
+  Edit AGENTS.md: add Hard Rule 16 (cross-tool universal)
   Document policy in .claude/rules/operating-principles.md
 
 PHASE 3: Layer 1B + 1C wiring (after Phase 1 reveals canonical mechanism)
@@ -188,7 +188,7 @@ PHASE 6: Documentation closure
 
 ### Auto-dream definition surfacing (Task #29)
 
-Per operator's verbatim: *"only auto-dream can be enabled"*. The term "auto-dream" is operator-known but not currently defined in /opt second-brain corpus. This spec surfaces it as a question per Fire 99 question-registry pattern (forward-anchored: /questions slash command not yet implemented):
+Per operator's verbatim: *"only auto-dream can be enabled"*. The term "auto-dream" is operator-known but not currently defined in the second-brain second-brain corpus. This spec surfaces it as a question per Fire 99 question-registry pattern (forward-anchored: /questions slash command not yet implemented):
 
 ```
 QUESTION (audience: OPERATOR):
@@ -206,7 +206,7 @@ QUESTION (audience: OPERATOR):
   Path-to-resolution: surface in next operator-facing checkpoint
                        (Fire 99 question-registry slash command Tier 1 → Tier 4 dependent)
   Forward-anchored: until operator answers, "only auto-dream" interpreted
-                    conservatively — NO auto-* mechanisms enabled in /opt brain
+                    conservatively — NO auto-* mechanisms enabled in the second-brain brain
 ```
 
 ### Composability with Fires 105 + 106 (defense-in-depth)
@@ -284,8 +284,8 @@ Apply this auto-compact-disable spec when:
 
 ## Instances
 
-**Instance 1: This /opt second-brain (Tasks #25 + #26 + #29 target)**
-- Current: auto-compact fired at 5% (Fire 102 evidence); /opt at Tier 0
+**Instance 1: This the second-brain second-brain (Tasks #25 + #26 + #29 target)**
+- Current: auto-compact fired at 5% (Fire 102 evidence); the second-brain at Tier 0
 - Apply: investigation phase first → Layer 1 implementation → verification
 - Combined with Fires 105+106 wiring: full defense-in-depth coverage
 - Tier-elevation: auto-compact-disable Tier 0 → Tier 4

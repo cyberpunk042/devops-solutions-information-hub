@@ -420,6 +420,7 @@ The 7-level framework also validates the architectural choice to use a wiki + wi
 [[E005-agent-compliance-framework|Agent Compliance Framework]]
 [[boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski|Boilerplate skill anti-pattern at scale: 47% of AICP's 78 skills are identical instruction dumps]]
 [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+[[cascade-candidate-root-ghostproxy-m001-reframe-as-audit-of-existing-agents-md-claude-md-2026-05-16|Cascade candidate — M001 reframe: audit (not author) existing AGENTS.md (34KB) + CLAUDE.md (38KB) at upstream root-ghostproxy]]
 [[context-file-taxonomy|Context File Taxonomy — The 8 Dimensions of Agent Context]]
 [[pretooluse-hooks-layered-approach|Decision — Layered PreToolUse Hooks: Universal R01-R04 Baseline First, Stage-Gate Enforcement Later]]
 [[skills-as-primary-extension-pattern|Decision — Skills as the Primary Extension Pattern (over MCP-everywhere or hooks-only)]]

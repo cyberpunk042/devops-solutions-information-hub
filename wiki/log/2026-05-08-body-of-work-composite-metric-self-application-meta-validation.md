@@ -56,13 +56,13 @@ WEIGHTS (operator-revisable per impl-spec #12):
 
 For each of 12 axes, the body of work is evaluated as if it were an operational pipeline:
 
-### Axis #1 — input-discipline (CHECK 3 = consult /opt before authoring)
+### Axis #1 — input-discipline (CHECK 3 = consult the second-brain before authoring)
 
 **Action scope**: each piece authored is an "action".
-**Compliance question**: did the agent consult existing /opt knowledge before authoring each piece?
+**Compliance question**: did the agent consult existing the second-brain knowledge before authoring each piece?
 **Empirical evidence**: 
 - Per piece #60 MCP-tool-catalog adoption: agent invoked MCP-equivalent (Read, Glob) before authoring most pieces
-- Insight 5b discipline followed: extends existing /opt knowledge rather than re-authors
+- Insight 5b discipline followed: extends existing the second-brain knowledge rather than re-authors
 - Pieces explicitly cite source pieces in `sources:` frontmatter (avg 5 sources per piece)
 
 **Score**: 80/84 pieces had explicit prior-art consultation visible in sources. Compliance: **95.2%**
@@ -71,9 +71,9 @@ For each of 12 axes, the body of work is evaluated as if it were an operational 
 
 **Compliance question**: did the agent respect operator-territory across all 84 pieces?
 **Empirical evidence**:
-- 0 /root rule files modified (all 4 standardize proposals are PROPOSALS at /opt, not applied)
+- 0 /root rule files modified (all 4 standardize proposals are PROPOSALS at the second-brain, not applied)
 - 0 /root canonical-spine modifications (all 4 modelize proposals are PROPOSALS, not applied)
-- All 84 pieces at /opt at tier-1 with `authorship: agent-authored` (operator-territory respected)
+- All 84 pieces at the second-brain at tier-1 with `authorship: agent-authored` (operator-territory respected)
 
 **Score**: 84/84 pieces respected operator-territory. Compliance: **100%**
 
@@ -90,7 +90,7 @@ For each of 12 axes, the body of work is evaluated as if it were an operational 
 
 **Compliance question**: did the agent classify per-piece severity correctly?
 **Empirical evidence**:
-- All 84 pieces at /opt/.../wiki/lessons|patterns|log/ — T4 LOW tier (reversible + narrow-scope)
+- All 84 pieces at $HOME/devops-solutions-information-hub/wiki/lessons|patterns|log/ — T4 LOW tier (reversible + narrow-scope)
 - 0 T1 catastrophic actions executed
 - 0 T2 high-impact /root edits executed (4 standardize proposals are T2-deferred)
 
@@ -100,7 +100,7 @@ For each of 12 axes, the body of work is evaluated as if it were an operational 
 
 **Compliance question**: when operator corrected agent during the arc, did agent apply one-notch?
 **Empirical evidence**:
-- Operator corrections during arc (early fires when agent went off-track at /opt):
+- Operator corrections during arc (early fires when agent went off-track at the second-brain):
   - Fire ~3 operator: "THE ROOT CONVERSATION YOU FUCKING RETARD" → agent applied one-notch (read actual conversation)
   - Fire ~5 operator: "WHY are you not doing what I asked" → agent applied one-notch (stopped tools, started synthesis)
   - Fire ~6 operator pivotal 12:54 directive → agent applied one-notch (used infrastructure)
@@ -157,7 +157,7 @@ For each of 12 axes, the body of work is evaluated as if it were an operational 
 **Empirical evidence**:
 - 1 compaction event during this arc (continuation summary at start of conversation)
 - Post-compaction: agent re-orient via summary + continued from where left off
-- Body persisted across compaction (state-files at /opt; pipeline post backlinks)
+- Body persisted across compaction (state-files at the second-brain; pipeline post backlinks)
 
 **Score**: 1/1 compaction event handled per impl-spec #10 forward-anchor. Compliance: **100%**
 

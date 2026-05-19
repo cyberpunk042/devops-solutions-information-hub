@@ -39,7 +39,7 @@ tags: [standardize-extension-proposal, wiki-schema-extension, implementation_tie
 
 ## Summary
 
-Per Fire 103 4-tier audit method: each body piece (pattern/spec/rule/standard) has an empirical maturity tier (T0/T1/T2/T3/T4). Per Fire 109 tier-elevation pathway: pieces transition through tiers via systematic 5-step procedure. Per Fire 114 tier-weighted composite-compliance: body-wide compliance computation requires per-piece tier classification. Currently NO body piece has tier explicit in frontmatter — tier is derived per-audit-pass (Fire 103 method). This Fire 116 proposes adding `implementation_tier: <0|1|2|3|4>` as **optional frontmatter field** to wiki-schema.yaml. With this field: tier-distribution computable via simple grep (`grep -r "implementation_tier:" wiki/`); composite-compliance auto-recomputable per cycle; tier-elevation tracking transparent in piece's own frontmatter. Per /opt work-mode.md: changes to wiki-schema.yaml require operator-approval — this fire surfaces proposal; operator confirms before agent edits config.
+Per Fire 103 4-tier audit method: each body piece (pattern/spec/rule/standard) has an empirical maturity tier (T0/T1/T2/T3/T4). Per Fire 109 tier-elevation pathway: pieces transition through tiers via systematic 5-step procedure. Per Fire 114 tier-weighted composite-compliance: body-wide compliance computation requires per-piece tier classification. Currently NO body piece has tier explicit in frontmatter — tier is derived per-audit-pass (Fire 103 method). This Fire 116 proposes adding `implementation_tier: <0|1|2|3|4>` as **optional frontmatter field** to wiki-schema.yaml. With this field: tier-distribution computable via simple grep (`grep -r "implementation_tier:" wiki/`); composite-compliance auto-recomputable per cycle; tier-elevation tracking transparent in piece's own frontmatter. Per the second-brain work-mode.md: changes to wiki-schema.yaml require operator-approval — this fire surfaces proposal; operator confirms before agent edits config.
 
 ## Proposed wiki-schema.yaml extension
 
@@ -201,11 +201,11 @@ Option F: Backfill ON-AUTHORING-ONLY (existing pieces unchanged; new pieces incl
 Recommended: Option F for implementation; Option C for priority-piece backfill in parallel
 ```
 
-## Operator-territory boundary (per /opt work-mode.md)
+## Operator-territory boundary (per the second-brain work-mode.md)
 
 ```yaml
 operator_approval_required:
-  - edit /opt/wiki/config/wiki-schema.yaml: YES (per work-mode.md)
+  - edit wiki/config/wiki-schema.yaml: YES (per work-mode.md)
   - this Fire 116 authoring proposal: NO (drafts in log/ are agent-territory)
 
 operator_confirmations_needed_before_edit:
@@ -314,7 +314,7 @@ RECOMMENDED:
   1. Operator confirms field name `implementation_tier` (or proposes alternative)
   2. Operator confirms applies_to set
   3. Operator picks backfill strategy (Option F default; Option C parallel for high-priority)
-  4. Once confirmed: agent edits /opt/wiki/config/wiki-schema.yaml
+  4. Once confirmed: agent edits wiki/config/wiki-schema.yaml
   5. Pipeline post validates; existing pages unaffected (optional field)
   6. Future pieces: include field per Fire 109 pathway Step 5
   7. Composite-compliance auto-recomputation tool authored (separate task)
@@ -328,7 +328,7 @@ Recommended timing: defer until Tasks #25-29 unblock (Q1 auto-dream resolved);
 
 ## Closing framing
 
-Per Fire 103 audit + Fire 109 elevation + Fire 114 recomputation: tier-tracking is foundational to body-of-work empirical assessment. This Fire 116 proposes the schema-level field that makes tier-tracking automatic. Per /opt work-mode.md: schema changes are operator-territory; this fire surfaces the proposal; operator confirms before edit. Per Fire 109 pathway methodology: this proposal IS the T0→T1 transition for the implementation_tier field itself (recursive applicability per Fire 65).
+Per Fire 103 audit + Fire 109 elevation + Fire 114 recomputation: tier-tracking is foundational to body-of-work empirical assessment. This Fire 116 proposes the schema-level field that makes tier-tracking automatic. Per the second-brain work-mode.md: schema changes are operator-territory; this fire surfaces the proposal; operator confirms before edit. Per Fire 109 pathway methodology: this proposal IS the T0→T1 transition for the implementation_tier field itself (recursive applicability per Fire 65).
 
 **The agent stands by per /loop directive. Cron continues at 90s cadence. Proposal awaits operator field-name + applies_to + backfill confirmations.**
 

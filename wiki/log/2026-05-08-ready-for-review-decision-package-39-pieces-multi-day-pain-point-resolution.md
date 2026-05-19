@@ -172,7 +172,7 @@ Per operator's directive language:
 |---|---|
 | "clear plan with clear solution" | ✓ 12-spec implementation roadmap with concrete hook specifications |
 | "clear root issues identified" | ✓ 15 clusters mapped to 5 underlying-failure categories |
-| "personal knowledge applied" | ✓ Insight 5b knowledge-reuse — every piece cites existing /opt knowledge + extends not duplicates |
+| "personal knowledge applied" | ✓ Insight 5b knowledge-reuse — every piece cites existing the second-brain knowledge + extends not duplicates |
 | "at least 100 pain points have direct response" | ✓ 180 pain-points mapped 100% to 39 solution pieces |
 | "strategic coverage" | ✓ 15 of 15 clusters + 5 of 5 underlying-failure categories + all 7 operator-named structural-fix candidates |
 | "no laziness, no hack, no quickfix" | ✓ Each piece is full schema-validated artifact with REQUIRED-gates declaration + stress-test plan |

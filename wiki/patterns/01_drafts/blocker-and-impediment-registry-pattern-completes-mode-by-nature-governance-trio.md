@@ -88,7 +88,7 @@ Each blocker JSON:
   "context": "<what work is blocked>",
   "active_mode_when_surfaced": "pm-scrum-master|devops-architect|dual-expert|<none>",
   "related_pieces": ["<path>", ...],
-  "decision_options": ["<R>", "<K>", "<D>"],  // R=resolve, K=keep, D=defer per /opt /blockers slash command convention
+  "decision_options": ["<R>", "<K>", "<D>"],  // R=resolve, K=keep, D=defer per the second-brain /blockers slash command convention
   "priority": "high|medium|low",
   "status": "pending|deferred|resolved",
   "resolution": "<if resolved>",
@@ -126,7 +126,7 @@ Impediments queue if multiple emerge: most-pressing surfaced via `~/.claude/acti
 ### Audience taxonomy (per Fire 99 generalization)
 
 For BLOCKERS:
-- AUDIENCE 1 OPERATOR: operator-pending-decision blockers (most-common; per /opt /blockers slash command)
+- AUDIENCE 1 OPERATOR: operator-pending-decision blockers (most-common; per the second-brain /blockers slash command)
 - AUDIENCE 2 AGENT: agent-needed-decision blockers (rare; agent self-resolves with operator-grant)
 - AUDIENCE 3 SISTER-PROJECT: cross-project blockers (route via gateway-contribute)
 - AUDIENCE 4 FUTURE-AGENTS: handoff-blockers (preserve to handoff-doc)
@@ -153,7 +153,7 @@ AUDIENCE 2 AGENT (with grant):
 AUDIENCE 3 SISTER-PROJECT:
   Cross-project blocker (e.g., shared infrastructure decision)
   → routes via wiki_gateway_contribute MCP
-  → /opt agent processes; operator confirms cross-project scope
+  → the second-brain agent processes; operator confirms cross-project scope
 
 AUDIENCE 4 FUTURE-AGENT:
   Pre-compact handoff: blocker preserved
@@ -258,7 +258,7 @@ Apply this blocker/impediment registry when:
 **Instance 3: Cross-project blocker**:
 - Agent: "shared schema decision needed across root-ghostproxy + AICP"
 - Storage: blockers/sister-pending/<id>.json
-- MCP gateway-contribute lands at /opt 00_inbox/contribute
+- MCP gateway-contribute lands at the second-brain 00_inbox/contribute
 - AICP operator + root operator joint-decide
 - Cross-cited resolution in both projects' decision-logbooks
 
@@ -276,7 +276,7 @@ Apply this blocker/impediment registry when:
 
 ## Empirical Evidence
 
-Per /root work-mode.md PO approval boundary + decisions logbook (40 entries D001-D040): existing /root has blocker + decision tracking. /opt similarly has /blockers slash command + tracker. This pattern unifies the convention + adds impediment queue + sister-project + future-agent audience taxonomy.
+Per /root work-mode.md PO approval boundary + decisions logbook (40 entries D001-D040): existing /root has blocker + decision tracking. the second-brain similarly has /blockers slash command + tracker. This pattern unifies the convention + adds impediment queue + sister-project + future-agent audience taxonomy.
 
 Without registry, blockers + impediments surfaced in cycle prose but lost cross-compaction. With registry: persistent + bidirectional + audience-routed.
 

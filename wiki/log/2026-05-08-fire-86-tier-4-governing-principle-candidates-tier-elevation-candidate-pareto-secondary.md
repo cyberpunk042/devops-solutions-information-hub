@@ -44,7 +44,7 @@ T2 → T3: cross-project-recurrence audit tool
 
 - Fire 118 P5 candidate principle (cross-project evidence consumer)
 - Fire 113 sister-project propagation (data source)
-- /opt 4 governing principles (canonical reference)
+- the second-brain 4 governing principles (canonical reference)
 
 ## Operator-pending
 

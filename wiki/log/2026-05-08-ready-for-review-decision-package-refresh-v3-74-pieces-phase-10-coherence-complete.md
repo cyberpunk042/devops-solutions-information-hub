@@ -84,7 +84,7 @@ Phase 10 cross-cutting integration extended with 10 additional pieces validated:
 | 67 | cron-loop-management pattern | pattern | 67-fire arc analysis + 5 self-governance rules |
 | 68 | final-summary arc-narrative | log (completion) | Operator-verbatim threaded narrative |
 | 69 | multi-project ecosystem index | pattern | 5-project propagation surface (forward-anchored) |
-| 70 | canonical-spine update preview | log | /opt post-promotion view (~165 lines diff) |
+| 70 | canonical-spine update preview | log | the second-brain post-promotion view (~165 lines diff) |
 | 71 | /root standardize-application preview | log | /root post-application view (~145 lines diff) |
 | 72 | M0 current-status snapshot | log | M0 state + 6 next-action-options |
 | 73 | per-cluster recommended-priority | log | 6-batch promotion-order recommendation |
@@ -102,7 +102,7 @@ Per piece #61 traceability matrix: 180/180 pain-points have explicit traceabilit
 |---|---|
 | "clear plan with clear solution" | ✓ 12 impl-specs + 12 stress-tests + 17 cross-cutting integration |
 | "clear root issues identified" | ✓ 15 clusters mapped to 5 underlying-failure categories |
-| "personal knowledge applied" (Insight 5b) | ✓ All 74 pieces extend existing /opt knowledge; 28 MCP tools mapped per gate |
+| "personal knowledge applied" (Insight 5b) | ✓ All 74 pieces extend existing the second-brain knowledge; 28 MCP tools mapped per gate |
 | "100+ pain points have direct response" | ✓ 180 pain-points 100% traceability per piece #61 |
 | "strategic coverage" | ✓ 15/15 clusters + 5/5 underlying + cross-cutting integration substrate |
 | "no laziness, no hack, no quickfix" | ✓ Full schema-validated; bypass-discipline + state-file + MCP-adoption + Phase 10 coherence all closed |

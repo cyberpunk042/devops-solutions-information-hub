@@ -274,7 +274,7 @@ Operator may spot-check this v2 traceability:
 - Pick 3-5 random pain-point instances from master aggregate
 - Verify cluster mapping per this matrix
 - Verify cluster → concept → impl-spec → stress-test → cross-cutting chain (5 steps)
-- Verify each piece exists at /opt/.../wiki/lessons|patterns|log/
+- Verify each piece exists at $HOME/devops-solutions-information-hub/wiki/lessons|patterns|log/
 
 ## Sources
 

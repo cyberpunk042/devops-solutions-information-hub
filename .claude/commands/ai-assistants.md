@@ -13,6 +13,14 @@ Unified management entry for the Per-Project AI Assistants registered in OpenCla
 | `/ai-assistants` | Blank — runs `bin/assistant manage` (full pace + status + numbered action menu) |
 | `/ai-assistants pace` | Just the schedule timeline (gateway cron + systemd timers + heartbeats) |
 | `/ai-assistants status` | Per-profile state (profile YAML / vendor config / agent registered / cron count) |
+| `/ai-assistants activity` | What the assistants ACTUALLY did — files authored, run history with auditor verdicts, inboxes, pending operator actions |
+| `/ai-assistants raw list` | Lifecycle inventory of `raw/` — every file with its retention status (ephemeral/permanent/conditional/pinned/forbidden) + synthesis-presence |
+| `/ai-assistants raw pin <path> "<reason>"` | Protect a raw from purge by adding `lifecycle: keep` frontmatter |
+| `/ai-assistants raw unpin <path>` | Remove the pin |
+| `/ai-assistants raw purge-dry-run` | Preview what would be purged (ephemeral + has-synthesis + not pinned) |
+| `/ai-assistants raw purge-execute` | Actually delete the purge-eligible raws (operator-triggered; the agent does this autonomously per cron tick) |
+| `/ai-assistants promotions list` | Show entries from `wiki/backlog/operator-decision-queue.md` (filter by `--kind`) |
+| `/ai-assistants promotions show <N>` | Full content of entry N |
 | `/ai-assistants fire <profile> <job>` | Fire a cron job NOW (wakes the agent immediately) |
 | `/ai-assistants enable <profile> <job>` | Enable a cron job (yaml + gateway) |
 | `/ai-assistants disable <profile> <job>` | Disable a cron job (yaml + gateway) |

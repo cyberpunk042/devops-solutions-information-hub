@@ -157,6 +157,7 @@ If the enforcement system had a justified bypass — "I need to modify this infr
 [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[block-with-reason-and-justified-escalation|Block With Reason and Justified Escalation — The Bypass Mechanism for Mindful Enforcement]]
+[[overcorrection-binary-fix-without-nuance-when-correcting-over-permissive-into-over-restrictive|Lesson — Overcorrection as binary fix: when correcting over-permissive into over-restrictive without preserving nuance (the CROSS-SCOPE hard-block vs WITHIN-SCOPE soft-priority distinction)]]
 [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
 [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]
 [[src-cline-agentic-coding-ide-extension|Synthesis — Cline — Agentic Coding IDE Extension with Plan/Act, Skills, Hooks, MCP]]

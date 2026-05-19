@@ -43,7 +43,7 @@ PreToolUse hook checks for sentinel `.claude/post-compact-recovery-required`. If
 
 ## Instances
 
-**Instance 1: This /opt (M-AC3 task per Fire 108)**
+**Instance 1: This the second-brain (M-AC3 task per Fire 108)**
 **Instance 2: Sister-projects (forward-anchored)**
 
 ## Hook implementation draft (Python; agent-DRAFT)
@@ -66,7 +66,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", "/opt/devops-solutions-information-hub"))
+PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", "$HOME/devops-solutions-information-hub"))
 SENTINEL_PATH = PROJECT_ROOT / ".claude" / "post-compact-recovery-required"
 AUDIT_LOG = PROJECT_ROOT / ".claude" / "hooks" / "post-compact-bypass.log"
 

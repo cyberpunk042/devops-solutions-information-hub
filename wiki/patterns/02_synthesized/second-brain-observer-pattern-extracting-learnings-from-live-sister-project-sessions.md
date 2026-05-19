@@ -13,7 +13,7 @@ sources:
     type: project
     project: root-ghostproxy
     path: /root/.claude/projects/
-    description: "Operator ran a live test session of root-ghostproxy in /root. Operator simultaneously worked with /opt second-brain agent. Pattern of read-only observation + lesson-distillation emerged (with failure modes when boundaries weren't respected)."
+    description: "Operator ran a live test session of root-ghostproxy in /root. Operator simultaneously worked with second-brain agent. Pattern of read-only observation + lesson-distillation emerged (with failure modes when boundaries weren't respected)."
   - id: companion-lesson-boundary
     type: wiki
     file: wiki/lessons/03_validated/enforcement-compliance/second-brain-agent-must-respect-sister-project-boundaries-no-direct-cross-project-file-edits.md
@@ -24,7 +24,7 @@ tags: [pattern, second-brain, observer, cross-project, learning-extraction, sist
 
 ## Summary
 
-When the operator runs a live session of a sister project (e.g., root-ghostproxy at /root) AND simultaneously works with the second-brain agent (at /opt), the second-brain agent's role is **OBSERVER + EXTRACTOR**, NOT actor in the sister project. The pattern: read sister-project artifacts (transcripts, files), distill cross-project-applicable learnings into second-brain content (lessons, patterns), and surface them for sister projects to consume — never write into sister projects directly.
+When the operator runs a live session of a sister project (e.g., root-ghostproxy at /root) AND simultaneously works with the second-brain agent (in the second-brain repo), the second-brain agent's role is **OBSERVER + EXTRACTOR**, NOT actor in the sister project. The pattern: read sister-project artifacts (transcripts, files), distill cross-project-applicable learnings into second-brain content (lessons, patterns), and surface them for sister projects to consume — never write into sister projects directly.
 
 This pattern exists because the second brain's value is in the **abstracted learnings + cross-project-applicable patterns**, not in being a backseat driver for any particular sister project.
 
@@ -33,15 +33,15 @@ This pattern exists because the second brain's value is in the **abstracted lear
 When the operator runs a sister-project session in parallel with a second-brain session, the second-brain agent operates as **OBSERVER + EXTRACTOR**, never as actor in the sister project. The mechanism: read sister-project artifacts (transcripts, files, raw notes), distill cross-project-applicable learnings, author them as second-brain content (lessons, patterns, principles), and surface them through proper channels (contribute, MCP, operator-mediated transfer) — never direct file edits across the boundary.
 
 The pattern has three components:
-1. **Observation protocol** — what the second-brain agent MAY do (read sister-project artifacts; author at /opt) and MUST NOT do (edit sister-project files; substitute for sister-project agent)
-2. **Extraction flow** — read → identify cross-applicable learning → decide format (lesson/pattern/principle/reference) → author at /opt → cite empirical source → don't push to sister project
+1. **Observation protocol** — what the second-brain agent MAY do (read sister-project artifacts; author in the second-brain repo) and MUST NOT do (edit sister-project files; substitute for sister-project agent)
+2. **Extraction flow** — read → identify cross-applicable learning → decide format (lesson/pattern/principle/reference) → author in the second-brain repo → cite empirical source → don't push to sister project
 3. **Operator-mediated transfer** — operator carries context across sessions; agent doesn't shortcut this even when observing both sessions
 
 ## Instances
 
 | Project | Status | Empirical evidence |
 |---|---|---|
-| **root-ghostproxy + second-brain** | First implementation, validated 2026-05-05 | This conversation: 15 lessons + 2 patterns extracted from live root-ghostproxy session into /opt/.../wiki/lessons/03_validated/ + wiki/patterns/. With observed failure mode (drift into sister-project authoring) corrected mid-stream by operator |
+| **root-ghostproxy + second-brain** | First implementation, validated 2026-05-05 | This conversation: 15 lessons + 2 patterns extracted from live root-ghostproxy session into $HOME/devops-solutions-information-hub/wiki/lessons/03_validated/ + wiki/patterns/. With observed failure mode (drift into sister-project authoring) corrected mid-stream by operator |
 | OpenArms + second-brain (potential) | Adoption candidate | Same pattern would apply when operator runs an OpenArms session and works with second-brain in parallel |
 | OpenFleet + second-brain (potential) | Adoption candidate | Same |
 | AICP + second-brain (potential) | Adoption candidate | Same |
@@ -52,9 +52,9 @@ The pattern has three components:
 ```
 ┌─────────────────────────┐         ┌──────────────────────────────┐
 │  Sister project session │         │  Second-brain agent session  │
-│  (e.g. /root cwd)       │◄────────│  (e.g. /opt cwd)             │
+│  (e.g. /root cwd)       │◄────────│  (e.g. second-brain cwd)             │
 │  Active agent: its own  │  read   │  Role: OBSERVER + EXTRACTOR  │
-│  Author: its own files  │  only   │  Author: /opt second-brain   │
+│  Author: its own files  │  only   │  Author: second-brain   │
 └────────────┬────────────┘         └────────────┬─────────────────┘
              │                                   │
              │ artifacts (transcripts,           │ lessons + patterns
@@ -81,7 +81,7 @@ The pattern has three components:
 
 ## When Not To
 
-- Don't apply when operator hasn't authorized cross-session observation (the agent in /opt should not unilaterally start observing /root sessions)
+- Don't apply when operator hasn't authorized cross-session observation (the agent in the second-brain repo should not unilaterally start observing /root sessions)
 - Don't apply when learnings are sister-project-specific only (no cross-project applicability) — those belong only in the sister project's local layer
 - Don't apply as a substitute for the sister project's own learning capture — sister project's agent + raw notes are the primary source; second-brain is the cross-project-applicable distillation layer
 - Don't apply when the agent's observation would consume excessive cycles for low-value extraction (be selective; not every sister-project event is a cross-applicable lesson)
@@ -95,10 +95,10 @@ The pattern has three components:
 |---|---|
 | Read sister-project transcripts (e.g. `<sister>/.claude/projects/<id>/*.jsonl`) | Reading is non-disruptive; informational |
 | Read sister-project artifacts (logs, files, raw notes, governance docs) | Same |
-| Author lessons in `/opt/.../wiki/lessons/01_drafts/` capturing learnings | Second-brain authoring layer; appropriate scope |
-| Author patterns in `/opt/.../wiki/patterns/01_drafts/` for sister-applicable designs | Same |
+| Author lessons in `$HOME/devops-solutions-information-hub/wiki/lessons/01_drafts/` capturing learnings | Second-brain authoring layer; appropriate scope |
+| Author patterns in `$HOME/devops-solutions-information-hub/wiki/patterns/01_drafts/` for sister-applicable designs | Same |
 | Update existing patterns / lessons with new evidence | Same |
-| Register raw notes in `/opt/.../raw/notes/` for second-brain primary sources (DISTINCT from sister-project iteration directives) | Second-brain's own primary-source layer |
+| Register raw notes in `$HOME/devops-solutions-information-hub/raw/notes/` for second-brain primary sources (DISTINCT from sister-project iteration directives) | Second-brain's own primary-source layer |
 | Surface findings to operator for cross-session relay | Operator-mediated channel is legitimate |
 
 ### What the second-brain agent MUST NOT do
@@ -108,7 +108,7 @@ The pattern has three components:
 | Edit sister-project files directly (`/root/...`, `~/openarms/...`, etc.) | Boundary violation — sister project owns its own authoring |
 | Move/delete files in sister projects | Same |
 | Run commands that mutate sister-project state | Same |
-| Author "iteration directives" for sister projects in /opt | Iteration content belongs in the sister project's own log layer |
+| Author "iteration directives" for sister projects in the second-brain repo | Iteration content belongs in the sister project's own log layer |
 | Substitute for the sister project's agent | The sister project has its own agent; second-brain is observer, not stand-in |
 
 ## The extraction flow
@@ -118,7 +118,7 @@ When the second-brain agent observes a sister-project event worth capturing:
 1. **Read** — pull the relevant transcripts/files from the sister project's filesystem (read-only)
 2. **Identify** — what's the cross-applicable learning here? Generalize from the specific.
 3. **Decide format** — lesson (operational learning), pattern (recurring design), principle (axiom), reference (pointer)
-4. **Author at /opt** — in the appropriate layer (`wiki/lessons/`, `wiki/patterns/`, `wiki/spine/principles/`, etc.)
+4. **Author in the second-brain repo** — in the appropriate layer (`wiki/lessons/`, `wiki/patterns/`, `wiki/spine/principles/`, etc.)
 5. **Cite the empirical source** — point at the sister-project transcript / file as evidence
 6. **Don't push to sister project** — let the sister project's agent (or operator) consume when ready
 
@@ -126,9 +126,9 @@ When the second-brain agent observes a sister-project event worth capturing:
 
 | Anti-pattern | What it looks like | Correction |
 |---|---|---|
-| Drift into sister-project authoring | Second-brain agent starts editing sister-project files because "I'm closer to it" | Stop. Stay in /opt scope. Author in /opt only. |
+| Drift into sister-project authoring | Second-brain agent starts editing sister-project files because "I'm closer to it" | Stop. Stay in the second-brain repo scope. Author in the second-brain repo only. |
 | Treat operator's complaints about sister project as instructions to fix sister project | Operator says "/root has a bug" → second-brain agent edits /root | Operator's report is INPUT for second-brain extraction; not a directive to act in sister project |
-| Mix sister-project iteration content with second-brain content | Author /root iteration directives at /opt/raw/notes/ | /root's iteration log goes to /root/wiki/log/. /opt's primary sources are different scope. |
+| Mix sister-project iteration content with second-brain content | Author /root iteration directives in the second-brain's raw/notes/ | /root's iteration log goes to /root/wiki/log/. The second-brain's primary sources are a different scope. |
 | Conflate observer role with actor role | Second-brain agent runs sister-project commands or makes sister-project decisions | Observer reads + extracts; actor (sister-project agent) does the work |
 | Live-monitor with stale data | Read an old transcript copy when the sister project session is still live | Re-pull the transcript on each turn; use the actual current state |
 

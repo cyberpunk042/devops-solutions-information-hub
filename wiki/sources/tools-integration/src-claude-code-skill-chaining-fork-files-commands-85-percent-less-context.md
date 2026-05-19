@@ -241,7 +241,7 @@ A `/cycle` running in `mode-curator` could orchestrate sub-skills using this pat
 > File handoff writes plaintext JSON to temp directory. At L2+ trust, plaintext intermediate state may need encryption-at-rest or tmpfs-only. Operator-design call when M005 (Trust + Compression) reaches composition stage.
 
 > [!question] Could the `!` exclamation command pattern adopt operator's `${CLAUDE_PROJECT_DIR}` env-indirection per the path-versatility lesson?
-> YES. Example: `` !`cat ${CLAUDE_PROJECT_DIR}/.claude/active-mode` `` — works on /opt OR /home/jfortin without modification. Direct application of the [path-versatility doctrine](../../lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths.md) to skill chaining.
+> YES. Example: `` !`cat ${CLAUDE_PROJECT_DIR}/.claude/active-mode` `` — works on the second-brain OR /home/jfortin without modification. Direct application of the [path-versatility doctrine](../../lessons/01_drafts/path-versatility-doctrine-metadata-driven-indirection-not-hardcoded-absolute-paths.md) to skill chaining.
 
 > [!question] Is this the production-validated implementation of Phil Schmid Pattern 1 (Inline Tool)?
 > YES per the synthesis. The 85% empirical reduction + concrete YAML + file-handoff schema + ! commands give a complete implementation pathway. **Pattern 1 is no longer aspirational — it's production-validated via Claude Code skill chaining V2.**

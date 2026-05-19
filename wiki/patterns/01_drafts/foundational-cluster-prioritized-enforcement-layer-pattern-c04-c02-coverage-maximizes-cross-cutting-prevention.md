@@ -209,12 +209,12 @@ Apply this foundational-cluster-prioritized enforcement-layer pattern when:
 
 ## Instances
 
-**Instance 1: /opt second-brain — auto-compact triplet (concrete)**
+**Instance 1: the second-brain second-brain — auto-compact triplet (concrete)**
 - Layers wired: Fire 107 sub-layer 1B (settings.json) + Fire 105 PreCompact + Fire 106 PreToolUse-blocker
 - Cluster coverage: C04 + C02 + C15 + C19 (4 clusters touched)
 - Pattern application: Phase 1 + Phase 2 partially complete
 
-**Instance 2: /opt second-brain — body-wide hooks (forward-anchored)**
+**Instance 2: the second-brain second-brain — body-wide hooks (forward-anchored)**
 - Existing layers: pre-bash (truncation), pre-webfetch (corpus), opt-write-block (knowledge boundaries)
 - Cluster coverage: partial C04 (input-discipline subset) + partial C02 (decision-territory subset)
 - Gap: C15 + C19 + C07 + C12 unprotected at body-wide layer
@@ -239,7 +239,7 @@ Per Fire 115 C18 cross-cutting cluster: 15 instances with cluster-frequency dist
 
 Per Fire 102 worked-example: real-session post-compact failure had C04 + C02 axes both activated; with foundational-cluster layers wired, either C04 layer OR C02 layer would have caught it before pre-compact-pending tool call executed.
 
-Per /opt's existing 3 PreToolUse hooks: each is single-cluster single-layer. Pattern observation: HR-violation incidents that occurred BEFORE hooks were authored could have been caught by hooks; the hooks ARE the enforcement-layer evidence. Foundational-cluster prioritization extends this empirical truth.
+Per the second-brain's existing 3 PreToolUse hooks: each is single-cluster single-layer. Pattern observation: HR-violation incidents that occurred BEFORE hooks were authored could have been caught by hooks; the hooks ARE the enforcement-layer evidence. Foundational-cluster prioritization extends this empirical truth.
 
 ## Required Gates (per hook-architecture proposal #2 4th component)
 
@@ -284,7 +284,7 @@ T4 (designed + implemented + enforced): bypass-frequency monitored;
 | Fire 109 tier-elevation pathway | Each foundational-cluster layer is per-Fire-109 elevation |
 | Fire 103 4-tier audit | Per-layer tier classification per audit method |
 | Fire 105+106+107 auto-compact triplet | Domain-specific defense-in-depth; this pattern is domain-agnostic |
-| Existing /opt hooks (pre-bash, pre-webfetch, opt-write-block) | Per-cluster layer additions extend coverage |
+| Existing the second-brain hooks (pre-bash, pre-webfetch, opt-write-block) | Per-cluster layer additions extend coverage |
 | Fire 113 sister-project propagation | Each sister project applies pattern to its own failure history |
 
 ## Operator-pending action
@@ -292,8 +292,8 @@ T4 (designed + implemented + enforced): bypass-frequency monitored;
 ```
 Q-FIRE-119-1: Endorse foundational-cluster-prioritization?
   Argument for: data-driven (Fire 115 evidence); efficient resource allocation
-  Argument against: may over-fit to /opt's specific cluster distribution
-  Recommended: endorse for /opt; per-project re-analysis for sister projects
+  Argument against: may over-fit to the second-brain's specific cluster distribution
+  Recommended: endorse for the second-brain; per-project re-analysis for sister projects
 
 Q-FIRE-119-2: Phase 1 vs Phase 1+2 vs Phase 1+2+3?
   Phase 1: 16-24h, ~50-60% coverage (C04+C02)
@@ -310,7 +310,7 @@ Q-FIRE-119-4: Bypass-frequency thresholds for T4 enforcement?
 
 ## Closing framing
 
-Per Fire 115 + Fire 118: cross-cutting failures need defense-in-depth; foundational-cluster-prioritization is the structural refinement. This Fire 119 operationalizes prioritization with criteria + per-cluster specs + investment ladder + Pareto-efficiency analysis. Combined with auto-compact triplet (domain-specific) + existing /opt hooks (single-cluster single-layer): comprehensive coverage strategy.
+Per Fire 115 + Fire 118: cross-cutting failures need defense-in-depth; foundational-cluster-prioritization is the structural refinement. This Fire 119 operationalizes prioritization with criteria + per-cluster specs + investment ladder + Pareto-efficiency analysis. Combined with auto-compact triplet (domain-specific) + existing the second-brain hooks (single-cluster single-layer): comprehensive coverage strategy.
 
 Per /loop directive *"do this right"*: prioritization beats random investment; data-driven (Fire 115 evidence) beats speculation; Pareto-efficient (Phase 1+2) beats exhaustive (Phase 4) for substantial coverage.
 

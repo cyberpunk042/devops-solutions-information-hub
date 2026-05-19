@@ -99,7 +99,7 @@ Or per piece #72 M0 snapshot OPTION A (full-confirmation): batch all 80 in one /
 **Ready-answer**: Per piece #71 /root standardize-application preview: standardize proposals are operator-territory + extra-caution. Three options:
 - **Apply all 4**: per recommended substrate-first order (operating-principles → hook-architecture → methodology → context-engineering)
 - **Apply selectively**: e.g., apply just operating-principles 16th first; defer others
-- **Defer all**: pieces remain as proposals at /opt; /root rules unchanged; safe path
+- **Defer all**: pieces remain as proposals at the second-brain; /root rules unchanged; safe path
 
 ~145 lines additive across 4 /root rule files. Pure-additive (no existing content removed). Reversible via git.
 
@@ -155,20 +155,20 @@ Risk is low because changes are additive + reversible. Implementation-phase M3-M
 #### Q11: "Can I undo the body of work if needed?"
 
 **Ready-answer**: Yes, per operating-principles principle #2 (always flexible):
-- /opt second-brain pieces remain at /opt; deletion is git-revertible
+- the second-brain second-brain pieces remain at the second-brain; deletion is git-revertible
 - Tier-1 status preserves operator-territory respect (pieces are agent-authored DRAFTs)
 - No /root files modified yet (operator-territory respect)
 - No sister-project propagation initiated
 - Implementation phase NOT executed (M0)
 
-The body is purely-additive at /opt. Reversal: delete or archive /opt files; pre-mandate state restored. Zero data-loss; git history preserves intent.
+The body is purely-additive at the second-brain. Reversal: delete or archive the second-brain files; pre-mandate state restored. Zero data-loss; git history preserves intent.
 
 ### Phase E: Operator-empirical sister-project propagation questions
 
 #### Q12: "How do sister-projects benefit from this work?"
 
 **Ready-answer**: Per piece #69 multi-project ecosystem index + piece #56 sister-project propagation pattern:
-- Post-tier-3 promotion (M7): pieces become canonical at /opt
+- Post-tier-3 promotion (M7): pieces become canonical at the second-brain
 - Sister-project agent runs `/install-agent-brain /<sister-project-path>`
 - Adapts via 5-layer adaptation manifest (identity / methodology / domain / weights / hooks)
 - Cross-project recurrence aggregator detects shared patterns → tier-4 governing-principle candidates
@@ -194,7 +194,7 @@ Operator's pacing per "no rush" directive — no time pressure.
 #### Q15: "What if I want to defer indefinitely?"
 
 **Ready-answer**: Per piece #72 M0 snapshot OPTION C (defer):
-- 80 pieces remain at /opt at tier-1 maturity
+- 80 pieces remain at the second-brain at tier-1 maturity
 - Operator returns when ready
 - /loop continues firing per /loop directive UNTIL operator-explicit-clear
 - OR operator types "clear the loop" to stop cron + agent stops authoring

@@ -24,20 +24,99 @@ profile: continuous-research
 
 jobs:
 
-  # ─── Hourly: lightweight delta scan ───────────────────────────────────
+  # ─── Hourly: research the frontier AND do the work ────────────────────
   - name: frontier-delta-check
-    enabled: true                # autonomous AI assistant — runs by default; opt OUT only if you specifically want this job silent
-    schedule: "hourly"            # systemd OnCalendar: hourly
+    enabled: true
+    schedule: "hourly"
     trigger:
       type: openclaw-task
       prompt: |
-        Perform a lightweight scan of the highest-cadence monitoring_surfaces
-        (Hugging Face trending, Anthropic release notes, OpenAI announcements,
-        GitHub trending for AI/agent repos). For each surface, detect NOVELTY
-        only — anything not already in the project's wiki corpus. If significant
-        novelty found, escalate to full source-synthesis (use on_significant_change_detected).
-        If no novelty, log a noted-but-skipped entry. Budget cap: 1 minute model time.
-    description: "Hourly delta-check — novelty detection across fast-moving frontier surfaces. Lightweight; escalates to full synthesis on significant find."
+        Operator-stated job (verbatim, sacrosanct): "Do research to make sure
+        the models are up to date and our vision of the technogies are still
+        acquire, AND WE DO THE PROPER UPDATE AND ETC..."
+
+        This is NOT a surfacing-only task. The "proper update" part is
+        load-bearing — you ACTUALLY do the work, you don't write diary entries
+        deferring to a hypothetical future run.
+
+        Workflow per tick:
+
+        0. **Operator-directives check (FIRST thing on wake).** Read
+           .assistant/_state/continuous-research-operator-directives.md (if it
+           exists). This is the operator-write surface; you NEVER replace its
+           body, only APPEND `> [!processed]` markers below directives you
+           handle. Look for:
+
+           a. `> [!directive]` callouts NOT already followed by `> [!processed]`.
+              For each, process WITHIN your autonomy bounds (AUTONOMY.md). If
+              the directive falls in surfacing_required territory, append a
+              `> [!info]` follow-up explaining what would need to happen +
+              budget estimate, then append `> [!processed]` to mark it handled.
+
+           b. `> [!resolved] Q##` callouts. These represent operator decisions
+              on past promotion candidates — DO NOT re-surface these Q numbers
+              in future ticks. Remember them across the session.
+
+           NEVER overwrite or delete content in this file. Only append.
+
+           After step 0, proceed with normal scan workflow:
+
+        1. Scan monitoring_surfaces (Anthropic news, OpenAI announcements,
+           HF trending models/papers, GitHub trending AI). Use web_search (Hard
+           Rule 6: NEVER WebFetch on corpus URLs).
+
+        2. For each candidate novelty:
+           a. Use wiki_search to confirm not already in the project's corpus
+           b. If genuinely novel AND vision-relevant (touches model tiers,
+              vendor policy, operator's stack, agent runtimes, hardware):
+              → EXECUTE on_significant_change_detected per AGENTS.md:
+                 - pipeline_fetch the source URL(s) into raw/
+                 - read the raws IN FULL (Hard Rule 1; wc -l first)
+                 - author wiki/sources/<domain>/src-<slug>.md per template
+                   (≥0.25 ratio, 9 frontmatter fields, required sections)
+                 - run pipeline_crossref to link to existing pages
+                 - flag affected existing pages (e.g. comparison tables,
+                   smoke-test task lists) — author follow-up entry in
+                   wiki/log/ identifying which pages to update
+                 - pipeline_post — 0 errors required
+           c. If not novel OR not vision-relevant: skip; don't log it.
+
+        3. After step 2 lands cleanly (synthesis + crossref + pipeline_post 0-error),
+           PURGE ephemeral raws per LIFECYCLE.md. For each raw you just synthesized:
+           if its path is `raw/articles/` AND no `lifecycle: keep` frontmatter AND
+           ratio ≥0.25 AND domain not on always_keep list → `rm` the raw and log
+           it to wiki/log/<date>-purge-summary.md (purged path, synthesis path,
+           ratio, rationale). Don't flood the project with extracted noise.
+
+        4. If any synthesis you just authored suggests a promotion candidate
+           (lesson / pattern / decision / principle / model-update) — surface it
+           to wiki/backlog/operator-decision-queue.md per AUTONOMY.md candidate
+           format. NEVER promote autonomously. ≥3 convergent existing wiki
+           sources is the lesson-promotion floor.
+
+        5. Append ONE LINE to .assistant/_state/continuous-research-inbox.md
+           reporting what you actually did this tick. Format:
+             HH:MM ET | <raws_fetched> fetched | <syntheses> synth | <crossrefs> xrefs | <purged> purged | <promo-candidates> promo | post: <ok|err>
+           If counts are all 0, write:
+             HH:MM ET | nothing significant — N surfaces scanned, all known
+           NO diary entries for "I noted these but deferred" — silent tyranny.
+           Log to wiki/log/ ONLY if you actually did substantive work.
+
+        4. If the scan finds significant novelty AND you can't process it
+           all in this tick (e.g., 5+ deltas), do at LEAST the highest-impact
+           ONE end-to-end, log a hand-off identifying the rest by URL +
+           rationale, AND surface it in operator-decision-queue.md so the
+           operator knows.
+
+        Budget: target up to 5 minutes model time per tick. If you find
+        nothing significant, you're done in ~30 seconds. If you find one,
+        do the work.
+
+        ANTI-PATTERN: writing a research-watch log that says "I found these
+        items, deferring full synthesis." Don't. Either you did the work, or
+        you didn't surface it.
+    description: "Hourly frontier research — finds novelty, authors source-synthesis, cross-references, flags affected pages. NOT a surfacing-only scan."
+    timeout_seconds: 900  # 15 min — synthesis (read raw, author 300+ line page, crossref, post) typically 4-10 min
 
   # ─── Morning task: daily-startup scan ─────────────────────────────────
   - name: morning-scan
@@ -52,6 +131,7 @@ jobs:
         wiki/log/<date>-research-watch-morning.md summarizing what changed
         overnight and what (if anything) needs operator-decision-queue attention.
     description: "Daily morning brief — overnight delta synthesis + operator-decision-queue triage."
+    timeout_seconds: 1800  # 30 min — batch processes overnight backlog of multiple deltas
 
   # ─── Evening task: end-of-day report ──────────────────────────────────
   - name: evening-report
@@ -65,6 +145,7 @@ jobs:
         summary. Surface any items that became newly urgent for operator review
         (e.g., a strategic shift that emerged from cumulative findings).
     description: "Daily evening summary — cumulative frontier findings + urgent items for operator review."
+    timeout_seconds: 900  # 15 min — daily summary work
 
   # ─── Weekly start: deep monday dive ───────────────────────────────────
   - name: start-of-week-deep-dive
@@ -79,6 +160,7 @@ jobs:
         Update vision_baselines_to_track if any baseline appears outdated.
         Surface to operator-decision-queue.md for items requiring operator review.
     description: "Weekly Monday deep-dive — pattern extraction from last week's daily findings."
+    timeout_seconds: 2400  # 40 min — reads 7 evening-reports + synthesizes cross-day patterns
 
   # ─── Weekly end: friday digest ────────────────────────────────────────
   - name: end-of-week-summary
@@ -93,6 +175,7 @@ jobs:
         with metrics + narrative. Flag any anti-signals (Profile.success_criteria.anti_signals_to_watch)
         observed this week.
     description: "Weekly Friday digest — research output metrics + anti-signal surfacing."
+    timeout_seconds: 1800  # 30 min — weekly digest writing
 
   # ─── Monthly: budget audit ────────────────────────────────────────────
   - name: monthly-budget-audit
@@ -105,6 +188,7 @@ jobs:
         vs Profile.model_routing.cost_ceilings.target_monthly_value_output_usd_equivalent.
         If under target, why? If over hard_stop, alert. Report to wiki/log/.
     description: "Monthly cost/value audit per Profile.success_criteria.measurable_value_per_month."
+    timeout_seconds: 600  # 10 min — read run logs + tally + write audit page
 
 # =============================================================================
 # Job-design rules

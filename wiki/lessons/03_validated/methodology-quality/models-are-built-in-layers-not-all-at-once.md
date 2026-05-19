@@ -109,6 +109,7 @@ The critical insight: at step 1, we claimed "models are done" because entry poin
 [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
 [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
 [[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]]
+[[build-pipeline-via-sdd-tdd-real-bugs-caught-only-when-tests-execute-actual-renderers|Build Pipeline via SDD+TDD — Real Bugs Surface Only When Tests Execute Actual Renderers (Not Just Schema-Validate)]]
 [[2026-04-09-directive-docs-layers-old-models|Documentation Layers + Old Model Tolerance]]
 [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]

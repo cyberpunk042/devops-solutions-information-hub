@@ -13,7 +13,7 @@ sources:
     type: empirical-evidence
     project: root-ghostproxy
     path: /root/.claude/hooks/opt-write-block.sh
-    description: "The /root user's machine-level opt-write-block.sh hook fired against an /opt-cwd session attempting a legitimate /opt write, because the hook is at /root/.claude/hooks/ (root-user $HOME) and applies to ALL root-user sessions including non-/root-project ones"
+    description: "The /root user's machine-level opt-write-block.sh hook fired against an second-brain-cwd session attempting a legitimate write to the second-brain, because the hook is at /root/.claude/hooks/ (root-user $HOME) and applies to ALL root-user sessions including non-/root-project ones"
   - id: companion-lesson-cross-project-boundary
     type: lesson
     file: wiki/lessons/03_validated/enforcement-compliance/second-brain-agent-must-respect-sister-project-boundaries-no-direct-cross-project-file-edits.md
@@ -27,7 +27,7 @@ tags: [lesson, hook-scope, machine-vs-project, cross-firing, two-layer-architect
 
 Hooks placed at the **machine level** (`$HOME/.claude/hooks/`) fire for ALL Claude Code sessions of that user, regardless of which project's cwd. This is a feature for safety hooks (credential blocking, malware blocking) but an anti-pattern for **project-scoped rules** that should only apply to a specific project.
 
-The opt-write-block hook authored at `/root/.claude/hooks/opt-write-block.sh` blocks writes to `/opt/...` from ALL root-user Claude Code sessions — including legitimate /opt second-brain agent sessions whose cwd is /opt and whose role is to author second-brain content. The hook fires correctly against root-ghostproxy (`/root` cwd) sessions writing to /opt; it incorrectly fires against /opt-cwd sessions doing their own work.
+The opt-write-block hook authored at `/root/.claude/hooks/opt-write-block.sh` blocks writes to `the second-brain` from ALL root-user Claude Code sessions — including legitimate second-brain agent sessions whose cwd is the second-brain repo and whose role is to author second-brain content. The hook fires correctly against root-ghostproxy (`/root` cwd) sessions writing to the second-brain; it incorrectly fires against second-brain-cwd sessions doing their own work.
 
 **The fix**: machine-level hooks for universal safety; project-level hooks for project-specific enforcement.
 
@@ -59,11 +59,11 @@ Does NOT apply to: universal safety hooks (credential blocking, malware blocking
 
 Empirical, 2026-05-05 cross-firing event:
 
-- /root project agent authored `/root/.claude/hooks/opt-write-block.sh` to enforce "root-side rule: don't write to /opt"
+- /root project agent authored `/root/.claude/hooks/opt-write-block.sh` to enforce "root-side rule: don't write to the second-brain"
 - /root is root user's $HOME → /root/.claude/hooks/ doubles as machine-level
-- /opt second-brain agent (this agent, cwd=/opt) attempted a legitimate /opt write
-- Hook fired against the /opt agent and blocked the write — cross-fire
-- Hook diagnostic message implied the agent was the /root agent ("/root agent must not write into /opt") which was incorrect — the agent was the /opt agent
+- second-brain agent (this agent, cwd=second-brain repo) attempted a legitimate write to the second-brain
+- Hook fired against the second-brain agent and blocked the write — cross-fire
+- Hook diagnostic message implied the agent was the /root agent ("/root agent must not write into the second-brain") which was incorrect — the agent was the second-brain agent
 - Operator confirmed: *"sorry the root project had put an overly aggrive hook"* — acknowledging the cross-firing
 
 Two viable fixes:
@@ -84,12 +84,12 @@ Two viable fixes:
 ## Failure mode (empirical, 2026-05-05)
 
 Operator was running:
-- /root project session (test session, cwd=/root) — should not write to /opt directly
-- /opt session (this agent, cwd=/opt) — second-brain authoring is its job
+- /root project session (test session, cwd=/root) — should not write to the second-brain directly
+- second-brain session (this agent, cwd=second-brain repo) — second-brain authoring is its job
 
-The /root project agent authored `/root/.claude/hooks/opt-write-block.sh` as a structural fix for root-side rule "don't write to /opt." Hook deployed at /root/.claude/hooks/ — which is also the root user's $HOME machine-level hook directory.
+The /root project agent authored `/root/.claude/hooks/opt-write-block.sh` as a structural fix for root-side rule "don't write to the second-brain." Hook deployed at /root/.claude/hooks/ — which is also the root user's $HOME machine-level hook directory.
 
-When the /opt-cwd agent attempted a legitimate /opt write (authoring a second-brain lesson), the machine-level hook fired and blocked the write. The hook's diagnostic message correctly identified the rule but mislabeled the agent ("/root agent must not write into /opt") because the hook can't distinguish project context — it fires on any root-user session.
+When the second-brain-cwd agent attempted a legitimate write to the second-brain (authoring a second-brain lesson), the machine-level hook fired and blocked the write. The hook's diagnostic message correctly identified the rule but mislabeled the agent ("/root agent must not write into the second-brain") because the hook can't distinguish project context — it fires on any root-user session.
 
 Operator confirmed: *"sorry the root project had put an overly aggrive hook"* — acknowledging the cross-firing.
 
@@ -100,7 +100,7 @@ Operator confirmed: *"sorry the root project had put an overly aggrive hook"* �
 | **Machine-level** | `$HOME/.claude/hooks/` (e.g. `/root/.claude/hooks/`) | Fires for ALL Claude Code sessions of that user, in every project | Safety hooks that should ALWAYS fire: credential blocking, malware blocking, leak detection |
 | **Project-level** | `<project>/.claude/hooks/` (e.g. `/root/<project>/.claude/hooks/`) | Fires ONLY for sessions in that project's cwd | Project-specific enforcement: project's own scope rules, project-specific verifiers |
 
-A rule that's specific to ONE project (e.g., "root-ghostproxy must not write to /opt") belongs at project-level, NOT machine-level. Putting it at machine-level cross-fires.
+A rule that's specific to ONE project (e.g., "root-ghostproxy must not write to the second-brain") belongs at project-level, NOT machine-level. Putting it at machine-level cross-fires.
 
 ## The cross-firing anti-pattern
 

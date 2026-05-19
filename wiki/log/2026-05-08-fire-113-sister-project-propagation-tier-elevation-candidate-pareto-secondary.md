@@ -42,7 +42,7 @@ T2 → T3: per-project hook implementation
   Adapt foundational-triplet + auto-compact triplet per project
   
 Effort: 40-75h total to T3 (8-15h × 5 projects)
-Composability: depends on /opt Phase 1 implementation success first
+Composability: depends on the second-brain Phase 1 implementation success first
 ```
 
 ## Composition
@@ -55,7 +55,7 @@ Composability: depends on /opt Phase 1 implementation success first
 
 ```
 Q-FIRE-185-1: Endorse Fire 113 elevation T1 → T3?
-  Recommended: defer until /opt Phase 1 implementation complete
+  Recommended: defer until the second-brain Phase 1 implementation complete
   Estimated: 40-75h post-Phase-1
 ```
 

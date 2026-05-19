@@ -41,7 +41,7 @@ C08 — SUBSTITUTION-AS-DISCIPLINE (SB-128 family)
               committing those very failure modes during the authoring
   
   Detection signals:
-    - Rule X authored at /opt; agent violates X mid-authoring
+    - Rule X authored at the second-brain; agent violates X mid-authoring
     - Lesson about Y written; agent doesn't apply Y
     - Pattern about Z synthesized; Z's structural fix not implemented
   

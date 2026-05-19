@@ -131,7 +131,7 @@ A structural fix should be paired with at LEAST ONE surface mechanism for any co
 
 Universal. Every project where structural fixes land in registers/files/hooks faces this risk. The structural fix discipline (author + decide reach + add surface) applies to:
 - root-ghostproxy (first empirical case)
-- /opt second-brain (governance-register adoption candidate; same principle applies if /opt adopts those)
+- the second-brain second-brain (governance-register adoption candidate; same principle applies if the second-brain adopts those)
 - OpenArms, OpenFleet, AICP, devops-control-plane (universal)
 
 ## Relationships

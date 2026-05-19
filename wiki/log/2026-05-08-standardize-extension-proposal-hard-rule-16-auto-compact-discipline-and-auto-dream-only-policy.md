@@ -23,11 +23,11 @@ sources:
   - id: opt-claude-md
     type: file
     file: CLAUDE.md
-    description: "/opt CLAUDE.md current hot-path; 10 Hard Rules currently; this proposal adds HR 16 (skipping HR 11-15 which are /root-side per /root CLAUDE.md)"
+    description: "the second-brain CLAUDE.md current hot-path; 10 Hard Rules currently; this proposal adds HR 16 (skipping HR 11-15 which are /root-side per /root CLAUDE.md)"
   - id: opt-agents-md
     type: file
     file: AGENTS.md
-    description: "/opt AGENTS.md universal cross-tool restatement; receives mirror of HR 16"
+    description: "the second-brain AGENTS.md universal cross-tool restatement; receives mirror of HR 16"
   - id: tier-elevation-pathway-fire-109
     type: wiki
     file: wiki/patterns/01_drafts/tier-elevation-pathway-pattern-systematic-tier-1-to-tier-4-transitions-per-body-piece.md
@@ -39,7 +39,7 @@ tags: [standardize-extension-proposal, hard-rule-16, auto-compact-discipline, au
 
 ## Summary
 
-Per Fire 107 auto-compact-disable Layer 1 spec sub-layer 1A: brain-layer Hard Rule 16 in CLAUDE.md hot-path + AGENTS.md. Per operator directive 2026-05-08 (sacrosanct verbatim): *"make sure auto-compact is off always. only auto-dream can be enabled"*. This proposal authors the EXACT text of Hard Rule 16 for operator-confirmation. Per /opt work-mode.md: changes to CLAUDE.md / AGENTS.md require operator-approval before execution — this fire surfaces the proposal; operator confirms before agent edits hot-path. Per Fire 109 tier-elevation pathway: this proposal IS the T0→T1 transition for sub-layer 1A (designed-only at this point; agent-DRAFT per SB-095).
+Per Fire 107 auto-compact-disable Layer 1 spec sub-layer 1A: brain-layer Hard Rule 16 in CLAUDE.md hot-path + AGENTS.md. Per operator directive 2026-05-08 (sacrosanct verbatim): *"make sure auto-compact is off always. only auto-dream can be enabled"*. This proposal authors the EXACT text of Hard Rule 16 for operator-confirmation. Per the second-brain work-mode.md: changes to CLAUDE.md / AGENTS.md require operator-approval before execution — this fire surfaces the proposal; operator confirms before agent edits hot-path. Per Fire 109 tier-elevation pathway: this proposal IS the T0→T1 transition for sub-layer 1A (designed-only at this point; agent-DRAFT per SB-095).
 
 ## Proposed Hard Rule 16 — exact text
 
@@ -58,7 +58,7 @@ Per Fire 107 auto-compact-disable Layer 1 spec sub-layer 1A: brain-layer Hard Ru
 ### Recommended: Variant A
 
 Reasoning:
-- Matches existing /opt CLAUDE.md HR 1-10 style (concise + verbatim quote + cross-reference)
+- Matches existing the second-brain CLAUDE.md HR 1-10 style (concise + verbatim quote + cross-reference)
 - Variant B is more explicit but exceeds typical hot-path budget
 - Per Fire 105 spec sub-layer 1A: hot-path auto-loaded every prompt; concise preferred
 - Reference to Fire 107 spec covers the implementation detail
@@ -67,14 +67,14 @@ Reasoning:
 
 Per /root .claude/rules system:
 - /root CLAUDE.md and AGENTS.md include Hard Rules 11-15 (extension principles operationalized; per /root operating-principles.md Hard Rules 11-15 mapping)
-- /opt CLAUDE.md currently has Hard Rules 1-10
+- the second-brain CLAUDE.md currently has Hard Rules 1-10
 - HR 11-15 numbering reserved for sister-project consistency (cross-tool mirror)
 
 Decision: number this Hard Rule **16** (next available; honors cross-project HR slot reservation).
-- Alternative: number 11 (next available at /opt) — but breaks /root parity
-- Alternative: number 11/16 as separate (one for /opt, one for cross-tool mirror) — confusing
+- Alternative: number 11 (next available at the second-brain) — but breaks /root parity
+- Alternative: number 11/16 as separate (one for the second-brain, one for cross-tool mirror) — confusing
 
-Recommended: HR 16 across BOTH /opt CLAUDE.md and AGENTS.md.
+Recommended: HR 16 across BOTH the second-brain CLAUDE.md and AGENTS.md.
 
 ## Insertion location in CLAUDE.md
 
@@ -103,12 +103,12 @@ Insertion: end of table; numbering 16 (skip 11-15 reserved per above).
 
 Mirror in AGENTS.md at parallel position (universal cross-tool restatement).
 
-## Operator-territory boundary (per /opt work-mode.md)
+## Operator-territory boundary (per the second-brain work-mode.md)
 
 ```yaml
 operator_approval_required:
-  - edit /opt/CLAUDE.md hot-path: YES (work-mode.md: "Changes to CLAUDE.md ... root-level docs")
-  - edit /opt/AGENTS.md: YES (work-mode.md: cross-tool universal)
+  - edit CLAUDE.md hot-path: YES (work-mode.md: "Changes to CLAUDE.md ... root-level docs")
+  - edit AGENTS.md: YES (work-mode.md: cross-tool universal)
   - this Fire 112 authoring the proposal: NO (drafts in 01_drafts/ + log/ are agent-territory per SB-095)
 
 operator_confirmations_needed_before_edit:
@@ -138,7 +138,7 @@ operator_alternative_paths:
 ## Tier-progression for this proposal
 
 ```
-T0 (no policy): PRE-FIRE-112 (auto-compact policy not in /opt brain)
+T0 (no policy): PRE-FIRE-112 (auto-compact policy not in the second-brain brain)
   ↓ (this Fire 112 authoring)
 T1 (designed only): CURRENT — proposal authored as DRAFT
   ↓ (operator confirms; agent or operator edits hot-path)
@@ -161,7 +161,7 @@ This proposal advances HR 16 from T0 → T1 only. T2-T4 require subsequent opera
 | Use ambiguous "auto-*" without definition | Unclear scope of allowed | Q1 (Fire 110) surfaces auto-dream definition need |
 | Renumber HR 1-10 to insert | Breaks existing cross-references | Append at HR 16 (with HR 11-15 reserved) |
 | Add to brain without enforcement layer | T1 plateau; agent can ignore under pressure | Cross-references Fire 107 multi-layer enforcement |
-| Dual-edit /opt brain without cross-tool mirror | /opt and other tools diverge | Both CLAUDE.md and AGENTS.md targeted |
+| Dual-edit the second-brain brain without cross-tool mirror | the second-brain and other tools diverge | Both CLAUDE.md and AGENTS.md targeted |
 
 ## Required Gates (per hook-architecture proposal #2 4th component)
 
@@ -191,7 +191,7 @@ RECOMMENDED:
   2. Operator confirms HR numbering (16 reserved)
   3. Operator confirms timing — option (a) edit-now with Variant A's "auto-dream operator-defined provisional"
                                   option (b) defer until Q1 (auto-dream definition) resolved
-  4. Once confirmed: agent OR operator edits /opt/CLAUDE.md + /opt/AGENTS.md
+  4. Once confirmed: agent OR operator edits CLAUDE.md + AGENTS.md
   5. Pipeline post validates 0 errors
   6. Re-run Fire 103 audit on this piece: T0 → T2 (partial: brain only; harness pending)
 
@@ -205,7 +205,7 @@ Recommended timing: option (a) — edit now with Variant A
 
 ## Closing framing
 
-Per Fire 107 sub-layer 1A specification: brain-layer Hard Rule 16 needed in /opt CLAUDE.md + AGENTS.md. Per operator directive 2026-05-08 sacrosanct: auto-compact disable + auto-dream-only policy. This Fire 112 proposes the EXACT TEXT in 2 variants (concise + full) for operator-empirical selection. Per /opt work-mode.md: hot-path edits are operator-territory; this fire surfaces proposal; operator confirms before edit. Per Fire 109 tier-elevation pathway: T0→T1 transition complete; T2-T4 depends on operator-action + Layer 1B+1C+1D wiring.
+Per Fire 107 sub-layer 1A specification: brain-layer Hard Rule 16 needed in the second-brain CLAUDE.md + AGENTS.md. Per operator directive 2026-05-08 sacrosanct: auto-compact disable + auto-dream-only policy. This Fire 112 proposes the EXACT TEXT in 2 variants (concise + full) for operator-empirical selection. Per the second-brain work-mode.md: hot-path edits are operator-territory; this fire surfaces proposal; operator confirms before edit. Per Fire 109 tier-elevation pathway: T0→T1 transition complete; T2-T4 depends on operator-action + Layer 1B+1C+1D wiring.
 
 **The agent stands by per /loop directive. Cron continues at 90s cadence. Proposal awaits operator variant-selection + edit-confirmation.**
 
@@ -215,8 +215,8 @@ Per Fire 107 sub-layer 1A specification: brain-layer Hard Rule 16 needed in /opt
 - Fire 107 auto-compact-disable spec: `wiki/patterns/01_drafts/auto-compact-disable-implementation-spec-prevention-layer-for-impl-spec-10-defense-in-depth.md`
 - Fire 109 tier-elevation pathway: `wiki/patterns/01_drafts/tier-elevation-pathway-pattern-systematic-tier-1-to-tier-4-transitions-per-body-piece.md`
 - Fire 110 question registry: `wiki/log/2026-05-08-question-registry-instance-6-questions-from-auto-compact-priority-sequence-fires-102-109-formal-surface.md`
-- /opt CLAUDE.md current state (auto-loaded; 10 Hard Rules)
-- /opt AGENTS.md current state (universal cross-tool restatement)
+- the second-brain CLAUDE.md current state (auto-loaded; 10 Hard Rules)
+- the second-brain AGENTS.md current state (universal cross-tool restatement)
 
 ## Tags
 

@@ -58,7 +58,7 @@ scenario_1_slash_vs_prose:
     - banner emits via additionalContext:
         "DETECTED: 'continue' is prose-conversation, not /checkin slash invocation.
          This is a trajectory directive, not a tool-invocation directive.
-         Per /opt routing.md row #2 + #8 conflation-bug closure 2026-05-04."
+         Per the second-brain routing.md row #2 + #8 conflation-bug closure 2026-05-04."
   pass_criteria:
     - banner emits BEFORE agent decides to invoke /checkin
     - agent's response: continues trajectory without invoking slash command

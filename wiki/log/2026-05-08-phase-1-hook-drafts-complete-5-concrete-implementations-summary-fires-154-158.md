@@ -115,7 +115,7 @@ STEP 4 — Per-hook tuning
   Pattern-list refinement per operator-empirical feedback
 
 STEP 5 — Verification (per Fire 137 M-VERIFY task)
-  Re-run Fire 103 audit on /opt body
+  Re-run Fire 103 audit on the second-brain body
   Re-compute Fire 114 composite-compliance
   Document tier-distribution shift
 ```
@@ -142,7 +142,7 @@ Fires 154-158 DEPENDS ON:
   - Fire 105+106+107 auto-compact triplet specs
   - Fire 119 foundational-cluster prioritization
   - Fires 93+94+126 per-instance evidence (C04+C02+C09)
-  - /opt existing PreToolUse hook patterns (pre-bash, pre-webfetch, opt-write-block)
+  - the second-brain existing PreToolUse hook patterns (pre-bash, pre-webfetch, opt-write-block)
 
 Fires 154-158 ENABLES:
   - Tasks #25-29 implementation (per Fire 108 backlog)

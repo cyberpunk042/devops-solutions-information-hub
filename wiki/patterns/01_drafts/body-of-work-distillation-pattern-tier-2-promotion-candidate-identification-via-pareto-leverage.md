@@ -72,9 +72,9 @@ CRITERION C: Empirical evidence richness (0-3)
   3 = evidence rich (5+ instances)
 
 CRITERION D: Cross-project applicability (0-3)
-  0 = /opt-only; no sister-project parallel
-  1 = /opt + 1 sister-project
-  2 = /opt + 2-3 sister-projects
+  0 = second-brain-only; no sister-project parallel
+  1 = the second-brain + 1 sister-project
+  2 = the second-brain + 2-3 sister-projects
   3 = ecosystem-wide (5 sister-projects)
 
 CRITERION E: Stage of maturity (0-3)
@@ -212,7 +212,7 @@ Apply this body-of-work distillation pattern when:
 
 ## Instances
 
-**Instance 1: This /opt body at 123 pieces (Fire 125 application)**
+**Instance 1: This the second-brain body at 123 pieces (Fire 125 application)**
 - Distillation completed: 5 PRIORITY + 14 SECONDARY candidates identified
 - Phase 1+2 review effort: 124-340h tier-elevation
 - Forward-anchored: post-Phase-1 re-audit + Phase 2 launch
@@ -277,8 +277,8 @@ required_gates:
 ```
 Q-FIRE-125-1: Endorse 6-criterion distillation methodology?
   Argument for: data-driven; aligns with Fire 88 Pareto + classical 80/20
-  Argument against: criteria may be too /opt-specific
-  Recommended: endorse for /opt; per-project re-articulation if cross-project varies
+  Argument against: criteria may be too second-brain-specific
+  Recommended: endorse for the second-brain; per-project re-articulation if cross-project varies
 
 Q-FIRE-125-2: Pareto-priority 5 candidates accepted?
   P1-P4 + Fire 65 + Fire 103 + Fire 109 + Fires 93+94

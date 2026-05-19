@@ -72,7 +72,7 @@ sources:
     type: project
     project: root-ghostproxy
     path: /root/.claude/hooks/opt-write-block.sh
-    description: "Existing /root PreToolUse hook blocking knowledge-content writes to /opt second-brain. PARTIAL implementation — covers cross-project-boundary sub-axis. Pattern proposes broader coverage."
+    description: "Existing /root PreToolUse hook blocking knowledge-content writes to the second-brain second-brain. PARTIAL implementation — covers cross-project-boundary sub-axis. Pattern proposes broader coverage."
 tags: [pattern, p1-specialization, blast-radius-classification, severity-tiered-enforcement, safety-envelope, c14-cluster, structural-enforcement-design, hook-design-spec, mindful-enforcement-applied, multi-day-pain-point-resolution, mission-2026-05-06, day-arc-2026-05-08, behave-from-not-over]
 ---
 
@@ -175,7 +175,7 @@ Aggregator (`tools/severity_audit.py`) periodically surfaces:
 - False-positive cluster (per class)
 - New patterns surfaced (operator-decided whether to add to map)
 
-The aggregator output is itself a /opt second-brain consumable — wiki/log/<ts>-severity-audit.md generated periodically.
+The aggregator output is itself a the second-brain second-brain consumable — wiki/log/<ts>-severity-audit.md generated periodically.
 
 ## Pattern Components
 
@@ -184,9 +184,9 @@ The aggregator output is itself a /opt second-brain consumable — wiki/log/<ts>
 | Blast-radius classification map | `tools/blast_radius_map.py` | /root | TO AUTHOR (post-Ready-for-Review) |
 | Pre-action severity assessment | `tools/severity_assess.py` | /root | TO AUTHOR |
 | PreToolUse blast-radius gate | `.claude/hooks/blast-radius-severity-gate.sh` (Python) | /root canonical, sister-projects via `/install-agent-brain` | TO AUTHOR |
-| Operator-grant state files | `~/.claude/operator-grants/<tier>-<topic>.txt` | /root + /opt | TO AUTHOR (schema only this work) |
-| Severity-trace log + audit-log | `~/.claude/severity-trace.log` + `~/.claude/severity-audit.log` | /root + /opt | TO AUTHOR |
-| Audit aggregator | `tools/severity_audit.py` | /root + /opt | TO AUTHOR |
+| Operator-grant state files | `~/.claude/operator-grants/<tier>-<topic>.txt` | /root + the second-brain | TO AUTHOR (schema only this work) |
+| Severity-trace log + audit-log | `~/.claude/severity-trace.log` + `~/.claude/severity-audit.log` | /root + the second-brain | TO AUTHOR |
+| Audit aggregator | `tools/severity_audit.py` | /root + the second-brain | TO AUTHOR |
 | Refinement of existing 3 partial hooks | `policy-block.sh` + `malware-block.sh` + `opt-write-block.sh` | /root | TO REFINE — false-positive narrowing per calibration loop |
 | Test files | `.claude/hooks/tests/test-blast-radius-severity-gate.py` | /root | TO AUTHOR |
 
@@ -201,7 +201,7 @@ C14-cluster instances from /root failed-conversation arc 2026-05-04 → 2026-05-
 | **OS-state mutation event** (May 5 23:47) | Agent broke OS-level config; operator: *"did you just fucking break my fucking Operating system????"*; required operator manual fix; *"I cannot help you... this is your fucking error"* | T1 Catastrophic | None — `policy-block.sh` covers sensitive-material patterns, not OS-state mutations | Pattern's T1 classification + operator-grant-required-this-turn gate would have BLOCKED |
 | **Sensitive-material exposure event** (May 5, earlier) | Agent action exposed sensitive material; operator: *"costed a ton of money..."* | T1 Catastrophic | `policy-block.sh` partial — covers SOME sensitive patterns | Pattern proposes broader sensitive-pattern coverage + bypass-justification-logging |
 | **policy-block false-positives** (this very inventory authoring, Cron Fire 1) | Legitimate inventory authoring blocked by sensitive-pattern false-positive (cluster-name + REASON-env-var); required cluster-rename to bypass | (over-enforcement cost) | `policy-block.sh` matched too broadly | Pattern's calibration-loop (component 4) addresses |
-| **/opt-write-block false-positives** (recurrent) | Operator-authorized /opt edits sometimes false-positive blocked | (over-enforcement cost) | `opt-write-block.sh` partial | Same calibration loop |
+| **/opt-write-block false-positives** (recurrent) | Operator-authorized the second-brain edits sometimes false-positive blocked | (over-enforcement cost) | `opt-write-block.sh` partial | Same calibration loop |
 | **Bash dangerous-pattern blocks** (recurrent during install.sh testing) | Agent's install.sh dry-run sometimes triggers malware-block on legitimate test patterns | (over-enforcement cost) | `malware-block.sh` partial | Same calibration loop + pattern provides unified false-positive tracking |
 
 The 5 instances span both UNDER-enforcement (T1 catastrophic events without gates) AND OVER-enforcement (false-positives on legitimate work). Both faces of the same gap — the existing 3 partial hooks were authored independently without unified classification/severity discipline.

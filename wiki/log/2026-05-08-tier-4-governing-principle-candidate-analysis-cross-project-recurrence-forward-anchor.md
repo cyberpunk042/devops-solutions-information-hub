@@ -35,11 +35,11 @@ tags: [tier-4-candidates, governing-principles, cross-project-convergence, forwa
 
 ## Summary
 
-Per piece #55 composability map Layer 4 (governing principles, currently P1-P4 at /opt) + piece #69 multi-project ecosystem index (cross-project-recurrence detection): post-tier-3 multi-project propagation may surface NEW governing-principle candidates (P5+). This log identifies 4 explicit candidates from the 84-piece body of work + analyzes which axes have highest cross-project-convergence probability + when each could promote tier-3 → tier-4. Per substitution-pattern Insight 5b: tier-4 candidates documented WITHOUT cross-project empirical evidence are aspirational — this log forward-anchors the empirical-evidence requirement for each candidate.
+Per piece #55 composability map Layer 4 (governing principles, currently P1-P4 at the second-brain) + piece #69 multi-project ecosystem index (cross-project-recurrence detection): post-tier-3 multi-project propagation may surface NEW governing-principle candidates (P5+). This log identifies 4 explicit candidates from the 84-piece body of work + analyzes which axes have highest cross-project-convergence probability + when each could promote tier-3 → tier-4. Per substitution-pattern Insight 5b: tier-4 candidates documented WITHOUT cross-project empirical evidence are aspirational — this log forward-anchors the empirical-evidence requirement for each candidate.
 
-## The 4 P-tier governing principles (currently /opt tier-4)
+## The 4 P-tier governing principles (currently the second-brain tier-4)
 
-Per existing /opt:
+Per existing the second-brain:
 - **P1 — Infrastructure > Instructions**: prose ~25% / hooks ~100% (OpenArms v8→v10 evidence)
 - **P2 — Structured Context > Content**: tables/MUST-lists/YAML > prose
 - **P3 — Goldilocks**: process scales with identity × phase × scale × trust tier

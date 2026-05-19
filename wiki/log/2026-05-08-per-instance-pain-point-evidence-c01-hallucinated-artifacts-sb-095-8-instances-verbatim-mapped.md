@@ -74,7 +74,7 @@ Solution: pipeline post lint catch
 ```
 Date: post-Fires 99/101 (question-registry + blocker-impediment-registry)
 What happened: pieces reference /questions add or /blockers show as if available
-Reality: slash commands NOT implemented in /opt
+Reality: slash commands NOT implemented in the second-brain
 Severity: MEDIUM (caught by Fire 103 4-tier audit; pieces flagged Tier 1)
 Solution: Fire 103 audit method + agent-DRAFT framing per piece
 ```
@@ -125,7 +125,7 @@ Date: Fire 127 (this conversation)
 What happened: Fire 127 declared C09 added to foundational set
 Reality: operator-empirical confirmation pending Q-FIRE-127-1
 Severity: LOW (explicitly flagged as operator-pending)
-Solution: standardize-extension-proposal pattern per /opt convention
+Solution: standardize-extension-proposal pattern per the second-brain convention
 ```
 
 ## Distribution

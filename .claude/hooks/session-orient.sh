@@ -9,7 +9,7 @@
 #         (per wiki/lessons/03_validated/context-engineering/broken-and-idle-*).
 #         A structured imperative + deterministic /orient command pair fixes this.
 # Remediation: directive injected via additionalContext directs agent to /orient,
-#              which loads /opt-specific intel deterministically.
+#              which loads project-specific intel deterministically.
 # Adopted: 2026-05-05 per operator directive on opt-in feature transcension from
 #          root-ghostproxy. See wiki/patterns/03_validated/architecture/
 #          session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report.md.
@@ -21,9 +21,9 @@ DIRECTIVE = """═════════════════════�
 RESEARCH WIKI / SECOND BRAIN — NEW SESSION DETECTED
 ═══════════════════════════════════════════════════════════════════════════
 
-You are inside the second brain (the research wiki at
-/opt/devops-solutions-information-hub) — the central intelligence hub for the
-5-project ecosystem. Behave FROM the project, not OVER it.
+You are inside the second brain (the research wiki, this project's working
+directory) — the central intelligence hub for the 5-project ecosystem.
+Behave FROM the project, not OVER it.
 
 THIS IS A NEW CONVERSATION. You have NO MEMORY of any prior session.
 Each session starts cold. Therefore:

@@ -128,7 +128,7 @@ Building such a tool is appropriate when the format has been used manually for s
 
 ## Sister-project applicability
 
-Universal. Every project where an agent surfaces operator-pending decisions has this discipline. The package format is content-agnostic — works for /root's M-numbered modules + decisions, /opt's methodology-engine + ingestion-pending decisions, OpenArms harness decisions, etc.
+Universal. Every project where an agent surfaces operator-pending decisions has this discipline. The package format is content-agnostic — works for /root's M-numbered modules + decisions, the second-brain's methodology-engine + ingestion-pending decisions, OpenArms harness decisions, etc.
 
 ## Relationships
 

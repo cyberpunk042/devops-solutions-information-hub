@@ -112,7 +112,7 @@ This verification is the structural mechanism for "should not be possible" — t
 
 Universal. Every agent that responds to operator-flagged bugs has correction-shape risk. The verification step (calibrate vs swing) applies universally:
 - root-ghostproxy (first empirical case)
-- /opt second-brain (this very session has demonstrated swing patterns; operator's correction was meta-naming the pattern)
+- the second-brain second-brain (this very session has demonstrated swing patterns; operator's correction was meta-naming the pattern)
 - OpenArms, OpenFleet, AICP, devops-control-plane (universal)
 
 ## Relationships

@@ -144,7 +144,7 @@ The auto-update closes the structural-but-not-surfaced failure mode (per the rel
 | Tracker auto-update logic | `tools/sb_tracker.py` (new module) — append + status-transition + evidence-column | /root | TO AUTHOR |
 | Mode-enforcement banner SB-surfacing | extension to `.claude/hooks/mode-enforcement.sh` — surface auto-picked SB in per-prompt banner | /root | TO EXTEND |
 | Test files | `.claude/hooks/tests/test-sb-priority-shift-gate.py` + `tests/test-sb-tracker-auto-update.py` | /root | TO AUTHOR |
-| Audit aggregator | `tools/sb_iteration_audit.py` (per-session SB-progress metric) | /root + /opt | TO AUTHOR |
+| Audit aggregator | `tools/sb_iteration_audit.py` (per-session SB-progress metric) | /root + the second-brain | TO AUTHOR |
 
 All 7 components are forward-anchors — design specified here; authoring + tests-passing is the promotion-to-02_synthesized gate.
 

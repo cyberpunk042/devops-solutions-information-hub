@@ -8,8 +8,8 @@ Run the deterministic intel-gathering chain for the second brain.
 ## Why this command exists
 
 Auto-loaded brain text (CLAUDE.md, AGENTS.md) is passive context. A fresh
-or post-compaction session entering /opt with text-only access defaults to
-generic-greeter behavior — the broken-and-idle failure mode (see
+or post-compaction session entering the project with text-only access defaults
+to generic-greeter behavior — the broken-and-idle failure mode (see
 [lesson](../../wiki/lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading.md)).
 
 This command is the deterministic intel-gathering chain that converts a cold
@@ -25,8 +25,8 @@ end into the ORIENT REPORT format.
 ### 1. Verify brain layer health
 
 ```bash
-ls /opt/devops-solutions-information-hub/CLAUDE.md /opt/devops-solutions-information-hub/AGENTS.md /opt/devops-solutions-information-hub/CONTEXT.md
-ls /opt/devops-solutions-information-hub/.claude/rules/
+ls CLAUDE.md AGENTS.md CONTEXT.md
+ls .claude/rules/
 ```
 
 Expected: CLAUDE.md, AGENTS.md, CONTEXT.md present; rules/ has 7+ files
@@ -36,7 +36,7 @@ ingestion.md, hook-architecture.md). If any missing — flag in report.
 ### 2. Read CONTEXT.md (active milestones / identity)
 
 ```
-Read /opt/devops-solutions-information-hub/CONTEXT.md
+Read CONTEXT.md
 ```
 
 Surface: active milestones, current epics, identity profile (type / domain /
@@ -45,7 +45,7 @@ phase / scale / PM level / trust tier).
 ### 3. Read recent operator directives (raw/notes/)
 
 ```bash
-ls -t /opt/devops-solutions-information-hub/raw/notes/2026-*.md | head -7
+ls -t raw/notes/2026-*.md | head -7
 ```
 
 Read the 5-7 most recent. These are sacrosanct primary sources. Surface in
@@ -55,7 +55,7 @@ report: file name + 1-line summary + verbatim quote of the headline directive
 ### 4. Read recent session work (wiki/log/)
 
 ```bash
-ls -t /opt/devops-solutions-information-hub/wiki/log/2026-*.md | head -3
+ls -t wiki/log/2026-*.md | head -3
 ```
 
 Read the 3 most recent. Surface: what was being worked on, what landed, any
@@ -89,15 +89,15 @@ Read full output. Surface: super-model adoption tier + identified gaps.
 ### 8. Maturity-tier flow signals
 
 ```bash
-ls /opt/devops-solutions-information-hub/wiki/lessons/01_drafts/ | wc -l
-ls /opt/devops-solutions-information-hub/wiki/lessons/02_synthesized/ | wc -l
-ls /opt/devops-solutions-information-hub/wiki/lessons/02_synthesized/contributed/ 2>/dev/null | wc -l
-find /opt/devops-solutions-information-hub/wiki/lessons/03_validated/ -name "*.md" -type f | wc -l
-ls /opt/devops-solutions-information-hub/wiki/lessons/04_principles/hypothesis/ 2>/dev/null | wc -l
-ls /opt/devops-solutions-information-hub/wiki/lessons/04_principles/validated/ 2>/dev/null | wc -l
-ls /opt/devops-solutions-information-hub/wiki/patterns/01_drafts/ | wc -l
-ls /opt/devops-solutions-information-hub/wiki/patterns/02_synthesized/ | wc -l
-find /opt/devops-solutions-information-hub/wiki/patterns/03_validated/ -name "*.md" -type f | wc -l
+ls wiki/lessons/01_drafts/ | wc -l
+ls wiki/lessons/02_synthesized/ | wc -l
+ls wiki/lessons/02_synthesized/contributed/ 2>/dev/null | wc -l
+find wiki/lessons/03_validated/ -name "*.md" -type f | wc -l
+ls wiki/lessons/04_principles/hypothesis/ 2>/dev/null | wc -l
+ls wiki/lessons/04_principles/validated/ 2>/dev/null | wc -l
+ls wiki/patterns/01_drafts/ | wc -l
+ls wiki/patterns/02_synthesized/ | wc -l
+find wiki/patterns/03_validated/ -name "*.md" -type f | wc -l
 ```
 
 Surface counts in report. Flag tiers that are growing without downstream flow
@@ -106,9 +106,9 @@ Surface counts in report. Flag tiers that are growing without downstream flow
 ### 9. Pending ingestions
 
 ```bash
-ls /opt/devops-solutions-information-hub/raw/transcripts/ 2>/dev/null | head -10
-ls /opt/devops-solutions-information-hub/raw/articles/ 2>/dev/null | head -10
-ls /opt/devops-solutions-information-hub/raw/papers/ 2>/dev/null | head -10
+ls raw/transcripts/ 2>/dev/null | head -10
+ls raw/articles/ 2>/dev/null | head -10
+ls raw/papers/ 2>/dev/null | head -10
 ```
 
 Compare against synthesis pages (`wiki/sources/`) to identify raws without
@@ -117,7 +117,7 @@ synthesis. Surface count of un-synthesized raws.
 ### 10. Sister-project pulse
 
 ```bash
-.venv/bin/python -c "import yaml; d = yaml.safe_load(open('/opt/devops-solutions-information-hub/wiki/config/sister-projects.yaml')); print(yaml.dump(d, default_flow_style=False))" 2>/dev/null || ls /opt/devops-solutions-information-hub/wiki/config/sister-projects.yaml
+.venv/bin/python -c "import yaml; d = yaml.safe_load(open('wiki/config/sister-projects.yaml')); print(yaml.dump(d, default_flow_style=False))" 2>/dev/null || ls wiki/config/sister-projects.yaml
 ```
 
 Surface: sister projects registered, last-touched / status if available.
@@ -125,16 +125,16 @@ Surface: sister projects registered, last-touched / status if available.
 ### 11. Mode detection (forward-compat for when modes adopted)
 
 ```bash
-cat /opt/devops-solutions-information-hub/.claude/active-mode 2>/dev/null || echo "(no mode active)"
+cat .claude/active-mode 2>/dev/null || echo "(no mode active)"
 ```
 
-If a mode is active, the report should reflect it. Currently /opt has no
-modes — expect "(no mode active)" until adopted.
+If a mode is active, the report should reflect it. Currently this project has
+no modes — expect "(no mode active)" until adopted.
 
 ### 12. Git state
 
 ```bash
-cd /opt/devops-solutions-information-hub && git log --oneline -5 && echo "---" && git status --short
+git log --oneline -5 && echo "---" && git status --short
 ```
 
 Surface: 5 most recent commits + uncommitted changes.
@@ -215,7 +215,7 @@ Brain loaded. Ready for operator direction.
 
 ## Composition with /loop /cycle (forward-compat)
 
-When modes + /cycle are adopted for /opt, `/cycle` will run a similar but
+When modes + /cycle are adopted for this project, `/cycle` will run a similar but
 narrower chain per fire (mode-specific). `/orient` remains the canonical
 cold-start + post-compact intel load. Different lifecycle events; same
 determinism-ladder approach.

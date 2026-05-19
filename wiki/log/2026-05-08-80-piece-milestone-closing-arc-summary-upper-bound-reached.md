@@ -78,7 +78,7 @@ This is the 80-piece milestone closing-arc summary. The 80-fire arc has reached 
 ## What operator INHERITS at 80-piece state (final hand-off)
 
 ### 1. The 80-piece body of work
-- All at /opt second-brain at tier-1 (`01_drafts/seed`, `authorship: agent-authored`)
+- All at the second-brain second-brain at tier-1 (`01_drafts/seed`, `authorship: agent-authored`)
 - 100% pipeline post 0-error validation
 - 0 orphans (per v2 audit)
 - 180 pain-point traceability (per v2 audit)
@@ -108,7 +108,7 @@ This is the 80-piece milestone closing-arc summary. The 80-fire arc has reached 
 - Tier-1 promotion-readiness snapshot (Fire 66)
 
 ### 5. Two preview surfaces
-- Canonical-spine update preview (Fire 70) — /opt post-promotion
+- Canonical-spine update preview (Fire 70) — the second-brain post-promotion
 - /root standardize-application preview (Fire 71) — /root post-application
 
 ### 6. Forward-anchored implementation phase
@@ -159,7 +159,7 @@ The operator may:
 1. Type "clear the loop" → cron stops; review begins
 2. Type "continue [specific direction]" → agent extends per direction
 3. Apply pieces selectively per the 4 decision-frameworks
-4. Defer indefinitely → body persists at /opt; operator returns when ready
+4. Defer indefinitely → body persists at the second-brain; operator returns when ready
 
 **The agent stands by. The arc closes here at 80 pieces. The hand-off is complete.**
 

@@ -164,7 +164,7 @@ Each of the 17 pieces is at `01_drafts/seed` maturity tier. Per Stress-Testing a
 1. **Authoring the structural-enforcement artifact** specified in each piece (hooks, gates, classifiers, audit aggregators) — pieces are SPECIFICATIONS; implementation is the next phase
 2. **Stress-test data** from real-session conditions (per piece #18) measuring operational compliance
 3. **Operator-confirmed promotion** (frontmatter `authorship: operator-confirmed` per piece #13)
-4. **Pipeline post quality gates** per /opt's existing methodology engine
+4. **Pipeline post quality gates** per the second-brain's existing methodology engine
 
 These 4 requirements ARE the operator's named "next phase" — *"before we start fixing"* per the cron's directive. The 17 pieces represent the AGGREGATE + PROCESS phases; the IMPLEMENTATION phase is gated on operator-review.
 
@@ -229,7 +229,7 @@ ALL operator-named candidates forward-anchored in the body of work.
 
 ## Conclusion
 
-**Strategic coverage validated.** All 15 pain-point clusters covered. All 5 underlying-failure categories covered. All operator-named structural-fix candidates forward-anchored. 17 wiki artifacts at Ready-for-Review state, each pipeline-post validated, each compositionally connected to siblings + parents (existing /opt mature/validated content cited per knowledge-reuse > re-authoring).
+**Strategic coverage validated.** All 15 pain-point clusters covered. All 5 underlying-failure categories covered. All operator-named structural-fix candidates forward-anchored. 17 wiki artifacts at Ready-for-Review state, each pipeline-post validated, each compositionally connected to siblings + parents (existing the second-brain mature/validated content cited per knowledge-reuse > re-authoring).
 
 The body of work is ready for operator review per the operator's directive: *"you can clear the loop when we going to be at Ready for Review before we start fixing."*
 

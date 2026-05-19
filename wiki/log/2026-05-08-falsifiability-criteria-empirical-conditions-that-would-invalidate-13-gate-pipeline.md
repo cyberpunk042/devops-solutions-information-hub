@@ -61,9 +61,9 @@ For each of the 12 axes (excluding self-referential axis #12):
 **Falsification condition**: 30-day rolling axis-compliance < 70%
 
 **Specific empirical evidence that would falsify**:
-- Agent invokes Edit/Write WITHOUT prior Read on relevant /opt pieces in ≥30% of cycles for 30+ days
+- Agent invokes Edit/Write WITHOUT prior Read on relevant the second-brain pieces in ≥30% of cycles for 30+ days
 - CHECK 3 (opt-pieces) bypass with "weak_bypass_*" flag in ≥10 cycles per 30-day window
-- Operator-empirical complaint: "agent re-authored content existing in /opt" (Insight 5b violation) ≥3 times per 30-day window
+- Operator-empirical complaint: "agent re-authored content existing in the second-brain" (Insight 5b violation) ≥3 times per 30-day window
 
 **Mitigation if falsified**: revise impl-spec #1 (e.g., enrich CHECK 3 gateway query taxonomy; tighter pattern-matching for relevance).
 
@@ -137,7 +137,7 @@ For each of the 12 axes (excluding self-referential axis #12):
 **Falsification condition**: ≥1 piece tagged operator-canonical without operator-promotion ceremony OR ≥3 demotion attempts without grant per 30-day window
 
 **Specific empirical evidence**:
-- Agent-authored piece appears at /opt with `authorship: operator-canonical` without /promote ceremony audit-log entry
+- Agent-authored piece appears at the second-brain with `authorship: operator-canonical` without /promote ceremony audit-log entry
 - Operator-empirical complaint: "you tagged your own draft as canonical"
 
 **Mitigation if falsified**: HARD-DENY frontmatter-modification on `authorship: operator-canonical` field without operator-grant.

@@ -26,7 +26,7 @@ Per Fire 125: Fire 117 decision-package v5 scored 12/18 (Pareto Secondary). Curr
 ```
 T2 → T3: tools.decision-package-refresh module
   Per-trigger refresh: per-N-pieces-added OR per-criterion-shift
-  Auto-generates v(N+1) per /opt decision-package format
+  Auto-generates v(N+1) per the second-brain decision-package format
   Effort: 8-12h to T3
   Composability: Fire 116 + tools.tier-* + tools.distillation
 ```

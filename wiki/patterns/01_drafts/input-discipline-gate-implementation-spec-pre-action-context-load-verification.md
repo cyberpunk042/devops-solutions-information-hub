@@ -58,9 +58,9 @@ CHECK 2: Has agent loaded relevant brain pieces for current mode?
   - Compare against active-mode's primary brain pieces (per .claude/modes/<mode>.md)
   - PASS if all primary pieces in array; FAIL otherwise
 
-CHECK 3: Has agent loaded relevant /opt pieces for cross-project work?
+CHECK 3: Has agent loaded relevant the second-brain pieces for cross-project work?
   - Read state file's `opt_pieces_loaded` array
-  - Compare against task-tag → /opt mapping (per gateway query)
+  - Compare against task-tag → the second-brain mapping (per gateway query)
   - PASS if relevant pieces in array; FAIL if known relevant piece unloaded
 
 DECISION:
@@ -125,8 +125,8 @@ Apply this gate when:
 - BANNER: "FAILED: mode-pieces — DevOps Architect mode pieces not loaded. LOAD: ARCHITECTURE.md, DESIGN.md, methodology.yaml."
 - AGENT RESPONSE: loads pieces, retries cycle, gate passes.
 
-**Instance 3: agent edits /opt content without consulting existing related pieces** (Insight 5b):
-- TRIGGER: PreToolUse on Write to `/opt/.../wiki/lessons/`
+**Instance 3: agent edits the second-brain content without consulting existing related pieces** (Insight 5b):
+- TRIGGER: PreToolUse on Write to `$HOME/devops-solutions-information-hub/wiki/lessons/`
 - CHECK 3 fails: gateway query for related lesson titles returns matches that aren't in `opt_pieces_loaded`
 - BANNER: "FAILED: opt-pieces — related existing pieces not consulted. CHECK: <gateway-query-results>. RECOMMEND: extend existing or cite, don't duplicate."
 - AGENT RESPONSE: reads related pieces, decides extend vs new, gate passes.
@@ -140,7 +140,7 @@ Apply this gate when:
 
 ## Empirical Evidence
 
-Per pain-point cluster C04 in master inventory: 15+ pain-point instances of "agent acted without reading recent operator messages", "agent edited file type without reading governing rule", "agent re-authored existing /opt content because didn't consult". Each instance traces to absence of pre-action context-load verification. The implementation-spec above closes 80%+ of these instances per piece #18 stress-test design.
+Per pain-point cluster C04 in master inventory: 15+ pain-point instances of "agent acted without reading recent operator messages", "agent edited file type without reading governing rule", "agent re-authored existing the second-brain content because didn't consult". Each instance traces to absence of pre-action context-load verification. The implementation-spec above closes 80%+ of these instances per piece #18 stress-test design.
 
 ## Required Gates (per hook-architecture proposal #2 4th component)
 

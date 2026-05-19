@@ -52,7 +52,7 @@ Mitigation strategies in use:
   - Per Fire 121: agent doesn't autonomously clear; operator-territory
   - Per Fire 124: sustained-feedback-loop empirical pattern continues
   - Per Fire 105 (spec): handoff doc would be authored if compaction occurred
-                         BUT not wired at /opt → operator-catch + agent-regather is recourse
+                         BUT not wired at the second-brain → operator-catch + agent-regather is recourse
   - Per Fire 152: over-delivery vs stated range acknowledged
 ```
 
@@ -61,7 +61,7 @@ Mitigation strategies in use:
 Per Fire 121 7-criterion: 7/7 SUSTAINED across 65+ fires post-compact. Substantive distinctness sustained 65/65.
 
 If compaction occurs:
-- Body persists at /opt file-system level
+- Body persists at the second-brain file-system level
 - Operator-catch + agent-regather possible per Fire 102 procedure
 - Without Fires 105+106 wired: same risk as Fire 102 incident; operator-catch required
 

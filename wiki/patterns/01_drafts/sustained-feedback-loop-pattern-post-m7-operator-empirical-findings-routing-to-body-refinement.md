@@ -78,7 +78,7 @@ Each finding routes to specific body piece(s) for refinement:
 | Source 3 (operator-verbatim) | "noisy gate" | impl-spec + bypass-discipline | Banner format calibration |
 | Source 3 (operator-verbatim) | "missing axis" | New cluster piece + impl-spec + stress-test | Body extension |
 | Source 3 (operator-verbatim) | "tier-2 wrong" | Demotion ceremony + revisit operator-review checklist | Tier reversal |
-| Source 4 (sister-project) | New lesson contribution | New piece at /opt at tier-1 (via /opt agent processes contribution) | Body extension via Channel #1 |
+| Source 4 (sister-project) | New lesson contribution | New piece at the second-brain at tier-1 (via the second-brain agent processes contribution) | Body extension via Channel #1 |
 | Source 4 (sister-project) | Adaptation divergence | Multi-project ecosystem index | Surface divergence; operator decides canonical refinement |
 
 ### Refinement-triggering thresholds (per impl-spec #11 + #12)
@@ -111,7 +111,7 @@ When refinement triggers, agent emits one of:
 
 ```
 FORM 1 — IMPL-SPEC REVISION (most common)
-  Agent edits relevant impl-spec piece (within /opt)
+  Agent edits relevant impl-spec piece (within the second-brain)
   Frontmatter: still tier-2 (operator-confirmed) BUT new revision-flag
   Audit log: ~/.claude/hooks/impl-spec-revisions.log
   Operator-review: re-confirm tier-2 status post-revision
@@ -133,8 +133,8 @@ FORM 4 — TIER-DEMOTION (rare; falsification path)
   Operator-review: revision OR archive
 
 FORM 5 — CROSS-PROJECT-PROPAGATION FEEDBACK
-  Sister-project finding (Source 4) lands at /opt/.../00_inbox/contribute/
-  /opt agent processes; tier 0 → tier 1
+  Sister-project finding (Source 4) lands at $HOME/devops-solutions-information-hub/00_inbox/contribute/
+  the second-brain agent processes; tier 0 → tier 1
   Operator-review: tier-2 promotion OR revise OR reject
 ```
 
@@ -197,8 +197,8 @@ Apply this sustained-feedback-loop when:
 
 **Instance 3: sister-project gateway-contribute (Source 4)**:
 - OpenArms agent contributes lesson "fleet-coordination state-divergence" via wiki_gateway_contribute
-- Lands at /opt/.../00_inbox/contribute/
-- /opt agent processes: validates schema; pipeline post; assigns tier 0 → tier 1
+- Lands at $HOME/devops-solutions-information-hub/00_inbox/contribute/
+- the second-brain agent processes: validates schema; pipeline post; assigns tier 0 → tier 1
 - Operator-review: confirms tier-2 promotion
 - Routes to: new piece at body
 - Action: FORM 3 (new piece) + multi-project ecosystem index update

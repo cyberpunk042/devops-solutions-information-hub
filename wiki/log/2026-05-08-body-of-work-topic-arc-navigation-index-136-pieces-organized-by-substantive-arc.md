@@ -32,7 +32,7 @@ Per /loop directive *"if one piece is ready for review you can move to the next"
 ## Major substantive arcs (organized by phase)
 
 ### Arc 1 — Foundation (Fires 1-39)
-Original 39-piece body establishing /opt's body-of-work methodology, governance principles, and pain-point inventory framework.
+Original 39-piece body establishing the second-brain's body-of-work methodology, governance principles, and pain-point inventory framework.
 - 4 governing principles (P1-P4)
 - 13-gate pipeline composition architecture
 - 11 stress-test scenarios

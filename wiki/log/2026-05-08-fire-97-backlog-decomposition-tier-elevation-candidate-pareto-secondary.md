@@ -30,7 +30,7 @@ Per Fire 125: Fire 97 backlog-decomposition (Epic+Module+Task) scored ~12/18 (Pa
 ```
 Title: backlog-decomposition-proposal-runtime-control-diagnostic-discipline-epic-modules-tasks
 Type: log/note
-Current tier: T2 (methodology operational; Fire 108 instance applied; backlog pages NOT yet at /opt/wiki/backlog/)
+Current tier: T2 (methodology operational; Fire 108 instance applied; backlog pages NOT yet at wiki/backlog/)
 Pareto score: ~12/18
 Cross-project applicability: HIGH
 ```
@@ -39,18 +39,18 @@ Cross-project applicability: HIGH
 
 ```
 T2 → T3: actualize backlog pages
-  Author Epic + Module + Task pages at /opt/wiki/backlog/
+  Author Epic + Module + Task pages at wiki/backlog/
   Per Fire 108: E-AUTO-COMPACT-DEFENSE Epic + 4 Modules + 15 Tasks
   Per Fire 137: E-FOUNDATIONAL-TRIPLET-ENFORCEMENT Epic + 4 Modules + 16 Tasks
   Effort: 6-10h to T3 (per-page authoring; ~30-40 pages)
-  Composability: composes with /opt existing backlog format
+  Composability: composes with the second-brain existing backlog format
 ```
 
 ## Composition
 
 - Fire 108 auto-compact backlog decomposition (instance application)
 - Fire 137 foundational-triplet decomposition (instance application)
-- /opt wiki/backlog/ format
+- the second-brain wiki/backlog/ format
 
 ## Operator-pending
 

@@ -28,11 +28,11 @@ sources:
   - id: opt-pre-bash-hook-pattern-source
     type: file
     file: .claude/hooks/pre-bash.sh
-    description: "Existing /opt PreToolUse blocker pattern (truncation-pipe block); adapted-from source for this spec's blocker design"
+    description: "Existing the second-brain PreToolUse blocker pattern (truncation-pipe block); adapted-from source for this spec's blocker design"
   - id: opt-pre-webfetch-hook-pattern-source
     type: file
     file: .claude/hooks/pre-webfetch-corpus-check.sh
-    description: "Existing /opt PreToolUse blocker pattern (corpus URL block); adapted-from source for this spec's blocker design"
+    description: "Existing the second-brain PreToolUse blocker pattern (corpus URL block); adapted-from source for this spec's blocker design"
   - id: auto-compact-detection-failure-priority
     type: file
     file: raw/notes/2026-05-08-auto-compact-detection-failure-and-auto-compact-must-be-disabled-priority.md
@@ -61,7 +61,7 @@ After Fire 105 spec: impl-spec #10 reaches Tier 3 (PreCompact hook writes handof
 ```yaml
 event: PreToolUse
 matcher: (any tool except gateway orient + Read on handoff doc + ToolSearch loading + sentinel-removal)
-location: /opt/devops-solutions-information-hub/.claude/hooks/pre-tool-post-compact-block.sh
+location: $HOME/devops-solutions-information-hub/.claude/hooks/pre-tool-post-compact-block.sh
 language: Python (consistent with output-discipline-guard pattern)
 output channel:
   - stdout: structured block-with-reason-and-remediation message
@@ -80,7 +80,7 @@ gating logic:
 ```
 PreCompact hook fires (Fire 105 spec)
   ↓
-Sentinel created: /opt/.claude/post-compact-recovery-required
+Sentinel created: .claude/post-compact-recovery-required
   Content: { "compaction_ts": "<ISO>", "handoff_doc": "<path>", "session_id": "<id>" }
   ↓
 Compaction occurs
@@ -104,7 +104,7 @@ BRANCH 3: Tool is NOT REGATHER_ALLOWLIST + REASON env var set
   Audit: REASON value + tool name + ts logged to .claude/hooks/post-compact-bypass.log
 
 When regather complete (sentinel-removal-allowed-tool runs):
-  Sentinel removed: /opt/.claude/post-compact-recovery-required deleted
+  Sentinel removed: .claude/post-compact-recovery-required deleted
   ↓
 Subsequent PreToolUse calls find no sentinel → exit 0 → normal operation
 ```
@@ -186,7 +186,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", "/opt/devops-solutions-information-hub"))
+PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", "$HOME/devops-solutions-information-hub"))
 SENTINEL_PATH = PROJECT_ROOT / ".claude" / "post-compact-recovery-required"
 AUDIT_LOG = PROJECT_ROOT / ".claude" / "hooks" / "post-compact-bypass.log"
 
@@ -310,7 +310,7 @@ if __name__ == "__main__":
 
 ### Settings.json wiring
 
-Add to `/opt/.claude/settings.json` `hooks.PreToolUse[]`:
+Add to `.claude/settings.json` `hooks.PreToolUse[]`:
 
 ```json
 {
@@ -327,7 +327,7 @@ Add to `/opt/.claude/settings.json` `hooks.PreToolUse[]`:
 
 Important: matcher EXCLUDES `ToolSearch` + `TaskList` + `TaskGet` (always-allowed); the in-hook ALWAYS_ALLOWED_TOOLS check is defense-in-depth.
 
-### Composition with existing /opt PreToolUse hooks
+### Composition with existing the second-brain PreToolUse hooks
 
 | Existing PreToolUse hook | Order in chain | Composition |
 |---|---|---|
@@ -345,7 +345,7 @@ Hook execution order is per matcher-block in settings.json. Multiple matchers ca
 | Auto-detect regather completion (heuristic) | False-positive removes sentinel before recovery actually done | Explicit acknowledgment required (modify sentinel JSON) |
 | No bypass mechanism | Legitimate emergency cases blocked | REASON env var bypass with audit log |
 | Bypass without audit | Bypass becomes routine; defeats enforcement | Audit log captures every bypass |
-| Block-message vague | Agent confused; can't recover | Block-with-reason-and-remediation per /opt hook design pattern |
+| Block-message vague | Agent confused; can't recover | Block-with-reason-and-remediation per the second-brain hook design pattern |
 | No timeout on hook | Hook hang stalls all tool calls | 5s timeout per settings.json |
 
 ### Path-to-Tier-4 verification per Fire 103 audit
@@ -380,7 +380,7 @@ Apply this PreToolUse-blocker spec when:
 
 ## Instances
 
-**Instance 1: This /opt second-brain (Task #27 target)**
+**Instance 1: This the second-brain second-brain (Task #27 target)**
 - Current state: PostCompact wired; PreCompact missing (Fire 105 spec); enforcement missing (this spec)
 - Apply: implement Fire 105 spec → write sentinel; implement this spec → block first non-regather tool call
 - Verify: trigger manual /compact; confirm first tool call blocked unless gateway orient first
@@ -389,7 +389,7 @@ Apply this PreToolUse-blocker spec when:
 **Instance 2: /root root-ghostproxy (sister-project parallel)**
 - Current state: /root has pre-compact.sh + post-compact.sh wired; PreToolUse-blocker not wired
 - Apply: this spec adapts to /root via bidirectional inheritance pattern
-- Operational tooling source-of-truth: $HOME (per /root .claude/rules/self-reference.md); /opt may inherit or vice-versa per pattern direction
+- Operational tooling source-of-truth: $HOME (per /root .claude/rules/self-reference.md); the second-brain may inherit or vice-versa per pattern direction
 
 **Instance 3: Sister projects (forward-anchored)**
 - Per propagation-pattern: post-tier-3 deployment to OpenArms / OpenFleet / AICP / devops-control-plane
@@ -404,7 +404,7 @@ Apply this PreToolUse-blocker spec when:
 
 ## Empirical Evidence
 
-Per Fire 102 worked-example: agent's first post-compact tool call was `pipeline post` (pre-compact pending action) without regather. Operator catch was sole mitigation. Per Fire 103 4-tier audit: this is the canonical Tier 3 → Tier 4 transition pattern (mechanism exists; enforcement layer absent; structural failure under pressure). Per existing /opt PreToolUse hooks (pre-bash.sh + pre-webfetch-corpus-check.sh): the BLOCK + REASON + REMEDIATION + BYPASS pattern is operator-empirical-validated and composable.
+Per Fire 102 worked-example: agent's first post-compact tool call was `pipeline post` (pre-compact pending action) without regather. Operator catch was sole mitigation. Per Fire 103 4-tier audit: this is the canonical Tier 3 → Tier 4 transition pattern (mechanism exists; enforcement layer absent; structural failure under pressure). Per existing the second-brain PreToolUse hooks (pre-bash.sh + pre-webfetch-corpus-check.sh): the BLOCK + REASON + REMEDIATION + BYPASS pattern is operator-empirical-validated and composable.
 
 This spec demonstrates the body's empirical maturity: the auto-compact priority surfaced 2026-05-08 has been:
 1. Registered (raw note + 5 tasks; Fire 104 v4)
@@ -440,7 +440,7 @@ STEP 1: Operator confirms Fire 105 spec design
 STEP 2: Operator confirms Fire 106 spec design  
 STEP 3: Implement Fire 105 hook (pre-compact.sh)
 STEP 4: Implement Fire 106 hook (pre-tool-post-compact-block.sh)
-STEP 5: Wire both in /opt/.claude/settings.json
+STEP 5: Wire both in .claude/settings.json
 STEP 6: Test via manual /compact trigger:
         - Pre-compact hook fires → handoff doc written + sentinel dropped
         - Compaction completes

@@ -32,7 +32,7 @@ sources:
   - id: opt-loop-cron-lifecycle
     type: file
     file: /root/.claude/rules/loop-cron-lifecycle.md
-    description: "/root sister-project rule — autonomous cron-cancellation scenarios L1-L7; this pattern adapts to /opt's body-of-work-cycle context"
+    description: "/root sister-project rule — autonomous cron-cancellation scenarios L1-L7; this pattern adapts to the second-brain's body-of-work-cycle context"
 tags: [loop-clear-criteria, ready-for-review, stop-conditions, re-loop-triggers, day-arc-2026-05-08, multi-day-pain-point-resolution, fire-121]
 ---
 
@@ -40,7 +40,7 @@ tags: [loop-clear-criteria, ready-for-review, stop-conditions, re-loop-triggers,
 
 ## Summary
 
-Per operator's /loop directive (sacrosanct verbatim, repeated): *"you can clear the loop when we going to be at Ready for Review before we start fixing and have a clear plan with clear solution based of the clear root issues identified and our personal knowledge applied."* This Fire 121 pattern operationalizes "Ready for Review" — formalizes 7 stop-condition criteria + decision tree (agent-territory vs operator-territory) + re-loop triggers (when /loop clear → operator-empirical input → /loop resumes). Per /opt work-mode.md: loop-clear is operator-territory by default; agent surfaces ready-for-review state; operator confirms clear. This pattern guides agent's "ready" recognition + operator's "clear" decision via shared criteria. Per Fire 117 v5: ready-for-review state declared at 115 pieces but /loop continued post-declaration (operator-territory choice — pattern documents this normal behavior).
+Per operator's /loop directive (sacrosanct verbatim, repeated): *"you can clear the loop when we going to be at Ready for Review before we start fixing and have a clear plan with clear solution based of the clear root issues identified and our personal knowledge applied."* This Fire 121 pattern operationalizes "Ready for Review" — formalizes 7 stop-condition criteria + decision tree (agent-territory vs operator-territory) + re-loop triggers (when /loop clear → operator-empirical input → /loop resumes). Per the second-brain work-mode.md: loop-clear is operator-territory by default; agent surfaces ready-for-review state; operator confirms clear. This pattern guides agent's "ready" recognition + operator's "clear" decision via shared criteria. Per Fire 117 v5: ready-for-review state declared at 115 pieces but /loop continued post-declaration (operator-territory choice — pattern documents this normal behavior).
 
 ## Pattern Description
 
@@ -106,17 +106,17 @@ OPTION C — AGENT AUTONOMOUS-CLEAR (rare; /root cron-loop-management lifecycle 
   Trigger: per /root loop-cron-lifecycle.md L1-L7 conditions
   Operator-territory: PARTIALLY YES (operator pre-grants permission per scenarios)
   Loop-state-after: cleared with detailed report (per /root reporting protocol)
-  Note: /opt body-of-work loops may NOT have analogous autonomous-clear authority;
-        per /opt work-mode.md operator-territory is stricter
+  Note: the second-brain body-of-work loops may NOT have analogous autonomous-clear authority;
+        per the second-brain work-mode.md operator-territory is stricter
 
 OPTION D — AGENT FAILS-SOFT (loop continues; agent surfaces blockers):
   Trigger: agent cannot proceed (e.g., operator-pending decisions block all paths)
   Agent-action: cycle output is "explicit-standby-with-named-reason" per M-E001-1 type 4
   Loop-state-after: continues but cycle output minimal until operator-empirical input
-  Per /opt: operator-territory; operator-empirical input clears the standby
+  Per the second-brain: operator-territory; operator-empirical input clears the standby
 ```
 
-Recommended for /opt body-of-work loops: **Option B** (agent surfaces; operator confirms) — preserves operator-territory while leveraging agent's pattern-recognition.
+Recommended for the second-brain body-of-work loops: **Option B** (agent surfaces; operator confirms) — preserves operator-territory while leveraging agent's pattern-recognition.
 
 ### Re-loop triggers (when /loop clear → resume)
 
@@ -147,7 +147,7 @@ RE-LOOP TRIGGER 5: Pre-compact / Post-compact recovery (per Fire 102)
   Cadence: same /loop directive resumes post-recovery
 ```
 
-### Operator-territory boundary (per /opt work-mode.md)
+### Operator-territory boundary (per the second-brain work-mode.md)
 
 ```yaml
 operator_territory_decisions:
@@ -276,14 +276,14 @@ T4 (designed + implemented + enforced): hook-layer validates each cycle
 ```
 Q-FIRE-121-1: Endorse 7-criterion Ready-for-Review framework?
   Argument for: data-driven from this loop's evidence
-  Argument against: 7 criteria may be /opt-specific; sister projects vary
-  Recommended: endorse for /opt; per-project re-articulation for sisters
+  Argument against: 7 criteria may be second-brain-specific; sister projects vary
+  Recommended: endorse for the second-brain; per-project re-articulation for sisters
 
-Q-FIRE-121-2: Decision-tree Option preference for /opt loops?
+Q-FIRE-121-2: Decision-tree Option preference for the second-brain loops?
   Option A — operator-explicit clear (default operator-territory)
   Option B — agent-surfaces; operator-confirms (recommended)
   Option C — agent-autonomous (rare; requires explicit grant)
-  Recommended: Option B for /opt body-of-work; Option C only with explicit operator-grant
+  Recommended: Option B for the second-brain body-of-work; Option C only with explicit operator-grant
 
 Q-FIRE-121-3: This loop's status — what's next?
   7/7 criteria SATISFIED at 115 pieces (Fire 117 v5)
@@ -298,7 +298,7 @@ Q-FIRE-121-3: This loop's status — what's next?
 
 ## Closing framing
 
-Per /loop directive sacrosanct: *"you can clear the loop when we going to be at Ready for Review."* This Fire 121 formalizes WHEN Ready-for-Review is achieved: 7 criteria + decision-tree + re-loop triggers. Per /opt work-mode.md: loop-clear is operator-territory; agent surfaces, operator decides. Per Fire 117 v5: this loop's criteria are 7/7 SATISFIED; operator-empirical pick A/B/C/D awaited.
+Per /loop directive sacrosanct: *"you can clear the loop when we going to be at Ready for Review."* This Fire 121 formalizes WHEN Ready-for-Review is achieved: 7 criteria + decision-tree + re-loop triggers. Per the second-brain work-mode.md: loop-clear is operator-territory; agent surfaces, operator decides. Per Fire 117 v5: this loop's criteria are 7/7 SATISFIED; operator-empirical pick A/B/C/D awaited.
 
 Per /loop's "no rush" + "do this right" framing: continuing past initial ready-for-review state is acceptable — pattern accommodates both immediate-clear (efficient) and sustained-continue (thorough). Operator-empirical judgment per cycle.
 

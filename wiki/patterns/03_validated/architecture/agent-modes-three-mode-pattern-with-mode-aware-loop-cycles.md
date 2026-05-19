@@ -211,7 +211,7 @@ The three modes (PM Scrum Master / DevOps Architect / Dual) work for `root-ghost
 | Project | Suggested lens A | Suggested lens B | Dual |
 |---|---|---|---|
 | root-ghostproxy (canonical) | PM Scrum Master | DevOps Architect | Dual |
-| Second-brain (/opt) | Knowledge Curator (ingest, distill, mature) | Methodology Steward (engine, gate, schema) | Dual |
+| Second-brain (the second-brain) | Knowledge Curator (ingest, distill, mature) | Methodology Steward (engine, gate, schema) | Dual |
 | OpenArms (potential) | Harness Engineer | Agent Author | Dual |
 | OpenFleet (potential) | Fleet Coordinator | Agent Debugger | Dual |
 | AICP (potential) | Model Curator | Cost Optimizer | Dual |
@@ -263,7 +263,7 @@ Per-project decisions (not all defaults are universal):
 ### Currently desired by (project status)
 
 - [x] root-ghostproxy — canonical first implementation (2026-05-05, validated)
-- [ ] devops-solutions-information-hub (/opt second-brain) — operator-stated desire ("such as now"); prerequisites check pending
+- [ ] devops-solutions-information-hub (the second-brain second-brain) — operator-stated desire ("such as now"); prerequisites check pending
 - [ ] OpenArms — adoption candidate (no operator-stated desire yet)
 - [ ] OpenFleet — adoption candidate
 - [ ] AICP — adoption candidate

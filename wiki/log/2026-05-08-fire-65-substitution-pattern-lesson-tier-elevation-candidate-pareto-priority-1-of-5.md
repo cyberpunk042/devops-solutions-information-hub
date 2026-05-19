@@ -122,7 +122,7 @@ Q-FIRE-161-2: Tier 3 → Tier 4 elevation Option 2 (per-piece tier-audit auto-en
   Recommended: yes — bundle with Fire 116 wiki-schema field application
 
 Q-FIRE-161-3: Promotion path post-T4?
-  Per /opt principle-promotion methodology: validated → canonical
+  Per the second-brain principle-promotion methodology: validated → canonical
   After Fire 65 reaches T4 + 30-day cross-reference period stable: candidate canonical
 ```
 
@@ -140,7 +140,7 @@ Step 7: Promote to canonical (wiki/lessons/04_principles/...)
 
 ## Closing
 
-Fire 65 substitution-pattern lesson identified as Pareto PRIORITY 1 of 5 (per Fire 125 17/18 scoring). T3 → T4 elevation path: Option 2 per-piece tier-audit auto-enforcement (8-15h; composable with Fire 116 + 103 + 109). Post-T4: candidate for canonical promotion per /opt methodology.
+Fire 65 substitution-pattern lesson identified as Pareto PRIORITY 1 of 5 (per Fire 125 17/18 scoring). T3 → T4 elevation path: Option 2 per-piece tier-audit auto-enforcement (8-15h; composable with Fire 116 + 103 + 109). Post-T4: candidate for canonical promotion per the second-brain methodology.
 
 **Standing by per /loop directive. Fire 65 elevation candidate documented; one of 5 Pareto PRIORITY pieces.**
 

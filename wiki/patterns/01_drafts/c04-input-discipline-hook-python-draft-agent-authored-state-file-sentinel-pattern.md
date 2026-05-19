@@ -51,7 +51,7 @@ C04 hook detects when agent attempts non-read tool action without prerequisite-i
 
 ## Instances
 
-**Instance 1: This /opt (M-C04 task per Fire 137)**
+**Instance 1: This the second-brain (M-C04 task per Fire 137)**
 - Wire as PreToolUse for non-read tools
 - State-file path: `~/.claude/c04-input-loaded`
 - Set on: gateway orient + brain pieces read
@@ -78,7 +78,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", "/opt/devops-solutions-information-hub"))
+PROJECT_ROOT = Path(os.environ.get("CLAUDE_PROJECT_DIR", "$HOME/devops-solutions-information-hub"))
 SENTINEL_PATH = Path.home() / ".claude" / "c04-input-loaded"
 AUDIT_LOG = PROJECT_ROOT / ".claude" / "hooks" / "c04-bypass.log"
 

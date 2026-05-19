@@ -134,7 +134,7 @@ Before promoting any piece from 01_drafts/seed → 02_synthesized:
 
 30. **Verify per piece #18 stress-test data exists** — without per-axis stress-test evidence, the piece is aspirational regardless of how detailed the spec is.
 
-31. **Confirm operator-territory respect** — agent-territory pieces (lessons / patterns / proposals) live at /opt; operator-territory pieces (/root rule edits / hook implementations) require operator-confirmation.
+31. **Confirm operator-territory respect** — agent-territory pieces (lessons / patterns / proposals) live at the second-brain; operator-territory pieces (/root rule edits / hook implementations) require operator-confirmation.
 
 ## Outcomes
 

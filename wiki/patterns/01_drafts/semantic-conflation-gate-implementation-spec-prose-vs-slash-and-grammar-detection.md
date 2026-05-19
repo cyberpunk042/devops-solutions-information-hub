@@ -56,7 +56,7 @@ PATTERNS:
 EMIT: per-pattern banner if matched
   Banner: "DETECTED: '<phrase>' is prose-conversation, not /<command> slash invocation.
            This is a trajectory directive, not a tool-invocation directive.
-           Per /opt routing.md row #2 + #8 conflation-bug closure 2026-05-04."
+           Per the second-brain routing.md row #2 + #8 conflation-bug closure 2026-05-04."
 ```
 
 **Detector 2 — conditional-clause grammar (SB-120 closure)**:

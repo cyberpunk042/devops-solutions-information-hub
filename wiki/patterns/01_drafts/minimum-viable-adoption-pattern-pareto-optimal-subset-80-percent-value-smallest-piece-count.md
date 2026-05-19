@@ -180,7 +180,7 @@ Operator chooses full or near-full when:
 
 **Instance 2: time-pressure scenario** — Operator has limited review window. 10-piece minimum captures ~85% value; defer rest indefinitely OR after empirical-evidence accumulates.
 
-**Instance 3: sister-project inheritance** — OpenArms operator inherits pieces from /opt; reads minimum-viable first; expands per OpenArms-specific empirical-evidence.
+**Instance 3: sister-project inheritance** — OpenArms operator inherits pieces from the second-brain; reads minimum-viable first; expands per OpenArms-specific empirical-evidence.
 
 **Instance 4: full-review extension** — Operator reads minimum-viable + finds gaps related to specific axes (e.g., regression-test); expands to MV+5 with regression-test pieces; iterates.
 

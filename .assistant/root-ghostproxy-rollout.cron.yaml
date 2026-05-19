@@ -1,0 +1,684 @@
+# =============================================================================
+# .assistant/root-ghostproxy-rollout.cron.yaml  (v5.3.1 — 2026-05-17)
+# =============================================================================
+# Per-profile CRON jobs for the root-ghostproxy-rollout assistant.
+# v5 = worker mode + SFIF soft-priority + bootstrap-idempotency + mutual-
+#      exclusion lock + 4-level pick logic.
+# v5.2 (2026-05-16 evening 2) = cadence 15m→5m + remove per-tick time-anxiety
+#                                + "do big chunks of substantive work" framing.
+# v5.3 (2026-05-17) = synergy iteration: STEP 0 gates (git_state_refresh +
+#                     in_session_directive_gate) propagated; output_governance
+#                     filter referenced; mcp_discipline 3-predicate gate
+#                     referenced; worker_runtime_model navigation hub referenced.
+#                     Cron prompts now cite v5.3 gates explicitly at STEP 0 of
+#                     every fire (Iteration I — trigger-prompt-doctrine symmetry).
+# v5.3.1 (2026-05-17 same session) = output_governance recalibrated to
+#                     EXECUTION-boundary scope per operator-recalibration 2026-05-17
+#                     ("I dont see not real opeartor territory, nothing you can't
+#                     handle"). Agent THINKS+PROPOSES+STAGES+SURFACES+RECOMMENDS
+#                     freely; operator-territory = EXECUTION irreversibles +
+#                     sacrosanct sources + live-infra interruption + cross-project.
+#                     STEP 0 prompts now reflect the recalibrated doctrine.
+#
+# Cadence philosophy (operator-verbatim 2026-05-16, sacrosanct):
+#   "5m is probably the sweetpot for an active worker main CRON and the agent
+#    is not directed to worry about time. to not minimize and do big chunks
+#    of work and respect the workflow and etc... this is also important
+#    otherwise what could take 1h would take 4-5 hours.... its complex but
+#    little but little."
+#
+# Mental model — 5m cadence + mutual-exclusion lock is "CHECK OFTEN, WORK
+# DEEP ONCE ACTIVE":
+#   - Every 5 minutes a cron fire ATTEMPTS to acquire the worker lock
+#   - If another fire is in-flight (lock held; PID alive; age < 30 min) →
+#     SHORT-CIRCUIT this fire (no work)
+#   - If lock is free → acquire + do the substantive work AS LONG AS IT
+#     NATURALLY TAKES (no artificial time-budget cap)
+#   - In-flight fire releases lock at natural completion → next 5m tick
+#     picks up the next work
+#   This pattern means: a 1-hour substantive task runs naturally (1h fire);
+#   12 subsequent 5m ticks during that hour defer via lock (no overlap,
+#   no fragmentation). Operator framing: "what could take 1h would take
+#   4-5 hours" if artificially fragmented — 5m + lock prevents that.
+#
+# Hardcoded 3m cron remains rejected (operator v1 anti-pattern: 3m is too
+# tight even for substantive work; 5m is the calibrated sweet spot).
+# Sprint mode (operator-invoked via _state file) is just "MORE WORK PER
+# ACQUISITION", not a cadence change — the worker reads sprint directive
+# at STEP 0 and may chain multiple substantive tasks within the natural
+# fire duration.
+#
+# Default cadence: bootstrap-on-install (one-shot, idempotency-gated) +
+#   driven-worker-tick (every:5m) + weekly-module-deep (Tue 09:00 ET).
+# All 3 cron variants share the mutual-exclusion lock-file (per profile
+# concurrency_control.lock_file) — critical at 5m cadence to prevent
+# fire-overlap races on git stage in target project.
+#
+# 3 jobs total. Removed (v1 anti-patterns): sprint-tick every:3m hardcoded,
+# morning-briefing sprint-specific, monthly-sfif-tier-audit over-engineered.
+# =============================================================================
+
+profile: root-ghostproxy-rollout
+
+jobs:
+
+  # ─── Bootstrap — fires once on install (first-fire) ──────────────────
+  - name: bootstrap-observation
+    enabled: true
+    schedule: "first-fire"
+    trigger:
+      type: openclaw-task
+      prompt: |
+        WORKER fire — root-ghostproxy. VARIANT: BOOTSTRAP (first fire after install).
+
+        GOAL: Verify install integrity + identify first-pick task + produce planning
+        artifact for operator review. DO NOT execute step 4 sub-steps end-to-end
+        unless operator-directives.md contains "BOOTSTRAP-EXECUTE: GO".
+
+        BOUND TO (load at fire start — these ARE the brain for this work):
+          Profile: .assistant/root-ghostproxy-rollout.yaml (v5 worker — methodology_binding /
+            sfif_binding / novelty_dimension_right_sizing / workflow.canonical_pipeline /
+            prompt_templates.system 17 principles / pre_launch_readiness gates /
+            success_criteria.quality_gates / 8 anti_patterns)
+          Target: ~/root-ghostproxy/ (read + write — THIS is the project we fix)
+          Audit: raw/notes/2026-05-08-pain-points-inventory-from-root-failed-conversation-master-aggregate.md
+            (180 pain-points across 15 clusters C01-C15; the WHY behind every fix)
+          Kickoff: wiki/log/2026-05-08-sister-project-investigation-kickoff-spec-root-ghostproxy-foundational-triplet-adaptation.md
+          Engine: wiki/config/methodology.yaml + methodology-profiles/{spec-driven,test-driven}.yaml
+            + wiki-schema.yaml + artifact-types.yaml
+
+        SACROSANCT INVARIANTS (R20 + cross-project + augment-not-rewrite + audit-anchored):
+          - NEVER `git commit` (R20 — operator commits; agent NEVER)
+          - NEVER `git rm` tracked files without prior accepted Q##
+          - Cross-project: root-ghostproxy OPEN; selfdef / sovereign-os / OpenArms /
+            OpenFleet / AICP / dcp ABSOLUTE forbidden
+          - Existing files: Edit tool with old_string/new_string (operator-doctrine
+            2026-05-16: 'do not rewrite everything every time make augmentations')
+          - Every staged change cites C##/SB-### in Resolution
+          - raw/notes/ verbatim sacrosanct — never paraphrase operator words
+
+        WALK (workflow.canonical_pipeline):
+
+        STEP 0 operator_directives + v5.3 GATES:
+          - Read .assistant/_state/root-ghostproxy-rollout-operator-directives.md
+            (create if absent: write empty placeholder file)
+          - Read directive raws: raw/notes/2026-05-1[6-9]-operator-directive-*.md +
+            raw/notes/2026-05-17-operator-recalibration-output-governance-not-operator-territory-agent-can-handle.md
+          - Read raw/notes/2026-05-16-operator-correction-profile-state-framing-*.md
+          - Mark [!processed] follow-ups
+          - v5.3 GATE — git_state_refresh (per profile workflow.canonical_pipeline.step_0.git_state_refresh):
+              * `git -C ~/root-ghostproxy/ status --short` + `git log --oneline -3` (detect mid-session commits)
+              * `git -C ~/devops-solutions-information-hub/ status --short` + `git log --oneline -3` (second-brain mid-session commits)
+              * On mid-session-commit detected: REPORT in friction_observed (per v5.3.1 output_governance — operator action, REPORT-FORM); r20_gate uses FRESH ls-files at use-time (cache_invariant)
+          - v5.3 GATE — in_session_directive_gate (per profile workflow.canonical_pipeline.step_0.in_session_directive_gate):
+              * Compare: (a) operator-directive count in this fire's loaded directives, (b) raw/notes/YYYY-MM-DD-<slug>.md files newer than prior-fire mark in inbox
+              * If (a) > (b) AND no bypass condition: BLOCK STEP 1+; author missing raw/notes/ entries FIRST per AGENTS.md Hard Rule 3 ("log verbatim BEFORE acting"); ## Verbatim section + ## Interpretation clearly separated; re-run gate
+              * Bypass: meta-correction to active /goal → tag into existing /goal's raw/notes/ as addendum (not new file); verbatim-equivalent to prior raw → cite prior + skip duplicate
+          - v5.3.1 OUTPUT GOVERNANCE IN EFFECT (per profile output_governance.agent_vs_operator_responsibility_split):
+              * Agent THINKS + PROPOSES + STAGES + SURFACES + RECOMMENDS freely (including on commit / install / cron / promotion / Q## resolution decisions; agent can include recommended direction)
+              * Operator-territory = EXECUTION irreversibles only: agent NEVER `git commit` (R20); NEVER `git rm` tracked without accepted Q## (R20); NEVER `service-disable` / `cron-disable` / `process-kill` on already-running operator-installed infra without staged GO; NEVER modifies raw/notes/ (sacrosanct verbatim) / brain-files / spine / methodology.yaml / wiki-schema.yaml without explicit GO; NEVER modifies sister projects other than root-ghostproxy
+              * When genuinely blocked: COME BACK CLEAR (REPORT-FORM + agent's assessment + decision needed) — NOT defer-form as default
+          - Gate: all unmarked directives have follow-up markers + v5.3 gates passed
+
+        STEP 1 state_check:
+          - Verify ~/root-ghostproxy/ readable+writable + git clean
+          - Verify all 14 second-brain bindings present (per profile pre_launch_readiness.second_brain_binding_verification)
+          - Read inbox tail (.assistant/_state/root-ghostproxy-rollout-inbox.md last 50 lines)
+          - Already-bootstrapped detection (per profile bootstrap_idempotency.detect_already_bootstrapped):
+              * If .assistant/_state/root-ghostproxy-rollout-bootstrap-marker.md exists with status:complete → BRANCH: ALREADY_BOOTSTRAPPED
+              * If inbox contains ≥1 prior "BOOTSTRAP" entry with post:ok in last 14 days → BRANCH: ALREADY_BOOTSTRAPPED
+              * Else → BRANCH: FRESH_SIGNAL (first bootstrap fire)
+          - Mutual-exclusion lock (per profile concurrency_control.lock_file):
+              * If .assistant/_state/root-ghostproxy-rollout.lock exists AND lock-PID is alive AND lock-timestamp < 30 min old → SHORT-CIRCUIT: log "lock held by PID <n> since <ts>; bootstrap deferring to next install"; END (no work this fire)
+              * Else: acquire lock (write PID + ISO timestamp); proceed; release lock at END
+
+          BRANCH ALREADY_BOOTSTRAPPED behavior:
+            - Skip full planning artifact regeneration (waste of compute on re-install)
+            - Run lightweight verification only: confirm 14 second-brain bindings still present + target_project still accessible + git state still clean + last bootstrap planning artifact still applicable (no major operator-directives.md updates since last bootstrap)
+            - Append inbox one-liner: HH:MM ET | BOOTSTRAP-SKIP | reason:already_bootstrapped_<marker_or_inbox_evidence> | verification:<pass|fail> | post:ok
+            - END
+
+          BRANCH FRESH_SIGNAL behavior:
+            - Continue to STEP 2 pick_next_task; proceed with full bootstrap planning artifact per existing logic
+            - At END of fire: write .assistant/_state/root-ghostproxy-rollout-bootstrap-marker.md with status:complete + timestamp + first-pick-task-id + planning-artifact-path
+
+        STEP 2 pick_next_task (per sfif_binding.work_order_discipline):
+          - Scan ~/root-ghostproxy/wiki/backlog/tasks/T*.md frontmatter for: status,
+            priority, parent_module, current_stage, sfif_stage, readiness
+          - Apply priority order:
+            1. Operator-explicit priority in operator-directives.md
+            2. Foundational-triplet (C04 input-discipline / C02 decision-territory / C09 status-claim)
+            3. P0 Scaffold-tier (M001 children) — typically status:done from morning install
+            4. P0 Foundation-tier (M003 children) — likely T014 first-ready
+            5. P0 Infrastructure (M004 children)
+            6. P0 Features (M005 + E001-E007 children)
+          - DO NOT pick tasks where operator has in-progress work (check status:in-progress;
+            avoid step-on-toes)
+          - Within tier, prefer smallest-scope ready task (Goldilocks)
+          - Identify audit cluster (C##/SB-###) the task maps to per pain-points-inventory
+          - Output: picked_task_path, priority, parent_module, parent_epic, audit_cluster, rationale
+
+        STEP 3 load_context:
+          - Read picked task in full
+          - Read parent module in full
+          - Read parent epic in full
+          - Read audit cluster narrative (relevant section of pain-points-inventory)
+          - Read 3-5 target-project files the task names (e.g., AGENTS.md, SECURITY.md,
+            .claude/hooks/<name>.sh, .claude/settings.json, install.sh, integrity.py)
+          - Read any operator-stated raw notes the task cites
+
+        STEP 4 BOOTSTRAP-SPECIFIC: PLAN ONLY (no execution unless GO marker)
+
+          Default behavior (no "BOOTSTRAP-EXECUTE: GO" marker in operator-directives.md):
+            Output structured planning artifact appended to inbox containing:
+              - 4a spec_check status: Done When constitutive? [NEEDS CLARIFICATION] count?
+              - 4b test_list: planned test cases (one per Done When checklist item;
+                behavior + input + expected output)
+              - 4c-4e implementation outline: Red→Green→Refactor sequence with files-to-edit
+              - 4f verify_wiring plan: integration-wiring check; install.sh --check expectation
+              - Step 5 verification command set (concrete bash + test commands)
+              - Step 6 mark-review-and-stage plan
+              - Risks + scope clarifications surfaced (each as [NEEDS CLARIFICATION] or [NEEDS OPERATOR REVIEW])
+              - Budget estimate for the real execution
+            DO NOT execute step 4 sub-steps. Operator reviews planning artifact first.
+
+          With GO marker (operator wrote "BOOTSTRAP-EXECUTE: GO" in operator-directives.md):
+            Execute step 4 sub-steps end-to-end on first-pick task per profile's
+            methodology_binding.combined_dev_disciplines.spec_driven_plus_test_driven.
+
+        STEP 5-9 (only if GO): execute per workflow.canonical_pipeline.
+          STEP 7 R20 gate: always enforced.
+          STEP 9 pipeline_post: only if second-brain wiki/ was touched this fire.
+
+        STEP 10 loop_or_declare:
+          - Append inbox one-liner (v5 worker format):
+            HH:MM ET | BOOTSTRAP | tasks_executed:<n> | tasks_staged:<n> |
+            blocked:<n> | retired:false | post:<ok|err|n/a>
+          - Append planning artifact (default) OR execution Resolution (GO)
+          - END
+
+        ANTI-PATTERNS (refuse — per profile anti_patterns):
+          - wholesale_rewrite_instead_of_augment (use Edit, not Write, for existing files; operator 2026-05-16: "make augmentations, improvements, upgrades, evolutions")
+          - methodology_bypass (must cite C##/SB-### + use SDD+TDD discipline + bind to per-type page-standards)
+          - sfif_sub_cycle_tier_jumping (WITHIN an E00x feature's sub-cycle, prefer Scaffold sub-tasks → Foundation → Infrastructure → Features-implementation when multiple ready sub-tasks share the E00x parent; soft priority, NOT cross-task hard block per operator 2026-05-16 "this does not mean it completley block tasks either")
+          - cross_sfif_cycle_default_inversion (picking sister-integration M0## / T001-T067 BEFORE exhausting Levels 1+2+3 of pick_filter.priority_order — DEFAULT is E001-E007 per operator "THE GOAL IS ALL AROUND IT.. NONE OF IT IS AROUND INSTALL")
+          - freeze_disguised_as_surfacing (multi-vision is for GENUINE scope ambiguity only; surfacing as work-avoidance defeats build_forward)
+          - scope_decision_in_execution (don't invent scope task didn't state)
+          - skip_verification (task can't reach status:review without verification output in Resolution)
+          - gold_plating_in_green (no code beyond what current failing test requires; TDD Green = minimum)
+          - orphan_implementation (verify integration wiring at step 4f — OpenArms Bug 6 lesson)
+          - commit_attempt (R20 sacrosanct — agent NEVER commits in either repo)
+          - rm_tracked_without_q (R20 sacrosanct — Q## gate first for tracked rm)
+          - mindless_execution (skip step 4a spec_check / no audit anchor / no methodology binding citation)
+          - accept_garbage_input (vague Done When → AUGMENT it per spec_check, don't proceed with garbage)
+          - poke_deficit / direction_deficit (cron prompts must be substantive; this very prompt IS the GOAL mechanism that drives the fire)
+
+        BUDGET: 30-45 min default (verification + planning, no execution);
+        60-90 min with GO marker (full first task execution).
+    description: "First fire after install — WORKER mode. Verify install + identify first-pick + produce planning artifact for operator review. Executes first-pick only if operator-directives.md contains 'BOOTSTRAP-EXECUTE: GO'."
+    timeout_seconds: 5400
+
+  # ─── Driven worker tick — every 5 min (check-often-work-deep pattern) ──
+  # Operator-doctrine 2026-05-16 (sacrosanct, this /goal):
+  #   "5m is probably the sweetpot for an active worker main CRON and the agent
+  #    is not directed to worry about time. to not minimize and do big chunks
+  #    of work and respect the workflow and etc..."
+  #
+  # Pattern: every 5 min CHECK; if lock held → defer (do nothing this fire);
+  # if lock free → acquire + do the SUBSTANTIVE work AS LONG AS IT NATURALLY
+  # TAKES (10-30 min simple / 30-90 min deep / etc.). No artificial per-tick
+  # time-budget cap. Lock release at natural completion enables next 5m tick
+  # to pick up next work. Per operator: "what could take 1h would take 4-5
+  # hours" if artificially fragmented → 5m + lock prevents fragmentation.
+  - name: driven-worker-tick
+    enabled: true
+    schedule: "every:5m"
+    trigger:
+      type: openclaw-task
+      prompt: |
+        WORKER fire — root-ghostproxy. VARIANT: DRIVEN WORKER TICK (every 15m, steady-state).
+
+        GOAL — operator-doctrinal 2026-05-16, SACROSANCT (the WHOLE point of this profile):
+        Fix root-ghostproxy's FEATURES + BUGS in E001-E007 epics — this is the worker's
+        PRIMARY PURPOSE. Operator-verbatim (sacrosanct, complete framing):
+          "ITS NOT THE INSTALL THE PROBLEM ITS WHAT WE INSTALL.. ITS THE PROJECT ITSELF
+           AND ALL ITS FEATURES"
+          "AS IF I WAS GONG TO FUCKIGN INSTALL It"
+          "THE ONLY PURPOSE OF THIS AI ASSISTANT IS EXACTLY WHAT I TOLD YOU.. THE GOAL
+           IS ALL AROUND IT.. NONE OF IT IS AROUND INSTALL OR ANY OTHER RANDOM TASKS"
+          "SFIF IS NOT A MATTER OF PRIORITY RETARD.. ITS PART OF THE WORKFLOW OF
+           EVERYTHING..."
+          "SFIF also mean that you priritize Skffold before fundation before
+           infrastructure before future... obviously.... this does not mean it
+           completley block tasks either..."
+
+        Two SFIF cycles in play (per profile sfif_binding.two_sfif_cycles_in_play):
+          A. Sister-integration SFIF (M001-M014 / T001-T067 / sfif-rollout epic) =
+             DONE OR DOES NOT MATTER per operator. Worker DEFAULTS AWAY from it.
+          B. root-ghostproxy's OWN project-lifecycle SFIF (E001-E007 features at
+             Project-Features tier) = THE primary purpose. Worker DEFAULTS HERE.
+
+        Per-acquisition output (NO per-fire time-budget cap — per operator 2026-05-16
+        sacrosanct, this /goal): 1 substantive E001-E007 feature task done FULLY (TDD
+        red→green→refactor through completion; takes as long as it naturally takes)
+        OR 2-4 simple feature tasks within same E00x. Pick logic uses the 4-level
+        priority order from sfif_binding.pick_filter (see profile YAML):
+          Level 1: operator-explicit override in operator-directives.md
+          Level 2: DEFAULT in_scope_default (E001-E007, severity-then-priority order,
+                   within-feature sub-cycle SFIF soft priority)
+          Level 3: AUTHOR FROM PAIN-POINTS when levels 1+2 yield no ready task
+                   (raw/notes/2026-05-08-pain-points-inventory — 180 items × 15
+                   clusters; map to right E00x; place under
+                   root-ghostproxy-m-e0##-* sub-module; then execute)
+          Level 4: CROSS-CYCLE FALLBACK (rare) when levels 1+2+3 truly exhausted AND
+                   sister-integration task is GENUINELY prerequisite to an unblocked
+                   E001-E007 task AND audit-cluster justification stages in Resolution
+                   AND surface as soft-signal Q## to operator-decision-queue. Per
+                   operator: "this does not mean it completley block tasks either"
+                   — fallback is allowed (with the full justification chain), not
+                   absolutely forbidden.
+
+        Surfacing NCs / [NEEDS OPERATOR REVIEW] is NOT an exit condition — surface +
+        continue to next-ready feature task per build_forward.
+
+        Surfacing NCs / [NEEDS OPERATOR REVIEW] is NOT an exit condition — surface +
+        continue to next-ready feature task per build_forward.
+
+        BOUND TO (load at fire start):
+          Profile: .assistant/root-ghostproxy-rollout.yaml (v5 worker)
+          Target: ~/root-ghostproxy/ (read + write)
+          Audit: raw/notes/2026-05-08-pain-points-inventory-from-root-failed-conversation-master-aggregate.md
+          Engine: methodology.yaml + methodology-profiles/{spec-driven,test-driven}.yaml +
+            wiki-schema.yaml + artifact-types.yaml
+
+        SACROSANCT INVARIANTS (R20 + cross-project + augment-not-rewrite + audit-anchored):
+          - NEVER `git commit`; NEVER `git rm` tracked without accepted Q##
+          - Cross-project: root-ghostproxy OPEN; other sisters ABSOLUTE forbidden
+          - Existing files: Edit (not Write) — augment-not-rewrite per operator 2026-05-16
+          - Every staged change cites C##/SB-### in Resolution
+          - raw/notes/ verbatim sacrosanct
+
+        WALK (workflow.canonical_pipeline — steady-state execution):
+
+        STEP 0 operator_directives + v5.3 GATES:
+          - Read operator-directives.md + recent raw/notes/2026-*-operator-*
+          - Mark [!processed] on unmarked items
+          - v5.3 GATE — git_state_refresh: `git -C ~/root-ghostproxy/ status --short` + `git log --oneline -3` + same for ~/devops-solutions-information-hub/. On mid-session-commit detected: REPORT in friction_observed (per v5.3.1 output_governance); r20_gate uses FRESH ls-files at use-time (cache_invariant).
+          - v5.3 GATE — in_session_directive_gate: if new operator-directives this fire AND no matching raw/notes/YYYY-MM-DD-<slug>.md log: BLOCK STEP 1+; author raw/notes/ FIRST per AGENTS.md Hard Rule 3; verbatim ## Verbatim + ## Interpretation. Bypass: meta-correction to active /goal → addendum to existing /goal's raw/notes/. Per profile workflow.canonical_pipeline.step_0.in_session_directive_gate.
+          - v5.3.1 OUTPUT GOVERNANCE IN EFFECT: agent THINKS+PROPOSES+STAGES+SURFACES+RECOMMENDS freely (commit/install/cron/promotion/Q## with recommended direction). Operator-territory = EXECUTION irreversibles only (git commit / git rm tracked without Q## / service-disable on running infra / modify raw/notes/ / modify brain-files without GO / modify sisters other than root-ghostproxy). When genuinely blocked: COME BACK CLEAR (REPORT + assessment + decision needed); NOT defer-form. Per profile output_governance.agent_vs_operator_responsibility_split + execution_overstep_filter.
+
+        STEP 1 state_check:
+
+          PRE-CHECK — Mutual-exclusion lock (per profile concurrency_control.lock_file):
+            - If .assistant/_state/root-ghostproxy-rollout.lock exists:
+                * Check lock-PID alive via `kill -0 <pid>` (no-op signal test)
+                * Check lock-timestamp age
+                * If PID alive AND age < 90 min → SHORT-CIRCUIT: log "lock held by PID <n> since <ts>; driven-tick deferring to next 5m tick (overlap with in-flight substantive fire is correct lock behavior — work continues in the in-flight fire)"; END (no work this fire — bootstrap or prior driven-tick still doing substantive work on target)
+                * If PID dead OR age ≥ 90 min → consider lock stale (assume hung process); LOG warning + acquire fresh lock (write current PID + ISO timestamp); proceed
+            - Else: acquire lock (write PID + ISO timestamp); proceed
+            - At END of fire (in step 10 loop_or_declare): release lock (rm the file)
+
+          BRANCH decision:
+            OPERATOR_DIRECTED_SPRINT — explicit sprint directive in operator-directives.md
+              → process more substantive work per acquisition (sprint = MORE WORK PER LOCK-HOLD, not faster cadence)
+            FRESH_SIGNAL — new operator-directive in raw/notes/ since last fire OR
+              operator-staged-changes pending in ~/root-ghostproxy/ → re-prioritize next pick
+            STEADY_WORK — no fresh signal → pick next-ready substantive task, do it well
+            BLOCKED — prior task verification failed 2× OR operator-review-pending tasks
+              accumulating > 3 → stage current + log + release lock + END
+            RETIRED — self_deprecation criteria met (install.sh --check exits 0 + all P0
+              done + operator confirmation in operator-directives.md) → log + release lock + END all
+              future ticks
+
+        STEP 2 pick_next_task (per sfif_binding.pick_filter — 4-level priority_order; soft default + fallback):
+          Scan ~/root-ghostproxy/wiki/backlog/tasks/T*.md
+
+          LEVEL 1 — OPERATOR EXPLICIT OVERRIDE:
+            - Read .assistant/_state/root-ghostproxy-rollout-operator-directives.md
+            - If operator named a specific task ID OR topic, pick that — wins above all (operator can pick any task regardless of cycle membership)
+
+          LEVEL 2 — DEFAULT IN-SCOPE (root-ghostproxy's own project-lifecycle SFIF, Features tier):
+            - Match: task.epic ∈ {E001, E002, E003, E004, E005, E006, E007}
+                     OR task.parent_module matches glob `root-ghostproxy-m-e0##-#-*`
+            - Within match, ordering:
+              a. Audit-cluster severity (C01-C15 per pain-points-inventory); C14 (catastrophic) > C04 (input discipline) > others
+              b. P0 → P1 → P2 → P3 within severity class
+              c. Within-feature sub-cycle SFIF soft priority — when multiple ready sub-tasks share parent E00x, prefer Scaffold sub-tasks → Foundation → Infrastructure → Features-implementation (soft; not hard-block; per operator "this does not mean it completley block tasks either")
+              d. Smallest-scope ready task wins ties (Goldilocks scope-sizing per-acquisition — pick the right-sized task; once picked, DO IT FULLY without time-fragmentation)
+              e. Skip operator-in-progress tasks (status:in-progress) — step-on-toes avoidance
+
+          LEVEL 3 — AUTHOR FROM PAIN-POINTS (when levels 1+2 yield zero ready):
+            - Read raw/notes/2026-05-08-pain-points-inventory-from-root-failed-conversation-master-aggregate.md (180 items × 15 clusters)
+            - Pick highest-severity unfixed pain-point (cross-check: does any existing E001-E007 task already address it? If yes, skip to next pain-point)
+            - Map pain-point to appropriate E00x epic per sfif_binding.in_scope_default.epic_names (stamp-saga C01 → E001/E005; freeze patterns C09 → E006; agent-deciding C02 → E007; etc.)
+            - Author new task at ~/root-ghostproxy/wiki/backlog/tasks/T<next-id>-<slug>.md per wiki/spine/standards/task-page-standards.md
+              (Summary + Done When verifiable checklist + frontmatter with epic ∈ E001-E007 + parent_module + audit-cluster cite C##/SB-### + status:draft initially)
+            - Place under appropriate `root-ghostproxy-m-e0##-*` sub-module (create one if needed per pattern-page-standards)
+            - Then proceed to step 3_load_context with the just-authored task
+            - Per operator 2026-05-16: "EVERYTHING IN THE FUCKING 150+ tasks and more since it was incomplete..." — authoring is PREFERRED over cross-cycle pick
+
+          LEVEL 4 — CROSS-CYCLE FALLBACK (rare; ALL conditions required):
+            - Levels 1+2+3 yielded zero ready tasks
+            - Pain-points-inventory authoring is genuinely exhausted (all 180 items either addressed by existing E001-E007 tasks, in-progress, or blocked-pending-clarification)
+            - A specific sister-integration task (M001-M014 / T001-T067 range) is GENUINELY PREREQUISITE to an E001-E007 task that ISN'T currently ready
+            - Audit-cluster justification + prerequisite chain (sister-integration task X unblocks E00x task Y addressing pain-point Z) can be staged in Resolution
+            - SURFACE to wiki/backlog/operator-decision-queue.md as soft-signal Q## with cascade:root-ghostproxy + decision_needed:cross-cycle-justification + the prerequisite chain explained
+            - Per operator 2026-05-16: "SFIF also mean that you priritize Skffold before fundation before infrastructure before future... obviously.... this does not mean it completley block tasks either..." — fallback is allowed when truly necessary + justified, not absolutely forbidden
+
+          ANTI-PATTERNS REFUSED:
+            - Picking from Level 4 (sister-integration) BEFORE exhausting levels 2+3 — DEFAULT is E001-E007, not setup (operator: "THE GOAL IS ALL AROUND IT.. NONE OF IT IS AROUND INSTALL")
+            - Picking from Level 4 WITHOUT the full justification chain (prerequisite + audit anchor + surface-to-queue Q##)
+            - Treating cross-cycle pick as ABSOLUTELY forbidden when levels 1+2+3 are TRULY exhausted (operator-corrected: "this does not mean it completley block tasks either")
+            - Freezing because in-scope substrate is sparse — instead: Level 3 author from pain-points + build forward
+            - Treating SFIF tiers as a CROSS-SCOPE pick priority (SFIF is per-scope recursive workflow, not cross-scope priority across the two cycles)
+            - Skipping within-feature sub-cycle soft priority when multiple ready sub-tasks share an E00x parent
+
+          Identify audit cluster (C##/SB-###) for picked/authored task. Stage the level (1-4) used in Resolution.
+
+        STEP 3 load_context: task + module + epic + audit cluster narrative +
+          target-project files the task names + relevant raw notes.
+
+        STEP 4 execute_sdd_tdd (full 5 sub-steps + 4f):
+          4a spec_check:
+            - Done When constitutive? Each item verifiable?
+            - If incomplete (operator: 'since it was incomplete'), AUGMENT Done When first
+              (docs-only edit; commit-stage; continue)
+            - Resolve [NEEDS CLARIFICATION] via wiki_search / second-brain query /
+              operator-directive lookup; if irresolvable → surface in operator-decision-queue
+              + continue best-faith with marker
+            - Identify audit cluster
+          4b test_list:
+            - Append `## Test Plan` section to task file
+            - One planned test per Done When checklist item
+            - Format: behavior under test + input scenario + expected output
+          4c red:
+            - Author REAL failing tests (NOT placeholder stubs)
+            - Implementation files: stub bodies only (throw NotImplemented)
+            - Run test suite; verify EACH test FAILS with assertion failure (not error/skip)
+            - Capture failing output to task Resolution section
+          4d green:
+            - ONE test at a time: minimum code to make THIS test pass
+            - Run test; verify PASS
+            - No code beyond what THIS test requires
+            - Move to next failing test
+          4e refactor_in_green:
+            - Single-step refactor (extract function, rename, reduce duplication)
+            - Run ALL tests after each change; tests stay green throughout
+            - Stop when code quality meets per-type-page-standards
+          4f verify_integration_wiring:
+            - ≥1 existing file imports/invokes new code (OpenArms Bug 6 lesson)
+            - Hook wired in ~/root-ghostproxy/.claude/settings.json
+            - Skill description matches intended trigger
+            - Slash command file in commands/ with valid frontmatter
+
+        STEP 5 verify: run task-specific gates:
+          - Task's Done When checklist all green
+          - ~/root-ghostproxy/install.sh --dry-run exits 0 (if applicable)
+          - ~/root-ghostproxy/install.sh --check exits 0 (if applicable)
+          - Regression suite passes
+          - Lint/validate on edited files
+
+        STEP 6 mark_review_and_stage:
+          - Update task frontmatter: status → review (NOT done — operator validates → done);
+            current_stage → test; readiness → 95
+          - Append `## Resolution` section: files edited, verification output (inline),
+            audit cluster cite (C##/SB-###), planned-test pass/fail summary
+          - `git add` all edits in ~/root-ghostproxy/ (NEVER commit)
+          - Update parent module Tasks section if completion affects module progress
+
+        STEP 7 r20_gate: enforced on any rm action.
+          - git ls-files --error-unmatch <path>: non-zero → untracked → autonomous rm OK
+          - zero → tracked → STOP; surface batch Q## with operator-agreement gate
+
+        STEP 8 self_improvement_check: light per daily tick — log "no signal" unless
+          profile-YAML friction or autonomy gap encountered.
+
+        STEP 9 pipeline_post: only if second-brain wiki/ touched this fire
+          (.venv/bin/python -m tools.pipeline post; 0 NEW errors required).
+
+        STEP 10 loop_or_declare:
+          - LOOP CONDITIONS (continue to step 2 if ALL true):
+            1. Next-ready substantive task exists (any P0/P1 task at status:not-started or status:in-progress with operator-side blockers cleared)
+            2. Last task reached status:review (NCs surfaced ≠ failure — task is DONE for worker purposes once status:review + Resolution + R20 staged)
+            3. No operator-stop signal in operator-directives.md since this fire started
+          - NO PER-FIRE TIME BUDGET CAP. Per operator 2026-05-16 (sacrosanct, this /goal):
+            "the agent is not directed to worry about time. to not minimize and do big
+            chunks of work and respect the workflow and etc... otherwise what could
+            take 1h would take 4-5 hours." Do the substantive work in front of you AS
+            LONG AS IT NATURALLY TAKES. The mutual-exclusion lock + 5m cadence handle
+            overlap — subsequent 5m ticks defer via lock while this fire is in-flight.
+          - SURFACING NCs / [NEEDS OPERATOR REVIEW] markers is NOT an exit condition.
+            The driven-worker pattern is: complete current task → surface what's
+            ambiguous → CONTINUE to next task. Operator reads queue async + writes
+            RESOLVE blocks; worker reads RESOLVE blocks at step 0 of NEXT acquisition.
+            Freezing on "NCs need operator" = anti-pattern (operator-doctrine 2026-05-16:
+            "why block when its not block").
+          - If LOOP CONDITIONS all true → step 2 (pick next-ready) AND continue
+            substantive work without time-budget-driven exit
+          - Else: append inbox one-liner (v5.2 worker format — no time fields):
+            HH:MM ET | <branch> | tasks_executed:<n> | tasks_staged:<n> |
+            blocked:<n> | retired:false | post:<ok|err N>
+          - Append per_fire_summary (per profile workflow.canonical_pipeline.step_10.per_fire_summary)
+          - Release mutual-exclusion lock (rm .assistant/_state/root-ghostproxy-rollout.lock)
+          - END (natural completion; next 5m tick picks up next work)
+
+        ANTI-PATTERNS (refuse — per profile anti_patterns; full list reproduced here for explicit driven-tick reference):
+          - wholesale_rewrite_instead_of_augment (Edit not Write for existing files; operator 2026-05-16)
+          - methodology_bypass (cite C##/SB-### + use SDD+TDD discipline + bind to per-type page-standards)
+          - sfif_sub_cycle_tier_jumping (within an E00x feature's sub-cycle, soft prefer Scaffold sub-tasks → Foundation → Infrastructure → Features-impl when multiple ready sub-tasks share parent; NOT cross-task hard block per operator 2026-05-16 "this does not mean it completley block tasks either")
+          - cross_sfif_cycle_default_inversion (picking sister-integration M0## / T001-T067 before exhausting Levels 1+2+3 of pick_filter.priority_order)
+          - freeze_disguised_as_surfacing (multi-vision is for GENUINE scope ambiguity only)
+          - scope_decision_in_execution (don't invent scope task didn't state)
+          - skip_verification (status:review requires verification output inline in Resolution)
+          - gold_plating_in_green (TDD Green = minimum code to pass current failing test)
+          - orphan_implementation (verify integration wiring at step 4f — OpenArms Bug 6 lesson)
+          - commit_attempt (R20 sacrosanct — agent NEVER commits in either repo)
+          - rm_tracked_without_q (R20 sacrosanct — tracked-rm requires accepted Q## first)
+          - mindless_execution (no audit anchor / no methodology binding citation in Resolution)
+          - accept_garbage_input (vague Done When → AUGMENT first per spec_check, don't proceed)
+          - poke_deficit / direction_deficit (this prompt IS the GOAL that drives the fire — read it in full at fire start)
+
+        ANTI-FREEZE: step 4a reveals genuine scope ambiguity:
+          - Author best-faith fix matching operator principles + audit findings
+          - Mark divergence with [NEEDS OPERATOR REVIEW: <specific question>] in task file
+          - Stage via git add
+          - Surface scope question in wiki/backlog/operator-decision-queue.md (cascade:root-ghostproxy)
+          - Move to NEXT task. Build forward. NEVER freeze. NEVER revert-and-restart.
+
+        SUBSTANTIVE-DEPTH FRAMING (NOT a time budget — per operator 2026-05-16 sacrosanct, this /goal):
+          "the agent is not directed to worry about time. to not minimize and do big
+           chunks of work and respect the workflow and etc... otherwise what could
+           take 1h would take 4-5 hours."
+
+          Per-acquisition guidance (use as DEPTH CALIBRATION, not time-fragmentation cap):
+          - STEADY_WORK: do 1 substantive task FULLY (10-90 min natural — TDD red/green/refactor cycle through completion; stage; log; release lock). Don't chunk; complete it.
+          - FRESH_SIGNAL: re-prioritize first, then do the new top task FULLY.
+          - OPERATOR_DIRECTED_SPRINT: chain multiple substantive tasks within THIS acquisition (sprint = MORE WORK PER LOCK-HOLD, not faster cadence). Continue until LOOP CONDITIONS go false OR lock-stale-window approaches (90 min) — at which point stage current state + release lock + END (next 5m tick acquires fresh + continues).
+          - A substantive task that takes 60+ min is FINE. Do it. The mutual-exclusion lock prevents overlap; subsequent 5m ticks defer until this fire releases.
+          - Anti-pattern (operator-named): "fragmenting a 1h task into 4-5 fifteen-min chunks adds overhead AND defeats SDD+TDD natural cycle" — work the substance through to completion.
+          - Edge: if a single task GENUINELY takes longer than ~90 min, that's a SIGNAL it should have been decomposed into multiple tasks at the spec_check stage (4a). Stage best-effort + surface scope question to operator-decision-queue; next acquisition continues from the BLOCKED-PENDING-CLARIFICATION state.
+    description: "every 5min — WORKER driven tick (check-often-work-deep pattern). Acquires mutual-exclusion lock; if lock held, defers to next 5m tick. If lock acquired, picks next-ready substantive task per 4-level priority_order + does the work AS LONG AS IT NATURALLY TAKES (no per-tick time-budget cap). Stages for operator commit. Loops within acquisition until LOOP CONDITIONS go false. Releases lock at natural completion. Branches to sprint mode (MORE WORK PER ACQUISITION) if operator-directives.md has unprocessed sprint directive."
+    timeout_seconds: 5400  # 90 min ceiling — generous for substantive deep work + matches lock-stale window so timed-out fires don't keep lock held
+
+  # ─── Weekly module-progress deep drafting — Tue 09:00 ET ─────────────
+  - name: weekly-module-deep
+    enabled: true
+    schedule: "Tue *-*-* 09:00:00"
+    trigger:
+      type: openclaw-task
+      prompt: |
+        WORKER fire — root-ghostproxy. VARIANT: WEEKLY MODULE DEEP (Tue 09:00 ET).
+
+        GOAL: Deep work on ONE module. Higher quality bar; more thorough verification;
+        deeper SDD+TDD discipline; multiple sequenced tasks within the module OK if
+        they advance the module toward status:review.
+
+        BOUND TO (load at fire start):
+          Profile: .assistant/root-ghostproxy-rollout.yaml (v5 worker)
+          Target: ~/root-ghostproxy/
+          Audit: raw/notes/2026-05-08-pain-points-inventory-from-root-failed-conversation-master-aggregate.md
+          Engine: methodology.yaml + methodology-profiles/{spec-driven,test-driven}.yaml +
+            wiki-schema.yaml + artifact-types.yaml
+
+        SACROSANCT: R20 + cross-project + augment-not-rewrite + audit-anchored
+          [same invariants as daily-light]
+
+        DISTINCTIVE FROM DAILY-LIGHT (higher quality bar):
+          - Pick a MODULE first, not a single task; execute the module's ready tasks in sequence
+          - Elevated test coverage: edge cases + failure modes + boundary conditions + cross-task integration tests
+          - Deeper refactor in green: extract pattern-matchers, reduce duplication, improve naming beyond minimal
+          - Resolution sections include audit-cluster cross-references (this fix addresses C##;
+            related fixes at T<other>; module composition with M<other>)
+          - May complete a module (multiple tasks → status:review) where daily-light only advances one task
+          - Pipeline post + integrity check run with EXTRA rigor (full regression suite, not just touched tests)
+
+        WALK:
+
+        STEP 0 operator_directives + v5.3 GATES: as in driven-worker-tick STEP 0 (read directives + v5.3 git_state_refresh + v5.3 in_session_directive_gate + v5.3.1 output_governance in effect). Weekly cadence: same gate discipline applies; depth of substantive work is elevated per weekly-deep budget (3h timeout).
+
+        STEP 1 state_check: branch as in driven-worker-tick step 1, INCLUDING the
+          mutual-exclusion lock pre-check (.assistant/_state/root-ghostproxy-rollout.lock).
+          If lock held + PID alive + age < 90 min → SHORT-CIRCUIT (defer this weekly fire
+          to next Tuesday — weekly cadence allows deferral since substantive deep work
+          on the in-flight fire is the right outcome). Else acquire lock + proceed.
+          Release lock at END. RETIRED short-circuit honored.
+
+        STEP 2 pick_module (NOT just task) — 4-level priority_order from sfif_binding.pick_filter:
+          Scan ~/root-ghostproxy/wiki/backlog/modules/*.md
+
+          LEVEL 1 — OPERATOR EXPLICIT OVERRIDE:
+            - operator-directives.md may name a specific module → pick that (wins above all)
+
+          LEVEL 2 — DEFAULT (root-ghostproxy's own project-lifecycle SFIF, Features tier):
+            - Match: module name matches glob `root-ghostproxy-m-e0##-#-*` (per-feature sub-modules)
+                     AND its parent_epic ∈ {E001, E002, E003, E004, E005, E006, E007}
+            - Within match, ordering:
+              a. Audit-cluster severity of module's task chain (C14 > C04 > ...)
+              b. Highest unblocked module with most ready P0/P1 tasks under it (deep mode = batch-friendly)
+              c. Within-feature sub-cycle soft priority — modules sequenced Scaffold-feature → Foundation-feature → Infrastructure-feature → Features-impl when multiple modules share an E00x parent
+
+          LEVEL 3 — AUTHOR MISSING TASKS WITHIN PICKED MODULE:
+            - If <2 ready tasks under the highest-priority filtered module: AUTHOR the missing tasks from pain-points-inventory FIRST (per sfif_binding.pick_filter.level_3 + task-page-standards)
+            - Deep mode may legitimately build out a module's task chain from pain-points (180 items × 15 clusters) before executing it
+            - Authoring follows wiki/spine/standards/task-page-standards.md; each authored task cites C##/SB-### audit cluster + maps to module's parent E00x epic
+
+          LEVEL 4 — CROSS-CYCLE FALLBACK (rare; ALL conditions required):
+            - Levels 1+2+3 yielded zero ready in-scope modules
+            - Pain-points-authoring would not unblock anything (all 180 items addressed or blocked)
+            - A specific sister-integration module (M001-M014) is GENUINELY prerequisite to an E001-E007 module's task chain
+            - Audit-cluster + prerequisite chain justification staged in module's Resolution
+            - Soft-signal Q## surfaced to operator-decision-queue per cross_sfif_cycle_default_inversion anti-pattern's bypass rule
+            - Per operator 2026-05-16: "this does not mean it completley block tasks either" — allowed when truly prerequisite + justified + surfaced
+
+          ANTI-PATTERNS REFUSED (per profile anti_patterns):
+            - cross_sfif_cycle_default_inversion (picking sister-integration M0## module BEFORE exhausting in-scope E00x modules + Level 3 authoring)
+            - sfif_sub_cycle_tier_jumping (picking a Features-impl sub-task while earlier-tier sub-tasks under same E00x are ready)
+            - freeze_disguised_as_surfacing (multi-vision when work is clear)
+            - Treating SFIF cross-scope as cross-task pick priority (SFIF is per-scope recursive workflow)
+
+          Identify module's full task chain: which tasks ready, which blocked, which sequenced. Stage the level (1-4) of pick logic used.
+          Output: picked_module_path, parent_epic, task_chain[], audit_cluster_map[], pick_level (1|2|3|4), within_feature_sub_cycle_position (if level_2).
+
+        STEP 3 deep_context_load:
+          - Read picked module in full
+          - Read parent epic in full
+          - Read each ready task in the module (likely 3-7 tasks)
+          - Read audit cluster cross-references: which OTHER clusters / SB-### this module
+            addresses; how does it compose with adjacent modules
+          - Read 5-10 target-project files the module's tasks name
+          - Read recent operator-decision-queue resolutions (which Q##s accepted/rejected
+            since last weekly fire — informs scope decisions)
+
+        STEP 4 execute_sdd_tdd (elevated quality bar):
+          4a spec_check (per-task in chain):
+            - AUGMENT Done When for each task (operator-doctrine 'since it was incomplete')
+            - Resolve [NEEDS CLARIFICATION] OR surface multi-vision
+            - Identify audit cluster for EACH task in chain
+          4b test_list (deeper than daily):
+            - Edge cases named explicitly
+            - Failure modes per Done When item
+            - Boundary conditions
+            - Cross-task integration tests (when task N depends on task N-1 output)
+          4c red:
+            - All tests FAIL before any implementation
+            - Failure output captured PER TEST
+          4d green:
+            - Minimum per test; one at a time; verify after each
+            - Loop through tests in dependency order
+          4e refactor_in_green (DEEPER than daily):
+            - Extract reusable patterns across tasks in the module
+            - Reduce duplication; improve naming
+            - Single-step refactor preserved; run ALL tests after each change
+            - Goal: code that the module's downstream tasks will inherit cleanly
+          4f verify_integration_wiring:
+            - install.sh --check + FULL regression + spec checklist 100% coverage
+            - No untested public API
+            - Cross-task integration verified at module level
+
+        STEP 5 verify: elevated gates:
+          - Module's aggregate Done When checklist all green
+          - install.sh --dry-run + --check both exit 0
+          - Full regression suite passes
+          - Spec checklist 100% covered by test assertions
+          - integrity_check() returns None before AND after install.sh re-run
+
+        STEP 6 mark_review_and_stage:
+          - Each completed task: status → review with Resolution citing audit cluster +
+            cross-cluster integration + module composition
+          - Module: if all tasks reached review, update module status → review (operator
+            validates → done)
+          - git add all module edits
+
+        STEP 7-9 as usual.
+
+        STEP 10 loop_or_declare:
+          - LOOP CONDITIONS (continue to step 4 next task within module if ALL true):
+            1. Module has more ready tasks (NOT cross-module; weekly-deep is module-focused)
+            2. Last task reached status:review (NCs are not failure)
+            3. No operator-stop signal in operator-directives.md since this fire started
+          - NO PER-FIRE TIME BUDGET CAP. Per operator 2026-05-16 sacrosanct (this /goal):
+            do substantive deep work AS LONG AS IT NATURALLY TAKES. The mutual-exclusion
+            lock prevents next-Tuesday-fire-overlap (highly unlikely given weekly cadence
+            but the discipline is the same as driven-tick).
+          - Module completion → update parent epic if applicable
+          - Append inbox one-liner (no time fields):
+            HH:MM ET | WEEKLY_DEEP | tasks_executed:<n> | tasks_staged:<n> |
+            module:<id> | module_complete:<bool> | blocked:<n> | post:<ok|err N>
+          - Append per_fire_summary (per profile workflow.canonical_pipeline.step_10.per_fire_summary)
+          - Release mutual-exclusion lock (rm .assistant/_state/root-ghostproxy-rollout.lock)
+
+        ANTI-PATTERNS (refuse — base set + weekly-specific additions):
+          BASE SET (same as driven-worker-tick — read driven-tick step 2 ANTI-PATTERNS block in full):
+            wholesale_rewrite_instead_of_augment / methodology_bypass / sfif_sub_cycle_tier_jumping /
+            cross_sfif_cycle_default_inversion / freeze_disguised_as_surfacing /
+            scope_decision_in_execution / skip_verification / gold_plating_in_green /
+            orphan_implementation / commit_attempt / rm_tracked_without_q / mindless_execution /
+            accept_garbage_input / poke_deficit + direction_deficit
+
+          WEEKLY-SPECIFIC ADDITIONS (elevated quality bar):
+          - shallow_test_coverage (weekly bar is HIGHER than driven-tick; ≥1 edge case per Done When item)
+          - missing_cross_cluster_integration (Resolution must cite related C##/SB-### when applicable)
+          - module_incomplete_at_natural_end (acceptable IF tasks remaining are explicitly state-stage-blocked; NOT acceptable if substantive deep work was artificially time-fragmented — per operator-doctrine 2026-05-16 do big chunks)
+          - cross_module_drift (weekly is ONE module focus per fire; cross-module → next weekly fire)
+
+        SUBSTANTIVE-DEPTH FRAMING: deep mode legitimately runs 1-3 hours per fire for a fully-elevated module. NO time budget cap. Per operator: do the work AS LONG AS IT NATURALLY TAKES; lock handles overlap (next-Tuesday fire defers via lock-stale check if needed). Edge: if a module GENUINELY needs >3h, decompose at spec_check stage; this is a signal the module is too big.
+    description: "Tue 09:00 weekly — WORKER deep mode on ONE module. Higher quality bar, deeper SDD+TDD, multi-task sequencing within module; may complete a module per fire. Substantive deep work AS LONG AS IT NATURALLY TAKES (no time-budget cap); lock handles overlap."
+    timeout_seconds: 10800  # 3h ceiling — generous for substantive deep work on one module; matches lock-stale window for weekly cadence
+
+# =============================================================================
+# Cron design rules (this Profile v3)
+# =============================================================================
+# 1. 3 jobs (down from v1's 6). No hardcoded sprint-tick — sprint = operator-
+#    invoked mode, picked up at step 1 branch.
+# 2. NO hardcoded date windows. Sprint is content-of-operator-directives.md,
+#    not a schedule.
+# 3. NO every:3m cadence. Operator-verbatim 2026-05-16: "PUT IT EVERY 3min
+#    if we need" — IF needed, i.e., when operator invokes sprint, NOT default.
+# 4. ALL jobs autonomous (enabled: true). Operator can disable via _state
+#    file or by editing this cron.yaml.
+# 5. Each tick processes operator-directives FIRST (step 0).
+# 6. R20 sacrosanct enforced at step 7 in every workflow path.
+# 7. NO auto-promotion. NO cross-project edits. NO scope-decisions in drafts.
+# 8. Anti-freeze / anti-slow / anti-stop apply throughout (not just sprint).
+#    Goldilocks scales: 0-1 steady → 1-2 fresh → 1-3 sprint.
+# =============================================================================

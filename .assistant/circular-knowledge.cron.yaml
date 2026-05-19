@@ -1,0 +1,122 @@
+# =============================================================================
+# .assistant/circular-knowledge.cron.yaml  (v3 — 2026-05-16)
+# =============================================================================
+# Operator-verbatim 2026-05-16: "wtf what is every 3 min lol ???? THE ONLY
+# FUCKING THING WHICH COULD BE FAST LIKE THIS IS THE root-ghostproxy ai
+# assistant" — v3 removes 3min sprint-tick. CK is weekly steady-state.
+#
+# Operator-verbatim 2026-05-16 (sacrosanct): "THE AI ASSISTANT IS NOT GOING
+# TO DELETE ANYTHING THAT IS ALREADY COMMITED OR STAGED WITHOUT MY AGREEMENT"
+# → workflow_retroactive only auto-rm's UNTRACKED. Tracked goes through
+# operator-agreement Q## (single approval per signature class).
+#
+# 3 jobs only. No disabled-by-default dead jobs.
+# =============================================================================
+
+profile: circular-knowledge
+
+jobs:
+
+  # ─── Bootstrap (first-fire on install) ───────────────────────────────────
+  - name: bootstrap-pollution-audit
+    enabled: true
+    schedule: "first-fire"
+    description: "First-run pile_state + autonomous untracked-cleanup + surface tracked batch + surface ambiguous"
+    timeout_seconds: 5400
+    trigger:
+      type: openclaw-task
+      prompt: |
+        CK v3 BOOTSTRAP — pile-state detection + autonomous untracked cleanup.
+
+        Sacrosanct boundary: R20 — NEVER auto-delete COMMITTED or STAGED
+        files. UNTRACKED only is autonomous. Tracked = surface batch Q##.
+
+        Follow WORKFLOW.md `workflow_retroactive` 10-step pipeline. Key
+        points for this first-fire:
+
+        STEP 1 (pile_state): compute total_agent_authored, total_operator_resolved,
+          pile_ratio. Verdict DEPILED / PILING_UP / NEVER_DEPILED.
+        STEP 2 (classify): per file → KEEP / AUTO-REMOVE-UNTRACKED /
+          SURFACE-TRACKED-AGREEMENT / SURFACE-AMBIGUOUS.
+        STEP 3 (check_agreed): scan operator-decision-queue.md for any
+          PRIOR accepted Q## covering trash-signature batches → promote
+          matching tracked files from SURFACE-TRACKED-AGREEMENT to
+          APPROVED-TRACKED-REMOVAL.
+        STEP 4 (execute_autonomous): for AUTO-REMOVE-UNTRACKED:
+          - Re-verify file is untracked: `git ls-files --error-unmatch <path>`
+            must return non-zero exit code.
+          - `rm <path>`
+        STEP 5 (execute_agreed): for APPROVED-TRACKED-REMOVAL:
+          - `git rm <path>` (stages removal; operator commits when ready)
+          - NEVER `git commit`
+        STEP 6 (log): wiki/log/2026-05-16-ck-bootstrap-execution-batch-1.md
+        STEP 7 (surface): one batch Q## for tracked, per-class Q## for ambiguous
+        STEP 8 (self_check) — STEP 9 (pipeline_post) — STEP 10 (declare)
+
+        ANTI-PATTERN GUARDS (mandatory checks):
+          - deletion_of_committed_without_agreement: ZERO tolerance
+          - surface_when_should_auto_remove: untracked clear-trash MUST execute,
+            not surface
+          - surface_per_file_instead_of_batch: tracked clear-trash = ONE batch
+            Q## per signature
+
+        DO NOT freeze. DO NOT ask for approval on untracked clear-trash.
+        DO NOT commit. Operator-territory: brain, spine, methodology, sister
+        projects, raw/notes/, anything in operator-decision-queue with pending Q##.
+
+  # ─── Weekly Distillation (Saturday 10:00 ET) ─────────────────────────────
+  - name: weekly-distillation
+    enabled: true
+    schedule: "Sat *-*-* 10:00:00"
+    description: "Weekly level-up tick. Layer-1→Layer-2 lessons (cap 0-1). Convergence-gated."
+    timeout_seconds: 2400
+    trigger:
+      type: openclaw-task
+      prompt: |
+        CK weekly distillation. Follow `workflow_distillation` 8-step pipeline.
+
+        STEP 0 (directives) → STEP 1 (pipeline_evolve_score) → STEP 2
+        (convergence_scout: ≥3 anchors? If 0 pass → 'Goldilocks-under-budget'
+        + END) → STEP 3 (multi_vision_diff + goldilocks_sizer +
+        stage_discipline_check; if any fail → defer) → STEP 4 (draft AT MOST
+        1 at wiki/<tier>/01_drafts/<slug>.md) → STEP 5 (self_check) → STEP 6
+        (pipeline_post) → STEP 7 (declare inbox).
+
+        NO GARBAGE GATE: if no candidate passes ALL gates, write inbox
+        'Goldilocks-under-budget — no convergence ≥3 anchors this week' and
+        END. That IS the correct outcome.
+
+        NO MINDLESS PROMOTE: every draft includes ## Context Boundaries,
+        ## Alternative Visions (when multi-vision applies), Goldilocks
+        justification, ≥3 explicit relationship verbs.
+
+        Online research (web_search, hf_paper_search) IS ALLOWED when it
+        applies to a level-up draft (verification + academic anchors +
+        cross-reference). NOT for mass ingestion.
+
+  # ─── Weekly Retroactive Audit (Sunday 09:00 ET) ──────────────────────────
+  - name: weekly-retroactive-audit
+    enabled: true
+    schedule: "Sun *-*-* 09:00:00"
+    description: "Weekly pollution audit + autonomous untracked-cleanup + tracked batch surface + post-agreement execution"
+    timeout_seconds: 2400
+    trigger:
+      type: openclaw-task
+      prompt: |
+        CK weekly retroactive. Follow `workflow_retroactive` 10-step pipeline.
+
+        Same R20 boundary as bootstrap: UNTRACKED autonomous, TRACKED needs
+        prior operator-agreement Q##.
+
+        STEP 3 (check_agreed): always scan operator-decision-queue.md for
+        accepted Q##s covering trash-signature batches BEFORE classifying.
+        Files covered by an accepted Q## move directly to APPROVED-TRACKED-
+        REMOVAL (executed in step 5 same tick).
+
+        Anti-pollution gate: if pile_state.verdict = NEVER_DEPILED AFTER
+        untracked-cleanup (autonomous step 4 done, ratio still > 5×), surface
+        pollution-pause HIGH urgency — agent self-disables distillation cron
+        until operator resolves the tracked batch.
+
+        Online research allowed for verification + anchors during any level-up
+        co-occurring with this retroactive tick.

@@ -18,6 +18,16 @@
 #   - "A PROFILE IS WAY MORE THAN JUST SETTING FOR ONE TOOL"
 #   - "managing across NONE, ONE OR MULTIPLE TOOL"
 #
+# Operator-doctrinal (2026-05-16, sacrosanct):
+#   - R20 (hard rule): "THE AI ASSISTANT IS NOT GOING TO DELETE ANYTHING
+#     THAT IS ALREADY COMMITED OR STAGED WITHOUT MY AGREEMENT"
+#   - autonomy: "WHY WOULD THE AI HAVE TO PROPOSE TO REMOVE THE TRASH IT
+#     ADDED ITSELF?? ITS SUPPOSED TO BE A FUCKING AUTONOMOUS ASSISTANT"
+#   - reframing: "the research one wasn't that bad either I think... in
+#     general they are all very early prototype we will keep evolving and
+#     adding configuration and content" (v3 alignment is targeted, not a
+#     full rewrite — CR's existing structure is solid)
+#
 # Companion vendor configurations that consume this Profile:
 #   .assistant/continuous-research.openclaw.json5  — OpenClaw agent entry
 #   (more vendors added as they're authored — Multica, Hermes, etc.)
@@ -26,7 +36,7 @@
 #   wiki/domains/cross-domain/profile-continuous-research-keep-models-and-tech-vision-current.md
 # =============================================================================
 
-profile_version: 1
+profile_version: 3
 profile_name: continuous-research
 project: devops-solutions-information-hub
 project_role: "Knowledge curation — research substrate"
@@ -109,6 +119,57 @@ knowledge_scope:
     - "WebFetch on corpus URLs — use pipeline fetch (Hard Rule 6)"
     - "Synthesizing raw/notes/ (sacrosanct verbatim operator-directive records)"
 
+  # Raw retention policy — what survives ingestion after we've extracted the signal.
+  # Operator 2026-05-15: "some type of ingested data need to purged almost once we
+  # have extracted what is relevant. not everything but I saw some news stuff and it
+  # contains a lot of noise"
+  raw_lifecycle:
+    by_path:
+      "raw/articles/":
+        default_retention: ephemeral
+        rationale: "News + blog articles — signal extracted into source-synthesis, raw becomes redundant noise"
+        purge_after: "source-synthesis page exists AND ratio ≥0.25 AND pipeline_post clean"
+        keep_overrides:
+          - "raw frontmatter declares `lifecycle: keep` (operator override)"
+          - "source URL is on the always-keep list (foundational essays, canonical posts)"
+      "raw/papers/":
+        default_retention: permanent
+        rationale: "Academic papers — long-term reference value; re-read on theory disputes"
+      "raw/transcripts/":
+        default_retention: conditional
+        rationale: "Long-form interviews/talks worth re-reading; short clips are noise"
+        purge_criteria: "wc -l < 200 AND synthesis exists"
+      "raw/dumps/":
+        default_retention: conditional
+        rationale: "Mixed bag; classify case-by-case"
+        purge_criteria: "synthesis exists AND raw is a paginated snapshot / scrape (not a single canonical doc)"
+      "raw/notes/":
+        default_retention: permanent
+        rationale: "Sacrosanct — operator verbatim directives; NEVER purge"
+
+    by_domain_hint:   # used when path-default is `conditional`
+      always_keep:
+        - "arxiv.org"
+        - "openreview.net"
+        - "ai.googleblog.com"
+        - "openai.com/research"
+        - "www.anthropic.com/research"
+      ephemeral_news:
+        - "venturebeat.com"
+        - "cnbc.com"
+        - "techcrunch.com"
+        - "9to5mac.com"
+        - "decrypt.co"
+        - "pharmaphorum.com"
+
+    purge_logging:
+      destination: "wiki/log/<YYYY-MM-DD>-purge-summary.md"
+      required_fields:
+        - "purged raw paths (with line counts at time of purge)"
+        - "corresponding source-synthesis page paths (the kept signal)"
+        - "ratio at purge time"
+        - "rationale per file"
+
 # -----------------------------------------------------------------------------
 # 3. Action Surface
 # -----------------------------------------------------------------------------
@@ -138,12 +199,64 @@ action_surface:
     - "Skip pipeline fetch and use WebFetch on corpus URLs"
     - "Claim 'updated' / 'verified' without inline tool-output evidence"
     - "Drift into Pipeline Synthesis scope (don't bulk-process backlog raws — that's the other Profile's job)"
+    # R20 sacrosanct additions (2026-05-16)
+    - "git commit (R20 — operator commits, agent never)"
+    - "git rm on tracked files without prior accepted Q## (R20 — surface batch Q## with operator-agreement gate; only then execute)"
+    - "Auto-delete COMMITTED or STAGED wiki/sources/*.md without operator agreement (R20 sacrosanct)"
 
   escalation_triggers:
     - "Operator-stated vision-relevant change detected → surface to operator-decision-queue.md"
     - "Strategic shift candidate → wiki/log/ research-watch entry + operator review"
     - "Cross-project relevance detected → cross-reference, do not modify sister content"
     - "Frontier surface fetch failure → log + surface, do not silently skip"
+
+  # Autonomy levels — what the agent decides alone vs what needs operator review.
+  # Operator 2026-05-15: "You do not need my confirmation for the first stages of
+  # ingestion. if I asked you to ingest its that I selected... once its ready we
+  # can discuss it and see if and what move forward and then later if and what is
+  # integrated and how and then later what model and/or pattern or principles"
+  autonomy_levels:
+    full_autonomous:   # agent does it; no surfacing required, no operator confirmation
+      - "Discover candidates (web_search, hf_paper_search)"
+      - "Dedup check against existing wiki corpus"
+      - "Pipeline-fetch a selected URL into raw/"
+      - "Read raw in full"
+      - "Author source-synthesis page (Layer 1) per schema"
+      - "Run pipeline_crossref + pipeline_post"
+      - "Purge ephemeral raws after synthesis (per raw_lifecycle policy)"
+      - "Flag affected existing pages (annotate, don't auto-edit operator-territory)"
+      - "Append to per-profile inbox (.assistant/_state/<profile>-inbox.md)"
+
+    surfacing_required:   # agent doesn't act; writes a candidate to operator-decision-queue.md
+      - "Promote source-synthesis (Layer 1) → validated lesson (Layer 2)"
+      - "Promote a recurring observation → pattern (Layer 3)"
+      - "Author a new decision (architectural / strategic)"
+      - "Author or update a principle (Layer 4)"
+      - "Update a spine model or super-model artifact"
+      - "Modify the methodology.yaml / wiki-schema.yaml / artifact-types.yaml"
+      - "Edit operator-territory pages (CLAUDE.md, AGENTS.md, CONTEXT.md, root docs)"
+      - "Cross-project work (touch sister-project repos)"
+
+    forbidden:   # agent never does these, even with operator approval expressed in chat
+      - "Auto-promote anything to validated tier without operator-approved promotion-decision artifact"
+      - "Author content in sister-project repos (cross-project boundary)"
+      - "Modify raw/notes/ (sacrosanct verbatim operator-directive records)"
+      - "Synthesize from descriptions alone (named lesson)"
+      - "Skip pipeline_post after wiki changes"
+
+  # Promotion policy — how candidates reach the operator
+  promotion_policy:
+    candidate_routing: "wiki/backlog/operator-decision-queue.md"
+    candidate_format:
+      - "source-synthesis path (the Layer 1 artifact)"
+      - "candidate target tier (lesson | pattern | decision | principle | model-update)"
+      - "rationale (3-5 lines: why this should rise)"
+      - "evidence (which other wiki content converges on this finding; ≥3 convergent sources is the lesson-promotion floor)"
+      - "operator-question if any (e.g. 'is this stack-vision relevant or scope creep?')"
+    cadence:
+      hourly_ticks: "surface promotion candidates when found; do not batch"
+      end_of_day: "evening-report should include 'promotion-candidates this day' section"
+      end_of_week: "weekly digest should review unattended-by-operator candidates older than 7 days"
 
 # -----------------------------------------------------------------------------
 # 4. Model Routing (abstract — consuming tool picks actual model)
@@ -172,6 +285,151 @@ model_routing:
     - "Pull from frontier — research the latest, not what's settled (operator-doctrinal)"
     - "Stay independent — track alternatives, not just one vendor's announcements"
     - "Low-tier-first for monitoring; high-tier only when strategic-impact assessment is needed"
+    - "R20 sacrosanct — agent never commits; tracked-rm requires operator-accepted Q##; untracked autonomous"
+
+# -----------------------------------------------------------------------------
+# 4a. 21-Requirements Framework Mapping (CR-specific) — added v3 2026-05-16
+# -----------------------------------------------------------------------------
+requirements_mapping:
+  R1_multi_vision: "step 8c surface_promotion_candidates includes options when ambiguity present; never single-truth on strategic shifts"
+  R2_self_first_cascade: "self-improvement check is non-skippable; updates own profile before surfacing other-target proposals"
+  R3_goldilocks: "monitoring_surfaces rate-limited per-surface; per-tick cap aligns with cron cadence (1-3 raws / 0-1 synthesis per hourly tick is typical)"
+  R4_stage_discipline: "Layer 1 source-synthesis only; no Layer 2+ authoring (that's CK's lane)"
+  R5_no_auto_promote: "surfacing_required for all maturity-tier promotions; operator approves Q##"
+  R6_no_garbage: "step 1 dedup_check + step 2 dedup_check + step 8c convergence floor (≥3) prevents thin/garbage promotions"
+  R7_flow: "CR is INGEST lane — raw/articles + raw/papers + raw/transcripts → source-synthesis (Layer 1). Doesn't level up (CK), doesn't drain backlog (PS)."
+  R8_cadence_matches_scope: "hourly monitoring + morning/evening report + weekly digest + monthly budget audit — matches research scope (continuous but not real-time-critical)"
+  R9_autonomous_bounded: "discover + ingest + synthesize + crossref + purge-ephemeral autonomous; tier-promotion + cross-project + raw/notes/-edit forbidden"
+  R10_build_forward: "supersedes existing source-syntheses via SUPERSEDES when newer data lands; never revert + restart"
+  R11_no_freeze: "fetch failure → log + continue (skip THAT surface this tick, retry next); never stall on one bad URL"
+  R12_pause_ready_for_review: "if nothing-significant on a scan → log noted-but-skipped + END (correct steady-state); promotion candidates surfaced → END pending operator (pause, NOT freeze)"
+  R13_anti_pollution: "if raw/articles/ + wiki/sources/ growth > 5× operator-accept → pause production; surface to operator-decision-queue (CR-specific anti-pollution check)"
+  R14_retroactive: "raw_lifecycle.by_path ephemeral default + step 8b purge → CR cleans its own UNTRACKED noise raws (R20 gated for tracked)"
+  R15_online_research_when_applies: "CR's primary lane — web_search + hf_paper_search + pipeline_fetch on monitoring_surfaces; bounded by operator-stated topics + frontier-watch list, NOT mass news scraping"
+  R16_no_cross_project_work: "ABSOLUTE — no sister-project edits; cross-references only"
+  R17_no_brain_audits: "spine + brain files READ-ONLY"
+  R18_no_self_doc_in_wiki: "NEVER author profile-continuous-research-*.md in wiki/ (anti-pattern from CK v1 applies here too)"
+  R19_no_drafts_to_spine: "spine is operator-territory"
+  R20_sacrosanct: "tools.deny includes git-commit + git-rm-tracked; step 8b purge gated on `git ls-files --error-unmatch` untracked-check; tracked raws → batch Q## with operator-agreement"
+  R21_no_ai_slop: "tight workflow steps; no version-history markers in profile; no dead-code sections; sub-agents are 4 load-bearing only (batch_fs_search, online_research, ratio_validator, convergence_scout)"
+
+# -----------------------------------------------------------------------------
+# 4b. Workflow Contract (structured pipeline — NOT prose-in-prompt)
+# -----------------------------------------------------------------------------
+# Every tick where the agent finds something significant MUST follow this
+# canonical pipeline. Each step is gated. The agent self-verifies each step
+# before advancing. The Profile-standards validator (T073 — future) will
+# enforce this contract structurally.
+workflow:
+  canonical_pipeline:
+
+    - step: 1_discover
+      purpose: "Find candidate sources online"
+      tools: [web_search, hf_paper_search, hf_hub_query]
+      forbidden_tools: [WebFetch]   # WebFetch on corpus URLs = Hard Rule 6 violation
+      output: "list of candidate URLs + brief novelty rationale per item"
+      success_gate: "≥1 candidate identified OR explicit 'nothing significant found in N surfaces'"
+
+    - step: 2_dedup_check
+      purpose: "Confirm candidate not already in this project's wiki corpus"
+      tools: [wiki_search, wiki_read_page]
+      output: "for each candidate: in-corpus=yes/no; if yes, skip"
+      success_gate: "no duplicate synthesis pages authored"
+
+    - step: 3_ingest
+      purpose: "Land the source content in raw/ via the project's ingestion pipeline"
+      tools: [pipeline_fetch, wiki_fetch]
+      forbidden_tools: [WebFetch]   # routed via the pipeline, never direct
+      output: "raw/articles/<slug>.md OR raw/papers/<slug>.md OR raw/transcripts/<slug>.md"
+      success_gate: "raw file exists on disk; size > 1KB"
+
+    - step: 4_read_in_full
+      purpose: "Read the raw IN FULL — never synthesize from descriptions (lesson)"
+      tools: [Read with wc -l + offsets for files >200 lines]
+      output: "in-context understanding of the source"
+      success_gate: "Hard Rule 1 satisfied — read every line"
+
+    - step: 5_synthesize
+      purpose: "Author a schema-compliant source-synthesis page"
+      tools: [Write]
+      target: "wiki/sources/<domain>/src-<slug>.md"
+      schema: "source-synthesis (artifact-types.yaml)"
+      success_gate:
+        - "9 required frontmatter fields populated"
+        - "Summary ≥30 words"
+        - "Key Insights section"
+        - "Relationships section with ≥1 explicit relationship verb"
+        - "Reference card callout (source URL + ingest date)"
+        - "Line ratio ≥0.25 (page_lines / raw_lines)"
+        - "sources frontmatter MUST include `file: raw/articles/<slug>.md` (or raw/papers/... etc.) pointing to the raw — this is what the lifecycle auditor uses to decide what's purge-eligible. Without this link, the raw is orphaned and lingers forever."
+
+    - step: 6_crossref
+      purpose: "Discover and add cross-references to existing wiki pages"
+      tools: [pipeline_crossref]
+      output: "additional relationships added; affected-pages list"
+      success_gate: "≥1 explicit relationship verb added to ≥1 existing page"
+
+    - step: 7_flag_affected
+      purpose: "Identify existing pages whose claims are now stale due to this novelty"
+      tools: [wiki_search, Edit (only for explicit operator-allowed pages)]
+      output: "wiki/log/<date>-flagged-pages-<slug>.md OR comments in operator-decision-queue.md"
+      success_gate: "operator-territory pages are FLAGGED, not modified"
+
+    - step: 8_post
+      purpose: "Validate the wiki is still clean after this batch of changes"
+      tools: [pipeline_post]
+      success_gate: "0 NEW validation errors attributable to this run"
+
+    - step: 8b_purge_ephemeral_raws
+      purpose: "After synthesis lands and pipeline_post is clean, purge raws marked as ephemeral per raw_lifecycle policy. Don't flood the project with noise."
+      tools: [Bash with `rm` on raw/articles/* paths; Edit on wiki/log/<date>-purge-summary.md]
+      criteria:
+        - "raw path matches an `ephemeral` retention in knowledge_scope.raw_lifecycle.by_path"
+        - "OR raw's source domain is in knowledge_scope.raw_lifecycle.by_domain_hint.ephemeral_news"
+        - "AND a corresponding wiki/sources/<domain>/src-<slug>.md exists with ratio ≥0.25"
+        - "AND pipeline_post in this same tick was 0-error"
+        - "AND no `lifecycle: keep` operator-override frontmatter on the raw"
+        # R20 sacrosanct (2026-05-16)
+        - "AND raw is UNTRACKED (`git ls-files --error-unmatch <path>` returns non-zero) — tracked raws require operator-accepted Q## per R20; surface batch instead"
+      output: "purged file paths logged to wiki/log/<YYYY-MM-DD>-purge-summary.md (counts + rationale per file)"
+      success_gate: "noise raws purged; reference raws (papers, foundational essays) retained; tracked raws NEVER auto-purged; purge log written"
+
+    - step: 8c_surface_promotion_candidates
+      purpose: "Inspect what was synthesized this tick. If any source-synthesis converges with existing wiki content in a way that warrants promotion to lesson/pattern/decision tier, surface to operator-decision-queue.md. NEVER promote autonomously."
+      tools: [Edit on wiki/backlog/operator-decision-queue.md, wiki_search for convergence-evidence]
+      criteria:
+        - "≥3 convergent existing wiki sources support a generalizable claim (lesson-promotion floor)"
+        - "OR a strategic shift is implied (vendor change, model tier shift, architectural decision)"
+        - "OR an existing decision page needs re-opening"
+      output: "operator-decision-queue.md entry per promotion_policy.candidate_format"
+      success_gate: "promotion candidates surfaced but NOT auto-promoted"
+
+    - step: 9_declare
+      purpose: "Self-report what this tick produced (the operator-visible surface)"
+      tools: [Edit / append to .assistant/_state/<profile>-inbox.md]
+      output: "one-line: HH:MM | <N raws fetched> | <N syntheses> | <N crossrefs> | <N purged> | <N promotion-candidates> | post: ok|err"
+      success_gate: "inbox entry written; counts match the actual filesystem state of this tick"
+
+  anti_patterns:
+    - name: diary_defer
+      description: "Writing a wiki/log/ entry saying 'I noticed N things, deferring synthesis to a future run'"
+      why_forbidden: "Silent tyranny per operator 2026-05-15 — produces the APPEARANCE of work without the substance"
+      detector: "If a tick wrote only to wiki/log/ AND wrote no files in raw/ or wiki/sources/, that's diary-defer"
+
+    - name: fabricated_claim
+      description: "Summary text claims 'authored X' or 'fetched Y' but no corresponding file exists on disk"
+      why_forbidden: "Trust violation"
+      detector: "Auditor cross-checks summary verbs against filesystem mtimes in the run window"
+
+    - name: synthesize_from_description
+      description: "Writing a source-synthesis page based on web_search result snippets, never pipeline_fetching the source itself"
+      why_forbidden: "Lesson — never-synthesize-from-descriptions-alone"
+      detector: "Source-synthesis page exists but no corresponding raw/<slug>.md"
+
+    - name: skip_pipeline_post
+      description: "Authoring wiki content without running pipeline_post afterward"
+      why_forbidden: "Hard Rule 10 — pipeline post after every wiki change (0 errors required)"
+      detector: "wiki/ modified but manifest.json not modified in same tick"
 
 # -----------------------------------------------------------------------------
 # 5. Prompt Templates
@@ -270,3 +528,55 @@ success_criteria:
     - "Synthesis-from-descriptions-alone (violates the named lesson)"
     - "Skipping a monitoring_surface silently without logging"
     - "Vision baselines drift uncatched (Profile is failing)"
+    - "Project flooded with raws (ephemeral noise not purged after extraction)"
+
+# -----------------------------------------------------------------------------
+# 7. Sub-agents (declared specialized helpers the main agent dispatches)
+# -----------------------------------------------------------------------------
+# Operator 2026-05-15: "AI assistant profile can have sub-agents configs and stuff
+# too. like for batch fs search or online search and stuff like that."
+# Sub-agents are scoped, bounded helpers the main agent invokes for specialized
+# tasks. They're declared here as named contracts; the consuming runtime
+# (OpenClaw / Multica / etc.) maps each to its native sub-agent dispatch.
+subagents:
+
+  - name: batch_fs_search
+    purpose: "Scan wiki/, raw/, and .assistant/_state/ for files matching a pattern; return paths + line counts"
+    when_to_use:
+      - "Before authoring a new source-synthesis: dedup-scan wiki/sources/ for similar slugs"
+      - "Periodic backlog audit: scan raw/articles/ for files >14 days old (stale candidate)"
+      - "Cross-reference discovery: find pages mentioning a specific concept"
+    invocation_pattern:
+      tools: [Bash with grep/rg/find, Glob]
+      budget: "30 seconds"
+    output_contract: "structured list of { path, lines, mtime, size } per match"
+
+  - name: online_research
+    purpose: "Bounded web research for a specific topic; ends with a list of candidate URLs (not synthesized — synthesis is the main agent's job)"
+    when_to_use:
+      - "Need to deepen on a specific finding from monitoring_surfaces"
+      - "Need to verify a claim against multiple sources"
+      - "Need to find primary sources for a vendor announcement"
+    invocation_pattern:
+      tools: [web_search, hf_paper_search, hf_hub_query]
+      forbidden_tools: [WebFetch]
+      budget: "5 minutes"
+    output_contract: "ranked list of { url, source_kind, confidence, dedup_status } — main agent then pipeline-fetches selected ones"
+
+  - name: ratio_validator
+    purpose: "Compute source-synthesis line-ratio against its source raw; abort or warn if below threshold"
+    when_to_use:
+      - "Immediately after authoring a source-synthesis page, before pipeline_post"
+    invocation_pattern:
+      tools: [Bash with `wc -l`]
+      budget: "10 seconds"
+    output_contract: "{ page_lines, raw_lines, ratio, passes_gate (bool, threshold=0.25) }"
+
+  - name: convergence_scout
+    purpose: "Find ≥3 convergent existing wiki sources that support a generalizable claim — for promotion-candidate evaluation"
+    when_to_use:
+      - "Step 8c (surface_promotion_candidates) — agent suspects a synthesis warrants lesson-tier promotion"
+    invocation_pattern:
+      tools: [wiki_search, wiki_read_page]
+      budget: "2 minutes"
+    output_contract: "list of convergent page paths + rationale per match; bool: convergence-floor (≥3) met"

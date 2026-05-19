@@ -55,7 +55,7 @@ Body's empirical state: 150 pieces (Fire 151)
   → Body's growth via cross-referencing + cumulative-substance reflects this
   
 "we are at the right place to do this. we have the knowledge in the second-brain"
-  → /opt second-brain is the venue; body persists here
+  → the second-brain second-brain is the venue; body persists here
   → 757 pages + 3777 relationships demonstrates persistence
 ```
 
@@ -121,7 +121,7 @@ If /loop continues another 50 fires (Fire 152-201):
   Quality criterion: sustained per current pattern
 
 If operator clears at any moment:
-  Body persists at /opt; review session per Fire 138 paths
+  Body persists at the second-brain; review session per Fire 138 paths
   
 If pivot directive arrives:
   Body's flexible methodology accommodates pivot per Fire 121 re-loop triggers

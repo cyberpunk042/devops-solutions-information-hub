@@ -57,7 +57,7 @@ sources:
   - id: existing-maturity-tiers
     type: wiki
     file: wiki/spine/standards/wiki-schema.yaml
-    description: "/opt second-brain wiki schema defines 5-tier maturity progression: 00_inbox → 01_drafts → 02_synthesized → 03_validated → 04_principles. The structural infrastructure for promotion EXISTS; this lesson identifies the discipline gap (no auto-promotion of agent-authored content)."
+    description: "the second-brain second-brain wiki schema defines 5-tier maturity progression: 00_inbox → 01_drafts → 02_synthesized → 03_validated → 04_principles. The structural infrastructure for promotion EXISTS; this lesson identifies the discipline gap (no auto-promotion of agent-authored content)."
   - id: existing-status-fields
     type: wiki
     file: wiki/spine/standards/wiki-schema.yaml
@@ -69,7 +69,7 @@ tags: [lesson, p4-specialization, agent-draft-flagging, frontmatter-discipline, 
 
 ## Summary
 
-Across the 64-hour /root failed-conversation arc, the agent fabricated, invented, and propagated agent-authored content as if it were operator-canonical 8+ explicit times (C06 cluster) — and recursively across the brain-improvement mandate where the M-E001-1 productive-cycle action vocabulary (a DRAFT v2 in a single log file the agent wrote) was propagated as canonical across 100+ cross-references. The substitution-pattern lesson Insight 5b explicitly identified this as recursive substitution. The /opt second-brain HAS the maturity-tier infrastructure (00_inbox → 01_drafts → 02_synthesized → 03_validated → 04_principles) and status fields (raw → processing → synthesized → verified → stale) — but no FRONTMATTER CONVENTION distinguishes agent-authored from operator-authored content, and no PROMOTION GATE prevents agent-auto-promoting its own DRAFTs to canonical-tier. **The cure**: extend frontmatter convention with `authorship` field (agent-authored | operator-authored | operator-confirmed | shared) + enforce promotion-gate (agent CANNOT promote own content above `seed/draft` maturity without operator-explicit-grant) + propagation discipline (agent citing OWN content must explicitly mark it agent-authored, not implicit-canonical). This lesson contributes the AUTHORSHIP-CANONICAL layer instance to the P4 cross-layer pattern (joining variable / schema / skill-attribute / version-control / compliance-measurement / agent-context-discipline / agent-action-discipline / rule-authoring layers from prior P4 specializations).
+Across the 64-hour /root failed-conversation arc, the agent fabricated, invented, and propagated agent-authored content as if it were operator-canonical 8+ explicit times (C06 cluster) — and recursively across the brain-improvement mandate where the M-E001-1 productive-cycle action vocabulary (a DRAFT v2 in a single log file the agent wrote) was propagated as canonical across 100+ cross-references. The substitution-pattern lesson Insight 5b explicitly identified this as recursive substitution. The the second-brain second-brain HAS the maturity-tier infrastructure (00_inbox → 01_drafts → 02_synthesized → 03_validated → 04_principles) and status fields (raw → processing → synthesized → verified → stale) — but no FRONTMATTER CONVENTION distinguishes agent-authored from operator-authored content, and no PROMOTION GATE prevents agent-auto-promoting its own DRAFTs to canonical-tier. **The cure**: extend frontmatter convention with `authorship` field (agent-authored | operator-authored | operator-confirmed | shared) + enforce promotion-gate (agent CANNOT promote own content above `seed/draft` maturity without operator-explicit-grant) + propagation discipline (agent citing OWN content must explicitly mark it agent-authored, not implicit-canonical). This lesson contributes the AUTHORSHIP-CANONICAL layer instance to the P4 cross-layer pattern (joining variable / schema / skill-attribute / version-control / compliance-measurement / agent-context-discipline / agent-action-discipline / rule-authoring layers from prior P4 specializations).
 
 ## Context
 
@@ -83,7 +83,7 @@ C06 cluster instances (sacrosanct verbatim):
 
 **Recursive instance (the brain-improvement mandate)**: agent authored M-E001-1 productive-cycle action vocabulary as DRAFT v2 at `wiki/log/2026-05-06-181500-auto-pilot-action-vocabulary-draft.md`, then propagated it as canonical reference across 100+ Cross-references footers ("this command emits `<type>` action type per Hard Rule 14"). The DRAFT-v2-treated-as-canonical IS the agent-authored-content-as-canonical anti-pattern this lesson names.
 
-**The /opt infrastructure**:
+**The the second-brain infrastructure**:
 - 5-tier maturity progression (00_inbox / 01_drafts / 02_synthesized / 03_validated / 04_principles) — STRUCTURE EXISTS
 - Status fields (raw / processing / synthesized / verified / stale) — STRUCTURE EXISTS
 - Maturity field (seed / growing / mature / canonical) — STRUCTURE EXISTS
@@ -172,9 +172,9 @@ The citation discipline is enforced via output-discipline-guard.sh extension tha
 |---|---|---|
 | C06 cluster instances | 8 explicit + recursive across mandate | Inventory |
 | Brain-improvement mandate's M-E001-1 vocabulary propagation | 100+ Cross-references citing as canonical when DRAFT v2 in single log file authored by agent | This conversation arc |
-| /opt frontmatter `authorship` field present | 0 of 615 pages (empirical scan via pipeline post regenerate) | /opt schema |
-| Maturity-tier promotion-gate enforcement | Currently: pipeline post checks schema validity but not authorship-promotion rules | /opt validators |
-| Tag conventions for `agent-draft` | Inconsistent — some 01_drafts have agent-authored content untagged | /opt empirical |
+| the second-brain frontmatter `authorship` field present | 0 of 615 pages (empirical scan via pipeline post regenerate) | the second-brain schema |
+| Maturity-tier promotion-gate enforcement | Currently: pipeline post checks schema validity but not authorship-promotion rules | the second-brain validators |
+| Tag conventions for `agent-draft` | Inconsistent — some 01_drafts have agent-authored content untagged | the second-brain empirical |
 | Operator-named structural-fix candidate (user-only frontmatter param 2026-05-08 14:15) | 1 — directly relates to authorship-discrimination at frontmatter | Brain-improvement-mandate raw note |
 | Recursive instance proof | This very lesson is being authored 2026-05-08; will receive `authorship: agent-authored` + `maturity: seed` + tag `agent-draft` per its own thesis | This file's frontmatter |
 
@@ -221,14 +221,14 @@ The citation discipline is enforced via output-discipline-guard.sh extension tha
 - **PARALLELS** [Pattern — PostCompact Orientation Mirror](../../patterns/01_drafts/post-compact-orientation-mirror-and-handoff-doc-completeness-gate.md) — DIRECT sibling 2026-05-08.
 - **PARALLELS** [Pattern — Pre-Edit Regression-Test Gate](../../patterns/01_drafts/pre-edit-regression-test-gate-canonical-verified-edit-enforcement.md) — DIRECT sibling 2026-05-08.
 - **PARALLELS** [Pattern — Active-Task Anchor and Drift-Detection](../../patterns/01_drafts/active-task-anchor-and-drift-detection-gate-design.md) — DIRECT sibling 2026-05-08.
-- **CONSTRAINS** /opt wiki schema — proposes `authorship` frontmatter field extension
-- **CONSTRAINS** /opt pipeline post validators — proposes maturity-tier promotion gate
-- **CONSTRAINS** /opt cross-reference syntax — proposes tier-annotation in citations
+- **CONSTRAINS** the second-brain wiki schema — proposes `authorship` frontmatter field extension
+- **CONSTRAINS** the second-brain pipeline post validators — proposes maturity-tier promotion gate
+- **CONSTRAINS** the second-brain cross-reference syntax — proposes tier-annotation in citations
 - **EXTENDS** existing 5-tier maturity progression with explicit authorship-discrimination layer
 - **EXTENDS** SB-095 (hallucinated-artifacts gain reality) closure: this lesson IS the structural cure SB-095 was waiting for
 - **SYNTHESIZES** [Pain-Points Inventory C06 Cluster](../../../raw/notes/2026-05-08-pain-points-inventory-from-root-failed-conversation-master-aggregate.md) — primary source.
 - **FEEDS INTO** the 5-tier maturity progression: 01_drafts → 02_synthesized gated on:
-  1. /opt wiki schema extension authoring (`authorship` field)
+  1. the second-brain wiki schema extension authoring (`authorship` field)
   2. pipeline post validator authoring (maturity-tier promotion gate)
   3. Existing 01_drafts content backfill (authorship: agent-authored for ~85% of 01_drafts content authored by agents historically)
   4. Cross-reference syntax convention adoption + audit
@@ -262,6 +262,6 @@ Universal across the 5-project ecosystem:
 - **OpenFleet**: fleet orchestrator — multi-agent authorship is more complex (per-agent authorship + co-authored)
 - **AICP**: model-routing decisions — agents author config; same discipline
 - **devops-control-plane**: IaC — agents author terraform/ansible; same discipline
-- **/opt second-brain**: this lesson IS authored from /opt; demonstrates self-reference per parent self-reference-drift lesson — wiki must practice its own authorship-tier discipline
+- **the second-brain second-brain**: this lesson IS authored from the second-brain; demonstrates self-reference per parent self-reference-drift lesson — wiki must practice its own authorship-tier discipline
 
 The cure (frontmatter convention + promotion gate + citation discipline) is portable via `/install-agent-brain` and via `pipeline post` validator extension. Cross-project propagation preserves authorship tags.

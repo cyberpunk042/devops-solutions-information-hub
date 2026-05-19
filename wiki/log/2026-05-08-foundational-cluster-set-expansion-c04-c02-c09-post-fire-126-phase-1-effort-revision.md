@@ -27,7 +27,7 @@ sources:
   - id: p4-principle-canonical
     type: file
     file: CONTEXT.md
-    description: "/opt P4 governing principle: Declarations Aspirational Until Verified; C09 IS the per-instance evidence supporting P4"
+    description: "the second-brain P4 governing principle: Declarations Aspirational Until Verified; C09 IS the per-instance evidence supporting P4"
 tags: [foundational-cluster-set-expansion, c04-c02-c09, phase-1-effort-revision, fire-119-update, day-arc-2026-05-08, multi-day-pain-point-resolution, fire-127]
 ---
 
@@ -146,7 +146,7 @@ Per Fire 114 tier-weighted compliance recomputation:
 - Post-Fire-127: foundational-cluster set 3 (+C09)
 
 Composite-compliance-axis stress-test:
-- Pre: 0% (no foundational-layer wired at /opt)
+- Pre: 0% (no foundational-layer wired at the second-brain)
 - Post-Phase-1 implementation: would reach ~Tier 4 status for 3 axes
 - Body-wide tier-weighted compliance: would shift +5-10% (currently ~58% per Fire 114; post-Phase-1 ~63-68% estimated)
 
@@ -182,7 +182,7 @@ Q-FIRE-127-4: Re-audit non-foundational clusters?
 | Fire 118 P5 candidate principle | C09 enforcement-layer instantiates P5 |
 | Fire 114 composite-compliance recomputation | Phase 1 implementation would shift compliance metric |
 | P4 governing principle | C09 IS the per-instance evidence; P4 + C09 mutually-reinforce |
-| /opt CLAUDE.md HR 7 + learnings.md HR 4 + work-mode.md | Multi-layer existing C09 baseline solutions |
+| the second-brain CLAUDE.md HR 7 + learnings.md HR 4 + work-mode.md | Multi-layer existing C09 baseline solutions |
 | Auto-compact triplet (Fires 105+106+107) | Layer 3 PreToolUse-blocker design pattern transferable to C09 |
 
 ## Forward-anchored: post-C09-implementation re-audit
@@ -207,7 +207,7 @@ C09 is the per-instance evidence for P4 governing principle (already-validated) 
 - Fire 126 C09 per-instance evidence: `wiki/log/2026-05-08-per-instance-pain-point-evidence-c09-status-claim-without-verification-p4-axis-12-instances-verbatim-mapped.md`
 - Fire 115 C18 cross-cutting: `wiki/log/2026-05-08-per-instance-pain-point-evidence-c18-cross-cutting-multi-cluster-intersections-15-instances-verbatim-mapped.md`
 - Fire 118 P5 candidate principle: `wiki/lessons/01_drafts/p5-candidate-defense-in-depth-required-for-cross-cutting-failure-modes-hypothesis.md`
-- /opt CONTEXT.md P4 governing principle
+- the second-brain CONTEXT.md P4 governing principle
 
 ## Tags
 

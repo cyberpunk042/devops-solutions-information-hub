@@ -44,7 +44,7 @@ Per Fire 140 v6 + Fire 139 v2 roadmap: 25+ operator-pending decisions accumulate
 
 ✓ B4: Q2 Epic placement v2.0 vs v2.1 (Fire 110)
    Effort: 1 sentence pick
-   Unblocks: backlog-page authoring at /opt/wiki/backlog/
+   Unblocks: backlog-page authoring at wiki/backlog/
    Recommended: v2.1 (matches post-100-piece-milestone scope)
 
 ✓ B5: Q3 Investigation method (Fire 110)
@@ -60,12 +60,12 @@ Per Fire 140 v6 + Fire 139 v2 roadmap: 25+ operator-pending decisions accumulate
 ```
 ✓ S1: HR 16 hot-path text variant (Fire 112)
    Effort: pick Variant A or B
-   Action: edit /opt/CLAUDE.md + /opt/AGENTS.md
+   Action: edit CLAUDE.md + AGENTS.md
    Recommended: Variant A (concise; matches existing HR style)
 
 ✓ S2: wiki-schema implementation_tier field (Fire 116)
    Effort: confirm field name + applies_to set + backfill strategy
-   Action: edit /opt/wiki/config/wiki-schema.yaml
+   Action: edit wiki/config/wiki-schema.yaml
    Recommended: Option F backfill (on-authoring-only; gradual)
 
 ✓ S3: P5 candidate principle endorsement (Fire 118)

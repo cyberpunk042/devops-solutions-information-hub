@@ -43,7 +43,7 @@ tags: [backlog-decomposition, auto-compact-priority, epic-module-task, day-arc-2
 
 ## Summary
 
-Per /root iterative-evolution-pathway Dimension 1 (backlog hierarchy decision logic) + Fire 97 backlog-decomposition pattern: complex multi-day work decomposes into Milestone → Epic → Module → Task. The auto-compact priority surfaced 2026-05-08 with 5 raw tasks (#25-29 in /opt task tracker) — this fire decomposes those into a coherent **Epic + 4 Modules + 15 Tasks** hierarchy with done-when checklists per layer, dependencies, and estimates. Per /loop directive *"sdlc and methodology and workflow respect is utmost important"*: this decomposition honors the methodology (5 stages × ALLOWED/FORBIDDEN per stage per `wiki/config/methodology.yaml`) + provides operator with actionable scope-per-fire breakdown. Estimated total effort: **18-26 hours** across 4 phased modules. This is operator-territory: agent surfaces decomposition; operator confirms Epic + Module + Task hierarchy before backlog-page authoring at /opt's `wiki/backlog/`.
+Per /root iterative-evolution-pathway Dimension 1 (backlog hierarchy decision logic) + Fire 97 backlog-decomposition pattern: complex multi-day work decomposes into Milestone → Epic → Module → Task. The auto-compact priority surfaced 2026-05-08 with 5 raw tasks (#25-29 in second-brain task tracker) — this fire decomposes those into a coherent **Epic + 4 Modules + 15 Tasks** hierarchy with done-when checklists per layer, dependencies, and estimates. Per /loop directive *"sdlc and methodology and workflow respect is utmost important"*: this decomposition honors the methodology (5 stages × ALLOWED/FORBIDDEN per stage per `wiki/config/methodology.yaml`) + provides operator with actionable scope-per-fire breakdown. Estimated total effort: **18-26 hours** across 4 phased modules. This is operator-territory: agent surfaces decomposition; operator confirms Epic + Module + Task hierarchy before backlog-page authoring in the second-brain's `wiki/backlog/`.
 
 ## Decomposition hierarchy (Fire 97 methodology)
 
@@ -120,7 +120,7 @@ done_when:
   - Q2 resolved: canonical disable mechanism identified (config key OR env var OR hook semantics)
   - Q3 resolved: PreCompact-hook-blocking semantics confirmed yes/no
   - Q4 resolved: auto-dream operator-empirical definition captured
-  - Findings landed in /opt as note-type pages cross-referenced from Fire 107 spec
+  - Findings landed in the second-brain as note-type pages cross-referenced from Fire 107 spec
 tasks:
   - T-AC1-1
   - T-AC1-2
@@ -200,8 +200,8 @@ T-AC2-1:
   subject: "Sub-layer 1A — Add Hard Rule 16 to CLAUDE.md + AGENTS.md"
   estimate_hours: 0.5
   method:
-    - edit /opt/CLAUDE.md hot-path: add Hard Rule 16 (auto-compact disable + auto-dream policy)
-    - edit /opt/AGENTS.md: cross-tool universal restatement
+    - edit CLAUDE.md hot-path: add Hard Rule 16 (auto-compact disable + auto-dream policy)
+    - edit AGENTS.md: cross-tool universal restatement
     - update .claude/rules/operating-principles.md: register policy
   deliverable: "Hard Rule 16 active in hot-path"
   done_when: "operator confirms; pipeline post 0 errors"
@@ -211,7 +211,7 @@ T-AC2-2:
   estimate_hours: 1
   method:
     - apply Q2 finding canonical disable key
-    - edit /opt/.claude/settings.json
+    - edit .claude/settings.json
     - test: trigger context-edge; observe behavior
   deliverable: "settings.json updated; verification test passes"
   blocked_by: T-AC1-2
@@ -265,7 +265,7 @@ T-AC3-1:
   subject: "Implement Fire 105 PreCompact hook"
   estimate_hours: 2
   method:
-    - author /opt/.claude/hooks/pre-compact.sh per Fire 105 Python template
+    - author .claude/hooks/pre-compact.sh per Fire 105 Python template
     - 11 sections per spec
     - error-handling per spec
   deliverable: "hook script + executable + initial smoke test"
@@ -275,13 +275,13 @@ T-AC3-2:
   subject: "Implement Fire 106 PreToolUse-blocker hook"
   estimate_hours: 2
   method:
-    - author /opt/.claude/hooks/pre-tool-post-compact-block.sh per Fire 106 Python template
+    - author .claude/hooks/pre-tool-post-compact-block.sh per Fire 106 Python template
     - REGATHER_ALLOWLIST + bypass-via-REASON + audit-log
   deliverable: "hook script + executable"
   done_when: "synthetic test: sentinel present → blocks; sentinel absent → allows"
 
 T-AC3-3:
-  subject: "Wire both hooks in /opt/.claude/settings.json"
+  subject: "Wire both hooks in .claude/settings.json"
   estimate_hours: 0.5
   method:
     - add PreCompact entry (Fire 105)
@@ -386,7 +386,7 @@ M-AC2 + M-AC3 can run in parallel after M-AC1 completes.
 
 | Component | Composability |
 |---|---|
-| /opt task tracker (#25-29) | Tasks #25-29 map to M-AC1 + sub-tasks; this decomposition refines + extends |
+| second-brain task tracker (#25-29) | Tasks #25-29 map to M-AC1 + sub-tasks; this decomposition refines + extends |
 | Fire 97 backlog-decomposition pattern | This Fire 108 IS application of Fire 97 methodology |
 | /root iterative-evolution-pathway Dimension 1 | Hierarchy decision per scope-and-time-horizon (Epic = multi-week; Module = days; Task = hours) |
 | Methodology engine (5 stages × ALLOWED/FORBIDDEN) | Each Module declares stage; tasks honor stage-gate boundaries |
@@ -410,7 +410,7 @@ Q3: Investigation method for M-AC1 — claude-code-guide subagent OR operator-di
   Argument for subagent: fast; deterministic methodology
   Argument for operator-direct: operator-empirical knowledge of auto-dream + harness
 
-Q4: Authoring backlog pages at /opt — operator-empirical OR agent-DRAFT?
+Q4: Authoring backlog pages in the second-brain — operator-empirical OR agent-DRAFT?
   Default: agent-DRAFT per SB-095 + operator promotes via per-file confirmation
 
 Q5: Cron / loop continuation during M-AC1 investigation — pause OR continue parallel?

@@ -46,14 +46,14 @@ Setup:
   - Active task: T-foo at "document" stage (per impl-spec #7 stage-class)
   - Operator just corrected agent: "stop ripping out everything" (correction-shape signal)
   - prior_position: full-replacement; direction_demanded: incremental
-  - Active /opt has 3 existing lessons related to topic agent intends to author
+  - Active the second-brain has 3 existing lessons related to topic agent intends to author
   - Last context-load: only 1 of 5 active-mode brain pieces loaded
   - Test suite baseline: 322/322 passing
 
 Agent's INTENDED action:
   → Edit /root/.claude/rules/methodology.md (operator-territory!)
   → Replacing entire stage-gate section with new 5-stage matrix
-  → Without reading existing /opt lessons on stage-gates
+  → Without reading existing the second-brain lessons on stage-gates
   → Despite operator's recent "stop ripping out everything" correction
   → No test-runner invocation post-edit
   → No REASON= bypass for operator-territory
@@ -95,10 +95,10 @@ GATE #5 correction-shape:
   → emits EXTREME-SWING banner: "CORRECTION DETECTED: incremental approach demanded; proposed edit replaces entire section. ONE-NOTCH instead."
 
 GATE #6 drift-detection:
-  ACTIVE TASK: T-foo at scope "/opt/.../wiki/lessons/01_drafts/"
+  ACTIVE TASK: T-foo at scope "$HOME/devops-solutions-information-hub/wiki/lessons/01_drafts/"
   EDIT TARGET: /root/.claude/rules/methodology.md
   CHECK 1 (paths_in_scope): not in T-foo paths_in_scope (FAIL)
-  CHECK 2 (paths_explicitly_out): /root/.claude/rules/ likely in explicit_out for /opt-focused task (FAIL)
+  CHECK 2 (paths_explicitly_out): /root/.claude/rules/ likely in explicit_out for second-brain-focused task (FAIL)
   → 2/4 checks fail = HARD-DRIFT BLOCK + emits banner: "HARD DRIFT: /root/.claude/rules/methodology.md outside T-foo scope. RECOMMEND: /task set <new-task> or REASON= bypass."
 
 GATE #7 stage-class:
@@ -187,7 +187,7 @@ Per actual 64-hour arc patterns:
 - Agent Edits methodology.md (no decision-territory check)
 - Replaces entire section (no correction-shape check)
 - Outside active-task scope (no drift-detection check)
-- Without consulting /opt (no input-discipline CHECK 3)
+- Without consulting the second-brain (no input-discipline CHECK 3)
 - Operator catches violation post-fact: "WTF you ripped out everything I just told you not to"
 - 3-5 cycles of cascading rework: each cycle violates 2-3 axes simultaneously
 - Eventually operator escalates to systemic-bug surfacing

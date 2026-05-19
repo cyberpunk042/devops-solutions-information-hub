@@ -51,7 +51,7 @@ The pattern realizes the **active orientation** principle: behavior requires dir
 | Project | Status | Files | Validation |
 |---|---|---|---|
 | **root-ghostproxy** | First implementation, validated 2026-05-05 | `/root/.claude/hooks/session-orient.sh`, `/root/.claude/commands/orient.md` (21-step chain), structured ORIENT REPORT format | Empirical: pre-fix session "Hi"→"What would you like to work on?" (broken-and-idle); post-fix session "Hi"→agent cites SessionStart hook + references BOOTSTRAP.md + waits for work directive |
-| devops-solutions-information-hub (/opt second-brain) | Adoption candidate (not yet adopted) | Has `session-start.sh` (security envelope) but no `/orient` command and no ORIENT REPORT format | Operator-stated desire 2026-05-05 ("such as now") |
+| devops-solutions-information-hub (the second-brain second-brain) | Adoption candidate (not yet adopted) | Has `session-start.sh` (security envelope) but no `/orient` command and no ORIENT REPORT format | Operator-stated desire 2026-05-05 ("such as now") |
 | OpenArms | Adoption candidate | — | — |
 | OpenFleet | Adoption candidate | — | — |
 | AICP | Adoption candidate | — | — |
@@ -186,7 +186,7 @@ The /orient chain content is NOT one-size-fits-all. Each target project must ada
 |---|---|
 | Intel-gathering steps (the N steps in /orient) | Project-specific files to read; project-specific verifications to run |
 | ORIENT REPORT format | Headings + bullets reflecting the project's primary state surfaces |
-| Brain pieces to load | Per-project list (e.g., /opt would load super-model + 4 principles + methodology vs /root loading SFIF stage + modules + governance) |
+| Brain pieces to load | Per-project list (e.g., the second-brain would load super-model + 4 principles + methodology vs /root loading SFIF stage + modules + governance) |
 | Mode awareness | If modes adopted, /orient detects active mode + loads mode brain piece |
 | Session-orient directive content | Per-project banner text (project name, type, group, doctrine) |
 
@@ -202,7 +202,7 @@ The /orient chain content is NOT one-size-fits-all. Each target project must ada
 ### Currently desired by
 
 - [x] root-ghostproxy — canonical first implementation (validated)
-- [x] devops-solutions-information-hub (/opt second-brain) — adopted 2026-05-05; behavioral verification pending next session. See `wiki/log/2026-05-05-orient-pair-adoption-decision.md`
+- [x] devops-solutions-information-hub (the second-brain second-brain) — adopted 2026-05-05; behavioral verification pending next session. See `wiki/log/2026-05-05-orient-pair-adoption-decision.md`
 - [ ] OpenArms — adoption candidate
 - [ ] OpenFleet — adoption candidate
 - [ ] AICP — adoption candidate

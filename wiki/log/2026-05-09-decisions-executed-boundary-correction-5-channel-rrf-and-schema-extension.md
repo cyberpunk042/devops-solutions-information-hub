@@ -16,7 +16,7 @@ sources:
   - id: root-ghostproxy-readme
     type: directive
     file: /tmp/rgp-readme.md
-    description: "Operator-explicit transient lookup of root-ghostproxy README (https://github.com/cyberpunk042/root-ghostproxy) confirming /opt-vs-root boundary: root = harness/ecosystem at $HOME/global level (hooks/skills/commands/statusline/IPS); /opt = knowledge (lessons/patterns/principles/syntheses)"
+    description: "Operator-explicit transient lookup of root-ghostproxy README (https://github.com/cyberpunk042/root-ghostproxy) confirming second-brain-vs-root boundary: root = harness/ecosystem at $HOME/global level (hooks/skills/commands/statusline/IPS); the second-brain = knowledge (lessons/patterns/principles/syntheses)"
   - id: 5-channel-rrf-impl
     type: file
     file: tools/wiki_search.py
@@ -32,7 +32,7 @@ tags: [session, log, "2026-05-09", decisions-executed, boundary-correction-root-
 
 ## Summary
 
-Operator-driven decision-resolution session covering the 9 pending decisions surfaced in [the prior 2026-05-08 session log](2026-05-08-strong-loop-arc-ingest-synthesize-propagate-distill-and-operator-decisions-pending.md). **5 decisions executed, 3 defer-tracked, 1 boundary-correction** that clarifies the root-ghostproxy ↔ /opt-second-brain ownership boundary (root = harness/ecosystem; /opt = knowledge — never overlap). **NEW infrastructure landed**: 5-channel Reciprocal Rank Fusion retrieval (`tools/wiki_search.py`, ~340 LOC pure Python) + `wiki-schema.yaml` extension (+7 source types + 6 verbs, schema-follows-usage). **NEW operator-stated direction captured**: AVX512 machine plan with custom strategy (details discussed later) added to Custom-Tailored Model Group concept's hardware-pending flag. **State**: 842 pages (was 614 at session start; +228 — substantial sync from operator-pushed content between sessions), 3,918 relationships, 0 validation errors from this session's edits (3 pre-existing operator-content errors flagged for operator-augmentation), lint orphan_pages now 0. **Boundary correction (sacrosanct)**: I conflated "root-propagation includes lesson-formatting standards" — operator corrected: *"there is no standards in root-ghostproxy... I never said that... its global hooks, statusline profiles, skills, commands, etc... the harness and ecosystem... the $Home / user profile and global configuration that affect all project... there is nothing about knowledge... we absolutely never will replace the second-brain like this... why would you even think that... we are in the place of knowledge."* Lesson formatting is /opt-territory; root won't touch knowledge.
+Operator-driven decision-resolution session covering the 9 pending decisions surfaced in [the prior 2026-05-08 session log](2026-05-08-strong-loop-arc-ingest-synthesize-propagate-distill-and-operator-decisions-pending.md). **5 decisions executed, 3 defer-tracked, 1 boundary-correction** that clarifies the root-ghostproxy ↔ second-brain ownership boundary (root = harness/ecosystem; the second-brain = knowledge — never overlap). **NEW infrastructure landed**: 5-channel Reciprocal Rank Fusion retrieval (`tools/wiki_search.py`, ~340 LOC pure Python) + `wiki-schema.yaml` extension (+7 source types + 6 verbs, schema-follows-usage). **NEW operator-stated direction captured**: AVX512 machine plan with custom strategy (details discussed later) added to Custom-Tailored Model Group concept's hardware-pending flag. **State**: 842 pages (was 614 at session start; +228 — substantial sync from operator-pushed content between sessions), 3,918 relationships, 0 validation errors from this session's edits (3 pre-existing operator-content errors flagged for operator-augmentation), lint orphan_pages now 0. **Boundary correction (sacrosanct)**: I conflated "root-propagation includes lesson-formatting standards" — operator corrected: *"there is no standards in root-ghostproxy... I never said that... its global hooks, statusline profiles, skills, commands, etc... the harness and ecosystem... the $Home / user profile and global configuration that affect all project... there is nothing about knowledge... we absolutely never will replace the second-brain like this... why would you even think that... we are in the place of knowledge."* Lesson formatting is second-brain-territory; root won't touch knowledge.
 
 ## Verbatim Operator Directives This Turn (Sacrosanct)
 
@@ -48,7 +48,7 @@ Operator-driven decision-resolution session covering the 9 pending decisions sur
 
 > *"H. Yes."* (schema extension authorized)
 
-> *"I: Do not conflate things... what is the link to lessons?... there is no standards in root-ghostproxy... I never said that... its global hooks, statusline profiles, skills, commands, etc... the harness and ecosystem... the $Home / user profile and global configuration that affect all project... there is nothing about knowledge... we absolutely never will replace the second-brain like this... why would you even think that... we are in the place of knowledge."* (boundary correction — root vs /opt)
+> *"I: Do not conflate things... what is the link to lessons?... there is no standards in root-ghostproxy... I never said that... its global hooks, statusline profiles, skills, commands, etc... the harness and ecosystem... the $Home / user profile and global configuration that affect all project... there is nothing about knowledge... we absolutely never will replace the second-brain like this... why would you even think that... we are in the place of knowledge."* (boundary correction — root vs the second-brain)
 
 > *"You can look biefly at it too, but dont exagerate we are over 3/4 of context use: https://github.com/cyberpunk042/root-ghostproxy"* (transient lookup authorization with context-budget caveat)
 
@@ -126,7 +126,7 @@ Pending-review status: 9 days resolved.
 | **D** Cloudflare Mesh for root-ghostproxy | *"if the needs present themselves I guess, lets make sure we can find those if we need"* — already cross-referenced through Trust-Layer + Mesh synthesis |
 | **F** Cloudflare AI Platform BYOM via Replicate Cog | *"That's cool right? it would fit well with my AVX512 idea too, but we are not there I guess"* — note AVX512 alignment |
 
-## Boundary Correction (1 of 9) — Root-ghostproxy ↔ /opt-second-brain
+## Boundary Correction (1 of 9) — Root-ghostproxy ↔ second-brain
 
 > [!warning] **Sacrosanct correction (operator 2026-05-09, verbatim)**
 >
@@ -135,7 +135,7 @@ Pending-review status: 9 days resolved.
 | Layer | Owner | Examples |
 |---|---|---|
 | **OS / harness / ecosystem** | root-ghostproxy | global hooks · skills · commands · statusline profiles · `~/.claude/settings.json` · IPS modules (suricata/polarproxy) · system policy · cross-AI-tool deny-set · fail-closed tamper detection · network bridge (transparent L2) |
-| **Knowledge** | /opt second-brain (here) | lessons · patterns · principles · syntheses · methodology engine · wiki content · wiki-schema · admonition formatting standards · maturity ladder · cross-references |
+| **Knowledge** | the second-brain second-brain (here) | lessons · patterns · principles · syntheses · methodology engine · wiki content · wiki-schema · admonition formatting standards · maturity ladder · cross-references |
 
 **The two never overlap.** Confirmed by transient lookup of root-ghostproxy README (https://github.com/cyberpunk042/root-ghostproxy):
 
@@ -144,13 +144,13 @@ Pending-review status: 9 days resolved.
 - $HOME-installable (not just root user); same project deployable to any host
 - Currently barely-started (operator-stated 2026-05-04)
 
-**Direct implication for Decision I**: lesson-formatting standards are /opt-territory hygiene; root won't touch knowledge content. The 26 unstyled lessons can be reformatted unilaterally as /opt hygiene.
+**Direct implication for Decision I**: lesson-formatting standards are second-brain-territory hygiene; root won't touch knowledge content. The 26 unstyled lessons can be reformatted unilaterally as the second-brain hygiene.
 
 ## TODO for Fresh Post-Compact Session
 
 > [!info] **Decision I deferred to fresh session** (per context-budget conservation 2026-05-09)
 >
-> Reformatting the 26 unstyled lessons with admonition callouts is /opt hygiene operator-confirmed safe to do. Estimated work: ~26 lessons × ~3-5 admonition wraps each = ~100 small edits + 1 pipeline post. Better executed with full context budget.
+> Reformatting the 26 unstyled lessons with admonition callouts is the second-brain hygiene operator-confirmed safe to do. Estimated work: ~26 lessons × ~3-5 admonition wraps each = ~100 small edits + 1 pipeline post. Better executed with full context budget.
 >
 > **Pickup steps for fresh session**:
 > 1. Run `.venv/bin/python -m tools.lint --report` to refresh the unstyled_pages list (count may have changed if root-propagation has happened)
@@ -180,7 +180,7 @@ Pending-review status: 9 days resolved.
 | Item | Type | Action |
 |---|---|---|
 | 3 pre-existing validation errors in operator-authored content | Operator-content augmentation | (a) `wiki/log/2026-05-08-PRE-COMPACT-HANDOFF-MANUAL-...md` needs `## Summary`; (b) `wiki/patterns/01_drafts/finish-smoothly-custom-idempotent-pre-compact-handoff-...md` needs `## When Not To` + Source 1 missing url/file/project |
-| Decision I — 26 unstyled lessons reformat | /opt hygiene (deferred to fresh session) | Pickup steps documented above |
+| Decision I — 26 unstyled lessons reformat | the second-brain hygiene (deferred to fresh session) | Pickup steps documented above |
 | AVX512 machine plan details | Operator-decision | Discuss when ready |
 | root-ghostproxy strategy + SDD + enforcement artifacts | Operator-driven multi-arc | Operator-stated post-compact plan |
 

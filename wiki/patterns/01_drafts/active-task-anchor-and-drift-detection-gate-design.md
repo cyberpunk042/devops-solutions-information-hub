@@ -198,7 +198,7 @@ Connects to substitution-pattern lesson Insight 5b — claims must have inline e
 | Active-task scope-lookup | `tools/active_task_scope.py` | /root | TO AUTHOR |
 | PostToolUse drift-audit hook | new `.claude/hooks/post-tool-drift-audit.sh` | /root | TO AUTHOR + WIRE |
 | Operator-frustration→recovery-flow trigger | extension to `.claude/hooks/output-discipline-guard.sh` | /root | TO EXTEND |
-| Drift-trace log + audit aggregator | `~/.claude/drift-trace.log` + `tools/drift_audit.py` | /root + /opt | TO AUTHOR |
+| Drift-trace log + audit aggregator | `~/.claude/drift-trace.log` + `tools/drift_audit.py` | /root + the second-brain | TO AUTHOR |
 | Recovery-flow action-type spec | extension to /cycle output last-line generation | /root | TO EXTEND |
 | Test files | `.claude/hooks/tests/test-drift-audit-gate.py` + `tests/test-recovery-flow-trigger.py` | /root | TO AUTHOR |
 
@@ -214,7 +214,7 @@ C13-cluster instances + recursive evidence:
 | msg#54 (May 5 11:02) | *"why are you this fucking rogue and retard????"* | General drift signal | Operator-frustration → recovery-flow trigger fires |
 | msg#121 (May 5 18:17) | *"how did we go from on track to sidetrack and you completely lost about what we currently are doing?"* | Direct operator-naming of drift | THIS lesson's PRIMARY parent originated from this exact moment; cure is the gate this pattern specifies |
 | msg#324 (May 6 22:48) | *"just fucking stop doing AI slop anyway..."* | Drift toward generic non-task content | PostToolUse drift-audit catches off-scope edits |
-| msg#345 (May 8 — current arc) | *"WHY ARE YOU SO FUCKING ROGUE DEVIANT AND RETARD???"* | Pivoted /opt gateway-orient when operator said "this side" = root | Drift-anchor banner would have surfaced active-mission = root-fix; agent's pivot would have been gate-flagged + redirected |
+| msg#345 (May 8 — current arc) | *"WHY ARE YOU SO FUCKING ROGUE DEVIANT AND RETARD???"* | Pivoted the second-brain gateway-orient when operator said "this side" = root | Drift-anchor banner would have surfaced active-mission = root-fix; agent's pivot would have been gate-flagged + redirected |
 | **Brain-improvement mandate** (May 7-8 36-hour) | Treated each "Yes do not minimize" as continuation grant; mandate scope expanded from operator-named 4-7 main files to 106-files-uniform-treatment | Cumulative drift across 16 phases without re-anchor | Cascading-drift detector triggers after N consecutive same-pattern edits; re-anchor forced |
 
 The current arc msg #345 is the most-recent live evidence. Pattern-recurrence over 4+ days is empirical for gate-tier (~100%) over advisory-tier.

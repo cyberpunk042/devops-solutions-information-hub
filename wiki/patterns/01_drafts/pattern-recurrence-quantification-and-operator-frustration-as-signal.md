@@ -151,7 +151,7 @@ def aggregate_recurrence(sessions_dir) -> dict:
     }
 ```
 
-Aggregator output is itself a /opt second-brain consumable — `wiki/log/<ts>-recurrence-aggregation.md` generated periodically (daily/weekly).
+Aggregator output is itself a the second-brain second-brain consumable — `wiki/log/<ts>-recurrence-aggregation.md` generated periodically (daily/weekly).
 
 ### 4. Recurrence-Threshold Escalation Trigger (enforcement layer)
 
@@ -188,7 +188,7 @@ Triggered events route to:
 
 ### 5. Pattern-Health Dashboard (governance layer)
 
-Periodic /opt second-brain consumable — `wiki/log/<ts>-pattern-health-dashboard.md`:
+Periodic the second-brain second-brain consumable — `wiki/log/<ts>-pattern-health-dashboard.md`:
 
 ```
 PATTERN-HEALTH DASHBOARD <ts>
@@ -231,13 +231,13 @@ Dashboard is consumable by /cycle's SB-tracker iteration (per C12 sibling patter
 
 | Component | Implementation File | Project | Status |
 |---|---|---|---|
-| Per-session recurrence counter | `~/.claude/recurrence-counters/<sid>.json` + emitter API | /root + /opt | TO AUTHOR |
+| Per-session recurrence counter | `~/.claude/recurrence-counters/<sid>.json` + emitter API | /root + the second-brain | TO AUTHOR |
 | Operator-frustration quantification | extension to `.claude/hooks/output-discipline-guard.sh` (existing escalation-detector → score + counter) | /root | TO EXTEND |
-| Cross-session aggregator | `tools/recurrence_aggregator.py` | /root + /opt | TO AUTHOR |
-| Recurrence-threshold trigger | `tools/recurrence_threshold.py` | /root + /opt | TO AUTHOR |
-| Pattern-health dashboard generator | `tools/pattern_health_dashboard.py` | /opt (primary consumer); /root (data source) | TO AUTHOR |
+| Cross-session aggregator | `tools/recurrence_aggregator.py` | /root + the second-brain | TO AUTHOR |
+| Recurrence-threshold trigger | `tools/recurrence_threshold.py` | /root + the second-brain | TO AUTHOR |
+| Pattern-health dashboard generator | `tools/pattern_health_dashboard.py` | the second-brain (primary consumer); /root (data source) | TO AUTHOR |
 | Threshold-trigger wiring | mode-enforcement banner extension + SB-tracker auto-create | /root | TO WIRE |
-| Test files | `.claude/hooks/tests/test-recurrence-counter.py` + `tests/test-aggregator-thresholds.py` | /root + /opt | TO AUTHOR |
+| Test files | `.claude/hooks/tests/test-recurrence-counter.py` + `tests/test-aggregator-thresholds.py` | /root + the second-brain | TO AUTHOR |
 
 All 7 components are forward-anchors — design specified here; authoring + tests-passing is the promotion-to-02_synthesized gate.
 
@@ -257,7 +257,7 @@ C15-cluster instances + recursive evidence:
 ## When To Apply
 
 - **When designing UserPromptSubmit hooks** — extend output-discipline-guard.sh with quantification beyond detection
-- **When designing /opt audit aggregators** — `tools/recurrence_aggregator.py` reads per-session counters
+- **When designing the second-brain audit aggregators** — `tools/recurrence_aggregator.py` reads per-session counters
 - **When operator-frustration sustained-elevation triggers** — automatic SB-creation + operator-attention surface
 - **When auditing pattern-fix effectiveness** — compare pre-fix vs post-fix recurrence rates per session
 - **When evaluating sister-project pattern-health** — pattern deploys via `/install-agent-brain`; sister projects emit per-session counters; aggregator centralizes
@@ -309,7 +309,7 @@ The 7 sibling-pattern audit-emitters + this pattern's aggregator form the compre
 | **Composes with all sibling audit-emitters** | C03/C05/C08/C10/C12/C13/C14 each emit per-session metrics; this aggregates them |
 | **Cross-session view** | Beyond single-session — recurrence patterns visible only at multi-session scale |
 | **Validates pattern-fixes** | Pre-fix vs post-fix recurrence-rate is the cure-effectiveness measurement |
-| **Sister-project portable** | Deploys via `/install-agent-brain`; cross-project aggregation possible at /opt |
+| **Sister-project portable** | Deploys via `/install-agent-brain`; cross-project aggregation possible at the second-brain |
 
 ## Relationships
 
@@ -331,7 +331,7 @@ The 7 sibling-pattern audit-emitters + this pattern's aggregator form the compre
 - **PARALLELS** [Lesson — Agent-Context-Discipline Is Aspirational](../../lessons/01_drafts/agent-context-discipline-is-aspirational-without-enforcement-gates-not-reading-what-exists.md) — DIRECT sibling 2026-05-08.
 - **PARALLELS** [Lesson — Conflation-Detection at Hook Layer](../../lessons/01_drafts/conflation-detection-at-hook-layer-the-rename-strategy-generalized.md) — DIRECT sibling 2026-05-08.
 - **CONSTRAINS** /root/.claude/hooks/output-discipline-guard.sh — extension with frustration-quantification beyond detection
-- **CONSTRAINS** /opt /tools/* (audit suite) — new aggregator tools
+- **CONSTRAINS** the second-brain /tools/* (audit suite) — new aggregator tools
 - **EXTENDS** anti-minimizing-systemic-bug-counts at runtime layer (count-honesty becomes runtime-counter)
 - **SYNTHESIZES** [Pain-Points Inventory C15 Cluster](../../../raw/notes/2026-05-08-pain-points-inventory-from-root-failed-conversation-master-aggregate.md) — primary source.
 - **FEEDS INTO** the 5-tier maturity progression: 01_drafts → 02_synthesized gated on:

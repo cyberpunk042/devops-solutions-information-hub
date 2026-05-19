@@ -11,7 +11,7 @@ sources:
   - id: multi-project-ecosystem-index
     type: wiki
     file: wiki/patterns/01_drafts/multi-project-ecosystem-index-pattern-5-project-propagation-surface-post-tier-3.md
-    description: "Sibling — ecosystem propagation surface; this preview shows what /opt spine looks like post-promotion"
+    description: "Sibling — ecosystem propagation surface; this preview shows what the second-brain spine looks like post-promotion"
   - id: modelize-proposal-1-skills-commands-hooks
     type: wiki
     file: wiki/log/2026-05-08-modelize-extension-proposal-skills-commands-hooks-with-13-gate-composition.md
@@ -35,7 +35,7 @@ tags: [canonical-spine-preview, post-promotion, spine, super-model, 16-models, d
 
 ## Summary
 
-This preview shows what /opt second-brain canonical-spine would look like POST-PROMOTION of the 4 modelize proposals (extending model-skills-commands-hooks / model-quality-failure-prevention / model-claude-code / super-model). Per substitution-pattern Insight 5b: modelize proposals alone are partial — preview must show concrete applied state to operator-empirical confirm warrant. This piece closes the canonical-spine-preview gap by surfacing what the spine WOULD look like with extensions applied.
+This preview shows what the second-brain second-brain canonical-spine would look like POST-PROMOTION of the 4 modelize proposals (extending model-skills-commands-hooks / model-quality-failure-prevention / model-claude-code / super-model). Per substitution-pattern Insight 5b: modelize proposals alone are partial — preview must show concrete applied state to operator-empirical confirm warrant. This piece closes the canonical-spine-preview gap by surfacing what the spine WOULD look like with extensions applied.
 
 ## Pre-promotion vs post-promotion comparison
 
@@ -132,7 +132,7 @@ If 3+ sister-projects sustained ≥85% composite-compliance for axis Y for 30+ d
 
 ## Spine structural change preview (folder reorganization)
 
-**Pre-promotion** (current `/opt/.../wiki/spine/`):
+**Pre-promotion** (current `$HOME/devops-solutions-information-hub/wiki/spine/`):
 ```
 wiki/spine/
 ├── super-model/
@@ -213,7 +213,7 @@ Per piece #18 promotion-mechanism: empirical evidence is the gate. If post-promo
 ## Cross-references update preview
 
 Per piece #59 cross-reference validation matrix: 0 orphans currently. Post-promotion, the 67-piece body becomes inter-referencible at canonical tier. Cross-references in tier-3 pieces:
-- Internal cross-references (within /opt) — already validated
+- Internal cross-references (within the second-brain) — already validated
 - /root cross-references — operator-territory; standardize proposals must be applied for /root rule extensions
 - Sister-project cross-references — activate post-tier-3 propagation per Fire 69 ecosystem index
 

@@ -108,7 +108,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash /opt/devops-solutions-information-hub/.claude/hooks/pre-webfetch-corpus-check.sh",
+            "command": "bash ${CLAUDE_PROJECT_DIR}/.claude/hooks/pre-webfetch-corpus-check.sh",
             "timeout": 5
           }
         ]
@@ -118,7 +118,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash /opt/devops-solutions-information-hub/.claude/hooks/pre-bash.sh",
+            "command": "bash ${CLAUDE_PROJECT_DIR}/.claude/hooks/pre-bash.sh",
             "timeout": 5
           }
         ]
@@ -129,12 +129,12 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash /opt/devops-solutions-information-hub/.claude/hooks/session-start.sh",
+            "command": "bash ${CLAUDE_PROJECT_DIR}/.claude/hooks/session-start.sh",
             "timeout": 10
           },
           {
             "type": "command",
-            "command": "python3 /opt/devops-solutions-information-hub/.claude/hooks/session-orient.sh",
+            "command": "python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/session-orient.sh",
             "timeout": 10
           }
         ]
@@ -145,12 +145,12 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash /opt/devops-solutions-information-hub/.claude/hooks/post-compact.sh",
+            "command": "bash ${CLAUDE_PROJECT_DIR}/.claude/hooks/post-compact.sh",
             "timeout": 10
           },
           {
             "type": "command",
-            "command": "python3 /opt/devops-solutions-information-hub/.claude/hooks/post-orient.sh",
+            "command": "python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/post-orient.sh",
             "timeout": 10
           }
         ]
