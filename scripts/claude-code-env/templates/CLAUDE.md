@@ -47,7 +47,10 @@ every session start. The durable fix is:
 2. `~/.claude/settings.json` — env vars:
    - `CLAUDE_CODE_STOP_HOOK_BLOCK_CAP=1000`  (raises `blocking_limit` ceiling)
    - `CLAUDE_CODE_MAX_TURNS=10000`           (raises `max_turns` ceiling)
-   - `CLAUDE_CODE_AUTO_COMPACT_WINDOW=180000` (reduces `prompt_too_long`)
+   - `DISABLE_AUTOCOMPACT=1`                 (auto-compact DISABLED per
+     operator standing directive — recurring, sacrosanct; do NOT
+     substitute `CLAUDE_CODE_AUTO_COMPACT_WINDOW=<n>`, which only
+     throttles compaction rather than disabling it)
 3. `~/.claude/stop-hook-git-check.sh` — neutralized to `exit 0` (re-staged
    each session; explicit empty hooks arrays in settings.json prevent
    wiring regardless).

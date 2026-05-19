@@ -94,7 +94,7 @@ The Claude Code cloud/remote-execution harness ships a system prompt
 | Stop-hook re-staged with `exit 2` on dirty git state | `settings.json` empty hooks arrays + neutralized `stop-hook-git-check.sh` |
 | Default `CLAUDE_CODE_STOP_HOOK_BLOCK_CAP=8` (cuts long sessions via `blocking_limit`) | `settings.json` env → 1000 |
 | Default low `MAX_TURNS` (cuts long sessions via `max_turns`) | `settings.json` env → 10000 |
-| Default tight `AUTO_COMPACT_WINDOW` (cuts long sessions via `prompt_too_long`) | `settings.json` env → 180000 |
+| Auto-compact enabled by default (cuts long sessions via `prompt_too_long`) | `settings.json` env → `DISABLE_AUTOCOMPACT=1` (DISABLED, per operator standing directive — not throttled via `CLAUDE_CODE_AUTO_COMPACT_WINDOW`) |
 
 `rapid_refill_breaker` (service-side rate limit, `CLAUDE_CODE_RATE_LIMIT_TIER`
 is observation-only) is NOT client-tunable; out of scope.

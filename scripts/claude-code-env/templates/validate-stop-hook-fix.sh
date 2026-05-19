@@ -15,9 +15,11 @@
 #   3. CLAUDE_CODE_STOP_HOOK_BLOCK_CAP is ≥1000 in settings.json.
 #   4. CLAUDE_CODE_MAX_TURNS is set (≥10000 recommended) — prevents
 #      `max_turns` stop-reason cutting long sessions short.
-#   5. CLAUDE_CODE_AUTO_COMPACT_WINDOW is set (≥180000 recommended) —
-#      reduces `prompt_too_long` stop-reason by triggering compaction
-#      earlier rather than hitting the context-window wall.
+#   5. DISABLE_AUTOCOMPACT=1 is set — auto-compact is DISABLED per
+#      operator directive (verbatim, recurring): auto-compact must be
+#      off, not throttled. Setting CLAUDE_CODE_AUTO_COMPACT_WINDOW to a
+#      large value only delays compaction; the correct posture is
+#      disable.
 #
 # Note on `rapid_refill_breaker` stop-reason: service-side rate limit;
 # `CLAUDE_CODE_RATE_LIMIT_TIER` is observation-only, not client-tunable.
@@ -43,7 +45,6 @@ readonly SETTINGS="${HOME}/.claude/settings.json"
 readonly ORPHAN="${HOME}/.claude/stop-hook-git-check.sh"
 readonly REQUIRED_CAP=1000
 readonly RECOMMENDED_MAX_TURNS=10000
-readonly RECOMMENDED_COMPACT_WINDOW=180000
 
 mode="human"
 quiet=false
@@ -152,21 +153,26 @@ else
   check4_detail="configured=${configured_turns:-MISSING}; live=${live_turns:-unset}; expected ≥${RECOMMENDED_MAX_TURNS}"
 fi
 
-# --- Check 5: CLAUDE_CODE_AUTO_COMPACT_WINDOW set ≥180000 ---
+# --- Check 5: DISABLE_AUTOCOMPACT=1 (auto-compact DISABLED, not throttled) ---
 check5_pass=false
 check5_detail=""
-configured_window=$(jq -r '.env.CLAUDE_CODE_AUTO_COMPACT_WINDOW // ""' \
-                    "${SETTINGS}" 2>&1)
-live_window="${CLAUDE_CODE_AUTO_COMPACT_WINDOW:-}"
-if [ -n "${configured_window}" ] && \
-   [ "${configured_window}" -ge "${RECOMMENDED_COMPACT_WINDOW}" ] 2>/dev/null; then
+configured_disable=$(jq -r '.env.DISABLE_AUTOCOMPACT // ""' \
+                     "${SETTINGS}" 2>&1)
+live_disable="${DISABLE_AUTOCOMPACT:-}"
+legacy_window=$(jq -r '.env.CLAUDE_CODE_AUTO_COMPACT_WINDOW // ""' \
+                "${SETTINGS}" 2>&1)
+if [ -n "${legacy_window}" ]; then
+  check5_detail="CLAUDE_CODE_AUTO_COMPACT_WINDOW=${legacy_window} present \
+— that only throttles compaction; operator directive is DISABLE_AUTOCOMPACT=1. \
+Remove the legacy key."
+elif [ "${configured_disable}" = "1" ] || [ "${configured_disable}" = "true" ]; then
   check5_pass=true
-  check5_detail="configured=${configured_window} (≥${RECOMMENDED_COMPACT_WINDOW})"
-  if [ -n "${live_window}" ] && [ "${live_window}" != "${configured_window}" ]; then
-    check5_detail="${check5_detail}; WARN live env=${live_window} differs — settings cached"
+  check5_detail="DISABLE_AUTOCOMPACT=${configured_disable} (auto-compact disabled)"
+  if [ -n "${live_disable}" ] && [ "${live_disable}" != "${configured_disable}" ]; then
+    check5_detail="${check5_detail}; WARN live env=${live_disable} differs — settings cached"
   fi
 else
-  check5_detail="configured=${configured_window:-MISSING}; live=${live_window:-unset}; expected ≥${RECOMMENDED_COMPACT_WINDOW}"
+  check5_detail="DISABLE_AUTOCOMPACT=${configured_disable:-MISSING}; live=${live_disable:-unset}; expected =1"
 fi
 
 # --- Check 6: SessionStart hook wired (auto-heal on every session) ---
@@ -242,7 +248,7 @@ if [ "${mode}" = "json" ]; then
            passed: ($c3 == "true"), detail: $c3d },
          { id: "max-turns-raised",
            passed: ($c4 == "true"), detail: $c4d },
-         { id: "auto-compact-window-raised",
+         { id: "auto-compact-disabled",
            passed: ($c5 == "true"), detail: $c5d },
          { id: "session-start-auto-heal-wired",
            passed: ($c6 == "true"), detail: $c6d },
@@ -259,7 +265,7 @@ elif [ "${quiet}" = "false" ]; then
   printf "  %s  ~/.claude/stop-hook-git-check.sh neutralized — %s\n" "$(m "${check2_pass}")" "${check2_detail}"
   printf "  %s  CLAUDE_CODE_STOP_HOOK_BLOCK_CAP ≥%d — %s\n" "$(m "${check3_pass}")" "${REQUIRED_CAP}" "${check3_detail}"
   printf "  %s  CLAUDE_CODE_MAX_TURNS ≥%d — %s\n" "$(m "${check4_pass}")" "${RECOMMENDED_MAX_TURNS}" "${check4_detail}"
-  printf "  %s  CLAUDE_CODE_AUTO_COMPACT_WINDOW ≥%d — %s\n" "$(m "${check5_pass}")" "${RECOMMENDED_COMPACT_WINDOW}" "${check5_detail}"
+  printf "  %s  DISABLE_AUTOCOMPACT=1 (auto-compact disabled) — %s\n" "$(m "${check5_pass}")" "${check5_detail}"
   printf "  %s  SessionStart auto-heal hook wired — %s\n" "$(m "${check6_pass}")" "${check6_detail}"
   printf "  %s  PostCompact re-orient hook wired — %s\n" "$(m "${check7_pass}")" "${check7_detail}"
   printf "  %s  env-bootstrap mirror installed — %s\n" "$(m "${check8_pass}")" "${check8_detail}"
