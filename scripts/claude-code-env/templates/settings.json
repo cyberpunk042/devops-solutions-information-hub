@@ -3,7 +3,9 @@
     "env": {
         "CLAUDE_CODE_STOP_HOOK_BLOCK_CAP": "1000",
         "CLAUDE_CODE_MAX_TURNS": "10000",
-        "DISABLE_AUTOCOMPACT": "1"
+        "DISABLE_AUTOCOMPACT": "1",
+        "CLAUDE_CODE_IDLE_THRESHOLD_MINUTES": "9999",
+        "CLAUDE_CODE_RESUME_PROMPT": "Resume the perpetual /goal mandate immediately. The operator did NOT stop — the session was idle-suspended by the cloud_default env and re-armed automatically. Re-read context.md in the cwd repo if present, pick the next milestone or unit of work from the forward queue, and execute one tractable deliverable. Do NOT emit a 'No response requested.' no-op — that is the synthetic-resume bug the operator already diagnosed (see wiki/lessons/01_drafts/claude-code-synthetic-resume-pair-swallows-perpetual-goal.md). Continue endlessly per operator standing directive 2026-05-19."
     },
     "permissions": {
         "allow": ["Skill"],
@@ -19,6 +21,16 @@
                         "type": "command",
                         "command": "bash $HOME/.claude/env-bootstrap/apply.sh --quiet 2>/dev/null || true",
                         "timeout": 15
+                    },
+                    {
+                        "type": "command",
+                        "command": "bash $HOME/.claude/session-start-context.sh 2>/dev/null || true",
+                        "timeout": 5
+                    },
+                    {
+                        "type": "command",
+                        "command": "bash $HOME/.claude/rearm-goal-on-resume.sh 2>/dev/null || true",
+                        "timeout": 5
                     }
                 ]
             }

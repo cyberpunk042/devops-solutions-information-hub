@@ -297,12 +297,63 @@ for ts, msgs in ts_to_msgs.items():
 " "$SESSION_JSONL"
 ```
 
+## Mitigations applied 2026-05-20 (operator approved)
+
+After filing this lesson, operator re-engaged with *"yes lets go with your suggestions and made sure we record it too"* and approved applying mitigations 2 + 3 + 4 simultaneously (compound coverage). Changes landed in `scripts/claude-code-env/templates/` + `scripts/claude-code-env/apply.sh` so they survive container rebuilds + are mirrored to `~/.claude/env-bootstrap/templates/` automatically.
+
+### Change 1 — env vars added to `templates/settings.json`
+
+```json
+"env": {
+    "CLAUDE_CODE_STOP_HOOK_BLOCK_CAP": "1000",
+    "CLAUDE_CODE_MAX_TURNS": "10000",
+    "DISABLE_AUTOCOMPACT": "1",
+    "CLAUDE_CODE_IDLE_THRESHOLD_MINUTES": "9999",
+    "CLAUDE_CODE_RESUME_PROMPT": "Resume the perpetual /goal mandate immediately. ..."
+}
+```
+
+- `CLAUDE_CODE_IDLE_THRESHOLD_MINUTES=9999` — defeats the in-binary `idle_prompt` (75-minute default).
+- `CLAUDE_CODE_RESUME_PROMPT` — replaces the generic `"Continue from where you left off."` that `jO8()` would otherwise inject. The model now sees mandate-flavored text instead of a no-op-friendly placeholder.
+
+### Change 2 — new SessionStart hook script `rearm-goal-on-resume.sh`
+
+Lives at `~/.claude/rearm-goal-on-resume.sh` (installed by `apply.sh`). On every `SessionStart` event it:
+
+1. Locates the current session transcript via `$CLAUDE_CODE_SESSION_ID` under `~/.claude/projects/`.
+2. Greps for the `"model":"<synthetic>"` signature — the smoking-gun marker for synthetic-resume-pair injection.
+3. Greps for evidence of an active `/goal` (look for `goal_status` attachment OR `/goal` command OR `activeGoal`).
+4. If BOTH conditions hold, emits a `systemMessage` JSON on stdout explicitly telling the model: synthetic-resume was just detected, the operator did NOT stop, re-read `context.md`, pick the next unit, do NOT emit another `"No response requested."`.
+5. Else exits silently (no false-trigger on fresh sessions or no-goal sessions).
+
+The hook fires AFTER the synthetic-pair injection (~665ms later in observed timeline) — so detection works post-fact, and the systemMessage reaches the model on the next real turn.
+
+Wired in `templates/settings.json` as the third SessionStart command, after `apply.sh --quiet` (auto-heal) and `session-start-context.sh` (context.md pointer).
+
+### Change 3 — `apply.sh` FILES array extended
+
+Added `session-start-context.sh:755` (was previously orphan — managed manually but not by apply.sh) and `rearm-goal-on-resume.sh:755` so both are now part of the idempotent install set. Container rebuild + fresh-clone reapply both ship the new hook automatically.
+
+### Verification
+
+`~/.claude/validate-stop-hook-fix.sh` 8 checks all green post-apply. Hook tested against the actual buggy session transcript (`a96554c4-92f7-4ce2-b9b1-d8f049525bd1`) — produced the expected `systemMessage` JSON on stdout, exit 0.
+
+### Open empirical questions (post-mitigation)
+
+The mitigations are deployed but the FULL CYCLE (idle-suspend → resume → operator sees mandate continuation, not "No response requested.") has NOT yet been observed end-to-end. Operator should test by walking away from the tab for ~10 minutes during the next perpetual /goal session. Three possible outcomes:
+
+1. **Best case**: model engages on resume with mandate work
+2. **Partial case**: synthetic "No response requested." still emits, but next real interaction sees mandate-flavored history + systemMessage banner → engages then
+3. **No improvement**: synthetic-pair injected BEFORE systemMessage hook fires (timing race) AND synthetic reply masks the mandate sufficiently
+
+Outcome 3 would require a deeper intervention (e.g. an `UserPromptSubmit` hook that filters out synthetic "No response requested." messages, or a periodic-poke daemon outside the harness).
+
 ## Status
 
 - **Diagnosis confidence**: high (binary symbols + transcript evidence + operator-reproduced)
-- **Mitigation confidence**: medium (Options 1-3 plausible, only Option 1 empirically verified by operator-action)
-- **Layer**: 4 (lesson, distilled from operational failure)
-- **Maturity**: seed (one observed instance, no cross-environment verification yet)
-- **Next action**: operator selected "File the lesson, no fix yet" 2026-05-20; no settings.json changes made.
+- **Mitigation confidence**: medium-high (3 mitigations deployed + validator green + hook empirically tested against real buggy transcript; end-to-end resume-cycle behavior not yet observed)
+- **Layer**: 4 (lesson, distilled from operational failure + applied mitigation)
+- **Maturity**: seed → growing (mitigation applied; awaiting cross-environment + multi-cycle verification)
+- **Next action**: operator induces an idle-suspend during next perpetual /goal session, observes whether model engages on resume or still emits "No response requested." Outcome feeds back into this lesson.
 
 — End of lesson.

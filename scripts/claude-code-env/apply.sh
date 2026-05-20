@@ -51,6 +51,8 @@ readonly -a FILES=(
   "stop-hook-git-check.sh:755"
   "validate-stop-hook-fix.sh:755"
   "post-compact-reorient.sh:755"
+  "session-start-context.sh:755"
+  "rearm-goal-on-resume.sh:755"
 )
 
 readonly BOOTSTRAP_DIR="${TARGET_DIR}/env-bootstrap"
