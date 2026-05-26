@@ -215,6 +215,26 @@ else
   check8_detail="missing/non-exec:${missing}; run 'bash scripts/claude-code-env/apply.sh' to install"
 fi
 
+# --- Check 9: permissions.defaultMode is bypassPermissions (NOT plan) ---
+# plan mode gates ALL execution behind an ExitPlanMode approval STOP, which
+# halts a perpetual /goal the instant it is issued ("stops right after I
+# asked for it"). This was the original goal-stop root cause (2026-05-26).
+# bypassPermissions is the only mode that runs unattended without prompting;
+# default/acceptEdits prompt-stall on (non-edit) tools. Guarding it here makes
+# the fix drift-proof — the prior validator passed while defaultMode silently
+# reverted to plan would re-break /goal (P4: unverified declaration).
+check9_pass=false
+check9_detail=""
+configured_mode=$(jq -r '.permissions.defaultMode // ""' "${SETTINGS}" 2>&1)
+if [ "${configured_mode}" = "bypassPermissions" ]; then
+  check9_pass=true
+  check9_detail="defaultMode=bypassPermissions (perpetual /goal runs unattended)"
+elif [ "${configured_mode}" = "plan" ]; then
+  check9_detail="defaultMode=plan — FATAL for perpetual /goal: plan mode stops for ExitPlanMode approval the instant /goal is issued. Set to bypassPermissions."
+else
+  check9_detail="defaultMode=${configured_mode:-MISSING}; expected bypassPermissions (plan halts /goal; default/acceptEdits prompt-stall unattended)"
+fi
+
 # --- Report ---
 overall_pass=true
 [ "${check1_pass}" = "false" ] && overall_pass=false
@@ -225,6 +245,7 @@ overall_pass=true
 [ "${check6_pass}" = "false" ] && overall_pass=false
 [ "${check7_pass}" = "false" ] && overall_pass=false
 [ "${check8_pass}" = "false" ] && overall_pass=false
+[ "${check9_pass}" = "false" ] && overall_pass=false
 
 if [ "${mode}" = "json" ]; then
   jq -n \
@@ -236,6 +257,7 @@ if [ "${mode}" = "json" ]; then
     --arg c6 "${check6_pass}" --arg c6d "${check6_detail}" \
     --arg c7 "${check7_pass}" --arg c7d "${check7_detail}" \
     --arg c8 "${check8_pass}" --arg c8d "${check8_detail}" \
+    --arg c9 "${check9_pass}" --arg c9d "${check9_detail}" \
     --arg overall "${overall_pass}" \
     '{
        overall: ($overall == "true"),
@@ -255,7 +277,9 @@ if [ "${mode}" = "json" ]; then
          { id: "post-compact-reorient-wired",
            passed: ($c7 == "true"), detail: $c7d },
          { id: "env-bootstrap-mirror-installed",
-           passed: ($c8 == "true"), detail: $c8d }
+           passed: ($c8 == "true"), detail: $c8d },
+         { id: "default-mode-bypasspermissions",
+           passed: ($c9 == "true"), detail: $c9d }
        ]
      }'
 elif [ "${quiet}" = "false" ]; then
@@ -269,6 +293,7 @@ elif [ "${quiet}" = "false" ]; then
   printf "  %s  SessionStart auto-heal hook wired — %s\n" "$(m "${check6_pass}")" "${check6_detail}"
   printf "  %s  PostCompact re-orient hook wired — %s\n" "$(m "${check7_pass}")" "${check7_detail}"
   printf "  %s  env-bootstrap mirror installed — %s\n" "$(m "${check8_pass}")" "${check8_detail}"
+  printf "  %s  permissions.defaultMode=bypassPermissions (perpetual /goal) — %s\n" "$(m "${check9_pass}")" "${check9_detail}"
   if [ "${overall_pass}" = "true" ]; then
     echo "  ✓ ALL CHECKS PASSED — harness configured + self-healing + post-compact-resilient"
   else
