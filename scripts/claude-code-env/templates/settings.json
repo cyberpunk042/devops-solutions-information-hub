@@ -9,7 +9,7 @@
     },
     "permissions": {
         "allow": ["Skill"],
-        "defaultMode": "plan"
+        "defaultMode": "bypassPermissions"
     },
     "hooks": {
         "Stop": [],
