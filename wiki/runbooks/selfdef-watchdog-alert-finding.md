@@ -50,12 +50,24 @@ intrusion split, and the response decision tree.
 `SelfdefWatchdogAlertFinding` (Prometheus) fires when
 `increase(selfdef_findings_by_rule_total{rule="selfdef watchdog alert-tier finding"}[10m]) > 0`.
 
-That means one of the ~46 host **detection-watchdogs** (the journald
+That means one of the host **detection-watchdogs** (the journald
 baseline+delta scanners under `modules/*-watchdog/`) emitted a JSON finding
 with `"severity":"alert"`, and the `selfdef_watchdog_alert` Sigma rule
 (SDD-062) promoted it to a High Detection Finding. The same finding also
 travels the in-process notifier chain — this alert is the **metrics-path**
 copy, so it survives even if the notifier is degraded.
+
+The SDD-062 rule is **tag-prefix**, not tag-enumerated, so it covers the
+whole `selfdef-*` watchdog set — **two axes**, both firing the same alert:
+
+- the **exec/injection axis** (the SDD-061 module-lib scanners: planted
+  exec targets, injection patterns, writable configs — the bulk of the
+  triage below); and
+- the **integrity/baseline axis** (inventory + baseline-delta scanners: a
+  new setuid binary, a new file-capability grant, a `+` rhosts trust, a
+  root-login TTY widen, a rogue NSS source, a weakened kernel sysctl, …).
+
+Identify which axis from the `selfdef-<tag>` SyslogIdentifier (tables below).
 
 Alert tier means one of:
 
@@ -123,7 +135,27 @@ The `selfdef-<tag>` SyslogIdentifier names the surface. Map a few common ones:
 | `selfdef-cron-*` / `selfdef-at-jobs` / `selfdef-anacrontab` | schedulers | scheduled root exec / self-resubmission |
 | `selfdef-krb5-plugins` / `selfdef-pkcs11-modules` / `selfdef-gss-mech` | auth .so load | code into auth/credential processes |
 
-(Full set: `ls modules/*-watchdog/` in the selfdef repo.)
+The **integrity/baseline axis** tags (inventory + baseline-delta scanners)
+fire the same alert; their `event` + `suspicious` fields name the change:
+
+| tag prefix | surface | what an alert means |
+|---|---|---|
+| `selfdef-suid-sgid` | setuid/setgid inventory | new or perm-changed setuid binary (`suid_drift`); 4+ added = `bulk_delta` (bulk-install) |
+| `selfdef-file-caps` | file capabilities | a binary granted a dangerous cap (`dangerous_capability_added`: cap_setuid/sys_admin/dac_*/…) |
+| `selfdef-world-writable` / `selfdef-unowned-files` | filesystem hygiene | world-writable file outside the sticky whitelist / file owned by a deleted uid (bulk = incident) |
+| `selfdef-rhosts` | rsh/rlogin trust | a `+` wildcard trust or a per-user `.rhosts` (`rhosts_trust_backdoor`, T1199) |
+| `selfdef-securetty` | root-login TTYs | a newly-permitted pts/network TTY, or the file removed (fail-open) |
+| `selfdef-nsswitch` | resolver source map | a rogue `libnss_<x>` source on a db, or a db line removed (`nsswitch_rogue_source`) |
+| `selfdef-hosts-file` | `/etc/hosts` | a sensitive package/security/CA domain pinned or blackholed (`hosts_file_sensitive_pin`) |
+| `selfdef-access-conf` / `selfdef-sysusers` / `selfdef-capability-conf` | PAM access / declarative users / pam_cap | broad `+` permit / uid-0 declarative account / dangerous capability grant |
+| `selfdef-sysctl-hardening` | kernel sysctls | a security sysctl set to its weak value (ASLR off, ptrace_scope 0, suid_dumpable on, …) |
+| `selfdef-modules-load` / `selfdef-tmpfiles` / `selfdef-nfs-exports` / `selfdef-polkit-rules` | boot/persistence config | world-writable autoload config / setuid tmpfiles entry / `no_root_squash` export / new polkit YES grant |
+| `selfdef-timestomp` | timestamp anomalies | FUTURE/EPOCH/MTIME>CTIME tells of `touch`-based anti-forensics (T1070.006) |
+
+(Full set: `ls modules/*-watchdog/` in the selfdef repo. The exec/injection
+axis is the SDD-061 module-lib set; the integrity axis is the remaining
+baseline scanners — both proven to route to this alert by the SDD-062
+rule-tests.)
 
 ### 2. Compare against the watchdog's baseline
 
