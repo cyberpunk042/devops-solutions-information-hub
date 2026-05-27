@@ -130,6 +130,27 @@ all green; zero ok-path-only suites shipped. The classification step
 (grep each scan script for an input-source knob) took minutes and prevented
 21 low-value suites.
 
+**The payoff that justified the whole exercise** (a corollary worth its own
+weight): writing the L2 suite for `selfdef-self-integrity` — the meta-watchdog
+that hashes every other watchdog's baseline to detect tamper — *executed the
+real scan script* and found it **detected nothing**. Its inventory `printf`s
+went to stdout instead of the temp file it diffs, so the baseline was always
+empty; it emitted a healthy `manifest_initial` / `trust_root_intact` forever
+while an attacker editing a watchdog baseline sailed through. A targeted
+sweep then found the **identical bug in two more critical watchdogs**
+(`account-watchdog` — new uid-0 / sudo-member detection; `pam-config-watchdog`
+— PAM-stack tamper). Three security-critical detectors were silent no-ops;
+every structural / schema / L1-contract check passed clean on all three. Only
+running the actual code path surfaced it. The fixes were root-caused
+(`>> "$current"` on each inventory printf), regression-locked (capture tests
+that assert the baseline is non-empty against real read-only input via the
+`_BASELINE` knob — note: the *capture* regression is lockable even where the
+*finding* tiers are not), and the class was made non-recurring by a
+negative-control-verified guard (`L2-scan-script-capture-guard.bats`). The
+two reinforcing morals: (1) classify by testability before scoping, and
+(2) the tests you DO write must execute the real path — that is where the
+no-op bugs hide.
+
 ## Applicability
 
 - Any test-backfill onto a corpus of environment-reading units (security
