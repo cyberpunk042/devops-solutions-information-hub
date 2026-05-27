@@ -216,7 +216,14 @@ a blinded watchdog.
   is **not** flagged (the watchdogs treat `/usr/local` as trusted).
 - The `warn` tier (config changed but target still trusted) does **not**
   page — it is local-triage signal, by design (mirrors the agent-guard
-  audit-mode precedent). Only `alert` reaches this runbook.
+  audit-mode precedent). Only `alert` reaches this runbook. As of SDD-062
+  D-5 (2026-05-27) the warn tier IS now routed to a non-paging Informational
+  Detection Finding — visible on the dashboard "detection-watchdog warn
+  findings (1h)" panel + the `selfdef watchdog warn-tier finding` metric
+  series for trend triage — but it stays below the notifier panic floor and
+  carries no Prometheus alert, so it still does not page and does not reach
+  this runbook. Investigate a warn trend only if it correlates with an
+  alert-tier finding.
 - A bare PATH-resolved command in surfaces where that is normal
   (e.g. ssh `ProxyCommand corkscrew …`) is not flagged.
 
