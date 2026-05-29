@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-29T10:37:22.038733+00:00",
+  "generated": "2026-05-29T10:42:26.159406+00:00",
   "stats": {
     "pages": 975,
     "domains": 16,
@@ -40897,14 +40897,13 @@
         {
           "id": "avx-plus-plus-dump-2026-05-18",
           "type": "directive",
-          "project": "devops-solutions-information-hub",
-          "path": "raw/dumps/2026-05-18-the-ultimate-exploitation-of-the-tech-stack-AVX-plus-plus.md",
+          "file": "raw/dumps/2026-05-18-the-ultimate-exploitation-of-the-tech-stack-AVX-plus-plus.md",
           "note": "Tail lines 18000-18341 \u2014 Scheduling Policies + Backpressure + Closing Manifesto"
         },
         {
           "id": "operator-directive-2026-05-19",
           "type": "directive",
-          "project": "devops-solutions-information-hub",
+          "file": "raw/notes/2026-05-19-operator-standing-direction-backward-sweep-end-of-avx-plus-plus.md",
           "note": "Standing direction: 'when you reach the end of the avx-plus-plus document you will have to review / go backward a bit since it redefines some of the things'"
         }
       ],

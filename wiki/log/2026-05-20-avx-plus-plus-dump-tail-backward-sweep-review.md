@@ -11,12 +11,11 @@ updated: 2026-05-20
 sources:
   - id: avx-plus-plus-dump-2026-05-18
     type: directive
-    project: devops-solutions-information-hub
-    path: raw/dumps/2026-05-18-the-ultimate-exploitation-of-the-tech-stack-AVX-plus-plus.md
+    file: raw/dumps/2026-05-18-the-ultimate-exploitation-of-the-tech-stack-AVX-plus-plus.md
     note: "Tail lines 18000-18341 — Scheduling Policies + Backpressure + Closing Manifesto"
   - id: operator-directive-2026-05-19
     type: directive
-    project: devops-solutions-information-hub
+    file: raw/notes/2026-05-19-operator-standing-direction-backward-sweep-end-of-avx-plus-plus.md
     note: "Standing direction: 'when you reach the end of the avx-plus-plus document you will have to review / go backward a bit since it redefines some of the things'"
 tags: [backward-sweep, avx-plus-plus, dump-review, scheduling, goldilocks, peace-machine, selfdef, sovereign-os, milestone-amendment]
 ---
@@ -120,9 +119,21 @@ The operator also mentioned *"there was also other dumps before that we decided 
 
 **No restart-required content** identified in those prior dumps based on the backward-sweep of cross-references in the catalog. They are the **foundation** the avx-plus-plus dump builds on. The "restart" the operator mentioned was about the SDD/TDD discipline pivot itself, not about discarding the dump content.
 
+## Status of recommendations (updated 2026-05-29)
+
+The 5-row "Recommended next-round actions" table is now complete. Audit trail:
+
+| # | Action | State | Evidence |
+|---|---|---|---|
+| 1 | Author MS048 catalog (Goldilocks Scheduler) | ✅ Done | `~/selfdef/backlog/milestones/MS048-goldilocks-scheduler-hardware-aware-resource-routing.md` (480 lines, E0461-E0470 / M01149-M01174 / F05281+) |
+| 2 | Amend MS040 with "Source addendum" citing dump 18000-18100 | ✅ Done | Source addendum present at `~/selfdef/backlog/milestones/MS040-authority-and-profiles-six-profile-authority-matrix.md` line 5 (verified 2026-05-29) |
+| 3 | Amend MS034 with "Source addendum" citing dump 18100-18200 | ✅ Done | Source addendum present at `~/selfdef/backlog/milestones/MS034-communication-boundary.md` line 5 (verified 2026-05-29) — NOTE: the original review entry said "MS024 communication-boundary" but the actual catalog ID is **MS034** (`MS024` is `bridge-l2-module-layer-2-transparent-bridge`). |
+| 4 | Author `wiki/spine/doctrine/peace-machine-and-core-law.md` | ✅ Done | `wiki/spine/doctrine/peace-machine-and-core-law.md` (this PR — devops-solutions-information-hub #17) |
+| 5 | Cross-link from this review page to the four products | ✅ Done | This addendum section. |
+
 ## Cross-references
 
 - Source: `raw/dumps/2026-05-18-the-ultimate-exploitation-of-the-tech-stack-AVX-plus-plus.md`
-- Catalog: selfdef `backlog/milestones/MS024,MS028-30,MS039,MS040,MS046,MS047,MS044`
-- Doctrine target: `wiki/spine/doctrine/peace-machine-and-core-law.md` (to be authored — operator-supervised)
+- Catalog (selfdef): `backlog/milestones/MS028-30, MS034, MS039, MS040, MS044, MS046, MS047, MS048`
+- Doctrine: [wiki/spine/doctrine/peace-machine-and-core-law.md](../spine/doctrine/peace-machine-and-core-law.md) — authored 2026-05-29 per Action 4
 - Coherence harness: selfdef `scripts/test/coherence.sh` enforces what's already in production; this review page identifies what's next.
