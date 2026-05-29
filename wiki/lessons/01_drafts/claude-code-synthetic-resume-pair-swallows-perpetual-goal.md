@@ -5,9 +5,9 @@ domain: ai-agents
 layer: 4
 status: draft
 confidence: high
-maturity: seed
+maturity: growing
 created: 2026-05-20
-updated: 2026-05-20
+updated: 2026-05-26
 sources:
   - id: operator-investigation-2026-05-20
     type: directive
@@ -22,6 +22,10 @@ sources:
     type: empirical
     file: /root/.claude/projects/-home-user/a96554c4-92f7-4ce2-b9b1-d8f049525bd1.jsonl
     note: "Live transcript of the bug. The synthetic-pair appears at timestamp 18:13:54.063Z, exactly 8m46s after the model's last real turn at 18:05:08.325Z. The synthetic assistant message carries `model: '<synthetic>'`, `stop_reason: 'stop_sequence'`, `stop_sequence: ''`."
+  - id: session-transcript-2026-05-26
+    type: empirical
+    file: /root/.claude/projects/-home-user/8a4031f2-68e1-4375-8ad0-19e44feecdd9.jsonl
+    note: "End-to-end confirmation. 3 idle-resume events (11:41/13:50/16:01Z, ~2h gaps) each producing a same-ms `model:<synthetic>` `No response requested.` paired with an isMeta user message carrying the CLAUDE_CODE_RESUME_PROMPT override text; each recovered ONLY by a manual operator /goal re-issue (rows 682/1746/1911). Both SessionStart systemMessages fired but triggered no real turn. Confirms Outcome 3 + corrects the 'model emits the no-op' misconception."
   - id: companion-lesson-block-cap
     type: internal
     path: wiki/lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch.md
@@ -348,12 +352,65 @@ The mitigations are deployed but the FULL CYCLE (idle-suspend → resume → ope
 
 Outcome 3 would require a deeper intervention (e.g. an `UserPromptSubmit` hook that filters out synthetic "No response requested." messages, or a periodic-poke daemon outside the harness).
 
+## 2026-05-26 empirical confirmation (session `8a4031f2-68e1-4375-8ad0-19e44feecdd9`)
+
+Operator reported again: *"the goal command is getting broken / stopped."* A live perpetual `/goal` selfdef session (108→111 modules shipped) was forensically examined. The full cycle is now observed end-to-end and **Outcome 3 is confirmed** — with one important correction to the earlier mental model.
+
+### What the transcript proves
+
+Three idle-resume events this session (`11:41:02Z`, `13:50:06Z`, `16:01:21Z` — ~2h gaps, operator-away duration, NOT the 8-min idle of the original capture). At each, the message-loader fabricated the synthetic pair:
+
+| Resume | synthetic-user (isMeta) ts | synthetic-assistant ts | model | stop_reason | stop_sequence | same-ms |
+|---|---|---|---|---|---|---|
+| #1 (row 678) | 11:41:02.596Z | 11:41:02.596Z | `<synthetic>` | `stop_sequence` | `""` | YES |
+| #2 (row 1740) | 13:50:06.718Z | 13:50:06.718Z | `<synthetic>` | `stop_sequence` | `""` | YES |
+| #3 (row 1905) | 16:01:21.538Z | 16:01:21.539Z | `<synthetic>` | `stop_sequence` | `""` | +1ms |
+
+Each recovery (rows 682, 1746, 1911) was a **manual operator `/goal` re-issue** (`<command-name>/goal</command-name>` → `Goal set: …`). Both SessionStart systemMessages fired and are present in the transcript (`SESSION-START RE-ORIENT` + `SYNTHETIC-RESUME DETECTED`) — yet **neither triggered a real turn**; the session sat dead until the operator typed `/goal`.
+
+### Correction to the model (important)
+
+Earlier framing (and the model's own in-session narration) treated the `"No response requested."` as *something the model emitted and should stop emitting* — the resume-prompt even contains the instruction *"Do NOT emit a 'No response requested.' no-op."* **The forensics prove this is wrong.** All three no-ops carry `model:"<synthetic>"` — they are **harness fabrications by `rE6()`/`A74`/`C0H`, not model output.** The model never got a turn. Instructing the model not to emit it is therefore inert: there is no model turn in which to obey. (This is itself a fresh instance of the §"AI anti-pattern" below — the in-session model kept "acknowledging the bug and correcting" as if it had authored the no-op, when in fact it had not.)
+
+### CLAUDE_CODE_RESUME_PROMPT override: confirmed landing, but insufficient
+
+The synthetic isMeta user message now carries OUR mandate text (verified: `prev.text` begins `"Resume the perpetual /goal mandate immediately. The operator did NOT stop…"`), not the bland default. So `jO8()` reads our env override correctly. **But** the hardcoded `C0H = "No response requested."` assistant splice still fires unconditionally after the trailing user message and terminates the turn. The override improves *content* the operator sees on return; it does not prevent the orphaning.
+
+### Root-cause conclusion (refined)
+
+The goal "stops" because **nothing converts the synthetic resync into a real LLM turn**, and the `/goal` Stop hook can only fire when a real turn ends:
+
+1. cloud_default idle-suspends the session.
+2. `rE6()` fabricates user-meta (our resume prompt) + `<synthetic>` `C0H` no-op at the same ms — no LLM call.
+3. SessionStart hooks fire ~665ms later and queue their systemMessages **for the next turn** — but a SessionStart/PostCompact hook can only inject *context*; it **cannot synthesize a user turn or invoke the LLM.**
+4. The conversation now ends on a fabricated assistant message → harness considers the turn complete → idles.
+5. `/goal` Stop hook never fires (no real turn ended) → mandate orphaned.
+6. Only a real user prompt restarts it. The operator's manual `/goal` is that prompt.
+
+**Therefore the residual manual re-issue is architecturally irreducible inside cloud_default using hooks alone.** Options 2+3 are the maximal hook-layer mitigation; they cannot close the gap fully because no hook can manufacture a turn.
+
+### Feasibility of the candidate "deeper" fixes (re-assessed)
+
+| Candidate | Verdict | Why |
+|---|---|---|
+| `UserPromptSubmit` hook to suppress/replace the synthetic no-op | **Won't fire** | The synthetic user-meta is injected by the message-LOADER (`rE6`), not *submitted*. Only `SessionStart` fired in both captures; `UserPromptSubmit` does not fire for loader-injected meta. |
+| In-container periodic-poke daemon (systemd timer / cron) that detects orphan-tail + injects a prompt | **Infeasible in cloud_default** | The container itself is suspended during idle, so an in-container timer is suspended too; and cloud_default exposes no supported "inject a real prompt into the live session" API. |
+| Out-of-band poker on a NON-suspended host driving the session via the web/API | **Feasible but external** | Requires infra outside the suspended container (operator's machine or a separate always-on host). The only mechanism that can manufacture a real turn during/after suspension. |
+| Reduce the trigger via `CLAUDE_CODE_IDLE_THRESHOLD_MINUTES` | **Already set (9999); does not help** | That env governs the in-binary `idle_prompt` (75-min), NOT the cloud platform's container suspension (~minutes–hours). No env stops the platform suspend. |
+| Harness patch | **Not recommended** (unchanged) | Read-only, overwritten on upgrade. |
+| Simplify `CLAUDE_CODE_RESUME_PROMPT` (drop the now-known-inert "Do NOT emit…No response requested." clause; make it a crisp first-action mandate) | **Low-value polish; needs operator approval (settings.json)** | The clause is inert (model never gets the turn) and the verbatim no-op string arguably primes that token sequence on the *next* real turn. Harmless to keep; cleaner to drop. Settings change → operator approval per work-mode. |
+
+### Bottom line for the operator
+
+This is a **Claude Code cloud_default harness limitation, not a config error on our side and not a model behavior we can prompt away.** The deployed mitigations (resume-prompt override + rearm SessionStart hook) are correct and maximal for the hook layer. The irreducible remainder — a single manual `/goal` after a long idle gap — can only be eliminated by (a) Claude Code making resume trigger a real turn, or (b) an out-of-band poker on an always-on host, or (c) a surface that suspends less aggressively. Recommend: keep current mitigations; optionally simplify the resume prompt (operator-approved); do NOT invest in in-container daemons (infeasible).
+
 ## Status
 
-- **Diagnosis confidence**: high (binary symbols + transcript evidence + operator-reproduced)
-- **Mitigation confidence**: medium-high (3 mitigations deployed + validator green + hook empirically tested against real buggy transcript; end-to-end resume-cycle behavior not yet observed)
-- **Layer**: 4 (lesson, distilled from operational failure + applied mitigation)
-- **Maturity**: seed → growing (mitigation applied; awaiting cross-environment + multi-cycle verification)
-- **Next action**: operator induces an idle-suspend during next perpetual /goal session, observes whether model engages on resume or still emits "No response requested." Outcome feeds back into this lesson.
+- **Diagnosis confidence**: high (binary symbols + transcript evidence + operator-reproduced + 2026-05-26 end-to-end confirmation)
+- **Mitigation confidence**: high that the deployed mitigations are MAXIMAL for the hook layer; high that they are PARTIAL by construction (no hook can manufacture a real LLM turn). Residual manual `/goal` is architecturally irreducible in cloud_default with hooks alone.
+- **Layer**: 4 (lesson, distilled from operational failure + applied mitigation + end-to-end confirmation)
+- **Maturity**: growing (mechanism + mitigation + full-cycle behavior all observed; cross-surface characterization of suspend timing still open)
+- **Resolved 2026-05-26**: full idle-resume cycle observed in session `8a4031f2`; Outcome 3 confirmed; "model emits the no-op" misconception corrected (it is harness-fabricated, `model:"<synthetic>"`); candidate deeper fixes re-assessed for feasibility (only an out-of-band poker on an always-on host can manufacture a turn).
+- **Next action (operator decision)**: (1) accept the irreducible-remainder conclusion and keep current mitigations as-is, OR (2) approve a one-line `CLAUDE_CODE_RESUME_PROMPT` simplification (drop the inert "Do NOT emit…No response requested." clause), OR (3) stand up an out-of-band poker on an always-on host if the manual re-issue friction is unacceptable for long unattended cycles.
 
 — End of lesson.
