@@ -196,8 +196,9 @@ enforcement adapter waits for substrate.
 
 ## Validation trail
 
-Octuply-validated across the SDD-065..074 IPS dectet (8 of 10
-shipped at MS5a, both qualifiers seen):
+**Undecuply-validated** across SDD-065..076 (11 of 12
+applications shipped at MS5a; SDD-065 doesn't fit by design —
+kernel-direct observer):
 
 | Primitive | Shipped as | PR |
 |---|---|---|
@@ -209,7 +210,9 @@ shipped at MS5a, both qualifiers seen):
 | SDD-070 netns-isolation | state-journal only (deferred: setns) | #216 |
 | SDD-071 mount-binding-unbind | state-journal only (deferred: umount2) | #216 |
 | SDD-072 process-tree-freeze | state-journal only (deferred: SIGSTOP-cascade) | #216 |
-| SDD-066 process-quarantine | not yet shipped (cgroup-v2 freezer substrate) | future |
+| SDD-066 process-quarantine | state-journal only (deferred: cgroup-v2 freezer) | #217 |
+| SDD-075 capability-drop | state-journal only (deferred: prctl PR_CAPBSET_DROP) | #223 |
+| SDD-076 kernel-keyring eviction | state-journal only (deferred: keyctl_invalidate) | #228 |
 | SDD-065 blockset | observer is kernel-direct; pattern doesn't apply | n/a |
 
 End-to-end roundtrip verified manually for SDD-068 pilot —
@@ -219,3 +222,31 @@ scrapes → Prometheus gauges populate with correct cardinality
 `oldest_expiry_unix=now+900s` matching the Responder tier).
 Real bytes through real files through the real production
 observer.
+
+## Test discipline observed across 11 applications
+
+Every state-journal adapter shipped with 6-9 contract tests
+covering the same canonical set; cumulative test count across
+the 11 FsBackends ≈ **85 contract tests, all passing on first
+run** (one minor bug fix in SDD-068 `load_active` + one
+lifetime fix in SDD-076 `validate()`; both caught at first
+test run, never in production).
+
+Pattern-specific reusability demonstration — extra per-primitive
+fields round-trip cleanly through JSON without breaking the
+canonical observer-facing array shape:
+
+- **No exotic-syscall family** (SDD-067/068/069) — full
+  FsBackend ships end-to-end (state-journal IS the enforcement)
+- **Exotic-syscall family** (SDD-066/070/071/072/073/074/075/076) —
+  state-journal ships; enforcement adapter deferred
+- **Handle-variant extensions observed**:
+  - SDD-073 `Stale` handle (inode race)
+  - SDD-074 `NoMatch` handle (no vars on target)
+  - SDD-075 `Redundant` handle (caps already absent)
+  - SDD-076 `NotFound` handle (key absent at evict-time)
+- **Receipt-field extensions observed**:
+  - SDD-072 `frozen_pid_count` (one handle covers many pids)
+  - SDD-074 `vars_scrubbed`
+  - SDD-075 `caps_dropped`
+  - SDD-076 `keys_evicted` + `key_type`
