@@ -44,41 +44,43 @@ tags:
 
 ## Summary
 
-Citation index + status record for the Peace Machine + Core Law doctrine.
-The actual doctrine page at `wiki/spine/doctrine/peace-machine-and-core-law.md`
-does not yet exist; SDD-031 line 147 explicitly scopes its authoring to
-operator supervision. Multiple `cyberpunk042/selfdef` runtime artifacts
-(selfdef-scheduler crate, MS048 operator runbook, every MS048 commit message
-this session) already cite the page as their doctrinal anchor — the path is
-the designated home, the page itself awaits operator authoring. This index
-consolidates the verbatim clauses (Core Law six-clause from dump line 18288;
-Key Scheduling Law two-clause from dump lines 18256-18257) plus the audit
-trail of every artifact citing each clause, so the citation surface is
-discoverable from the info-hub side until the operator-authored doctrine
-page lands.
+Operational citation registry for the Peace Machine + Core Law doctrine page
+at `wiki/spine/doctrine/peace-machine-and-core-law.md` (authored on this same
+branch, commit `0c2a673`, shipped via PR #17). The doctrine page itself is
+the authoritative source; this registry is the **citation index** — a
+discoverable list of every artifact across `cyberpunk042/selfdef` +
+`cyberpunk042/devops-solutions-information-hub` that cites a Core Law or Key
+Scheduling Law clause, so future doctrine evolution can audit blast radius
+before changes land. Verbatim clause anchors (Core Law six-clause from dump
+line 18288; Key Scheduling Law two-clause from dump lines 18256-18257) are
+duplicated here as a back-reference convenience only — the doctrine page is
+the source of truth.
 
 ## What this page IS
 
-A **citation index + status record** for the Peace Machine + Core Law
-doctrine. The actual doctrine page at
-`wiki/spine/doctrine/peace-machine-and-core-law.md` is **operator-supervised
-authoring scope** per `cyberpunk042/selfdef/docs/sdd/031-goldilocks-scheduler.md`
-line 147 (verbatim):
+An **operational citation registry** — the discoverable list of every
+artifact across the ecosystem that cites a Peace Machine + Core Law clause.
+The doctrine page itself lives at
+[`wiki/spine/doctrine/peace-machine-and-core-law.md`](../spine/doctrine/peace-machine-and-core-law.md)
+(`status: synthesized`, `confidence: authoritative`, `maturity: growing`,
+authored 2026-05-29 per backward-sweep review Action 4) and is the
+authoritative source for the doctrinal statements + their per-clause milestone
+mapping.
+
+This registry exists because the citation surface area is wide: selfdef-
+scheduler crate modules, MS048 operator failure-modes runbook, every MS048
+commit message, multiple info-hub runbooks. When the doctrine page evolves
+(future operator amendments, new dump material) this registry is the audit
+surface for "what needs updating downstream."
+
+Per `cyberpunk042/selfdef/docs/sdd/031-goldilocks-scheduler.md` line 147:
 
 > Mark DONE only when all eleven deliverables are in production AND the
 > operator-supervised authoring of `wiki/spine/doctrine/peace-machine-and-
 > core-law.md` (per backward-sweep review item #4) has landed.
 
-That page does not yet exist. Multiple selfdef runtime artifacts already
-cite it as their doctrinal anchor (selfdef-scheduler crate `ocsf_emitter.rs`,
-`docs/operator/ms048-scheduler-failure-modes.md`, every MS048 commit message
-this session). The citations are correct — the path is the designated home
-for the consolidated doctrine — they just point at a target only the operator
-can author per the scope rule.
-
-This index makes the verbatim clause set + their dump line refs + the citing
-artifacts **discoverable from the info-hub side** until the operator-authored
-page lands.
+That authoring landed on this branch (commit `0c2a673`); PR #17 ships it.
+This registry is the operational layer beneath the doctrinal page.
 
 ## Verbatim clause inventory (do not paraphrase)
 
@@ -144,24 +146,26 @@ as part of the supervised authoring of the doctrine page.
 | `wiki/runbooks/scheduler-not-running.md` | Key Scheduling Law (both clauses, verbatim) |
 | `wiki/runbooks/scheduler-force-override-investigation.md` | Core Law (six clauses, verbatim) — "User chooses" emphasized |
 
-## What's NOT in this index (operator scope)
+## What's NOT in this index (scope)
 
-- The doctrine page's narrative section (HOW the clauses interlock, what
-  each clause implies operationally beyond the milestone mapping)
-- Any new doctrinal claim, framing, or extension beyond the verbatim
-  clauses above
-- A "promotion" of these clauses from `draft` to `verified` maturity
-  (operator-authoring required per SDD-031)
+- The doctrine page's narrative (HOW the clauses interlock, what each clause
+  implies operationally beyond the milestone mapping) — that's the doctrine
+  page at `wiki/spine/doctrine/peace-machine-and-core-law.md`, this index
+  back-points there.
+- Any new doctrinal claim, framing, or extension beyond the verbatim clauses
+  the doctrine page carries — this index never amends doctrine.
+- A "promotion" of these clauses from `draft` to `verified` maturity — the
+  doctrine page itself owns its maturity lifecycle.
 
-This page is the citation/audit layer; the doctrinal layer above it stays
-operator-supervised per the scope rule.
+This page is the citation/audit layer beneath the doctrinal page above it.
 
-## When the operator-authored doctrine page lands
+## Maintenance
 
-This citation index becomes a back-pointer. The wiki spine page at
-`wiki/spine/doctrine/peace-machine-and-core-law.md` will be the
-authoritative home; this page links there from its first paragraph. Until
-then, this is the discoverable consolidation point.
+When a new selfdef or sovereign-os artifact starts citing a Core Law or Key
+Scheduling Law clause, append it to the corresponding row in the audit-trail
+table above. When the doctrine page evolves (operator amendment, new dump
+material), use the audit trail to find every downstream artifact that may
+need a corresponding update.
 
 ## Relationships
 
