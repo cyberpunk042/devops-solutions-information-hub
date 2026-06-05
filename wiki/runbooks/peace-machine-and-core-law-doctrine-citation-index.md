@@ -42,6 +42,21 @@ tags:
   - citation-index
 ---
 
+## Summary
+
+Citation index + status record for the Peace Machine + Core Law doctrine.
+The actual doctrine page at `wiki/spine/doctrine/peace-machine-and-core-law.md`
+does not yet exist; SDD-031 line 147 explicitly scopes its authoring to
+operator supervision. Multiple `cyberpunk042/selfdef` runtime artifacts
+(selfdef-scheduler crate, MS048 operator runbook, every MS048 commit message
+this session) already cite the page as their doctrinal anchor — the path is
+the designated home, the page itself awaits operator authoring. This index
+consolidates the verbatim clauses (Core Law six-clause from dump line 18288;
+Key Scheduling Law two-clause from dump lines 18256-18257) plus the audit
+trail of every artifact citing each clause, so the citation surface is
+discoverable from the info-hub side until the operator-authored doctrine
+page lands.
+
 ## What this page IS
 
 A **citation index + status record** for the Peace Machine + Core Law
