@@ -27,10 +27,12 @@ sources:
   - id: selfdef-ms003
     type: internal
     project: selfdef
+    path: backlog/milestones/MS003-correlator-store-responder-signing.md
     note: "MS003 selfdef-signing chain-of-trust"
   - id: selfdef-ms009
     type: internal
     project: selfdef
+    path: backlog/milestones/MS009-audit-cycles.md
     note: "MS009 audit cycles + replay invariants"
 tags: [runbook, guardian, false-positive, rollback, ms003, ms009, ring-0, audit, selfdef, ips]
 ---

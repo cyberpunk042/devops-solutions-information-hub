@@ -27,6 +27,7 @@ sources:
   - id: selfdef-ms039
     type: internal
     project: selfdef
+    path: backlog/milestones/MS039-authority-levels-and-trust-rings.md
     note: "MS039 Ring 0 authority + trust topology"
 tags: [runbook, scheduler, force-override, ring-0, ms003, multi-sig, audit, incident-response, selfdef]
 ---

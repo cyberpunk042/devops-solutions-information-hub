@@ -17,6 +17,7 @@ sources:
   - id: operator-directive-2026-05-19
     type: directive
     project: devops-solutions-information-hub
+    path: wiki/log/
     note: "'You cannot mark something done if it hasn't reached Prod' / 'do not get stuck at the cataloging step' / 'Knowledge is the second-brain'"
 tags: [four-watchdog, ms046, ms047, ms044, ms048, friction-audit, perimeter, guardian, scheduler, production, selfdef, ips, milestone-landing]
 ---

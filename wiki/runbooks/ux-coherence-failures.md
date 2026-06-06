@@ -22,6 +22,7 @@ sources:
   - id: operator-directive-2026-05-19
     type: directive
     project: devops-solutions-information-hub
+    path: wiki/log/
     note: "Standing direction — be an architect first, then a DevOps + Fullstack + UX Design Specialist"
 tags: [runbook, ux-coherence, tdd, ci, test-harness, sdd, selfdef, ips]
 ---

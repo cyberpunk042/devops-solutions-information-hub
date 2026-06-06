@@ -27,6 +27,7 @@ sources:
   - id: selfdef-ms003
     type: internal
     project: selfdef
+    path: backlog/milestones/MS003-correlator-store-responder-signing.md
     note: "MS003 selfdef-signing chain-of-trust (minisign-verify)"
 tags: [runbook, perimeter, extension, allowlist, ms003, multi-sig, minisign, tetragon, selfdef, ips]
 ---

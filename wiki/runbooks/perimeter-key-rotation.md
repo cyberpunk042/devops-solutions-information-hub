@@ -22,6 +22,7 @@ sources:
   - id: selfdef-ms003
     type: internal
     project: selfdef
+    path: backlog/milestones/MS003-correlator-store-responder-signing.md
     note: "MS003 selfdef-signing chain-of-trust"
   - id: selfdef-ms047
     type: internal
