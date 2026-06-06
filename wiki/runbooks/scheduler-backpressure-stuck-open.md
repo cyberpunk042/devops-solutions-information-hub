@@ -176,7 +176,9 @@ sudo systemctl restart selfdefd
 - **Stuck-open after a kernel/driver upgrade**: PSI or DCGM may have changed semantics. Compare /proc/pressure/* before/after and the DCGM version.
 - **One surface stuck open intermittently for years**: there's a measurement bug. Capture a 1-hour PSI/DCGM trace and file an issue.
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-031 §Deliverable 2 (BackpressureMonitor + hysteresis logic)
 - MS048 R11333-R11362 (backpressure thresholds + hysteresis)

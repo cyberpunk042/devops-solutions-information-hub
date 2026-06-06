@@ -181,7 +181,9 @@ The runtime crate refuses extensions that violate these rules (all caught at `ex
 - **Need to bypass a SIGKILL of a binary that has a CVE**: do NOT extend; fix the binary instead. Extensions extend the allowlist, they don't whitewash known-bad code.
 - **Lost the operator key**: see [perimeter-key-rotation](perimeter-key-rotation.md).
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-028 §Deliverable 3 (runtime crate, ExtensionManifest validation)
 - SDD-028 §Deliverable 4 (CLI: `selfdefctl perimeter extend --signed <manifest>`)

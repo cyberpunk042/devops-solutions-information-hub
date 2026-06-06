@@ -5,7 +5,7 @@ domain: log
 status: active
 confidence: high
 created: 2026-04-09
-updated: 2026-05-29
+updated: 2026-06-06
 sources: []
 tags: [log, directives, sessions]
 ---
@@ -30,7 +30,7 @@ Operator directives, session summaries, and task completion notes.
 | 2026-04-17 | [AICP identity-profile.md needs reconciliation per consumer-property doctrine + outdated facts](aicp-identity-profile.md-needs-reconciliation-per-consumer-p.md) | session | `contributed`, `correction` |
 | 2026-04-18 | [5 candidate behavioral-failure detection rules from OpenFleet doctor.py (2026-04-18)](5-candidate-behavioral-failure-detection-rules-from-openflee.md) | session | `contributed`, `remark` |
 | 2026-05-29 | [Selfdef enforcement-layer pivot — SDD-065 + SDD-066 shipped end-to-end](2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066.md) |  |  |
-| 2026-05-21 | [selfdef layer-up batch — 15 milestones promoted partial → done](2026-05-21-selfdef-layer-up-batch-15-milestones-promoted-to-done.md) | log | `log`, `selfdef`, `milestones`, `layer-up`, `sdd`, `production-landing`, `multi-cycle`, `second-brain`, `ips` |
+| 2026-05-21 | [selfdef layer-up batch — 15 milestones promoted partial → done](2026-05-21-selfdef-layer-up-batch-15-milestones-promoted-to-done.md) | note | `log`, `selfdef`, `milestones`, `layer-up`, `sdd`, `production-landing`, `multi-cycle`, `second-brain`, `ips` |
 | 2026-05-20 | [Four-watchdog set (MS046+MS047+MS044+MS048) — end-to-end production landing](2026-05-20-four-watchdog-end-to-end-production-landing.md) | note | `four-watchdog`, `ms046`, `ms047`, `ms044`, `ms048`, `friction-audit`, `perimeter`, `guardian`, `scheduler`, `production`, `selfdef`, `ips`, `milestone-landing` |
 | 2026-05-20 | [Backward-sweep review — avx-plus-plus dump tail (lines 18000-18341)](2026-05-20-avx-plus-plus-dump-tail-backward-sweep-review.md) | note | `backward-sweep`, `avx-plus-plus`, `dump-review`, `scheduling`, `goldilocks`, `peace-machine`, `selfdef`, `sovereign-os`, `milestone-amendment` |
 | 2026-05-17 | [2026-05-17 — RGP profile v5.3 synergy iteration: output_governance + STEP 0 gates + mcp_discipline + worker_runtime_model + scope_tier_definitions + density_targets + operator_territory_overstep anti-pattern](2026-05-17-rgp-profile-v5.3-synergy-iteration-output-governance-gates-mcp-runtime-model-scope-tier.md) | session | `session`, `rgp`, `root-ghostproxy-rollout`, `ai-assistant-profile`, `v5.3`, `synergy-iteration`, `output-governance`, `step-0-gates`, `mcp-discipline`, `worker-runtime-model`, `scope-tier-enum`, `density-targets`, `operator-territory-overstep`, `spec-evolution-cycle-4`, `2026-05-17` |

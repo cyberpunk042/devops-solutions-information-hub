@@ -136,7 +136,9 @@ A `SIGKILL` verdict should appear.
 - **Tetragon version too old**: pin a Tetragon version that supports `matchActions.action: Sigkill` (≥ 0.10). Downgrade is an operator-decision; document the version pin in the incident log.
 - **Kernel lacks the necessary ftrace surface**: this is a kernel-recompile-or-replace-host event; escalate.
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-028 §Deliverable 1 (TracingPolicy YAML)
 - SDD-028 §Deliverable 5 (Debian packaging — postinst install + chattr +i)

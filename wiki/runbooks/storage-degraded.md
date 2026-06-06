@@ -169,7 +169,9 @@ Follow-up: <expand disk plan / fix logrotate / file issue against integration X>
 EOF
 ```
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-026 § Z-10 (storage state surface specification)
 - MS011 catalog rows on Z-10 (M00277 dashboard tab Logs)

@@ -117,7 +117,9 @@ The ring buffer will start populating as soon as Tetragon emits its first event 
 - **Socket appears intermittently**: probably Tetragon crash-looping; check Tetragon's own logs.
 - **Need to test Guardian without real Tetragon**: there's no first-party mock for the socket today. The runtime crate's Effector trait is mockable for unit tests, but no end-to-end harness ships yet (MS044 R10540 future-round).
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-029 §Deliverable 2 (runtime crate — event ingester contract)
 - MS044 R10326-R10380 (UNIX socket event ingester)

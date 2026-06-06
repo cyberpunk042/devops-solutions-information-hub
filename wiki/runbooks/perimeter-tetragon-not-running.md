@@ -138,7 +138,9 @@ sudo systemctl status selfdef-guardian.service
 - **Tetragon repeatedly crashes after kernel upgrade**: pin Tetragon version compatible with the new kernel; downgrade Tetragon if needed.
 - **Long-term Tetragon outage**: file an incident, escalate to vendor; sovereign-os cockpit M061 panel will continue showing the perimeter as `policy PRESENT` but with no recent verdicts (gray state).
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-028 §Deliverable 1 (TracingPolicy YAML)
 - SDD-028 §Deliverable 10 (daemon boot observability)

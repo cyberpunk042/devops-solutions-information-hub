@@ -137,7 +137,9 @@ If no (action == `ProcessRelated`), this is a non-kill Tetragon policy event Gua
 - **False-positive confirmed**: see [guardian-false-positive-rollback](guardian-false-positive-rollback.md) — record the rollback for audit-trail clarity.
 - **No physical console attached**: the BEL is muted but the audit log still records. Subscribe to `journalctl -u selfdef-guardian.service -f` from another host for active monitoring; or wire a notifier integration (selfdef-integration-{ntfy,signal,pagerduty}).
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-029 §Deliverable 2 (Responder 3-step orchestrator)
 - MS044 R10381-R10410 (response orchestrator + circuit breaker)

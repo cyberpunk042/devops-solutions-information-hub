@@ -184,7 +184,9 @@ EOF
 - **Weights drift away from dump verbatim AND nobody can explain why**: revert to baseline via `selfdef-scheduler::AxisWeights::for_profile(p)` defaults. The dump's verbatim values are the operator-recoverable known-good state.
 - **Replay shows old vs new compound deltas across the board**: that's the expected counterfactual surface. Per R11393-R11398, `selfdefctl scheduler replay <request-id> --profile careful` shows how every past decision would have routed under the new weights.
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-031 §Deliverable 2 (AxisWeights::for_profile)
 - MS048 R11291-R11332 (per-profile weight matrix)

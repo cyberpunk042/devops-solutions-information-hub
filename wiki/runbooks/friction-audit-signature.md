@@ -165,10 +165,11 @@ sudo selfdefctl friction-audit override-create \
 
 Same multi-sig + legal-review requirement as the immutability gate (MS046 F05452 + sovereign-os M081 F06785 must-not-touch tier).
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - Source: derived from the MS003 selfdef-signing pattern (no specific sain-01 dump section; signature is operator-extended for chain-of-trust)
-- SDD: `selfdef/docs/sdd/027-friction-audit-system.md` Deliverable 1 step "signature verification before body executes" + Deliverable 6 "signature manifest installed via postinst"
 - Milestone: `selfdef/backlog/milestones/MS046-friction-audit-system-boot-time-hardware-integrity-gate.md` R10805-R10807, R11254-R11258
 - MS003 selfdef-signing: `selfdef/crates/selfdef-signing/`
 - Key rotation set: `selfdef/crates/selfdef-key-rotation-set/` (Cycle-2 catalog)

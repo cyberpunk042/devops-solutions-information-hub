@@ -140,7 +140,9 @@ EOF
 - **Rolled back a verdict and then realized it WAS malicious**: rollback records are themselves auditable. Append a follow-up note correcting the assessment; do NOT delete the rollback record.
 - **Need to roll back a verdict from days ago**: the ring buffer is bounded (~16 most recent in the cockpit view; the OCSF log is the canonical archive). `selfdefctl guardian rollback` works as long as the verdict still appears in `guardian history`; for older verdicts, the rollback workflow operates on the OCSF log directly (future-round R10540).
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-029 §Deliverable 4 (CLI: `selfdefctl guardian rollback`)
 - MS009 audit cycles + replay invariants

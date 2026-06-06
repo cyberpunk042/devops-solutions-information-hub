@@ -143,7 +143,9 @@ The runtime crate's `audit_chain_check` verifies SHA-256 chained `prev_event_sha
 | Unknown path, parent process is a known service | Identify the service. If it's an LLM agent / automation that overflowed its scope, this is a service-defect incident (the service tried to exec something it shouldn't); fix the service and document. |
 | Repeated SIGKILLs in a tight window | Likely an automated tool retrying. Find and stop the parent; the in-kernel fence is doing its job. |
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-028 §Deliverable 3 (runtime crate, OCSF Detection 2004 emission)
 - SDD-028 §Deliverable 8 (HTTP API `/v1/perimeter/history`)

@@ -167,7 +167,9 @@ Follow-up: <vendor escalation / nothing / monitoring tweak>
 EOF
 ```
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-026 § Z-7 (network state surface specification)
 - MS011 catalog rows on Z-7 (M00276 dashboard tab Network)

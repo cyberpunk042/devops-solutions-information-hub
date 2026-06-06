@@ -175,7 +175,9 @@ Many forces from the same signer in tight window = either active debugging, runa
 - **Operator wants to disable force-override entirely** (high-trust profile, no human-in-the-loop routing): operator-decision; would need a Stage-2 catalog amendment (Profile enum extension or new force-disabled flag). Document the request in `wiki/log/` for operator review.
 - **Force success rate < 50% (forces routinely produce worse outcomes than the scheduler's default)**: the operator's intuition is mis-calibrated relative to current workload. Consider weight-rotation OR more aggressive replay-feedback loop (R11389-R11390).
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-031 §Deliverable 3 (`selfdefctl scheduler force` CLI surface)
 - MS048 R11399-R11402 (force-override semantics)

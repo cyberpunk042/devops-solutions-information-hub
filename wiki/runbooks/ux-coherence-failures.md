@@ -113,7 +113,9 @@ Per the operator standing direction *"be an architect first, then a DevOps Softw
 
 Never silently update the harness baseline to match a drifted binary. Always update the binary OR the SDD (with operator approval), THEN the baseline.
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-030 UX coherence test harness specification (selfdef `docs/sdd/030-ux-coherence-test-harness.md`)
 - MS045 catalog (`backlog/milestones/MS045-ux-coherence-test-harness-cli-tui-minimal-web.md`)

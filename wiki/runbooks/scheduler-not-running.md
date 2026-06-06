@@ -134,7 +134,9 @@ Exit 0 + "chain intact" confirms the SHA-256 chain has not been broken. Exit 1 �
 - **Host shouldn't run the scheduler** (no GPUs, no Blackwell, single-tier inference): disable it with `systemctl disable selfdef-scheduler.service`. The four-watchdog set degrades to a three-watchdog set — friction-audit + perimeter + guardian still enforce; only routing decisions are made by default first-available-route.
 - **Repeated restarts in short windows**: don't disable `Restart=always`; that defeats the routing-layer recovery. Diagnose the root cause.
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-031 §Deliverable 5 (systemd unit)
 - SDD-031 §Deliverable 10 (daemon boot observability)

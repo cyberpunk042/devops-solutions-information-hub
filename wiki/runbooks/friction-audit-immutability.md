@@ -166,10 +166,11 @@ sudo selfdefctl friction-audit override-create \
 
 The legal-review signer is mandatory per the audit/Whitelabel "must-not-touch" doctrine (MS046 F05452 + sovereign-os M081 F06785). Operator + auditor alone cannot honor an immutability failure.
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - Source: `~/infohub/raw/dumps/2026-05-15-sain-01-master-spec-other-conversation-transposition.md` §5 line 339 "immutable boot-time script"
-- SDD: `selfdef/docs/sdd/027-friction-audit-system.md` Deliverable 6 (Debian postinst chattr +i)
 - Milestone: `selfdef/backlog/milestones/MS046-friction-audit-system-boot-time-hardware-integrity-gate.md` R10803, R11183
 - Sister gates: `friction-audit-pcie.md`, `friction-audit-zfs.md`, `friction-audit-memory.md`, `friction-audit-signature.md`
 - Guardian Daemon (alert consumer): selfdef MS044 (Tetragon → Guardian → SIGKILL + console alert)

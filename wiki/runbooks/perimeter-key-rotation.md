@@ -164,7 +164,9 @@ Same as operator key, with these differences:
 | Old extension stops verifying after rotation | The old pub key was removed too early | restore the old pub key to /etc/selfdef/trust-roots/ until natural expiry |
 | `trust-roots dir missing` | `/etc/selfdef/trust-roots` doesn't exist | `sudo mkdir -p /etc/selfdef/trust-roots; sudo chmod 0750 /etc/selfdef/trust-roots; sudo chown root:selfdef /etc/selfdef/trust-roots` |
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-028 §Deliverable 3 (runtime crate, ExtensionStore::load_signed → verify_minisign)
 - MS003 selfdef-signing chain-of-trust

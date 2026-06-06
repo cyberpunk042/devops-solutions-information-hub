@@ -124,10 +124,11 @@ sudo selfdefctl friction-audit override-create \
 
 Both signer + auditor must hold Ring 0 authority (MS039). The override is logged to the OCSF audit chain (MS046 R10877 + R10878) and surfaces as a yellow countdown banner in the MS043 TUI authority panel until expiry.
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - Source: `~/infohub/raw/dumps/2026-05-15-sain-01-master-spec-other-conversation-transposition.md` §5.1 lines 346–353
-- SDD: `selfdef/docs/sdd/027-friction-audit-system.md`
 - Milestone: `selfdef/backlog/milestones/MS046-friction-audit-system-boot-time-hardware-integrity-gate.md`
 - Sister gates: `friction-audit-zfs.md`, `friction-audit-memory.md`, `friction-audit-immutability.md`, `friction-audit-signature.md`
 - Guardian Daemon (consumer of these verdicts): `selfdef/docs/sdd/` MS044

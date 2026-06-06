@@ -137,10 +137,11 @@ sudo selfdefctl friction-audit override-create \
     --auditor-kid <auditor-MS003-kid>
 ```
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - Source: `~/infohub/raw/dumps/2026-05-15-sain-01-master-spec-other-conversation-transposition.md` §5.1 lines 360–364
-- SDD: `selfdef/docs/sdd/027-friction-audit-system.md` Deliverable 1 step 3 + operator-extension list
 - Milestone: `selfdef/backlog/milestones/MS046-friction-audit-system-boot-time-hardware-integrity-gate.md` R10827-R10833 + F05491
 - Sister gates: `friction-audit-pcie.md`, `friction-audit-zfs.md`, `friction-audit-immutability.md`, `friction-audit-signature.md`
 - znver5 ECC reference: SDD-018 hardware-aware modules + sain-01 §1.1 core components
