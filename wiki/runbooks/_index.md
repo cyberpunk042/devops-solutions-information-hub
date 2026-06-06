@@ -107,6 +107,8 @@ Operator-facing runbook navigation home for the selfdef + sovereign-os productio
 
 ### Cross-references
 
+- Companion canonical index: [`wiki/ecosystem/two-ultimate-solutions-canonical-index.md`](../ecosystem/two-ultimate-solutions-canonical-index.md) — operator-stated "two ultimate solutions" identification (selfdef + sovereign-os); this runbook fleet covers the operator-facing layer of those two ultimate solutions.
 - Companion pattern: [`wiki/patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation.md`](../patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation.md) — implementation pattern referenced by several runbooks for the MS5a-state-journal / MS5a-enforcement split.
 - Companion pattern: [`wiki/patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture.md`](../patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture.md) — five-milestone architecture that anchors the SDD-065..078 IPS-quattuordectet runbook fleet (forthcoming).
 - Companion decision: [`wiki/decisions/01_drafts/in-memory-backend-as-ms1-substrate.md`](../decisions/01_drafts/in-memory-backend-as-ms1-substrate.md) — MS1 in-memory backend substrate that backs each primitive's runbook.
+- Companion session log: [`wiki/log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066.md`](../log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066.md) — selfdef enforcement-layer pivot session log (SDD-065 + SDD-066 ready-for-review).

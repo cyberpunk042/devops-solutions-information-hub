@@ -23,6 +23,13 @@ The second brain's understanding of each project in the ecosystem. These are NOT
 | [AICP](project_profiles/aicp/identity-profile.md) | Backend platform (Python) | Solo | Simplified | Circuit breakers, 78 skills, backend routing |
 | [devops-control-plane](project_profiles/devops-control-plane/identity-profile.md) | Infrastructure (TUI/CLI/Web) | Solo | Simplified | Vault security, immune system rules, tech auto-detection |
 | [Research Wiki](project_profiles/research-wiki/identity-profile.md) | Knowledge system (Python/Wiki) | Solo | Default | Self-referential — IS the second brain |
+| [root-ghostproxy](project_profiles/root-ghostproxy/identity-profile.md) | OS-level system AI safety setup IaC (root-level) | Solo | Stage-gated (infrastructure) | OS-root agent safety + transparent L2 IPS bridge (Suricata + PolarProxy modules) |
+
+## Cross-cutting indexes
+
+| Page | Role |
+|---|---|
+| [Two ultimate solutions — canonical architecture index (selfdef + sovereign-os)](two-ultimate-solutions-canonical-index.md) | Operator-stated "two ultimate solutions" identification; cross-session scope-state continuity; stop-hook clarification anchor |
 
 ## What This Section Is For
 
