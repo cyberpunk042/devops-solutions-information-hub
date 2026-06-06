@@ -1,24 +1,24 @@
 {
-  "generated": "2026-06-06T09:47:38.925208+00:00",
+  "generated": "2026-06-06T09:57:19.217884+00:00",
   "stats": {
-    "pages": 977,
+    "pages": 978,
     "domains": 16,
     "sources": 128,
     "comparisons": 14,
     "relationships": 4352,
-    "tags_unique": 3764,
+    "tags_unique": 3768,
     "layers": {
       "3": 8,
       "5": 38,
       "6": 27,
-      "2": 116,
+      "2": 117,
       "4": 90,
       "0": 1,
       "1": 94,
       "spine": 84
     },
     "maturity": {
-      "seed": 243,
+      "seed": 244,
       "growing": 352,
       "mature": 23
     }
@@ -49502,6 +49502,55 @@
       "relationships": []
     },
     {
+      "path": "runbooks/m060-mirror-export-publish-anomalies.md",
+      "slug": "runbooks/m060-mirror-export-publish-anomalies",
+      "title": "Operator runbook \u2014 M060 mirror-export publish anomalies (failing / stale / wedged)",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-06-06",
+      "updated": "2026-06-06",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "m060",
+        "mirror-export",
+        "alert",
+        "prometheus",
+        "operator-facing",
+        "selfdef",
+        "sovereign-os"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-prometheus-alerts",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "modules/observability/assets/alerts/selfdef.yml.template",
+          "note": "Three SelfdefM060Publish* alerts (failing / stale / wedged) emitted by selfdefd mirror_export_loop"
+        },
+        {
+          "id": "sovereign-os-m060-deployment-guide",
+          "type": "external",
+          "url": "https://github.com/cyberpunk042/sovereign-os/blob/main/docs/operator/m060-deployment-guide.md",
+          "note": "Canonical M060 deployment-guide troubleshooting section (sovereign-os)"
+        },
+        {
+          "id": "selfdef-sdd-061",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/061-module-system.md",
+          "note": "SDD-061 module system \u2014 M060 is the mirror-export module per the SDD-061 module fleet"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "runbooks/network-degraded.md",
       "slug": "runbooks/network-degraded",
       "title": "Operator runbook \u2014 network state degraded (internet / DNS / cloudflared / tailscale / Traefik)",
@@ -68198,7 +68247,7 @@
       "relationship_count": 1868
     },
     "ai-agents": {
-      "page_count": 116,
+      "page_count": 117,
       "relationship_count": 583
     },
     "ai-models": {
@@ -70547,6 +70596,7 @@
       "log/2026-05-20-avx-plus-plus-dump-tail-backward-sweep-review",
       "log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066",
       "log/2026-06-06-perpetual-goal-resumed-three-repo-ci-green-out",
+      "runbooks/m060-mirror-export-publish-anomalies",
       "sources/src-sain-01-sovereign-node-spec",
       "spine/doctrine/peace-machine-and-core-law"
     ],
@@ -70960,7 +71010,8 @@
     ],
     "prometheus": [
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
-      "backlog/tasks/T027-verify-metrics-capture-k2-6-backends"
+      "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
+      "runbooks/m060-mirror-export-publish-anomalies"
     ],
     "observability": [
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
@@ -71222,6 +71273,7 @@
       "runbooks/guardian-false-positive-rollback",
       "runbooks/guardian-not-running",
       "runbooks/guardian-socket-unreachable",
+      "runbooks/m060-mirror-export-publish-anomalies",
       "runbooks/network-degraded",
       "runbooks/perimeter-audit-log-corruption",
       "runbooks/perimeter-extension-create",
@@ -72054,6 +72106,7 @@
       "runbooks/guardian-false-positive-rollback",
       "runbooks/guardian-not-running",
       "runbooks/guardian-socket-unreachable",
+      "runbooks/m060-mirror-export-publish-anomalies",
       "runbooks/network-degraded",
       "runbooks/perimeter-audit-log-corruption",
       "runbooks/perimeter-extension-create",
@@ -80760,6 +80813,18 @@
     ],
     "unix-socket": [
       "runbooks/guardian-socket-unreachable"
+    ],
+    "m060": [
+      "runbooks/m060-mirror-export-publish-anomalies"
+    ],
+    "mirror-export": [
+      "runbooks/m060-mirror-export-publish-anomalies"
+    ],
+    "alert": [
+      "runbooks/m060-mirror-export-publish-anomalies"
+    ],
+    "operator-facing": [
+      "runbooks/m060-mirror-export-publish-anomalies"
     ],
     "internet": [
       "runbooks/network-degraded"
