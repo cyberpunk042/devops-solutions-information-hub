@@ -142,6 +142,18 @@ The iterative-failure-revelation pattern: layer-3 nspawn jobs fail-fast at the f
 |---|---|---|
 | `26491d1` | docs(runbooks): list M060 mirror-export anomalies runbook in the runbooks index | Index update — the M060 runbook (added in a7e6cf6) wasn't listed in runbooks/_index.md; would have surfaced as a new orphan lint on next pipeline post |
 
+## 🎉 sovereign-os CI fully green on e03d91d
+
+All 6 CI jobs PASS on `e03d91d`:
+- ✅ ruff (python real-bug lint)
+- ✅ layer 1 schema + lint
+- ✅ layer 2 unit tests
+- ✅ shellcheck
+- ✅ cargo workspace (cargo fmt + clippy + test + build)
+- ✅ layer 3 stage acceptance (nspawn-style) — **ALL 111 layer-3 steps GREEN**
+
+The iterative-revelation chain that started at the failed Round 76 (Makefile e2e) has fully closed: Round 76 → 156 → 206 → 225 → 207. Each round's fix unblocked the next downstream round in sequence; the layer-3 nspawn job is fail-fast so progress was visible round-by-round across multiple CI runs.
+
 ## Pre-existing reds remaining (accepted per operator standing rules)
 
 - **selfdef** four-watchdog coherence harness (SDD-030 / MS045 — 13 layers) — was 70 L2 watchdog bats tests failing + 4 L1 layers. This segment closed **3 L1 layers** (ruff + prometheus-alerts + cli-surface). Remaining 2 L1 fails (YAML / JSON parse-scan) pass locally; CI-environment-specific. L2 bats failures (xsession-watchdog, acpi-hooks-watchdog, etc.) fail in CI because they call `chown 99999:99999` which requires root privileges (CI runs unprivileged). Pre-existing accepted RED. Job name unchanged per operator's "DO NOT rename" directive.
