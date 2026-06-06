@@ -28,7 +28,7 @@ tags: [pre-compact-hook-draft, python-implementation, agent-authored, task-28-fo
 
 ## Summary
 
-Per Fire 105 PreCompact spec + Task #28: agent-DRAFT Python implementation. Concrete forward-anchor for Task #28 + impl-spec #10 Tier 2 → Tier 3 transition.
+Per Fire 105 PreCompact spec + Task #28: agent-DRAFT Python implementation of the PreCompact handoff hook. Concrete forward-anchor for Task #28 + impl-spec #10 Tier 2 → Tier 3 transition — provides the deterministic state snapshot that defeats post-compact amnesia by writing an 11-section handoff doc to `wiki/log/` and dropping a recovery sentinel in `.claude/`. Authored as agent-DRAFT (per SB-095 hallucinated-artifacts discipline) pending operator promotion.
 
 ## Pattern Description
 
