@@ -24,7 +24,9 @@ tags: [four-watchdog, ms046, ms047, ms044, ms048, friction-audit, perimeter, gua
 
 # Four-watchdog set — end-to-end production landing (2026-05-20)
 
-## What landed
+## Summary
+
+### What landed
 
 Four cooperating boundary-enforcement layers are now production-shipped end-to-end across the selfdef + sovereign-os + info-hub repos:
 
