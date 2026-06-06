@@ -1,7 +1,32 @@
 ---
 title: In-memory backend as MS1 substrate for selfdef enforcement primitives
+type: decision
+domain: ai-agents
 status: draft
+confidence: medium
 maturity_tier: 01_drafts
+created: '2026-05-29'
+updated: '2026-05-29'
+sources:
+  - id: selfdef-sdd-065
+    type: internal
+    project: selfdef
+    path: docs/sdd/065-ip-block-action-surface.md
+    note: SDD-065 IP-block action surface — MS1 in-memory backend
+  - id: selfdef-sdd-066
+    type: internal
+    project: selfdef
+    path: docs/sdd/066-process-quarantine-action-surface.md
+    note: SDD-066 process-quarantine action surface — MS1 in-memory backend
+tags:
+  - decision
+  - selfdef
+  - ms1
+  - in-memory-backend
+  - enforcement-primitive
+  - sdd-065
+  - sdd-066
+  - ai-drafted
 decided_in_session: claude-code 2026-05-29 perpetual /goal
 applies_to:
   - selfdef-blockset-backend (SDD-065 MS1)

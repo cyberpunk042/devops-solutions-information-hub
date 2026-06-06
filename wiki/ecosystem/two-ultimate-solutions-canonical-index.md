@@ -1,7 +1,27 @@
 ---
 title: Two ultimate solutions — canonical architecture index (selfdef + sovereign-os)
+type: index
+domain: cross-domain
 status: draft
+confidence: high
 maturity_tier: 02_synthesized
+created: '2026-05-29'
+updated: '2026-05-29'
+sources:
+  - id: operator-directive-two-ultimate-solutions
+    type: directive
+    project: devops-solutions-information-hub
+    path: raw/notes/
+    note: Operator-stated 'two ultimate solutions' identification (selfdef + sovereign-os)
+tags:
+  - index
+  - ecosystem
+  - selfdef
+  - sovereign-os
+  - two-ultimate-solutions
+  - canonical
+  - cross-session
+  - ai-drafted
 authoritative_for:
   - operator-stated "two ultimate solutions" identification
   - cross-session scope-state continuity

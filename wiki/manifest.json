@@ -1,12 +1,12 @@
 {
-  "generated": "2026-06-06T01:18:23.599734+00:00",
+  "generated": "2026-06-06T01:20:37.876621+00:00",
   "stats": {
     "pages": 976,
     "domains": 16,
     "sources": 128,
     "comparisons": 14,
     "relationships": 4352,
-    "tags_unique": 3744,
+    "tags_unique": 3759,
     "layers": {
       "3": 8,
       "5": 38,
@@ -10092,15 +10092,39 @@
       "path": "decisions/01_drafts/in-memory-backend-as-ms1-substrate.md",
       "slug": "decisions/01_drafts/in-memory-backend-as-ms1-substrate",
       "title": "In-memory backend as MS1 substrate for selfdef enforcement primitives",
-      "type": "",
-      "domain": "",
+      "type": "decision",
+      "domain": "ai-agents",
       "status": "draft",
-      "confidence": "",
-      "created": "",
-      "updated": "",
+      "confidence": "medium",
+      "created": "2026-05-29",
+      "updated": "2026-05-29",
       "last_reviewed": "",
-      "tags": [],
-      "sources": [],
+      "tags": [
+        "decision",
+        "selfdef",
+        "ms1",
+        "in-memory-backend",
+        "enforcement-primitive",
+        "sdd-065",
+        "sdd-066",
+        "ai-drafted"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-sdd-065",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/065-ip-block-action-surface.md",
+          "note": "SDD-065 IP-block action surface \u2014 MS1 in-memory backend"
+        },
+        {
+          "id": "selfdef-sdd-066",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/066-process-quarantine-action-surface.md",
+          "note": "SDD-066 process-quarantine action surface \u2014 MS1 in-memory backend"
+        }
+      ],
       "layer": "",
       "maturity": "",
       "derived_from": [],
@@ -20732,15 +20756,32 @@
       "path": "ecosystem/two-ultimate-solutions-canonical-index.md",
       "slug": "ecosystem/two-ultimate-solutions-canonical-index",
       "title": "Two ultimate solutions \u2014 canonical architecture index (selfdef + sovereign-os)",
-      "type": "",
-      "domain": "",
+      "type": "index",
+      "domain": "cross-domain",
       "status": "draft",
-      "confidence": "",
-      "created": "",
-      "updated": "",
+      "confidence": "high",
+      "created": "2026-05-29",
+      "updated": "2026-05-29",
       "last_reviewed": "",
-      "tags": [],
-      "sources": [],
+      "tags": [
+        "index",
+        "ecosystem",
+        "selfdef",
+        "sovereign-os",
+        "two-ultimate-solutions",
+        "canonical",
+        "cross-session",
+        "ai-drafted"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive-two-ultimate-solutions",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "raw/notes/",
+          "note": "Operator-stated 'two ultimate solutions' identification (selfdef + sovereign-os)"
+        }
+      ],
       "layer": "",
       "maturity": "",
       "derived_from": [],
@@ -41021,15 +41062,51 @@
       "path": "log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066.md",
       "slug": "log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066",
       "title": "Selfdef enforcement-layer pivot \u2014 SDD-065 + SDD-066 shipped end-to-end",
-      "type": "",
-      "domain": "",
-      "status": "",
-      "confidence": "",
-      "created": "",
-      "updated": "",
+      "type": "note",
+      "domain": "ai-agents",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-29",
+      "updated": "2026-05-29",
       "last_reviewed": "",
-      "tags": [],
-      "sources": [],
+      "tags": [
+        "log",
+        "session-log",
+        "selfdef",
+        "sovereign-os",
+        "enforcement-layer",
+        "sdd-065",
+        "sdd-066",
+        "ai-drafted"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-pr-200",
+          "type": "external",
+          "url": "https://github.com/cyberpunk042/selfdef/pull/200",
+          "note": "selfdef PR #200 \u2014 SDD-065 + SDD-066 ready-for-review"
+        },
+        {
+          "id": "sovereign-os-pr-12",
+          "type": "external",
+          "url": "https://github.com/cyberpunk042/sovereign-os/pull/12",
+          "note": "sovereign-os PR #12 \u2014 companion enforcement-layer pivot"
+        },
+        {
+          "id": "selfdef-sdd-065",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/065-ip-block-action-surface.md",
+          "note": "SDD-065 IP-block action surface"
+        },
+        {
+          "id": "selfdef-sdd-066",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/066-process-quarantine-action-surface.md",
+          "note": "SDD-066 process-quarantine action surface"
+        }
+      ],
       "layer": "",
       "maturity": "",
       "derived_from": [],
@@ -44412,14 +44489,23 @@
       "path": "patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation.md",
       "slug": "patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation",
       "title": "MS5a state-journal-vs-enforcement-layer separation pattern",
-      "type": "",
-      "domain": "",
+      "type": "pattern",
+      "domain": "ai-agents",
       "status": "draft",
-      "confidence": "",
-      "created": "",
-      "updated": "",
+      "confidence": "medium",
+      "created": "2026-05-29",
+      "updated": "2026-05-29",
       "last_reviewed": "",
-      "tags": [],
+      "tags": [
+        "pattern",
+        "selfdef",
+        "ms5a",
+        "state-journal",
+        "enforcement-layer",
+        "separation",
+        "ips-dectet",
+        "ai-drafted"
+      ],
       "sources": [
         {
           "id": "selfdef-pr-215",
@@ -44711,15 +44797,39 @@
       "path": "patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture.md",
       "slug": "patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture",
       "title": "Paired enforcement primitive \u2014 five-milestone architecture for selfdef IPS actions",
-      "type": "",
-      "domain": "",
+      "type": "pattern",
+      "domain": "ai-agents",
       "status": "draft",
-      "confidence": "",
-      "created": "",
-      "updated": "",
+      "confidence": "medium",
+      "created": "2026-05-29",
+      "updated": "2026-05-29",
       "last_reviewed": "",
-      "tags": [],
-      "sources": [],
+      "tags": [
+        "pattern",
+        "selfdef",
+        "paired-enforcement-primitive",
+        "five-milestone",
+        "ips-dectet",
+        "sdd-065",
+        "sdd-066",
+        "ai-drafted"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-sdd-065",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/065-ip-block-action-surface.md",
+          "note": "SDD-065 IP-block action surface \u2014 first of paired-enforcement-primitive dectet"
+        },
+        {
+          "id": "selfdef-sdd-066",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/066-process-quarantine-action-surface.md",
+          "note": "SDD-066 process-quarantine action surface \u2014 second of paired-enforcement-primitive dectet"
+        }
+      ],
       "layer": "",
       "maturity": "",
       "derived_from": [],
@@ -68029,11 +68139,11 @@
       "relationship_count": 632
     },
     "cross-domain": {
-      "page_count": 315,
+      "page_count": 316,
       "relationship_count": 1868
     },
     "ai-agents": {
-      "page_count": 111,
+      "page_count": 115,
       "relationship_count": 583
     },
     "ai-models": {
@@ -69314,6 +69424,7 @@
       "ecosystem/project_profiles/openfleet/identity-profile",
       "ecosystem/project_profiles/research-wiki/identity-profile",
       "ecosystem/project_profiles/root-ghostproxy/identity-profile",
+      "ecosystem/two-ultimate-solutions-canonical-index",
       "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
       "lessons/03_validated/methodology-quality/bug-vs-systemic-bug-nuance-systemic-bugs-live-at-the-meta-level-harness-ecosystem-brain-files",
       "patterns/01_drafts/sister-project-propagation-pattern-from-second-brain-to-5-project-ecosystem",
@@ -70377,7 +70488,9 @@
     ],
     "sovereign-os": [
       "backlog/milestones/sain-01-sovereign-node",
+      "ecosystem/two-ultimate-solutions-canonical-index",
       "log/2026-05-20-avx-plus-plus-dump-tail-backward-sweep-review",
+      "log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066",
       "sources/src-sain-01-sovereign-node-spec",
       "spine/doctrine/peace-machine-and-core-law"
     ],
@@ -70617,6 +70730,7 @@
       "log/2026-05-16-ck-bootstrap-execution-batch-1",
       "log/2026-05-16-ck-bootstrap-execution-batch-2",
       "log/2026-05-21-selfdef-layer-up-batch-15-milestones-promoted-to-done",
+      "log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066",
       "spine/standards/note-page-standards"
     ],
     "contract": [
@@ -70910,7 +71024,9 @@
       "patterns/01_drafts/correction-as-calibration-pre-edit-verification-gate-design",
       "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage",
       "patterns/01_drafts/methodology-stage-gate-edit-land-enforcement-design",
+      "patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation",
       "patterns/01_drafts/observe-fix-verify-loop",
+      "patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture",
       "patterns/01_drafts/pattern-recurrence-quantification-and-operator-frustration-as-signal",
       "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain",
       "patterns/01_drafts/per-day-jsonl-dlq-with-retry-budget",
@@ -71860,11 +71976,16 @@
     ],
     "selfdef": [
       "comparisons/cmp-wall-vs-write-vs-tetragon-for-perimeter",
+      "decisions/01_drafts/in-memory-backend-as-ms1-substrate",
       "domains/cross-domain/cascade-candidate-root-ghostproxy-scope-clarification-selfdef-boundary-2026-05-16",
+      "ecosystem/two-ultimate-solutions-canonical-index",
       "lessons/01_drafts/layer-up-over-crate-already-shipped-promotion-pattern",
       "log/2026-05-20-avx-plus-plus-dump-tail-backward-sweep-review",
       "log/2026-05-20-four-watchdog-end-to-end-production-landing",
       "log/2026-05-21-selfdef-layer-up-batch-15-milestones-promoted-to-done",
+      "log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066",
+      "patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation",
+      "patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture",
       "runbooks/friction-audit-immutability",
       "runbooks/friction-audit-memory",
       "runbooks/friction-audit-pcie",
@@ -72035,6 +72156,7 @@
       "decisions/01_drafts/claude-code-stop-hook-block-cap-raise-default-to-1000-for-perpetual-mandate-work",
       "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
       "decisions/01_drafts/extended-to-adaptive-thinking-migration",
+      "decisions/01_drafts/in-memory-backend-as-ms1-substrate",
       "decisions/01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration",
       "decisions/01_drafts/pretooluse-hooks-layered-approach",
       "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
@@ -72486,6 +72608,32 @@
     ],
     "breaking-change": [
       "decisions/01_drafts/extended-to-adaptive-thinking-migration"
+    ],
+    "ms1": [
+      "decisions/01_drafts/in-memory-backend-as-ms1-substrate"
+    ],
+    "in-memory-backend": [
+      "decisions/01_drafts/in-memory-backend-as-ms1-substrate"
+    ],
+    "enforcement-primitive": [
+      "decisions/01_drafts/in-memory-backend-as-ms1-substrate"
+    ],
+    "sdd-065": [
+      "decisions/01_drafts/in-memory-backend-as-ms1-substrate",
+      "log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066",
+      "patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture"
+    ],
+    "sdd-066": [
+      "decisions/01_drafts/in-memory-backend-as-ms1-substrate",
+      "log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066",
+      "patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture"
+    ],
+    "ai-drafted": [
+      "decisions/01_drafts/in-memory-backend-as-ms1-substrate",
+      "ecosystem/two-ultimate-solutions-canonical-index",
+      "log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066",
+      "patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation",
+      "patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture"
     ],
     "ollama": [
       "decisions/01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration",
@@ -74366,7 +74514,8 @@
       "domains/knowledge-systems/pkm-theory/knowledge-evolution-pipeline"
     ],
     "canonical": [
-      "domains/knowledge-systems/pkm-theory/knowledge-evolution-pipeline"
+      "domains/knowledge-systems/pkm-theory/knowledge-evolution-pipeline",
+      "ecosystem/two-ultimate-solutions-canonical-index"
     ],
     "wiki-evolution": [
       "domains/knowledge-systems/pkm-theory/knowledge-evolution-pipeline"
@@ -74704,6 +74853,17 @@
     ],
     "sfif-pre-infrastructure": [
       "ecosystem/project_profiles/root-ghostproxy/identity-profile"
+    ],
+    "index": [
+      "ecosystem/two-ultimate-solutions-canonical-index",
+      "spine/references/model-registry"
+    ],
+    "two-ultimate-solutions": [
+      "ecosystem/two-ultimate-solutions-canonical-index"
+    ],
+    "cross-session": [
+      "ecosystem/two-ultimate-solutions-canonical-index",
+      "log/2026-05-05-handoff-to-root-session"
     ],
     "p4-specialization": [
       "lessons/01_drafts/agent-authored-content-must-be-flagged-vs-operator-canonical-the-fabrication-cure",
@@ -77383,9 +77543,6 @@
     "ingestion-arc": [
       "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson"
     ],
-    "cross-session": [
-      "log/2026-05-05-handoff-to-root-session"
-    ],
     "second-brain-to-root": [
       "log/2026-05-05-handoff-to-root-session"
     ],
@@ -79363,6 +79520,13 @@
     "multi-cycle": [
       "log/2026-05-21-selfdef-layer-up-batch-15-milestones-promoted-to-done"
     ],
+    "session-log": [
+      "log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066"
+    ],
+    "enforcement-layer": [
+      "log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066",
+      "patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation"
+    ],
     "correction": [
       "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
       "log/amendment-to-prior-compliance-checker-correction-root-depth",
@@ -79815,6 +79979,19 @@
     "blockers-impediments-questions": [
       "patterns/01_drafts/mode-by-nature-active-governance-pm-architect-dual-expert-generates-blockers-impediments-questions"
     ],
+    "ms5a": [
+      "patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation"
+    ],
+    "state-journal": [
+      "patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation"
+    ],
+    "separation": [
+      "patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation"
+    ],
+    "ips-dectet": [
+      "patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation",
+      "patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture"
+    ],
     "ecosystem-index": [
       "patterns/01_drafts/multi-project-ecosystem-index-pattern-5-project-propagation-surface-post-tier-3"
     ],
@@ -79857,6 +80034,12 @@
     ],
     "tier-promotion": [
       "patterns/01_drafts/operator-review-checklist-pattern-per-piece-decision-framework-for-tier-promotion"
+    ],
+    "paired-enforcement-primitive": [
+      "patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture"
+    ],
+    "five-milestone": [
+      "patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture"
     ],
     "meta-measurement": [
       "patterns/01_drafts/pattern-recurrence-quantification-and-operator-frustration-as-signal"
@@ -83984,9 +84167,6 @@
       "spine/references/methodology-system-map"
     ],
     "registry": [
-      "spine/references/model-registry"
-    ],
-    "index": [
       "spine/references/model-registry"
     ],
     "entry-point": [

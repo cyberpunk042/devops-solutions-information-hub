@@ -1,26 +1,40 @@
 ---
 title: MS5a state-journal-vs-enforcement-layer separation pattern
+type: pattern
+domain: ai-agents
 status: draft
+confidence: medium
 tier: pattern
+created: '2026-05-29'
+updated: '2026-05-29'
+sources:
+  - id: selfdef-pr-215
+    type: external
+    url: https://github.com/cyberpunk042/selfdef/pull/215
+    note: '8 of 10 IPS-dectet MS5a adapters (companion to PR #216)'
+  - id: selfdef-pr-216
+    type: external
+    url: https://github.com/cyberpunk042/selfdef/pull/216
+    note: '8 of 10 IPS-dectet MS5a adapters (companion to PR #215)'
+  - id: selfdef-sdd-065
+    type: internal
+    project: selfdef
+    path: docs/sdd/065-ip-block-action-surface.md
+    note: First of the SDD-065..074 paired-enforcement-primitive dectet
+tags:
+  - pattern
+  - selfdef
+  - ms5a
+  - state-journal
+  - enforcement-layer
+  - separation
+  - ips-dectet
+  - ai-drafted
 classification: implementation-pattern
 authorship: assistant
 related:
   - wiki/patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture.md
   - wiki/decisions/01_drafts/in-memory-backend-as-ms1-substrate.md
-sources:
-  - id: selfdef-pr-215
-    type: external
-    url: https://github.com/cyberpunk042/selfdef/pull/215
-    note: "8 of 10 IPS-dectet MS5a adapters (companion to PR #216)"
-  - id: selfdef-pr-216
-    type: external
-    url: https://github.com/cyberpunk042/selfdef/pull/216
-    note: "8 of 10 IPS-dectet MS5a adapters (companion to PR #215)"
-  - id: selfdef-sdd-065
-    type: internal
-    project: selfdef
-    path: docs/sdd/065-ip-block-action-surface.md
-    note: "First of the SDD-065..074 paired-enforcement-primitive dectet"
 ---
 
 # MS5a state-journal-vs-enforcement-layer separation pattern

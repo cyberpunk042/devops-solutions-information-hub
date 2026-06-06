@@ -1,7 +1,32 @@
 ---
 title: Paired enforcement primitive — five-milestone architecture for selfdef IPS actions
+type: pattern
+domain: ai-agents
 status: draft
+confidence: medium
 maturity_tier: 01_drafts
+created: '2026-05-29'
+updated: '2026-05-29'
+sources:
+  - id: selfdef-sdd-065
+    type: internal
+    project: selfdef
+    path: docs/sdd/065-ip-block-action-surface.md
+    note: SDD-065 IP-block action surface — first of paired-enforcement-primitive dectet
+  - id: selfdef-sdd-066
+    type: internal
+    project: selfdef
+    path: docs/sdd/066-process-quarantine-action-surface.md
+    note: SDD-066 process-quarantine action surface — second of paired-enforcement-primitive dectet
+tags:
+  - pattern
+  - selfdef
+  - paired-enforcement-primitive
+  - five-milestone
+  - ips-dectet
+  - sdd-065
+  - sdd-066
+  - ai-drafted
 origin_session: claude-code 2026-05-29 perpetual /goal
 companions:
   - selfdef docs/sdd/065-ip-block-action-surface.md
