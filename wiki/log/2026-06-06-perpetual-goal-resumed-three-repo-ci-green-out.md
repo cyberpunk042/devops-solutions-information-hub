@@ -120,9 +120,27 @@ Three L1 layers of the four-watchdog coherence harness now PASS locally (was 4 o
 
 CI status across all three sovereign-os jobs on fc78b13 (the prior commit): cargo workspace = PASS, layer 1 + layer 2 = PASS, layer 3 (Makefile e2e) still FAIL → 594b052 closes the root cause. After 594b052 propagates, sovereign-os CI should be 6/6 GREEN.
 
+## Third continued segment — sovereign-os layer-3 nspawn iterative-revelation chain (3 additional commits)
+
+After the first 20 commits landed and sovereign-os layer-3 progressed past Round 76 (Makefile e2e), each subsequent layer-3 test unblocked the next to run, revealing more drift:
+
+| SHA | Subject | Closures |
+|---|---|---|
+| `03907b3` | fix(test): derive verified-real models from catalog.yaml in test_models_catalog (5 → 15 expansion) | Round 156 (models catalog) — 2 subtest fails closed via dynamic catalog read |
+| `f133934` | docs(models): regenerate model-catalog.md to reflect 19 verified models (was 17 stale) | Round 206 (models docs) — re-ran `scripts/models/render-catalog-md.py` to produce 19 ### headers matching the YAML |
+| `7fe96ce` | fix(test): bump dashboard /api/health cards lock 20 → 40 (IPS-quattuordectet + operator-UX expansion) | Round 225 (dashboard) — CARDS list grew 20→40 across subsequent rounds; lock-list bumped additively naming the 14 IPS-quattuordectet queue cards + 6 operator-UX cards |
+
+The iterative-failure-revelation pattern: layer-3 nspawn jobs fail-fast at the first failing test, so progress is visible round-by-round. Each landed fix unblocks one more round of CI tests to run, surfacing the next drift in the sequence.
+
+### info-hub PR #17 (1 additional commit)
+
+| SHA | Subject | Closures |
+|---|---|---|
+| `26491d1` | docs(runbooks): list M060 mirror-export anomalies runbook in the runbooks index | Index update — the M060 runbook (added in a7e6cf6) wasn't listed in runbooks/_index.md; would have surfaced as a new orphan lint on next pipeline post |
+
 ## Pre-existing reds remaining (accepted per operator standing rules)
 
-- **selfdef** four-watchdog coherence harness (SDD-030 / MS045 — 13 layers) — was 70 L2 watchdog bats tests failing + 4 L1 layers. This segment closed **3 L1 layers** (ruff + prometheus-alerts + cli-surface). Remaining 2 L1 fails (YAML / JSON parse-scan) pass locally; CI-environment-specific. L2 bats failures (xsession-watchdog, acpi-hooks-watchdog, etc.) also pass locally. Job name unchanged per operator's "DO NOT rename" directive.
+- **selfdef** four-watchdog coherence harness (SDD-030 / MS045 — 13 layers) — was 70 L2 watchdog bats tests failing + 4 L1 layers. This segment closed **3 L1 layers** (ruff + prometheus-alerts + cli-surface). Remaining 2 L1 fails (YAML / JSON parse-scan) pass locally; CI-environment-specific. L2 bats failures (xsession-watchdog, acpi-hooks-watchdog, etc.) fail in CI because they call `chown 99999:99999` which requires root privileges (CI runs unprivileged). Pre-existing accepted RED. Job name unchanged per operator's "DO NOT rename" directive.
 
 ## Verification commands
 
