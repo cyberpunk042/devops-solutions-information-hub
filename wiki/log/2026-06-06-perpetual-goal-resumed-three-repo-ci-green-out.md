@@ -129,6 +129,8 @@ After the first 20 commits landed and sovereign-os layer-3 progressed past Round
 | `03907b3` | fix(test): derive verified-real models from catalog.yaml in test_models_catalog (5 → 15 expansion) | Round 156 (models catalog) — 2 subtest fails closed via dynamic catalog read |
 | `f133934` | docs(models): regenerate model-catalog.md to reflect 19 verified models (was 17 stale) | Round 206 (models docs) — re-ran `scripts/models/render-catalog-md.py` to produce 19 ### headers matching the YAML |
 | `7fe96ce` | fix(test): bump dashboard /api/health cards lock 20 → 40 (IPS-quattuordectet + operator-UX expansion) | Round 225 (dashboard) — CARDS list grew 20→40 across subsequent rounds; lock-list bumped additively naming the 14 IPS-quattuordectet queue cards + 6 operator-UX cards |
+| `b9a3bf4` | fix(bootstrap): handle SIGPIPE gracefully in load-verify-grid.py (closes Round 207) | Round 207 (bootstrap verify-grid docs) — CI Ubuntu Python 3.12 raises BrokenPipeError when `loader | head -1` closes pipe; canonical `signal.signal(SIGPIPE, SIG_DFL)` idiom resets handler |
+| `ea5aae1` | fix(bootstrap): handle SIGPIPE gracefully in load-phases.py (preempt same CI failure pattern as Round 207) | Preemptive — load-phases.py is structurally identical to load-verify-grid.py; applying SIGPIPE fix proactively closes the same bug-class before next CI surface |
 
 The iterative-failure-revelation pattern: layer-3 nspawn jobs fail-fast at the first failing test, so progress is visible round-by-round. Each landed fix unblocks one more round of CI tests to run, surfacing the next drift in the sequence.
 
