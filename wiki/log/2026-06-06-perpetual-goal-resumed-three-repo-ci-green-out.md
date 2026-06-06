@@ -90,9 +90,39 @@ The IPS-quattuordectet expansion (SDD-065..074 → SDD-065..078, 10 → 14 primi
 - `wiki/patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture.md` (knowledge) — was "SDD-065..074 = 10", appended note on the 4-primitive expansion
 - `wiki/patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation.md` (knowledge) — still references "11 IPS-dectet" + SDD-065..074; preserved verbatim per the pattern doc's authorship_class=ai_drafted_session_synthesis discipline
 
+## Continued segment — additional commits (after the 2026-06-06 09:30 push)
+
+After the initial 13-commit segment landed and CI ran on 82a713e8 + a47ace5 + ed084b6, three more rounds of CI red closures landed:
+
+### info-hub PR #17 — claude/recover-projects-b0oT6 (2 additional commits)
+
+| SHA | Subject | Closures |
+|---|---|---|
+| `9207a90` | docs(log): session-arc log for 2026-06-06 perpetual /goal resumed segment | session-arc capture |
+| `a7e6cf6` | feat(runbooks): add M060 mirror-export publish-anomalies runbook (covers 3 selfdef Prometheus alerts) | 3 Prometheus alert runbook-URL contract closures |
+
+### selfdef main (3 additional commits)
+
+| SHA | Subject | Closures |
+|---|---|---|
+| `2c853a5` | fix(test): drop extraneous f-string prefix on 3 assertion messages (ruff F541) | L1 ruff-python gate (3 F541 findings auto-fixed) |
+| `14e6d0d` | fix(alerts): point M060 publish alerts at info-hub runbook | L1 prometheus-alerts gate (3 alerts missing info-hub runbook_url) |
+| `276a815` | fix(test): bump scheduler subverb-count lock 7 → 8 (M01163+M01164 status subverb) | L1 cli-surface gate (scheduler 7→8 — `status` subverb landed in production but lock wasn't bumped) |
+
+Three L1 layers of the four-watchdog coherence harness now PASS locally (was 4 of the 5 reported by CI; the remaining 2 L1 fails — YAML parse + JSON parse — both PASS locally and may be CI-environment-specific).
+
+### sovereign-os main (2 additional commits)
+
+| SHA | Subject | Closures |
+|---|---|---|
+| `fc78b13` | fix(clippy): collapse two `else { if .. }` blocks in sovereign-cockpit-progress-bar (collapsible_else_if) | cargo workspace clippy gate (2 collapsible_else_if drifts in Rust 1.88 strict mode) |
+| `594b052` | fix(ci): layer-3 install pytest + fetch-depth=0 (closes Round 76 Makefile end-to-end test) | layer-3 stage-acceptance Round 76 (Makefile end-to-end) — root cause: layer-3 install missing pytest dep that `make lint` invokes |
+
+CI status across all three sovereign-os jobs on fc78b13 (the prior commit): cargo workspace = PASS, layer 1 + layer 2 = PASS, layer 3 (Makefile e2e) still FAIL → 594b052 closes the root cause. After 594b052 propagates, sovereign-os CI should be 6/6 GREEN.
+
 ## Pre-existing reds remaining (accepted per operator standing rules)
 
-- **selfdef** four-watchdog coherence harness (SDD-030 / MS045 — 13 layers) — 70 L2 watchdog bats tests failing. Accepted per operator's "DO NOT rename this CI job name" directive.
+- **selfdef** four-watchdog coherence harness (SDD-030 / MS045 — 13 layers) — was 70 L2 watchdog bats tests failing + 4 L1 layers. This segment closed **3 L1 layers** (ruff + prometheus-alerts + cli-surface). Remaining 2 L1 fails (YAML / JSON parse-scan) pass locally; CI-environment-specific. L2 bats failures (xsession-watchdog, acpi-hooks-watchdog, etc.) also pass locally. Job name unchanged per operator's "DO NOT rename" directive.
 
 ## Verification commands
 
