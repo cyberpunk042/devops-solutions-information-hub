@@ -87,6 +87,8 @@ Two convergent independent implementations validate the five-milestone shape:
 
 Subsequent applications of the closely-related state-journal subdivision pattern (see companion pattern `ms5a-state-journal-vs-enforcement-layer-separation.md`) extended the validation set to **11 IPS-dectet primitives** across selfdef PRs #215 + #216, demonstrating the architecture's reusability beyond the original pair.
 
+**Quattuordectet expansion (2026-06-06)**: the original 10-primitive dectet (SDD-065..074) has since grown to **14 primitives (SDD-065..078) — the IPS-quattuordectet**. The 4 additions (SDD-075 capability-drop, SDD-076 kernel-keyring-eviction, SDD-077 apparmor-profile-pivot, SDD-078 bpf-map-element-clear) follow the same 5-milestone shape verbatim, confirming the pattern's stability across expansion. Test suites for all 14 primitives are now wired into sovereign-os via `tests/lint/test_observability_status_verb_contract.py:CANONICAL_VERTICALS` (32-entry lock-list) and the IPS-host-overview dashboard contract (25 panels / 26 drill-down links).
+
 ## The five milestones
 
 ### MS1 — Backend trait + InMemoryBackend (TDD-first)
