@@ -28,9 +28,22 @@ sources:
   - id: selfdef-sdd-026
     type: sdd
     file: "docs/sdd/026-operator-dashboard-and-flex-profile.md"
+tags:
+  - lesson
+  - pattern
+  - selfdef
+  - ms011
+  - promotion
+  - sdd
+  - cli
+  - http
+  - l1
+  - partial-milestone
 ---
 
-## TL;DR
+## Summary
+
+### TL;DR
 
 When a partial milestone has a shipped Rust crate but no operator-
 facing surface, follow this 5-step layer-up sequence to reach
@@ -66,7 +79,9 @@ is genuinely useful — type-safe + tested — but invisible to the
 operator. SDD-026's Z-vector list pinned 13 such crates; the
 question was how to systematically promote each one to production.
 
-## The pattern
+## Insight
+
+### The pattern
 
 For one Z-vector (canonical example: Z-2 inference-backend probe,
 commits `222c9a1` + `f763930`):
@@ -169,7 +184,9 @@ Specifically:
 - **Skip SDD** → architecture is folklore. Next operator/agent
   re-derives the rationale from code, often incorrectly.
 
-## Counter-evidence + boundaries
+## Applicability
+
+### Counter-evidence + boundaries
 
 The pattern does NOT apply when:
 
@@ -185,7 +202,9 @@ The pattern does NOT apply when:
 When the crate IS operator-visible (a probe, a policy, a state
 surface), the layer-up pattern is the default path to production.
 
-## Application across this session
+## Evidence
+
+### Application across this session
 
 13 Z-vectors closed via this pattern in selfdef MS011:
 
@@ -214,7 +233,9 @@ promotion from `partial` → `done`.
 3. How do we audit that an SDD's contracts (C-1..C-N) are all
    tested by L2/L3 tests? Coverage matrix is informal today.
 
-## Promotion path
+## Relationships
+
+### Promotion path
 
 Lesson stays in `01_drafts/` until cited by an SDD as a forward
 reference (e.g. selfdef SDD-058 cites this pattern in its
