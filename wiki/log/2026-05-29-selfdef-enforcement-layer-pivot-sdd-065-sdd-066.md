@@ -45,6 +45,10 @@ authorship_class: ai_drafted_session_log
 
 # Session log — 2026-05-29 selfdef enforcement-layer pivot
 
+## Summary
+
+Multi-hour perpetual `/goal` session log for the 2026-05-29 selfdef enforcement-layer pivot: SDD-065 (IP-block action surface) + SDD-066 (process-quarantine action surface) shipped end-to-end across selfdef PR #200 + sovereign-os PR #12 on branch `claude/recover-projects-b0oT6` (both projects). Mid-session pivot from the 18-sibling observability scaffold fleet (`selfdef ec6a822` / `sovereign-os 05724a4`) into genuine multi-layer enforcement + operator UX work.
+
 ## Context
 
 Multi-hour perpetual `/goal` session. Earlier hours focused on the
