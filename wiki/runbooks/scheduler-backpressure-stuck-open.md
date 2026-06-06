@@ -29,6 +29,10 @@ tags: [runbook, scheduler, backpressure, psi, dcgm, blackwell, ram-pressure, hys
 
 # Operator runbook — scheduler backpressure stuck open
 
+## Summary
+
+Operator runbook for **scheduler backpressure stuck open**.  Anchored to: Source dump lines 18175-18205 (backpressure surfaces + responses); SDD-031 — Goldilocks Scheduler spec. Also references: MS048 R11333-R11362 (backpressure thresholds + hysteresis).
+
 ## Symptom
 
 One or more backpressure surfaces remain `true` in `selfdefctl scheduler show --json | jq .recent_decisions[0].backpressure` for ≥ 5 minutes after the originating resource pressure has cleared.

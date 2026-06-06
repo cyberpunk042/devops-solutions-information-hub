@@ -29,6 +29,10 @@ tags: [runbook, perimeter, audit-log, zfs, sha256-chain, integrity, corruption, 
 
 # Operator runbook — Perimeter audit log corruption / chain break
 
+## Summary
+
+Operator runbook for **Perimeter audit log corruption / chain break**.  Anchored to: Source dump §10 lines 531-533 + Trinity Genesis Auditor dump 977-981 (atomic ZFS append); SDD-028 perimeter-engine specification — Deliverable 2 audit chain.
+
 ## Symptom
 
 - `SelfdefPerimeterChainBroken` Prometheus alert is firing (severity: critical).

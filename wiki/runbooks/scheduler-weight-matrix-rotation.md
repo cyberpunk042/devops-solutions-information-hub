@@ -34,6 +34,10 @@ tags: [runbook, scheduler, weight-matrix, ms003, multi-sig, operator-tuning, pro
 
 # Operator runbook — scheduler weight matrix rotation (MS003 multi-sig)
 
+## Summary
+
+Operator runbook for **scheduler weight matrix rotation (MS003 multi-sig)**. Per MS048 R11327, the per-profile 7-axis weight matrix is **operator-tunable** — the weights encoded in `selfdef-scheduler::AxisWeights::for_profile()` (R11291-R11326) are the **default baseline** matching the avx-plus-plus dump verbatim; operators may need to evolve them when: Anchored to: Source dump lines 18204-18211 (7-axis objective) + 18000-18100 (per-profile rules); SDD-031 Goldilocks Scheduler spec.
+
 ## When to use this
 
 Per MS048 R11327, the per-profile 7-axis weight matrix is **operator-tunable** — the weights encoded in `selfdef-scheduler::AxisWeights::for_profile()` (R11291-R11326) are the **default baseline** matching the avx-plus-plus dump verbatim; operators may need to evolve them when:

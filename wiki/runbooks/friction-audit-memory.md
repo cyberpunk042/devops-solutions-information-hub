@@ -29,6 +29,10 @@ tags: [runbook, friction-audit, memory, dimm, dmidecode, sain-01, selfdef, ips, 
 
 # Operator runbook — friction-audit memory gate failure
 
+## Summary
+
+Operator runbook for **friction-audit memory gate failure**.  Anchored to: Source dump §5.1 lines 360-364 — friction-audit memory geometry check via dmidecode; SDD-027 Deliverable 1 step 3 memory gate + operator-extended exit code 3 (sain-01 §5.1 left open).
+
 ## Symptom
 
 `sovereign-guard.service` fails at boot with exit code **3**. `journalctl -u sovereign-guard.service` shows:

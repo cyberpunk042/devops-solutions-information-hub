@@ -29,6 +29,10 @@ tags: [runbook, friction-audit, zfs, hardware-integrity, sain-01, selfdef, ips, 
 
 # Operator runbook — friction-audit ZFS gate failure
 
+## Summary
+
+Operator runbook for **friction-audit ZFS gate failure**.  Anchored to: Source dump §5.1 — friction-audit ZFS gate lines 354-359 (zpool status -x equality check); SDD-027 Deliverable 1 step 2 ZFS gate.
+
 ## Symptom
 
 `sovereign-guard.service` fails at boot with exit code **2**. `journalctl -u sovereign-guard.service` shows verbatim:

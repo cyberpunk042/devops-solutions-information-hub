@@ -29,6 +29,10 @@ tags: [runbook, scheduler, audit-log, sha256-chain, zfs, integrity, corruption, 
 
 # Operator runbook — scheduler audit log corruption / chain break
 
+## Summary
+
+Operator runbook for **scheduler audit log corruption / chain break**.  Anchored to: Source dump tail (audit-trail discipline derived from sain-01 §10 + scheduling architecture); SDD-031 Goldilocks Scheduler spec — Deliverable 2 audit chain.
+
 ## Symptom
 
 - `selfdefctl scheduler audit-cycle replay` reports `CHAIN BROKEN` and points at this runbook.

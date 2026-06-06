@@ -29,6 +29,10 @@ tags: [runbook, perimeter, tetragon, sovereign-kernel-fence, sigkill, ips, kerne
 
 # Operator runbook — perimeter Tetragon not running
 
+## Summary
+
+Operator runbook for **perimeter Tetragon not running**.  Anchored to: Source dump §6 — Tetragon sovereign-kernel-fence TracingPolicy (lines 380-411); SDD-028 perimeter-engine specification. Also references: Catalog milestone MS047. Page metadata: status=draft; maturity=seed; confidence=high; tags=[runbook, perimeter, tetragon, sovereign-kernel-fence, sigkill].
+
 ## Symptom
 
 One or more of the following:

@@ -34,6 +34,10 @@ tags: [runbook, perimeter, ms003, key-rotation, trust-roots, minisign, operator-
 
 # Operator runbook — perimeter MS003 key rotation
 
+## Summary
+
+Operator runbook for **perimeter MS003 key rotation**. Rotate operator / auditor keys when: Anchored to: Source dump §6 — Tetragon sovereign-kernel-fence + MS003 operator-signed extension contract; SDD-028 perimeter-engine specification — Deliverable 3 trust-roots discipline.
+
 ## When to use this
 
 Rotate operator / auditor keys when:

@@ -29,6 +29,10 @@ tags: [runbook, perimeter, tetragon, tracingpolicy, yaml, sigkill, selfdef, ips]
 
 # Operator runbook — perimeter TracingPolicy load failure
 
+## Summary
+
+Operator runbook for **perimeter TracingPolicy load failure**.  Anchored to: Source dump §6 — Tetragon sovereign-kernel-fence TracingPolicy (lines 380-411); SDD-028 perimeter-engine specification. Also references: Catalog milestone MS047. Page metadata: status=draft; maturity=seed; confidence=high; tags=[runbook, perimeter, tetragon, tracingpolicy, yaml].
+
 ## Symptom
 
 `/etc/tetragon/tracing-policies/sovereign-perimeter.yaml` exists on disk but Tetragon refuses to load it. One or more of:

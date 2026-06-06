@@ -39,6 +39,10 @@ tags: [runbook, guardian, false-positive, rollback, ms003, ms009, ring-0, audit,
 
 # Operator runbook — Guardian false-positive rollback
 
+## Summary
+
+Operator runbook for **Guardian false-positive rollback**. A SIGKILL was issued by the in-kernel perimeter and Guardian fanned out the supervisor response (audit-log + console alert) — but on operator review, the targeted process was **legitimate**. Examples: Anchored to: Source dump §10 + Trinity Genesis Auditor dump 977-981 (rollback discipline); SDD-029 guardian-daemon specification — Deliverable 4 (rollback).
+
 ## When to use this
 
 A SIGKILL was issued by the in-kernel perimeter and Guardian fanned out the supervisor response (audit-log + console alert) — but on operator review, the targeted process was **legitimate**. Examples:

@@ -29,6 +29,10 @@ tags: [runbook, guardian, console-alert, sigkill, incident-response, ocsf, audit
 
 # Operator runbook — Guardian console alert investigation
 
+## Summary
+
+Operator runbook for **Guardian console alert investigation**.  Anchored to: Source dump §10 lines 527-552 (3-step response) + Trinity Genesis Auditor dump 977-981; SDD-029 guardian-daemon specification. Also references: Catalog milestone MS044 R10381-R10410 (3-step response + circuit breaker).
+
 ## When this fires
 
 The operator hears the BEL on `/dev/console` OR sees `[Guardian] SIGKILL ...` on the physical console. That means:

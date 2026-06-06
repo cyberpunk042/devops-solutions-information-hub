@@ -29,6 +29,10 @@ tags: [runbook, guardian, tetragon, supervisor, sigkill, console-alert, zfs, aud
 
 # Operator runbook — Guardian Daemon not running
 
+## Summary
+
+Operator runbook for **Guardian Daemon not running**.  Anchored to: Source dump §10 — Guardian Daemon / guardian-core (lines 513-588); SDD-029 guardian-daemon specification. Also references: Catalog milestone MS044. Page metadata: status=draft; maturity=seed; confidence=high; tags=[runbook, guardian, tetragon, supervisor, sigkill].
+
 ## Symptom
 
 One or more of:

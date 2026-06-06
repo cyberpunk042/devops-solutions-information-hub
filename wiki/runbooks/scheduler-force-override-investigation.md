@@ -34,6 +34,10 @@ tags: [runbook, scheduler, force-override, ring-0, ms003, multi-sig, audit, inci
 
 # Operator runbook — scheduler force-override investigation
 
+## Summary
+
+Operator runbook for **scheduler force-override investigation**. A `selfdefctl scheduler force <request-id> --route R` was recorded — either by the current operator (as a deliberate override) or someone-else (which itself is an incident signal). This runbook walks the investigation of WHY the force was applied + whether… Anchored to: Source dump — User chooses doctrine (Core Law line 18288); SDD-031 Goldilocks Scheduler spec.
+
 ## When to use this
 
 A `selfdefctl scheduler force <request-id> --route R` was recorded — either by the current operator (as a deliberate override) or someone-else (which itself is an incident signal). This runbook walks the investigation of WHY the force was applied + whether the underlying root cause needs fixing.

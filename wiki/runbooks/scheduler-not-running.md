@@ -29,6 +29,10 @@ tags: [runbook, scheduler, goldilocks, four-watchdog, sain-01, selfdef, ips, rou
 
 # Operator runbook — Goldilocks Scheduler not running
 
+## Summary
+
+Operator runbook for **Goldilocks Scheduler not running**.  Anchored to: Source dump tail lines 18000-18250 (scheduling architecture); SDD-031 Goldilocks Scheduler specification. Also references: Catalog milestone MS048 (247 R-rows). Page metadata: status=draft; maturity=seed; confidence=high; tags=[runbook, scheduler, goldilocks, four-watchdog, sain-01].
+
 ## Symptom
 
 One or more of:

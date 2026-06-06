@@ -29,6 +29,10 @@ tags: [runbook, friction-audit, signature, ms003, minisign, key-rotation, sain-0
 
 # Operator runbook — friction-audit signature gate failure
 
+## Summary
+
+Operator runbook for **friction-audit signature gate failure**.  Anchored to: SDD-027 Deliverable 1 + 6 — signature verification before script body executes (MS003 chain-of-trust); MS003 selfdef-signing — minisign-verify chain-of-trust. Also references: MS046 R10805-R10807 (signature path + verification + CRITICAL severity), F05407-F05409, R11254-R11258.
+
 ## Severity: **CRITICAL** (P6, exit code 6, OCSF severity_id=5)
 
 The signature gate failing means the MS003-signed manifest at `/etc/selfdef/manifests/friction-audit.sig` does not verify against the operator's trust roots. Treated as either active tampering OR a botched key rotation. Investigate before any remediation.

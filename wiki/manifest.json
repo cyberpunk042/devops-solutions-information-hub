@@ -1,11 +1,11 @@
 {
-  "generated": "2026-06-06T01:12:22.673604+00:00",
+  "generated": "2026-06-06T01:18:23.599734+00:00",
   "stats": {
     "pages": 976,
     "domains": 16,
     "sources": 128,
     "comparisons": 14,
-    "relationships": 4357,
+    "relationships": 4352,
     "tags_unique": 3744,
     "layers": {
       "3": 8,
@@ -48850,12 +48850,7 @@
       "maturity": "seed",
       "derived_from": [],
       "aliases": [],
-      "relationships": [
-        {
-          "verb": "SDD",
-          "target": "`selfdef/docs/sdd/027-friction-audit-system.md` Deliverable 6 (Debian postinst chattr +i)"
-        }
-      ]
+      "relationships": []
     },
     {
       "path": "runbooks/friction-audit-memory.md",
@@ -48908,12 +48903,7 @@
       "maturity": "seed",
       "derived_from": [],
       "aliases": [],
-      "relationships": [
-        {
-          "verb": "SDD",
-          "target": "`selfdef/docs/sdd/027-friction-audit-system.md` Deliverable 1 step 3 + operator-extension list"
-        }
-      ]
+      "relationships": []
     },
     {
       "path": "runbooks/friction-audit-pcie.md",
@@ -48966,12 +48956,7 @@
       "maturity": "seed",
       "derived_from": [],
       "aliases": [],
-      "relationships": [
-        {
-          "verb": "SDD",
-          "target": "`selfdef/docs/sdd/027-friction-audit-system.md`"
-        }
-      ]
+      "relationships": []
     },
     {
       "path": "runbooks/friction-audit-signature.md",
@@ -49024,12 +49009,7 @@
       "maturity": "seed",
       "derived_from": [],
       "aliases": [],
-      "relationships": [
-        {
-          "verb": "SDD",
-          "target": "`selfdef/docs/sdd/027-friction-audit-system.md` Deliverable 1 step \"signature verification before body executes\" + Deliverable 6 \"signature manifest installed via postinst\""
-        }
-      ]
+      "relationships": []
     },
     {
       "path": "runbooks/friction-audit-zfs.md",
@@ -49081,12 +49061,7 @@
       "maturity": "seed",
       "derived_from": [],
       "aliases": [],
-      "relationships": [
-        {
-          "verb": "SDD",
-          "target": "`selfdef/docs/sdd/027-friction-audit-system.md` Deliverable 1 step 2 + Deliverable 4 ZFS log bridge"
-        }
-      ]
+      "relationships": []
     },
     {
       "path": "runbooks/guardian-audit-log-corruption.md",
@@ -68059,7 +68034,7 @@
     },
     "ai-agents": {
       "page_count": 111,
-      "relationship_count": 588
+      "relationship_count": 583
     },
     "ai-models": {
       "page_count": 33,
@@ -87798,36 +87773,6 @@
       "target": "Zen 5 microarchitecture and AVX-512 single-cycle path",
       "referenced_by": [
         "Synthesis \u2014 SAIN-01 Sovereign AI Node Master Specification"
-      ]
-    },
-    {
-      "target": "`selfdef/docs/sdd/027-friction-audit-system.md`",
-      "referenced_by": [
-        "Operator runbook \u2014 friction-audit PCIe gate failure"
-      ]
-    },
-    {
-      "target": "`selfdef/docs/sdd/027-friction-audit-system.md` Deliverable 1 step \"signature verification before body executes\" + Deliverable 6 \"signature manifest installed via postinst\"",
-      "referenced_by": [
-        "Operator runbook \u2014 friction-audit signature gate failure"
-      ]
-    },
-    {
-      "target": "`selfdef/docs/sdd/027-friction-audit-system.md` Deliverable 1 step 2 + Deliverable 4 ZFS log bridge",
-      "referenced_by": [
-        "Operator runbook \u2014 friction-audit ZFS gate failure"
-      ]
-    },
-    {
-      "target": "`selfdef/docs/sdd/027-friction-audit-system.md` Deliverable 1 step 3 + operator-extension list",
-      "referenced_by": [
-        "Operator runbook \u2014 friction-audit memory gate failure"
-      ]
-    },
-    {
-      "target": "`selfdef/docs/sdd/027-friction-audit-system.md` Deliverable 6",
-      "referenced_by": [
-        "Operator runbook \u2014 friction-audit immutability gate failure"
       ]
     },
     {

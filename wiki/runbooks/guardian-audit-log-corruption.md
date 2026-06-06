@@ -29,6 +29,10 @@ tags: [runbook, guardian, audit-log, zfs, sha256-chain, integrity, corruption, i
 
 # Operator runbook — Guardian audit log corruption / chain break
 
+## Summary
+
+Operator runbook for **Guardian audit log corruption / chain break**.  Anchored to: Source dump §10 lines 531-533 + Trinity Genesis Auditor dump 977-981 (atomic ZFS append); SDD-029 guardian-daemon specification — Deliverable 2 audit chain.
+
 ## Symptom
 
 - `selfdefctl guardian show` displays `OCSF audit chain events: chain check failed (see logs)`.

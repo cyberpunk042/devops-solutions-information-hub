@@ -29,6 +29,10 @@ tags: [runbook, friction-audit, immutability, chattr, ima-appraise, tampering, s
 
 # Operator runbook — friction-audit immutability gate failure
 
+## Summary
+
+Operator runbook for **friction-audit immutability gate failure**.  Anchored to: Source dump §5 line 339 'immutable boot-time script' — the underlying invariant; SDD-027 Deliverable 6 Debian postinst chattr +i + IMA-appraise hash, operator-extension for tampering resistance.
+
 ## Severity: **CRITICAL** (P8, exit code 5, OCSF severity_id=5)
 
 The immutability gate failing means **someone modified `/usr/local/bin/friction-audit` after install**. This is treated as an active-tampering signal, not an operational glitch. Investigate before reverting.

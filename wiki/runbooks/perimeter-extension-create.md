@@ -34,6 +34,10 @@ tags: [runbook, perimeter, extension, allowlist, ms003, multi-sig, minisign, tet
 
 # Operator runbook — perimeter allowlist extension (signed, multi-sig)
 
+## Summary
+
+Operator runbook for **perimeter allowlist extension (signed, multi-sig)**. The verbatim sain-01 §6 default allowlist is `{/usr/bin/python3, /usr/bin/nvidia-smi, /usr/local/bin/vllm, /usr/bin/podman}`. Anything not in that set is SIGKILL'd in-kernel by the `sovereign-kernel-fence` TracingPolicy. Anchored to: Source dump §6 — Tetragon sovereign-kernel-fence (lines 380-411) + operator-extension contract; SDD-028 perimeter-engine specification — Deliverable 3 (runtime crate, extension authority).
+
 ## When to use this
 
 The verbatim sain-01 §6 default allowlist is `{/usr/bin/python3, /usr/bin/nvidia-smi, /usr/local/bin/vllm, /usr/bin/podman}`. Anything not in that set is SIGKILL'd in-kernel by the `sovereign-kernel-fence` TracingPolicy.

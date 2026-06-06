@@ -29,6 +29,10 @@ tags: [runbook, friction-audit, pcie, hardware-integrity, sain-01, selfdef, ips,
 
 # Operator runbook — friction-audit PCIe gate failure
 
+## Summary
+
+Operator runbook for **friction-audit PCIe gate failure**.  Anchored to: Source dump §5.1 — Native Guard Script Architecture friction-audit lines 338-353 PCIe gate; SDD-027 friction-audit-system specification. Also references: Catalog milestone MS046 (240 requirements + 26 modules + 10 epics).
+
 ## Symptom
 
 `sovereign-guard.service` fails at boot with exit code **1**. `journalctl -u sovereign-guard.service` shows three lines verbatim:

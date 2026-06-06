@@ -29,6 +29,10 @@ tags: [runbook, perimeter, tetragon, sigkill, sovereign-kernel-fence, incident-r
 
 # Operator runbook — perimeter SIGKILL investigation
 
+## Summary
+
+Operator runbook for **perimeter SIGKILL investigation**.  Anchored to: Source dump §6 — Tetragon sovereign-kernel-fence (lines 380-411); SDD-028 perimeter-engine specification. Also references: Catalog milestone MS047 R11088-R11102 (OCSF Detection 2004). Page metadata: status=draft; maturity=seed; confidence=high; tags=[runbook, perimeter, tetragon, sigkill, sovereign-kernel-fence].
+
 ## When this fires
 
 A SIGKILL verdict from the in-kernel `sovereign-kernel-fence` TracingPolicy means a process attempted to `execve` a binary that:
