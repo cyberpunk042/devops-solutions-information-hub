@@ -89,6 +89,7 @@ Operator-facing runbook navigation home for the selfdef + sovereign-os productio
 |---|---|
 | [network state degraded](network-degraded.md) | Internet / DNS / cloudflared / tailscale / Traefik anomaly |
 | [Storage state degraded](storage-degraded.md) | Filesystem fill, log dir bloat |
+| [M060 mirror-export publish anomalies](m060-mirror-export-publish-anomalies.md) | SelfdefM060Publish{Failing,Stale,Wedged} Prometheus alert fires (selfdefd mirror_export_loop per-artifact publish failure) |
 
 ## Detection-watchdog + doctrine
 
