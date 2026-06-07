@@ -27,11 +27,16 @@ sources:
   - id: selfdef-ms039
     type: internal
     project: selfdef
+    path: backlog/milestones/MS039-authority-levels-and-trust-rings.md
     note: "MS039 Ring 0 authority + trust topology"
 tags: [runbook, scheduler, force-override, ring-0, ms003, multi-sig, audit, incident-response, selfdef]
 ---
 
 # Operator runbook — scheduler force-override investigation
+
+## Summary
+
+Operator runbook for **scheduler force-override investigation**. A `selfdefctl scheduler force <request-id> --route R` was recorded — either by the current operator (as a deliberate override) or someone-else (which itself is an incident signal). This runbook walks the investigation of WHY the force was applied + whether… Anchored to: Source dump — User chooses doctrine (Core Law line 18288); SDD-031 Goldilocks Scheduler spec.
 
 ## When to use this
 
@@ -174,7 +179,9 @@ Many forces from the same signer in tight window = either active debugging, runa
 - **Operator wants to disable force-override entirely** (high-trust profile, no human-in-the-loop routing): operator-decision; would need a Stage-2 catalog amendment (Profile enum extension or new force-disabled flag). Document the request in `wiki/log/` for operator review.
 - **Force success rate < 50% (forces routinely produce worse outcomes than the scheduler's default)**: the operator's intuition is mis-calibrated relative to current workload. Consider weight-rotation OR more aggressive replay-feedback loop (R11389-R11390).
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-031 §Deliverable 3 (`selfdefctl scheduler force` CLI surface)
 - MS048 R11399-R11402 (force-override semantics)

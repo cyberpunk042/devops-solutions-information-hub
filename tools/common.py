@@ -415,7 +415,13 @@ def rebuild_domain_index(domain_dir: Path, domain_name: str, description: str) -
             continue
         title = meta.get("title", md_file.stem)
         sections = parse_sections(body)
-        summary = sections.get("Summary", "").split(".")[0].strip()
+        summary_full = sections.get("Summary", "")
+        # Strip inline markdown links [text](url) → text so that auto-summary
+        # truncation can't slice through a bracket-pair (the slice produces a
+        # malformed half-link that gobbles the next index line during orphan
+        # detection — see wiki/decisions/_index.md Multica-line regression).
+        summary_full = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", summary_full)
+        summary = summary_full.split(".")[0].strip()
         if len(summary) > 120:
             summary = summary[:117] + "..."
         rel_path = md_file.relative_to(domain_dir)

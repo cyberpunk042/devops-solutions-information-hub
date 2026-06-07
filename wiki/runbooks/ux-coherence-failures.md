@@ -22,11 +22,16 @@ sources:
   - id: operator-directive-2026-05-19
     type: directive
     project: devops-solutions-information-hub
+    path: wiki/log/
     note: "Standing direction — be an architect first, then a DevOps + Fullstack + UX Design Specialist"
 tags: [runbook, ux-coherence, tdd, ci, test-harness, sdd, selfdef, ips]
 ---
 
 # Operator runbook — UX coherence harness failures
+
+## Summary
+
+Operator runbook for **UX coherence harness failures**. `bash scripts/test/coherence.sh` (or `make coherence` once wired) exited non-zero. The summary block names which layer failed; this runbook walks the operator from "summary line says FAIL" to "root cause + fix". Anchored to: SDD-030 UX coherence test harness specification; Catalog milestone MS045.
 
 ## When to use this
 
@@ -112,7 +117,9 @@ Per the operator standing direction *"be an architect first, then a DevOps Softw
 
 Never silently update the harness baseline to match a drifted binary. Always update the binary OR the SDD (with operator approval), THEN the baseline.
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-030 UX coherence test harness specification (selfdef `docs/sdd/030-ux-coherence-test-harness.md`)
 - MS045 catalog (`backlog/milestones/MS045-ux-coherence-test-harness-cli-tui-minimal-web.md`)

@@ -29,6 +29,10 @@ tags: [runbook, friction-audit, zfs, hardware-integrity, sain-01, selfdef, ips, 
 
 # Operator runbook — friction-audit ZFS gate failure
 
+## Summary
+
+Operator runbook for **friction-audit ZFS gate failure**.  Anchored to: Source dump §5.1 — friction-audit ZFS gate lines 354-359 (zpool status -x equality check); SDD-027 Deliverable 1 step 2 ZFS gate.
+
 ## Symptom
 
 `sovereign-guard.service` fails at boot with exit code **2**. `journalctl -u sovereign-guard.service` shows verbatim:
@@ -166,10 +170,11 @@ sudo selfdefctl friction-audit override-create \
 
 ZFS overrides are dangerous — they tell the gate to allow boot even though the storage substrate is unhealthy. Use sparingly. Default TTL recommendation: 24h, not 7d (the script's max). Always pair with an open incident ticket.
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - Source: `~/infohub/raw/dumps/2026-05-15-sain-01-master-spec-other-conversation-transposition.md` §5.1 lines 354–359 + §7 ZFS transactional optimizations
-- SDD: `selfdef/docs/sdd/027-friction-audit-system.md` Deliverable 1 step 2 + Deliverable 4 ZFS log bridge
 - Milestone: `selfdef/backlog/milestones/MS046-friction-audit-system-boot-time-hardware-integrity-gate.md` R10820-R10826 + R10881-R10890
 - Sister gates: `friction-audit-pcie.md`, `friction-audit-memory.md`, `friction-audit-immutability.md`, `friction-audit-signature.md`
 - Sovereign-OS dependency: M068 ZFS storage architecture (tank/vault dataset configuration)

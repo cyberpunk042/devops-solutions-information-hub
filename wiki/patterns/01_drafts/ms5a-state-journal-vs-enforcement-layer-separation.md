@@ -1,20 +1,51 @@
 ---
 title: MS5a state-journal-vs-enforcement-layer separation pattern
+type: pattern
+domain: ai-agents
 status: draft
+confidence: medium
 tier: pattern
+created: '2026-05-29'
+updated: '2026-05-29'
+sources:
+  - id: selfdef-pr-215
+    type: external
+    url: https://github.com/cyberpunk042/selfdef/pull/215
+    note: '8 of 10 IPS-dectet MS5a adapters (companion to PR #216)'
+  - id: selfdef-pr-216
+    type: external
+    url: https://github.com/cyberpunk042/selfdef/pull/216
+    note: '8 of 10 IPS-dectet MS5a adapters (companion to PR #215)'
+  - id: selfdef-sdd-065
+    type: internal
+    project: selfdef
+    path: docs/sdd/065-ip-block-action-surface.md
+    note: First of the SDD-065..074 paired-enforcement-primitive dectet
+tags:
+  - pattern
+  - selfdef
+  - ms5a
+  - state-journal
+  - enforcement-layer
+  - separation
+  - ips-dectet
+  - ai-drafted
 classification: implementation-pattern
 authorship: assistant
 related:
   - wiki/patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture.md
   - wiki/decisions/01_drafts/in-memory-backend-as-ms1-substrate.md
-sources:
-  - cyberpunk042/selfdef PRs #215 #216 (8 of 10 IPS-dectet MS5a adapters)
-  - cyberpunk042/selfdef SDD-065..074 (paired-enforcement-primitive dectet)
 ---
 
 # MS5a state-journal-vs-enforcement-layer separation pattern
 
-## Problem
+## Summary
+
+Implementation pattern for MS5a (production-adapter milestone) of the paired-enforcement-primitive 5-MS architecture: when a primitive's enforcement layer is partially or entirely outside the runtime process (kernel modules, external daemons, hardware), MS5a is split into MS5a-state-journal (an in-process persistent state ledger) and MS5a-enforcement (the actual real-substrate effect). Validated across 11 selfdef IPS-dectet applications via selfdef PRs #215 + #216.
+
+## Pattern Description
+
+### Problem
 
 The paired-enforcement-primitive 5-MS architecture (see related
 pattern) defines MS5a as "production adapter" — the layer where
@@ -48,7 +79,7 @@ deployment environments). That defeats the operator standing
 direction "You cannot mark something done if it hasn't reached
 Prod" — nothing reaches Prod.
 
-## Pattern
+### Pattern
 
 Split MS5a into two adapters with two distinct deferral
 profiles:
@@ -91,7 +122,11 @@ A separate adapter (`CgroupV2Backend`, `NetnsBackend`,
 This layer can ship later, ship per-OS, or never ship in some
 deployments — and the state-journal half still works.
 
-## Why the split is legitimate (not feature-flag-cheating)
+## When To Apply
+
+Apply this pattern when MS5a's enforcement layer is **partially or entirely outside the runtime process** — kernel modules with their own configuration syntax (nftables, iptables, eBPF), external daemons consumed via stable wire protocols, hardware enforcement (TPM, IOMMU, secure element), or any substrate that cannot be cleanly unit-tested at L1 in CI tier 1 without infrastructure setup. The split lets MS5a-state-journal carry the operator-visible state contract (who is blocked, since when, by what rule) while MS5a-enforcement carries the real-substrate effect.
+
+### Why the split is legitimate (not feature-flag-cheating)
 
 A common worry: "isn't this just the in-memory backend with
 a different storage backend? Is calling it production a
@@ -163,7 +198,9 @@ The `survives_reopen` test is the canonical "is this really
 production?" gate — if it passes, the journal is durable
 across the restart that hits any production daemon.
 
-## When NOT to apply this pattern
+## When Not To
+
+### When NOT to apply this pattern
 
 - **Pure-file primitives** (e.g. SDD-068 token revocation):
   the entire enforcement IS the file state — there's no
@@ -194,7 +231,9 @@ The state-journal layer is the cheap insurance that keeps
 the operator-facing surface functional while the exotic
 enforcement adapter waits for substrate.
 
-## Validation trail
+## Instances
+
+### Validation trail
 
 **Undecuply-validated** across SDD-065..076 (11 of 12
 applications shipped at MS5a; SDD-065 doesn't fit by design —
@@ -250,3 +289,11 @@ canonical observer-facing array shape:
   - SDD-074 `vars_scrubbed`
   - SDD-075 `caps_dropped`
   - SDD-076 `keys_evicted` + `key_type`
+
+## Relationships
+
+- **selfdef PR #215** + **PR #216** — the 8 of 10 IPS-dectet MS5a adapters that validated this pattern across all observed enforcement-substrate shapes.
+- **SDD-065** `docs/sdd/065-ip-block-action-surface.md` — first of the SDD-065..074 paired-enforcement-primitive dectet (no exotic-syscall family).
+- **SDD-066..076** dectet — sister-primitive applications; SDD-067/068/069 are no-exotic-syscall full-FsBackend; SDD-066/070/071/072/073/074/075/076 are exotic-syscall (state-journal ships, enforcement deferred).
+- **Companion pattern**: `wiki/patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture.md` — defines the 5-milestone architecture this pattern subdivides at MS5a.
+- **Companion decision**: `wiki/decisions/01_drafts/in-memory-backend-as-ms1-substrate.md` — defines the MS1 substrate this pattern presupposes.

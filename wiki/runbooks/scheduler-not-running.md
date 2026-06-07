@@ -29,6 +29,10 @@ tags: [runbook, scheduler, goldilocks, four-watchdog, sain-01, selfdef, ips, rou
 
 # Operator runbook — Goldilocks Scheduler not running
 
+## Summary
+
+Operator runbook for **Goldilocks Scheduler not running**.  Anchored to: Source dump tail lines 18000-18250 (scheduling architecture); SDD-031 Goldilocks Scheduler specification. Also references: Catalog milestone MS048 (247 R-rows). Page metadata: status=draft; maturity=seed; confidence=high; tags=[runbook, scheduler, goldilocks, four-watchdog, sain-01].
+
 ## Symptom
 
 One or more of:
@@ -134,7 +138,9 @@ Exit 0 + "chain intact" confirms the SHA-256 chain has not been broken. Exit 1 �
 - **Host shouldn't run the scheduler** (no GPUs, no Blackwell, single-tier inference): disable it with `systemctl disable selfdef-scheduler.service`. The four-watchdog set degrades to a three-watchdog set — friction-audit + perimeter + guardian still enforce; only routing decisions are made by default first-available-route.
 - **Repeated restarts in short windows**: don't disable `Restart=always`; that defeats the routing-layer recovery. Diagnose the root cause.
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-031 §Deliverable 5 (systemd unit)
 - SDD-031 §Deliverable 10 (daemon boot observability)

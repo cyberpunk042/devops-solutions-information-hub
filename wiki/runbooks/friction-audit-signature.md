@@ -29,6 +29,10 @@ tags: [runbook, friction-audit, signature, ms003, minisign, key-rotation, sain-0
 
 # Operator runbook — friction-audit signature gate failure
 
+## Summary
+
+Operator runbook for **friction-audit signature gate failure**.  Anchored to: SDD-027 Deliverable 1 + 6 — signature verification before script body executes (MS003 chain-of-trust); MS003 selfdef-signing — minisign-verify chain-of-trust. Also references: MS046 R10805-R10807 (signature path + verification + CRITICAL severity), F05407-F05409, R11254-R11258.
+
 ## Severity: **CRITICAL** (P6, exit code 6, OCSF severity_id=5)
 
 The signature gate failing means the MS003-signed manifest at `/etc/selfdef/manifests/friction-audit.sig` does not verify against the operator's trust roots. Treated as either active tampering OR a botched key rotation. Investigate before any remediation.
@@ -165,10 +169,11 @@ sudo selfdefctl friction-audit override-create \
 
 Same multi-sig + legal-review requirement as the immutability gate (MS046 F05452 + sovereign-os M081 F06785 must-not-touch tier).
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - Source: derived from the MS003 selfdef-signing pattern (no specific sain-01 dump section; signature is operator-extended for chain-of-trust)
-- SDD: `selfdef/docs/sdd/027-friction-audit-system.md` Deliverable 1 step "signature verification before body executes" + Deliverable 6 "signature manifest installed via postinst"
 - Milestone: `selfdef/backlog/milestones/MS046-friction-audit-system-boot-time-hardware-integrity-gate.md` R10805-R10807, R11254-R11258
 - MS003 selfdef-signing: `selfdef/crates/selfdef-signing/`
 - Key rotation set: `selfdef/crates/selfdef-key-rotation-set/` (Cycle-2 catalog)

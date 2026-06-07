@@ -29,6 +29,10 @@ tags: [runbook, perimeter, tetragon, sovereign-kernel-fence, sigkill, ips, kerne
 
 # Operator runbook — perimeter Tetragon not running
 
+## Summary
+
+Operator runbook for **perimeter Tetragon not running**.  Anchored to: Source dump §6 — Tetragon sovereign-kernel-fence TracingPolicy (lines 380-411); SDD-028 perimeter-engine specification. Also references: Catalog milestone MS047. Page metadata: status=draft; maturity=seed; confidence=high; tags=[runbook, perimeter, tetragon, sovereign-kernel-fence, sigkill].
+
 ## Symptom
 
 One or more of the following:
@@ -138,7 +142,9 @@ sudo systemctl status selfdef-guardian.service
 - **Tetragon repeatedly crashes after kernel upgrade**: pin Tetragon version compatible with the new kernel; downgrade Tetragon if needed.
 - **Long-term Tetragon outage**: file an incident, escalate to vendor; sovereign-os cockpit M061 panel will continue showing the perimeter as `policy PRESENT` but with no recent verdicts (gray state).
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-028 §Deliverable 1 (TracingPolicy YAML)
 - SDD-028 §Deliverable 10 (daemon boot observability)

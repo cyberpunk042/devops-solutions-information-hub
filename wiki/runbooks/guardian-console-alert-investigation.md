@@ -29,6 +29,10 @@ tags: [runbook, guardian, console-alert, sigkill, incident-response, ocsf, audit
 
 # Operator runbook — Guardian console alert investigation
 
+## Summary
+
+Operator runbook for **Guardian console alert investigation**.  Anchored to: Source dump §10 lines 527-552 (3-step response) + Trinity Genesis Auditor dump 977-981; SDD-029 guardian-daemon specification. Also references: Catalog milestone MS044 R10381-R10410 (3-step response + circuit breaker).
+
 ## When this fires
 
 The operator hears the BEL on `/dev/console` OR sees `[Guardian] SIGKILL ...` on the physical console. That means:
@@ -137,7 +141,9 @@ If no (action == `ProcessRelated`), this is a non-kill Tetragon policy event Gua
 - **False-positive confirmed**: see [guardian-false-positive-rollback](guardian-false-positive-rollback.md) — record the rollback for audit-trail clarity.
 - **No physical console attached**: the BEL is muted but the audit log still records. Subscribe to `journalctl -u selfdef-guardian.service -f` from another host for active monitoring; or wire a notifier integration (selfdef-integration-{ntfy,signal,pagerduty}).
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-029 §Deliverable 2 (Responder 3-step orchestrator)
 - MS044 R10381-R10410 (response orchestrator + circuit breaker)

@@ -29,6 +29,10 @@ tags: [runbook, scheduler, backpressure, psi, dcgm, blackwell, ram-pressure, hys
 
 # Operator runbook — scheduler backpressure stuck open
 
+## Summary
+
+Operator runbook for **scheduler backpressure stuck open**.  Anchored to: Source dump lines 18175-18205 (backpressure surfaces + responses); SDD-031 — Goldilocks Scheduler spec. Also references: MS048 R11333-R11362 (backpressure thresholds + hysteresis).
+
 ## Symptom
 
 One or more backpressure surfaces remain `true` in `selfdefctl scheduler show --json | jq .recent_decisions[0].backpressure` for ≥ 5 minutes after the originating resource pressure has cleared.
@@ -176,7 +180,9 @@ sudo systemctl restart selfdefd
 - **Stuck-open after a kernel/driver upgrade**: PSI or DCGM may have changed semantics. Compare /proc/pressure/* before/after and the DCGM version.
 - **One surface stuck open intermittently for years**: there's a measurement bug. Capture a 1-hour PSI/DCGM trace and file an issue.
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-031 §Deliverable 2 (BackpressureMonitor + hysteresis logic)
 - MS048 R11333-R11362 (backpressure thresholds + hysteresis)

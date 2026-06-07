@@ -29,6 +29,10 @@ tags: [runbook, network, internet, dns, cloudflared, tailscale, traefik, inciden
 
 # Operator runbook — Network state degraded
 
+## Summary
+
+Operator runbook for **network state degraded (internet / DNS / cloudflared / tailscale / Traefik)**.  Anchored to: SDD-026 Z-7 network-state surface specification; Catalog milestone MS011 Z-7 (network state). Also references: selfdef-api network probe handler (5 components, per-request).
+
 ## Symptom
 
 - `selfdefctl health` worst is `WARN` or `CRITICAL` and the `network` row is the contributor.
@@ -167,7 +171,9 @@ Follow-up: <vendor escalation / nothing / monitoring tweak>
 EOF
 ```
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-026 § Z-7 (network state surface specification)
 - MS011 catalog rows on Z-7 (M00276 dashboard tab Network)

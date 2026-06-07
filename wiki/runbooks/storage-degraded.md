@@ -29,6 +29,10 @@ tags: [runbook, storage, filesystem, df, logs, log-rotate, incident-response, se
 
 # Operator runbook — Storage state degraded
 
+## Summary
+
+Operator runbook for **Storage state degraded (filesystem fill, log dir bloat)**.  Anchored to: SDD-026 Z-10 storage state surface specification; Catalog milestone MS011 Z-10 (filesystem usage + log dirs). Also references: selfdef-api storage probe handler (df + log-dir walk).
+
 ## Symptom
 
 - `selfdefctl health` worst is `WARN` or `CRITICAL` and the `storage` row is the contributor.
@@ -169,7 +173,9 @@ Follow-up: <expand disk plan / fix logrotate / file issue against integration X>
 EOF
 ```
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-026 § Z-10 (storage state surface specification)
 - MS011 catalog rows on Z-10 (M00277 dashboard tab Logs)

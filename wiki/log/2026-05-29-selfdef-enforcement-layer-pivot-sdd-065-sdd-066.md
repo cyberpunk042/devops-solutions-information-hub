@@ -1,5 +1,39 @@
 ---
 title: Selfdef enforcement-layer pivot — SDD-065 + SDD-066 shipped end-to-end
+type: note
+domain: ai-agents
+status: active
+confidence: high
+created: '2026-05-29'
+updated: '2026-05-29'
+sources:
+  - id: selfdef-pr-200
+    type: external
+    url: https://github.com/cyberpunk042/selfdef/pull/200
+    note: 'selfdef PR #200 — SDD-065 + SDD-066 ready-for-review'
+  - id: sovereign-os-pr-12
+    type: external
+    url: https://github.com/cyberpunk042/sovereign-os/pull/12
+    note: 'sovereign-os PR #12 — companion enforcement-layer pivot'
+  - id: selfdef-sdd-065
+    type: internal
+    project: selfdef
+    path: docs/sdd/065-ip-block-action-surface.md
+    note: SDD-065 IP-block action surface
+  - id: selfdef-sdd-066
+    type: internal
+    project: selfdef
+    path: docs/sdd/066-process-quarantine-action-surface.md
+    note: SDD-066 process-quarantine action surface
+tags:
+  - log
+  - session-log
+  - selfdef
+  - sovereign-os
+  - enforcement-layer
+  - sdd-065
+  - sdd-066
+  - ai-drafted
 date: 2026-05-29
 session_type: claude-code perpetual /goal
 branch: claude/recover-projects-b0oT6 (both selfdef + sovereign-os)
@@ -10,6 +44,10 @@ authorship_class: ai_drafted_session_log
 ---
 
 # Session log — 2026-05-29 selfdef enforcement-layer pivot
+
+## Summary
+
+Multi-hour perpetual `/goal` session log for the 2026-05-29 selfdef enforcement-layer pivot: SDD-065 (IP-block action surface) + SDD-066 (process-quarantine action surface) shipped end-to-end across selfdef PR #200 + sovereign-os PR #12 on branch `claude/recover-projects-b0oT6` (both projects). Mid-session pivot from the 18-sibling observability scaffold fleet (`selfdef ec6a822` / `sovereign-os 05724a4`) into genuine multi-layer enforcement + operator UX work.
 
 ## Context
 

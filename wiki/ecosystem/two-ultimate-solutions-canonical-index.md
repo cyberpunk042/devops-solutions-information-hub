@@ -1,7 +1,27 @@
 ---
 title: Two ultimate solutions — canonical architecture index (selfdef + sovereign-os)
+type: index
+domain: cross-domain
 status: draft
+confidence: high
 maturity_tier: 02_synthesized
+created: '2026-05-29'
+updated: '2026-05-29'
+sources:
+  - id: operator-directive-two-ultimate-solutions
+    type: directive
+    project: devops-solutions-information-hub
+    path: raw/notes/
+    note: Operator-stated 'two ultimate solutions' identification (selfdef + sovereign-os)
+tags:
+  - index
+  - ecosystem
+  - selfdef
+  - sovereign-os
+  - two-ultimate-solutions
+  - canonical
+  - cross-session
+  - ai-drafted
 authoritative_for:
   - operator-stated "two ultimate solutions" identification
   - cross-session scope-state continuity
@@ -169,12 +189,16 @@ The catalog enumeration prerequisite that the operator stated as
 "THE FIRST THING" is satisfied; current and future sessions are
 in the multi-year progressive implementation phase.
 
-## Cross-references
+## Relationships
 
-- `wiki/patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture.md`
-- `wiki/decisions/01_drafts/in-memory-backend-as-ms1-substrate.md`
-- `wiki/log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066.md`
+### Cross-references
+
+- [`wiki/runbooks/_index.md`](../runbooks/_index.md) — operator-facing runbook fleet for both ultimate solutions (24 SDD-anchored runbooks + doctrine + detection-watchdog).
+- [`wiki/patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture.md`](../patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture.md) — five-milestone architecture pattern for the selfdef enforcement layer.
+- [`wiki/patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation.md`](../patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation.md) — MS5a state-journal vs enforcement-layer separation pattern.
+- [`wiki/decisions/01_drafts/in-memory-backend-as-ms1-substrate.md`](../decisions/01_drafts/in-memory-backend-as-ms1-substrate.md) — MS1 in-memory backend substrate decision.
+- [`wiki/log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066.md`](../log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066.md) — selfdef enforcement-layer pivot session log.
 - selfdef `backlog/milestones/INDEX.md` (catalog index)
 - sovereign-os `backlog/milestones/INDEX.md` (catalog index)
-- selfdef `docs/sdd/` (SDD 000-066)
+- selfdef `docs/sdd/` (SDD 000-078)
 - sovereign-os `docs/sdd/` (SDD 000-040)

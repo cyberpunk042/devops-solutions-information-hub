@@ -27,15 +27,21 @@ sources:
   - id: selfdef-ms003
     type: internal
     project: selfdef
+    path: backlog/milestones/MS003-correlator-store-responder-signing.md
     note: "MS003 selfdef-signing chain-of-trust"
   - id: selfdef-ms009
     type: internal
     project: selfdef
+    path: backlog/milestones/MS009-audit-cycles.md
     note: "MS009 audit cycles + replay invariants"
 tags: [runbook, guardian, false-positive, rollback, ms003, ms009, ring-0, audit, selfdef, ips]
 ---
 
 # Operator runbook — Guardian false-positive rollback
+
+## Summary
+
+Operator runbook for **Guardian false-positive rollback**. A SIGKILL was issued by the in-kernel perimeter and Guardian fanned out the supervisor response (audit-log + console alert) — but on operator review, the targeted process was **legitimate**. Examples: Anchored to: Source dump §10 + Trinity Genesis Auditor dump 977-981 (rollback discipline); SDD-029 guardian-daemon specification — Deliverable 4 (rollback).
 
 ## When to use this
 
@@ -138,7 +144,9 @@ EOF
 - **Rolled back a verdict and then realized it WAS malicious**: rollback records are themselves auditable. Append a follow-up note correcting the assessment; do NOT delete the rollback record.
 - **Need to roll back a verdict from days ago**: the ring buffer is bounded (~16 most recent in the cockpit view; the OCSF log is the canonical archive). `selfdefctl guardian rollback` works as long as the verdict still appears in `guardian history`; for older verdicts, the rollback workflow operates on the OCSF log directly (future-round R10540).
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-029 §Deliverable 4 (CLI: `selfdefctl guardian rollback`)
 - MS009 audit cycles + replay invariants

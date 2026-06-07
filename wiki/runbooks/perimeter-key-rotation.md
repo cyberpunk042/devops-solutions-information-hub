@@ -22,6 +22,7 @@ sources:
   - id: selfdef-ms003
     type: internal
     project: selfdef
+    path: backlog/milestones/MS003-correlator-store-responder-signing.md
     note: "MS003 selfdef-signing chain-of-trust"
   - id: selfdef-ms047
     type: internal
@@ -32,6 +33,10 @@ tags: [runbook, perimeter, ms003, key-rotation, trust-roots, minisign, operator-
 ---
 
 # Operator runbook — perimeter MS003 key rotation
+
+## Summary
+
+Operator runbook for **perimeter MS003 key rotation**. Rotate operator / auditor keys when: Anchored to: Source dump §6 — Tetragon sovereign-kernel-fence + MS003 operator-signed extension contract; SDD-028 perimeter-engine specification — Deliverable 3 trust-roots discipline.
 
 ## When to use this
 
@@ -163,7 +168,9 @@ Same as operator key, with these differences:
 | Old extension stops verifying after rotation | The old pub key was removed too early | restore the old pub key to /etc/selfdef/trust-roots/ until natural expiry |
 | `trust-roots dir missing` | `/etc/selfdef/trust-roots` doesn't exist | `sudo mkdir -p /etc/selfdef/trust-roots; sudo chmod 0750 /etc/selfdef/trust-roots; sudo chown root:selfdef /etc/selfdef/trust-roots` |
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-028 §Deliverable 3 (runtime crate, ExtensionStore::load_signed → verify_minisign)
 - MS003 selfdef-signing chain-of-trust

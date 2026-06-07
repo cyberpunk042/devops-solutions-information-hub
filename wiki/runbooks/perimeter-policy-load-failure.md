@@ -29,6 +29,10 @@ tags: [runbook, perimeter, tetragon, tracingpolicy, yaml, sigkill, selfdef, ips]
 
 # Operator runbook — perimeter TracingPolicy load failure
 
+## Summary
+
+Operator runbook for **perimeter TracingPolicy load failure**.  Anchored to: Source dump §6 — Tetragon sovereign-kernel-fence TracingPolicy (lines 380-411); SDD-028 perimeter-engine specification. Also references: Catalog milestone MS047. Page metadata: status=draft; maturity=seed; confidence=high; tags=[runbook, perimeter, tetragon, tracingpolicy, yaml].
+
 ## Symptom
 
 `/etc/tetragon/tracing-policies/sovereign-perimeter.yaml` exists on disk but Tetragon refuses to load it. One or more of:
@@ -136,7 +140,9 @@ A `SIGKILL` verdict should appear.
 - **Tetragon version too old**: pin a Tetragon version that supports `matchActions.action: Sigkill` (≥ 0.10). Downgrade is an operator-decision; document the version pin in the incident log.
 - **Kernel lacks the necessary ftrace surface**: this is a kernel-recompile-or-replace-host event; escalate.
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-028 §Deliverable 1 (TracingPolicy YAML)
 - SDD-028 §Deliverable 5 (Debian packaging — postinst install + chattr +i)

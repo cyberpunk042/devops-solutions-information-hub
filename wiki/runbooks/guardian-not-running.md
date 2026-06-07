@@ -29,6 +29,10 @@ tags: [runbook, guardian, tetragon, supervisor, sigkill, console-alert, zfs, aud
 
 # Operator runbook — Guardian Daemon not running
 
+## Summary
+
+Operator runbook for **Guardian Daemon not running**.  Anchored to: Source dump §10 — Guardian Daemon / guardian-core (lines 513-588); SDD-029 guardian-daemon specification. Also references: Catalog milestone MS044. Page metadata: status=draft; maturity=seed; confidence=high; tags=[runbook, guardian, tetragon, supervisor, sigkill].
+
 ## Symptom
 
 One or more of:
@@ -123,7 +127,9 @@ All three should show `PRESENT` / `OK` aggregates.
 - **Host shouldn't run Guardian** (no Tetragon, no need): disable it with `systemctl disable selfdef-guardian.service`. The in-kernel perimeter doesn't depend on Guardian for the SIGKILL itself — only for the supervisor fan-out.
 - **Repeated restarts in short windows**: don't disable `Restart=always`; that defeats the watchdog. Diagnose the root cause.
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-029 §Deliverable 3 (systemd unit)
 - SDD-029 §Deliverable 10 (daemon boot observability)

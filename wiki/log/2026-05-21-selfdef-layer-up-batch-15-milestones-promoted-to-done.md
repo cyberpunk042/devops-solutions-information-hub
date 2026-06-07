@@ -1,6 +1,6 @@
 ---
 title: "selfdef layer-up batch — 15 milestones promoted partial → done"
-type: log
+type: note
 domain: ai-agents
 layer: 2
 status: synthesized
@@ -24,7 +24,7 @@ tags: [log, selfdef, milestones, layer-up, sdd, production-landing, multi-cycle,
 
 # selfdef layer-up batch — 15 milestones promoted partial → done (2026-05-21)
 
-## Outcome
+## Summary
 
 15 selfdef milestones promoted from `partial` to `done` in a single
 multi-cycle session (71 commits on selfdef main). Each promotion

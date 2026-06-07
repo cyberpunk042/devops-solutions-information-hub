@@ -1,25 +1,25 @@
 {
-  "generated": "2026-05-18T18:22:52.125308+00:00",
+  "generated": "2026-06-06T11:05:00.435435+00:00",
   "stats": {
-    "pages": 902,
-    "domains": 14,
-    "sources": 114,
+    "pages": 978,
+    "domains": 16,
+    "sources": 128,
     "comparisons": 14,
-    "relationships": 4278,
-    "tags_unique": 3383,
+    "relationships": 4352,
+    "tags_unique": 3768,
     "layers": {
       "3": 8,
       "5": 38,
       "6": 27,
-      "2": 88,
-      "4": 86,
+      "2": 117,
+      "4": 90,
       "0": 1,
-      "1": 92,
-      "spine": 83
+      "1": 94,
+      "spine": 84
     },
     "maturity": {
-      "seed": 194,
-      "growing": 341,
+      "seed": 244,
+      "growing": 352,
       "mature": 23
     }
   },
@@ -10087,6 +10087,49 @@
           "target": "Right-Size Methodology Model"
         }
       ]
+    },
+    {
+      "path": "decisions/01_drafts/in-memory-backend-as-ms1-substrate.md",
+      "slug": "decisions/01_drafts/in-memory-backend-as-ms1-substrate",
+      "title": "In-memory backend as MS1 substrate for selfdef enforcement primitives",
+      "type": "decision",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "medium",
+      "created": "2026-05-29",
+      "updated": "2026-05-29",
+      "last_reviewed": "",
+      "tags": [
+        "decision",
+        "selfdef",
+        "ms1",
+        "in-memory-backend",
+        "enforcement-primitive",
+        "sdd-065",
+        "sdd-066",
+        "ai-drafted"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-sdd-065",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/065-ip-block-action-surface.md",
+          "note": "SDD-065 IP-block action surface \u2014 MS1 in-memory backend"
+        },
+        {
+          "id": "selfdef-sdd-066",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/066-process-quarantine-action-surface.md",
+          "note": "SDD-066 process-quarantine action surface \u2014 MS1 in-memory backend"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
     },
     {
       "path": "decisions/01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration.md",
@@ -20710,6 +20753,42 @@
       ]
     },
     {
+      "path": "ecosystem/two-ultimate-solutions-canonical-index.md",
+      "slug": "ecosystem/two-ultimate-solutions-canonical-index",
+      "title": "Two ultimate solutions \u2014 canonical architecture index (selfdef + sovereign-os)",
+      "type": "index",
+      "domain": "cross-domain",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-29",
+      "updated": "2026-05-29",
+      "last_reviewed": "",
+      "tags": [
+        "index",
+        "ecosystem",
+        "selfdef",
+        "sovereign-os",
+        "two-ultimate-solutions",
+        "canonical",
+        "cross-session",
+        "ai-drafted"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive-two-ultimate-solutions",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "raw/notes/",
+          "note": "Operator-stated 'two ultimate solutions' identification (selfdef + sovereign-os)"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "index.md",
       "slug": "index",
       "title": "index",
@@ -21279,6 +21358,10 @@
           "target": "The Agent Must Practice What It Documents"
         },
         {
+          "verb": "BUILDS ON",
+          "target": "Models Are Built in Layers"
+        },
+        {
           "verb": "RELATES TO",
           "target": "Infrastructure Must Be Reproducible"
         }
@@ -21517,6 +21600,76 @@
       ],
       "layer": 4,
       "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "lessons/01_drafts/claude-code-synthetic-resume-pair-swallows-perpetual-goal.md",
+      "slug": "lessons/01_drafts/claude-code-synthetic-resume-pair-swallows-perpetual-goal",
+      "title": "Claude Code synthetic-resume-pair swallows perpetual `/goal` after idle suspend (cloud_default env)",
+      "type": "lesson",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-20",
+      "updated": "2026-05-26",
+      "last_reviewed": "",
+      "tags": [
+        "claude-code",
+        "hooks",
+        "stop-hook",
+        "goal",
+        "synthetic-message",
+        "session-resume",
+        "cloud-default",
+        "perpetual-mandate",
+        "idle-suspend",
+        "agent-loop",
+        "undocumented-behavior"
+      ],
+      "sources": [
+        {
+          "id": "operator-investigation-2026-05-20",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "wiki/log/",
+          "note": "Operator reported '/goal stopping' glitch during perpetual mandate work; first response blamed self (anti-pattern), operator escalated 'NO... YOU NEED TO FIND THE BUG... INVESTIGATION AND ANALYSIS', binary forensics produced this lesson."
+        },
+        {
+          "id": "claude-code-binary-decompilation-2026-05-20",
+          "type": "empirical",
+          "file": "/opt/claude-code/bin/claude",
+          "note": "Strings dump + JS code window around `jO8`, `rE6`, `cX`, `A74`, `C0H`, `k0`, `CH5`, and the env vars `CLAUDE_CODE_RESUME_PROMPT` + `CLAUDE_CODE_REMOTE_ENVIRONMENT_TYPE` + `DISABLE_BRIEF_MODE_STOP_HOOK`."
+        },
+        {
+          "id": "session-transcript-2026-05-20",
+          "type": "empirical",
+          "file": "/root/.claude/projects/-home-user/a96554c4-92f7-4ce2-b9b1-d8f049525bd1.jsonl",
+          "note": "Live transcript of the bug. The synthetic-pair appears at timestamp 18:13:54.063Z, exactly 8m46s after the model's last real turn at 18:05:08.325Z. The synthetic assistant message carries `model: '<synthetic>'`, `stop_reason: 'stop_sequence'`, `stop_sequence: ''`."
+        },
+        {
+          "id": "session-transcript-2026-05-26",
+          "type": "empirical",
+          "file": "/root/.claude/projects/-home-user/8a4031f2-68e1-4375-8ad0-19e44feecdd9.jsonl",
+          "note": "End-to-end confirmation. 3 idle-resume events (11:41/13:50/16:01Z, ~2h gaps) each producing a same-ms `model:<synthetic>` `No response requested.` paired with an isMeta user message carrying the CLAUDE_CODE_RESUME_PROMPT override text; each recovered ONLY by a manual operator /goal re-issue (rows 682/1746/1911). Both SessionStart systemMessages fired but triggered no real turn. Confirms Outcome 3 + corrects the 'model emits the no-op' misconception."
+        },
+        {
+          "id": "companion-lesson-block-cap",
+          "type": "internal",
+          "project": "devops-solutions-information-hub",
+          "path": "wiki/lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch.md",
+          "note": "Earlier lesson on a sibling glitch \u2014 `CLAUDE_CODE_STOP_HOOK_BLOCK_CAP` default-8 cap causing perpetual `/goal` to die after 8 consecutive blocks. Different mechanism from this lesson but same operator pain point."
+        },
+        {
+          "id": "claude-code-hooks-reference",
+          "type": "external",
+          "url": "https://code.claude.com/docs/en/hooks",
+          "note": "Public hook docs. The synthetic-resume mechanism documented in this lesson is NOT in the public docs; the cap and block semantics partially are."
+        }
+      ],
+      "layer": 4,
+      "maturity": "growing",
       "derived_from": [],
       "aliases": [],
       "relationships": []
@@ -22772,6 +22925,66 @@
       ]
     },
     {
+      "path": "lessons/01_drafts/hermetic-testability-precondition-gates-test-backfill-scope.md",
+      "slug": "lessons/01_drafts/hermetic-testability-precondition-gates-test-backfill-scope",
+      "title": "Hermetic Testability Is a Precondition for Test-Backfill Scope \u2014 Classify Scanners by Input-Source Knob Before Committing to Coverage",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-27",
+      "updated": "2026-05-27",
+      "last_reviewed": "2026-05-27",
+      "tags": [
+        "testing",
+        "test-coverage",
+        "hermetic-tests",
+        "bats",
+        "scanners",
+        "input-source-knob",
+        "false-coverage",
+        "cross-domain"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-main",
+          "type": "project",
+          "project": "cyberpunk042/selfdef",
+          "path": "main"
+        },
+        {
+          "id": "selfdef-l2-watchdog-suites",
+          "type": "project",
+          "project": "cyberpunk042/selfdef",
+          "path": "packaging/test"
+        },
+        {
+          "id": "selfdef-dedup-guard",
+          "type": "project",
+          "project": "cyberpunk042/selfdef",
+          "path": "packaging/test/L2-watchdog-dedup-guard.bats"
+        },
+        {
+          "id": "selfdef-sdd-062",
+          "type": "project",
+          "project": "cyberpunk042/selfdef",
+          "path": "docs/sdd/062-watchdog-severity-routing.md"
+        }
+      ],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [
+        "P4 \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them (PRIMARY parent \u2014 an ok-path-only test is an aspirational coverage declaration that verifies nothing about the alert path)",
+        "Verify Against the Real Data Shape (work-mode discipline \u2014 read the scanner's actual input contract before writing test fixtures)"
+      ],
+      "aliases": [
+        "No input knob, no hermetic test",
+        "Classify before you backfill",
+        "Ok-path-only suites are false coverage"
+      ],
+      "relationships": []
+    },
+    {
       "path": "lessons/01_drafts/if-you-can-verify-you-converge.md",
       "slug": "lessons/01_drafts/if-you-can-verify-you-converge",
       "title": "If You Can Verify, You Converge",
@@ -22861,6 +23074,61 @@
           "target": "Agent Orchestration Patterns"
         }
       ]
+    },
+    {
+      "path": "lessons/01_drafts/layer-up-over-crate-already-shipped-promotion-pattern.md",
+      "slug": "lessons/01_drafts/layer-up-over-crate-already-shipped-promotion-pattern",
+      "title": "Layer-Up Over Crate-Already-Shipped \u2014 A Repeatable Promotion Pattern for Partial Milestones",
+      "type": "lesson",
+      "domain": "build-pipeline",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-21",
+      "updated": "2026-05-21",
+      "last_reviewed": "2026-05-21",
+      "tags": [
+        "lesson",
+        "pattern",
+        "selfdef",
+        "ms011",
+        "promotion",
+        "sdd",
+        "cli",
+        "http",
+        "l1",
+        "partial-milestone"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-main",
+          "type": "project",
+          "project": "cyberpunk042/selfdef",
+          "path": "main"
+        },
+        {
+          "id": "selfdef-MS011",
+          "type": "milestone",
+          "file": "backlog/milestones/INDEX.md"
+        },
+        {
+          "id": "selfdef-sdd-026",
+          "type": "sdd",
+          "file": "docs/sdd/026-operator-dashboard-and-flex-profile.md"
+        }
+      ],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [
+        "P4 \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them (PRIMARY parent \u2014 a shipped crate without surface gates is still aspirational)",
+        "SDD does not stop at the shell nor the core (operator verbatim, 2026-05-19)",
+        "You cannot mark something done if it hasn't reached Prod (operator verbatim, 2026-05-19)"
+      ],
+      "aliases": [
+        "5-step partial-milestone closure",
+        "crate \u2192 SDD \u2192 CLI \u2192 HTTP \u2192 L1 \u2192 INDEX",
+        "Selfdef MS011 Z-2/Z-3/Z-12 closure pattern"
+      ],
+      "relationships": []
     },
     {
       "path": "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability.md",
@@ -40657,6 +40925,250 @@
       ]
     },
     {
+      "path": "log/2026-05-20-avx-plus-plus-dump-tail-backward-sweep-review.md",
+      "slug": "log/2026-05-20-avx-plus-plus-dump-tail-backward-sweep-review",
+      "title": "Backward-sweep review \u2014 avx-plus-plus dump tail (lines 18000-18341)",
+      "type": "note",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-20",
+      "updated": "2026-05-20",
+      "last_reviewed": "",
+      "tags": [
+        "backward-sweep",
+        "avx-plus-plus",
+        "dump-review",
+        "scheduling",
+        "goldilocks",
+        "peace-machine",
+        "selfdef",
+        "sovereign-os",
+        "milestone-amendment"
+      ],
+      "sources": [
+        {
+          "id": "avx-plus-plus-dump-2026-05-18",
+          "type": "directive",
+          "file": "raw/dumps/2026-05-18-the-ultimate-exploitation-of-the-tech-stack-AVX-plus-plus.md",
+          "note": "Tail lines 18000-18341 \u2014 Scheduling Policies + Backpressure + Closing Manifesto"
+        },
+        {
+          "id": "operator-directive-2026-05-19",
+          "type": "directive",
+          "file": "raw/notes/2026-05-19-operator-standing-direction-backward-sweep-end-of-avx-plus-plus.md",
+          "note": "Standing direction: 'when you reach the end of the avx-plus-plus document you will have to review / go backward a bit since it redefines some of the things'"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "log/2026-05-20-four-watchdog-end-to-end-production-landing.md",
+      "slug": "log/2026-05-20-four-watchdog-end-to-end-production-landing",
+      "title": "Four-watchdog set (MS046+MS047+MS044+MS048) \u2014 end-to-end production landing",
+      "type": "note",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-20",
+      "updated": "2026-05-20",
+      "last_reviewed": "",
+      "tags": [
+        "four-watchdog",
+        "ms046",
+        "ms047",
+        "ms044",
+        "ms048",
+        "friction-audit",
+        "perimeter",
+        "guardian",
+        "scheduler",
+        "production",
+        "selfdef",
+        "ips",
+        "milestone-landing"
+      ],
+      "sources": [
+        {
+          "id": "avx-plus-plus-dump-2026-05-18",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "raw/dumps/2026-05-18-the-ultimate-exploitation-of-the-tech-stack-AVX-plus-plus.md",
+          "note": "Source dump tail lines 18000-18250 (Goldilocks scheduler) + \u00a75/\u00a76/\u00a710 (friction-audit / perimeter / guardian) from sain-01 transposition"
+        },
+        {
+          "id": "operator-directive-2026-05-19",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "wiki/log/",
+          "note": "'You cannot mark something done if it hasn't reached Prod' / 'do not get stuck at the cataloging step' / 'Knowledge is the second-brain'"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "log/2026-05-21-selfdef-layer-up-batch-15-milestones-promoted-to-done.md",
+      "slug": "log/2026-05-21-selfdef-layer-up-batch-15-milestones-promoted-to-done",
+      "title": "selfdef layer-up batch \u2014 15 milestones promoted partial \u2192 done",
+      "type": "note",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-21",
+      "updated": "2026-05-21",
+      "last_reviewed": "",
+      "tags": [
+        "log",
+        "selfdef",
+        "milestones",
+        "layer-up",
+        "sdd",
+        "production-landing",
+        "multi-cycle",
+        "second-brain",
+        "ips"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-commit-log-2026-05-21",
+          "type": "directive",
+          "project": "selfdef",
+          "path": "CHANGELOG.md",
+          "note": "71 commits this session on selfdef main; full block captured in CHANGELOG [Unreleased] under 3 batches (2026-05-21 batch 1 / batch 2 / batch 3)"
+        },
+        {
+          "id": "selfdef-index",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/INDEX.md",
+          "note": "Final tally 42 done / 6 partial / 0 stage-1 (was ~8 done pre-session)"
+        }
+      ],
+      "layer": 2,
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066.md",
+      "slug": "log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066",
+      "title": "Selfdef enforcement-layer pivot \u2014 SDD-065 + SDD-066 shipped end-to-end",
+      "type": "note",
+      "domain": "ai-agents",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-29",
+      "updated": "2026-05-29",
+      "last_reviewed": "",
+      "tags": [
+        "log",
+        "session-log",
+        "selfdef",
+        "sovereign-os",
+        "enforcement-layer",
+        "sdd-065",
+        "sdd-066",
+        "ai-drafted"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-pr-200",
+          "type": "external",
+          "url": "https://github.com/cyberpunk042/selfdef/pull/200",
+          "note": "selfdef PR #200 \u2014 SDD-065 + SDD-066 ready-for-review"
+        },
+        {
+          "id": "sovereign-os-pr-12",
+          "type": "external",
+          "url": "https://github.com/cyberpunk042/sovereign-os/pull/12",
+          "note": "sovereign-os PR #12 \u2014 companion enforcement-layer pivot"
+        },
+        {
+          "id": "selfdef-sdd-065",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/065-ip-block-action-surface.md",
+          "note": "SDD-065 IP-block action surface"
+        },
+        {
+          "id": "selfdef-sdd-066",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/066-process-quarantine-action-surface.md",
+          "note": "SDD-066 process-quarantine action surface"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "log/2026-06-06-perpetual-goal-resumed-three-repo-ci-green-out.md",
+      "slug": "log/2026-06-06-perpetual-goal-resumed-three-repo-ci-green-out",
+      "title": "Session log \u2014 2026-06-06 perpetual /goal resumed segment \u2014 three-repo CI green-out",
+      "type": "note",
+      "domain": "ai-agents",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-06-06",
+      "updated": "2026-06-06",
+      "last_reviewed": "",
+      "tags": [
+        "log",
+        "session-log",
+        "perpetual-goal",
+        "ci-green-out",
+        "three-repo",
+        "selfdef",
+        "sovereign-os",
+        "info-hub",
+        "ips-quattuordectet"
+      ],
+      "sources": [
+        {
+          "id": "operator-perpetual-goal-2026-06-06",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "raw/notes/",
+          "note": "Operator standing directive \u2014 continue endlessly until 2026-06-07; re-armed after idle-suspension via /goal"
+        },
+        {
+          "id": "selfdef-pr-summary",
+          "type": "external",
+          "url": "https://github.com/cyberpunk042/selfdef/commits/main",
+          "note": "selfdef main \u2014 2 commits this segment (m3_pipeline test ANOM_PROMISCUOUS coverage + cargo fmt --all closure)"
+        },
+        {
+          "id": "sovereign-os-pr-summary",
+          "type": "external",
+          "url": "https://github.com/cyberpunk042/sovereign-os/commits/main",
+          "note": "sovereign-os main \u2014 3 commits this segment (IPS-quattuordectet lock-list bump + CI fixes + clippy uninlined_format_args)"
+        },
+        {
+          "id": "info-hub-pr-17",
+          "type": "external",
+          "url": "https://github.com/cyberpunk042/devops-solutions-information-hub/pull/17",
+          "note": "info-hub PR #17 \u2014 8 commits this segment (84 schema errors + 31 lints + 1 root tool bug closed)"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "log/5-candidate-behavioral-failure-detection-rules-from-openflee.md",
       "slug": "log/5-candidate-behavioral-failure-detection-rules-from-openflee",
       "title": "5 candidate behavioral-failure detection rules from OpenFleet doctor.py (2026-04-18)",
@@ -44029,6 +44541,54 @@
       "relationships": []
     },
     {
+      "path": "patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation.md",
+      "slug": "patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation",
+      "title": "MS5a state-journal-vs-enforcement-layer separation pattern",
+      "type": "pattern",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "medium",
+      "created": "2026-05-29",
+      "updated": "2026-05-29",
+      "last_reviewed": "",
+      "tags": [
+        "pattern",
+        "selfdef",
+        "ms5a",
+        "state-journal",
+        "enforcement-layer",
+        "separation",
+        "ips-dectet",
+        "ai-drafted"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-pr-215",
+          "type": "external",
+          "url": "https://github.com/cyberpunk042/selfdef/pull/215",
+          "note": "8 of 10 IPS-dectet MS5a adapters (companion to PR #216)"
+        },
+        {
+          "id": "selfdef-pr-216",
+          "type": "external",
+          "url": "https://github.com/cyberpunk042/selfdef/pull/216",
+          "note": "8 of 10 IPS-dectet MS5a adapters (companion to PR #215)"
+        },
+        {
+          "id": "selfdef-sdd-065",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/065-ip-block-action-surface.md",
+          "note": "First of the SDD-065..074 paired-enforcement-primitive dectet"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "patterns/01_drafts/multi-project-ecosystem-index-pattern-5-project-propagation-surface-post-tier-3.md",
       "slug": "patterns/01_drafts/multi-project-ecosystem-index-pattern-5-project-propagation-surface-post-tier-3",
       "title": "Multi-Project Ecosystem Index Pattern \u2014 5-Project Propagation Surface Post Tier-3",
@@ -44284,6 +44844,49 @@
       ],
       "layer": "",
       "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture.md",
+      "slug": "patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture",
+      "title": "Paired enforcement primitive \u2014 five-milestone architecture for selfdef IPS actions",
+      "type": "pattern",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "medium",
+      "created": "2026-05-29",
+      "updated": "2026-05-29",
+      "last_reviewed": "",
+      "tags": [
+        "pattern",
+        "selfdef",
+        "paired-enforcement-primitive",
+        "five-milestone",
+        "ips-dectet",
+        "sdd-065",
+        "sdd-066",
+        "ai-drafted"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-sdd-065",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/065-ip-block-action-surface.md",
+          "note": "SDD-065 IP-block action surface \u2014 first of paired-enforcement-primitive dectet"
+        },
+        {
+          "id": "selfdef-sdd-066",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/066-process-quarantine-action-surface.md",
+          "note": "SDD-066 process-quarantine action surface \u2014 second of paired-enforcement-primitive dectet"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
       "derived_from": [],
       "aliases": [],
       "relationships": []
@@ -48360,6 +48963,1458 @@
           "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
+    },
+    {
+      "path": "runbooks/friction-audit-immutability.md",
+      "slug": "runbooks/friction-audit-immutability",
+      "title": "Operator runbook \u2014 friction-audit immutability gate failure",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-20",
+      "updated": "2026-05-20",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "friction-audit",
+        "immutability",
+        "chattr",
+        "ima-appraise",
+        "tampering",
+        "sain-01",
+        "selfdef",
+        "ips",
+        "ring-0",
+        "critical"
+      ],
+      "sources": [
+        {
+          "id": "sain-01-dump-2026-05-15",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "raw/dumps/2026-05-15-sain-01-master-spec-other-conversation-transposition.md",
+          "note": "Source dump \u00a75 line 339 'immutable boot-time script' \u2014 the underlying invariant"
+        },
+        {
+          "id": "selfdef-sdd-027",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/027-friction-audit-system.md",
+          "note": "SDD-027 Deliverable 6 Debian postinst chattr +i + IMA-appraise hash, operator-extension for tampering resistance"
+        },
+        {
+          "id": "selfdef-ms046",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS046-friction-audit-system-boot-time-hardware-integrity-gate.md",
+          "note": "MS046 R10803-R10806 (chattr +i + IMA), F05405-F05409 (immutability enforcement), F05635 (P8 code), R11183 (CRITICAL severity)"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/friction-audit-memory.md",
+      "slug": "runbooks/friction-audit-memory",
+      "title": "Operator runbook \u2014 friction-audit memory gate failure",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-20",
+      "updated": "2026-05-20",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "friction-audit",
+        "memory",
+        "dimm",
+        "dmidecode",
+        "sain-01",
+        "selfdef",
+        "ips",
+        "boundary-enforcement",
+        "znver5",
+        "ecc-rdimm"
+      ],
+      "sources": [
+        {
+          "id": "sain-01-dump-2026-05-15",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "raw/dumps/2026-05-15-sain-01-master-spec-other-conversation-transposition.md",
+          "note": "Source dump \u00a75.1 lines 360-364 \u2014 friction-audit memory geometry check via dmidecode"
+        },
+        {
+          "id": "selfdef-sdd-027",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/027-friction-audit-system.md",
+          "note": "SDD-027 Deliverable 1 step 3 memory gate + operator-extended exit code 3 (sain-01 \u00a75.1 left open)"
+        },
+        {
+          "id": "selfdef-ms046",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS046-friction-audit-system-boot-time-hardware-integrity-gate.md",
+          "note": "MS046 R10827-R10833 (memory gate), R10831 + F05491 (exit code 3 operator-extension)"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/friction-audit-pcie.md",
+      "slug": "runbooks/friction-audit-pcie",
+      "title": "Operator runbook \u2014 friction-audit PCIe gate failure",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-20",
+      "updated": "2026-05-20",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "friction-audit",
+        "pcie",
+        "hardware-integrity",
+        "sain-01",
+        "selfdef",
+        "ips",
+        "boundary-enforcement",
+        "znver5",
+        "m2-slot",
+        "bifurcation"
+      ],
+      "sources": [
+        {
+          "id": "sain-01-dump-2026-05-15",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "raw/dumps/2026-05-15-sain-01-master-spec-other-conversation-transposition.md",
+          "note": "Source dump \u00a75.1 \u2014 Native Guard Script Architecture friction-audit lines 338-353 PCIe gate"
+        },
+        {
+          "id": "selfdef-sdd-027",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/027-friction-audit-system.md",
+          "note": "SDD-027 friction-audit-system specification"
+        },
+        {
+          "id": "selfdef-ms046",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS046-friction-audit-system-boot-time-hardware-integrity-gate.md",
+          "note": "Catalog milestone MS046 (240 requirements + 26 modules + 10 epics)"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/friction-audit-signature.md",
+      "slug": "runbooks/friction-audit-signature",
+      "title": "Operator runbook \u2014 friction-audit signature gate failure",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-20",
+      "updated": "2026-05-20",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "friction-audit",
+        "signature",
+        "ms003",
+        "minisign",
+        "key-rotation",
+        "sain-01",
+        "selfdef",
+        "ips",
+        "ring-0",
+        "critical"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-sdd-027",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/027-friction-audit-system.md",
+          "note": "SDD-027 Deliverable 1 + 6 \u2014 signature verification before script body executes (MS003 chain-of-trust)"
+        },
+        {
+          "id": "selfdef-ms003",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS003-correlator-store-responder-signing.md",
+          "note": "MS003 selfdef-signing \u2014 minisign-verify chain-of-trust"
+        },
+        {
+          "id": "selfdef-ms046",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS046-friction-audit-system-boot-time-hardware-integrity-gate.md",
+          "note": "MS046 R10805-R10807 (signature path + verification + CRITICAL severity), F05407-F05409, R11254-R11258"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/friction-audit-zfs.md",
+      "slug": "runbooks/friction-audit-zfs",
+      "title": "Operator runbook \u2014 friction-audit ZFS gate failure",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-20",
+      "updated": "2026-05-20",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "friction-audit",
+        "zfs",
+        "hardware-integrity",
+        "sain-01",
+        "selfdef",
+        "ips",
+        "boundary-enforcement",
+        "zpool",
+        "tank-vault"
+      ],
+      "sources": [
+        {
+          "id": "sain-01-dump-2026-05-15",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "raw/dumps/2026-05-15-sain-01-master-spec-other-conversation-transposition.md",
+          "note": "Source dump \u00a75.1 \u2014 friction-audit ZFS gate lines 354-359 (zpool status -x equality check)"
+        },
+        {
+          "id": "selfdef-sdd-027",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/027-friction-audit-system.md",
+          "note": "SDD-027 Deliverable 1 step 2 ZFS gate"
+        },
+        {
+          "id": "selfdef-ms046",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS046-friction-audit-system-boot-time-hardware-integrity-gate.md",
+          "note": "MS046 R10820-R10826 (ZFS gate behavior) + R10881-R10890 (ZFS log bridge)"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/guardian-audit-log-corruption.md",
+      "slug": "runbooks/guardian-audit-log-corruption",
+      "title": "Operator runbook \u2014 Guardian audit log corruption / chain break",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-20",
+      "updated": "2026-05-20",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "guardian",
+        "audit-log",
+        "zfs",
+        "sha256-chain",
+        "integrity",
+        "corruption",
+        "incident-response",
+        "selfdef",
+        "ips"
+      ],
+      "sources": [
+        {
+          "id": "sain-01-dump-2026-05-15",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "raw/dumps/2026-05-15-sain-01-master-spec-other-conversation-transposition.md",
+          "note": "Source dump \u00a710 lines 531-533 + Trinity Genesis Auditor dump 977-981 (atomic ZFS append)"
+        },
+        {
+          "id": "selfdef-sdd-029",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/029-guardian-daemon.md",
+          "note": "SDD-029 guardian-daemon specification \u2014 Deliverable 2 audit chain"
+        },
+        {
+          "id": "selfdef-ms044",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS044-guardian-daemon-tetragon-ebpf-supervisor.md",
+          "note": "Catalog milestone MS044 R10470 (audit chain integrity)"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/guardian-console-alert-investigation.md",
+      "slug": "runbooks/guardian-console-alert-investigation",
+      "title": "Operator runbook \u2014 Guardian console alert investigation",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-20",
+      "updated": "2026-05-20",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "guardian",
+        "console-alert",
+        "sigkill",
+        "incident-response",
+        "ocsf",
+        "audit",
+        "sain-01",
+        "selfdef",
+        "ips"
+      ],
+      "sources": [
+        {
+          "id": "sain-01-dump-2026-05-15",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "raw/dumps/2026-05-15-sain-01-master-spec-other-conversation-transposition.md",
+          "note": "Source dump \u00a710 lines 527-552 (3-step response) + Trinity Genesis Auditor dump 977-981"
+        },
+        {
+          "id": "selfdef-sdd-029",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/029-guardian-daemon.md",
+          "note": "SDD-029 guardian-daemon specification"
+        },
+        {
+          "id": "selfdef-ms044",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS044-guardian-daemon-tetragon-ebpf-supervisor.md",
+          "note": "Catalog milestone MS044 R10381-R10410 (3-step response + circuit breaker)"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/guardian-false-positive-rollback.md",
+      "slug": "runbooks/guardian-false-positive-rollback",
+      "title": "Operator runbook \u2014 Guardian false-positive rollback",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-20",
+      "updated": "2026-05-20",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "guardian",
+        "false-positive",
+        "rollback",
+        "ms003",
+        "ms009",
+        "ring-0",
+        "audit",
+        "selfdef",
+        "ips"
+      ],
+      "sources": [
+        {
+          "id": "sain-01-dump-2026-05-15",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "raw/dumps/2026-05-15-sain-01-master-spec-other-conversation-transposition.md",
+          "note": "Source dump \u00a710 + Trinity Genesis Auditor dump 977-981 (rollback discipline)"
+        },
+        {
+          "id": "selfdef-sdd-029",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/029-guardian-daemon.md",
+          "note": "SDD-029 guardian-daemon specification \u2014 Deliverable 4 (rollback)"
+        },
+        {
+          "id": "selfdef-ms044",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS044-guardian-daemon-tetragon-ebpf-supervisor.md",
+          "note": "Catalog milestone MS044 (rollback engine \u2014 module M01140)"
+        },
+        {
+          "id": "selfdef-ms003",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS003-correlator-store-responder-signing.md",
+          "note": "MS003 selfdef-signing chain-of-trust"
+        },
+        {
+          "id": "selfdef-ms009",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS009-audit-cycles.md",
+          "note": "MS009 audit cycles + replay invariants"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/guardian-not-running.md",
+      "slug": "runbooks/guardian-not-running",
+      "title": "Operator runbook \u2014 Guardian Daemon not running",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-20",
+      "updated": "2026-05-20",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "guardian",
+        "tetragon",
+        "supervisor",
+        "sigkill",
+        "console-alert",
+        "zfs",
+        "audit-log",
+        "sain-01",
+        "selfdef",
+        "ips"
+      ],
+      "sources": [
+        {
+          "id": "sain-01-dump-2026-05-15",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "raw/dumps/2026-05-15-sain-01-master-spec-other-conversation-transposition.md",
+          "note": "Source dump \u00a710 \u2014 Guardian Daemon / guardian-core (lines 513-588)"
+        },
+        {
+          "id": "selfdef-sdd-029",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/029-guardian-daemon.md",
+          "note": "SDD-029 guardian-daemon specification"
+        },
+        {
+          "id": "selfdef-ms044",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS044-guardian-daemon-tetragon-ebpf-supervisor.md",
+          "note": "Catalog milestone MS044"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/guardian-socket-unreachable.md",
+      "slug": "runbooks/guardian-socket-unreachable",
+      "title": "Operator runbook \u2014 Guardian Tetragon socket unreachable",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-20",
+      "updated": "2026-05-20",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "guardian",
+        "tetragon",
+        "unix-socket",
+        "ingestion",
+        "sain-01",
+        "selfdef",
+        "ips"
+      ],
+      "sources": [
+        {
+          "id": "sain-01-dump-2026-05-15",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "raw/dumps/2026-05-15-sain-01-master-spec-other-conversation-transposition.md",
+          "note": "Source dump \u00a710 lines 524 + 540-552 (UNIX socket ingestion contract)"
+        },
+        {
+          "id": "selfdef-sdd-029",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/029-guardian-daemon.md",
+          "note": "SDD-029 guardian-daemon specification \u2014 Deliverable 2 (event ingester)"
+        },
+        {
+          "id": "selfdef-ms044",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS044-guardian-daemon-tetragon-ebpf-supervisor.md",
+          "note": "Catalog milestone MS044 R10326-R10380 (UNIX socket event ingester)"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/m060-mirror-export-publish-anomalies.md",
+      "slug": "runbooks/m060-mirror-export-publish-anomalies",
+      "title": "Operator runbook \u2014 M060 mirror-export publish anomalies (failing / stale / wedged)",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-06-06",
+      "updated": "2026-06-06",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "m060",
+        "mirror-export",
+        "alert",
+        "prometheus",
+        "operator-facing",
+        "selfdef",
+        "sovereign-os"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-prometheus-alerts",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "modules/observability/assets/alerts/selfdef.yml.template",
+          "note": "Three SelfdefM060Publish* alerts (failing / stale / wedged) emitted by selfdefd mirror_export_loop"
+        },
+        {
+          "id": "sovereign-os-m060-deployment-guide",
+          "type": "external",
+          "url": "https://github.com/cyberpunk042/sovereign-os/blob/main/docs/operator/m060-deployment-guide.md",
+          "note": "Canonical M060 deployment-guide troubleshooting section (sovereign-os)"
+        },
+        {
+          "id": "selfdef-sdd-061",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/061-module-system.md",
+          "note": "SDD-061 module system \u2014 M060 is the mirror-export module per the SDD-061 module fleet"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/network-degraded.md",
+      "slug": "runbooks/network-degraded",
+      "title": "Operator runbook \u2014 network state degraded (internet / DNS / cloudflared / tailscale / Traefik)",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-21",
+      "updated": "2026-05-21",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "network",
+        "internet",
+        "dns",
+        "cloudflared",
+        "tailscale",
+        "traefik",
+        "incident-response",
+        "selfdef",
+        "ips",
+        "ms011",
+        "sdd-026"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-sdd-026",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/026-operator-dashboard-and-flex-profile.md",
+          "note": "SDD-026 Z-7 network-state surface specification"
+        },
+        {
+          "id": "selfdef-ms011",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS011-operator-dashboard-and-flex-profile.md",
+          "note": "Catalog milestone MS011 Z-7 (network state)"
+        },
+        {
+          "id": "selfdef-network-handler",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "crates/selfdef-api/src/network.rs",
+          "note": "selfdef-api network probe handler (5 components, per-request)"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/peace-machine-and-core-law-doctrine-citation-index.md",
+      "slug": "runbooks/peace-machine-and-core-law-doctrine-citation-index",
+      "title": "Peace Machine + Core Law \u2014 doctrine clause citation index (pre-page operator-authoring)",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-06-05",
+      "updated": "2026-06-05",
+      "last_reviewed": "",
+      "tags": [
+        "doctrine",
+        "peace-machine",
+        "core-law",
+        "operator-supervised",
+        "citation-index"
+      ],
+      "sources": [
+        {
+          "id": "avx-plus-plus-dump-2026-05-18",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "raw/dumps/2026-05-18-the-ultimate-exploitation-of-the-tech-stack-AVX-plus-plus.md",
+          "note": "Source dump \u2014 Core Law line 18288, Key Scheduling Law lines 18256-18257"
+        },
+        {
+          "id": "backward-sweep-review",
+          "type": "internal",
+          "project": "devops-solutions-information-hub",
+          "path": "wiki/log/2026-05-20-avx-plus-plus-dump-tail-backward-sweep-review.md",
+          "note": "Source of the Core Law six-clause enumeration + per-clause milestone mapping"
+        },
+        {
+          "id": "selfdef-sdd-031",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/031-goldilocks-scheduler.md",
+          "note": "SDD-031 line 147: explicitly designates wiki/spine/doctrine/peace-machine-and-core-law.md as operator-supervised authoring scope"
+        },
+        {
+          "id": "selfdef-scheduler-runbook",
+          "type": "internal",
+          "project": "devops-solutions-information-hub",
+          "path": "wiki/runbooks/scheduler-not-running.md",
+          "note": "Carries the Key Scheduling Law two-clause verbatim quote"
+        },
+        {
+          "id": "selfdef-force-override-runbook",
+          "type": "internal",
+          "project": "devops-solutions-information-hub",
+          "path": "wiki/runbooks/scheduler-force-override-investigation.md",
+          "note": "Carries the Core Law six-clause verbatim quote"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/perimeter-audit-log-corruption.md",
+      "slug": "runbooks/perimeter-audit-log-corruption",
+      "title": "Operator runbook \u2014 Perimeter audit log corruption / chain break",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-21",
+      "updated": "2026-05-21",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "perimeter",
+        "audit-log",
+        "zfs",
+        "sha256-chain",
+        "integrity",
+        "corruption",
+        "incident-response",
+        "selfdef",
+        "ips",
+        "tetragon"
+      ],
+      "sources": [
+        {
+          "id": "sain-01-dump-2026-05-15",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "raw/dumps/2026-05-15-sain-01-master-spec-other-conversation-transposition.md",
+          "note": "Source dump \u00a710 lines 531-533 + Trinity Genesis Auditor dump 977-981 (atomic ZFS append)"
+        },
+        {
+          "id": "selfdef-sdd-028",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/028-perimeter-engine.md",
+          "note": "SDD-028 perimeter-engine specification \u2014 Deliverable 2 audit chain"
+        },
+        {
+          "id": "selfdef-ms047",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS047-real-time-security-perimeter-engine-tetragon-kernel-fence.md",
+          "note": "Catalog milestone MS047 (perimeter audit chain integrity)"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/perimeter-extension-create.md",
+      "slug": "runbooks/perimeter-extension-create",
+      "title": "Operator runbook \u2014 perimeter allowlist extension (signed, multi-sig)",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-20",
+      "updated": "2026-05-20",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "perimeter",
+        "extension",
+        "allowlist",
+        "ms003",
+        "multi-sig",
+        "minisign",
+        "tetragon",
+        "selfdef",
+        "ips"
+      ],
+      "sources": [
+        {
+          "id": "sain-01-dump-2026-05-15",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "raw/dumps/2026-05-15-sain-01-master-spec-other-conversation-transposition.md",
+          "note": "Source dump \u00a76 \u2014 Tetragon sovereign-kernel-fence (lines 380-411) + operator-extension contract"
+        },
+        {
+          "id": "selfdef-sdd-028",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/028-perimeter-engine.md",
+          "note": "SDD-028 perimeter-engine specification \u2014 Deliverable 3 (runtime crate, extension authority)"
+        },
+        {
+          "id": "selfdef-ms047",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS047-real-time-security-perimeter-engine-tetragon-kernel-fence.md",
+          "note": "Catalog milestone MS047 R11077-R11086 (override manifest signing + audit chain)"
+        },
+        {
+          "id": "selfdef-ms003",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS003-correlator-store-responder-signing.md",
+          "note": "MS003 selfdef-signing chain-of-trust (minisign-verify)"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/perimeter-key-rotation.md",
+      "slug": "runbooks/perimeter-key-rotation",
+      "title": "Operator runbook \u2014 perimeter MS003 key rotation",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-20",
+      "updated": "2026-05-20",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "perimeter",
+        "ms003",
+        "key-rotation",
+        "trust-roots",
+        "minisign",
+        "operator-key",
+        "security",
+        "selfdef"
+      ],
+      "sources": [
+        {
+          "id": "sain-01-dump-2026-05-15",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "raw/dumps/2026-05-15-sain-01-master-spec-other-conversation-transposition.md",
+          "note": "Source dump \u00a76 \u2014 Tetragon sovereign-kernel-fence + MS003 operator-signed extension contract"
+        },
+        {
+          "id": "selfdef-sdd-028",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/028-perimeter-engine.md",
+          "note": "SDD-028 perimeter-engine specification \u2014 Deliverable 3 trust-roots discipline"
+        },
+        {
+          "id": "selfdef-ms003",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS003-correlator-store-responder-signing.md",
+          "note": "MS003 selfdef-signing chain-of-trust"
+        },
+        {
+          "id": "selfdef-ms047",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS047-real-time-security-perimeter-engine-tetragon-kernel-fence.md",
+          "note": "Catalog milestone MS047 R11086 (auditor co-signature) + R11125 (Guardian Daemon)"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/perimeter-policy-load-failure.md",
+      "slug": "runbooks/perimeter-policy-load-failure",
+      "title": "Operator runbook \u2014 perimeter TracingPolicy load failure",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-20",
+      "updated": "2026-05-20",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "perimeter",
+        "tetragon",
+        "tracingpolicy",
+        "yaml",
+        "sigkill",
+        "selfdef",
+        "ips"
+      ],
+      "sources": [
+        {
+          "id": "sain-01-dump-2026-05-15",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "raw/dumps/2026-05-15-sain-01-master-spec-other-conversation-transposition.md",
+          "note": "Source dump \u00a76 \u2014 Tetragon sovereign-kernel-fence TracingPolicy (lines 380-411)"
+        },
+        {
+          "id": "selfdef-sdd-028",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/028-perimeter-engine.md",
+          "note": "SDD-028 perimeter-engine specification"
+        },
+        {
+          "id": "selfdef-ms047",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS047-real-time-security-perimeter-engine-tetragon-kernel-fence.md",
+          "note": "Catalog milestone MS047"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/perimeter-sigkill-investigation.md",
+      "slug": "runbooks/perimeter-sigkill-investigation",
+      "title": "Operator runbook \u2014 perimeter SIGKILL investigation",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-20",
+      "updated": "2026-05-20",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "perimeter",
+        "tetragon",
+        "sigkill",
+        "sovereign-kernel-fence",
+        "incident-response",
+        "ocsf",
+        "selfdef",
+        "ips"
+      ],
+      "sources": [
+        {
+          "id": "sain-01-dump-2026-05-15",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "raw/dumps/2026-05-15-sain-01-master-spec-other-conversation-transposition.md",
+          "note": "Source dump \u00a76 \u2014 Tetragon sovereign-kernel-fence (lines 380-411)"
+        },
+        {
+          "id": "selfdef-sdd-028",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/028-perimeter-engine.md",
+          "note": "SDD-028 perimeter-engine specification"
+        },
+        {
+          "id": "selfdef-ms047",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS047-real-time-security-perimeter-engine-tetragon-kernel-fence.md",
+          "note": "Catalog milestone MS047 R11088-R11102 (OCSF Detection 2004)"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/perimeter-tetragon-not-running.md",
+      "slug": "runbooks/perimeter-tetragon-not-running",
+      "title": "Operator runbook \u2014 perimeter Tetragon not running",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-20",
+      "updated": "2026-05-20",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "perimeter",
+        "tetragon",
+        "sovereign-kernel-fence",
+        "sigkill",
+        "ips",
+        "kernel-fence",
+        "sain-01",
+        "selfdef"
+      ],
+      "sources": [
+        {
+          "id": "sain-01-dump-2026-05-15",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "raw/dumps/2026-05-15-sain-01-master-spec-other-conversation-transposition.md",
+          "note": "Source dump \u00a76 \u2014 Tetragon sovereign-kernel-fence TracingPolicy (lines 380-411)"
+        },
+        {
+          "id": "selfdef-sdd-028",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/028-perimeter-engine.md",
+          "note": "SDD-028 perimeter-engine specification"
+        },
+        {
+          "id": "selfdef-ms047",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS047-real-time-security-perimeter-engine-tetragon-kernel-fence.md",
+          "note": "Catalog milestone MS047"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/scheduler-audit-log-corruption.md",
+      "slug": "runbooks/scheduler-audit-log-corruption",
+      "title": "Operator runbook \u2014 scheduler audit log corruption / chain break",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-20",
+      "updated": "2026-05-20",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "scheduler",
+        "audit-log",
+        "sha256-chain",
+        "zfs",
+        "integrity",
+        "corruption",
+        "incident-response",
+        "selfdef",
+        "ips"
+      ],
+      "sources": [
+        {
+          "id": "avx-plus-plus-dump-2026-05-18",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "raw/dumps/2026-05-18-the-ultimate-exploitation-of-the-tech-stack-AVX-plus-plus.md",
+          "note": "Source dump tail (audit-trail discipline derived from sain-01 \u00a710 + scheduling architecture)"
+        },
+        {
+          "id": "selfdef-sdd-031",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/031-goldilocks-scheduler.md",
+          "note": "SDD-031 Goldilocks Scheduler spec \u2014 Deliverable 2 audit chain"
+        },
+        {
+          "id": "selfdef-ms048",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS048-goldilocks-scheduler-hardware-aware-resource-routing.md",
+          "note": "MS048 R11366-R11392 (audit chain integrity + invariants)"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/scheduler-backpressure-stuck-open.md",
+      "slug": "runbooks/scheduler-backpressure-stuck-open",
+      "title": "Operator runbook \u2014 scheduler backpressure stuck open",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-20",
+      "updated": "2026-05-20",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "scheduler",
+        "backpressure",
+        "psi",
+        "dcgm",
+        "blackwell",
+        "ram-pressure",
+        "hysteresis",
+        "selfdef",
+        "ips"
+      ],
+      "sources": [
+        {
+          "id": "avx-plus-plus-dump-2026-05-18",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "raw/dumps/2026-05-18-the-ultimate-exploitation-of-the-tech-stack-AVX-plus-plus.md",
+          "note": "Source dump lines 18175-18205 (backpressure surfaces + responses)"
+        },
+        {
+          "id": "selfdef-sdd-031",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/031-goldilocks-scheduler.md",
+          "note": "SDD-031 \u2014 Goldilocks Scheduler spec"
+        },
+        {
+          "id": "selfdef-ms048",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS048-goldilocks-scheduler-hardware-aware-resource-routing.md",
+          "note": "MS048 R11333-R11362 (backpressure thresholds + hysteresis)"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/scheduler-force-override-investigation.md",
+      "slug": "runbooks/scheduler-force-override-investigation",
+      "title": "Operator runbook \u2014 scheduler force-override investigation",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-20",
+      "updated": "2026-05-20",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "scheduler",
+        "force-override",
+        "ring-0",
+        "ms003",
+        "multi-sig",
+        "audit",
+        "incident-response",
+        "selfdef"
+      ],
+      "sources": [
+        {
+          "id": "avx-plus-plus-dump-2026-05-18",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "raw/dumps/2026-05-18-the-ultimate-exploitation-of-the-tech-stack-AVX-plus-plus.md",
+          "note": "Source dump \u2014 User chooses doctrine (Core Law line 18288)"
+        },
+        {
+          "id": "selfdef-sdd-031",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/031-goldilocks-scheduler.md",
+          "note": "SDD-031 Goldilocks Scheduler spec"
+        },
+        {
+          "id": "selfdef-ms048",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS048-goldilocks-scheduler-hardware-aware-resource-routing.md",
+          "note": "MS048 R11399-R11402 (operator override semantics)"
+        },
+        {
+          "id": "selfdef-ms039",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS039-authority-levels-and-trust-rings.md",
+          "note": "MS039 Ring 0 authority + trust topology"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/scheduler-not-running.md",
+      "slug": "runbooks/scheduler-not-running",
+      "title": "Operator runbook \u2014 Goldilocks Scheduler not running",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-20",
+      "updated": "2026-05-20",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "scheduler",
+        "goldilocks",
+        "four-watchdog",
+        "sain-01",
+        "selfdef",
+        "ips",
+        "routing-layer"
+      ],
+      "sources": [
+        {
+          "id": "avx-plus-plus-dump-2026-05-18",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "raw/dumps/2026-05-18-the-ultimate-exploitation-of-the-tech-stack-AVX-plus-plus.md",
+          "note": "Source dump tail lines 18000-18250 (scheduling architecture)"
+        },
+        {
+          "id": "selfdef-sdd-031",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/031-goldilocks-scheduler.md",
+          "note": "SDD-031 Goldilocks Scheduler specification"
+        },
+        {
+          "id": "selfdef-ms048",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS048-goldilocks-scheduler-hardware-aware-resource-routing.md",
+          "note": "Catalog milestone MS048 (247 R-rows)"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/scheduler-weight-matrix-rotation.md",
+      "slug": "runbooks/scheduler-weight-matrix-rotation",
+      "title": "Operator runbook \u2014 scheduler weight matrix rotation (MS003 multi-sig)",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-20",
+      "updated": "2026-05-20",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "scheduler",
+        "weight-matrix",
+        "ms003",
+        "multi-sig",
+        "operator-tuning",
+        "profile-evolution",
+        "selfdef"
+      ],
+      "sources": [
+        {
+          "id": "avx-plus-plus-dump-2026-05-18",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "raw/dumps/2026-05-18-the-ultimate-exploitation-of-the-tech-stack-AVX-plus-plus.md",
+          "note": "Source dump lines 18204-18211 (7-axis objective) + 18000-18100 (per-profile rules)"
+        },
+        {
+          "id": "selfdef-sdd-031",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/031-goldilocks-scheduler.md",
+          "note": "SDD-031 Goldilocks Scheduler spec"
+        },
+        {
+          "id": "selfdef-ms048",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS048-goldilocks-scheduler-hardware-aware-resource-routing.md",
+          "note": "MS048 R11291-R11332 (per-profile weight matrix), R11353 (multi-sig gate)"
+        },
+        {
+          "id": "selfdef-ms003",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS003-correlator-store-responder-signing.md",
+          "note": "MS003 selfdef-signing chain-of-trust"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/selfdef-watchdog-alert-finding.md",
+      "slug": "runbooks/selfdef-watchdog-alert-finding",
+      "title": "Operator runbook \u2014 selfdef detection-watchdog alert finding",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-27",
+      "updated": "2026-05-27",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "selfdef",
+        "detection-watchdog",
+        "sigma",
+        "detection-finding",
+        "incident-response",
+        "ips",
+        "sain-01"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-sdd-062",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/062-watchdog-severity-routing.md",
+          "note": "SDD-062 routes any selfdef-* \"severity\":\"alert\" emission to a High Detection Finding via rules/sigma/execution/selfdef_watchdog_alert.yml"
+        },
+        {
+          "id": "selfdef-sdd-061",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/061-shared-watchdog-scan-helpers.md",
+          "note": "SDD-061 shared scan helpers (injection-pattern set + writable-location policy) the watchdogs use"
+        },
+        {
+          "id": "selfdef-sdd-063",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/063-writable-directory-policy-helper.md",
+          "note": "SDD-063 selfdef_is_writable_dir + the module_lib_missing/module_lib_outdated fail-loud emissions"
+        },
+        {
+          "id": "selfdef-observability-alerts",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "modules/observability/assets/alerts/selfdef.yml.template",
+          "note": "SelfdefWatchdogAlertFinding Prometheus alert on selfdef_findings_by_rule_total"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/storage-degraded.md",
+      "slug": "runbooks/storage-degraded",
+      "title": "Operator runbook \u2014 Storage state degraded (filesystem fill, log dir bloat)",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-21",
+      "updated": "2026-05-21",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "storage",
+        "filesystem",
+        "df",
+        "logs",
+        "log-rotate",
+        "incident-response",
+        "selfdef",
+        "ips",
+        "ms011",
+        "sdd-026"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-sdd-026",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/026-operator-dashboard-and-flex-profile.md",
+          "note": "SDD-026 Z-10 storage state surface specification"
+        },
+        {
+          "id": "selfdef-ms011",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS011-operator-dashboard-and-flex-profile.md",
+          "note": "Catalog milestone MS011 Z-10 (filesystem usage + log dirs)"
+        },
+        {
+          "id": "selfdef-storage-handler",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "crates/selfdef-api/src/storage.rs",
+          "note": "selfdef-api storage probe handler (df + log-dir walk)"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/ux-coherence-failures.md",
+      "slug": "runbooks/ux-coherence-failures",
+      "title": "Operator runbook \u2014 UX coherence harness failures",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-20",
+      "updated": "2026-05-20",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "ux-coherence",
+        "tdd",
+        "ci",
+        "test-harness",
+        "sdd",
+        "selfdef",
+        "ips"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-sdd-030",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/sdd/030-ux-coherence-test-harness.md",
+          "note": "SDD-030 UX coherence test harness specification"
+        },
+        {
+          "id": "selfdef-ms045",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "backlog/milestones/MS045-ux-coherence-test-harness-cli-tui-minimal-web.md",
+          "note": "Catalog milestone MS045"
+        },
+        {
+          "id": "operator-directive-2026-05-19",
+          "type": "directive",
+          "project": "devops-solutions-information-hub",
+          "path": "wiki/log/",
+          "note": "Standing direction \u2014 be an architect first, then a DevOps + Fullstack + UX Design Specialist"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
     },
     {
       "path": "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02.md",
@@ -59911,6 +61966,60 @@
       ]
     },
     {
+      "path": "spine/doctrine/peace-machine-and-core-law.md",
+      "slug": "spine/doctrine/peace-machine-and-core-law",
+      "title": "Peace Machine + Core Law \u2014 sovereign AI workstation doctrine",
+      "type": "principle",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-05-29",
+      "updated": "2026-05-29",
+      "last_reviewed": "",
+      "tags": [
+        "doctrine",
+        "peace-machine",
+        "core-law",
+        "super-model",
+        "sovereign-ai-workstation",
+        "ultimate-solutions",
+        "selfdef",
+        "sovereign-os",
+        "avx-plus-plus",
+        "situated-intelligence",
+        "governed-machine"
+      ],
+      "sources": [
+        {
+          "id": "avx-plus-plus-dump-2026-05-18",
+          "type": "directive",
+          "file": "raw/dumps/2026-05-18-the-ultimate-exploitation-of-the-tech-stack-AVX-plus-plus.md",
+          "note": "Closing manifesto, lines 18268-18341 \u2014 the doctrinal crystallization. Authored from this page per the backward-sweep review (2026-05-20) Action 4."
+        },
+        {
+          "id": "backward-sweep-review-2026-05-20",
+          "type": "wiki",
+          "file": "wiki/log/2026-05-20-avx-plus-plus-dump-tail-backward-sweep-review.md",
+          "note": "Identifies this page as the canonical home for the 8 doctrinal evolutions of the dump tail."
+        },
+        {
+          "id": "operator-directive-2026-05-29",
+          "type": "directive",
+          "file": "raw/notes/2026-05-29-operator-directives-perpetual-goal-mandate.md",
+          "note": "Standing direction (verbatim): 'RETURN REREAD ALL THE RAW DUMP AND REPROCESS IF YOU NEED' / 'DO NOT MINIMIZE WHAT I SAY, SAID OR ASKED FOR, NOR THE NEED TO EXPLOIT THE STACK AND TECHNO TO THE MAX, avx-plus-plus base reason being' / 'you cannot invent crap, its my projects'"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "Peace Machine + Core Law \u2014 sovereign AI workstation doctrine",
+        "Core Law",
+        "Peace Machine Axiom"
+      ],
+      "relationships": []
+    },
+    {
       "path": "spine/domain-overviews/ai-agents-domain-overview.md",
       "slug": "spine/domain-overviews/ai-agents-domain-overview",
       "title": "AI Agents \u2014 Domain Overview",
@@ -66134,11 +68243,11 @@
       "relationship_count": 632
     },
     "cross-domain": {
-      "page_count": 313,
-      "relationship_count": 1867
+      "page_count": 316,
+      "relationship_count": 1868
     },
     "ai-agents": {
-      "page_count": 80,
+      "page_count": 117,
       "relationship_count": 583
     },
     "ai-models": {
@@ -66164,6 +68273,10 @@
     "knowledge-systems": {
       "page_count": 23,
       "relationship_count": 195
+    },
+    "build-pipeline": {
+      "page_count": 1,
+      "relationship_count": 0
     },
     "log": {
       "page_count": 196,
@@ -66256,6 +68369,17 @@
       "domains/devops/concept-dual-ccd-cache-partitioning-9900x",
       "domains/devops/concept-vfio-gpu-isolation-amd-iommu",
       "domains/devops/concept-zfs-tiered-storage-llm-inference",
+      "runbooks/friction-audit-immutability",
+      "runbooks/friction-audit-memory",
+      "runbooks/friction-audit-pcie",
+      "runbooks/friction-audit-signature",
+      "runbooks/friction-audit-zfs",
+      "runbooks/guardian-console-alert-investigation",
+      "runbooks/guardian-not-running",
+      "runbooks/guardian-socket-unreachable",
+      "runbooks/perimeter-tetragon-not-running",
+      "runbooks/scheduler-not-running",
+      "runbooks/selfdef-watchdog-alert-finding",
       "sources/src-sain-01-sovereign-node-spec"
     ],
     "hardware": [
@@ -66269,7 +68393,8 @@
       "spine/references/operator-workstation-storage-tiering"
     ],
     "pcie": [
-      "backlog/epics/milestone-sain01/e100-hardware-foundation"
+      "backlog/epics/milestone-sain01/e100-hardware-foundation",
+      "runbooks/friction-audit-pcie"
     ],
     "mok": [
       "backlog/epics/milestone-sain01/e100-hardware-foundation"
@@ -66278,7 +68403,13 @@
       "backlog/epics/milestone-sain01/e100-hardware-foundation"
     ],
     "friction-audit": [
-      "backlog/epics/milestone-sain01/e100-hardware-foundation"
+      "backlog/epics/milestone-sain01/e100-hardware-foundation",
+      "log/2026-05-20-four-watchdog-end-to-end-production-landing",
+      "runbooks/friction-audit-immutability",
+      "runbooks/friction-audit-memory",
+      "runbooks/friction-audit-pcie",
+      "runbooks/friction-audit-signature",
+      "runbooks/friction-audit-zfs"
     ],
     "kernel": [
       "backlog/epics/milestone-sain01/e101-sovereign-os-build",
@@ -66298,7 +68429,9 @@
       "backlog/epics/milestone-sain01/e101-sovereign-os-build"
     ],
     "znver5": [
-      "backlog/epics/milestone-sain01/e101-sovereign-os-build"
+      "backlog/epics/milestone-sain01/e101-sovereign-os-build",
+      "runbooks/friction-audit-memory",
+      "runbooks/friction-audit-pcie"
     ],
     "gcc14": [
       "backlog/epics/milestone-sain01/e101-sovereign-os-build"
@@ -66311,6 +68444,11 @@
       "backlog/milestones/sain-01-sovereign-node",
       "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor",
       "domains/devops/concept-zfs-tiered-storage-llm-inference",
+      "runbooks/friction-audit-zfs",
+      "runbooks/guardian-audit-log-corruption",
+      "runbooks/guardian-not-running",
+      "runbooks/perimeter-audit-log-corruption",
+      "runbooks/scheduler-audit-log-corruption",
       "sources/src-sain-01-sovereign-node-spec"
     ],
     "storage": [
@@ -66321,6 +68459,7 @@
       "backlog/modules/e010-m003-storage-tiering-documentation",
       "backlog/tasks/T041-author-operator-workstation-storage-tiering-reference",
       "domains/devops/concept-zfs-tiered-storage-llm-inference",
+      "runbooks/storage-degraded",
       "spine/references/operator-workstation-storage-tiering"
     ],
     "nvme": [
@@ -66378,7 +68517,8 @@
       "backlog/epics/milestone-sain01/e103-vfio-isolation",
       "backlog/epics/milestone-sain01/e109-dflash-integration",
       "comparisons/cmp-ling-26-flash-vs-nemotron-3-nano-omni",
-      "domains/devops/concept-vfio-gpu-isolation-amd-iommu"
+      "domains/devops/concept-vfio-gpu-isolation-amd-iommu",
+      "runbooks/scheduler-backpressure-stuck-open"
     ],
     "sandbox": [
       "backlog/epics/milestone-sain01/e103-vfio-isolation",
@@ -66395,6 +68535,13 @@
       "backlog/milestones/sain-01-sovereign-node",
       "comparisons/cmp-wall-vs-write-vs-tetragon-for-perimeter",
       "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor",
+      "runbooks/guardian-not-running",
+      "runbooks/guardian-socket-unreachable",
+      "runbooks/perimeter-audit-log-corruption",
+      "runbooks/perimeter-extension-create",
+      "runbooks/perimeter-policy-load-failure",
+      "runbooks/perimeter-sigkill-investigation",
+      "runbooks/perimeter-tetragon-not-running",
       "sources/src-sain-01-sovereign-node-spec"
     ],
     "ebpf": [
@@ -66403,7 +68550,13 @@
       "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor"
     ],
     "guardian": [
-      "backlog/epics/milestone-sain01/e104-tetragon-guardian-perimeter"
+      "backlog/epics/milestone-sain01/e104-tetragon-guardian-perimeter",
+      "log/2026-05-20-four-watchdog-end-to-end-production-landing",
+      "runbooks/guardian-audit-log-corruption",
+      "runbooks/guardian-console-alert-investigation",
+      "runbooks/guardian-false-positive-rollback",
+      "runbooks/guardian-not-running",
+      "runbooks/guardian-socket-unreachable"
     ],
     "auditor": [
       "backlog/epics/milestone-sain01/e104-tetragon-guardian-perimeter",
@@ -66413,7 +68566,12 @@
       "backlog/epics/milestone-sain01/e104-tetragon-guardian-perimeter"
     ],
     "sigkill": [
-      "backlog/epics/milestone-sain01/e104-tetragon-guardian-perimeter"
+      "backlog/epics/milestone-sain01/e104-tetragon-guardian-perimeter",
+      "runbooks/guardian-console-alert-investigation",
+      "runbooks/guardian-not-running",
+      "runbooks/perimeter-policy-load-failure",
+      "runbooks/perimeter-sigkill-investigation",
+      "runbooks/perimeter-tetragon-not-running"
     ],
     "security-audit-log": [
       "backlog/epics/milestone-sain01/e104-tetragon-guardian-perimeter"
@@ -66426,7 +68584,8 @@
       "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
     ],
     "network": [
-      "backlog/epics/milestone-sain01/e105-network-segregation"
+      "backlog/epics/milestone-sain01/e105-network-segregation",
+      "runbooks/network-degraded"
     ],
     "marvell": [
       "backlog/epics/milestone-sain01/e105-network-segregation"
@@ -66862,6 +69021,7 @@
       "log/2026-04-09/system/2026-04-09-directive-record-process-skills-supermodel",
       "log/2026-05-08-canonical-spine-update-preview-post-promotion-spine-super-model-16-models",
       "log/2026-05-08-modelize-extension-proposal-super-model-dashboard-integration-note",
+      "spine/doctrine/peace-machine-and-core-law",
       "spine/super-model/super-model"
     ],
     "evolution": [
@@ -66895,6 +69055,8 @@
       "ecosystem/project_profiles/root-ghostproxy/identity-profile",
       "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property",
       "lessons/04_principles/hypothesis/right-process-for-right-context-the-goldilocks-imperative",
+      "log/2026-05-20-avx-plus-plus-dump-tail-backward-sweep-review",
+      "runbooks/scheduler-not-running",
       "spine/goldilocks-flow"
     ],
     "navigation": [
@@ -67140,7 +69302,10 @@
       "lessons/01_drafts/audit-on-distillation-discipline-when-promoting-a-bug-class-to-lesson-layer-audit-codebase-immediately",
       "lessons/03_validated/ingestion-research/shallow-ingestion-is-systemic-not-isolated",
       "log/2026-04-23-corpus-training-readiness-audit",
-      "log/2026-05-08-strategic-coverage-validation-180-pain-points-to-17-solution-pieces"
+      "log/2026-05-08-strategic-coverage-validation-180-pain-points-to-17-solution-pieces",
+      "runbooks/guardian-console-alert-investigation",
+      "runbooks/guardian-false-positive-rollback",
+      "runbooks/scheduler-force-override-investigation"
     ],
     "contract-compliance": [
       "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit"
@@ -67363,6 +69528,7 @@
       "ecosystem/project_profiles/openfleet/identity-profile",
       "ecosystem/project_profiles/research-wiki/identity-profile",
       "ecosystem/project_profiles/root-ghostproxy/identity-profile",
+      "ecosystem/two-ultimate-solutions-canonical-index",
       "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
       "lessons/03_validated/methodology-quality/bug-vs-systemic-bug-nuance-systemic-bugs-live-at-the-meta-level-harness-ecosystem-brain-files",
       "patterns/01_drafts/sister-project-propagation-pattern-from-second-brain-to-5-project-ecosystem",
@@ -67565,6 +69731,7 @@
       "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
       "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache",
       "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch",
+      "lessons/01_drafts/claude-code-synthetic-resume-pair-swallows-perpetual-goal",
       "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed",
       "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
       "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
@@ -68286,6 +70453,7 @@
       "comparisons/cmp-wall-vs-write-vs-tetragon-for-perimeter",
       "decisions/01_drafts/pretooluse-hooks-layered-approach",
       "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
+      "runbooks/perimeter-key-rotation",
       "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026"
     ],
     "tamper-proof": [
@@ -68390,6 +70558,7 @@
       "lessons/03_validated/knowledge-systems/wiki-maintenance-problem-solved-by-llm-automation",
       "log/2026-04-09/system/2026-04-09-directive-validate-second-brain-readiness",
       "log/2026-05-05-orient-pair-adoption-decision",
+      "log/2026-05-21-selfdef-layer-up-batch-15-milestones-promoted-to-done",
       "patterns/02_synthesized/second-brain-observer-pattern-extracting-learnings-from-live-sister-project-sessions",
       "patterns/03_validated/architecture/progressive-distillation",
       "patterns/03_validated/knowledge/ecosystem-feedback-loop-wiki-as-source-of-truth",
@@ -68423,7 +70592,13 @@
     ],
     "sovereign-os": [
       "backlog/milestones/sain-01-sovereign-node",
-      "sources/src-sain-01-sovereign-node-spec"
+      "ecosystem/two-ultimate-solutions-canonical-index",
+      "log/2026-05-20-avx-plus-plus-dump-tail-backward-sweep-review",
+      "log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066",
+      "log/2026-06-06-perpetual-goal-resumed-three-repo-ci-green-out",
+      "runbooks/m060-mirror-export-publish-anomalies",
+      "sources/src-sain-01-sovereign-node-spec",
+      "spine/doctrine/peace-machine-and-core-law"
     ],
     "zen5": [
       "backlog/milestones/sain-01-sovereign-node",
@@ -68660,6 +70835,9 @@
       "log/2026-05-15-weekly-research-digest-2026-05-09-2026-05-15",
       "log/2026-05-16-ck-bootstrap-execution-batch-1",
       "log/2026-05-16-ck-bootstrap-execution-batch-2",
+      "log/2026-05-21-selfdef-layer-up-batch-15-milestones-promoted-to-done",
+      "log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066",
+      "log/2026-06-06-perpetual-goal-resumed-three-repo-ci-green-out",
       "spine/standards/note-page-standards"
     ],
     "contract": [
@@ -68677,7 +70855,9 @@
     "doctrine": [
       "backlog/modules/e009-m004-harness-contract-document",
       "lessons/03_validated/knowledge-systems/second-brain-and-projects-co-evolve-never-finished-doctrine",
-      "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing"
+      "runbooks/peace-machine-and-core-law-doctrine-citation-index",
+      "sources/wiki-methodology/src-hidden-physics-of-llms-retrieval-as-thermodynamics-pedagogical-framing",
+      "spine/doctrine/peace-machine-and-core-law"
     ],
     "e010": [
       "backlog/modules/e010-m001-64gb-ram-install-and-verify",
@@ -68696,6 +70876,7 @@
       "backlog/modules/e010-m001-64gb-ram-install-and-verify",
       "domains/ai-agents/claude-code/claude-code-context-management",
       "domains/ai-agents/orchestration/openclaw",
+      "runbooks/friction-audit-memory",
       "sources/src-7-levels-claude-code-rag"
     ],
     "mount": [
@@ -68829,7 +71010,8 @@
     ],
     "prometheus": [
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
-      "backlog/tasks/T027-verify-metrics-capture-k2-6-backends"
+      "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
+      "runbooks/m060-mirror-export-publish-anomalies"
     ],
     "observability": [
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
@@ -68938,6 +71120,7 @@
       "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
       "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
       "decisions/01_drafts/skills-as-primary-extension-pattern",
+      "lessons/01_drafts/layer-up-over-crate-already-shipped-promotion-pattern",
       "patterns/01_drafts/active-task-anchor-and-drift-detection-gate-design",
       "patterns/01_drafts/agent-execution-cost-optimization-stack",
       "patterns/01_drafts/artifact-path-verification-at-gate-close",
@@ -68949,7 +71132,9 @@
       "patterns/01_drafts/correction-as-calibration-pre-edit-verification-gate-design",
       "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage",
       "patterns/01_drafts/methodology-stage-gate-edit-land-enforcement-design",
+      "patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation",
       "patterns/01_drafts/observe-fix-verify-loop",
+      "patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture",
       "patterns/01_drafts/pattern-recurrence-quantification-and-operator-frustration-as-signal",
       "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain",
       "patterns/01_drafts/per-day-jsonl-dlq-with-retry-budget",
@@ -69077,7 +71262,33 @@
       "backlog/tasks/T002-run-openrouter-smoke-tests"
     ],
     "runbook": [
-      "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook"
+      "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
+      "runbooks/friction-audit-immutability",
+      "runbooks/friction-audit-memory",
+      "runbooks/friction-audit-pcie",
+      "runbooks/friction-audit-signature",
+      "runbooks/friction-audit-zfs",
+      "runbooks/guardian-audit-log-corruption",
+      "runbooks/guardian-console-alert-investigation",
+      "runbooks/guardian-false-positive-rollback",
+      "runbooks/guardian-not-running",
+      "runbooks/guardian-socket-unreachable",
+      "runbooks/m060-mirror-export-publish-anomalies",
+      "runbooks/network-degraded",
+      "runbooks/perimeter-audit-log-corruption",
+      "runbooks/perimeter-extension-create",
+      "runbooks/perimeter-key-rotation",
+      "runbooks/perimeter-policy-load-failure",
+      "runbooks/perimeter-sigkill-investigation",
+      "runbooks/perimeter-tetragon-not-running",
+      "runbooks/scheduler-audit-log-corruption",
+      "runbooks/scheduler-backpressure-stuck-open",
+      "runbooks/scheduler-force-override-investigation",
+      "runbooks/scheduler-not-running",
+      "runbooks/scheduler-weight-matrix-rotation",
+      "runbooks/selfdef-watchdog-alert-finding",
+      "runbooks/storage-degraded",
+      "runbooks/ux-coherence-failures"
     ],
     "claude-code": [
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
@@ -69102,6 +71313,7 @@
       "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
       "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache",
       "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch",
+      "lessons/01_drafts/claude-code-synthetic-resume-pair-swallows-perpetual-goal",
       "lessons/03_validated/context-engineering/context-management-is-primary-productivity-lever",
       "lessons/03_validated/tools-architecture/always-plan-before-executing",
       "lessons/03_validated/tools-architecture/skills-architecture-is-dominant-extension-pattern",
@@ -69187,7 +71399,8 @@
       "backlog/modules/root-ghostproxy-m004-infrastructure-tooling"
     ],
     "ci": [
-      "backlog/modules/root-ghostproxy-m004-infrastructure-tooling"
+      "backlog/modules/root-ghostproxy-m004-infrastructure-tooling",
+      "runbooks/ux-coherence-failures"
     ],
     "pre-commit": [
       "backlog/modules/root-ghostproxy-m004-infrastructure-tooling"
@@ -69307,6 +71520,7 @@
     "testing": [
       "backlog/tasks/T001-test-openai-backend",
       "domains/cross-domain/methodology-artifacts/categories/construction-and-testing-artifacts",
+      "lessons/01_drafts/hermetic-testability-precondition-gates-test-backfill-scope",
       "patterns/03_validated/knowledge/validation-matrix-test-suite-for-context-injection",
       "sources/tools-integration/src-playwright-cli-vs-mcp"
     ],
@@ -69389,6 +71603,7 @@
       "domains/tools-and-platforms/notebooklm-py-cli",
       "domains/tools-and-platforms/obsidian-cli",
       "domains/tools-and-platforms/obsidian-skills-ecosystem",
+      "lessons/01_drafts/layer-up-over-crate-already-shipped-promotion-pattern",
       "lessons/03_validated/tools-architecture/cli-tools-beat-mcp-for-token-efficiency",
       "patterns/03_validated/knowledge/context-aware-tool-loading",
       "sources/claude-code/src-claude-slash-commands",
@@ -69590,7 +71805,8 @@
       "backlog/tasks/T071-author-per-project-assistant-profile-schema-formal-definition"
     ],
     "yaml": [
-      "backlog/tasks/T071-author-per-project-assistant-profile-schema-formal-definition"
+      "backlog/tasks/T071-author-per-project-assistant-profile-schema-formal-definition",
+      "runbooks/perimeter-policy-load-failure"
     ],
     "T075": [
       "backlog/tasks/T075-author-assistant-profile-canonical-example"
@@ -69846,7 +72062,14 @@
       "spine/domain-overviews/devops-domain-overview"
     ],
     "perimeter": [
-      "comparisons/cmp-wall-vs-write-vs-tetragon-for-perimeter"
+      "comparisons/cmp-wall-vs-write-vs-tetragon-for-perimeter",
+      "log/2026-05-20-four-watchdog-end-to-end-production-landing",
+      "runbooks/perimeter-audit-log-corruption",
+      "runbooks/perimeter-extension-create",
+      "runbooks/perimeter-key-rotation",
+      "runbooks/perimeter-policy-load-failure",
+      "runbooks/perimeter-sigkill-investigation",
+      "runbooks/perimeter-tetragon-not-running"
     ],
     "operator-notification": [
       "comparisons/cmp-wall-vs-write-vs-tetragon-for-perimeter"
@@ -69862,7 +72085,44 @@
     ],
     "selfdef": [
       "comparisons/cmp-wall-vs-write-vs-tetragon-for-perimeter",
-      "domains/cross-domain/cascade-candidate-root-ghostproxy-scope-clarification-selfdef-boundary-2026-05-16"
+      "decisions/01_drafts/in-memory-backend-as-ms1-substrate",
+      "domains/cross-domain/cascade-candidate-root-ghostproxy-scope-clarification-selfdef-boundary-2026-05-16",
+      "ecosystem/two-ultimate-solutions-canonical-index",
+      "lessons/01_drafts/layer-up-over-crate-already-shipped-promotion-pattern",
+      "log/2026-05-20-avx-plus-plus-dump-tail-backward-sweep-review",
+      "log/2026-05-20-four-watchdog-end-to-end-production-landing",
+      "log/2026-05-21-selfdef-layer-up-batch-15-milestones-promoted-to-done",
+      "log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066",
+      "log/2026-06-06-perpetual-goal-resumed-three-repo-ci-green-out",
+      "patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation",
+      "patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture",
+      "runbooks/friction-audit-immutability",
+      "runbooks/friction-audit-memory",
+      "runbooks/friction-audit-pcie",
+      "runbooks/friction-audit-signature",
+      "runbooks/friction-audit-zfs",
+      "runbooks/guardian-audit-log-corruption",
+      "runbooks/guardian-console-alert-investigation",
+      "runbooks/guardian-false-positive-rollback",
+      "runbooks/guardian-not-running",
+      "runbooks/guardian-socket-unreachable",
+      "runbooks/m060-mirror-export-publish-anomalies",
+      "runbooks/network-degraded",
+      "runbooks/perimeter-audit-log-corruption",
+      "runbooks/perimeter-extension-create",
+      "runbooks/perimeter-key-rotation",
+      "runbooks/perimeter-policy-load-failure",
+      "runbooks/perimeter-sigkill-investigation",
+      "runbooks/perimeter-tetragon-not-running",
+      "runbooks/scheduler-audit-log-corruption",
+      "runbooks/scheduler-backpressure-stuck-open",
+      "runbooks/scheduler-force-override-investigation",
+      "runbooks/scheduler-not-running",
+      "runbooks/scheduler-weight-matrix-rotation",
+      "runbooks/selfdef-watchdog-alert-finding",
+      "runbooks/storage-degraded",
+      "runbooks/ux-coherence-failures",
+      "spine/doctrine/peace-machine-and-core-law"
     ],
     "cross-domain": [
       "comparisons/cross-domain-patterns",
@@ -69875,6 +72135,7 @@
       "domains/cross-domain/profile-integration-into-the-knowledge-cross-reference-topology-with-existing-wiki-layers",
       "domains/cross-domain/profile-pipeline-synthesis-from-raw-to-wiki-page-still-not-at-end-of-pipeline",
       "lessons/01_drafts/build-pipeline-via-sdd-tdd-real-bugs-caught-only-when-tests-execute-actual-renderers",
+      "lessons/01_drafts/hermetic-testability-precondition-gates-test-backfill-scope",
       "lessons/01_drafts/if-you-can-verify-you-converge",
       "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction",
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
@@ -70006,6 +72267,7 @@
       "decisions/01_drafts/claude-code-stop-hook-block-cap-raise-default-to-1000-for-perpetual-mandate-work",
       "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
       "decisions/01_drafts/extended-to-adaptive-thinking-migration",
+      "decisions/01_drafts/in-memory-backend-as-ms1-substrate",
       "decisions/01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration",
       "decisions/01_drafts/pretooluse-hooks-layered-approach",
       "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
@@ -70037,6 +72299,7 @@
       "lessons/01_drafts/freeze-after-correction-is-class-9-of-agent-failure-taxonomy-abdication-as-freeze",
       "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
       "lessons/01_drafts/if-you-can-verify-you-converge",
+      "lessons/01_drafts/layer-up-over-crate-already-shipped-promotion-pattern",
       "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
       "lessons/01_drafts/mcp-discipline-register-only-what-is-referenced-and-actually-used-not-pre-emptive",
       "lessons/01_drafts/metered-programmatic-agentic-economics-is-the-2026-convergent-direction",
@@ -70384,12 +72647,14 @@
       "decisions/01_drafts/claude-code-stop-hook-block-cap-raise-default-to-1000-for-perpetual-mandate-work",
       "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start",
       "lessons/01_drafts/claude-code-hook-additionalcontext-is-event-specific-not-all-events-accept-it",
-      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch"
+      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch",
+      "lessons/01_drafts/claude-code-synthetic-resume-pair-swallows-perpetual-goal"
     ],
     "goal": [
       "decisions/01_drafts/claude-code-stop-hook-block-cap-raise-default-to-1000-for-perpetual-mandate-work",
       "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start",
-      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch"
+      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch",
+      "lessons/01_drafts/claude-code-synthetic-resume-pair-swallows-perpetual-goal"
     ],
     "settings": [
       "decisions/01_drafts/claude-code-stop-hook-block-cap-raise-default-to-1000-for-perpetual-mandate-work",
@@ -70455,6 +72720,32 @@
     "breaking-change": [
       "decisions/01_drafts/extended-to-adaptive-thinking-migration"
     ],
+    "ms1": [
+      "decisions/01_drafts/in-memory-backend-as-ms1-substrate"
+    ],
+    "in-memory-backend": [
+      "decisions/01_drafts/in-memory-backend-as-ms1-substrate"
+    ],
+    "enforcement-primitive": [
+      "decisions/01_drafts/in-memory-backend-as-ms1-substrate"
+    ],
+    "sdd-065": [
+      "decisions/01_drafts/in-memory-backend-as-ms1-substrate",
+      "log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066",
+      "patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture"
+    ],
+    "sdd-066": [
+      "decisions/01_drafts/in-memory-backend-as-ms1-substrate",
+      "log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066",
+      "patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture"
+    ],
+    "ai-drafted": [
+      "decisions/01_drafts/in-memory-backend-as-ms1-substrate",
+      "ecosystem/two-ultimate-solutions-canonical-index",
+      "log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066",
+      "patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation",
+      "patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture"
+    ],
     "ollama": [
       "decisions/01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration",
       "domains/ai-models/local-llm-quantization",
@@ -70483,7 +72774,8 @@
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
     ],
     "extension": [
-      "decisions/01_drafts/skills-as-primary-extension-pattern"
+      "decisions/01_drafts/skills-as-primary-extension-pattern",
+      "runbooks/perimeter-extension-create"
     ],
     "guardrails": [
       "decisions/01_drafts/skills-as-primary-extension-pattern",
@@ -70821,7 +73113,8 @@
     ],
     "filesystem": [
       "decisions/02_validated/tools/polling-vs-event-driven-change-detection",
-      "domains/devops/wsl2-development-patterns"
+      "domains/devops/wsl2-development-patterns",
+      "runbooks/storage-degraded"
     ],
     "best-practices": [
       "domains/ai-agents/claude-code/claude-code-best-practices",
@@ -71041,7 +73334,10 @@
     "sdd": [
       "domains/ai-agents/declarative-agent-programming-spectrum-five-layers-spec-skill-context-hook-harness-unified-and-integration-matrix-across-tools",
       "lessons/01_drafts/build-pipeline-via-sdd-tdd-real-bugs-caught-only-when-tests-execute-actual-renderers",
+      "lessons/01_drafts/layer-up-over-crate-already-shipped-promotion-pattern",
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
+      "log/2026-05-21-selfdef-layer-up-batch-15-milestones-promoted-to-done",
+      "runbooks/ux-coherence-failures",
       "sources/src-github-spec-kit-specification-driven-development",
       "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee"
     ],
@@ -71450,6 +73746,7 @@
     ],
     "scheduling": [
       "domains/automation/claude-code-scheduling",
+      "log/2026-05-20-avx-plus-plus-dump-tail-backward-sweep-review",
       "sources/obsidian-notebooklm/src-claude-notebooklm-content-team"
     ],
     "cron": [
@@ -71503,6 +73800,7 @@
       "lessons/03_validated/ingestion-research/never-synthesize-from-descriptions-alone",
       "log/2026-04-09/system/2026-04-09-ingest-awesome-design-md",
       "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
+      "runbooks/guardian-socket-unreachable",
       "spine/models/foundation/model-llm-wiki"
     ],
     "multi-pass": [
@@ -72327,7 +74625,8 @@
       "domains/knowledge-systems/pkm-theory/knowledge-evolution-pipeline"
     ],
     "canonical": [
-      "domains/knowledge-systems/pkm-theory/knowledge-evolution-pipeline"
+      "domains/knowledge-systems/pkm-theory/knowledge-evolution-pipeline",
+      "ecosystem/two-ultimate-solutions-canonical-index"
     ],
     "wiki-evolution": [
       "domains/knowledge-systems/pkm-theory/knowledge-evolution-pipeline"
@@ -72665,6 +74964,17 @@
     ],
     "sfif-pre-infrastructure": [
       "ecosystem/project_profiles/root-ghostproxy/identity-profile"
+    ],
+    "index": [
+      "ecosystem/two-ultimate-solutions-canonical-index",
+      "spine/references/model-registry"
+    ],
+    "two-ultimate-solutions": [
+      "ecosystem/two-ultimate-solutions-canonical-index"
+    ],
+    "cross-session": [
+      "ecosystem/two-ultimate-solutions-canonical-index",
+      "log/2026-05-05-handoff-to-root-session"
     ],
     "p4-specialization": [
       "lessons/01_drafts/agent-authored-content-must-be-flagged-vs-operator-canonical-the-fabrication-cure",
@@ -73287,6 +75597,7 @@
     ],
     "tdd": [
       "lessons/01_drafts/build-pipeline-via-sdd-tdd-real-bugs-caught-only-when-tests-execute-actual-renderers",
+      "runbooks/ux-coherence-failures",
       "sources/claude-code/src-superpowers-end-of-vibe-coding"
     ],
     "layer-3-tests": [
@@ -73328,11 +75639,13 @@
     ],
     "perpetual-mandate": [
       "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start",
-      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch"
+      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch",
+      "lessons/01_drafts/claude-code-synthetic-resume-pair-swallows-perpetual-goal"
     ],
     "agent-loop": [
       "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start",
-      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch"
+      "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch",
+      "lessons/01_drafts/claude-code-synthetic-resume-pair-swallows-perpetual-goal"
     ],
     "bootstrap-mirror": [
       "lessons/01_drafts/claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start"
@@ -73367,6 +75680,21 @@
     ],
     "safety-cap": [
       "lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch"
+    ],
+    "synthetic-message": [
+      "lessons/01_drafts/claude-code-synthetic-resume-pair-swallows-perpetual-goal"
+    ],
+    "session-resume": [
+      "lessons/01_drafts/claude-code-synthetic-resume-pair-swallows-perpetual-goal"
+    ],
+    "cloud-default": [
+      "lessons/01_drafts/claude-code-synthetic-resume-pair-swallows-perpetual-goal"
+    ],
+    "idle-suspend": [
+      "lessons/01_drafts/claude-code-synthetic-resume-pair-swallows-perpetual-goal"
+    ],
+    "undocumented-behavior": [
+      "lessons/01_drafts/claude-code-synthetic-resume-pair-swallows-perpetual-goal"
     ],
     "conflation-detection-at-hook": [
       "lessons/01_drafts/conflation-detection-at-hook-layer-the-rename-strategy-generalized"
@@ -73561,6 +75889,24 @@
     "externalized-control": [
       "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever"
     ],
+    "test-coverage": [
+      "lessons/01_drafts/hermetic-testability-precondition-gates-test-backfill-scope"
+    ],
+    "hermetic-tests": [
+      "lessons/01_drafts/hermetic-testability-precondition-gates-test-backfill-scope"
+    ],
+    "bats": [
+      "lessons/01_drafts/hermetic-testability-precondition-gates-test-backfill-scope"
+    ],
+    "scanners": [
+      "lessons/01_drafts/hermetic-testability-precondition-gates-test-backfill-scope"
+    ],
+    "input-source-knob": [
+      "lessons/01_drafts/hermetic-testability-precondition-gates-test-backfill-scope"
+    ],
+    "false-coverage": [
+      "lessons/01_drafts/hermetic-testability-precondition-gates-test-backfill-scope"
+    ],
     "convergence": [
       "lessons/01_drafts/if-you-can-verify-you-converge",
       "lessons/02_synthesized/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
@@ -73591,6 +75937,24 @@
     ],
     "recursion": [
       "lessons/01_drafts/if-you-can-verify-you-converge"
+    ],
+    "ms011": [
+      "lessons/01_drafts/layer-up-over-crate-already-shipped-promotion-pattern",
+      "runbooks/network-degraded",
+      "runbooks/storage-degraded"
+    ],
+    "promotion": [
+      "lessons/01_drafts/layer-up-over-crate-already-shipped-promotion-pattern",
+      "spine/standards/model-standards/model-knowledge-evolution-standards"
+    ],
+    "http": [
+      "lessons/01_drafts/layer-up-over-crate-already-shipped-promotion-pattern"
+    ],
+    "l1": [
+      "lessons/01_drafts/layer-up-over-crate-already-shipped-promotion-pattern"
+    ],
+    "partial-milestone": [
+      "lessons/01_drafts/layer-up-over-crate-already-shipped-promotion-pattern"
     ],
     "machine-specific": [
       "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability"
@@ -74576,7 +76940,10 @@
       "lessons/03_validated/methodology-quality/never-present-speculation-as-fact"
     ],
     "integrity": [
-      "lessons/03_validated/methodology-quality/standards-must-preach-by-example"
+      "lessons/03_validated/methodology-quality/standards-must-preach-by-example",
+      "runbooks/guardian-audit-log-corruption",
+      "runbooks/perimeter-audit-log-corruption",
+      "runbooks/scheduler-audit-log-corruption"
     ],
     "example": [
       "lessons/03_validated/methodology-quality/standards-must-preach-by-example"
@@ -75286,9 +77653,6 @@
     ],
     "ingestion-arc": [
       "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson"
-    ],
-    "cross-session": [
-      "log/2026-05-05-handoff-to-root-session"
     ],
     "second-brain-to-root": [
       "log/2026-05-05-handoff-to-root-session"
@@ -77177,6 +79541,119 @@
     "2026-05-17": [
       "log/2026-05-17-rgp-profile-v5.3-synergy-iteration-output-governance-gates-mcp-runtime-model-scope-tier"
     ],
+    "backward-sweep": [
+      "log/2026-05-20-avx-plus-plus-dump-tail-backward-sweep-review"
+    ],
+    "avx-plus-plus": [
+      "log/2026-05-20-avx-plus-plus-dump-tail-backward-sweep-review",
+      "spine/doctrine/peace-machine-and-core-law"
+    ],
+    "dump-review": [
+      "log/2026-05-20-avx-plus-plus-dump-tail-backward-sweep-review"
+    ],
+    "peace-machine": [
+      "log/2026-05-20-avx-plus-plus-dump-tail-backward-sweep-review",
+      "runbooks/peace-machine-and-core-law-doctrine-citation-index",
+      "spine/doctrine/peace-machine-and-core-law"
+    ],
+    "milestone-amendment": [
+      "log/2026-05-20-avx-plus-plus-dump-tail-backward-sweep-review"
+    ],
+    "four-watchdog": [
+      "log/2026-05-20-four-watchdog-end-to-end-production-landing",
+      "runbooks/scheduler-not-running"
+    ],
+    "ms046": [
+      "log/2026-05-20-four-watchdog-end-to-end-production-landing"
+    ],
+    "ms047": [
+      "log/2026-05-20-four-watchdog-end-to-end-production-landing"
+    ],
+    "ms044": [
+      "log/2026-05-20-four-watchdog-end-to-end-production-landing"
+    ],
+    "ms048": [
+      "log/2026-05-20-four-watchdog-end-to-end-production-landing"
+    ],
+    "scheduler": [
+      "log/2026-05-20-four-watchdog-end-to-end-production-landing",
+      "runbooks/scheduler-audit-log-corruption",
+      "runbooks/scheduler-backpressure-stuck-open",
+      "runbooks/scheduler-force-override-investigation",
+      "runbooks/scheduler-not-running",
+      "runbooks/scheduler-weight-matrix-rotation"
+    ],
+    "production": [
+      "log/2026-05-20-four-watchdog-end-to-end-production-landing",
+      "sources/claude-code/src-superpowers-end-of-vibe-coding"
+    ],
+    "ips": [
+      "log/2026-05-20-four-watchdog-end-to-end-production-landing",
+      "log/2026-05-21-selfdef-layer-up-batch-15-milestones-promoted-to-done",
+      "runbooks/friction-audit-immutability",
+      "runbooks/friction-audit-memory",
+      "runbooks/friction-audit-pcie",
+      "runbooks/friction-audit-signature",
+      "runbooks/friction-audit-zfs",
+      "runbooks/guardian-audit-log-corruption",
+      "runbooks/guardian-console-alert-investigation",
+      "runbooks/guardian-false-positive-rollback",
+      "runbooks/guardian-not-running",
+      "runbooks/guardian-socket-unreachable",
+      "runbooks/network-degraded",
+      "runbooks/perimeter-audit-log-corruption",
+      "runbooks/perimeter-extension-create",
+      "runbooks/perimeter-policy-load-failure",
+      "runbooks/perimeter-sigkill-investigation",
+      "runbooks/perimeter-tetragon-not-running",
+      "runbooks/scheduler-audit-log-corruption",
+      "runbooks/scheduler-backpressure-stuck-open",
+      "runbooks/scheduler-not-running",
+      "runbooks/selfdef-watchdog-alert-finding",
+      "runbooks/storage-degraded",
+      "runbooks/ux-coherence-failures",
+      "sources/src-suricata"
+    ],
+    "milestone-landing": [
+      "log/2026-05-20-four-watchdog-end-to-end-production-landing"
+    ],
+    "milestones": [
+      "log/2026-05-21-selfdef-layer-up-batch-15-milestones-promoted-to-done",
+      "patterns/01_drafts/implementation-roadmap-pattern-sequenced-milestones-from-confirmation-to-tier-3",
+      "spine/references/consumer-integration-roadmap-exemplar"
+    ],
+    "layer-up": [
+      "log/2026-05-21-selfdef-layer-up-batch-15-milestones-promoted-to-done"
+    ],
+    "production-landing": [
+      "log/2026-05-21-selfdef-layer-up-batch-15-milestones-promoted-to-done"
+    ],
+    "multi-cycle": [
+      "log/2026-05-21-selfdef-layer-up-batch-15-milestones-promoted-to-done"
+    ],
+    "session-log": [
+      "log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066",
+      "log/2026-06-06-perpetual-goal-resumed-three-repo-ci-green-out"
+    ],
+    "enforcement-layer": [
+      "log/2026-05-29-selfdef-enforcement-layer-pivot-sdd-065-sdd-066",
+      "patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation"
+    ],
+    "perpetual-goal": [
+      "log/2026-06-06-perpetual-goal-resumed-three-repo-ci-green-out"
+    ],
+    "ci-green-out": [
+      "log/2026-06-06-perpetual-goal-resumed-three-repo-ci-green-out"
+    ],
+    "three-repo": [
+      "log/2026-06-06-perpetual-goal-resumed-three-repo-ci-green-out"
+    ],
+    "info-hub": [
+      "log/2026-06-06-perpetual-goal-resumed-three-repo-ci-green-out"
+    ],
+    "ips-quattuordectet": [
+      "log/2026-06-06-perpetual-goal-resumed-three-repo-ci-green-out"
+    ],
     "correction": [
       "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
       "log/amendment-to-prior-compliance-checker-correction-root-depth",
@@ -77561,10 +80038,6 @@
     "fire-119": [
       "patterns/01_drafts/foundational-cluster-prioritized-enforcement-layer-pattern-c04-c02-coverage-maximizes-cross-cutting-prevention"
     ],
-    "milestones": [
-      "patterns/01_drafts/implementation-roadmap-pattern-sequenced-milestones-from-confirmation-to-tier-3",
-      "spine/references/consumer-integration-roadmap-exemplar"
-    ],
     "post-confirmation": [
       "patterns/01_drafts/implementation-roadmap-pattern-sequenced-milestones-from-confirmation-to-tier-3"
     ],
@@ -77633,6 +80106,19 @@
     "blockers-impediments-questions": [
       "patterns/01_drafts/mode-by-nature-active-governance-pm-architect-dual-expert-generates-blockers-impediments-questions"
     ],
+    "ms5a": [
+      "patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation"
+    ],
+    "state-journal": [
+      "patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation"
+    ],
+    "separation": [
+      "patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation"
+    ],
+    "ips-dectet": [
+      "patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation",
+      "patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture"
+    ],
     "ecosystem-index": [
       "patterns/01_drafts/multi-project-ecosystem-index-pattern-5-project-propagation-surface-post-tier-3"
     ],
@@ -77675,6 +80161,12 @@
     ],
     "tier-promotion": [
       "patterns/01_drafts/operator-review-checklist-pattern-per-piece-decision-framework-for-tier-promotion"
+    ],
+    "paired-enforcement-primitive": [
+      "patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture"
+    ],
+    "five-milestone": [
+      "patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture"
     ],
     "meta-measurement": [
       "patterns/01_drafts/pattern-recurrence-quantification-and-operator-frustration-as-signal"
@@ -78199,6 +80691,247 @@
     ],
     "quality-assurance": [
       "patterns/03_validated/knowledge/validation-matrix-test-suite-for-context-injection"
+    ],
+    "immutability": [
+      "runbooks/friction-audit-immutability"
+    ],
+    "chattr": [
+      "runbooks/friction-audit-immutability"
+    ],
+    "ima-appraise": [
+      "runbooks/friction-audit-immutability"
+    ],
+    "tampering": [
+      "runbooks/friction-audit-immutability"
+    ],
+    "ring-0": [
+      "runbooks/friction-audit-immutability",
+      "runbooks/friction-audit-signature",
+      "runbooks/guardian-false-positive-rollback",
+      "runbooks/scheduler-force-override-investigation"
+    ],
+    "critical": [
+      "runbooks/friction-audit-immutability",
+      "runbooks/friction-audit-signature"
+    ],
+    "dimm": [
+      "runbooks/friction-audit-memory"
+    ],
+    "dmidecode": [
+      "runbooks/friction-audit-memory"
+    ],
+    "boundary-enforcement": [
+      "runbooks/friction-audit-memory",
+      "runbooks/friction-audit-pcie",
+      "runbooks/friction-audit-zfs"
+    ],
+    "ecc-rdimm": [
+      "runbooks/friction-audit-memory"
+    ],
+    "hardware-integrity": [
+      "runbooks/friction-audit-pcie",
+      "runbooks/friction-audit-zfs"
+    ],
+    "m2-slot": [
+      "runbooks/friction-audit-pcie"
+    ],
+    "bifurcation": [
+      "runbooks/friction-audit-pcie"
+    ],
+    "signature": [
+      "runbooks/friction-audit-signature"
+    ],
+    "ms003": [
+      "runbooks/friction-audit-signature",
+      "runbooks/guardian-false-positive-rollback",
+      "runbooks/perimeter-extension-create",
+      "runbooks/perimeter-key-rotation",
+      "runbooks/scheduler-force-override-investigation",
+      "runbooks/scheduler-weight-matrix-rotation"
+    ],
+    "minisign": [
+      "runbooks/friction-audit-signature",
+      "runbooks/perimeter-extension-create",
+      "runbooks/perimeter-key-rotation"
+    ],
+    "key-rotation": [
+      "runbooks/friction-audit-signature",
+      "runbooks/perimeter-key-rotation"
+    ],
+    "zpool": [
+      "runbooks/friction-audit-zfs"
+    ],
+    "tank-vault": [
+      "runbooks/friction-audit-zfs"
+    ],
+    "audit-log": [
+      "runbooks/guardian-audit-log-corruption",
+      "runbooks/guardian-not-running",
+      "runbooks/perimeter-audit-log-corruption",
+      "runbooks/scheduler-audit-log-corruption"
+    ],
+    "sha256-chain": [
+      "runbooks/guardian-audit-log-corruption",
+      "runbooks/perimeter-audit-log-corruption",
+      "runbooks/scheduler-audit-log-corruption"
+    ],
+    "corruption": [
+      "runbooks/guardian-audit-log-corruption",
+      "runbooks/perimeter-audit-log-corruption",
+      "runbooks/scheduler-audit-log-corruption"
+    ],
+    "incident-response": [
+      "runbooks/guardian-audit-log-corruption",
+      "runbooks/guardian-console-alert-investigation",
+      "runbooks/network-degraded",
+      "runbooks/perimeter-audit-log-corruption",
+      "runbooks/perimeter-sigkill-investigation",
+      "runbooks/scheduler-audit-log-corruption",
+      "runbooks/scheduler-force-override-investigation",
+      "runbooks/selfdef-watchdog-alert-finding",
+      "runbooks/storage-degraded"
+    ],
+    "console-alert": [
+      "runbooks/guardian-console-alert-investigation",
+      "runbooks/guardian-not-running"
+    ],
+    "ocsf": [
+      "runbooks/guardian-console-alert-investigation",
+      "runbooks/perimeter-sigkill-investigation"
+    ],
+    "false-positive": [
+      "runbooks/guardian-false-positive-rollback"
+    ],
+    "rollback": [
+      "runbooks/guardian-false-positive-rollback"
+    ],
+    "ms009": [
+      "runbooks/guardian-false-positive-rollback"
+    ],
+    "supervisor": [
+      "runbooks/guardian-not-running"
+    ],
+    "unix-socket": [
+      "runbooks/guardian-socket-unreachable"
+    ],
+    "m060": [
+      "runbooks/m060-mirror-export-publish-anomalies"
+    ],
+    "mirror-export": [
+      "runbooks/m060-mirror-export-publish-anomalies"
+    ],
+    "alert": [
+      "runbooks/m060-mirror-export-publish-anomalies"
+    ],
+    "operator-facing": [
+      "runbooks/m060-mirror-export-publish-anomalies"
+    ],
+    "internet": [
+      "runbooks/network-degraded"
+    ],
+    "dns": [
+      "runbooks/network-degraded"
+    ],
+    "cloudflared": [
+      "runbooks/network-degraded"
+    ],
+    "tailscale": [
+      "runbooks/network-degraded"
+    ],
+    "traefik": [
+      "runbooks/network-degraded"
+    ],
+    "sdd-026": [
+      "runbooks/network-degraded",
+      "runbooks/storage-degraded"
+    ],
+    "core-law": [
+      "runbooks/peace-machine-and-core-law-doctrine-citation-index",
+      "spine/doctrine/peace-machine-and-core-law"
+    ],
+    "operator-supervised": [
+      "runbooks/peace-machine-and-core-law-doctrine-citation-index"
+    ],
+    "citation-index": [
+      "runbooks/peace-machine-and-core-law-doctrine-citation-index"
+    ],
+    "allowlist": [
+      "runbooks/perimeter-extension-create"
+    ],
+    "multi-sig": [
+      "runbooks/perimeter-extension-create",
+      "runbooks/scheduler-force-override-investigation",
+      "runbooks/scheduler-weight-matrix-rotation"
+    ],
+    "trust-roots": [
+      "runbooks/perimeter-key-rotation"
+    ],
+    "operator-key": [
+      "runbooks/perimeter-key-rotation"
+    ],
+    "tracingpolicy": [
+      "runbooks/perimeter-policy-load-failure"
+    ],
+    "sovereign-kernel-fence": [
+      "runbooks/perimeter-sigkill-investigation",
+      "runbooks/perimeter-tetragon-not-running"
+    ],
+    "kernel-fence": [
+      "runbooks/perimeter-tetragon-not-running"
+    ],
+    "backpressure": [
+      "runbooks/scheduler-backpressure-stuck-open"
+    ],
+    "psi": [
+      "runbooks/scheduler-backpressure-stuck-open"
+    ],
+    "dcgm": [
+      "runbooks/scheduler-backpressure-stuck-open"
+    ],
+    "ram-pressure": [
+      "runbooks/scheduler-backpressure-stuck-open"
+    ],
+    "hysteresis": [
+      "runbooks/scheduler-backpressure-stuck-open"
+    ],
+    "force-override": [
+      "runbooks/scheduler-force-override-investigation"
+    ],
+    "routing-layer": [
+      "runbooks/scheduler-not-running"
+    ],
+    "weight-matrix": [
+      "runbooks/scheduler-weight-matrix-rotation"
+    ],
+    "operator-tuning": [
+      "runbooks/scheduler-weight-matrix-rotation"
+    ],
+    "profile-evolution": [
+      "runbooks/scheduler-weight-matrix-rotation"
+    ],
+    "detection-watchdog": [
+      "runbooks/selfdef-watchdog-alert-finding"
+    ],
+    "sigma": [
+      "runbooks/selfdef-watchdog-alert-finding"
+    ],
+    "detection-finding": [
+      "runbooks/selfdef-watchdog-alert-finding"
+    ],
+    "df": [
+      "runbooks/storage-degraded"
+    ],
+    "logs": [
+      "runbooks/storage-degraded"
+    ],
+    "log-rotate": [
+      "runbooks/storage-degraded"
+    ],
+    "ux-coherence": [
+      "runbooks/ux-coherence-failures"
+    ],
+    "test-harness": [
+      "runbooks/ux-coherence-failures"
     ],
     "microsoft": [
       "sources/ai-agents/src-microsoft-agent-governance-toolkit-runtime-security-2026-04-02"
@@ -78747,9 +81480,6 @@
     "implementation": [
       "sources/claude-code/src-superpowers-end-of-vibe-coding"
     ],
-    "production": [
-      "sources/claude-code/src-superpowers-end-of-vibe-coding"
-    ],
     "peak-hours": [
       "sources/claude-code/src-token-hacks-claude-code"
     ],
@@ -79121,13 +81851,6 @@
       "sources/src-dflash-block-diffusion-spec-dec",
       "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
     ],
-    "gemma-4": [
-      "sources/src-dflash-block-diffusion-spec-dec"
-    ],
-    "z-lab": [
-      "sources/src-dflash-block-diffusion-spec-dec",
-      "sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04"
-    ],
     "constitutional-compliance": [
       "sources/src-github-spec-kit-specification-driven-development"
     ],
@@ -79371,9 +82094,6 @@
       "sources/src-suricata-yaml-config"
     ],
     "ids": [
-      "sources/src-suricata"
-    ],
-    "ips": [
       "sources/src-suricata"
     ],
     "nsm": [
@@ -81386,6 +84106,18 @@
     "project-phases": [
       "sources/wiki-methodology/src-sdlc-frameworks-research"
     ],
+    "sovereign-ai-workstation": [
+      "spine/doctrine/peace-machine-and-core-law"
+    ],
+    "ultimate-solutions": [
+      "spine/doctrine/peace-machine-and-core-law"
+    ],
+    "situated-intelligence": [
+      "spine/doctrine/peace-machine-and-core-law"
+    ],
+    "governed-machine": [
+      "spine/doctrine/peace-machine-and-core-law"
+    ],
     "domain-overview": [
       "spine/domain-overviews/ai-agents-domain-overview",
       "spine/domain-overviews/ai-models-domain-overview",
@@ -81576,9 +84308,6 @@
     "registry": [
       "spine/references/model-registry"
     ],
-    "index": [
-      "spine/references/model-registry"
-    ],
     "entry-point": [
       "spine/references/model-registry"
     ],
@@ -81701,9 +84430,6 @@
       "spine/standards/model-standards/model-quality-failure-prevention-standards",
       "spine/standards/model-standards/model-skills-commands-hooks-standards",
       "spine/standards/model-standards/model-wiki-design-standards"
-    ],
-    "promotion": [
-      "spine/standards/model-standards/model-knowledge-evolution-standards"
     ],
     "wiki-model": [
       "spine/standards/model-standards/model-llm-wiki-standards"
@@ -84081,6 +86807,12 @@
       ]
     },
     {
+      "target": "Opus 4.7 surfacing log",
+      "referenced_by": [
+        "research-watch \u2014 Cline SDK 2026-05-13 \u2014 affected pages flagged for update"
+      ]
+    },
+    {
       "target": "P1 + P4 governing principles",
       "referenced_by": [
         "Learning Path v2 \u2014 Multi-Day Pain-Point Resolution Comprehensive 9-Phase Body of Work (Mission Arc 2026-05-08)"
@@ -84116,6 +86848,18 @@
       "target": "P5 candidate principle endorsement",
       "referenced_by": [
         "Foundational-Cluster-Prioritized Enforcement-Layer Pattern \u2014 C04+C02 Coverage Maximizes Cross-Cutting Prevention"
+      ]
+    },
+    {
+      "target": "Pain-Points Inventory",
+      "referenced_by": [
+        "2026-05-16 \u2014 RGP profile v5-evening SFIF-overcorrection revert + comprehensive augmentation (17 surgical edits + 3 planning artifacts)"
+      ]
+    },
+    {
+      "target": "Parent state-divergence cascade-candidate",
+      "referenced_by": [
+        "Cascade candidate \u2014 M001 reframe: audit (not author) existing AGENTS.md (34KB) + CLAUDE.md (38KB) at upstream root-ghostproxy"
       ]
     },
     {
@@ -84765,12 +87509,6 @@
       "referenced_by": [
         "Comparison \u2014 Assistant Platforms & Frameworks Frontier (2026-05-09): Claude OS \u00b7 Obsidian PM \u00b7 Multica \u00b7 OpenClaw Command Center / OCMC \u2014 by Type and Frontier",
         "Lesson \u2014 Metered programmatic agentic economics is the 2026 convergent direction: subscription compute arbitrage is closing; programmatic agent use is being separated from interactive use and billed at marginal-cost-tracking rates"
-      ]
-    },
-    {
-      "target": "Synthesis \u2014 BitNet b1.58 family",
-      "referenced_by": [
-        "Milestone \u2014 SAIN-01 Sovereign AI Node"
       ]
     },
     {
@@ -85669,6 +88407,12 @@
       "target": "root-ghostproxy operating-principles.md Principle #11 anti-pattern \"verbal-only\" entry",
       "referenced_by": [
         "Lesson \u2014 Verbal acknowledgment is not a fix: every bug-fix must produce a structural artefact (rule, file, hook, code)"
+      ]
+    },
+    {
+      "target": "v5.2 cadence-doctrine arc",
+      "referenced_by": [
+        "2026-05-17 \u2014 RGP profile v5.3 synergy iteration: output_governance + STEP 0 gates + mcp_discipline + worker_runtime_model + scope_tier_definitions + density_targets + operator_territory_overstep anti-pattern"
       ]
     },
     {

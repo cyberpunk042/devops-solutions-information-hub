@@ -29,6 +29,10 @@ tags: [runbook, guardian, audit-log, zfs, sha256-chain, integrity, corruption, i
 
 # Operator runbook — Guardian audit log corruption / chain break
 
+## Summary
+
+Operator runbook for **Guardian audit log corruption / chain break**.  Anchored to: Source dump §10 lines 531-533 + Trinity Genesis Auditor dump 977-981 (atomic ZFS append); SDD-029 guardian-daemon specification — Deliverable 2 audit chain.
+
 ## Symptom
 
 - `selfdefctl guardian show` displays `OCSF audit chain events: chain check failed (see logs)`.
@@ -177,7 +181,9 @@ The cockpit M066 panel should clear to GREEN (or OK aggregate) once new clean ev
 - **Chain breaks correlated with `selfdef-daemon` restarts**: there may be a fsync race during shutdown; file an issue. Don't disable the audit chain — that defeats the audit-chain invariant.
 - **Chain break with no other signal**: treat as low-confidence tampering until proven otherwise.
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-029 §Deliverable 2 (audit chain check + atomic append discipline)
 - MS044 R10441-R10480 (OCSF emission + ZFS log bridge)

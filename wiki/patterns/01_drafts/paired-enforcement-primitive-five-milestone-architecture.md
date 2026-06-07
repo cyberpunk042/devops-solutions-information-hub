@@ -1,7 +1,32 @@
 ---
 title: Paired enforcement primitive — five-milestone architecture for selfdef IPS actions
+type: pattern
+domain: ai-agents
 status: draft
+confidence: medium
 maturity_tier: 01_drafts
+created: '2026-05-29'
+updated: '2026-05-29'
+sources:
+  - id: selfdef-sdd-065
+    type: internal
+    project: selfdef
+    path: docs/sdd/065-ip-block-action-surface.md
+    note: SDD-065 IP-block action surface — first of paired-enforcement-primitive dectet
+  - id: selfdef-sdd-066
+    type: internal
+    project: selfdef
+    path: docs/sdd/066-process-quarantine-action-surface.md
+    note: SDD-066 process-quarantine action surface — second of paired-enforcement-primitive dectet
+tags:
+  - pattern
+  - selfdef
+  - paired-enforcement-primitive
+  - five-milestone
+  - ips-dectet
+  - sdd-065
+  - sdd-066
+  - ai-drafted
 origin_session: claude-code 2026-05-29 perpetual /goal
 companions:
   - selfdef docs/sdd/065-ip-block-action-surface.md
@@ -11,7 +36,13 @@ authorship_class: ai_drafted_session_synthesis
 
 # Paired enforcement primitive — five-milestone architecture
 
-## What this pattern is
+## Summary
+
+Reusable five-milestone shape for adding a new IPS enforcement primitive to selfdef + sovereign-os, captured from the convergent independent implementations of SDD-065 (IP-block) and SDD-066 (process-quarantine). The pattern lets a primitive land end-to-end across all architectural layers (backend trait + production adapter + dispatch CLI verbs + textfile observer + cockpit consumer) in five distinct slices without any one slice becoming unbounded.
+
+## Pattern Description
+
+### What this pattern is
 
 A reusable shape for adding a new IPS enforcement primitive to
 selfdef + sovereign-os. Captured from the SDD-065 (IP-block) and
@@ -22,7 +53,9 @@ The pattern lets a new primitive land **end-to-end across all
 architectural layers** in five distinct slices without any one
 slice becoming unbounded.
 
-## When to apply
+## When To Apply
+
+### When to apply
 
 Use this pattern when:
 
@@ -35,6 +68,8 @@ Use this pattern when:
 - The primitive should be queryable + composable with other
   primitives (paired-handle correlator output).
 
+## When Not To
+
 Do NOT use this pattern for:
 
 - Pure observability surfaces (those follow the sibling-observer
@@ -42,6 +77,17 @@ Do NOT use this pattern for:
 - Configuration changes (those go through selfdef-config + the
   modules.toml overlay).
 - Operator-direct CLI tools without persistence (no MS5b needed).
+
+## Instances
+
+Two convergent independent implementations validate the five-milestone shape:
+
+- **SDD-065 IP-block** (`selfdef-blockset-backend` crate) — first canonical instance; primitive type = network address block-set with `Active(String)` handle keyed by CIDR + scope.
+- **SDD-066 process-quarantine** (`selfdef-process-quarantine-backend` crate) — sibling instance arrived at the same 5-MS structure independently; primitive type = process freeze via cgroupv2-freezer with handle keyed by pid + cgroup path.
+
+Subsequent applications of the closely-related state-journal subdivision pattern (see companion pattern `ms5a-state-journal-vs-enforcement-layer-separation.md`) extended the validation set to **11 IPS-dectet primitives** across selfdef PRs #215 + #216, demonstrating the architecture's reusability beyond the original pair.
+
+**Quattuordectet expansion (2026-06-06)**: the original 10-primitive dectet (SDD-065..074) has since grown to **14 primitives (SDD-065..078) — the IPS-quattuordectet**. The 4 additions (SDD-075 capability-drop, SDD-076 kernel-keyring-eviction, SDD-077 apparmor-profile-pivot, SDD-078 bpf-map-element-clear) follow the same 5-milestone shape verbatim, confirming the pattern's stability across expansion. Test suites for all 14 primitives are now wired into sovereign-os via `tests/lint/test_observability_status_verb_contract.py:CANONICAL_VERTICALS` (32-entry lock-list) and the IPS-host-overview dashboard contract (25 panels / 26 drill-down links).
 
 ## The five milestones
 
@@ -254,7 +300,9 @@ the selfdef-side `pending_*()` JSON snapshot):
   enforcement primitives live in selfdef; sovereign-os
   consumes via cockpit + alerts + dashboard.
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - `wiki/decisions/01_drafts/in-memory-backend-as-ms1-substrate.md`
 - selfdef `docs/sdd/065-ip-block-action-surface.md`

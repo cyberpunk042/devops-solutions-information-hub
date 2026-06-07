@@ -28,6 +28,7 @@ sources:
     note: "End-to-end confirmation. 3 idle-resume events (11:41/13:50/16:01Z, ~2h gaps) each producing a same-ms `model:<synthetic>` `No response requested.` paired with an isMeta user message carrying the CLAUDE_CODE_RESUME_PROMPT override text; each recovered ONLY by a manual operator /goal re-issue (rows 682/1746/1911). Both SessionStart systemMessages fired but triggered no real turn. Confirms Outcome 3 + corrects the 'model emits the no-op' misconception."
   - id: companion-lesson-block-cap
     type: internal
+    project: devops-solutions-information-hub
     path: wiki/lessons/01_drafts/claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch.md
     note: "Earlier lesson on a sibling glitch — `CLAUDE_CODE_STOP_HOOK_BLOCK_CAP` default-8 cap causing perpetual `/goal` to die after 8 consecutive blocks. Different mechanism from this lesson but same operator pain point."
   - id: claude-code-hooks-reference
@@ -188,7 +189,9 @@ function cX({content: H, usage: $, isVirtual: q, now: K, uuid: _}) {
 
 The `/goal` hook itself is NOT cleared by the synthetic-pair — it remains armed in the session registry (verified by the `goal_status` attachment carrying the same `condition` field after operator re-issues `/goal`). It just doesn't get a chance to fire because nothing it's hooked into happens.
 
-## Evidence — full transcript timeline
+## Evidence
+
+### Full transcript timeline
 
 Session `a96554c4-92f7-4ce2-b9b1-d8f049525bd1`, model `claude-opus-4-7`, env `CLAUDE_CODE_REMOTE_ENVIRONMENT_TYPE=cloud_default`:
 
@@ -204,7 +207,9 @@ Session `a96554c4-92f7-4ce2-b9b1-d8f049525bd1`, model `claude-opus-4-7`, env `CL
 
 Identical timestamps `18:13:54.063Z` on the synthetic user and synthetic assistant is the fingerprint. The `SessionStart` hook firing 665ms LATER (at `.728Z`) confirms the synthetic-pair is injected by the message-loader BEFORE session-start hooks even run.
 
-## Cross-cutting — interaction with brief mode
+## Applicability
+
+### Cross-cutting — interaction with brief mode
 
 Brief mode (`tengu_kairos_brief`, `CLAUDE_CODE_BRIEF`, `DISABLE_BRIEF_MODE_STOP_HOOK`) is a DIFFERENT mechanism with a similar smell. Brief mode is detectable by:
 
@@ -259,7 +264,9 @@ The harness binary is read-only system-installed. Patching is fragile and gets o
 
 5. **Why does the operator perceive "/goal stopped" rather than "/goal is sleeping"?** Because the synthetic-pair makes the conversation LOOK terminal — `stop_reason: stop_sequence` and `No response requested.` read as completion to the operator's eyes, even though no real LLM ran. UX-level fix would require the harness to surface "session paused — /goal will resume on next interaction" instead of fabricating a no-op turn.
 
-## Related lessons + decisions
+## Relationships
+
+### Related lessons + decisions
 
 - **Sibling glitch (different mechanism, same symptom)**: [`claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch`](claude-code-stop-hook-block-cap-default-8-causes-perpetual-goal-glitch.md) — addresses the per-turn block-streak cap. Already mitigated via `CLAUDE_CODE_STOP_HOOK_BLOCK_CAP=1000`.
 - **Sibling glitch (env-runner stop-hook re-staging)**: [`claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start`](claude-code-env-runner-restages-stop-hook-script-from-baked-template-at-every-session-start.md) — mitigation: empty `Stop:[]` arrays in settings + neutralized stop-hook-git-check.sh.

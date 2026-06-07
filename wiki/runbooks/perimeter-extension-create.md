@@ -27,11 +27,16 @@ sources:
   - id: selfdef-ms003
     type: internal
     project: selfdef
+    path: backlog/milestones/MS003-correlator-store-responder-signing.md
     note: "MS003 selfdef-signing chain-of-trust (minisign-verify)"
 tags: [runbook, perimeter, extension, allowlist, ms003, multi-sig, minisign, tetragon, selfdef, ips]
 ---
 
 # Operator runbook — perimeter allowlist extension (signed, multi-sig)
+
+## Summary
+
+Operator runbook for **perimeter allowlist extension (signed, multi-sig)**. The verbatim sain-01 §6 default allowlist is `{/usr/bin/python3, /usr/bin/nvidia-smi, /usr/local/bin/vllm, /usr/bin/podman}`. Anything not in that set is SIGKILL'd in-kernel by the `sovereign-kernel-fence` TracingPolicy. Anchored to: Source dump §6 — Tetragon sovereign-kernel-fence (lines 380-411) + operator-extension contract; SDD-028 perimeter-engine specification — Deliverable 3 (runtime crate, extension authority).
 
 ## When to use this
 
@@ -180,7 +185,9 @@ The runtime crate refuses extensions that violate these rules (all caught at `ex
 - **Need to bypass a SIGKILL of a binary that has a CVE**: do NOT extend; fix the binary instead. Extensions extend the allowlist, they don't whitewash known-bad code.
 - **Lost the operator key**: see [perimeter-key-rotation](perimeter-key-rotation.md).
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-028 §Deliverable 3 (runtime crate, ExtensionManifest validation)
 - SDD-028 §Deliverable 4 (CLI: `selfdefctl perimeter extend --signed <manifest>`)

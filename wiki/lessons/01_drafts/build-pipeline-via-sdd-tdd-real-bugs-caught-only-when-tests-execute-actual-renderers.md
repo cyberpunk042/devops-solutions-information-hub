@@ -140,9 +140,8 @@ This draft promotes to `02_synthesized` after:
 
 ## Backlinks
 
-[[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
-[[Models Are Built in Layers]]
 [[P4 — Declarations Are Aspirational Until Verified]]
 [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
 [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
+[[Models Are Built in Layers]]
 [[Infrastructure Must Be Reproducible]]

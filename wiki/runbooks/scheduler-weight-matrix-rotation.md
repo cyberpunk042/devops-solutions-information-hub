@@ -27,11 +27,16 @@ sources:
   - id: selfdef-ms003
     type: internal
     project: selfdef
+    path: backlog/milestones/MS003-correlator-store-responder-signing.md
     note: "MS003 selfdef-signing chain-of-trust"
 tags: [runbook, scheduler, weight-matrix, ms003, multi-sig, operator-tuning, profile-evolution, selfdef]
 ---
 
 # Operator runbook — scheduler weight matrix rotation (MS003 multi-sig)
+
+## Summary
+
+Operator runbook for **scheduler weight matrix rotation (MS003 multi-sig)**. Per MS048 R11327, the per-profile 7-axis weight matrix is **operator-tunable** — the weights encoded in `selfdef-scheduler::AxisWeights::for_profile()` (R11291-R11326) are the **default baseline** matching the avx-plus-plus dump verbatim; operators may need to evolve them when: Anchored to: Source dump lines 18204-18211 (7-axis objective) + 18000-18100 (per-profile rules); SDD-031 Goldilocks Scheduler spec.
 
 ## When to use this
 
@@ -183,7 +188,9 @@ EOF
 - **Weights drift away from dump verbatim AND nobody can explain why**: revert to baseline via `selfdef-scheduler::AxisWeights::for_profile(p)` defaults. The dump's verbatim values are the operator-recoverable known-good state.
 - **Replay shows old vs new compound deltas across the board**: that's the expected counterfactual surface. Per R11393-R11398, `selfdefctl scheduler replay <request-id> --profile careful` shows how every past decision would have routed under the new weights.
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-031 §Deliverable 2 (AxisWeights::for_profile)
 - MS048 R11291-R11332 (per-profile weight matrix)

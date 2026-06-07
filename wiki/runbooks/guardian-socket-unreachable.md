@@ -29,6 +29,10 @@ tags: [runbook, guardian, tetragon, unix-socket, ingestion, sain-01, selfdef, ip
 
 # Operator runbook — Guardian Tetragon socket unreachable
 
+## Summary
+
+Operator runbook for **Guardian Tetragon socket unreachable**.  Anchored to: Source dump §10 lines 524 + 540-552 (UNIX socket ingestion contract); SDD-029 guardian-daemon specification — Deliverable 2 (event ingester). Also references: Catalog milestone MS044 R10326-R10380 (UNIX socket event ingester).
+
 ## Symptom
 
 - `selfdefctl guardian show` displays `tetragon socket: ... (MISSING)`.
@@ -117,7 +121,9 @@ The ring buffer will start populating as soon as Tetragon emits its first event 
 - **Socket appears intermittently**: probably Tetragon crash-looping; check Tetragon's own logs.
 - **Need to test Guardian without real Tetragon**: there's no first-party mock for the socket today. The runtime crate's Effector trait is mockable for unit tests, but no end-to-end harness ships yet (MS044 R10540 future-round).
 
-## Cross-references
+## Relationships
+
+### Cross-references
 
 - SDD-029 §Deliverable 2 (runtime crate — event ingester contract)
 - MS044 R10326-R10380 (UNIX socket event ingester)
