@@ -1,24 +1,24 @@
 {
-  "generated": "2026-06-06T11:05:00.435435+00:00",
+  "generated": "2026-06-08T19:00:49.332361+00:00",
   "stats": {
-    "pages": 978,
+    "pages": 979,
     "domains": 16,
     "sources": 128,
     "comparisons": 14,
     "relationships": 4352,
-    "tags_unique": 3768,
+    "tags_unique": 3771,
     "layers": {
       "3": 8,
       "5": 38,
       "6": 27,
-      "2": 117,
+      "2": 118,
       "4": 90,
       "0": 1,
       "1": 94,
       "spine": 84
     },
     "maturity": {
-      "seed": 244,
+      "seed": 245,
       "growing": 352,
       "mature": 23
     }
@@ -49551,6 +49551,58 @@
       "relationships": []
     },
     {
+      "path": "runbooks/metrics-ingest-lag.md",
+      "slug": "runbooks/metrics-ingest-lag",
+      "title": "Operator runbook \u2014 selfdef metrics ingest lag (events dropped, /metrics under-counting)",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-06-08",
+      "updated": "2026-06-08",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "observability",
+        "metrics",
+        "ingest-lag",
+        "bus",
+        "prometheus",
+        "meta-observability",
+        "incident-response",
+        "selfdef",
+        "ips"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-metrics-handler",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "crates/selfdef-api/src/metrics.rs",
+          "note": "selfdef-api Metrics: record_ingest_lag() + the selfdef_ingest_lag_events_total counter; the ingest task subscribes to the bus broadcast and bumps counters per event"
+        },
+        {
+          "id": "selfdef-bus-config",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "crates/selfdef-config/src/lib.rs",
+          "note": "[bus] inproc_capacity \u2014 the bounded broadcast channel depth that, when exceeded, causes the ingest subscriber to lag and drop events"
+        },
+        {
+          "id": "selfdef-observability-alerts",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "modules/observability/assets/alerts/selfdef.yml.template",
+          "note": "SelfdefMetricsIngestLag warning alert fires on increase(selfdef_ingest_lag_events_total[10m]) > 0"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "runbooks/network-degraded.md",
       "slug": "runbooks/network-degraded",
       "title": "Operator runbook \u2014 network state degraded (internet / DNS / cloudflared / tailscale / Traefik)",
@@ -68247,7 +68299,7 @@
       "relationship_count": 1868
     },
     "ai-agents": {
-      "page_count": 117,
+      "page_count": 118,
       "relationship_count": 583
     },
     "ai-models": {
@@ -71006,18 +71058,21 @@
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
       "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
       "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
-      "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage"
+      "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage",
+      "runbooks/metrics-ingest-lag"
     ],
     "prometheus": [
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
       "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
-      "runbooks/m060-mirror-export-publish-anomalies"
+      "runbooks/m060-mirror-export-publish-anomalies",
+      "runbooks/metrics-ingest-lag"
     ],
     "observability": [
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
       "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
       "backlog/tasks/T029-author-routing-review-ritual-standard",
-      "patterns/01_drafts/observe-fix-verify-loop"
+      "patterns/01_drafts/observe-fix-verify-loop",
+      "runbooks/metrics-ingest-lag"
     ],
     "ritual": [
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
@@ -71274,6 +71329,7 @@
       "runbooks/guardian-not-running",
       "runbooks/guardian-socket-unreachable",
       "runbooks/m060-mirror-export-publish-anomalies",
+      "runbooks/metrics-ingest-lag",
       "runbooks/network-degraded",
       "runbooks/perimeter-audit-log-corruption",
       "runbooks/perimeter-extension-create",
@@ -72107,6 +72163,7 @@
       "runbooks/guardian-not-running",
       "runbooks/guardian-socket-unreachable",
       "runbooks/m060-mirror-export-publish-anomalies",
+      "runbooks/metrics-ingest-lag",
       "runbooks/network-degraded",
       "runbooks/perimeter-audit-log-corruption",
       "runbooks/perimeter-extension-create",
@@ -79600,6 +79657,7 @@
       "runbooks/guardian-false-positive-rollback",
       "runbooks/guardian-not-running",
       "runbooks/guardian-socket-unreachable",
+      "runbooks/metrics-ingest-lag",
       "runbooks/network-degraded",
       "runbooks/perimeter-audit-log-corruption",
       "runbooks/perimeter-extension-create",
@@ -80783,6 +80841,7 @@
     "incident-response": [
       "runbooks/guardian-audit-log-corruption",
       "runbooks/guardian-console-alert-investigation",
+      "runbooks/metrics-ingest-lag",
       "runbooks/network-degraded",
       "runbooks/perimeter-audit-log-corruption",
       "runbooks/perimeter-sigkill-investigation",
@@ -80825,6 +80884,15 @@
     ],
     "operator-facing": [
       "runbooks/m060-mirror-export-publish-anomalies"
+    ],
+    "ingest-lag": [
+      "runbooks/metrics-ingest-lag"
+    ],
+    "bus": [
+      "runbooks/metrics-ingest-lag"
+    ],
+    "meta-observability": [
+      "runbooks/metrics-ingest-lag"
     ],
     "internet": [
       "runbooks/network-degraded"
