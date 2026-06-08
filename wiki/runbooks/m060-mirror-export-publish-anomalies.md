@@ -67,7 +67,7 @@ Common causes per failure class:
 |---|---|---|
 | `ENOSPC` / `disk full` | Filesystem full | Free space; check `journal_disk` watchdog |
 | `Permission denied` | mirror_dir ownership drift | `chown -R selfdef:selfdef /var/lib/selfdef/mirrors/`; verify `selfdefd.service` `User=selfdef` |
-| `ENOENT` on the mirror file | atomic-rename never completed; partial write | Re-trigger the publish via `selfdefctl mirror export <artifact>` |
+| `ENOENT` on the mirror file | atomic-rename never completed; partial write | Re-trigger the publish by restarting `selfdefd` (the mirror-export loop re-publishes all artifacts at startup); confirm with `selfdefctl m060-doctor` |
 | `registry-load failure` | resident store corruption | Verify the resident-store path; restore from ZFS snapshot if available |
 
 ### Layer 3: cross-check the canonical deployment guide
@@ -87,14 +87,20 @@ Cross-reference: `https://github.com/cyberpunk042/sovereign-os/blob/main/docs/op
 # 1. Identify the wedged artifact + the failing publish path.
 artifact="$(prometheus-cli query 'topk(1, selfdef_m060_mirror_publish_total{result=\"failed\"})')"
 
-# 2. Inspect the resident store for that artifact.
-selfdefctl mirror inspect "${artifact}"
+# 2. Inspect the selfdef-side chain state — per-domain (6 mirrors)
+#    resident-store presence + published mirror-file presence — to locate
+#    the wedged artifact. Filesystem-only; no daemon round-trip.
+selfdefctl m060-doctor
 
-# 3. Force a re-publish (idempotent — no harm if the prior publish succeeded).
-selfdefctl mirror export "${artifact}" --force
+# 3. Re-trigger publishing. There is no manual per-artifact export verb:
+#    the daemon's mirror-export loop publishes ALL artifacts once at
+#    startup (then on its timer), so a restart re-publishes. Atomic
+#    tempfile+rename means a prior good publish is untouched (idempotent).
+sudo systemctl restart selfdefd
 
-# 4. Watch the next 30s tick land cleanly.
-journalctl -u selfdefd -f | grep "mirror export" | grep "${artifact}"
+# 4. Confirm the publish landed + re-check the per-artifact counters.
+journalctl -u selfdefd -f | grep -i "mirror"   # Ctrl-C once it publishes
+selfdefctl m060-metrics
 ```
 
 If step 3 fails with the same error class as the alert, the underlying substrate problem (disk full, permission, corruption) must be resolved before the alert clears.

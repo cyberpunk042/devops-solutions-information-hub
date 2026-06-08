@@ -94,7 +94,9 @@ journalctl --since "15 min ago" -o cat \
   | grep -F '"severity":"alert"' | grep -F 'selfdef-'
 
 # 2. The matching Detection Findings (the Sigma rule's output).
-selfdefctl findings recent --limit 10 2>/dev/null \
+#    `events alerts` tails the recent category_uid=2 (Findings/alerts)
+#    events from the daemon; -n caps the count.
+selfdefctl events alerts -n 10 2>/dev/null \
   || journalctl -t selfdef-notifier-engine --since "15 min ago" -o cat | tail
 
 # 3. Per-rule finding rate (what the alert counted).
