@@ -26,7 +26,7 @@ tags: [index, runbook, operator-facing, selfdef, sovereign-os, friction-audit, p
 
 ## Summary
 
-Operator-facing runbook navigation home for the selfdef + sovereign-os production-progression arc. Each runbook is anchored to a specific SDD section + verbatim source dump line range, walks the operator from "summary line says FAIL" to "root cause + fix", and lists sister runbooks under § Relationships. Twenty-four runbooks cover the four-watchdog enforcement trio (friction-audit, perimeter, guardian, scheduler) plus cross-cutting surfaces (network, storage, UX-coherence). One doctrine citation index (Peace Machine + Core Law) and one detection-watchdog alert-finding runbook complete the set.
+Operator-facing runbook navigation home for the selfdef + sovereign-os production-progression arc. Each runbook is anchored to a specific SDD section + verbatim source dump line range, walks the operator from "summary line says FAIL" to "root cause + fix", and lists sister runbooks under § Relationships. The runbook set covers the four-watchdog enforcement trio (friction-audit, perimeter, guardian, scheduler) plus cross-cutting surfaces (network, storage, M060 mirror-export, metrics ingest-lag, UX-coherence), a doctrine citation index (Peace Machine + Core Law), and the detection-watchdog alert-finding procedure. The section tables below are the authoritative list; this summary avoids a hardcoded count that would drift as runbooks are added.
 
 ## When to use this
 
@@ -90,6 +90,7 @@ Operator-facing runbook navigation home for the selfdef + sovereign-os productio
 | [network state degraded](network-degraded.md) | Internet / DNS / cloudflared / tailscale / Traefik anomaly |
 | [Storage state degraded](storage-degraded.md) | Filesystem fill, log dir bloat |
 | [M060 mirror-export publish anomalies](m060-mirror-export-publish-anomalies.md) | SelfdefM060Publish{Failing,Stale,Wedged} Prometheus alert fires (selfdefd mirror_export_loop per-artifact publish failure) |
+| [metrics ingest lag (/metrics under-counting)](metrics-ingest-lag.md) | SelfdefMetricsIngestLag fires — the metrics-ingest subscriber dropped bus events (bus over-subscribed), so /metrics counters under-count and other counter-based alerts may silently not fire |
 
 ## Detection-watchdog + doctrine
 
