@@ -91,6 +91,8 @@ Operator-facing runbook navigation home for the selfdef + sovereign-os productio
 | [Storage state degraded](storage-degraded.md) | Filesystem fill, log dir bloat |
 | [M060 mirror-export publish anomalies](m060-mirror-export-publish-anomalies.md) | SelfdefM060Publish{Failing,Stale,Wedged} Prometheus alert fires (selfdefd mirror_export_loop per-artifact publish failure) |
 | [metrics ingest lag (/metrics under-counting)](metrics-ingest-lag.md) | SelfdefMetricsIngestLag fires — the metrics-ingest subscriber dropped bus events (bus over-subscribed), so /metrics counters under-count and other counter-based alerts may silently not fire |
+| [correlator bus lag (missed detections)](metrics-correlator-lag.md) | SelfdefCorrelatorBusLag fires — the correlator subscriber dropped raw events (bus over-subscribed), so those events were never rule-evaluated and produced no finding at all (a detection gap, not just a metrics gap) |
+| [responder bus lag (no action fired)](metrics-responder-lag.md) | SelfdefResponderBusLag fires — the responder subscriber dropped findings (bus over-subscribed), so no autonomous block/quarantine/notify action fired for them (a response gap) |
 
 ## Detection-watchdog + doctrine
 
