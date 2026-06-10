@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-08T19:39:15.016638+00:00",
+  "generated": "2026-06-10T00:49:52.347915+00:00",
   "stats": {
     "pages": 979,
     "domains": 16,
@@ -61409,8 +61409,8 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-05-04",
-      "updated": "2026-05-04",
-      "last_reviewed": "2026-05-04",
+      "updated": "2026-06-10",
+      "last_reviewed": "2026-06-10",
       "tags": [
         "source-synthesis",
         "six-file-context",
@@ -61447,6 +61447,13 @@
           "type": "file",
           "file": "raw/dumps/Six-File+Context+Methodology/templates/",
           "description": "Operator-downloaded blank templates the video produces \u2014 CLAUDE.md wiring + 6 context files (project-overview \u00b7 architecture \u00b7 code-standards \u00b7 ai-workflow-rules \u00b7 ui-context \u00b7 progress-tracker)"
+        },
+        {
+          "id": "jsmastery-playbook",
+          "type": "file",
+          "file": "raw/dumps/Six-File+Context+Methodology/README.md",
+          "title": "From Idea to Product: The AI-Driven Developer's Playbook (JavaScript Mastery)",
+          "description": "The 999-line WRITTEN form of the same methodology (sibling of the video) \u2014 the playbook the 2026-06 cross-repo audit counted as 'Six-File Context Methodology | 999 [lines]'. Same six-file system + spec-file pattern + prompts; this page synthesizes both forms. Added 2026-06-10 to close the audit's provenance gap (gap #1 triaged to 'the wiki's methodology layer' \u2014 this page)."
         },
         {
           "id": "fowler-spdd-synth",
