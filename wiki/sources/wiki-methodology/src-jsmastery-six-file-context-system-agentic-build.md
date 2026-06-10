@@ -14,8 +14,8 @@ status: synthesized
 confidence: high
 maturity: seed
 created: 2026-05-04
-updated: 2026-05-04
-last_reviewed: 2026-05-04
+updated: 2026-06-10
+last_reviewed: 2026-06-10
 sources:
   - id: jsmastery-video
     type: video
@@ -28,6 +28,11 @@ sources:
     type: file
     file: raw/dumps/Six-File+Context+Methodology/templates/
     description: "Operator-downloaded blank templates the video produces — CLAUDE.md wiring + 6 context files (project-overview · architecture · code-standards · ai-workflow-rules · ui-context · progress-tracker)"
+  - id: jsmastery-playbook
+    type: file
+    file: raw/dumps/Six-File+Context+Methodology/README.md
+    title: "From Idea to Product: The AI-Driven Developer's Playbook (JavaScript Mastery)"
+    description: "The 999-line WRITTEN form of the same methodology (sibling of the video) — the playbook the 2026-06 cross-repo audit counted as 'Six-File Context Methodology | 999 [lines]'. Same six-file system + spec-file pattern + prompts; this page synthesizes both forms. Added 2026-06-10 to close the audit's provenance gap (gap #1 triaged to 'the wiki's methodology layer' — this page)."
   - id: fowler-spdd-synth
     type: wiki
     file: wiki/sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd.md
