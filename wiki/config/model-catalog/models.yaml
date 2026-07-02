@@ -25,6 +25,7 @@ models:
     roles: [coding, reasoning]
     tiers: [rtx-4090]
     source: null
+    status: aspirational
     confidence: medium
     notes: ""
   - id: thinking-machines-interaction-1b
@@ -116,6 +117,7 @@ models:
     roles: [general]
     tiers: [rtx-pro]
     source: null
+    status: aspirational
     confidence: low
     notes: "size digit uncertain in source"
   - id: prism-ml-ternary-bonsai-70b
@@ -347,6 +349,7 @@ models:
     roles: [document, reasoning]
     tiers: [rtx-4090]
     source: null
+    status: aspirational
     confidence: medium
     notes: ""
   - id: recursive-ref-validator-2b
@@ -357,6 +360,7 @@ models:
     roles: [validation, reasoning]
     tiers: [rtx-4090]
     source: null
+    status: aspirational
     confidence: medium
     notes: ""
   - id: llama-3-thought-8b
@@ -469,6 +473,7 @@ models:
     roles: [coding, shell]
     tiers: [cpu]
     source: null
+    status: aspirational
     confidence: medium
     notes: ""
   - id: flex-prompt-tiny-1b
@@ -479,6 +484,7 @@ models:
     roles: [prompting]
     tiers: [cpu]
     source: null
+    status: aspirational
     confidence: medium
     notes: ""
   - id: security-phi-3-mini
@@ -589,6 +595,7 @@ models:
     roles: [specialist, long-context]
     tiers: [cpu]
     source: null
+    status: aspirational
     confidence: medium
     notes: ""
   - id: logic-loop-8b
@@ -599,6 +606,7 @@ models:
     roles: [specialist, logic-validation]
     tiers: [rtx-4090]
     source: null
+    status: aspirational
     confidence: medium
     notes: ""
   - id: codellama-ternary-34b

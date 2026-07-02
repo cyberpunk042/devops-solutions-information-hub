@@ -155,11 +155,23 @@ Fleet: **11 real · 18 aspirational · 26 unverified · 14 base-backed.**
 
 Fleet: **11 real · 20 aspirational · 24 unverified · 14 base-backed.**
 
-### Verification effort — closing note
-Five HF passes across the fleet. What remains `unverified` (24) is: the bucket-3
-research tools (real, but not HF — need GitHub confirmation), and ~8 coined
-specialist tinies (`rlm-code-reasoner-8b`, `document-ternary-3b`,
-`recursive-ref-validator-2b`, `llama-ternary-context-1b`, `bash-tiny-coder-1b`,
-`flex-prompt-tiny-1b`, `logic-loop-8b`, `mistral-2b-ternary`) not yet searched
-per-name — left honest as `unverified` rather than asserted. Every `real`/
-`aspirational`/`base_model` value traces to a 2026-07-02 HF check recorded above.
+## 2026-07-02 — sixth pass (last specialist tinies) — VERIFICATION COMPLETE
+
+Searched the final 8 per-name; all returned nothing → `aspirational`:
+`rlm-code-reasoner-8b`, `recursive-ref-validator-2b`, `logic-loop-8b`,
+`bash-tiny-coder-1b`, `document-ternary-3b`, `llama-ternary-context-1b`,
+`flex-prompt-tiny-1b`, `mistral-2b-ternary`.
+
+**Every one of the 55 models is now reasoned about.** Final fleet:
+**11 real · 28 aspirational · 16 unverified · 14 base-backed.**
+
+The 16 `unverified` are NOT "unchecked" — they are:
+- **12 base-backed** — real upstream confirmed (see passes 2–3); the ternary
+  *quantized artifact* itself isn't a published repo, so the variant stays
+  `unverified` while `base_model` records exactly what to quantize.
+- **4 real research tools not on HF** — `rosettafold-all-atom`, `alphafold3`,
+  `openfold`, `warp-lang`; real (Baker Lab / DeepMind / AQ Lab / NVIDIA),
+  GitHub-distributed, confirmed absent from HF. Unverified on the HF axis only.
+
+Every `real` / `aspirational` / `base_model` value traces to a dated 2026-07-02
+HF check recorded in this log. P4 satisfied: nothing asserted, everything gated.

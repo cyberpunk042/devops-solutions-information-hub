@@ -42,9 +42,9 @@
         "rtx-4090"
       ],
       "source": null,
+      "status": "aspirational",
       "confidence": "medium",
-      "notes": "",
-      "status": "unverified"
+      "notes": ""
     },
     {
       "id": "thinking-machines-interaction-1b",
@@ -187,9 +187,9 @@
         "rtx-pro"
       ],
       "source": null,
+      "status": "aspirational",
       "confidence": "low",
-      "notes": "size digit uncertain in source",
-      "status": "unverified"
+      "notes": "size digit uncertain in source"
     },
     {
       "id": "prism-ml-ternary-bonsai-70b",
@@ -551,9 +551,9 @@
         "rtx-4090"
       ],
       "source": null,
+      "status": "aspirational",
       "confidence": "medium",
-      "notes": "",
-      "status": "unverified"
+      "notes": ""
     },
     {
       "id": "recursive-ref-validator-2b",
@@ -569,9 +569,9 @@
         "rtx-4090"
       ],
       "source": null,
+      "status": "aspirational",
       "confidence": "medium",
-      "notes": "",
-      "status": "unverified"
+      "notes": ""
     },
     {
       "id": "llama-3-thought-8b",
@@ -746,9 +746,9 @@
         "cpu"
       ],
       "source": null,
+      "status": "aspirational",
       "confidence": "medium",
-      "notes": "",
-      "status": "unverified"
+      "notes": ""
     },
     {
       "id": "flex-prompt-tiny-1b",
@@ -763,9 +763,9 @@
         "cpu"
       ],
       "source": null,
+      "status": "aspirational",
       "confidence": "medium",
-      "notes": "",
-      "status": "unverified"
+      "notes": ""
     },
     {
       "id": "security-phi-3-mini",
@@ -942,9 +942,9 @@
         "cpu"
       ],
       "source": null,
+      "status": "aspirational",
       "confidence": "medium",
-      "notes": "",
-      "status": "unverified"
+      "notes": ""
     },
     {
       "id": "logic-loop-8b",
@@ -960,9 +960,9 @@
         "rtx-4090"
       ],
       "source": null,
+      "status": "aspirational",
       "confidence": "medium",
-      "notes": "",
-      "status": "unverified"
+      "notes": ""
     },
     {
       "id": "codellama-ternary-34b",
@@ -1220,9 +1220,9 @@
             "cpu"
           ],
           "source": null,
+          "status": "aspirational",
           "confidence": "medium",
-          "notes": "",
-          "status": "unverified"
+          "notes": ""
         },
         {
           "id": "flex-prompt-tiny-1b",
@@ -1237,9 +1237,9 @@
             "cpu"
           ],
           "source": null,
+          "status": "aspirational",
           "confidence": "medium",
-          "notes": "",
-          "status": "unverified"
+          "notes": ""
         },
         {
           "id": "security-phi-3-mini",
@@ -1362,9 +1362,9 @@
               "rtx-4090"
             ],
             "source": null,
+            "status": "aspirational",
             "confidence": "medium",
-            "notes": "",
-            "status": "unverified"
+            "notes": ""
           }
         },
         {
@@ -1798,9 +1798,9 @@
               "rtx-4090"
             ],
             "source": null,
+            "status": "aspirational",
             "confidence": "medium",
-            "notes": "",
-            "status": "unverified"
+            "notes": ""
           }
         },
         {
