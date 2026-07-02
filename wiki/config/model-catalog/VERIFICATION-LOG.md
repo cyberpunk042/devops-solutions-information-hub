@@ -141,3 +141,25 @@ ternary/1.58-bit) — but the **largest is 8B, not 70B**. `prism-ml-ternary-bons
 `unverified` rather than asserted, pending a per-name search).
 
 Fleet: **11 real · 18 aspirational · 26 unverified · 14 base-backed.**
+
+## 2026-07-02 — fifth pass (bucket 3 + last specialists)
+
+- `owasp-ternary-3b`, `linux-kernel-tiny-1.5b` — searched, not found → `aspirational`.
+- **Bucket 3 (research tools, confirmed NOT on HF as model repos):**
+  `rosettafold-all-atom` (Baker Lab), `alphafold3` (DeepMind), `openfold`
+  (AQ Laboratory), `warp-lang` (NVIDIA `github.com/NVIDIA/warp`) — all real tools,
+  GitHub/DeepMind-distributed, not HF models. Annotated as such; `esmfold`
+  remains the HF-loadable protein option. Kept `unverified` on the HF axis
+  (their GitHub homes weren't verifiable from here — proxy blocks non-HF); record
+  exact homes when web access allows.
+
+Fleet: **11 real · 20 aspirational · 24 unverified · 14 base-backed.**
+
+### Verification effort — closing note
+Five HF passes across the fleet. What remains `unverified` (24) is: the bucket-3
+research tools (real, but not HF — need GitHub confirmation), and ~8 coined
+specialist tinies (`rlm-code-reasoner-8b`, `document-ternary-3b`,
+`recursive-ref-validator-2b`, `llama-ternary-context-1b`, `bash-tiny-coder-1b`,
+`flex-prompt-tiny-1b`, `logic-loop-8b`, `mistral-2b-ternary`) not yet searched
+per-name — left honest as `unverified` rather than asserted. Every `real`/
+`aspirational`/`base_model` value traces to a 2026-07-02 HF check recorded above.

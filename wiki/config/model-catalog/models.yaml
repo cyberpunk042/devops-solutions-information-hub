@@ -269,7 +269,7 @@ models:
     tiers: [rtx-pro]
     source: null
     confidence: high
-    notes: ""
+    notes: "real research tool (Baker Lab), GitHub-distributed — confirmed NOT on HF as a model repo (2026-07-02); record exact GitHub home when web access allows"
   - id: evo-arc-institute
     name: "Evo (Arc Institute)"
     family: other
@@ -303,7 +303,7 @@ models:
     tiers: [rtx-pro, rtx-4090]
     source: null
     confidence: high
-    notes: "ou ESMFold ou OpenFold"
+    notes: "ou ESMFold ou OpenFold. Real (DeepMind), but code+weights are DeepMind-distributed — confirmed NOT an HF model repo (2026-07-02). ESMFold is the HF-loadable protein option."
   - id: esmfold
     name: "ESMFold"
     family: other
@@ -324,7 +324,7 @@ models:
     tiers: [rtx-4090]
     source: null
     confidence: high
-    notes: "alternative to AlphaFold3"
+    notes: "alternative to AlphaFold3. Real (AQ Laboratory), GitHub-distributed — confirmed NOT on HF as a model repo (2026-07-02)."
 
   # ---- Scientific: particles (Image 2) ----
   - id: warp-lang
@@ -336,7 +336,7 @@ models:
     tiers: [rtx-4090, rtx-pro]
     source: null
     confidence: high
-    notes: "NVIDIA Warp differentiable sim, not an LLM"
+    notes: "NVIDIA Warp differentiable sim, not an LLM — a Python/CUDA library (github.com/NVIDIA/warp), not an HF model. Not HF-verifiable."
 
   # ---- Reasoning / validation cluster (boxed group, Image 2) ----
   - id: document-ternary-3b
@@ -512,6 +512,7 @@ models:
     roles: [specialist, kernel]
     tiers: [cpu]
     source: null
+    status: aspirational
     confidence: medium
     notes: ""
   - id: bitnet-math-expert-30b
@@ -566,6 +567,7 @@ models:
     roles: [specialist, security]
     tiers: [rtx-4090]
     source: null
+    status: aspirational
     confidence: medium
     notes: ""
   - id: hackerlm-tiny-3b

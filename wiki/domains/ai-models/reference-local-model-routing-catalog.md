@@ -39,10 +39,11 @@ tags: [ai-models, model-routing, complexity-routing, ternary, bitnet, 1bit, loca
 > model is a one-line data edit there; `tools/validate_model_catalog.py` checks
 > every group member and profile selection resolves. Current fleet: **55 models
 > (38 ternary/BitNet), 3 group models, 10 profiles.** Reality-check status
-> (HF-verified 2026-07-02): **11 real · 18 aspirational · 26 unverified**, of
-> which **14 are base-backed** (real upstream confirmed, ternary quant is the
-> only open step). Notable real find: `prism-ml/Ternary-Bonsai` is a genuine
-> HF line (1.7B/4B/8B — no 70B). See `wiki/config/model-catalog/VERIFICATION-LOG.md`.
+> (HF-verified 2026-07-02, 4 passes): **11 real · 20 aspirational · 24 unverified**,
+> of which **14 are base-backed** (real upstream confirmed, ternary quant is the
+> only open step). Real finds: `prism-ml/Ternary-Bonsai` (1.7B/4B/8B — no 70B),
+> microsoft BitNet 2B, Spectra TriLM, OpenThinker, HyenaDNA/Evo/ESMFold.
+> See `wiki/config/model-catalog/VERIFICATION-LOG.md`.
 
 ## Summary
 
