@@ -1,0 +1,1993 @@
+{
+  "bands": [
+    "trivial",
+    "simple",
+    "moderate",
+    "hard",
+    "expert"
+  ],
+  "models": [
+    {
+      "id": "qwen-coder-ternary",
+      "name": "Qwen-Coder Ternary",
+      "family": "qwen",
+      "params": "1.5B/14B",
+      "quantization": "ternary",
+      "roles": [
+        "coding",
+        "inline-completion",
+        "chat",
+        "refactoring"
+      ],
+      "tiers": [
+        "rtx-4090"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": "1.5B for inline completion + 14B for chat & refactoring"
+    },
+    {
+      "id": "rlm-code-reasoner-8b",
+      "name": "RLM-Code-Reasoner-8B",
+      "family": "other",
+      "params": "8B",
+      "quantization": "unknown",
+      "roles": [
+        "coding",
+        "reasoning"
+      ],
+      "tiers": [
+        "rtx-4090"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": ""
+    },
+    {
+      "id": "thinking-machines-interaction-1b",
+      "name": "Thinking-Machines-Interaction-1B",
+      "family": "other",
+      "params": "1B",
+      "quantization": "unknown",
+      "roles": [
+        "interaction"
+      ],
+      "tiers": [
+        "rtx-4090"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": ""
+    },
+    {
+      "id": "ternlm-3-8b-instruct",
+      "name": "TernLM-3-8B-Instruct",
+      "family": "other",
+      "params": "8B",
+      "quantization": "bitnet-1.58",
+      "roles": [
+        "chat",
+        "general"
+      ],
+      "tiers": [
+        "cpu"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": "1.58-bit"
+    },
+    {
+      "id": "bge-m3",
+      "name": "BGE-M3",
+      "family": "other",
+      "params": null,
+      "quantization": "native",
+      "roles": [
+        "embedding"
+      ],
+      "tiers": [
+        "cpu"
+      ],
+      "source": "BAAI/bge-m3",
+      "confidence": "high",
+      "context_window": 8192,
+      "notes": "embedding model (8192 ctx, published)"
+    },
+    {
+      "id": "phi-3-mini-ternary",
+      "name": "Phi-3-Mini-Ternary",
+      "family": "phi",
+      "params": "3.8B",
+      "quantization": "ternary",
+      "roles": [
+        "general"
+      ],
+      "tiers": [
+        "cpu"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": ""
+    },
+    {
+      "id": "bitnet-70b",
+      "name": "BitNet-70B",
+      "family": "bitnet",
+      "params": "70B",
+      "quantization": "bitnet-1.58",
+      "roles": [
+        "coding",
+        "chat",
+        "instruct"
+      ],
+      "tiers": [
+        "rtx-pro"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": "Instruct; a 120B variant is also noted"
+    },
+    {
+      "id": "llama3-8b-ternary",
+      "name": "Llama3-8B-Ternary",
+      "family": "llama",
+      "params": "8B",
+      "quantization": "ternary",
+      "roles": [
+        "general",
+        "coding"
+      ],
+      "tiers": [
+        "rtx-pro"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": ""
+    },
+    {
+      "id": "mistral-2b-ternary",
+      "name": "Mistral-2B-Ternary",
+      "family": "mistral",
+      "params": "2B",
+      "quantization": "ternary",
+      "roles": [
+        "general"
+      ],
+      "tiers": [
+        "rtx-pro"
+      ],
+      "source": null,
+      "confidence": "low",
+      "notes": "size digit uncertain in source"
+    },
+    {
+      "id": "prism-ml-ternary-bonsai-70b",
+      "name": "Prism-ML-Ternary-Bonsai-70B",
+      "family": "other",
+      "params": "70B",
+      "quantization": "ternary",
+      "roles": [
+        "general",
+        "coding"
+      ],
+      "tiers": [
+        "rtx-pro"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": "PrismML Ternary Bonsai line"
+    },
+    {
+      "id": "deepseek-v3-ternary",
+      "name": "Deepseek-V3-Ternary (PT\u00b2-LLM)",
+      "family": "deepseek",
+      "params": null,
+      "quantization": "ternary",
+      "roles": [
+        "general",
+        "reasoning"
+      ],
+      "tiers": [
+        "rtx-pro"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": "PT\u00b2-LLM"
+    },
+    {
+      "id": "gemma-4-litert-2b",
+      "name": "Gemma-4-LiteRt-2B",
+      "family": "gemma",
+      "params": "2B",
+      "quantization": "native",
+      "roles": [
+        "orchestration"
+      ],
+      "tiers": [
+        "cpu"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": "LiteRT"
+    },
+    {
+      "id": "spectra-trilm-3.9b",
+      "name": "Spectra-TriLM-3.9B",
+      "family": "other",
+      "params": "3.9B",
+      "quantization": "ternary",
+      "roles": [
+        "orchestration"
+      ],
+      "tiers": [
+        "cpu"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": "TriLM = ternary"
+    },
+    {
+      "id": "ternalm3-15b-instruct",
+      "name": "TernaLM3-15B-Instruct",
+      "family": "other",
+      "params": "15B",
+      "quantization": "ternary",
+      "roles": [
+        "orchestration",
+        "instruct"
+      ],
+      "tiers": [
+        "cpu"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": ""
+    },
+    {
+      "id": "bitnet-70b-132k-context",
+      "name": "BitNet-70B-132k-Context",
+      "family": "bitnet",
+      "params": "70B",
+      "quantization": "bitnet-1.58",
+      "roles": [
+        "analysis",
+        "long-context"
+      ],
+      "tiers": [
+        "rtx-pro"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "context_window": 132000,
+      "notes": "132k context window (named in source)"
+    },
+    {
+      "id": "nexus-spec-1.1b",
+      "name": "Nexus-Spec-1.1B",
+      "family": "other",
+      "params": "1.1B",
+      "quantization": "unknown",
+      "roles": [
+        "analysis",
+        "speculative-draft"
+      ],
+      "tiers": [
+        "rtx-4090"
+      ],
+      "source": null,
+      "confidence": "low",
+      "notes": ""
+    },
+    {
+      "id": "deepseek-r1-ternary-8b",
+      "name": "Deepseek-R1-Ternary-8B",
+      "family": "deepseek",
+      "params": "8B",
+      "quantization": "ternary",
+      "roles": [
+        "reasoning",
+        "analysis"
+      ],
+      "tiers": [
+        "rtx-4090"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": "a size was scribbled out before 8B in source"
+    },
+    {
+      "id": "llama-3-tiny-3b",
+      "name": "Llama-3-Tiny-3B",
+      "family": "llama",
+      "params": "3B",
+      "quantization": "ternary",
+      "roles": [
+        "agent"
+      ],
+      "tiers": [
+        "rtx-4090"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": ""
+    },
+    {
+      "id": "mistral-tiny-3b",
+      "name": "Mistral-Tiny-3B",
+      "family": "mistral",
+      "params": "3B",
+      "quantization": "ternary",
+      "roles": [
+        "agent"
+      ],
+      "tiers": [
+        "rtx-4090"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": ""
+    },
+    {
+      "id": "ternarylm-132m",
+      "name": "TernaryLM-132M",
+      "family": "other",
+      "params": "132M",
+      "quantization": "ternary",
+      "roles": [
+        "agent"
+      ],
+      "tiers": [
+        "cpu"
+      ],
+      "source": null,
+      "confidence": "low",
+      "notes": "CPU agent fallback (ou TRM-Recursive-Reasoner)"
+    },
+    {
+      "id": "trm-recursive-reasoner",
+      "name": "TRM-Recursive-Reasoner",
+      "family": "other",
+      "params": null,
+      "quantization": "unknown",
+      "roles": [
+        "agent",
+        "reasoning"
+      ],
+      "tiers": [
+        "cpu"
+      ],
+      "source": null,
+      "confidence": "low",
+      "notes": "CPU agent fallback alternative to TernaryLM-132M"
+    },
+    {
+      "id": "rosettafold-all-atom",
+      "name": "RoseTTAFold All-Atom (RFAA)",
+      "family": "other",
+      "params": null,
+      "quantization": "native",
+      "roles": [
+        "dna",
+        "structure-prediction"
+      ],
+      "tiers": [
+        "rtx-pro"
+      ],
+      "source": null,
+      "confidence": "high",
+      "notes": ""
+    },
+    {
+      "id": "evo-arc-institute",
+      "name": "Evo (Arc Institute)",
+      "family": "other",
+      "params": null,
+      "quantization": "native",
+      "roles": [
+        "dna",
+        "genomics"
+      ],
+      "tiers": [
+        "rtx-4090"
+      ],
+      "source": null,
+      "confidence": "high",
+      "notes": "ou HyenaDNA"
+    },
+    {
+      "id": "hyenadna",
+      "name": "HyenaDNA",
+      "family": "other",
+      "params": null,
+      "quantization": "native",
+      "roles": [
+        "dna",
+        "genomics"
+      ],
+      "tiers": [
+        "rtx-4090"
+      ],
+      "source": null,
+      "confidence": "high",
+      "notes": "alternative to Evo"
+    },
+    {
+      "id": "alphafold3",
+      "name": "AlphaFold3",
+      "family": "other",
+      "params": null,
+      "quantization": "native",
+      "roles": [
+        "protein",
+        "structure-prediction"
+      ],
+      "tiers": [
+        "rtx-pro",
+        "rtx-4090"
+      ],
+      "source": null,
+      "confidence": "high",
+      "notes": "ou ESMFold ou OpenFold"
+    },
+    {
+      "id": "esmfold",
+      "name": "ESMFold",
+      "family": "other",
+      "params": null,
+      "quantization": "native",
+      "roles": [
+        "protein",
+        "structure-prediction"
+      ],
+      "tiers": [
+        "rtx-4090"
+      ],
+      "source": null,
+      "confidence": "high",
+      "notes": "alternative to AlphaFold3"
+    },
+    {
+      "id": "openfold",
+      "name": "OpenFold",
+      "family": "other",
+      "params": null,
+      "quantization": "native",
+      "roles": [
+        "protein",
+        "structure-prediction"
+      ],
+      "tiers": [
+        "rtx-4090"
+      ],
+      "source": null,
+      "confidence": "high",
+      "notes": "alternative to AlphaFold3"
+    },
+    {
+      "id": "warp-lang",
+      "name": "Warp-Lang (NVIDIA)",
+      "family": "other",
+      "params": null,
+      "quantization": "native",
+      "roles": [
+        "particles",
+        "physics-sim"
+      ],
+      "tiers": [
+        "rtx-4090",
+        "rtx-pro"
+      ],
+      "source": null,
+      "confidence": "high",
+      "notes": "NVIDIA Warp differentiable sim, not an LLM"
+    },
+    {
+      "id": "document-ternary-3b",
+      "name": "Document-Ternary-3B",
+      "family": "other",
+      "params": "3B",
+      "quantization": "ternary",
+      "roles": [
+        "document",
+        "reasoning"
+      ],
+      "tiers": [
+        "rtx-4090"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": ""
+    },
+    {
+      "id": "recursive-ref-validator-2b",
+      "name": "Recursive-Ref-Validator-2B",
+      "family": "other",
+      "params": "2B",
+      "quantization": "ternary",
+      "roles": [
+        "validation",
+        "reasoning"
+      ],
+      "tiers": [
+        "rtx-4090"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": ""
+    },
+    {
+      "id": "llama-3-thought-8b",
+      "name": "Llama-3-thought-8B",
+      "family": "llama",
+      "params": "8B",
+      "quantization": "ternary",
+      "roles": [
+        "reasoning"
+      ],
+      "tiers": [
+        "rtx-4090"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": ""
+    },
+    {
+      "id": "openthinking-7b",
+      "name": "OpenThinking-7B",
+      "family": "other",
+      "params": "7B",
+      "quantization": "unknown",
+      "roles": [
+        "reasoning"
+      ],
+      "tiers": [
+        "rtx-4090"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": ""
+    },
+    {
+      "id": "qwen25-32b-trit-uniform",
+      "name": "Qwen2.5-32B-trit-uniform",
+      "family": "qwen",
+      "params": "32B",
+      "quantization": "ternary",
+      "roles": [
+        "merge-base"
+      ],
+      "tiers": [
+        "rtx-pro"
+      ],
+      "source": null,
+      "confidence": "low",
+      "notes": "leading token uncertain (Ent/it?)"
+    },
+    {
+      "id": "1bitllm-bitnet-b158-large",
+      "name": "1bitLLM/bitnet-b1.58-large",
+      "family": "bitnet",
+      "params": null,
+      "quantization": "bitnet-1.58",
+      "roles": [
+        "merge-base"
+      ],
+      "tiers": [
+        "rtx-pro"
+      ],
+      "source": "1bitLLM/bitnet_b1_58-large",
+      "confidence": "medium",
+      "notes": ""
+    },
+    {
+      "id": "xinyuan-t-moe-8x7b",
+      "name": "Xinyuan/T-MoE-8x7B",
+      "family": "other",
+      "params": "8x7B",
+      "quantization": "ternary",
+      "roles": [
+        "merge-base",
+        "general"
+      ],
+      "tiers": [
+        "rtx-pro"
+      ],
+      "source": null,
+      "confidence": "low",
+      "notes": "mixture-of-experts architecture (8 experts x 7B); also a group model \u2014 see groups.yaml"
+    },
+    {
+      "id": "falcon3-10b-158bit-prequantized",
+      "name": "tiiuae/Falcon3-10B-1.58bit-prequantized",
+      "family": "falcon",
+      "params": "10B",
+      "quantization": "bitnet-1.58",
+      "roles": [
+        "merge-base",
+        "general"
+      ],
+      "tiers": [
+        "rtx-pro"
+      ],
+      "source": "tiiuae/Falcon3-10B-Instruct-1.58bit",
+      "confidence": "medium",
+      "notes": "prequantized 6f16; ou Falcon-E-3B"
+    },
+    {
+      "id": "falcon-e-3b",
+      "name": "Falcon-E-3B",
+      "family": "falcon",
+      "params": "3B",
+      "quantization": "bitnet-1.58",
+      "roles": [
+        "merge-base",
+        "general"
+      ],
+      "tiers": [
+        "rtx-4090"
+      ],
+      "source": null,
+      "confidence": "low",
+      "notes": "alternative to Falcon3-10B-1.58bit"
+    },
+    {
+      "id": "zihan-wang-coe",
+      "name": "Zihan Wang 314/coe",
+      "family": "other",
+      "params": null,
+      "quantization": "unknown",
+      "roles": [
+        "merge-base"
+      ],
+      "tiers": [
+        "rtx-pro"
+      ],
+      "source": null,
+      "confidence": "low",
+      "notes": "reading uncertain"
+    },
+    {
+      "id": "qwen25-coder-72b-158",
+      "name": "Qwen2.5-Coder-72B (1.58b)",
+      "family": "qwen",
+      "params": "72B",
+      "quantization": "bitnet-1.58",
+      "roles": [
+        "coding",
+        "merge-base"
+      ],
+      "tiers": [
+        "rtx-pro"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": ""
+    },
+    {
+      "id": "bash-tiny-coder-1b",
+      "name": "Bash-Tiny-Coder-1B",
+      "family": "other",
+      "params": "1B",
+      "quantization": "ternary",
+      "roles": [
+        "coding",
+        "shell"
+      ],
+      "tiers": [
+        "cpu"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": ""
+    },
+    {
+      "id": "flex-prompt-tiny-1b",
+      "name": "Flex-Prompt-Tiny-1B",
+      "family": "other",
+      "params": "1B",
+      "quantization": "ternary",
+      "roles": [
+        "prompting"
+      ],
+      "tiers": [
+        "cpu"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": ""
+    },
+    {
+      "id": "security-phi-3-mini",
+      "name": "Security-Phi-3-Mini",
+      "family": "phi",
+      "params": "3.8B",
+      "quantization": "ternary",
+      "roles": [
+        "security"
+      ],
+      "tiers": [
+        "cpu"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": ""
+    },
+    {
+      "id": "starcoder2-3b",
+      "name": "StarCoder2-3B",
+      "family": "other",
+      "params": "3B",
+      "quantization": "native",
+      "roles": [
+        "coding"
+      ],
+      "tiers": [
+        "rtx-4090"
+      ],
+      "source": "bigcode/starcoder2-3b",
+      "confidence": "high",
+      "notes": ""
+    },
+    {
+      "id": "linux-kernel-tiny-1.5b",
+      "name": "Linux-Kernel-Tiny-1.5B",
+      "family": "other",
+      "params": "1.5B",
+      "quantization": "ternary",
+      "roles": [
+        "specialist",
+        "kernel"
+      ],
+      "tiers": [
+        "cpu"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": ""
+    },
+    {
+      "id": "bitnet-math-expert-30b",
+      "name": "BitNet-Math-Expert-30B",
+      "family": "bitnet",
+      "params": "30B",
+      "quantization": "bitnet-1.58",
+      "roles": [
+        "specialist",
+        "math"
+      ],
+      "tiers": [
+        "rtx-pro"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": ""
+    },
+    {
+      "id": "tiny-ternary-ui-3b",
+      "name": "Tiny-Ternary-UI-3B",
+      "family": "other",
+      "params": "3B",
+      "quantization": "ternary",
+      "roles": [
+        "specialist",
+        "ui"
+      ],
+      "tiers": [
+        "rtx-4090"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": ""
+    },
+    {
+      "id": "hive-gate-7b",
+      "name": "Hive-Gate-7B",
+      "family": "other",
+      "params": "7B",
+      "quantization": "unknown",
+      "roles": [
+        "specialist",
+        "coordination"
+      ],
+      "tiers": [
+        "rtx-4090"
+      ],
+      "source": null,
+      "confidence": "low",
+      "notes": ""
+    },
+    {
+      "id": "trm-logic-validator-2b",
+      "name": "TRM-Logic-Validator-2B",
+      "family": "other",
+      "params": "2B",
+      "quantization": "ternary",
+      "roles": [
+        "specialist",
+        "logic-validation"
+      ],
+      "tiers": [
+        "rtx-4090"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": ""
+    },
+    {
+      "id": "owasp-ternary-3b",
+      "name": "OWASP-Ternary-3B",
+      "family": "other",
+      "params": "3B",
+      "quantization": "ternary",
+      "roles": [
+        "specialist",
+        "security"
+      ],
+      "tiers": [
+        "rtx-4090"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": ""
+    },
+    {
+      "id": "hackerlm-tiny-3b",
+      "name": "HackerLM-tiny-3B",
+      "family": "other",
+      "params": "3B",
+      "quantization": "ternary",
+      "roles": [
+        "specialist",
+        "security"
+      ],
+      "tiers": [
+        "rtx-4090"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": ""
+    },
+    {
+      "id": "llama-ternary-context-1b",
+      "name": "LLaMA-Ternary-Context-1B",
+      "family": "llama",
+      "params": "1B",
+      "quantization": "ternary",
+      "roles": [
+        "specialist",
+        "long-context"
+      ],
+      "tiers": [
+        "cpu"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": ""
+    },
+    {
+      "id": "logic-loop-8b",
+      "name": "Logic-Loop-8B",
+      "family": "other",
+      "params": "8B",
+      "quantization": "ternary",
+      "roles": [
+        "specialist",
+        "logic-validation"
+      ],
+      "tiers": [
+        "rtx-4090"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": ""
+    },
+    {
+      "id": "codellama-ternary-34b",
+      "name": "CodeLlama-Ternary-34B",
+      "family": "llama",
+      "params": "34B",
+      "quantization": "ternary",
+      "roles": [
+        "specialist",
+        "coding"
+      ],
+      "tiers": [
+        "rtx-pro"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": ""
+    },
+    {
+      "id": "mistral-large-ternary-80b",
+      "name": "Mistral-Large-Ternary-80B",
+      "family": "mistral",
+      "params": "80B",
+      "quantization": "ternary",
+      "roles": [
+        "specialist",
+        "general"
+      ],
+      "tiers": [
+        "rtx-pro"
+      ],
+      "source": null,
+      "confidence": "medium",
+      "notes": ""
+    }
+  ],
+  "groups": [
+    {
+      "id": "t-moe-8x7b",
+      "name": "T-MoE-8x7B (mixture-of-experts)",
+      "kind": "moe",
+      "members": [
+        "xinyuan-t-moe-8x7b"
+      ],
+      "notes": "8 experts x 7B, ternary. The deployable artifact is the member id.",
+      "member_records": [
+        {
+          "id": "xinyuan-t-moe-8x7b",
+          "name": "Xinyuan/T-MoE-8x7B",
+          "family": "other",
+          "params": "8x7B",
+          "quantization": "ternary",
+          "roles": [
+            "merge-base",
+            "general"
+          ],
+          "tiers": [
+            "rtx-pro"
+          ],
+          "source": null,
+          "confidence": "low",
+          "notes": "mixture-of-experts architecture (8 experts x 7B); also a group model \u2014 see groups.yaml"
+        }
+      ]
+    },
+    {
+      "id": "mistral-ternary-3x-70b",
+      "name": "Mistral-Ternary 3x70B",
+      "kind": "replicated",
+      "factor": 3,
+      "members": [],
+      "notes": "RTX Pro agents tier \u2014 3x a 70B ternary Mistral. Base not separately cataloged yet (distinct from mistral-large-ternary-80b).",
+      "member_records": []
+    },
+    {
+      "id": "mergekit-massive-merge-pool",
+      "name": "Mergekit \u2014 mass AI merge pool",
+      "kind": "merged",
+      "members": [
+        "qwen25-32b-trit-uniform",
+        "prism-ml-ternary-bonsai-70b",
+        "1bitllm-bitnet-b158-large",
+        "xinyuan-t-moe-8x7b",
+        "falcon3-10b-158bit-prequantized",
+        "falcon-e-3b",
+        "zihan-wang-coe",
+        "qwen25-coder-72b-158",
+        "bash-tiny-coder-1b",
+        "flex-prompt-tiny-1b",
+        "security-phi-3-mini",
+        "starcoder2-3b"
+      ],
+      "notes": "Operator label: 'Mergekit: Manipulation AI massifs' \u2014 candidate bases for mass ternary/1.58-bit model merging.",
+      "member_records": [
+        {
+          "id": "qwen25-32b-trit-uniform",
+          "name": "Qwen2.5-32B-trit-uniform",
+          "family": "qwen",
+          "params": "32B",
+          "quantization": "ternary",
+          "roles": [
+            "merge-base"
+          ],
+          "tiers": [
+            "rtx-pro"
+          ],
+          "source": null,
+          "confidence": "low",
+          "notes": "leading token uncertain (Ent/it?)"
+        },
+        {
+          "id": "prism-ml-ternary-bonsai-70b",
+          "name": "Prism-ML-Ternary-Bonsai-70B",
+          "family": "other",
+          "params": "70B",
+          "quantization": "ternary",
+          "roles": [
+            "general",
+            "coding"
+          ],
+          "tiers": [
+            "rtx-pro"
+          ],
+          "source": null,
+          "confidence": "medium",
+          "notes": "PrismML Ternary Bonsai line"
+        },
+        {
+          "id": "1bitllm-bitnet-b158-large",
+          "name": "1bitLLM/bitnet-b1.58-large",
+          "family": "bitnet",
+          "params": null,
+          "quantization": "bitnet-1.58",
+          "roles": [
+            "merge-base"
+          ],
+          "tiers": [
+            "rtx-pro"
+          ],
+          "source": "1bitLLM/bitnet_b1_58-large",
+          "confidence": "medium",
+          "notes": ""
+        },
+        {
+          "id": "xinyuan-t-moe-8x7b",
+          "name": "Xinyuan/T-MoE-8x7B",
+          "family": "other",
+          "params": "8x7B",
+          "quantization": "ternary",
+          "roles": [
+            "merge-base",
+            "general"
+          ],
+          "tiers": [
+            "rtx-pro"
+          ],
+          "source": null,
+          "confidence": "low",
+          "notes": "mixture-of-experts architecture (8 experts x 7B); also a group model \u2014 see groups.yaml"
+        },
+        {
+          "id": "falcon3-10b-158bit-prequantized",
+          "name": "tiiuae/Falcon3-10B-1.58bit-prequantized",
+          "family": "falcon",
+          "params": "10B",
+          "quantization": "bitnet-1.58",
+          "roles": [
+            "merge-base",
+            "general"
+          ],
+          "tiers": [
+            "rtx-pro"
+          ],
+          "source": "tiiuae/Falcon3-10B-Instruct-1.58bit",
+          "confidence": "medium",
+          "notes": "prequantized 6f16; ou Falcon-E-3B"
+        },
+        {
+          "id": "falcon-e-3b",
+          "name": "Falcon-E-3B",
+          "family": "falcon",
+          "params": "3B",
+          "quantization": "bitnet-1.58",
+          "roles": [
+            "merge-base",
+            "general"
+          ],
+          "tiers": [
+            "rtx-4090"
+          ],
+          "source": null,
+          "confidence": "low",
+          "notes": "alternative to Falcon3-10B-1.58bit"
+        },
+        {
+          "id": "zihan-wang-coe",
+          "name": "Zihan Wang 314/coe",
+          "family": "other",
+          "params": null,
+          "quantization": "unknown",
+          "roles": [
+            "merge-base"
+          ],
+          "tiers": [
+            "rtx-pro"
+          ],
+          "source": null,
+          "confidence": "low",
+          "notes": "reading uncertain"
+        },
+        {
+          "id": "qwen25-coder-72b-158",
+          "name": "Qwen2.5-Coder-72B (1.58b)",
+          "family": "qwen",
+          "params": "72B",
+          "quantization": "bitnet-1.58",
+          "roles": [
+            "coding",
+            "merge-base"
+          ],
+          "tiers": [
+            "rtx-pro"
+          ],
+          "source": null,
+          "confidence": "medium",
+          "notes": ""
+        },
+        {
+          "id": "bash-tiny-coder-1b",
+          "name": "Bash-Tiny-Coder-1B",
+          "family": "other",
+          "params": "1B",
+          "quantization": "ternary",
+          "roles": [
+            "coding",
+            "shell"
+          ],
+          "tiers": [
+            "cpu"
+          ],
+          "source": null,
+          "confidence": "medium",
+          "notes": ""
+        },
+        {
+          "id": "flex-prompt-tiny-1b",
+          "name": "Flex-Prompt-Tiny-1B",
+          "family": "other",
+          "params": "1B",
+          "quantization": "ternary",
+          "roles": [
+            "prompting"
+          ],
+          "tiers": [
+            "cpu"
+          ],
+          "source": null,
+          "confidence": "medium",
+          "notes": ""
+        },
+        {
+          "id": "security-phi-3-mini",
+          "name": "Security-Phi-3-Mini",
+          "family": "phi",
+          "params": "3.8B",
+          "quantization": "ternary",
+          "roles": [
+            "security"
+          ],
+          "tiers": [
+            "cpu"
+          ],
+          "source": null,
+          "confidence": "medium",
+          "notes": ""
+        },
+        {
+          "id": "starcoder2-3b",
+          "name": "StarCoder2-3B",
+          "family": "other",
+          "params": "3B",
+          "quantization": "native",
+          "roles": [
+            "coding"
+          ],
+          "tiers": [
+            "rtx-4090"
+          ],
+          "source": "bigcode/starcoder2-3b",
+          "confidence": "high",
+          "notes": ""
+        }
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "id": "default-coding",
+      "name": "Default (coding)",
+      "task": "coding",
+      "selections": {
+        "rtx-4090": [
+          "qwen-coder-ternary",
+          "rlm-code-reasoner-8b",
+          "thinking-machines-interaction-1b"
+        ],
+        "rtx-pro": [
+          "bitnet-70b",
+          "llama3-8b-ternary",
+          "mistral-2b-ternary",
+          "prism-ml-ternary-bonsai-70b",
+          "deepseek-v3-ternary"
+        ]
+      },
+      "routing": [
+        {
+          "band": "trivial",
+          "prefer": "qwen-coder-ternary"
+        },
+        {
+          "band": "moderate",
+          "prefer": "rlm-code-reasoner-8b"
+        },
+        {
+          "band": "hard",
+          "prefer": "bitnet-70b"
+        },
+        {
+          "band": "expert",
+          "prefer": "prism-ml-ternary-bonsai-70b"
+        }
+      ],
+      "notes": "Qwen-Coder: 1.5B inline completion + 14B chat/refactoring",
+      "routing_resolved": [
+        {
+          "band": "trivial",
+          "prefer": "qwen-coder-ternary",
+          "model": {
+            "kind": "model",
+            "id": "qwen-coder-ternary",
+            "name": "Qwen-Coder Ternary",
+            "family": "qwen",
+            "params": "1.5B/14B",
+            "quantization": "ternary",
+            "roles": [
+              "coding",
+              "inline-completion",
+              "chat",
+              "refactoring"
+            ],
+            "tiers": [
+              "rtx-4090"
+            ],
+            "source": null,
+            "confidence": "medium",
+            "notes": "1.5B for inline completion + 14B for chat & refactoring"
+          }
+        },
+        {
+          "band": "moderate",
+          "prefer": "rlm-code-reasoner-8b",
+          "model": {
+            "kind": "model",
+            "id": "rlm-code-reasoner-8b",
+            "name": "RLM-Code-Reasoner-8B",
+            "family": "other",
+            "params": "8B",
+            "quantization": "unknown",
+            "roles": [
+              "coding",
+              "reasoning"
+            ],
+            "tiers": [
+              "rtx-4090"
+            ],
+            "source": null,
+            "confidence": "medium",
+            "notes": ""
+          }
+        },
+        {
+          "band": "hard",
+          "prefer": "bitnet-70b",
+          "model": {
+            "kind": "model",
+            "id": "bitnet-70b",
+            "name": "BitNet-70B",
+            "family": "bitnet",
+            "params": "70B",
+            "quantization": "bitnet-1.58",
+            "roles": [
+              "coding",
+              "chat",
+              "instruct"
+            ],
+            "tiers": [
+              "rtx-pro"
+            ],
+            "source": null,
+            "confidence": "medium",
+            "notes": "Instruct; a 120B variant is also noted"
+          }
+        },
+        {
+          "band": "expert",
+          "prefer": "prism-ml-ternary-bonsai-70b",
+          "model": {
+            "kind": "model",
+            "id": "prism-ml-ternary-bonsai-70b",
+            "name": "Prism-ML-Ternary-Bonsai-70B",
+            "family": "other",
+            "params": "70B",
+            "quantization": "ternary",
+            "roles": [
+              "general",
+              "coding"
+            ],
+            "tiers": [
+              "rtx-pro"
+            ],
+            "source": null,
+            "confidence": "medium",
+            "notes": "PrismML Ternary Bonsai line"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cpu-general",
+      "name": "CPU general",
+      "task": "general",
+      "selections": {
+        "cpu": [
+          "ternlm-3-8b-instruct",
+          "bge-m3",
+          "phi-3-mini-ternary"
+        ]
+      },
+      "routing": [
+        {
+          "band": "trivial",
+          "prefer": "phi-3-mini-ternary"
+        },
+        {
+          "band": "simple",
+          "prefer": "ternlm-3-8b-instruct"
+        }
+      ],
+      "notes": "BGE-M3 is the embedding model on this tier (not in the complexity ladder)",
+      "routing_resolved": [
+        {
+          "band": "trivial",
+          "prefer": "phi-3-mini-ternary",
+          "model": {
+            "kind": "model",
+            "id": "phi-3-mini-ternary",
+            "name": "Phi-3-Mini-Ternary",
+            "family": "phi",
+            "params": "3.8B",
+            "quantization": "ternary",
+            "roles": [
+              "general"
+            ],
+            "tiers": [
+              "cpu"
+            ],
+            "source": null,
+            "confidence": "medium",
+            "notes": ""
+          }
+        },
+        {
+          "band": "simple",
+          "prefer": "ternlm-3-8b-instruct",
+          "model": {
+            "kind": "model",
+            "id": "ternlm-3-8b-instruct",
+            "name": "TernLM-3-8B-Instruct",
+            "family": "other",
+            "params": "8B",
+            "quantization": "bitnet-1.58",
+            "roles": [
+              "chat",
+              "general"
+            ],
+            "tiers": [
+              "cpu"
+            ],
+            "source": null,
+            "confidence": "medium",
+            "notes": "1.58-bit"
+          }
+        }
+      ]
+    },
+    {
+      "id": "orchestrator-cpu",
+      "name": "Orchestrator (CPU)",
+      "task": "orchestration",
+      "selections": {
+        "cpu": [
+          "gemma-4-litert-2b",
+          "spectra-trilm-3.9b",
+          "ternalm3-15b-instruct"
+        ]
+      },
+      "routing": [
+        {
+          "band": "simple",
+          "prefer": "gemma-4-litert-2b"
+        },
+        {
+          "band": "moderate",
+          "prefer": "spectra-trilm-3.9b"
+        },
+        {
+          "band": "hard",
+          "prefer": "ternalm3-15b-instruct"
+        }
+      ],
+      "notes": "",
+      "routing_resolved": [
+        {
+          "band": "simple",
+          "prefer": "gemma-4-litert-2b",
+          "model": {
+            "kind": "model",
+            "id": "gemma-4-litert-2b",
+            "name": "Gemma-4-LiteRt-2B",
+            "family": "gemma",
+            "params": "2B",
+            "quantization": "native",
+            "roles": [
+              "orchestration"
+            ],
+            "tiers": [
+              "cpu"
+            ],
+            "source": null,
+            "confidence": "medium",
+            "notes": "LiteRT"
+          }
+        },
+        {
+          "band": "moderate",
+          "prefer": "spectra-trilm-3.9b",
+          "model": {
+            "kind": "model",
+            "id": "spectra-trilm-3.9b",
+            "name": "Spectra-TriLM-3.9B",
+            "family": "other",
+            "params": "3.9B",
+            "quantization": "ternary",
+            "roles": [
+              "orchestration"
+            ],
+            "tiers": [
+              "cpu"
+            ],
+            "source": null,
+            "confidence": "medium",
+            "notes": "TriLM = ternary"
+          }
+        },
+        {
+          "band": "hard",
+          "prefer": "ternalm3-15b-instruct",
+          "model": {
+            "kind": "model",
+            "id": "ternalm3-15b-instruct",
+            "name": "TernaLM3-15B-Instruct",
+            "family": "other",
+            "params": "15B",
+            "quantization": "ternary",
+            "roles": [
+              "orchestration",
+              "instruct"
+            ],
+            "tiers": [
+              "cpu"
+            ],
+            "source": null,
+            "confidence": "medium",
+            "notes": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "analysis",
+      "name": "Analysis",
+      "task": "analysis",
+      "selections": {
+        "rtx-pro": [
+          "bitnet-70b-132k-context"
+        ]
+      },
+      "routing": [
+        {
+          "band": "hard",
+          "prefer": "bitnet-70b-132k-context"
+        }
+      ],
+      "notes": "long-context analysis on RTX Pro",
+      "routing_resolved": [
+        {
+          "band": "hard",
+          "prefer": "bitnet-70b-132k-context",
+          "model": {
+            "kind": "model",
+            "id": "bitnet-70b-132k-context",
+            "name": "BitNet-70B-132k-Context",
+            "family": "bitnet",
+            "params": "70B",
+            "quantization": "bitnet-1.58",
+            "roles": [
+              "analysis",
+              "long-context"
+            ],
+            "tiers": [
+              "rtx-pro"
+            ],
+            "source": null,
+            "confidence": "medium",
+            "context_window": 132000,
+            "notes": "132k context window (named in source)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "agents",
+      "name": "Agents",
+      "task": "agents",
+      "selections": {
+        "cpu": [
+          "ternarylm-132m",
+          "trm-recursive-reasoner"
+        ],
+        "rtx-4090": [
+          "llama-3-tiny-3b",
+          "mistral-tiny-3b",
+          "nexus-spec-1.1b",
+          "deepseek-r1-ternary-8b"
+        ],
+        "rtx-pro": [
+          "mistral-ternary-3x-70b"
+        ]
+      },
+      "routing": [
+        {
+          "band": "trivial",
+          "prefer": "ternarylm-132m"
+        },
+        {
+          "band": "simple",
+          "prefer": "llama-3-tiny-3b"
+        },
+        {
+          "band": "moderate",
+          "prefer": "deepseek-r1-ternary-8b"
+        },
+        {
+          "band": "expert",
+          "prefer": "mistral-ternary-3x-70b"
+        }
+      ],
+      "notes": "CPU fallback: TernaryLM-132M ou TRM-Recursive-Reasoner",
+      "routing_resolved": [
+        {
+          "band": "trivial",
+          "prefer": "ternarylm-132m",
+          "model": {
+            "kind": "model",
+            "id": "ternarylm-132m",
+            "name": "TernaryLM-132M",
+            "family": "other",
+            "params": "132M",
+            "quantization": "ternary",
+            "roles": [
+              "agent"
+            ],
+            "tiers": [
+              "cpu"
+            ],
+            "source": null,
+            "confidence": "low",
+            "notes": "CPU agent fallback (ou TRM-Recursive-Reasoner)"
+          }
+        },
+        {
+          "band": "simple",
+          "prefer": "llama-3-tiny-3b",
+          "model": {
+            "kind": "model",
+            "id": "llama-3-tiny-3b",
+            "name": "Llama-3-Tiny-3B",
+            "family": "llama",
+            "params": "3B",
+            "quantization": "ternary",
+            "roles": [
+              "agent"
+            ],
+            "tiers": [
+              "rtx-4090"
+            ],
+            "source": null,
+            "confidence": "medium",
+            "notes": ""
+          }
+        },
+        {
+          "band": "moderate",
+          "prefer": "deepseek-r1-ternary-8b",
+          "model": {
+            "kind": "model",
+            "id": "deepseek-r1-ternary-8b",
+            "name": "Deepseek-R1-Ternary-8B",
+            "family": "deepseek",
+            "params": "8B",
+            "quantization": "ternary",
+            "roles": [
+              "reasoning",
+              "analysis"
+            ],
+            "tiers": [
+              "rtx-4090"
+            ],
+            "source": null,
+            "confidence": "medium",
+            "notes": "a size was scribbled out before 8B in source"
+          }
+        },
+        {
+          "band": "expert",
+          "prefer": "mistral-ternary-3x-70b",
+          "model": {
+            "kind": "replicated",
+            "id": "mistral-ternary-3x-70b",
+            "name": "Mistral-Ternary 3x70B",
+            "factor": 3,
+            "members": [],
+            "notes": "RTX Pro agents tier \u2014 3x a 70B ternary Mistral. Base not separately cataloged yet (distinct from mistral-large-ternary-80b).",
+            "member_records": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "reasoning-validation",
+      "name": "Reasoning / validation",
+      "task": "reasoning",
+      "selections": {
+        "rtx-4090": [
+          "document-ternary-3b",
+          "recursive-ref-validator-2b",
+          "llama-3-thought-8b",
+          "openthinking-7b"
+        ]
+      },
+      "routing": [
+        {
+          "band": "simple",
+          "prefer": "recursive-ref-validator-2b"
+        },
+        {
+          "band": "moderate",
+          "prefer": "openthinking-7b"
+        },
+        {
+          "band": "hard",
+          "prefer": "llama-3-thought-8b"
+        }
+      ],
+      "notes": "the boxed reasoning/validation cluster",
+      "routing_resolved": [
+        {
+          "band": "simple",
+          "prefer": "recursive-ref-validator-2b",
+          "model": {
+            "kind": "model",
+            "id": "recursive-ref-validator-2b",
+            "name": "Recursive-Ref-Validator-2B",
+            "family": "other",
+            "params": "2B",
+            "quantization": "ternary",
+            "roles": [
+              "validation",
+              "reasoning"
+            ],
+            "tiers": [
+              "rtx-4090"
+            ],
+            "source": null,
+            "confidence": "medium",
+            "notes": ""
+          }
+        },
+        {
+          "band": "moderate",
+          "prefer": "openthinking-7b",
+          "model": {
+            "kind": "model",
+            "id": "openthinking-7b",
+            "name": "OpenThinking-7B",
+            "family": "other",
+            "params": "7B",
+            "quantization": "unknown",
+            "roles": [
+              "reasoning"
+            ],
+            "tiers": [
+              "rtx-4090"
+            ],
+            "source": null,
+            "confidence": "medium",
+            "notes": ""
+          }
+        },
+        {
+          "band": "hard",
+          "prefer": "llama-3-thought-8b",
+          "model": {
+            "kind": "model",
+            "id": "llama-3-thought-8b",
+            "name": "Llama-3-thought-8B",
+            "family": "llama",
+            "params": "8B",
+            "quantization": "ternary",
+            "roles": [
+              "reasoning"
+            ],
+            "tiers": [
+              "rtx-4090"
+            ],
+            "source": null,
+            "confidence": "medium",
+            "notes": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "dna",
+      "name": "DNA / genomics",
+      "task": "dna",
+      "selections": {
+        "rtx-4090": [
+          "evo-arc-institute",
+          "hyenadna"
+        ],
+        "rtx-pro": [
+          "rosettafold-all-atom"
+        ]
+      },
+      "routing": [
+        {
+          "band": "moderate",
+          "prefer": "hyenadna"
+        },
+        {
+          "band": "hard",
+          "prefer": "evo-arc-institute"
+        },
+        {
+          "band": "expert",
+          "prefer": "rosettafold-all-atom"
+        }
+      ],
+      "notes": "4090: Evo ou HyenaDNA; RTX Pro: RoseTTAFold All-Atom",
+      "routing_resolved": [
+        {
+          "band": "moderate",
+          "prefer": "hyenadna",
+          "model": {
+            "kind": "model",
+            "id": "hyenadna",
+            "name": "HyenaDNA",
+            "family": "other",
+            "params": null,
+            "quantization": "native",
+            "roles": [
+              "dna",
+              "genomics"
+            ],
+            "tiers": [
+              "rtx-4090"
+            ],
+            "source": null,
+            "confidence": "high",
+            "notes": "alternative to Evo"
+          }
+        },
+        {
+          "band": "hard",
+          "prefer": "evo-arc-institute",
+          "model": {
+            "kind": "model",
+            "id": "evo-arc-institute",
+            "name": "Evo (Arc Institute)",
+            "family": "other",
+            "params": null,
+            "quantization": "native",
+            "roles": [
+              "dna",
+              "genomics"
+            ],
+            "tiers": [
+              "rtx-4090"
+            ],
+            "source": null,
+            "confidence": "high",
+            "notes": "ou HyenaDNA"
+          }
+        },
+        {
+          "band": "expert",
+          "prefer": "rosettafold-all-atom",
+          "model": {
+            "kind": "model",
+            "id": "rosettafold-all-atom",
+            "name": "RoseTTAFold All-Atom (RFAA)",
+            "family": "other",
+            "params": null,
+            "quantization": "native",
+            "roles": [
+              "dna",
+              "structure-prediction"
+            ],
+            "tiers": [
+              "rtx-pro"
+            ],
+            "source": null,
+            "confidence": "high",
+            "notes": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "protein",
+      "name": "Protein folding",
+      "task": "protein",
+      "selections": {
+        "rtx-4090": [
+          "alphafold3",
+          "esmfold",
+          "openfold"
+        ],
+        "rtx-pro": [
+          "alphafold3"
+        ]
+      },
+      "routing": [
+        {
+          "band": "moderate",
+          "prefer": "esmfold"
+        },
+        {
+          "band": "hard",
+          "prefer": "openfold"
+        },
+        {
+          "band": "expert",
+          "prefer": "alphafold3"
+        }
+      ],
+      "notes": "AlphaFold3 ou ESMFold ou OpenFold (accuracy/cost ladder)",
+      "routing_resolved": [
+        {
+          "band": "moderate",
+          "prefer": "esmfold",
+          "model": {
+            "kind": "model",
+            "id": "esmfold",
+            "name": "ESMFold",
+            "family": "other",
+            "params": null,
+            "quantization": "native",
+            "roles": [
+              "protein",
+              "structure-prediction"
+            ],
+            "tiers": [
+              "rtx-4090"
+            ],
+            "source": null,
+            "confidence": "high",
+            "notes": "alternative to AlphaFold3"
+          }
+        },
+        {
+          "band": "hard",
+          "prefer": "openfold",
+          "model": {
+            "kind": "model",
+            "id": "openfold",
+            "name": "OpenFold",
+            "family": "other",
+            "params": null,
+            "quantization": "native",
+            "roles": [
+              "protein",
+              "structure-prediction"
+            ],
+            "tiers": [
+              "rtx-4090"
+            ],
+            "source": null,
+            "confidence": "high",
+            "notes": "alternative to AlphaFold3"
+          }
+        },
+        {
+          "band": "expert",
+          "prefer": "alphafold3",
+          "model": {
+            "kind": "model",
+            "id": "alphafold3",
+            "name": "AlphaFold3",
+            "family": "other",
+            "params": null,
+            "quantization": "native",
+            "roles": [
+              "protein",
+              "structure-prediction"
+            ],
+            "tiers": [
+              "rtx-pro",
+              "rtx-4090"
+            ],
+            "source": null,
+            "confidence": "high",
+            "notes": "ou ESMFold ou OpenFold"
+          }
+        }
+      ]
+    },
+    {
+      "id": "particles",
+      "name": "Particle / physics sim",
+      "task": "particles",
+      "selections": {
+        "rtx-4090": [
+          "warp-lang"
+        ],
+        "rtx-pro": [
+          "warp-lang"
+        ]
+      },
+      "routing": [
+        {
+          "band": "moderate",
+          "prefer": "warp-lang"
+        }
+      ],
+      "notes": "NVIDIA Warp differentiable sim (not an LLM)",
+      "routing_resolved": [
+        {
+          "band": "moderate",
+          "prefer": "warp-lang",
+          "model": {
+            "kind": "model",
+            "id": "warp-lang",
+            "name": "Warp-Lang (NVIDIA)",
+            "family": "other",
+            "params": null,
+            "quantization": "native",
+            "roles": [
+              "particles",
+              "physics-sim"
+            ],
+            "tiers": [
+              "rtx-4090",
+              "rtx-pro"
+            ],
+            "source": null,
+            "confidence": "high",
+            "notes": "NVIDIA Warp differentiable sim, not an LLM"
+          }
+        }
+      ]
+    },
+    {
+      "id": "specialists",
+      "name": "Specialist models",
+      "task": "specialist",
+      "selections": {
+        "cpu": [
+          "linux-kernel-tiny-1.5b",
+          "llama-ternary-context-1b"
+        ],
+        "rtx-4090": [
+          "tiny-ternary-ui-3b",
+          "hive-gate-7b",
+          "trm-logic-validator-2b",
+          "owasp-ternary-3b",
+          "hackerlm-tiny-3b",
+          "logic-loop-8b"
+        ],
+        "rtx-pro": [
+          "bitnet-math-expert-30b",
+          "codellama-ternary-34b",
+          "mistral-large-ternary-80b"
+        ]
+      },
+      "notes": "specialty routing by role: kernel, math, ui, coordination, logic-validation, security, long-context, code, large-general",
+      "routing_resolved": []
+    }
+  ]
+}
