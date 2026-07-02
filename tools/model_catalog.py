@@ -162,6 +162,7 @@ def validate(catalog: dict[str, list[dict]] | None = None) -> tuple[list[str], l
             tier_counts[t] += 1
 
     status_counts = Counter(derived_status(m) for m in models)
+    base_backed = sum(1 for m in models if m.get("base_model"))
 
     summary = {
         "models": len(model_ids),
@@ -171,6 +172,7 @@ def validate(catalog: dict[str, list[dict]] | None = None) -> tuple[list[str], l
         "by_quantization": dict(quant_counts),
         "by_tier": dict(tier_counts),
         "by_status": dict(status_counts),
+        "base_backed": base_backed,
     }
     return errors, warnings, summary
 
@@ -232,6 +234,7 @@ def _print_summary(summary: dict) -> None:
     print(f"  by quantization: {summary['by_quantization']}")
     print(f"  by tier: {summary['by_tier']}")
     print(f"  by status: {summary['by_status']}")
+    print(f"  base-backed (real base, quant is a target): {summary['base_backed']}")
 
 
 def main(argv: list[str]) -> int:

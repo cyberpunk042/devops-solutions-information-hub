@@ -111,8 +111,9 @@
         "cpu"
       ],
       "source": null,
+      "base_model": "microsoft/Phi-3-mini-4k-instruct",
       "confidence": "medium",
-      "notes": "",
+      "notes": "base verified real on HF 2026-07-02 (3821M); ternary quant is a target",
       "status": "unverified"
     },
     {
@@ -167,8 +168,9 @@
         "rtx-pro"
       ],
       "source": null,
+      "base_model": "meta-llama/Llama-3.1-8B",
       "confidence": "medium",
-      "notes": "",
+      "notes": "base verified real on HF 2026-07-02 (8030M, gated); ternary quant is a target",
       "status": "unverified"
     },
     {
@@ -327,8 +329,9 @@
         "rtx-4090"
       ],
       "source": null,
+      "base_model": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
       "confidence": "medium",
-      "notes": "a size was scribbled out before 8B in source",
+      "notes": "a size was scribbled out before 8B in source; base verified real on HF 2026-07-02 (8030M); ternary quant is a target",
       "status": "unverified"
     },
     {
@@ -611,8 +614,9 @@
         "rtx-pro"
       ],
       "source": null,
+      "base_model": "Qwen/Qwen2.5-32B",
       "confidence": "low",
-      "notes": "leading token uncertain (Ent/it?)",
+      "notes": "leading token uncertain (Ent/it?); base Qwen2.5-32B verified real on HF 2026-07-02 (32764M); trit-uniform quant is a target",
       "status": "unverified"
     },
     {
@@ -769,8 +773,9 @@
         "cpu"
       ],
       "source": null,
+      "base_model": "microsoft/Phi-3-mini-4k-instruct",
       "confidence": "medium",
-      "notes": "",
+      "notes": "security-tuned Phi-3-mini; base verified real on HF 2026-07-02; the ternary + security-tune is a target",
       "status": "unverified"
     },
     {
@@ -966,8 +971,9 @@
         "rtx-pro"
       ],
       "source": null,
+      "base_model": "codellama/CodeLlama-34b-Instruct-hf",
       "confidence": "medium",
-      "notes": "",
+      "notes": "base verified real on HF 2026-07-02 (33744M); ternary quant is a target",
       "status": "unverified"
     },
     {
@@ -984,8 +990,9 @@
         "rtx-pro"
       ],
       "source": null,
-      "confidence": "medium",
-      "notes": "",
+      "base_model": "mistralai/Mistral-Large-Instruct-2411",
+      "confidence": "low",
+      "notes": "base verified real on HF 2026-07-02 but is 123B (122610M), not 80B \u2014 the '80B' is a misremembered size; ternary quant is a target",
       "status": "unverified"
     }
   ],
@@ -1061,8 +1068,9 @@
             "rtx-pro"
           ],
           "source": null,
+          "base_model": "Qwen/Qwen2.5-32B",
           "confidence": "low",
-          "notes": "leading token uncertain (Ent/it?)",
+          "notes": "leading token uncertain (Ent/it?); base Qwen2.5-32B verified real on HF 2026-07-02 (32764M); trit-uniform quant is a target",
           "status": "unverified"
         },
         {
@@ -1237,8 +1245,9 @@
             "cpu"
           ],
           "source": null,
+          "base_model": "microsoft/Phi-3-mini-4k-instruct",
           "confidence": "medium",
-          "notes": "",
+          "notes": "security-tuned Phi-3-mini; base verified real on HF 2026-07-02; the ternary + security-tune is a target",
           "status": "unverified"
         },
         {
@@ -1437,8 +1446,9 @@
               "cpu"
             ],
             "source": null,
+            "base_model": "microsoft/Phi-3-mini-4k-instruct",
             "confidence": "medium",
-            "notes": "",
+            "notes": "base verified real on HF 2026-07-02 (3821M); ternary quant is a target",
             "status": "unverified"
           }
         },
@@ -1707,8 +1717,9 @@
               "rtx-4090"
             ],
             "source": null,
+            "base_model": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
             "confidence": "medium",
-            "notes": "a size was scribbled out before 8B in source",
+            "notes": "a size was scribbled out before 8B in source; base verified real on HF 2026-07-02 (8030M); ternary quant is a target",
             "status": "unverified"
           }
         },

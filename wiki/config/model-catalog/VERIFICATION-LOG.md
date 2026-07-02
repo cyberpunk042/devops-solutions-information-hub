@@ -56,3 +56,38 @@ resolve differently:
 Rule: only ever move a model to `real` with a confirmed `source`, or to
 `aspirational` after a lookup finds nothing. Absent a check, it stays
 `unverified`.
+
+## 2026-07-02 — second pass (base models for bucket 1)
+
+Verified the real BASE models behind the `-ternary` quantization targets and
+recorded each via a new `base_model` field. The variant itself stays
+`unverified` (the quantized artifact isn't a published repo), but is now
+**actionable** — you know exactly what to quantize.
+
+| catalog id | verified base (HF) | base params |
+|---|---|---|
+| phi-3-mini-ternary, security-phi-3-mini | `microsoft/Phi-3-mini-4k-instruct` | 3821M |
+| codellama-ternary-34b | `codellama/CodeLlama-34b-Instruct-hf` | 33744M |
+| deepseek-r1-ternary-8b | `deepseek-ai/DeepSeek-R1-Distill-Llama-8B` | 8030M |
+| qwen25-32b-trit-uniform | `Qwen/Qwen2.5-32B` | 32764M |
+| llama3-8b-ternary | `meta-llama/Llama-3.1-8B` | 8030M (gated) |
+| mistral-large-ternary-80b | `mistralai/Mistral-Large-Instruct-2411` | **122610M (123B, not 80B — size corrected)** |
+
+Fleet now: 11 real · 2 aspirational · 42 unverified (**7 of the unverified are
+base-backed** — real upstream known, quant is the only open step).
+
+**Still open (bucket 2 — likely aspirational, need a HF search to confirm
+absence):** `hive-gate-7b`, `hackerlm-tiny-3b`, `nexus-spec-1.1b`,
+`prism-ml-ternary-bonsai-70b`, `trm-logic-validator-2b`, `trm-recursive-reasoner`,
+`logic-loop-8b`, `tiny-ternary-ui-3b`, `ternalm3-15b-instruct`, `ternlm-3-8b-instruct`,
+`rlm-code-reasoner-8b`, `thinking-machines-interaction-1b`, `document-ternary-3b`,
+`recursive-ref-validator-2b`, `bitnet-math-expert-30b`, `linux-kernel-tiny-1.5b`,
+`llama-ternary-context-1b`, `bash-tiny-coder-1b`, `flex-prompt-tiny-1b`,
+`owasp-ternary-3b`, `ternarylm-132m`, `nexus-spec-1.1b`, `zihan-wang-coe`,
+`xinyuan-t-moe-8x7b`, `qwen-coder-ternary`, `llama-3-tiny-3b`, `mistral-tiny-3b`,
+`mistral-2b-ternary`, `llama-3-thought-8b`, `gemma-4-litert-2b`, `deepseek-v3-ternary`,
+`qwen25-coder-72b-158`.
+
+**Bucket 3 (not HF-loadable models):** `rosettafold-all-atom`, `alphafold3`,
+`openfold` (GitHub/DeepMind code), `warp-lang` (NVIDIA Python lib) — record their
+real home, not an HF id.

@@ -29,7 +29,8 @@ deliberately additive and reshapeable.
   quantization: ternary | bitnet-1.58 | fp16 | int8 | native | unknown
   roles: [coding, chat, embedding, reasoning, agent, orchestration, analysis, security, ...]
   tiers: [cpu, rtx-4090, rtx-pro]  # hardware tiers this model targets
-  source: "hf-org/repo"            # HuggingFace repo when known, else null
+  source: "hf-org/repo"            # HuggingFace repo of THIS model, when it exists, else null
+  base_model: "hf-org/repo"        # for a quantized/derived variant: the real base to quantize
   confidence: high | medium | low  # low = uncertain handwriting reading / tentative
   status: real | aspirational | unverified   # does this model actually EXIST?
   notes: "free text — alternatives (ou X), scribbled sizes, provenance caveats"
@@ -47,6 +48,11 @@ deliberately additive and reshapeable.
 The three perf fields are **optional and honest**: omit them rather than invent
 a number. They exist so measured values have a home and so the routing layer can
 prefer a model that fits VRAM / needs the context window when the data is present.
+
+`base_model` records the confirmed-real upstream for a `-ternary` / quantized
+entry whose own quantized artifact isn't (yet) a published repo: the base exists,
+the quant is a target. Such an entry keeps `status: unverified` (the variant
+itself is unconfirmed) but is *actionable* — you know exactly what to quantize.
 
 `status` is the **reality check** for a handwriting-seeded catalog:
 `real` (confirmed to exist upstream — HF repo or famous research model),
