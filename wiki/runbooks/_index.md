@@ -93,6 +93,8 @@ Operator-facing runbook navigation home for the selfdef + sovereign-os productio
 | [metrics ingest lag (/metrics under-counting)](metrics-ingest-lag.md) | SelfdefMetricsIngestLag fires — the metrics-ingest subscriber dropped bus events (bus over-subscribed), so /metrics counters under-count and other counter-based alerts may silently not fire |
 | [correlator bus lag (missed detections)](metrics-correlator-lag.md) | SelfdefCorrelatorBusLag fires — the correlator subscriber dropped raw events (bus over-subscribed), so those events were never rule-evaluated and produced no finding at all (a detection gap, not just a metrics gap) |
 | [responder bus lag (no action fired)](metrics-responder-lag.md) | SelfdefResponderBusLag fires — the responder subscriber dropped findings (bus over-subscribed), so no autonomous block/quarantine/notify action fired for them (a response gap) |
+| [responder circuit breaker tripped (rate cap)](responder-circuit-breaker-tripped.md) | SelfdefResponderCircuitBreakerTripped fires — the GLOBAL destructive-action rate cap hit `[responder].max_destructive_actions_per_min` and suppressed further destructive actions (flood breaker; F-2026-114 split it from routine dedup) |
+| [federated destructive action refused (fail-closed gate)](federated-destructive-action-refused.md) | SelfdefFederatedDestructiveActionRefused fires — with `[responder].act_on_federated = false`, a destructive action was refused for a finding whose trigger arrived from another host via the NATS bridge (F-2026-111) |
 
 ## Detection-watchdog + doctrine
 
