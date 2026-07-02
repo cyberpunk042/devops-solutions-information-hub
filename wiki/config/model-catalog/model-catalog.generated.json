@@ -59,9 +59,9 @@
         "rtx-4090"
       ],
       "source": null,
+      "status": "aspirational",
       "confidence": "medium",
-      "notes": "",
-      "status": "unverified"
+      "notes": ""
     },
     {
       "id": "ternlm-3-8b-instruct",
@@ -77,9 +77,9 @@
         "cpu"
       ],
       "source": null,
+      "status": "aspirational",
       "confidence": "medium",
-      "notes": "1.58-bit",
-      "status": "unverified"
+      "notes": "1.58-bit"
     },
     {
       "id": "bge-m3",
@@ -194,7 +194,7 @@
     {
       "id": "prism-ml-ternary-bonsai-70b",
       "name": "Prism-ML-Ternary-Bonsai-70B",
-      "family": "other",
+      "family": "qwen",
       "params": "70B",
       "quantization": "ternary",
       "roles": [
@@ -205,9 +205,10 @@
         "rtx-pro"
       ],
       "source": null,
+      "base_model": "prism-ml/Ternary-Bonsai-8B-unpacked",
       "confidence": "medium",
-      "notes": "PrismML Ternary Bonsai line",
-      "status": "unverified"
+      "status": "aspirational",
+      "notes": "prism-ml/Ternary-Bonsai is a REAL line (verified on HF 2026-07-02: 1.7B/4B/8B unpacked + gguf + mlx-2bit, Qwen3-based, ternary/1.58-bit) \u2014 but the LARGEST is 8B, not 70B. The 70B size is aspirational; base_model points at the real 8B."
     },
     {
       "id": "deepseek-v3-ternary",
@@ -277,9 +278,9 @@
         "cpu"
       ],
       "source": null,
+      "status": "aspirational",
       "confidence": "medium",
-      "notes": "",
-      "status": "unverified"
+      "notes": ""
     },
     {
       "id": "bitnet-70b-132k-context",
@@ -314,9 +315,9 @@
         "rtx-4090"
       ],
       "source": null,
+      "status": "aspirational",
       "confidence": "low",
-      "notes": "",
-      "status": "unverified"
+      "notes": ""
     },
     {
       "id": "deepseek-r1-ternary-8b",
@@ -386,9 +387,9 @@
         "cpu"
       ],
       "source": null,
+      "status": "aspirational",
       "confidence": "low",
-      "notes": "CPU agent fallback (ou TRM-Recursive-Reasoner)",
-      "status": "unverified"
+      "notes": "CPU agent fallback (ou TRM-Recursive-Reasoner)"
     },
     {
       "id": "trm-recursive-reasoner",
@@ -404,9 +405,9 @@
         "cpu"
       ],
       "source": null,
+      "status": "aspirational",
       "confidence": "low",
-      "notes": "CPU agent fallback alternative to TernaryLM-132M",
-      "status": "unverified"
+      "notes": "CPU agent fallback alternative to TernaryLM-132M"
     },
     {
       "id": "rosettafold-all-atom",
@@ -585,9 +586,9 @@
         "rtx-4090"
       ],
       "source": null,
+      "status": "aspirational",
       "confidence": "medium",
-      "notes": "",
-      "status": "unverified"
+      "notes": ""
     },
     {
       "id": "openthinking-7b",
@@ -655,9 +656,9 @@
         "rtx-pro"
       ],
       "source": null,
+      "status": "aspirational",
       "confidence": "low",
-      "notes": "mixture-of-experts architecture (8 experts x 7B); also a group model \u2014 see groups.yaml",
-      "status": "unverified"
+      "notes": "mixture-of-experts architecture (8 experts x 7B); also a group model \u2014 see groups.yaml"
     },
     {
       "id": "falcon3-10b-158bit-prequantized",
@@ -708,9 +709,9 @@
         "rtx-pro"
       ],
       "source": null,
+      "status": "aspirational",
       "confidence": "low",
-      "notes": "reading uncertain",
-      "status": "unverified"
+      "notes": "reading uncertain"
     },
     {
       "id": "qwen25-coder-72b-158",
@@ -833,9 +834,9 @@
         "rtx-pro"
       ],
       "source": null,
+      "status": "aspirational",
       "confidence": "medium",
-      "notes": "",
-      "status": "unverified"
+      "notes": ""
     },
     {
       "id": "tiny-ternary-ui-3b",
@@ -851,9 +852,9 @@
         "rtx-4090"
       ],
       "source": null,
+      "status": "aspirational",
       "confidence": "medium",
-      "notes": "",
-      "status": "unverified"
+      "notes": ""
     },
     {
       "id": "hive-gate-7b",
@@ -869,9 +870,9 @@
         "rtx-4090"
       ],
       "source": null,
+      "status": "aspirational",
       "confidence": "low",
-      "notes": "",
-      "status": "unverified"
+      "notes": ""
     },
     {
       "id": "trm-logic-validator-2b",
@@ -887,9 +888,9 @@
         "rtx-4090"
       ],
       "source": null,
+      "status": "aspirational",
       "confidence": "medium",
-      "notes": "",
-      "status": "unverified"
+      "notes": ""
     },
     {
       "id": "owasp-ternary-3b",
@@ -923,9 +924,9 @@
         "rtx-4090"
       ],
       "source": null,
+      "status": "aspirational",
       "confidence": "medium",
-      "notes": "",
-      "status": "unverified"
+      "notes": ""
     },
     {
       "id": "llama-ternary-context-1b",
@@ -1026,9 +1027,9 @@
             "rtx-pro"
           ],
           "source": null,
+          "status": "aspirational",
           "confidence": "low",
-          "notes": "mixture-of-experts architecture (8 experts x 7B); also a group model \u2014 see groups.yaml",
-          "status": "unverified"
+          "notes": "mixture-of-experts architecture (8 experts x 7B); also a group model \u2014 see groups.yaml"
         }
       ]
     },
@@ -1082,7 +1083,7 @@
         {
           "id": "prism-ml-ternary-bonsai-70b",
           "name": "Prism-ML-Ternary-Bonsai-70B",
-          "family": "other",
+          "family": "qwen",
           "params": "70B",
           "quantization": "ternary",
           "roles": [
@@ -1093,9 +1094,10 @@
             "rtx-pro"
           ],
           "source": null,
+          "base_model": "prism-ml/Ternary-Bonsai-8B-unpacked",
           "confidence": "medium",
-          "notes": "PrismML Ternary Bonsai line",
-          "status": "unverified"
+          "status": "aspirational",
+          "notes": "prism-ml/Ternary-Bonsai is a REAL line (verified on HF 2026-07-02: 1.7B/4B/8B unpacked + gguf + mlx-2bit, Qwen3-based, ternary/1.58-bit) \u2014 but the LARGEST is 8B, not 70B. The 70B size is aspirational; base_model points at the real 8B."
         },
         {
           "id": "1bitllm-bitnet-b158-large",
@@ -1128,9 +1130,9 @@
             "rtx-pro"
           ],
           "source": null,
+          "status": "aspirational",
           "confidence": "low",
-          "notes": "mixture-of-experts architecture (8 experts x 7B); also a group model \u2014 see groups.yaml",
-          "status": "unverified"
+          "notes": "mixture-of-experts architecture (8 experts x 7B); also a group model \u2014 see groups.yaml"
         },
         {
           "id": "falcon3-10b-158bit-prequantized",
@@ -1181,9 +1183,9 @@
             "rtx-pro"
           ],
           "source": null,
+          "status": "aspirational",
           "confidence": "low",
-          "notes": "reading uncertain",
-          "status": "unverified"
+          "notes": "reading uncertain"
         },
         {
           "id": "qwen25-coder-72b-158",
@@ -1396,7 +1398,7 @@
             "record_type": "model",
             "id": "prism-ml-ternary-bonsai-70b",
             "name": "Prism-ML-Ternary-Bonsai-70B",
-            "family": "other",
+            "family": "qwen",
             "params": "70B",
             "quantization": "ternary",
             "roles": [
@@ -1407,9 +1409,10 @@
               "rtx-pro"
             ],
             "source": null,
+            "base_model": "prism-ml/Ternary-Bonsai-8B-unpacked",
             "confidence": "medium",
-            "notes": "PrismML Ternary Bonsai line",
-            "status": "unverified"
+            "status": "aspirational",
+            "notes": "prism-ml/Ternary-Bonsai is a REAL line (verified on HF 2026-07-02: 1.7B/4B/8B unpacked + gguf + mlx-2bit, Qwen3-based, ternary/1.58-bit) \u2014 but the LARGEST is 8B, not 70B. The 70B size is aspirational; base_model points at the real 8B."
           }
         }
       ]
@@ -1478,9 +1481,9 @@
               "cpu"
             ],
             "source": null,
+            "status": "aspirational",
             "confidence": "medium",
-            "notes": "1.58-bit",
-            "status": "unverified"
+            "notes": "1.58-bit"
           }
         }
       ]
@@ -1575,9 +1578,9 @@
               "cpu"
             ],
             "source": null,
+            "status": "aspirational",
             "confidence": "medium",
-            "notes": "",
-            "status": "unverified"
+            "notes": ""
           }
         }
       ]
@@ -1681,9 +1684,9 @@
               "cpu"
             ],
             "source": null,
+            "status": "aspirational",
             "confidence": "low",
-            "notes": "CPU agent fallback (ou TRM-Recursive-Reasoner)",
-            "status": "unverified"
+            "notes": "CPU agent fallback (ou TRM-Recursive-Reasoner)"
           }
         },
         {
@@ -1839,9 +1842,9 @@
               "rtx-4090"
             ],
             "source": null,
+            "status": "aspirational",
             "confidence": "medium",
-            "notes": "",
-            "status": "unverified"
+            "notes": ""
           }
         }
       ]

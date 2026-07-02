@@ -115,3 +115,29 @@ base-backed**. Bucket 2 remaining is the clearly-coined names
 `owasp-ternary-3b`, `ternarylm-132m`, `zihan-wang-coe`, `xinyuan-t-moe-8x7b`,
 `llama-3-thought-8b`, `mistral-2b-ternary`) — these need a HF *search* to confirm
 absence before flipping to `aspirational`.
+
+## 2026-07-02 — fourth pass (bucket 2, search-to-refute)
+
+Searched HF for the distinctive coined names. Method: `hub_repo_search`;
+`No repositories found` (or no near-name match) = evidence of absence → flip to
+`aspirational`.
+
+**One REAL find:** `prism-ml/Ternary-Bonsai` is a genuine, active HF line —
+`prism-ml/Ternary-Bonsai-{1.7B,4B,8B}-unpacked` + gguf + mlx-2bit (Qwen3-based,
+ternary/1.58-bit) — but the **largest is 8B, not 70B**. `prism-ml-ternary-bonsai-70b`
+→ `aspirational` for the 70B size, `base_model: prism-ml/Ternary-Bonsai-8B-unpacked`.
+
+**Searched → not found → flipped to `aspirational`:** `trm-recursive-reasoner`,
+`trm-logic-validator-2b`, `ternarylm-132m`, `hackerlm-tiny-3b`,
+`xinyuan-t-moe-8x7b`, `bitnet-math-expert-30b`, `hive-gate-7b`, `nexus-spec-1.1b`,
+`tiny-ternary-ui-3b`, `zihan-wang-coe`, `thinking-machines-interaction-1b`,
+`ternlm-3-8b-instruct`, `ternalm3-15b-instruct`, `llama-3-thought-8b`.
+
+**Still `unverified` (coined specialist tinies, not yet each searched by name):**
+`rlm-code-reasoner-8b`, `document-ternary-3b`, `recursive-ref-validator-2b`,
+`linux-kernel-tiny-1.5b`, `llama-ternary-context-1b`, `bash-tiny-coder-1b`,
+`flex-prompt-tiny-1b`, `owasp-ternary-3b`, `logic-loop-8b`, `mistral-2b-ternary`
+(a generic "ternary UI code specialist tiny" search returned nothing; kept
+`unverified` rather than asserted, pending a per-name search).
+
+Fleet: **11 real · 18 aspirational · 26 unverified · 14 base-backed.**

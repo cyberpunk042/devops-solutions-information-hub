@@ -35,6 +35,7 @@ models:
     roles: [interaction]
     tiers: [rtx-4090]
     source: null
+    status: aspirational
     confidence: medium
     notes: ""
 
@@ -47,6 +48,7 @@ models:
     roles: [chat, general]
     tiers: [cpu]
     source: null
+    status: aspirational
     confidence: medium
     notes: "1.58-bit"
   - id: bge-m3
@@ -118,14 +120,16 @@ models:
     notes: "size digit uncertain in source"
   - id: prism-ml-ternary-bonsai-70b
     name: "Prism-ML-Ternary-Bonsai-70B"
-    family: other
+    family: qwen
     params: "70B"
     quantization: ternary
     roles: [general, coding]
     tiers: [rtx-pro]
     source: null
+    base_model: "prism-ml/Ternary-Bonsai-8B-unpacked"
     confidence: medium
-    notes: "PrismML Ternary Bonsai line"
+    status: aspirational
+    notes: "prism-ml/Ternary-Bonsai is a REAL line (verified on HF 2026-07-02: 1.7B/4B/8B unpacked + gguf + mlx-2bit, Qwen3-based, ternary/1.58-bit) — but the LARGEST is 8B, not 70B. The 70B size is aspirational; base_model points at the real 8B."
   - id: deepseek-v3-ternary
     name: "Deepseek-V3-Ternary (PT²-LLM)"
     family: deepseek
@@ -169,6 +173,7 @@ models:
     roles: [orchestration, instruct]
     tiers: [cpu]
     source: null
+    status: aspirational
     confidence: medium
     notes: ""
 
@@ -195,6 +200,7 @@ models:
     roles: [analysis, speculative-draft]
     tiers: [rtx-4090]
     source: null
+    status: aspirational
     confidence: low
     notes: ""
   - id: deepseek-r1-ternary-8b
@@ -238,6 +244,7 @@ models:
     roles: [agent]
     tiers: [cpu]
     source: null
+    status: aspirational
     confidence: low
     notes: "CPU agent fallback (ou TRM-Recursive-Reasoner)"
   - id: trm-recursive-reasoner
@@ -248,6 +255,7 @@ models:
     roles: [agent, reasoning]
     tiers: [cpu]
     source: null
+    status: aspirational
     confidence: low
     notes: "CPU agent fallback alternative to TernaryLM-132M"
 
@@ -359,6 +367,7 @@ models:
     roles: [reasoning]
     tiers: [rtx-4090]
     source: null
+    status: aspirational
     confidence: medium
     notes: ""
   - id: openthinking-7b
@@ -404,6 +413,7 @@ models:
     roles: [merge-base, general]
     tiers: [rtx-pro]
     source: null
+    status: aspirational
     confidence: low
     notes: "mixture-of-experts architecture (8 experts x 7B); also a group model — see groups.yaml"
   - id: falcon3-10b-158bit-prequantized
@@ -436,6 +446,7 @@ models:
     roles: [merge-base]
     tiers: [rtx-pro]
     source: null
+    status: aspirational
     confidence: low
     notes: "reading uncertain"
   - id: qwen25-coder-72b-158
@@ -511,6 +522,7 @@ models:
     roles: [specialist, math]
     tiers: [rtx-pro]
     source: null
+    status: aspirational
     confidence: medium
     notes: ""
   - id: tiny-ternary-ui-3b
@@ -521,6 +533,7 @@ models:
     roles: [specialist, ui]
     tiers: [rtx-4090]
     source: null
+    status: aspirational
     confidence: medium
     notes: ""
   - id: hive-gate-7b
@@ -531,6 +544,7 @@ models:
     roles: [specialist, coordination]
     tiers: [rtx-4090]
     source: null
+    status: aspirational
     confidence: low
     notes: ""
   - id: trm-logic-validator-2b
@@ -541,6 +555,7 @@ models:
     roles: [specialist, logic-validation]
     tiers: [rtx-4090]
     source: null
+    status: aspirational
     confidence: medium
     notes: ""
   - id: owasp-ternary-3b
@@ -561,6 +576,7 @@ models:
     roles: [specialist, security]
     tiers: [rtx-4090]
     source: null
+    status: aspirational
     confidence: medium
     notes: ""
   - id: llama-ternary-context-1b
