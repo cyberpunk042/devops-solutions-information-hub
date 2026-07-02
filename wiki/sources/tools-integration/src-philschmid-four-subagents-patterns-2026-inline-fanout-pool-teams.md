@@ -101,7 +101,7 @@ Phil Schmid's 2026-05-05 follow-up to his earlier subagents post catalogues **fo
 
 > [!success] **Pattern 4 (Teams) requires frontier-class for EVERY agent — economic + capability gate.**
 >
-> *"Every agent in the team needs frontier-class model capabilities, not just the main agent."* This is the highest-cost pattern. Schmid lists infrastructure challenges: cycle detection (A waits B, B waits A), conflict resolution (two agents edit same file), shutdown coordination, debugging difficulty. **Operator-mission application**: **defer Pattern 4 until model + infrastructure mature**. The operator's M002 (specialist LoRA) approach gives Pattern 3 capability with smaller models; Pattern 4 is post-RTX-3090 + post-frontier-model territory.
+> *"Every agent in the team needs frontier-class model capabilities, not just the main agent."* This is the highest-cost pattern. Schmid lists infrastructure challenges: cycle detection (A waits B, B waits A), conflict resolution (two agents edit same file), shutdown coordination, debugging difficulty. **Operator-mission application**: **defer Pattern 4 until model + infrastructure mature**. The operator's M002 (specialist LoRA) approach gives Pattern 3 capability with smaller models; Pattern 4 is post-RTX-4090 + post-frontier-model territory.
 
 > [!success] **Pattern choice maps onto workload-class — not aspirational sophistication.**
 >
@@ -202,8 +202,8 @@ Pattern 1 is no longer aspirational — it has a concrete implementation pathway
 > [!question] Should the operator's Custom-Tailored Model Group adopt Pattern 3 (Agent Pool) for M002 specialist routing?
 > Current AICP routing (per [project_activated_stack_2026_04_23](memory)) is closer to Pattern 2 (fan-out per request, no stateful per-task continuity). Migrating to Pattern 3 would let specialist LoRAs retain conversation context across multi-step workflows. Engineering cost: ~50-100 LOC AICP backend extension. Operator-decision per workload class (single-shot inference fits P2; multi-turn workflows benefit from P3).
 
-> [!question] Is Pattern 4 (Teams) worth pursuing pre-frontier-model-availability OR is it post-RTX-3090 + post-Phase-7 territory?
-> Schmid: every agent needs frontier-tier capability. Operator's RTX 3090 (mid-May 2026 ETA) + Custom-Model Phase-2 specialist LoRA give Pattern 3 capability; Pattern 4 likely post-Phase-7 (multi-version ecosystem propagation). Default proposal: register Pattern 4 as future-state; do not pursue at MVP scope.
+> [!question] Is Pattern 4 (Teams) worth pursuing pre-frontier-model-availability OR is it post-RTX-4090 + post-Phase-7 territory?
+> Schmid: every agent needs frontier-tier capability. Operator's RTX 4090 (mid-May 2026 ETA) + Custom-Model Phase-2 specialist LoRA give Pattern 3 capability; Pattern 4 likely post-Phase-7 (multi-version ecosystem propagation). Default proposal: register Pattern 4 as future-state; do not pursue at MVP scope.
 
 > [!question] Does Phil Schmid's pattern quartet apply to non-Anthropic ecosystems (OpenAI Assistants API, LangGraph, Multica)?
 > Schmid's vocabulary is implementation-neutral. The pattern surface (call vs spawn vs send vs cross-agent send) is general; specific implementations vary. Adoption posture: track per-ecosystem implementation maturity; the pattern names ARE the cross-ecosystem vocabulary.

@@ -176,7 +176,7 @@ For the operator's mission specifically:
 | Harness | Claude Code · OpenCode · Codex · Kimi · ... | ✅ Already in operator's toolchain |
 | Provider routing | AICP backend pattern + OpenRouter + Ollama Cloud | ✅ Already validated ($540 → $100 finding) |
 | Generation (long-context) | RLM-Qwen3-8B (`mit-oasys/rlm-qwen3-8b-v0.1`) | ✅ Confirmed live, Phase-1 deployable |
-| Generation (tier-0 dense) | Qwen3.6-27B at UD-IQ2 | ✅ Confirmed runnable on incoming RTX 3090 |
+| Generation (tier-0 dense) | Qwen3.6-27B at UD-IQ2 | ✅ Confirmed runnable on incoming RTX 4090 |
 
 Every layer has open-source-substitute paper or repo evidence. **The wiki's mission claim is empirically traceable end-to-end across orchestrator + harness + provider + generation now**, not just harness + provider + generation.
 
@@ -190,9 +190,9 @@ Every layer has open-source-substitute paper or repo evidence. **The wiki's miss
 > |---|---|---|---|
 > | **A: Trial via Homebrew + cloud (free tier)** | $0 | ~10 min install | Multica orchestrating Claude Code / OpenCode locally, board UX, agent-as-teammate model. State coordination on multica.ai cloud; code stays local. |
 > | **B: Self-host via Docker Compose** | $0 cash; ~hour to set up | Tighter data sovereignty (state and code both local), but more ops burden | Same product, fully on-prem |
-> | **C: Defer until 3090 lands** | $0 | 2-3 weeks | Adopt Multica AFTER hardware capability is in hand, when the multi-runtime use case is compelling |
+> | **C: Defer until 4090 lands** | $0 | 2-3 weeks | Adopt Multica AFTER hardware capability is in hand, when the multi-runtime use case is compelling |
 >
-> **Recommendation**: trial Path A on existing hardware (Multica is harness-orchestrating, not compute-intensive itself). The operator can run it now, see the team-coordination UX with Claude Code + OpenCode, and decide whether the orchestrator layer adds enough value before the 3090-driven Phase-1 routing deployment lands. If yes, switch to self-host (Path B) when AICP routing comes online. **No money commitment at any decision gate.**
+> **Recommendation**: trial Path A on existing hardware (Multica is harness-orchestrating, not compute-intensive itself). The operator can run it now, see the team-coordination UX with Claude Code + OpenCode, and decide whether the orchestrator layer adds enough value before the 4090-driven Phase-1 routing deployment lands. If yes, switch to self-host (Path B) when AICP routing comes online. **No money commitment at any decision gate.**
 
 ## Comparison to Adjacent Tools
 

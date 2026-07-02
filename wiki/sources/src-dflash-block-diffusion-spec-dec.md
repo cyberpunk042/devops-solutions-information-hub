@@ -33,7 +33,7 @@ sources:
     url: "https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/"
   - id: dflash-luce-rits
     type: article
-    url: "https://rits.shanghai.nyu.edu/ai/luce-dflash-brings-2x-speculative-decoding-to-qwen3-6-27b-on-a-single-rtx-3090/"
+    url: "https://rits.shanghai.nyu.edu/ai/luce-dflash-brings-2x-speculative-decoding-to-qwen3-6-27b-on-a-single-rtx-4090/"
   - id: operator-dflash-framing
     type: directive
     file: "raw/notes/2026-05-15-user-directive-sain01-info-hub-ingestion.md"
@@ -78,7 +78,7 @@ DFlash (Z-Lab, February 2026) is a speculative-decoding framework that replaces 
 
 8. **The framework is backend-agnostic.** Native support spans **Transformers** (`uv pip install -e ".[transformers]"`), **SGLang** (`uv pip install -e ".[sglang]"`), **vLLM v0.20.1+** (with specialized builds; Docker recommended for Gemma 4), and **MLX for Apple Silicon** (`pip install -e ".[mlx]"`). This makes it operationally viable across most deployment regimes; the SAIN-01 architecture's vLLM-on-Blackwell deployment can use it without backend lock-in. (dflash-github-z-lab)
 
-9. **DFlash on a single RTX 3090 hits ~2× on Qwen3.6-27B.** A community writeup ("Luce DFlash") shows the technique scales down from datacenter GPUs to consumer hardware — bringing 2× speedup to a 27B-parameter model on a single 24GB GPU. Relevant for SAIN-01: the RTX 3090 (24GB) is the secondary GPU in the dual-GPU layout; DFlash on the 3090 could deliver real-world speedups for the "Logic Engine" tier without saturating the Blackwell. (dflash-luce-rits)
+9. **DFlash on a single RTX 4090 hits ~2× on Qwen3.6-27B.** A community writeup ("Luce DFlash") shows the technique scales down from datacenter GPUs to consumer hardware — bringing 2× speedup to a 27B-parameter model on a single 24GB GPU. Relevant for SAIN-01: the RTX 4090 (24GB) is the secondary GPU in the dual-GPU layout; DFlash on the 4090 could deliver real-world speedups for the "Logic Engine" tier without saturating the Blackwell. (dflash-luce-rits)
 
 10. **Baseten's production implementation reports ~3× on Qwen3-8B / B200 across benchmarks.** Baseten's customer-facing blog gives a slightly more conservative measurement than Z-Lab's research benchmarks — 3× across various benchmarks rather than 5×+ on the headline benchmarks. This is the realistic-deployment number, not the synthetic-best number; useful for capacity planning. (dflash-baseten-blog)
 
@@ -126,10 +126,10 @@ This makes DFlash a tier-specific acceleration: deploy it on the inference paths
 | SAIN-01 tier | Hardware | Native runtime in dump | DFlash relevance |
 |---|---|---|---|
 | **Conductor Agent** | CPU CCD 0 | `bitnet.cpp` ternary | None — DFlash is GPU/draft+target; doesn't apply to CPU-pinned ternary inference |
-| **Logic Engine** | RTX 3090 (24GB) | quantized mid-scale model | **High** — community writeup confirms 2× on Qwen3.6-27B on a single 3090; ideal for parsing + structured output |
+| **Logic Engine** | RTX 4090 (24GB) | quantized mid-scale model | **High** — community writeup confirms 2× on Qwen3.6-27B on a single 4090; ideal for parsing + structured output |
 | **Oracle Core** | Blackwell PRO 6000 (96GB) | FP16 or high-precision large model | **Conditional** — high on math/code reasoning tasks; lower on free-form long-form generation |
 
-The dump's Profile 2 + Profile 3 don't reference DFlash because the dump's runtime profiles predate (or omit) it. A revised Profile-4 or augmented Profile-2/3 would integrate DFlash on the Blackwell and 3090 paths for code/math workloads — see the planned `wiki/comparisons/cmp-dflash-vs-eagle3-vs-medusa.md` page.
+The dump's Profile 2 + Profile 3 don't reference DFlash because the dump's runtime profiles predate (or omit) it. A revised Profile-4 or augmented Profile-2/3 would integrate DFlash on the Blackwell and 4090 paths for code/math workloads — see the planned `wiki/comparisons/cmp-dflash-vs-eagle3-vs-medusa.md` page.
 
 ### Constraints + caveats
 
@@ -156,7 +156,7 @@ EAGLE-3 remains the right comparison baseline for any future speculative-decodin
 
 ## Open Questions
 
-- What's DFlash's behavior on the SAIN-01 dual-GPU topology? The Z-Lab benchmarks are single-GPU (B200 or 3090); how does block-diffusion drafting interact with `--tensor-parallel-size 2` across Blackwell + 3090?
+- What's DFlash's behavior on the SAIN-01 dual-GPU topology? The Z-Lab benchmarks are single-GPU (B200 or 4090); how does block-diffusion drafting interact with `--tensor-parallel-size 2` across Blackwell + 4090?
 - Does the speedup hold on Q4-quantized targets (Profile 2's "Llama-3-70B at Q4_K_M")? Smaller targets have proportionally smaller verification cost, which may shift the speculative arithmetic.
 - The operator's "doesn't work on creative tasks" framing is sourced from his direct experience and matches the paper — does this mean the SAIN-01 architecture should *not* deploy DFlash on the Oracle Core for general conversational reasoning? A bench-versus-pure-FP16 comparison on long-form generation is worth running before deployment.
 - The Z-Lab roadmap includes DeepSeek-V4-Flash + DeepSeek-V4-Pro — these align with the dump's Profile 3 "DeepSeek-V3-Quant" reference. Future migration path: when DeepSeek-V4-Flash ships, the operator's deep-reasoner tier could swap to V4 + DFlash for code-heavy workloads.
@@ -174,7 +174,7 @@ EAGLE-3 remains the right comparison baseline for any future speculative-decodin
 
 ## Source Notes
 
-This synthesis draws from the arXiv paper (abstract via HF paper_search), the z-lab/dflash GitHub README (operationally definitive on supported models + backends + license), the Z-Lab project page (benchmark numbers), Baseten's production-deployment blog (realistic-deployment numbers), the Spheron blog (independent third-party writeup of the 6× claim), Google Developers Blog (TPU-side confirmation that diffusion-style speculative decoding generalizes beyond NVIDIA), the Luce DFlash community writeup (RTX 3090 single-GPU validation), and the operator's first-hand framing from the SAIN-01 ingestion directive.
+This synthesis draws from the arXiv paper (abstract via HF paper_search), the z-lab/dflash GitHub README (operationally definitive on supported models + backends + license), the Z-Lab project page (benchmark numbers), Baseten's production-deployment blog (realistic-deployment numbers), the Spheron blog (independent third-party writeup of the 6× claim), Google Developers Blog (TPU-side confirmation that diffusion-style speculative decoding generalizes beyond NVIDIA), the Luce DFlash community writeup (RTX 4090 single-GPU validation), and the operator's first-hand framing from the SAIN-01 ingestion directive.
 
 Confidence is rated **high** for the architectural claims (block-diffusion drafting, bidirectional attention, comparison to EAGLE-3, lossless guarantee), the supported-model list, and the directional benchmark pattern (math/code > conversational). Confidence is **medium** for the specific speedup numbers — the Z-Lab benchmarks are research-grade and the Baseten production benchmarks are more conservative; the realistic-deployment number is closer to 3× than 6× on Qwen3-8B/B200.
 

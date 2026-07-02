@@ -66,7 +66,7 @@ Before starting this path, you should have read OR be prepared to read in parall
 - [Anti-Vendor-Lock-In Lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) — at least Evidence 1, 8, 11 (mission claim baseline)
 - [Trust-Layer Concept](../../domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md) — composes with this arc
 
-If pre-3090 (which is the operator's stack as of 2026-05-04, 3090 ETA mid-May 2026): treat this learning path as **future-state architecture** — Phase 0 toolchain bootstrap is hardware-blocked.
+If pre-4090 (which is the operator's stack as of 2026-05-04, 4090 ETA mid-May 2026): treat this learning path as **future-state architecture** — Phase 0 toolchain bootstrap is hardware-blocked.
 
 ## Sequence
 
@@ -129,7 +129,7 @@ The arc is navigable in 7 goals (A–G), totaling ~90 minutes for full internali
 **Read in this order:**
 
 1. **[Trust-Layer Concept](../../domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md)** § L0–L4 Integration Levers (the trust opt-ins).
-2. **[Custom-Tailored Model Group Concept § Composition with Trust + Compression](../../domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md)** — the orthogonality claim and default L2 stance on RTX 3090.
+2. **[Custom-Tailored Model Group Concept § Composition with Trust + Compression](../../domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md)** — the orthogonality claim and default L2 stance on RTX 4090.
 3. **[AI Model/Provider/Harness Decision Matrix 2026 § Custom-Model Layer](../../spine/references/ai-model-provider-harness-decision-matrix-2026.md)** — the C0–C5 opt-ins matrix and the 5-axis composability stack diagram.
 
 **Self-check after Goal E:** can the same custom model run at L0 (no encryption) for development and L3 (NVIDIA CC mode) for production-grade workloads? (Answer: yes — opt-ins compose forward; operator picks per workload.)
@@ -174,18 +174,18 @@ The arc is navigable in 7 goals (A–G), totaling ~90 minutes for full internali
 After completing the 7 goals in sequence, the reader will:
 
 - **Understand the operator-authored design** — model group + recreated intelligence layer + composition orthogonality with trust + compression layers; the 80-90% composition math (Caveman ~75–90% prompt × UD-IQ2/Q2_K ~87.5% weights × KV-cache 50–87% × cypher overlay +0%); the 7-phase realistic rollout
-- **Recognize the strategic-tier scope** — milestone-class epic with 6 candidate modules M001–M006, $0 cash budget for the L2 path on RTX 3090, 4 weeks critical-path target post-3090-delivery for `v0.1-seed`
+- **Recognize the strategic-tier scope** — milestone-class epic with 6 candidate modules M001–M006, $0 cash budget for the L2 path on RTX 4090, 4 weeks critical-path target post-4090-delivery for `v0.1-seed`
 - **Position the work in the mission claim** — candidate 5-layer empirical (custom-model × trust × orchestrator × harness × provider); Option A (provider axis) vs Option B (5th layer) operator-decision pending in M006
 - **Know how the new epic nests E012** — Wiki-Router becomes input-boundary intelligence-layer router; Wiki-Assistant becomes a small-LoRA specialist; E012 stays P2 tactical alongside the new P0 strategic-tier epic
 - **Apply the spec-driven methodology to the model-creation workflow** — preference data + instruction data + constitution as version-controlled specs; verification checklist per LoRA; closed-loop sync rule (fix preference data first, then re-train)
 - **Trace the pain-point root cause** through the layered configuration stack (system → project → harness → ecosystem → model weights) and understand why baking standards into the weights is the *solution at the right place*
 - **Be ready to confirm operator-decision items** in M006 (layer count, module ordering, base choice, propagation channel, constitution authoring, behavior-test thresholds, pain-point reduction metric, root-ghostproxy registration)
 
-## Implementation Sequence (post-RTX 3090 delivery)
+## Implementation Sequence (post-RTX 4090 delivery)
 
-> [!info] When operator commits to Phase 0 (RTX 3090 in hand, ~mid-May 2026 ETA)
+> [!info] When operator commits to Phase 0 (RTX 4090 in hand, ~mid-May 2026 ETA)
 >
-> 1. **Wire toolchain** — Unsloth + prime-rl + Triton on RTX 3090 (M001 Phase 0)
+> 1. **Wire toolchain** — Unsloth + prime-rl + Triton on RTX 4090 (M001 Phase 0)
 > 2. **Author preference data v0.1** — operator-curated hack-vs-right pairs from the wiki's existing lessons + raw/notes operator-corrections corpus (M001 Phase 1)
 > 3. **Author constitution v0.1** — operator's standards as alignment-by-constitution document (M001 Phase 1)
 > 4. **First specialist LoRA train** — pick base, DPO/IPO loss, rank 32–64 (M002 Phase 2 → `v0.1-seed`)

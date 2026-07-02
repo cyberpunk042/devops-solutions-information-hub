@@ -72,7 +72,7 @@ sources:
   - id: unsloth-synthesis
     type: wiki
     file: wiki/sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md
-    description: "Consumer-hardware fine-tune substrate — LoRA + UD-IQ2 / Q2_K; the realistic training environment on RTX 3090"
+    description: "Consumer-hardware fine-tune substrate — LoRA + UD-IQ2 / Q2_K; the realistic training environment on RTX 4090"
   - id: dpo-paper
     type: documentation
     url: https://arxiv.org/abs/2305.18290
@@ -100,7 +100,7 @@ tags: [epic, p0, custom-model, senior-engineer-tier, moe-group, intelligence-lay
 
 ## Summary
 
-Operator-authored 2026-05-04: build the **senior-engineer-tier customized model group + recreated intelligence layer at I/O boundaries** that extends the post-Anthropic mission with operator-controlled model customization. The pipeline composes: (a) **a group of customizations on open-weight bases** — Mixture-of-LoRAs and/or MoE-base fine-tunes per task class with size variance per latency budget; (b) **operator's behavioral-alignment core** — preference data over hack-vs-right outputs, instruction data, and a constitution-as-Markdown encoding the operator's standards; (c) **a recreated intelligence layer at I/O boundaries** — input-boundary routing/compression/spec-loading/context-selection/tool-use planning + output-boundary schema-gating/self-verification/methodology-compliance/hallucination-detection, expressed as Python-as-programming hyperstructure on top of Markdown-as-IaC; (d) **multi-version release discipline** — per-version manifest, maturity ladder (`v0.1-seed` · `v0.5-growing` · `v1.0-validated`), no auto-promotion; (e) **information-virus propagation** to sister projects (OpenArms · OpenFleet · AICP · devops-control-plane · root-ghostproxy when operator registers it) so methodology spreads by weight not just by prose; (f) **operator-toggle-able composition with the trust + compression layers** — L0–L4 trust opt-ins per workload, with/without I/O compression. The model group runs natively on the operator's incoming RTX 3090 (mid-May 2026 ETA) at L2 default; cloud H100 rental is opt-in for larger-base experiments. **This epic is strategic-tier and milestone-class** — operator framed the scope as *"massive project, really long"* — and **NESTS the existing tactical [E012 Custom Model Library](E012-custom-model-library-unsloth-loras.md)** (P2 LoRA library) without replacing it. The mission claim it delivers: a candidate substitutable axis WITHIN the provider layer (operator-authored vs vendor-supplied) OR a candidate 5th substitutable layer (model-customization / operator-authored-tier) — **operator-design call** captured in the open questions below.
+Operator-authored 2026-05-04: build the **senior-engineer-tier customized model group + recreated intelligence layer at I/O boundaries** that extends the post-Anthropic mission with operator-controlled model customization. The pipeline composes: (a) **a group of customizations on open-weight bases** — Mixture-of-LoRAs and/or MoE-base fine-tunes per task class with size variance per latency budget; (b) **operator's behavioral-alignment core** — preference data over hack-vs-right outputs, instruction data, and a constitution-as-Markdown encoding the operator's standards; (c) **a recreated intelligence layer at I/O boundaries** — input-boundary routing/compression/spec-loading/context-selection/tool-use planning + output-boundary schema-gating/self-verification/methodology-compliance/hallucination-detection, expressed as Python-as-programming hyperstructure on top of Markdown-as-IaC; (d) **multi-version release discipline** — per-version manifest, maturity ladder (`v0.1-seed` · `v0.5-growing` · `v1.0-validated`), no auto-promotion; (e) **information-virus propagation** to sister projects (OpenArms · OpenFleet · AICP · devops-control-plane · root-ghostproxy when operator registers it) so methodology spreads by weight not just by prose; (f) **operator-toggle-able composition with the trust + compression layers** — L0–L4 trust opt-ins per workload, with/without I/O compression. The model group runs natively on the operator's incoming RTX 4090 (mid-May 2026 ETA) at L2 default; cloud H100 rental is opt-in for larger-base experiments. **This epic is strategic-tier and milestone-class** — operator framed the scope as *"massive project, really long"* — and **NESTS the existing tactical [E012 Custom Model Library](E012-custom-model-library-unsloth-loras.md)** (P2 LoRA library) without replacing it. The mission claim it delivers: a candidate substitutable axis WITHIN the provider layer (operator-authored vs vendor-supplied) OR a candidate 5th substitutable layer (model-customization / operator-authored-tier) — **operator-design call** captured in the open questions below.
 
 ## Operator Directive (verbatim, sacrosanct)
 
@@ -132,20 +132,20 @@ The root, named: alignment overhead is paid repeatedly at fresh-environment sess
 - **Recreated intelligence layer at I/O boundaries** — input boundary (routing + Caveman compression + context selection + spec loading + tool-use planning) and output boundary (schema gate + self-verification + methodology compliance + hallucination detection) as Python hyperstructure
 - **Multi-version release discipline** — per-version manifest of base + LoRA + preference data + instruction data + constitution + composition; maturity ladder (`v0.1-seed` → `v0.5-growing` → `v1.0-validated`); no auto-promotion (operator review required)
 - **Information-virus ecosystem propagation** — sister-project consumers (OpenArms · OpenFleet · AICP · devops-control-plane · root-ghostproxy when registered) inherit operator's standards by weight; per-consumer integration documented
-- **Composition with trust + compression layers** — operator-toggle-able L0–L4 opt-ins (per [Trust-Layer Epic](secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04.md)); default L2 on RTX 3090 (compressed-encrypted weights + on-GPU decypher via Triton + Caveman input-prompt compression); operator-decision per workload
+- **Composition with trust + compression layers** — operator-toggle-able L0–L4 opt-ins (per [Trust-Layer Epic](secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04.md)); default L2 on RTX 4090 (compressed-encrypted weights + on-GPU decypher via Triton + Caveman input-prompt compression); operator-decision per workload
 - **Pain-point reduction empirically measured** — fresh-environment session-start time-to-first-quality-output reduced vs Opus 4.x baseline; the *"shouldn't have to be so long and hard or repetitive"* property validated, not just declared
 - **Mission-claim extension** — Anti-vendor-lock-in lesson Evidence 12 (operator-decision: substitutable axis WITHIN provider layer OR 5th substitutable layer) propagated through the wiki's mission-claim chain
 - **E012 nesting clean** — Wiki-Router (E012 D) becomes the input-boundary intelligence-layer router; Wiki-Assistant (E012 A) becomes one of the small-LoRA specialists; E012 stays P2 tactical; this epic stays P0 strategic; no duplicate work
 
 ## Done When
 
-- [ ] Phase 0 toolchain wired on RTX 3090 — Unsloth + prime-rl + Triton reproducible training environment
+- [ ] Phase 0 toolchain wired on RTX 4090 — Unsloth + prime-rl + Triton reproducible training environment
 - [ ] Phase 1 data discipline shipped — `data/preferences/v0.1.jsonl` + `data/instructions/v0.1.jsonl` + `constitution-v0.1.md` (operator-authored)
 - [ ] First operator-tier specialist LoRA `v0.1-seed` deployed — operator picks base; deployable via Ollama; AICP-routable
 - [ ] Mixture-of-LoRAs group expanded — at least 3 specialist LoRAs (coding · methodology-reasoning · validation-checking) operator-graded on held-out tests
 - [ ] Recreated intelligence layer operational — input-boundary routing + Caveman compression + spec loading + output-boundary schema gate + self-verification + methodology compliance, all Python-implemented
 - [ ] Behavioral preference fine-tune — DPO/IPO over operator-curated hack-vs-right pairs; the *"naturally WANT to do things right"* property empirically validated on held-out tests (operator-graded; ≥80% behavior-test pass rate target — operator confirms threshold)
-- [ ] Trust + compression composition wired — L2 default on RTX 3090 per [Trust-Layer Epic M001](secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04.md); operator-toggle for L0/L3/L4 verified
+- [ ] Trust + compression composition wired — L2 default on RTX 4090 per [Trust-Layer Epic M001](secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04.md); operator-toggle for L0/L3/L4 verified
 - [ ] Multi-version manifest + release discipline operational — `v0.1-seed` shipped with full manifest (base + LoRAs + preference data + instruction data + constitution + composition); maturity-ladder review process documented
 - [ ] Information-virus propagation to ≥2 sister-project consumers documented — operator picks (likely AICP routing tier + one of OpenArms/OpenFleet/devops-control-plane/root-ghostproxy)
 - [ ] Pain-point reduction measured — fresh-environment time-to-first-quality-output baseline (Opus 4.x) vs custom model group (`v0.5-growing` or later) on at least 3 representative task classes
@@ -164,11 +164,11 @@ The root, named: alignment overhead is paid repeatedly at fresh-environment sess
 > | **Quality tier** | Skyscraper (full process — strategic-tier + mission-class + multi-version) |
 > | **Estimated modules** | 6 (M001–M006) |
 > | **Estimated tasks** | 30–40 across all phases |
-> | **Critical-path target** | `v0.1-seed` first specialist LoRA within ~6 weeks of RTX 3090 delivery (mid-May → late June 2026) |
+> | **Critical-path target** | `v0.1-seed` first specialist LoRA within ~6 weeks of RTX 4090 delivery (mid-May → late June 2026) |
 > | **`v0.5-growing` target** | Multi-LoRA group + intelligence layer + behavioral preference fine-tune within ~4 months of v0.1-seed |
 > | **`v1.0-validated` target** | Operator-decision; not date-bound; depends on held-out evaluation pass rate |
-> | **Cash budget (Phases 0–4 on RTX 3090)** | $0 — Unsloth open-source · prime-rl Apache 2.0 · Triton via OpenAI · base models from HuggingFace · all run on RTX 3090 |
-> | **Cash budget (Phase 5 behavioral preference fine-tune)** | $0 on RTX 3090 (12–48 hours) OR ~$48–100 cloud-H100-rental per cycle (4–12 H100 hours, per RLM-Qwen3-8B precedent) — operator-decision per cycle |
+> | **Cash budget (Phases 0–4 on RTX 4090)** | $0 — Unsloth open-source · prime-rl Apache 2.0 · Triton via OpenAI · base models from HuggingFace · all run on RTX 4090 |
+> | **Cash budget (Phase 5 behavioral preference fine-tune)** | $0 on RTX 4090 (12–48 hours) OR ~$48–100 cloud-H100-rental per cycle (4–12 H100 hours, per RLM-Qwen3-8B precedent) — operator-decision per cycle |
 > | **Cash budget (Phase 6 + 7 trust composition + ecosystem propagation)** | $0 — composes with existing infrastructure |
 
 ## Candidate Module Breakdown
@@ -177,16 +177,16 @@ The root, named: alignment overhead is paid repeatedly at fresh-environment sess
 
 | Module (candidate) | Delivers | Phase | Est. Tasks |
 |---|---|---|---|
-| **M001 — Toolchain + Data Discipline + Constitution v0.1** | Phase 0 + Phase 1 combined: Unsloth + prime-rl + Triton on RTX 3090; `data/preferences/v0.1.jsonl` from operator-curated hack-vs-right pairs; `data/instructions/v0.1.jsonl` from wiki corpus + operator-authored; `constitution-v0.1.md` (parallels CLAUDE.md scope; small enough to fit single context window during training) | Phase 1 — post-3090 (mid-May 2026 onward) | 5–6 |
+| **M001 — Toolchain + Data Discipline + Constitution v0.1** | Phase 0 + Phase 1 combined: Unsloth + prime-rl + Triton on RTX 4090; `data/preferences/v0.1.jsonl` from operator-curated hack-vs-right pairs; `data/instructions/v0.1.jsonl` from wiki corpus + operator-authored; `constitution-v0.1.md` (parallels CLAUDE.md scope; small enough to fit single context window during training) | Phase 1 — post-4090 (mid-May 2026 onward) | 5–6 |
 | **M002 — First Specialist LoRA + Group Expansion** | Phase 2 + Phase 3 combined: pick base (operator-decision: Qwen3.6-27B at UD-IQ2 / RLM-Qwen3-8B / Qwen3-Coder / merge); train first specialist LoRA `v0.1-seed`; held-out evaluation; expand to Mixture-of-LoRAs across senior-engineer task surfaces (coding · methodology-reasoning · validation-checking · etc.) | Phase 1 | 6–8 |
 | **M003 — Recreated Intelligence Layer at I/O Boundaries** | Phase 4: input boundary (routing + Caveman compression + spec loading + context selection + tool-use planning) + output boundary (schema gate + self-verification + methodology compliance + hallucination detection); Python-as-programming hyperstructure on top of Markdown-as-IaC; AICP integration | Phase 1 — parallelizable with M002 after M001 | 5–7 |
 | **M004 — Behavioral Preference Fine-Tune (DPO / IPO)** | Phase 5 — the highest-leverage module: operator-curated preference pairs (hack-vs-right outputs); DPO/IPO loss via prime-rl; `naturally WANT to do things right` property empirically validated; this is what makes the model behaviorally distinct from base | Phase 1 close — depends on M001 + M002 group | 4–6 |
-| **M005 — Trust + Compression Composition Wiring** | Phase 6: L2 default on RTX 3090 (compressed-encrypted weights + on-GPU decypher via Triton + Caveman input-prompt compression); operator-toggle for L0/L3/L4 verified; composes per [Trust-Layer Epic M001](secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04.md) without architectural coupling | Phase 1 close — parallelizable after Trust-Layer M001 | 3–4 |
+| **M005 — Trust + Compression Composition Wiring** | Phase 6: L2 default on RTX 4090 (compressed-encrypted weights + on-GPU decypher via Triton + Caveman input-prompt compression); operator-toggle for L0/L3/L4 verified; composes per [Trust-Layer Epic M001](secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04.md) without architectural coupling | Phase 1 close — parallelizable after Trust-Layer M001 | 3–4 |
 | **M006 — Multi-Version Release Discipline + Ecosystem Propagation + Mission Update** | Phase 7: per-version manifest; maturity ladder; no-auto-promotion review; sister-project consumer integration (≥2 of: AICP routing tier · OpenArms · OpenFleet · devops-control-plane · root-ghostproxy when registered); pain-point reduction measured; Anti-vendor-lock-in Evidence 12 added; post-Anthropic milestone amended | Phase 2 — after `v0.5-growing` reached | 4–6 |
 
 ## Dependencies
 
-- **Hardware (M001–M005)**: RTX 3090 delivery (~mid-May 2026, ordered 2026-04-27). All training-side modules begin on delivery.
+- **Hardware (M001–M005)**: RTX 4090 delivery (~mid-May 2026, ordered 2026-04-27). All training-side modules begin on delivery.
 - **Hardware (M004 cloud option)**: Optional H100 cloud rental for larger-base preference fine-tune cycles — operator-decision per cycle, not date-bound.
 - **Predecessor epic — composes**: [Trust-Layer Epic](secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04.md) M001 (L2 reference pipeline); M005 of this epic depends on the L2 substrate.
 - **Predecessor epic — composes**: [Post-Anthropic 3-Layer Stack Epic](post-anthropic-stack-3-layer-assembly-multica-aicp-3090.md) — orchestrator (Multica) + harness (Claude Code / OpenCode) + provider (AICP) layers route to the custom model group.
@@ -212,7 +212,7 @@ The wiki's [Anti-Vendor-Lock-In Lesson](../../../lessons/01_drafts/anti-vendor-l
 > Candidates: (a) Qwen3.6-27B at UD-IQ2 (proven senior-engineer-tier; fits 24 GB VRAM); (b) RLM-Qwen3-8B (RLM-substrate-aware; smaller; recursive-paradigm-trained); (c) Qwen3-Coder family (purpose-built for coding); (d) merge of multiple via TIES. Operator picks based on workload class.
 
 > [!question] MoE-as-architecture vs Mixture-of-LoRAs — pick one or both?
-> Pattern (1) MoE-architecture: pick existing MoE base (Mixtral · DeepSeek V3 · Qwen3-30B-A3B), fine-tune. Pattern (2) Mixture-of-LoRAs: small specialized LoRAs composed via routing. Pattern (2) is operator-feasible on RTX 3090; Pattern (1) larger-infrastructure. Both can coexist (LoRA over MoE base).
+> Pattern (1) MoE-architecture: pick existing MoE base (Mixtral · DeepSeek V3 · Qwen3-30B-A3B), fine-tune. Pattern (2) Mixture-of-LoRAs: small specialized LoRAs composed via routing. Pattern (2) is operator-feasible on RTX 4090; Pattern (1) larger-infrastructure. Both can coexist (LoRA over MoE base).
 
 > [!question] "Information virus" propagation channel — distribution mechanism?
 > Options: (a) bundled with each sister project's `setup --connect`; (b) Multica-deployable artifact (any harness routes to it); (c) HuggingFace publish (`cyberpunk042/operator-tier-coding-v0.1` etc.); (d) operator-internal only. Operator-decision per workload class and openness preference.
@@ -246,7 +246,7 @@ The wiki's [Anti-Vendor-Lock-In Lesson](../../../lessons/01_drafts/anti-vendor-l
 - BUILDS ON: [[src-prime-intellect-prime-rl-async-rl-training-at-scale|prime-rl Synthesis]] — Apache 2.0 training framework
 - BUILDS ON: [[src-unsloth-fast-lora-consumer-hardware|Unsloth Synthesis]] — consumer-hardware fine-tune substrate
 - BUILDS ON: [[src-qwopus-claude-opus-reasoning-distilled-qwen-27b|Qwopus Synthesis]] — distillation precedent
-- BUILDS ON: [[2026-consumer-hardware-ai-stack|2026 Consumer Hardware AI Stack]] — RTX 3090 incoming hardware reality
+- BUILDS ON: [[2026-consumer-hardware-ai-stack|2026 Consumer Hardware AI Stack]] — RTX 4090 incoming hardware reality
 - DEPENDS ON: [[post-anthropic-stack-3-layer-assembly-multica-aicp-3090|Epic — Post-Anthropic 3-Layer Stack Assembly]] — provides orchestrator × harness × provider layers
 - DEMONSTRATES: [[infrastructure-over-instructions-for-process-enforcement|Principle 1 — Infrastructure Over Instructions]] — behavioral alignment in the weights is infrastructure
 - DEMONSTRATES: [[structured-context-governs-agent-behavior-more-than-content|Principle 2 — Structured Context Governs Agent Behavior]] — constitution + preference data + per-LoRA SPECs are structured context

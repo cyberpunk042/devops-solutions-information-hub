@@ -212,7 +212,7 @@ The operator confirmed 2026-04-28 that Multica's "New Agent" UI shows a harness 
 - **External**: AICP repo with `local` / `k2_6_local` / `k2_6_openrouter` / `ollama_cloud` backends wired (per [AICP 2026-04-24 handoff](file:///home/jfortin/devops-expert-local-ai/docs/SESSION-2026-04-24-HANDOFF.md)).
 - **Wiki**: Parent epic [post-anthropic-stack-3-layer-assembly-multica-aicp-3090](../epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090.md).
 - **Wiki**: Multica synth [src-multica-managed-agents-platform](../../sources/tools-integration/src-multica-managed-agents-platform.md) — orchestrator-layer source.
-- **Hardware**: NOT blocked by RTX 3090 delivery — `custom_env` testing works on existing hardware. Local-Ollama tier (M004) is the part that waits for hardware.
+- **Hardware**: NOT blocked by RTX 4090 delivery — `custom_env` testing works on existing hardware. Local-Ollama tier (M004) is the part that waits for hardware.
 
 ## Operator's Immediate Next Step
 

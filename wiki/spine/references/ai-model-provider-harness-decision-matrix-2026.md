@@ -250,7 +250,7 @@ The operator's existing AICP backend pattern (`local`, `k2_6_local`, `k2_6_openr
 
 ```
 Multica (orchestrator — task assignment + agent state + skill reuse)
-  ├─ Claude Code  ─→  AICP routing  ─→  local (Qwen3.6-27B at UD-IQ2 on incoming RTX 3090)
+  ├─ Claude Code  ─→  AICP routing  ─→  local (Qwen3.6-27B at UD-IQ2 on incoming RTX 4090)
   ├─ OpenCode     ─→  AICP routing  ─→  Ollama Cloud (K2.6) | OpenRouter | local
   └─ Kimi CLI     ─→  AICP routing  ─→  Moonshot direct | OpenRouter
 ```
@@ -272,13 +272,13 @@ When re-validating this matrix per the criteria below, also check:
 >
 > | Trust opt-in | What it provides | Auth surface | Hardware / runtime |
 > |---|---|---|---|
-> | **L0 — Hash integrity** | Verify weights weren't swapped (SHA-256 of safetensors/GGUF) | None — public hash | Any GPU including RTX 3090 |
-> | **L1 — Weights-encrypted-at-rest** | Cypher applied on disk; decrypt at load | Symmetric key OR passphrase OR certificate | Any GPU including RTX 3090 |
-> | **L2 — Compressed-and-encrypted weights + KV cache, GPU decrypt (DEFAULT on RTX 3090)** | Caveman/quantization composed with cypher; decypher kernels on GPU (Triton); compressed-encrypted form on disk and in transit; **80–90% space saved on large context** | Symmetric key · passphrase · certificate · HSM | Any modern GPU; ideal default for the operator's incoming 3090 |
+> | **L0 — Hash integrity** | Verify weights weren't swapped (SHA-256 of safetensors/GGUF) | None — public hash | Any GPU including RTX 4090 |
+> | **L1 — Weights-encrypted-at-rest** | Cypher applied on disk; decrypt at load | Symmetric key OR passphrase OR certificate | Any GPU including RTX 4090 |
+> | **L2 — Compressed-and-encrypted weights + KV cache, GPU decrypt (DEFAULT on RTX 4090)** | Caveman/quantization composed with cypher; decypher kernels on GPU (Triton); compressed-encrypted form on disk and in transit; **80–90% space saved on large context** | Symmetric key · passphrase · certificate · HSM | Any modern GPU; ideal default for the operator's incoming 4090 |
 > | **L3 — NVIDIA H100/H200 CC mode (additive)** | HBM encryption + attestation; weights decrypted only inside encrypted GPU memory after attestation gates key release | NRAS + RIM attestation reports → key release | H100 / H200 / Blackwell on-prem or cloud (AWS p5 / Azure NCC H100 v5) |
 > | **L4 — End-to-end FHE inference** | Weights and activations encrypted end-to-end; no plaintext key release | Cryptographic protocol | Zama Concrete ML — niche but available |
 >
-> Opt-ins compose: L0 ⊂ L1 ⊂ L2 ⊂ L3 ⊂ L4. The default operator stance on RTX 3090 is **L2**; **L3 is additive** when H100-class hardware is available.
+> Opt-ins compose: L0 ⊂ L1 ⊂ L2 ⊂ L3 ⊂ L4. The default operator stance on RTX 4090 is **L2**; **L3 is additive** when H100-class hardware is available.
 
 ### Trust selection (2026-04-30)
 
@@ -287,7 +287,7 @@ When re-validating this matrix per the criteria below, also check:
 > | Operator state | Trust opt-in | Why |
 > |---|---|---|
 > | **Solo operator, single workload, no shared infrastructure** | L0 or L1 | Hash integrity or at-rest encryption suffices; the threat model is casual disk inspection / image leakage |
-> | **Solo operator, large-context-heavy workload, RTX 3090** | **L2 (default)** | 80-90% space saved on large context + cypher overlay = seamless, blazing-fast, performance-positive |
+> | **Solo operator, large-context-heavy workload, RTX 4090** | **L2 (default)** | 80-90% space saved on large context + cypher overlay = seamless, blazing-fast, performance-positive |
 > | **Production workload on rented or owned H100-class hardware** | L3 (composes on top of L2) | Adds HBM encryption + attestation chain; provider cannot tamper without detection |
 > | **Highest-sensitivity / regulatory workload, low-throughput tolerance** | L4 (FHE) | End-to-end encrypted; no plaintext key release |
 > | **Multi-tenant deployment** | L3 minimum | Co-tenant threat model requires hardware-level isolation |
@@ -300,7 +300,7 @@ The trust layer composes underneath the existing 3-layer assembly:
 TRUST  L2/L3 (compressed + encrypted + GPU-decypher; attestation if L3)
   ↓
 Multica (orchestrator)
-  ├─ Claude Code  ─→  AICP routing  ─→  local (RTX 3090: L2 compressed-encrypted weights)
+  ├─ Claude Code  ─→  AICP routing  ─→  local (RTX 4090: L2 compressed-encrypted weights)
   ├─ OpenCode     ─→  AICP routing  ─→  Ollama Cloud | OpenRouter | local
   └─ Kimi CLI     ─→  AICP routing  ─→  Moonshot direct | OpenRouter
 ```
@@ -325,13 +325,13 @@ When re-validating this matrix, also check:
 > | Custom-model opt-in | What it provides | Realistic effort | Hardware / runtime |
 > |---|---|---|---|
 > | **C0 — Vendor-supplied (default)** | Use a vendor or open-weight model as-is; alignment via runtime prompting (CLAUDE.md + AGENTS.md + .claude/rules/) | Zero training cost; per-session alignment overhead | Any GPU |
-> | **C1 — Wiki-fluency LoRA (E012 tactical)** | Domain-fluency LoRAs (Wiki-Assistant + Wiki-Router + Multi-LoRA per E012) on small bases for AICP routing efficiency | 1 afternoon to 1 weekend per LoRA on consumer hardware | RTX 3090 (post-mid-May 2026) |
-> | **C2 — Senior-engineer-tier specialist LoRA (DEFAULT post-3090)** | Single specialist LoRA on a strong base (Qwen3.6-27B at UD-IQ2 / RLM-Qwen3-8B / Qwen3-Coder); operator-tier behavior in the weights | 1 weekend on RTX 3090 | RTX 3090 (24 GB VRAM) |
-> | **C3 — Mixture-of-LoRAs across senior-engineer task surfaces** | Multiple specialist LoRAs (coding · methodology-reasoning · spec-authoring · validation-checking · refactor-planning · debug-analysis) composed via inference-time routing | Per-LoRA: 1 weekend; group expansion is additive | RTX 3090 |
-> | **C4 — Behavioral preference fine-tune (DPO / IPO over hack-vs-right pairs)** | The *naturally WANT to do things right* property baked into the weights via preference fine-tune; operator-curated preference pairs as the alignment signal | 12–48 hours on RTX 3090 OR 4–12 H100 hours rental (~$48–100/cycle) | RTX 3090 OR cloud H100 |
+> | **C1 — Wiki-fluency LoRA (E012 tactical)** | Domain-fluency LoRAs (Wiki-Assistant + Wiki-Router + Multi-LoRA per E012) on small bases for AICP routing efficiency | 1 afternoon to 1 weekend per LoRA on consumer hardware | RTX 4090 (post-mid-May 2026) |
+> | **C2 — Senior-engineer-tier specialist LoRA (DEFAULT post-4090)** | Single specialist LoRA on a strong base (Qwen3.6-27B at UD-IQ2 / RLM-Qwen3-8B / Qwen3-Coder); operator-tier behavior in the weights | 1 weekend on RTX 4090 | RTX 4090 (24 GB VRAM) |
+> | **C3 — Mixture-of-LoRAs across senior-engineer task surfaces** | Multiple specialist LoRAs (coding · methodology-reasoning · spec-authoring · validation-checking · refactor-planning · debug-analysis) composed via inference-time routing | Per-LoRA: 1 weekend; group expansion is additive | RTX 4090 |
+> | **C4 — Behavioral preference fine-tune (DPO / IPO over hack-vs-right pairs)** | The *naturally WANT to do things right* property baked into the weights via preference fine-tune; operator-curated preference pairs as the alignment signal | 12–48 hours on RTX 4090 OR 4–12 H100 hours rental (~$48–100/cycle) | RTX 4090 OR cloud H100 |
 > | **C5 — Recreated intelligence layer at I/O boundaries** | Input boundary (routing + Caveman compression + spec loading + tool-use planning) + output boundary (schema gate + self-verification + methodology compliance + hallucination detection) as Python hyperstructure | Iterative; Python development atop Markdown-as-IaC | Any GPU; Python runtime |
 >
-> Opt-ins compose: C0 ⊂ C1 ⊂ C2 ⊂ C3 ⊂ C4 ⊂ C5. The default operator stance post-RTX-3090-delivery is **C2 → C3 → C4 → C5 progressive** per the [Custom-Tailored Model Group Epic](../../backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05.md) phased rollout. Pain-point root cause (operator-named 2026-05-04): alignment substrate external to the model = repeated per-session cost; baking standards into the weights = pay alignment cost once at training.
+> Opt-ins compose: C0 ⊂ C1 ⊂ C2 ⊂ C3 ⊂ C4 ⊂ C5. The default operator stance post-RTX-4090-delivery is **C2 → C3 → C4 → C5 progressive** per the [Custom-Tailored Model Group Epic](../../backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05.md) phased rollout. Pain-point root cause (operator-named 2026-05-04): alignment substrate external to the model = repeated per-session cost; baking standards into the weights = pay alignment cost once at training.
 
 ### Custom-model selection (2026-05-04)
 
@@ -339,11 +339,11 @@ When re-validating this matrix, also check:
 >
 > | Operator state | Custom-model opt-in | Why |
 > |---|---|---|
-> | **Pre-3090 (current)** | C0 | Hardware-blocked; runtime prompting via CLAUDE.md + .claude/rules/ is the only available substrate |
-> | **Post-3090, single workload, AICP routing efficiency goal** | C1 (per E012) | Tactical wiki-domain-fluency LoRAs reduce cloud token spend |
-> | **Post-3090, senior-engineer daily-driver workload** | **C2 (default)** | Operator-tier behavior in the weights eliminates per-session alignment overhead |
-> | **Post-3090, multi-task-class workload (coding · methodology · debugging · refactoring · validation)** | C3 | Mixture-of-LoRAs gives task-specific specialists routed at inference |
-> | **Post-3090, *naturally WANT to do things right* property required** | C4 | Preference fine-tune over hack-vs-right pairs is the only mechanism that bakes behavioral alignment |
+> | **Pre-4090 (current)** | C0 | Hardware-blocked; runtime prompting via CLAUDE.md + .claude/rules/ is the only available substrate |
+> | **Post-4090, single workload, AICP routing efficiency goal** | C1 (per E012) | Tactical wiki-domain-fluency LoRAs reduce cloud token spend |
+> | **Post-4090, senior-engineer daily-driver workload** | **C2 (default)** | Operator-tier behavior in the weights eliminates per-session alignment overhead |
+> | **Post-4090, multi-task-class workload (coding · methodology · debugging · refactoring · validation)** | C3 | Mixture-of-LoRAs gives task-specific specialists routed at inference |
+> | **Post-4090, *naturally WANT to do things right* property required** | C4 | Preference fine-tune over hack-vs-right pairs is the only mechanism that bakes behavioral alignment |
 > | **Production-grade reliability across all workloads** | C5 (composes on top of C2/C3/C4) | Python intelligence layer adds schema-gate + self-verify + hallucination-detect at output boundary |
 > | **Sister-project consumer (OpenArms · OpenFleet · AICP · devops-control-plane · root-ghostproxy when registered)** | C2 or higher (operator-decision) | Information-virus methodology propagation by weight, not prompt |
 

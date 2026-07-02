@@ -115,14 +115,14 @@ The [[src-zen5-avx512-single-cycle|Zen 5 9900X]] satisfies all of these properti
 - Large VRAM (96GB on Blackwell, 80GB on H100)
 - Mature CUDA / ROCm software stack
 
-The Blackwell RTX PRO 6000 (the SAIN-01 Oracle Core's substrate) is the FP16-target hardware. The 24GB RTX 3090 is mid-tier; serves quantized + FP16 mid-scale.
+The Blackwell RTX PRO 6000 (the SAIN-01 Oracle Core's substrate) is the FP16-target hardware. The 24GB RTX 4090 is mid-tier; serves quantized + FP16 mid-scale.
 
 ### Where each path WINS on the SAIN-01 architecture
 
 | Tier | Workload | Best fit | Reasoning |
 |---|---|---|---|
 | **Conductor (Pulse) on CPU** | State routing, intent classification, sub-millisecond branching | **Ternary** | Single-cycle 512-bit AVX-512 + VNNI; sub-MB working set fits L1d; energy-zero idle |
-| **Logic Engine on 3090** | Parsing, JSON compilation, regex extraction, embedding generation | **FP16 mid-scale** (Llama-3-70B at Q4_K_M or Qwen3-30B at FP16) | GPU's parallel throughput; 24GB ceiling; needs Tensor Cores |
+| **Logic Engine on 4090** | Parsing, JSON compilation, regex extraction, embedding generation | **FP16 mid-scale** (Llama-3-70B at Q4_K_M or Qwen3-30B at FP16) | GPU's parallel throughput; 24GB ceiling; needs Tensor Cores |
 | **Oracle Core on Blackwell** | Deep reasoning, codebase analysis, long-context synthesis | **FP16 (or BF16) large-scale** | 96GB VRAM headroom; Tensor Cores; uncompromised precision |
 | **Background autonomic loop** | Continuous state monitoring, log auditing | **Ternary** | CPU-resident, GPU stays asleep, energy-zero |
 | **Burst reasoning under deadline** | Multi-turn complex analysis | **FP16 (Oracle Core)** | Higher quality per second matters more than energy |
@@ -199,7 +199,7 @@ Both paths cost roughly the same to train when amortized across model size. Tern
 > | Your workload | Pick | Why |
 > |---|---|---|
 > | State routing, intent classification, branching decisions | **Ternary on CPU** (Conductor Pulse) | Sub-millisecond branching beats GPU scheduling; energy-zero |
-> | Parsing, JSON compilation, regex extraction | **FP16 mid-scale on 3090** (Logic Engine) | 24GB ceiling fits 30-70B at Q4-Q8; structured output is GPU-friendly |
+> | Parsing, JSON compilation, regex extraction | **FP16 mid-scale on 4090** (Logic Engine) | 24GB ceiling fits 30-70B at Q4-Q8; structured output is GPU-friendly |
 > | Deep reasoning, codebase analysis, multi-turn synthesis | **FP16 large on Blackwell** (Oracle Core) | Uncompromised quality matters; 96GB VRAM accommodates large models |
 > | Continuous background monitoring | **Ternary on CPU** | Energy-zero; never wakes the GPU |
 > | Code generation with low entropy (math, structured output) | **FP16 + DFlash speculative decoding** on Blackwell | Compounding accelerations on the right entropy profile |

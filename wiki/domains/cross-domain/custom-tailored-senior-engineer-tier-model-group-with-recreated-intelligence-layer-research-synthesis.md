@@ -63,7 +63,7 @@ sources:
   - id: unsloth-synthesis
     type: wiki
     file: wiki/sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md
-    description: "Consumer-hardware fine-tuning — LoRA + UD-IQ2 / Q2_K quantization; the realistic training substrate on RTX 3090"
+    description: "Consumer-hardware fine-tuning — LoRA + UD-IQ2 / Q2_K quantization; the realistic training substrate on RTX 4090"
   - id: cavekit-synthesis
     type: wiki
     file: wiki/sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee.md
@@ -71,7 +71,7 @@ sources:
   - id: 2026-consumer-hardware-stack
     type: wiki
     file: wiki/spine/references/2026-consumer-hardware-ai-stack.md
-    description: "Hardware reality — RTX 3090 (24 GB VRAM, ETA mid-May 2026) is the realistic training substrate for L2-tier customizations on operator's stack"
+    description: "Hardware reality — RTX 4090 (24 GB VRAM, ETA mid-May 2026) is the realistic training substrate for L2-tier customizations on operator's stack"
   - id: feedback-do-not-undermine
     type: notes
     file: ~/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/feedback_do_not_undermine_operator_design_assertions.md
@@ -157,7 +157,7 @@ The custom-tailored model group is the **solution at the right place**: bake the
 
 > [!success] **MoE group of various sizes is achievable via two compatible patterns: (1) MoE-as-architecture or (2) Mixture-of-LoRAs with expert routing.**
 >
-> Pattern (1): operator picks an existing MoE base (Mixtral, DeepSeek V3, Qwen3-30B-A3B per LongBench Pro Finding 1, GPT-OSS shared-experts per [synthesis](../../sources/tools-integration/src-gpt-oss-architecture-shared-experts-distillation.md)) and fine-tunes; the experts already exist; operator's customization layers onto routing or expert weights. Pattern (2): Mixture-of-LoRAs ([LoRAHub](https://arxiv.org/abs/2307.13269), S-LoRA, expert-LoRA) — operator authors small specialized LoRAs per task class (senior-engineer-coding · methodology-reasoning · spec-authoring · validation-checking · refactor-planning · debug-analysis), then composes them via task-routing at inference time. Pattern (2) is **operator-feasible on RTX 3090**: each LoRA is 1–6 hours of consumer-hardware training; the group grows additively; the routing layer is the operator's intelligence-layer-at-the-input-boundary. **Operator's *"various sizes and needs"* maps cleanly onto either pattern: small router-LoRA + large reasoning-LoRA + medium spec-authoring-LoRA composed per workload.**
+> Pattern (1): operator picks an existing MoE base (Mixtral, DeepSeek V3, Qwen3-30B-A3B per LongBench Pro Finding 1, GPT-OSS shared-experts per [synthesis](../../sources/tools-integration/src-gpt-oss-architecture-shared-experts-distillation.md)) and fine-tunes; the experts already exist; operator's customization layers onto routing or expert weights. Pattern (2): Mixture-of-LoRAs ([LoRAHub](https://arxiv.org/abs/2307.13269), S-LoRA, expert-LoRA) — operator authors small specialized LoRAs per task class (senior-engineer-coding · methodology-reasoning · spec-authoring · validation-checking · refactor-planning · debug-analysis), then composes them via task-routing at inference time. Pattern (2) is **operator-feasible on RTX 4090**: each LoRA is 1–6 hours of consumer-hardware training; the group grows additively; the routing layer is the operator's intelligence-layer-at-the-input-boundary. **Operator's *"various sizes and needs"* maps cleanly onto either pattern: small router-LoRA + large reasoning-LoRA + medium spec-authoring-LoRA composed per workload.**
 
 > [!success] **2026-05-06 cross-reference — Cloudflare Agent Memory provides M003 memory-layer sub-practice with paper-grade architecture (5-channel RRF retrieval + 4 memory types + supersession via topic keys).**
 >
@@ -169,11 +169,11 @@ The custom-tailored model group is the **solution at the right place**: bake the
 
 > [!success] **2026-05-08 cross-reference — Phil Schmid's four subagent patterns + Claude Code skill chaining give M003 a complete orchestration substrate (Pattern 1 production-validated at 85% context reduction).**
 >
-> Per [Phil Schmid Subagent Patterns Synthesis](../../sources/tools-integration/src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams.md) and [Claude Code Skill Chaining Synthesis](../../sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context.md): **M003's input-boundary orchestration choices are now operator-substitutable across 4 named patterns** (Inline Tool / Fan-Out / Agent Pool / Teams) ordered by main-agent control over subagent lifecycle, with **Pattern 1 (Inline Tool with isolated context) production-validated** by Claude Code skill chaining V2 at **85% context reduction empirical (51K → 5-8K tokens)** on a real lead-research pipeline. Three-layer technique (context fork in YAML + temp-directory file handoff + `!` parse-time substitution) cuts across Layer 2 + 3 + 4 of the [Multi-Layer Compression Lesson](../../lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers.md). **For M003**: orchestration-pattern selection is per-workload-class (lookup → P1; parallel research → P2; coordinated specialists → P3; build-feature → P4); M002 specialist LoRA group composes naturally with Pattern 3 (long-lived stateful specialists addressed via send_message); each step up requires a more capable model (small/cheap models stay at P1-2). Pattern 4 (Teams) is post-RTX-3090 + post-frontier-model-availability territory — frontier-class capability required for every team agent.
+> Per [Phil Schmid Subagent Patterns Synthesis](../../sources/tools-integration/src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams.md) and [Claude Code Skill Chaining Synthesis](../../sources/tools-integration/src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context.md): **M003's input-boundary orchestration choices are now operator-substitutable across 4 named patterns** (Inline Tool / Fan-Out / Agent Pool / Teams) ordered by main-agent control over subagent lifecycle, with **Pattern 1 (Inline Tool with isolated context) production-validated** by Claude Code skill chaining V2 at **85% context reduction empirical (51K → 5-8K tokens)** on a real lead-research pipeline. Three-layer technique (context fork in YAML + temp-directory file handoff + `!` parse-time substitution) cuts across Layer 2 + 3 + 4 of the [Multi-Layer Compression Lesson](../../lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers.md). **For M003**: orchestration-pattern selection is per-workload-class (lookup → P1; parallel research → P2; coordinated specialists → P3; build-feature → P4); M002 specialist LoRA group composes naturally with Pattern 3 (long-lived stateful specialists addressed via send_message); each step up requires a more capable model (small/cheap models stay at P1-2). Pattern 4 (Teams) is post-RTX-4090 + post-frontier-model-availability territory — frontier-class capability required for every team agent.
 
 > [!success] **2026-05-08 cross-reference — DFlash diffusion-style speculative decoding gives M003 inference-speed substrate; K-Flat insight parallels M004 quality-over-quantity strategy.**
 >
-> Per [DFlash TPU Synthesis](../../sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04.md): UCSD/Google TPU Builder Program shipped block-diffusion speculative decoding at **3.13× avg / 6× peak math speedup on TPU v5p** (2.29× E2E vs EAGLE-3's 1.30× on Llama-3.1-8B). The drafter-side O(K) → O(1) parallel block diffusion eliminates the speculative-decoding bottleneck that EAGLE-3 still has. Open-source via vLLM (PRs #1868/#1869/#1870). **For M003 (inference-speed sub-practice)**: DFlash + DeepSeek V4 DSA (Evidence 8 of compression lesson) cover both ends of the speculative-decoding cost surface (DSA reduces target verification cost; DFlash reduces drafter cost) — composable. **The K-Flat insight parallels operator's M004 strategy**: *"verification cost is constant; the bottleneck is draft quality, not block size K. Per-position acceptance probability is 2-3× more valuable than scaling K."* — structurally identical to operator's preference-data-quality-over-base-model-size stance for M004 behavioral preference fine-tune. **Convergent-pattern evidence for the operator's strategic stance.** NVIDIA torchax DFlash port in-progress per UCSD team — when GA, RTX 3090 deployment becomes possible. Until then: EAGLE-3 or autoregressive speculative as M003 substitute.
+> Per [DFlash TPU Synthesis](../../sources/tools-integration/src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04.md): UCSD/Google TPU Builder Program shipped block-diffusion speculative decoding at **3.13× avg / 6× peak math speedup on TPU v5p** (2.29× E2E vs EAGLE-3's 1.30× on Llama-3.1-8B). The drafter-side O(K) → O(1) parallel block diffusion eliminates the speculative-decoding bottleneck that EAGLE-3 still has. Open-source via vLLM (PRs #1868/#1869/#1870). **For M003 (inference-speed sub-practice)**: DFlash + DeepSeek V4 DSA (Evidence 8 of compression lesson) cover both ends of the speculative-decoding cost surface (DSA reduces target verification cost; DFlash reduces drafter cost) — composable. **The K-Flat insight parallels operator's M004 strategy**: *"verification cost is constant; the bottleneck is draft quality, not block size K. Per-position acceptance probability is 2-3× more valuable than scaling K."* — structurally identical to operator's preference-data-quality-over-base-model-size stance for M004 behavioral preference fine-tune. **Convergent-pattern evidence for the operator's strategic stance.** NVIDIA torchax DFlash port in-progress per UCSD team — when GA, RTX 4090 deployment becomes possible. Until then: EAGLE-3 or autoregressive speculative as M003 substitute.
 
 > [!success] **Recreated intelligence layer at I/O boundaries is empirically validated as a multiplier — speculative decoding · contrastive decoding · prompt-time tool routing · structured-output enforcement.**
 >
@@ -255,7 +255,7 @@ The custom-tailored model group is the **solution at the right place**: bake the
                                        │ composes with
                               ┌────────┴────────┐
                               │  Hardware Tier  │
-                              │  RTX 3090 → H100│
+                              │  RTX 4090 → H100│
                               │  (per workload) │
                               └─────────────────┘
 ```
@@ -264,12 +264,12 @@ The custom-tailored model group is the **solution at the right place**: bake the
 
 | Phase | Substrate | Realistic effort on operator's stack | Output |
 |---|---|---|---|
-| **Phase 0 — Toolchain** | Unsloth + prime-rl + Triton on RTX 3090 (~mid-May 2026 ETA) | 1–3 days bootstrap | Reproducible training environment; first sanity LoRA train on Qwen3.5-4B base |
+| **Phase 0 — Toolchain** | Unsloth + prime-rl + Triton on RTX 4090 (~mid-May 2026 ETA) | 1–3 days bootstrap | Reproducible training environment; first sanity LoRA train on Qwen3.5-4B base |
 | **Phase 1 — Data discipline** | Operator-curated preference pairs + instruction data + behavioral constitution | Operator-time (the work IS the conversation, per spec-driven convergence lesson) | `data/preferences/v0.1.jsonl` + `data/instructions/v0.1.jsonl` + `constitution-v0.1.md` |
-| **Phase 2 — Single specialist LoRA** | Senior-engineer-coding LoRA on a strong base (Qwen3.6-27B at UD-IQ2 OR RLM-Qwen3-8B as RLM-substrate-aware base) | 1 weekend on RTX 3090 | First operator-tier custom model `v0.1-seed`; deployable via Ollama; AICP-routable |
+| **Phase 2 — Single specialist LoRA** | Senior-engineer-coding LoRA on a strong base (Qwen3.6-27B at UD-IQ2 OR RLM-Qwen3-8B as RLM-substrate-aware base) | 1 weekend on RTX 4090 | First operator-tier custom model `v0.1-seed`; deployable via Ollama; AICP-routable |
 | **Phase 3 — Group expansion** | Mixture-of-LoRAs (methodology-reasoning · spec-authoring · validation-checking · debug-analysis · refactor-planning) | Per-LoRA: 1 weekend | Growing operator-tier model group; per-task routing by AICP / Multica |
 | **Phase 4 — Intelligence layer at I/O boundaries** | Python-as-programming hyperstructure: routing · compression · schema gates · self-verification · methodology-compliance | Iterative; Python development | The recreated intelligence layer; substantively shapes the operator's daily-driver behavior |
-| **Phase 5 — Behavioral preference fine-tune** | DPO / IPO over hack-vs-right preference pairs on the trained group | Per-cycle: 12–48 hours on RTX 3090 OR 4–12 H100 hours rental | The "naturally WANT to do things right" property — empirically validated via held-out behavior tests |
+| **Phase 5 — Behavioral preference fine-tune** | DPO / IPO over hack-vs-right preference pairs on the trained group | Per-cycle: 12–48 hours on RTX 4090 OR 4–12 H100 hours rental | The "naturally WANT to do things right" property — empirically validated via held-out behavior tests |
 | **Phase 6 — Trust + compression composition** | Wire L2 default (compressed-encrypted weights + KV cache + on-GPU decypher) per [Trust-Layer Epic M001](../../backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04.md); operator-toggle for L0 / L3 / L4 per workload | Operator-decision per workload | The full 4-layer composition: model group + intelligence layer + trust layer + compression layer, operator-controlled opt-ins |
 | **Phase 7 — Multi-version + ecosystem propagation** | Per-version manifest; per-consumer integration (OpenArms · OpenFleet · AICP · devops-control-plane · root-ghostproxy) | Continuous | Information-virus propagation: sister projects inherit operator standards by weight |
 
@@ -308,7 +308,7 @@ Operator's *"like we teach"* names this directly: apply the wiki's methodology t
 > Candidates: (a) Qwen3.6-27B at UD-IQ2 (proven senior-engineer-tier per Anti-Vendor-Lock-In Evidence 1; fits 24 GB VRAM); (b) RLM-Qwen3-8B (RLM-substrate-aware; smaller; recursive-paradigm-trained); (c) Qwen3-Coder family (purpose-built for coding); (d) merge of multiple. Operator picks based on workload class for `v0.1-seed`.
 
 > [!question] MoE-as-architecture vs Mixture-of-LoRAs — pick one or both?
-> Pattern (1) MoE-architecture: pick existing MoE base, fine-tune. Pattern (2) Mixture-of-LoRAs: small specialized LoRAs composed via routing. Pattern (2) is more flexible + operator-feasible on RTX 3090; Pattern (1) requires larger-base infrastructure but fewer composition concerns. Both can coexist (LoRA over MoE base) — operator-design call.
+> Pattern (1) MoE-architecture: pick existing MoE base, fine-tune. Pattern (2) Mixture-of-LoRAs: small specialized LoRAs composed via routing. Pattern (2) is more flexible + operator-feasible on RTX 4090; Pattern (1) requires larger-base infrastructure but fewer composition concerns. Both can coexist (LoRA over MoE base) — operator-design call.
 
 > [!question] "Information virus" propagation mechanism — distribution channel?
 > Options: (a) bundled with each sister project's `setup --connect` (per existing wiki distribution discipline); (b) Multica-deployable artifact (any harness can route to it); (c) HuggingFace publish (`cyberpunk042/operator-tier-coding-v0.1` etc.); (d) operator-internal only. Operator-decision per workload class and openness preference.
@@ -324,12 +324,12 @@ Operator's *"like we teach"* names this directly: apply the wiki's methodology t
 
 ## How to Apply (when operator commits to Phase 0)
 
-> [!tip] Concrete first moves once Phase 0 begins (post-RTX 3090 delivery + operator confirms)
+> [!tip] Concrete first moves once Phase 0 begins (post-RTX 4090 delivery + operator confirms)
 >
-> 1. **Wire Unsloth + prime-rl + Triton on RTX 3090** — reproducible training environment; smoke test on a known dataset
+> 1. **Wire Unsloth + prime-rl + Triton on RTX 4090** — reproducible training environment; smoke test on a known dataset
 > 2. **Author `data/preferences/v0.1.jsonl`** with operator-curated hack-vs-right pairs from the wiki's existing lessons + raw/notes operator-corrections corpus (the *"do-not-undermine"* memory · the 2026-04-24 sacrosanct chain · etc. — the wiki already contains the alignment signal)
 > 3. **Author `constitution-v0.1.md`** — operator's standards as the alignment-by-constitution document; parallels the wiki's CLAUDE.md + .claude/rules/ structure; small enough to fit a single context window during training
-> 4. **First LoRA train** — pick base (operator picks), DPO/IPO loss, rank 32–64, on RTX 3090 → first deployable artifact `v0.1-seed`
+> 4. **First LoRA train** — pick base (operator picks), DPO/IPO loss, rank 32–64, on RTX 4090 → first deployable artifact `v0.1-seed`
 > 5. **Held-out evaluation** — operator-graded behavior tests; pass/fail on the *naturally WANT to do things right* property; iterate before promotion to `v0.5-growing`
 > 6. **AICP integration** — register as a routing tier; Wiki-Router (E012 D) routes appropriate workloads to the custom tier
 > 7. **Composition with trust layer** — wire L2 default (per [Trust-Layer Epic M001](../../backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04.md)); operator-toggle per workload
@@ -339,7 +339,7 @@ Operator's *"like we teach"* names this directly: apply the wiki's methodology t
 > [!warning] **HARDWARE-PENDING — As of 2026-05-09 (operator-confirmed)**
 >
 > All M001-M006 phase execution is **hardware-pending**. The operator has confirmed:
-> - **RTX 3090** ordered, not yet delivered (was originally ETA mid-May 2026; revisit estimate)
+> - **RTX 4090** ordered, not yet delivered (was originally ETA mid-May 2026; revisit estimate)
 > - **NEW: AVX512 machine plan with custom strategy** under exploration (operator-stated 2026-05-09; details discussed later) — may shift the hardware-tier framing below
 >
 > Do NOT pre-execute M001-M006 phase decisions before hardware lands. Operator will tell this project when ready. The 8 open design questions (mission-claim layer count, base-model choice, MoE-vs-Mixture-of-LoRAs, etc.) stay deferred until operator-trigger.
@@ -348,7 +348,7 @@ Operator's *"like we teach"* names this directly: apply the wiki's methodology t
 
 | Hardware | Realistic capability | First deliverable |
 |---|---|---|
-| **RTX 3090 (ordered; not delivered as of 2026-05-09)** | LoRA fine-tune at rank 32–64 on bases up to ~30B at Q4 / UD-IQ2; DPO/IPO behavioral preference fine-tune; LoRA composition; on-device inference at L2 trust default | First `v0.1-seed` operator-tier specialist LoRA on Qwen3.6-27B at UD-IQ2 OR RLM-Qwen3-8B base |
+| **RTX 4090 (ordered; not delivered as of 2026-05-09)** | LoRA fine-tune at rank 32–64 on bases up to ~30B at Q4 / UD-IQ2; DPO/IPO behavioral preference fine-tune; LoRA composition; on-device inference at L2 trust default | First `v0.1-seed` operator-tier specialist LoRA on Qwen3.6-27B at UD-IQ2 OR RLM-Qwen3-8B base |
 | **AVX512 machine** *(NEW 2026-05-09 — operator's custom-strategy plan; details discussed later)* | TBD per operator's custom strategy; AVX512 instruction set unlocks specific quantization/inference paths (e.g., llama.cpp AVX512 kernels, INT8 SIMD acceleration, per-op CPU vectorization) | TBD per operator's strategy |
 | **Cloud H100 (rental, optional)** | Larger-base full fine-tunes (~30B–120B); larger preference-data RL training; per RLM-Qwen3-8B precedent: 48 H100 hours / ~$48–100 for a frontier-approaching post-train | When operator opts in for a larger-base experiment; not date-bound |
 | **Any future hardware** | All Phases compose forward; operator's *core* is the durable artifact, not the hardware | Anti-vendor-lock-in extends to model-customization stance |
@@ -366,7 +366,7 @@ Operator's *"like we teach"* names this directly: apply the wiki's methodology t
 - BUILDS ON: [[src-qwopus-claude-opus-reasoning-distilled-qwen-27b|Qwopus Synthesis]] — distillation precedent
 - BUILDS ON: [[src-unsloth-fast-lora-consumer-hardware|Unsloth Synthesis]] — consumer-hardware fine-tune substrate
 - BUILDS ON: [[src-cavekit-spec-driven-development-claude-code-julius-brussee|Cavekit v4 Synthesis]] — minimum-viable-shape template for per-LoRA spec discipline
-- BUILDS ON: [[2026-consumer-hardware-ai-stack|2026 Consumer Hardware AI Stack]] — RTX 3090 incoming hardware reality
+- BUILDS ON: [[2026-consumer-hardware-ai-stack|2026 Consumer Hardware AI Stack]] — RTX 4090 incoming hardware reality
 - BUILDS ON: [[src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams|Phil Schmid Four Subagent Patterns Synthesis]] — M003 orchestration-pattern substitutability quartet (Inline Tool / Fan-Out / Agent Pool / Teams)
 - BUILDS ON: [[src-claude-code-skill-chaining-fork-files-commands-85-percent-less-context|Claude Code Skill Chaining Synthesis]] — production-validated implementation of Pattern 1 (Inline Tool) at 85% context reduction; M003 input-boundary orchestration substrate
 - BUILDS ON: [[src-google-tpu-dflash-diffusion-style-speculative-decoding-3x-speedup-2026-05-04|DFlash TPU Synthesis]] — M003 inference-speed substrate; K-Flat insight parallels M004 quality-over-quantity strategy

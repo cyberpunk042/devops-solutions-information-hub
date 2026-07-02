@@ -153,7 +153,7 @@ The hybrid is the load-bearing innovation: CSA preserves precision for short-ran
 | RLM-Qwen3-8B | RLM-paradigm-aware; 48 H100-hour post-train precedent | Smaller; recursive scaling-friendly |
 | Qwen3-Coder family | Purpose-built for coding | Coding-tier specialist baseline |
 | **DeepSeek V4-Flash (284B / 13B active)** | 1M context default; DSA hybrid attention; SOTA agentic coding | **Larger; needs H100-class hardware OR Q4_K_M for consumer; long-context-tier specialist** |
-| **DeepSeek V4-Pro (1.6T / 49B active)** | Top-tier reasoning; rivals closed-source; 1M context | **Cloud-rental tier; RTX 3090 not sufficient; H100/H200 territory** |
+| **DeepSeek V4-Pro (1.6T / 49B active)** | Top-tier reasoning; rivals closed-source; 1M context | **Cloud-rental tier; RTX 4090 not sufficient; H100/H200 territory** |
 | Llama 3 / Mistral | Mature ecosystem; many fine-tunes | Wide tooling support |
 
 V4-Flash at 13B active params is operator-substantive (smaller than Qwen3-27B but with 1M-context superpower); V4-Pro at 49B active is cloud-rental tier. **Operator-decision in M002**: when 1M-context capability is mission-relevant for a specific specialist LoRA, V4-Flash becomes the candidate base.
@@ -183,14 +183,14 @@ Per [Anti-Vendor-Lock-In Lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-
 
 ## Open Questions
 
-> [!question] V4-Flash on RTX 3090 — feasible at Q4 quantization?
-> 13B active params at Q4_K_M ≈ 7.3 GB; routing weights in MoE add overhead but should fit 24 GB VRAM. Empirical sizing needed. Operator-validation candidate post-3090 delivery.
+> [!question] V4-Flash on RTX 4090 — feasible at Q4 quantization?
+> 13B active params at Q4_K_M ≈ 7.3 GB; routing weights in MoE add overhead but should fit 24 GB VRAM. Empirical sizing needed. Operator-validation candidate post-4090 delivery.
 
 > [!question] V4-Pro on cloud H100 rental for operator's M005 (L3 additive trust path)?
 > 49B active params would benefit from H100-class hardware; cost ~$3-10/hour cloud rental per the [Trust-Layer Epic](../../backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04.md) framing. Operator-decision per workload class.
 
 > [!question] DSA composition with operator's L2 trust + Triton on-GPU decypher kernels — interaction risks?
-> DSA's CSA + HCA operate on KV cache; operator's L2 cypher operates on weights at rest + KV cache compressed-encrypted form. The two should compose (cypher applied to compressed-DSA form), but empirical validation post-3090 needed.
+> DSA's CSA + HCA operate on KV cache; operator's L2 cypher operates on weights at rest + KV cache compressed-encrypted form. The two should compose (cypher applied to compressed-DSA form), but empirical validation post-4090 needed.
 
 > [!question] Should V4-Flash become the default routing-tier for 1M-context workloads in operator's AICP setup?
 > AICP routes by complexity tier; DeepSeek V4-Flash at 1M context is a candidate routing target for `long-context-heavy` workloads. Operator-decision per AICP routing config.

@@ -79,9 +79,9 @@ Stanford-led paper published 2026-04-28 (arXiv 2604.25917, **#1 paper of the day
 >
 > The training mechanism: inner loop = within-recursion-round refinement; outer loop = across-recursion credit assignment via shared gradient. **Theoretical analyses establish stable gradients during recursive training** — addressing the failure mode where naive recursive systems exhibit gradient explosion or vanishing. This is the algorithmic substrate for operator's M004 (behavioral preference fine-tune) when trained over multi-agent collaboration patterns, not just single-model preference pairs.
 
-> [!info] **RecursiveLink module is lightweight — operator-feasible to wire over RTX 3090.**
+> [!info] **RecursiveLink module is lightweight — operator-feasible to wire over RTX 4090.**
 >
-> The cross-agent state transfer module is "lightweight" per the abstract — meaning it doesn't require massive compute for the link layer itself. Empirical sizing on RTX 3090 TBD, but the architecture is consumer-hardware-feasible by design. Compose with Mixture-of-LoRAs per [Custom-Tailored Model Group M002](../../backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05.md) and the senior-engineer-tier specialist agents pass latent state directly without text round-trips.
+> The cross-agent state transfer module is "lightweight" per the abstract — meaning it doesn't require massive compute for the link layer itself. Empirical sizing on RTX 4090 TBD, but the architecture is consumer-hardware-feasible by design. Compose with Mixture-of-LoRAs per [Custom-Tailored Model Group M002](../../backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05.md) and the senior-engineer-tier specialist agents pass latent state directly without text round-trips.
 
 ## Deep Analysis
 
@@ -122,10 +122,10 @@ RecursiveMAS's latent-state transfer between agents is **already an internal-rep
 ## Open Questions
 
 > [!question] Can the senior-engineer-tier model group adopt RecursiveMAS as its multi-agent substrate?
-> Yes — the architecture is open-source (github.com/RecursiveMAS/RecursiveMAS) and operator-feasible on RTX 3090. M003 of the [Custom-Model Epic](../../backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05.md) (Recreated Intelligence Layer at I/O Boundaries) gains a concrete substrate option: RecursiveMAS-style cross-LoRA latent transfer instead of (or composed with) Strands-style intent-based tools.
+> Yes — the architecture is open-source (github.com/RecursiveMAS/RecursiveMAS) and operator-feasible on RTX 4090. M003 of the [Custom-Model Epic](../../backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05.md) (Recreated Intelligence Layer at I/O Boundaries) gains a concrete substrate option: RecursiveMAS-style cross-LoRA latent transfer instead of (or composed with) Strands-style intent-based tools.
 
 > [!question] What's the per-LoRA training overhead to participate in a RecursiveMAS group?
-> The RecursiveLink module is "lightweight" per the abstract; empirical sizing on consumer hardware TBD. Operator can validate when 3090 arrives by training a small LoRA + RecursiveLink head and benchmarking the inner-outer loop convergence.
+> The RecursiveLink module is "lightweight" per the abstract; empirical sizing on consumer hardware TBD. Operator can validate when 4090 arrives by training a small LoRA + RecursiveLink head and benchmarking the inner-outer loop convergence.
 
 > [!question] How does RecursiveMAS interact with the 8-instance Spec-Driven Convergence?
 > Per [Spec-Driven Convergence Lesson](../../lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md): structured artifacts before code. RecursiveMAS's collaboration patterns are themselves structured specs (4 patterns enumerated). The convergence applies: the collaboration pattern is the spec; the agents implement it; the closed-loop sync rule (fix the prompt first) becomes "fix the collaboration spec first, then the per-agent training."

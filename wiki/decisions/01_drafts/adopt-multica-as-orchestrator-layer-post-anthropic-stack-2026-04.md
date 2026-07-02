@@ -60,7 +60,7 @@ Adopt **Multica** ([multica-ai/multica](https://github.com/multica-ai/multica), 
 > | Heavy governance / approvals / budgets | ❌ No — Multica is lightweight management; Paperclip suits this case |
 > | High data-sovereignty needs | ✅ Yes via self-host — operator owns DB, machine, daemon |
 >
-> **For the operator's specific stack**: yes — already runs Claude Code + OpenCode, plans multi-runtime (laptop now + cloud-occasional + RTX 3090 mid-May 2026), needs per-agent provider routing for AICP / Ollama Cloud / Anthropic-direct. **Multica is the right orchestrator layer.**
+> **For the operator's specific stack**: yes — already runs Claude Code + OpenCode, plans multi-runtime (laptop now + cloud-occasional + RTX 4090 mid-May 2026), needs per-agent provider routing for AICP / Ollama Cloud / Anthropic-direct. **Multica is the right orchestrator layer.**
 
 ## Alternatives
 
@@ -68,7 +68,7 @@ Adopt **Multica** ([multica-ai/multica](https://github.com/multica-ai/multica), 
 
 Continue using Claude Code, OpenCode, etc. directly without an orchestration layer. Operator drives each harness individually; AICP handles provider routing under each harness.
 
-> [!warning] Rejected: No unified team-collaboration UX, no skill reuse across harnesses, no multi-runtime visibility, no per-agent provider abstraction. Operator already runs 2 harnesses; the orchestrator layer becomes mission-aligned once multi-harness use is concrete (which it is). Direct CLI use was correct *before* multi-harness adoption; with Claude Code + OpenCode both in active use and 3090-incoming multi-runtime, the orchestrator layer has earned its place.
+> [!warning] Rejected: No unified team-collaboration UX, no skill reuse across harnesses, no multi-runtime visibility, no per-agent provider abstraction. Operator already runs 2 harnesses; the orchestrator layer becomes mission-aligned once multi-harness use is concrete (which it is). Direct CLI use was correct *before* multi-harness adoption; with Claude Code + OpenCode both in active use and 4090-incoming multi-runtime, the orchestrator layer has earned its place.
 
 ### Alternative 2: Operator-built orchestrator
 
@@ -148,7 +148,7 @@ This decision affects:
 > TRUST  L2/L3 (compressed + encrypted + GPU-decypher; attestation if L3)
 >   ↓
 > Multica (orchestrator — this decision)
->   ├─ Claude Code  ─→  AICP routing  ─→  local (RTX 3090 with L2)
+>   ├─ Claude Code  ─→  AICP routing  ─→  local (RTX 4090 with L2)
 >   ├─ OpenCode     ─→  AICP routing  ─→  Ollama Cloud | OpenRouter | local
 >   └─ Kimi CLI     ─→  AICP routing  ─→  Moonshot direct | OpenRouter
 > ```

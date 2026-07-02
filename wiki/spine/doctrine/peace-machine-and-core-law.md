@@ -69,7 +69,7 @@ RTX PRO 6000 Blackwell:
   oracle
   large resident models, long context, final reasoning, verification
 
-RTX 3090:
+RTX 4090:
   scout
   SLMs, drafts, embeddings, perception, sandboxed exploration
 
@@ -104,7 +104,7 @@ Per-clause milestone ownership:
 
 | Clause | Owned by |
 |---|---|
-| Models propose | sovereign-os MS028 + MS029 + MS030 inference modules (Blackwell oracle + RTX 3090 scout + AVX-512 cortex) |
+| Models propose | sovereign-os MS028 + MS029 + MS030 inference modules (Blackwell oracle + RTX 4090 scout + AVX-512 cortex) |
 | Runtime routes | selfdef MS048 — Goldilocks Scheduler (hardware-aware resource routing) |
 | CPU enforces | selfdef MS046 + MS047 + MS044 three-watchdog trio (friction-audit + perimeter + Guardian) |
 | Tools prove | selfdef MS042 tool authority (declaration-vs-observed discipline) |
@@ -166,7 +166,7 @@ Per-axis mapping:
 |---|---|---|
 | fast / careful | MS040 profile (fast vs careful) | M076 load-balancing profile selection |
 | local / cloud | MS040 profile (private gates cloud) | gateway egress policy |
-| scout / oracle | MS048 scheduler (3090 vs Blackwell routing) | inference module selection |
+| scout / oracle | MS048 scheduler (4090 vs Blackwell routing) | inference module selection |
 | sandbox / host | MS036 tool sandboxes + MS037 filesystem boundary | container vs host execution |
 | manual / autonomous | MS040 profile (autonomous tier) + MS003 multi-sig | operator-gated batch approvals |
 | private / shared | MS034 communication boundary (egress policy) | M068 ZFS dataset visibility |

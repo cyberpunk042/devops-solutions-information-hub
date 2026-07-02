@@ -119,7 +119,7 @@ The dataset stratification interacts with several other SAIN-01 components:
 | [[concept-srp-trinity-pulse-weaver-auditor|Trinity (Weaver)]] | The Weaver is the only writer to `tank/context`; uses the atomic-rename + sync=always pattern for every state mutation |
 | [[concept-srp-trinity-pulse-weaver-auditor|Trinity (Auditor)]] | The Auditor's `security_audit.log` is on `tank/context` (append-only, written atomically) |
 | [[concept-1bit-ternary-weights|Pulse + bitnet.cpp]] | Reads ternary model weights from `tank/models`; the 1M recordsize maximizes streaming throughput for the lookup-table matmul |
-| [[concept-vfio-gpu-isolation-amd-iommu|VFIO RTX 3090]] | Sandboxed sub-agents on the 3090 use `tank/agents` for their runtime cache; isolated from the host's state on `tank/context` |
+| [[concept-vfio-gpu-isolation-amd-iommu|VFIO RTX 4090]] | Sandboxed sub-agents on the 4090 use `tank/agents` for their runtime cache; isolated from the host's state on `tank/context` |
 | [[concept-dual-ccd-cache-partitioning-9900x|Dual-CCD partition]] | The Weaver's writes happen on CCD 1 cores 6-9; ZFS compression threads run on cores 10-11 to avoid cross-CCD contention |
 | Network split | Marvell 10GbE pulls weights from local NAS into `tank/models`; Intel 2.5GbE handles management traffic (no weight transit) |
 

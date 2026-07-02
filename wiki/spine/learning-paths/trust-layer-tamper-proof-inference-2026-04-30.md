@@ -42,7 +42,7 @@ tags: [learning-path, spine, trust-layer, fourth-layer, tamper-proof, cypher, de
 
 ## Summary
 
-Curated reading order for the **~13 wiki artifacts** produced during the 2026-04-30 session arc that authored the **4th substitutable layer (trust / confidential-compute)** on top of the post-Anthropic 3-layer stack (orchestrator × harness × provider). The arc grounds the operator's tamper-proof-inference design — cypher + decypher + compression for **80–90% space saved on large context, seamless and performance-positive**. Designed for a reader who wants to internalize the design efficiently — whether picking up cold tomorrow, deciding whether to adopt the L2 default on RTX 3090, designing the M001 reference pipeline when 3090 hardware lands, or auditing the wiki's 4-layer mission claim. Total reading time for the full path: **~2–3 hours**; the 30-minute fast-path (Goal A) covers the architectural shape and the 80–90% composition math without the implementation detail.
+Curated reading order for the **~13 wiki artifacts** produced during the 2026-04-30 session arc that authored the **4th substitutable layer (trust / confidential-compute)** on top of the post-Anthropic 3-layer stack (orchestrator × harness × provider). The arc grounds the operator's tamper-proof-inference design — cypher + decypher + compression for **80–90% space saved on large context, seamless and performance-positive**. Designed for a reader who wants to internalize the design efficiently — whether picking up cold tomorrow, deciding whether to adopt the L2 default on RTX 4090, designing the M001 reference pipeline when 4090 hardware lands, or auditing the wiki's 4-layer mission claim. Total reading time for the full path: **~2–3 hours**; the 30-minute fast-path (Goal A) covers the architectural shape and the 80–90% composition math without the implementation detail.
 
 ## Prerequisites
 
@@ -84,13 +84,13 @@ For an operator (or peer evaluating their own stack) deciding whether the trust-
 > | 2 | [Trust-Layer Epic](../../backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04.md) | Goals + Done When + Scale and Model + Candidate Module Breakdown |
 > | 3 | [Caveman Synthesis](../../sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee.md) | Mission Alignment section + Operator's adoption checklist |
 > | 4 | [AI Decision Matrix 2026](../references/ai-model-provider-harness-decision-matrix-2026.md) § Trust / Confidential-Compute Layer | 4-axis matrix + Trust selection table |
-> | 5 | [2026 Consumer Hardware AI Stack](../references/2026-consumer-hardware-ai-stack.md) § 2026-04-30 Addendum | Hardware tier mapping (RTX 3090 = L2 default, H100/H200 = L3 additive) |
+> | 5 | [2026 Consumer Hardware AI Stack](../references/2026-consumer-hardware-ai-stack.md) § 2026-04-30 Addendum | Hardware tier mapping (RTX 4090 = L2 default, H100/H200 = L3 additive) |
 >
 > **Outcome**: you can answer for your own stack: should I adopt L2 default on existing GPU? Does L3 additive make sense for any specific workload? Which auth surface (key file / passphrase / cert / HSM)? With what migration cost if reversed?
 
 ### Goal C — Design the M001 Reference Pipeline (1.5 hours, hands-on)
 
-For an operator preparing to author M001 (the L2 reference pipeline) when RTX 3090 lands mid-May 2026.
+For an operator preparing to author M001 (the L2 reference pipeline) when RTX 4090 lands mid-May 2026.
 
 > [!abstract] Path C — Implementation Prep
 >
@@ -101,7 +101,7 @@ For an operator preparing to author M001 (the L2 reference pipeline) when RTX 30
 > | 3 | [Caveman Synthesis](../../sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee.md) — full | Caveman as the prompt-layer substrate; install paths; eval harness; sub-skills (caveman-compress for memory-file slice) |
 > | 4 | [RLM Synthesis](../../sources/tools-integration/src-rlm-recursive-language-models-mit-oasys.md) — REPL + LocalREPL primitives | RLM substrate integration for compressed-encrypted context as REPL variable (M003 territory) |
 > | 5 | [Unsloth Synthesis](../../sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md) | UD-IQ2 / Q2_K weight quantization (the weights-layer slice of the 80–90% envelope) |
-> | 6 | [2026 Consumer Hardware AI Stack](../references/2026-consumer-hardware-ai-stack.md) § Hardware-tier reframing | RTX 3090 capabilities post-delivery |
+> | 6 | [2026 Consumer Hardware AI Stack](../references/2026-consumer-hardware-ai-stack.md) § Hardware-tier reframing | RTX 4090 capabilities post-delivery |
 >
 > **Outcome**: you have the full toolchain mapped — Caveman + Q2_K + KV-cache + AES-256-GCM + Triton + RLM — and can author M001 with concrete dependencies, target metrics, and validation gates.
 

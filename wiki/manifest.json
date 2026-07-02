@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-02T17:33:20.452739+00:00",
+  "generated": "2026-07-02T18:06:33.750230+00:00",
   "stats": {
     "pages": 984,
     "domains": 16,
@@ -305,7 +305,7 @@
         "iommu",
         "amd-iommu",
         "gpu-isolation",
-        "rtx-3090",
+        "rtx-4090",
         "blackwell",
         "sandbox",
         "podman"
@@ -332,7 +332,7 @@
       "derived_from": [],
       "aliases": [
         "E103 \u2014 VFIO Isolation",
-        "E103 \u2014 VFIO Isolation: RTX 3090 Sandbox + AMD IOMMU"
+        "E103 \u2014 VFIO Isolation: RTX 4090 Sandbox + AMD IOMMU"
       ],
       "relationships": [
         {
@@ -866,7 +866,7 @@
         "vllm",
         "qwen3",
         "blackwell",
-        "rtx-3090"
+        "rtx-4090"
       ],
       "sources": [
         {
@@ -2803,7 +2803,7 @@
           "id": "unsloth-synthesis",
           "type": "wiki",
           "file": "wiki/sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md",
-          "description": "Consumer-hardware fine-tune substrate \u2014 LoRA + UD-IQ2 / Q2_K; the realistic training environment on RTX 3090"
+          "description": "Consumer-hardware fine-tune substrate \u2014 LoRA + UD-IQ2 / Q2_K; the realistic training environment on RTX 4090"
         },
         {
           "id": "dpo-paper",
@@ -2984,7 +2984,7 @@
         "aicp",
         "provider-routing",
         "ollama-cloud",
-        "rtx-3090",
+        "rtx-4090",
         "rlm-qwen3-8b",
         "qwen3-6-27b",
         "anti-vendor-lock-in",
@@ -3012,10 +3012,10 @@
           "description": "Ollama Cloud is in operator's active stack since 2026-04-23 \u2014 registered cloud-LLM tier in the AICP backend pattern (`ollama_cloud`)"
         },
         {
-          "id": "rtx-3090-ordered",
+          "id": "rtx-4090-ordered",
           "type": "notes",
-          "file": "~/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/project_rtx_3090_acquired_2026_04_27.md",
-          "description": "RTX 3090 (renewed) ordered 2026-04-27, ETA 2-3 weeks \u2014 hardware uplift unlocking local-AI tier with 24GB VRAM Ampere"
+          "file": "~/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/project_rtx_4090_acquired_2026_04_27.md",
+          "description": "RTX 4090 (renewed) ordered 2026-04-27, ETA 2-3 weeks \u2014 hardware uplift unlocking local-AI tier with 24GB VRAM Ada"
         },
         {
           "id": "rlm-qwen3-8b-live",
@@ -3035,7 +3035,7 @@
       "derived_from": [],
       "aliases": [
         "Post-Anthropic 3-Layer Stack Epic",
-        "Multica + AICP + 3090 Assembly",
+        "Multica + AICP + 4090 Assembly",
         "Three-Layer Anti-Vendor-Lock-In Stack"
       ],
       "relationships": [
@@ -5655,7 +5655,7 @@
         "opencode",
         "3-layer-validation",
         "operator-actionable",
-        "pre-3090",
+        "pre-4090",
         "mission-2026-04-28",
         "m003"
       ],
@@ -14364,7 +14364,7 @@
           "id": "unsloth-synthesis",
           "type": "wiki",
           "file": "wiki/sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md",
-          "description": "Consumer-hardware fine-tuning \u2014 LoRA + UD-IQ2 / Q2_K quantization; the realistic training substrate on RTX 3090"
+          "description": "Consumer-hardware fine-tuning \u2014 LoRA + UD-IQ2 / Q2_K quantization; the realistic training substrate on RTX 4090"
         },
         {
           "id": "cavekit-synthesis",
@@ -14376,7 +14376,7 @@
           "id": "2026-consumer-hardware-stack",
           "type": "wiki",
           "file": "wiki/spine/references/2026-consumer-hardware-ai-stack.md",
-          "description": "Hardware reality \u2014 RTX 3090 (24 GB VRAM, ETA mid-May 2026) is the realistic training substrate for L2-tier customizations on operator's stack"
+          "description": "Hardware reality \u2014 RTX 4090 (24 GB VRAM, ETA mid-May 2026) is the realistic training substrate for L2-tier customizations on operator's stack"
         },
         {
           "id": "feedback-do-not-undermine",
@@ -17880,7 +17880,7 @@
         "vfio-pci",
         "sandboxing",
         "sain-01",
-        "rtx-3090",
+        "rtx-4090",
         "blackwell",
         "hardware-isolation",
         "kernel",
@@ -24798,7 +24798,7 @@
           "id": "unsloth-synth",
           "type": "wiki",
           "file": "wiki/sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md",
-          "description": "Layer 1 \u2014 Unsloth UD-IQ2 / Q2_K weight quantization \u2014 ~87.5% reduction vs FP16 weights; production-deployed on consumer hardware (RTX 3090 24 GB VRAM)"
+          "description": "Layer 1 \u2014 Unsloth UD-IQ2 / Q2_K weight quantization \u2014 ~87.5% reduction vs FP16 weights; production-deployed on consumer hardware (RTX 4090 24 GB VRAM)"
         },
         {
           "id": "trust-layer-concept",
@@ -53523,7 +53523,7 @@
         {
           "id": "dflash-luce-rits",
           "type": "article",
-          "url": "https://rits.shanghai.nyu.edu/ai/luce-dflash-brings-2x-speculative-decoding-to-qwen3-6-27b-on-a-single-rtx-3090/"
+          "url": "https://rits.shanghai.nyu.edu/ai/luce-dflash-brings-2x-speculative-decoding-to-qwen3-6-27b-on-a-single-rtx-4090/"
         },
         {
           "id": "operator-dflash-framing",
@@ -59416,7 +59416,7 @@
         "paper-grade",
         "dettmers",
         "consumer-hardware",
-        "rtx-3090-substrate",
+        "rtx-4090-substrate",
         "anti-vendor-lock-in-evidence"
       ],
       "sources": [
@@ -59467,7 +59467,7 @@
           "id": "unsloth-synth",
           "type": "wiki",
           "file": "wiki/sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md",
-          "description": "Unsloth Synthesis \u2014 production deployment of UD-IQ2 / Q2_K weight quantization on consumer hardware (RTX 3090 24GB); this synthesis documents the algorithmic foundation Unsloth implements"
+          "description": "Unsloth Synthesis \u2014 production deployment of UD-IQ2 / Q2_K weight quantization on consumer hardware (RTX 4090 24GB); this synthesis documents the algorithmic foundation Unsloth implements"
         },
         {
           "id": "multi-layer-compression-lesson",
@@ -59485,7 +59485,7 @@
           "id": "custom-model-concept",
           "type": "wiki",
           "file": "wiki/domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md",
-          "description": "Custom-Tailored Model Group Concept \u2014 M002 specialist LoRA on RTX 3090 needs Q4KM-class quantization to fit 27B-class bases; this synthesis documents the substrate"
+          "description": "Custom-Tailored Model Group Concept \u2014 M002 specialist LoRA on RTX 4090 needs Q4KM-class quantization to fit 27B-class bases; this synthesis documents the substrate"
         }
       ],
       "layer": 1,
@@ -63138,7 +63138,7 @@
       "derived_from": [],
       "aliases": [
         "3-Layer Stack Learning Path",
-        "Multica + AICP + 3090 Reading Order",
+        "Multica + AICP + 4090 Reading Order",
         "Post-Anthropic Stack 2026-04-28 Path"
       ],
       "relationships": [
@@ -68796,12 +68796,12 @@
       "backlog/epics/milestone-sain01/e103-vfio-isolation",
       "domains/devops/concept-vfio-gpu-isolation-amd-iommu"
     ],
-    "rtx-3090": [
+    "rtx-4090": [
       "backlog/epics/milestone-sain01/e103-vfio-isolation",
       "backlog/epics/milestone-sain01/e109-dflash-integration",
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
-      "domains/devops/concept-vfio-gpu-isolation-amd-iommu",
-      "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption"
+      "domains/ai-models/reference-local-model-routing-catalog",
+      "domains/devops/concept-vfio-gpu-isolation-amd-iommu"
     ],
     "blackwell": [
       "backlog/epics/milestone-sain01/e103-vfio-isolation",
@@ -71680,7 +71680,7 @@
     "operator-actionable": [
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook"
     ],
-    "pre-3090": [
+    "pre-4090": [
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook"
     ],
     "m003": [
@@ -74065,9 +74065,6 @@
       "domains/ai-models/reference-local-model-routing-catalog",
       "domains/ai-models/reference-scientific-models-dna-protein-particle",
       "spine/references/ai-infrastructure-decision-framework-2026"
-    ],
-    "rtx-4090": [
-      "domains/ai-models/reference-local-model-routing-catalog"
     ],
     "rtx-pro": [
       "domains/ai-models/reference-local-model-routing-catalog"
@@ -77877,6 +77874,9 @@
     "registered-corrections": [
       "log/2026-04-28-session-handoff",
       "log/2026-05-04-session-handoff-pre-compaction"
+    ],
+    "rtx-3090": [
+      "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption"
     ],
     "operator-corrections": [
       "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption"
@@ -83964,7 +83964,7 @@
     "dettmers": [
       "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms"
     ],
-    "rtx-3090-substrate": [
+    "rtx-4090-substrate": [
       "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms"
     ],
     "anti-vendor-lock-in-evidence": [

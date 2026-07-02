@@ -59,7 +59,7 @@ See Done When — verifiable resident-model deployment checkpoints.
 - [ ] **Quantization variant selected** per model + deployment goal:
   - Ling-2.6-flash: Q4 (~54 GB on disk + VRAM) OR MoE-active-only (full BF16; active params ~20-26 GB at any time)
   - Nemotron-3-Nano-Omni: BF16 native (~66 GB on Blackwell with 30 GB headroom) OR FP8 (~33 GB, 63 GB headroom) OR FP4 (~17 GB, 79 GB headroom)
-- [ ] **vLLM serves the model** via Podman: `podman run --device nvidia.com/gpu=0 -v /mnt/vault/models:/models:ro vllm/vllm-openai:latest --model /models/<name>` (`device=0` = Blackwell since RTX 3090 is VFIO-bound — verify the dev ID corresponds to the Blackwell)
+- [ ] **vLLM serves the model** via Podman: `podman run --device nvidia.com/gpu=0 -v /mnt/vault/models:/models:ro vllm/vllm-openai:latest --model /models/<name>` (`device=0` = Blackwell since RTX 4090 is VFIO-bound — verify the dev ID corresponds to the Blackwell)
 - [ ] **First inference test**: simple prompt → response succeeds end-to-end; throughput recorded
 - [ ] **Long-context test** (Nemotron only): prompt with ~100 K tokens of input → response; verify Mamba-Transformer scaling holds; record memory + latency
 - [ ] **Multimodal test** (Nemotron only): text + image input → response; verify all-to-any capability works

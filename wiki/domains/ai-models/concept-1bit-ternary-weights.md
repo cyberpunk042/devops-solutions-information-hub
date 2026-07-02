@@ -122,7 +122,7 @@ The [[src-sain-01-sovereign-node-spec|SAIN-01 spec]] places ternary CPU inferenc
 
 - State routing wants **low latency** for small context blocks — CPU's lower scheduling overhead beats GPU context-switching.
 - The 9900X's single-cycle 512-bit AVX-512 + VNNI is uniquely suited to ternary lookup matmul.
-- Pinning ternary inference to CPU keeps the GPUs free for heavier workloads (the "Logic Engine" on the RTX 3090 and "Oracle Core" on the 96GB Blackwell).
+- Pinning ternary inference to CPU keeps the GPUs free for heavier workloads (the "Logic Engine" on the RTX 4090 and "Oracle Core" on the 96GB Blackwell).
 - Energy consumption stays low — the Conductor can run continuously without thermal pressure on the GPUs.
 
 The architectural insight: ternary on CPU isn't a fallback for hardware constraints — it's the **right** placement for the orchestration tier specifically.

@@ -158,7 +158,7 @@ Operator-authored concept 2026-04-30: a model that runs on a shared GPU but cann
 
 > [!info] **RLM as the script-orientation substrate (operator's "script oriented like RLM").**
 >
-> [RLM (Recursive Language Models, MIT OASYS)](src-rlm-recursive-language-models-mit-oasys.md) replaces the canonical `llm.completion(prompt, model)` call with `rlm.completion(prompt, model)` — context becomes a variable in a REPL the model operates on programmatically. Three cooperating pieces: RLM + LMHandler + LocalREPL. Soft sandbox via builtins removal (operator-named "isolated mode"); hard sandbox via cloud environments (docker / modal / prime / daytona / e2b). RLM-Qwen3-8B is published at `mit-oasys/rlm-qwen3-8b-v0.1` and is Phase-1 deployable on the operator's incoming RTX 3090. RLM IS the script-oriented inference layer; it composes naturally with this concept's compression + cypher/decypher because RLM operates on context-as-variable — meaning the variable can be the *compressed-and-encrypted* form, decrypted lazily inside the REPL when accessed.
+> [RLM (Recursive Language Models, MIT OASYS)](src-rlm-recursive-language-models-mit-oasys.md) replaces the canonical `llm.completion(prompt, model)` call with `rlm.completion(prompt, model)` — context becomes a variable in a REPL the model operates on programmatically. Three cooperating pieces: RLM + LMHandler + LocalREPL. Soft sandbox via builtins removal (operator-named "isolated mode"); hard sandbox via cloud environments (docker / modal / prime / daytona / e2b). RLM-Qwen3-8B is published at `mit-oasys/rlm-qwen3-8b-v0.1` and is Phase-1 deployable on the operator's incoming RTX 4090. RLM IS the script-oriented inference layer; it composes naturally with this concept's compression + cypher/decypher because RLM operates on context-as-variable — meaning the variable can be the *compressed-and-encrypted* form, decrypted lazily inside the REPL when accessed.
 
 > [!info] **Markdown + Python rules — the wiki's own Markdown-as-IaC model is the precedent; transparent to the consumer.**
 >
@@ -176,13 +176,13 @@ The operator's framing — *"the best way and lever of integrations and opt-ins 
 
 | Opt-in | What it provides | Auth surface | Hardware / runtime |
 |---|---|---|---|
-| **L0 — Hash integrity** | Verify weights weren't swapped (SHA-256 of safetensors/GGUF) | None — public hash | Any GPU including RTX 3090 |
-| **L1 — Weights-encrypted-at-rest, decrypt-at-load** | Cypher applied to weights on disk; decrypt at load using operator key | Symmetric key OR passphrase OR certificate | Any GPU including RTX 3090 |
+| **L0 — Hash integrity** | Verify weights weren't swapped (SHA-256 of safetensors/GGUF) | None — public hash | Any GPU including RTX 4090 |
+| **L1 — Weights-encrypted-at-rest, decrypt-at-load** | Cypher applied to weights on disk; decrypt at load using operator key | Symmetric key OR passphrase OR certificate | Any GPU including RTX 4090 |
 | **L2 — Compressed-and-encrypted weights + KV cache, GPU decrypt** | Caveman/quantization compression composed with cypher; decypher kernels run on GPU (Triton); compressed-encrypted form stays on disk and in transit | Symmetric key OR passphrase OR certificate; key may live in HSM | Any modern GPU; the **80–90% space saved on large context** envelope is delivered here |
 | **L3 — Full hardware TEE (NVIDIA H100/H200 CC mode)** | HBM encryption + attestation; weights decrypted only inside the GPU's encrypted memory after attestation gates key release | NRAS + RIM attestation reports → key release | H100 / H200 / Blackwell on-prem or via cloud (AWS p5 / Azure NCC H100 v5) |
 | **L4 — End-to-end FHE inference** | Weights and activations encrypted end-to-end; no plaintext key release at all | Cryptographic protocol (no plaintext key release) | Zama Concrete ML — niche today, but a real opt-in for low-throughput high-sensitivity workloads |
 
-The opt-ins compose: L0 ⊂ L1 ⊂ L2 ⊂ L3 ⊂ L4. Operator picks per workload. The **default operator stance for the RTX 3090 path is L2** — compressed-and-encrypted weights + KV cache + on-GPU decypher kernels via Triton. This is where the 80-90% space saving + seamless + blazing-fast properties land on the operator's incoming hardware. L3 unlocks when H100-class hardware is rented or acquired for workloads that need the full hardware-TEE attestation chain.
+The opt-ins compose: L0 ⊂ L1 ⊂ L2 ⊂ L3 ⊂ L4. Operator picks per workload. The **default operator stance for the RTX 4090 path is L2** — compressed-and-encrypted weights + KV cache + on-GPU decypher kernels via Triton. This is where the 80-90% space saving + seamless + blazing-fast properties land on the operator's incoming hardware. L3 unlocks when H100-class hardware is rented or acquired for workloads that need the full hardware-TEE attestation chain.
 
 ### Mission Alignment — Adding a 4th Substitutable Layer
 
@@ -270,7 +270,7 @@ The operator's [Custom-Tailored Senior-Engineer-Tier Model Group Concept](custom
 
 | Hardware | Default opt-in | What lands |
 |---|---|---|
-| **RTX 3090 (incoming mid-May 2026)** | **L2** — compressed-and-encrypted weights + KV cache, on-GPU decypher kernels via Triton | The 80-90% space saved + blazing-fast + transparent properties land here. No cloud dependency. |
+| **RTX 4090 (incoming mid-May 2026)** | **L2** — compressed-and-encrypted weights + KV cache, on-GPU decypher kernels via Triton | The 80-90% space saved + blazing-fast + transparent properties land here. No cloud dependency. |
 | **H100 / H200 (cloud rental or purchase, optional)** | **L3** — adds NVIDIA CC mode HBM encryption + attestation on top of L2 | Full hardware-TEE chain when workloads need it. Operator opt-in per workload. |
 | **Any future hardware** | All opt-ins compose forward; the runtime contract is hardware-agnostic | Anti-vendor-lock-in extends to security stance |
 
@@ -278,7 +278,7 @@ The operator's [Custom-Tailored Senior-Engineer-Tier Model Group Concept](custom
 
 > [!tip] Concrete next moves:
 >
-> 1. **L2 prototype on RTX 3090** — author the compress+cypher+decypher pipeline using Caveman for prompt compression, Q2_K / UD-IQ2 for weight quantization, and AES-256-GCM applied to the compressed form. Decypher kernels via Triton on GPU. Target: empirically measure the 80-90% space-saved envelope on a large-context workload.
+> 1. **L2 prototype on RTX 4090** — author the compress+cypher+decypher pipeline using Caveman for prompt compression, Q2_K / UD-IQ2 for weight quantization, and AES-256-GCM applied to the compressed form. Decypher kernels via Triton on GPU. Target: empirically measure the 80-90% space-saved envelope on a large-context workload.
 > 2. **Define the Markdown rule DSL** — what rules govern the runtime contract (which inputs allowed, which outputs allowed, which key required, which attestation step)? Likely parallels the wiki's existing CLAUDE.md + `.claude/rules/` pattern.
 > 3. **RLM substrate integration** — wire `rlm.completion()` so the context variable in the REPL IS the compressed-and-encrypted form, with lazy decypher inside the REPL when accessed.
 > 4. **L3 unlock** — when an H100 / H200 workload arrives, enable NVIDIA CC mode + attestation on top of L2. The L2 → L3 transition is additive (L3 adds the hardware-TEE chain; L2's compression and cypher continue to apply).
