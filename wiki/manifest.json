@@ -1,24 +1,24 @@
 {
-  "generated": "2026-07-02T17:01:57.692800+00:00",
+  "generated": "2026-07-02T17:33:20.452739+00:00",
   "stats": {
-    "pages": 983,
+    "pages": 984,
     "domains": 16,
     "sources": 128,
     "comparisons": 14,
     "relationships": 4352,
-    "tags_unique": 3780,
+    "tags_unique": 3787,
     "layers": {
       "3": 8,
       "5": 38,
       "6": 27,
-      "2": 122,
+      "2": 123,
       "4": 90,
       "0": 1,
       "1": 94,
       "spine": 84
     },
     "maturity": {
-      "seed": 249,
+      "seed": 250,
       "growing": 352,
       "mature": 23
     }
@@ -13481,6 +13481,47 @@
       "aliases": [
         "Local Model Routing Catalog",
         "Complexity-Routed Model Selection Matrix"
+      ],
+      "relationships": []
+    },
+    {
+      "path": "domains/ai-models/reference-scientific-models-dna-protein-particle.md",
+      "slug": "domains/ai-models/reference-scientific-models-dna-protein-particle",
+      "title": "Scientific Models \u2014 DNA / Protein / Particle (non-LLM)",
+      "type": "reference",
+      "domain": "ai-models",
+      "status": "processing",
+      "confidence": "high",
+      "created": "2026-07-02",
+      "updated": "2026-07-02",
+      "last_reviewed": "",
+      "tags": [
+        "ai-models",
+        "scientific-models",
+        "dna",
+        "genomics",
+        "protein-folding",
+        "structure-prediction",
+        "physics-sim",
+        "non-llm",
+        "hardware-tier",
+        "evolving"
+      ],
+      "sources": [
+        {
+          "id": "note-operator-model-routing-catalog-2026-07-02",
+          "type": "note",
+          "file": "raw/notes/2026-07-02-operator-model-routing-catalog-handwritten-verbatim.md",
+          "title": "Operator handwritten model-routing catalog (verbatim)",
+          "ingested": "2026-07-02"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Scientific Models Catalog",
+        "DNA Protein Particle Models"
       ],
       "relationships": []
     },
@@ -68500,7 +68541,7 @@
       "relationship_count": 583
     },
     "ai-models": {
-      "page_count": 34,
+      "page_count": 35,
       "relationship_count": 149
     },
     "devops": {
@@ -72240,6 +72281,7 @@
       "domains/ai-models/concept-1bit-ternary-weights",
       "domains/ai-models/concept-speculative-decoding-block-diffusion",
       "domains/ai-models/reference-local-model-routing-catalog",
+      "domains/ai-models/reference-scientific-models-dna-protein-particle",
       "sources/src-27-questions-llm-selection",
       "sources/src-bitnet-b158-ternary-llm",
       "sources/src-dflash-block-diffusion-spec-dec",
@@ -74021,6 +74063,7 @@
     ],
     "hardware-tier": [
       "domains/ai-models/reference-local-model-routing-catalog",
+      "domains/ai-models/reference-scientific-models-dna-protein-particle",
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "rtx-4090": [
@@ -74030,7 +74073,29 @@
       "domains/ai-models/reference-local-model-routing-catalog"
     ],
     "evolving": [
-      "domains/ai-models/reference-local-model-routing-catalog"
+      "domains/ai-models/reference-local-model-routing-catalog",
+      "domains/ai-models/reference-scientific-models-dna-protein-particle"
+    ],
+    "scientific-models": [
+      "domains/ai-models/reference-scientific-models-dna-protein-particle"
+    ],
+    "dna": [
+      "domains/ai-models/reference-scientific-models-dna-protein-particle"
+    ],
+    "genomics": [
+      "domains/ai-models/reference-scientific-models-dna-protein-particle"
+    ],
+    "protein-folding": [
+      "domains/ai-models/reference-scientific-models-dna-protein-particle"
+    ],
+    "structure-prediction": [
+      "domains/ai-models/reference-scientific-models-dna-protein-particle"
+    ],
+    "physics-sim": [
+      "domains/ai-models/reference-scientific-models-dna-protein-particle"
+    ],
+    "non-llm": [
+      "domains/ai-models/reference-scientific-models-dna-protein-particle"
     ],
     "content-pipeline": [
       "domains/automation/ai-driven-content-pipeline",

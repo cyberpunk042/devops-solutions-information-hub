@@ -9,7 +9,9 @@ LLMs, embeddings, training, fine-tuning, model evaluation
 - [Local LLM Quantization](local-llm-quantization.md) — Local LLM quantization enables running large language models (up to 122B parameters) on consumer hardware like MacBoo...
 - [Local Model Routing Catalog (task × hardware tier)](reference-local-model-routing-catalog.md) — A **model selection matrix** for local inference: which local model to run for a
 given **task type** (coding, chat, a...
+- [Scientific Models — DNA / Protein / Particle (non-LLM)](reference-scientific-models-dna-protein-particle.md) — The operator's handwritten catalog names scientific models across three domains —
+**DNA/genomics, protein structure p...
 
 ## Tags
 
-`ai-models`, `quantization`, `ternary`, `bitnet`, `1bit`, `cpu-inference`, `bitlinear`, `low-bit-inference`, `mpgemm`, `lookup-table`, `avx512-vnni`, `vpdpbusd`, `integer-arithmetic`, `energy-efficiency`, `inference-acceleration`, `speculative-decoding`, `block-diffusion`, `parallel-drafting`, `bidirectional-attention`, `eagle-3`
+`ai-models`, `quantization`, `ternary`, `bitnet`, `1bit`, `cpu-inference`, `hardware-tier`, `evolving`, `bitlinear`, `low-bit-inference`, `mpgemm`, `lookup-table`, `avx512-vnni`, `vpdpbusd`, `integer-arithmetic`, `energy-efficiency`, `inference-acceleration`, `speculative-decoding`, `block-diffusion`, `parallel-drafting`
