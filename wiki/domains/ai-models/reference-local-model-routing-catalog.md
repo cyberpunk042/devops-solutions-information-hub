@@ -37,8 +37,9 @@ tags: [ai-models, model-routing, complexity-routing, ternary, bitnet, 1bit, loca
 > and **routing profiles** — lives as config in
 > [`wiki/config/model-catalog/`](../../config/model-catalog/README.md). Adding a
 > model is a one-line data edit there; `tools/validate_model_catalog.py` checks
-> every group member and profile selection resolves. Current fleet: **54 models
-> (37 ternary/BitNet), 3 group models, 10 profiles.**
+> every group member and profile selection resolves. Current fleet: **55 models
+> (38 ternary/BitNet), 3 group models, 10 profiles.** Reality-check status:
+> **11 real** (HF-verified), **2 aspirational**, 42 unverified (2026-07-02).
 
 ## Summary
 

@@ -130,9 +130,28 @@
         "rtx-pro"
       ],
       "source": null,
-      "confidence": "medium",
-      "notes": "Instruct; a 120B variant is also noted",
-      "status": "unverified"
+      "confidence": "low",
+      "status": "aspirational",
+      "notes": "Instruct; a 120B variant is also noted. No public 70B/120B BitNet found on HF (2026-07-02) \u2014 the canonical released BitNet is microsoft-bitnet-b158-2b (2B). Treated as a target, not a shippable model."
+    },
+    {
+      "id": "microsoft-bitnet-b158-2b",
+      "name": "microsoft/bitnet-b1.58-2B-4T",
+      "family": "bitnet",
+      "params": "2B",
+      "quantization": "bitnet-1.58",
+      "roles": [
+        "chat",
+        "general"
+      ],
+      "tiers": [
+        "cpu",
+        "rtx-4090"
+      ],
+      "source": "microsoft/bitnet-b1.58-2B-4T",
+      "confidence": "high",
+      "status": "real",
+      "notes": "the canonical released BitNet (verified on HF 2026-07-02, 850M params, arxiv 2504.12285). The real, shippable substitute for the aspirational bitnet-70b."
     },
     {
       "id": "llama3-8b-ternary",
@@ -234,10 +253,10 @@
       "tiers": [
         "cpu"
       ],
-      "source": null,
-      "confidence": "medium",
-      "notes": "TriLM = ternary",
-      "status": "unverified"
+      "source": "SpectraSuite/TriLM_3.9B_Unpacked",
+      "confidence": "high",
+      "status": "real",
+      "notes": "TriLM = ternary; verified on HF 2026-07-02 (3992M params)"
     },
     {
       "id": "ternalm3-15b-instruct",
@@ -271,10 +290,10 @@
         "rtx-pro"
       ],
       "source": null,
-      "confidence": "medium",
+      "confidence": "low",
+      "status": "aspirational",
       "context_window": 132000,
-      "notes": "132k context window (named in source)",
-      "status": "unverified"
+      "notes": "132k context window (named in source). Same caveat as bitnet-70b \u2014 no public 70B BitNet; a long-context BitNet at this scale is a target, not a released model."
     },
     {
       "id": "nexus-spec-1.1b",
@@ -403,7 +422,7 @@
       "id": "evo-arc-institute",
       "name": "Evo (Arc Institute)",
       "family": "other",
-      "params": null,
+      "params": "7B",
       "quantization": "native",
       "roles": [
         "dna",
@@ -412,10 +431,10 @@
       "tiers": [
         "rtx-4090"
       ],
-      "source": null,
+      "source": "arcinstitute/evo2_7b",
       "confidence": "high",
-      "notes": "ou HyenaDNA",
-      "status": "unverified"
+      "status": "real",
+      "notes": "ou HyenaDNA; verified on HF 2026-07-02 (Arc Institute evo2_7b; togethercomputer/evo-1-131k-base is the earlier stripedhyena release)"
     },
     {
       "id": "hyenadna",
@@ -430,10 +449,10 @@
       "tiers": [
         "rtx-4090"
       ],
-      "source": null,
+      "source": "LongSafari/hyenadna-medium-450k-seqlen-hf",
       "confidence": "high",
-      "notes": "alternative to Evo",
-      "status": "unverified"
+      "status": "real",
+      "notes": "alternative to Evo; verified on HF 2026-07-02"
     },
     {
       "id": "alphafold3",
@@ -467,10 +486,10 @@
       "tiers": [
         "rtx-4090"
       ],
-      "source": null,
+      "source": "facebook/esmfold_v1",
       "confidence": "high",
-      "notes": "alternative to AlphaFold3",
-      "status": "unverified"
+      "status": "real",
+      "notes": "alternative to AlphaFold3; verified on HF 2026-07-02 (facebook/esmfold_v1)"
     },
     {
       "id": "openfold",
@@ -565,19 +584,19 @@
     {
       "id": "openthinking-7b",
       "name": "OpenThinking-7B",
-      "family": "other",
+      "family": "qwen",
       "params": "7B",
-      "quantization": "unknown",
+      "quantization": "native",
       "roles": [
         "reasoning"
       ],
       "tiers": [
         "rtx-4090"
       ],
-      "source": null,
-      "confidence": "medium",
-      "notes": "",
-      "status": "unverified"
+      "source": "open-thoughts/OpenThinker-7B",
+      "confidence": "high",
+      "status": "real",
+      "notes": "verified on HF 2026-07-02 \u2014 real name OpenThinker-7B (Qwen2.5-7B finetune, 7616M); not ternary"
     },
     {
       "id": "qwen25-32b-trit-uniform",
@@ -600,7 +619,7 @@
       "id": "1bitllm-bitnet-b158-large",
       "name": "1bitLLM/bitnet-b1.58-large",
       "family": "bitnet",
-      "params": null,
+      "params": "0.7B",
       "quantization": "bitnet-1.58",
       "roles": [
         "merge-base"
@@ -609,9 +628,9 @@
         "rtx-pro"
       ],
       "source": "1bitLLM/bitnet_b1_58-large",
-      "confidence": "medium",
-      "notes": "",
-      "status": "real"
+      "confidence": "high",
+      "status": "real",
+      "notes": "verified on HF 2026-07-02 (729M params, arxiv 2402.17764)"
     },
     {
       "id": "xinyuan-t-moe-8x7b",
@@ -645,9 +664,9 @@
         "rtx-pro"
       ],
       "source": "tiiuae/Falcon3-10B-Instruct-1.58bit",
-      "confidence": "medium",
-      "notes": "prequantized 6f16; ou Falcon-E-3B",
-      "status": "real"
+      "confidence": "high",
+      "status": "real",
+      "notes": "prequantized 6f16; ou Falcon-E-3B; verified on HF 2026-07-02 (3181M params)"
     },
     {
       "id": "falcon-e-3b",
@@ -662,10 +681,10 @@
       "tiers": [
         "rtx-4090"
       ],
-      "source": null,
-      "confidence": "low",
-      "notes": "alternative to Falcon3-10B-1.58bit",
-      "status": "unverified"
+      "source": "tiiuae/Falcon-E-3B-Instruct",
+      "confidence": "high",
+      "status": "real",
+      "notes": "alternative to Falcon3-10B-1.58bit; verified on HF 2026-07-02 (BitNet edge model; reported 864M params despite the '3B' name)"
     },
     {
       "id": "zihan-wang-coe",
@@ -1068,7 +1087,7 @@
           "id": "1bitllm-bitnet-b158-large",
           "name": "1bitLLM/bitnet-b1.58-large",
           "family": "bitnet",
-          "params": null,
+          "params": "0.7B",
           "quantization": "bitnet-1.58",
           "roles": [
             "merge-base"
@@ -1077,9 +1096,9 @@
             "rtx-pro"
           ],
           "source": "1bitLLM/bitnet_b1_58-large",
-          "confidence": "medium",
-          "notes": "",
-          "status": "real"
+          "confidence": "high",
+          "status": "real",
+          "notes": "verified on HF 2026-07-02 (729M params, arxiv 2402.17764)"
         },
         {
           "id": "xinyuan-t-moe-8x7b",
@@ -1113,9 +1132,9 @@
             "rtx-pro"
           ],
           "source": "tiiuae/Falcon3-10B-Instruct-1.58bit",
-          "confidence": "medium",
-          "notes": "prequantized 6f16; ou Falcon-E-3B",
-          "status": "real"
+          "confidence": "high",
+          "status": "real",
+          "notes": "prequantized 6f16; ou Falcon-E-3B; verified on HF 2026-07-02 (3181M params)"
         },
         {
           "id": "falcon-e-3b",
@@ -1130,10 +1149,10 @@
           "tiers": [
             "rtx-4090"
           ],
-          "source": null,
-          "confidence": "low",
-          "notes": "alternative to Falcon3-10B-1.58bit",
-          "status": "unverified"
+          "source": "tiiuae/Falcon-E-3B-Instruct",
+          "confidence": "high",
+          "status": "real",
+          "notes": "alternative to Falcon3-10B-1.58bit; verified on HF 2026-07-02 (BitNet edge model; reported 864M params despite the '3B' name)"
         },
         {
           "id": "zihan-wang-coe",
@@ -1348,9 +1367,9 @@
               "rtx-pro"
             ],
             "source": null,
-            "confidence": "medium",
-            "notes": "Instruct; a 120B variant is also noted",
-            "status": "unverified"
+            "confidence": "low",
+            "status": "aspirational",
+            "notes": "Instruct; a 120B variant is also noted. No public 70B/120B BitNet found on HF (2026-07-02) \u2014 the canonical released BitNet is microsoft-bitnet-b158-2b (2B). Treated as a target, not a shippable model."
           }
         },
         {
@@ -1513,10 +1532,10 @@
             "tiers": [
               "cpu"
             ],
-            "source": null,
-            "confidence": "medium",
-            "notes": "TriLM = ternary",
-            "status": "unverified"
+            "source": "SpectraSuite/TriLM_3.9B_Unpacked",
+            "confidence": "high",
+            "status": "real",
+            "notes": "TriLM = ternary; verified on HF 2026-07-02 (3992M params)"
           }
         },
         {
@@ -1579,10 +1598,10 @@
               "rtx-pro"
             ],
             "source": null,
-            "confidence": "medium",
+            "confidence": "low",
+            "status": "aspirational",
             "context_window": 132000,
-            "notes": "132k context window (named in source)",
-            "status": "unverified"
+            "notes": "132k context window (named in source). Same caveat as bitnet-70b \u2014 no public 70B BitNet; a long-context BitNet at this scale is a target, not a released model."
           }
         }
       ]
@@ -1767,19 +1786,19 @@
             "record_type": "model",
             "id": "openthinking-7b",
             "name": "OpenThinking-7B",
-            "family": "other",
+            "family": "qwen",
             "params": "7B",
-            "quantization": "unknown",
+            "quantization": "native",
             "roles": [
               "reasoning"
             ],
             "tiers": [
               "rtx-4090"
             ],
-            "source": null,
-            "confidence": "medium",
-            "notes": "",
-            "status": "unverified"
+            "source": "open-thoughts/OpenThinker-7B",
+            "confidence": "high",
+            "status": "real",
+            "notes": "verified on HF 2026-07-02 \u2014 real name OpenThinker-7B (Qwen2.5-7B finetune, 7616M); not ternary"
           }
         },
         {
@@ -1852,10 +1871,10 @@
             "tiers": [
               "rtx-4090"
             ],
-            "source": null,
+            "source": "LongSafari/hyenadna-medium-450k-seqlen-hf",
             "confidence": "high",
-            "notes": "alternative to Evo",
-            "status": "unverified"
+            "status": "real",
+            "notes": "alternative to Evo; verified on HF 2026-07-02"
           }
         },
         {
@@ -1866,7 +1885,7 @@
             "id": "evo-arc-institute",
             "name": "Evo (Arc Institute)",
             "family": "other",
-            "params": null,
+            "params": "7B",
             "quantization": "native",
             "roles": [
               "dna",
@@ -1875,10 +1894,10 @@
             "tiers": [
               "rtx-4090"
             ],
-            "source": null,
+            "source": "arcinstitute/evo2_7b",
             "confidence": "high",
-            "notes": "ou HyenaDNA",
-            "status": "unverified"
+            "status": "real",
+            "notes": "ou HyenaDNA; verified on HF 2026-07-02 (Arc Institute evo2_7b; togethercomputer/evo-1-131k-base is the earlier stripedhyena release)"
           }
         },
         {
@@ -1953,10 +1972,10 @@
             "tiers": [
               "rtx-4090"
             ],
-            "source": null,
+            "source": "facebook/esmfold_v1",
             "confidence": "high",
-            "notes": "alternative to AlphaFold3",
-            "status": "unverified"
+            "status": "real",
+            "notes": "alternative to AlphaFold3; verified on HF 2026-07-02 (facebook/esmfold_v1)"
           }
         },
         {
