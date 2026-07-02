@@ -42,13 +42,13 @@ tags:
 
 ## Summary
 
-**VFIO (Virtual Function I/O) with AMD IOMMU** is the Linux kernel mechanism for binding a physical PCIe device to a userspace driver at boot, removing it from the host kernel's purview entirely. On the [[src-sain-01-sovereign-node-spec|SAIN-01 Sovereign Node]], this is the technique that **isolates the secondary RTX 4090 GPU as a sandboxed agent-fleet substrate** while the primary RTX PRO 6000 Blackwell remains host-resident for primary inference. The mechanism: GRUB kernel parameters (`amd_iommu=on iommu=pt` + `vfio-pci.ids=10de:2204,10de:1ad8`) bind the `vfio-pci` driver to the GPU and its companion audio device by **PCI vendor:device ID** at boot, before the NVIDIA host driver loads. The host OS never sees the 4090; it can be passed through to a sandboxed container or VM as if it were a private device. The [[concept-srp-trinity-pulse-weaver-auditor|Trinity's Weaver]] uses this to give sub-agent fleets GPU compute without exposing them to the host's primary inference path or context. The IOMMU enforces this at the hardware level — a misbehaving sub-agent cannot DMA into host memory because the IOMMU translates every device memory access through its own page tables, isolated from the host kernel's. This is the architectural equivalent of "VLAN for PCIe devices."
+**VFIO (Virtual Function I/O) with AMD IOMMU** is the Linux kernel mechanism for binding a physical PCIe device to a userspace driver at boot, removing it from the host kernel's purview entirely. On the [[src-sain-01-sovereign-node-spec|SAIN-01 Sovereign Node]], this is the technique that **isolates the secondary RTX 4090 GPU as a sandboxed agent-fleet substrate** while the primary RTX PRO 6000 Blackwell remains host-resident for primary inference. The mechanism: GRUB kernel parameters (`amd_iommu=on iommu=pt` + `vfio-pci.ids=10de:2684,10de:22ba`) bind the `vfio-pci` driver to the GPU and its companion audio device by **PCI vendor:device ID** at boot, before the NVIDIA host driver loads. The host OS never sees the 4090; it can be passed through to a sandboxed container or VM as if it were a private device. The [[concept-srp-trinity-pulse-weaver-auditor|Trinity's Weaver]] uses this to give sub-agent fleets GPU compute without exposing them to the host's primary inference path or context. The IOMMU enforces this at the hardware level — a misbehaving sub-agent cannot DMA into host memory because the IOMMU translates every device memory access through its own page tables, isolated from the host kernel's. This is the architectural equivalent of "VLAN for PCIe devices."
 
 ## Key Insights
 
 - **VFIO binds a device to userspace at the PCI bus, not at boot device discovery.** The kernel parameter `vfio-pci.ids=<vendor>:<device>,...` is processed during PCI enumeration — the `vfio-pci` driver claims the device by ID before any other driver gets the chance. The NVIDIA host driver loads later and sees no GPU at that BDF. This is what makes the host OS structurally unaware of the 4090: it isn't unbinding it after boot, it never bound it in the first place. ([[src-sain-01-sovereign-node-spec|SAIN-01 synthesis]])
 
-- **PCI vendor:device IDs are stable and platform-independent.** The SAIN-01 spec's `10de:2204,10de:1ad8` are: `10de:2204` = NVIDIA GA102 (this was the RTX **3090** id; the RTX 4090 is AD102, GPU id typically `10de:2684`); `10de:1ad8` = the companion HD-audio id (likewise re-derive the 4090's from `lspci -nn`). **These GA102/Ampere ids must be replaced with the real RTX 4090 (AD102) ids before applying the GRUB line.** Both must be bound together — devices in the same IOMMU group can't be split between host and sandbox. The vendor IDs are stable across motherboards and Linux distributions; the same `vfio-pci.ids` line works on any AMD-IOMMU-capable system with the same GPU. ([[src-sain-01-sovereign-node-spec|SAIN-01 synthesis]])
+- **PCI vendor:device IDs are stable and platform-independent.** The SAIN-01 spec's `10de:2684,10de:22ba` are: `10de:2684` = NVIDIA AD102 (RTX 4090 GPU, confirmed `10de:2684`); `10de:22ba` = the companion HD-audio id (likewise re-derive the 4090's from `lspci -nn`). **These AD102/Ampere ids must be replaced with the real RTX 4090 (AD102) ids before applying the GRUB line.** Both must be bound together — devices in the same IOMMU group can't be split between host and sandbox. The vendor IDs are stable across motherboards and Linux distributions; the same `vfio-pci.ids` line works on any AMD-IOMMU-capable system with the same GPU. ([[src-sain-01-sovereign-node-spec|SAIN-01 synthesis]])
 
 - **`amd_iommu=on iommu=pt` enables hardware-level isolation.** `amd_iommu=on` activates the AMD IOMMU hardware (present on Ryzen Pro / Threadripper / Ryzen 9 since Zen 2; standard on Zen 5). `iommu=pt` enables **pass-through mode** — IOMMU page-table translation is bypassed for host-attached devices (preserving performance) but enforced for VFIO-isolated devices. The combination delivers: full hardware isolation for the sandboxed GPU + zero performance cost for the host-resident GPU + normal device access for everything else. ([[src-sain-01-sovereign-node-spec|SAIN-01 synthesis]])
 
@@ -80,7 +80,7 @@ When the SAIN-01 system boots, the following sequence executes:
      quiet splash
      amd_iommu=on iommu=pt           # Enable AMD IOMMU + pass-through mode
      kvm_amd.npt=1 kvm_amd.avic=1    # KVM nested paging + advanced virtual interrupt controller
-     vfio-pci.ids=10de:2204,10de:1ad8  # Bind RTX 4090 + audio to vfio-pci
+     vfio-pci.ids=10de:2684,10de:22ba  # Bind RTX 4090 + audio to vfio-pci
      nvidia-drm.modeset=1            # Enable NVIDIA DRM modeset for Blackwell
      nvidia.NVreg_EnableGpuFirmware=1 # Require firmware signature checks
    "
@@ -90,8 +90,8 @@ When the SAIN-01 system boots, the following sequence executes:
    - PCI bus enumerated
    - For each PCIe device, drivers register interest based on vendor:device ID:
        * Blackwell (10de:????) → matched by nvidia.ko (loaded later); claimed by NVIDIA host driver
-       * RTX 4090 (10de:2204) → matched by vfio-pci (loaded early); claimed by vfio-pci
-       * RTX 4090 audio (10de:1ad8) → matched by vfio-pci; claimed by vfio-pci
+       * RTX 4090 (10de:2684) → matched by vfio-pci (loaded early); claimed by vfio-pci
+       * RTX 4090 audio (10de:22ba) → matched by vfio-pci; claimed by vfio-pci
        * Everything else → matched by their respective drivers
 
 4. systemd starts user-space services:
@@ -197,7 +197,7 @@ The two GPUs are **architecturally different tiers**, not just "more GPUs." The 
 | Failure | Symptom | Diagnosis | Remediation |
 |---|---|---|---|
 | IOMMU not enabled | `vfio-pci.ids` ignored; both GPUs bound to nvidia.ko | `dmesg \| grep AMD-Vi` shows no IOMMU init | Verify `amd_iommu=on` in GRUB, BIOS IOMMU enabled |
-| Wrong device ID | RTX 4090 still bound to nvidia.ko | `lspci -k` shows nvidia.ko driver on 02:00.0 | Verify `lspci -nn -s 02:00.0` returns expected `10de:2204` (check for revision differences) |
+| Wrong device ID | RTX 4090 still bound to nvidia.ko | `lspci -k` shows nvidia.ko driver on 02:00.0 | Verify `lspci -nn -s 02:00.0` returns expected `10de:2684` (check for revision differences) |
 | IOMMU group includes Blackwell | Cannot bind 4090 without losing Blackwell | `find /sys/kernel/iommu_groups/ -type l \| sort` shows both in same group | Different motherboard / firmware update; or BIOS ACS Override (security risk) |
 | MOK not enrolled, Secure Boot blocking | System fails to boot the custom kernel | UEFI screen reports unsigned kernel | `mokutil --import MOK.crt` from a recovery boot; reboot + enroll in MOK manager UI |
 | `iommu=pt` mistyped as `iommu=pt1` etc. | IOMMU active but pass-through not engaged; perf regression on host devices | `dmesg \| grep "Setting up IOMMU"` shows wrong mode | Fix GRUB parameter; regenerate config; reboot |
