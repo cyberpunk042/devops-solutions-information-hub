@@ -42,6 +42,16 @@ KNOWN_TASKS = {
     "coding", "general", "orchestration", "analysis", "agents", "dna",
     "protein", "particles", "reasoning", "specialist",
 }
+KNOWN_STATUS = {"real", "aspirational", "unverified"}
+
+
+def derived_status(model: dict) -> str:
+    """Honest status: explicit field wins; else a real `source` implies `real`,
+    otherwise `unverified`. Never asserted from memory."""
+    explicit = model.get("status")
+    if explicit in KNOWN_STATUS:
+        return explicit
+    return "real" if model.get("source") else "unverified"
 # Ordered complexity bands (low -> high).
 BANDS = ["trivial", "simple", "moderate", "hard", "expert"]
 KNOWN_BANDS = set(BANDS)
@@ -82,6 +92,8 @@ def validate(catalog: dict[str, list[dict]] | None = None) -> tuple[list[str], l
         model_ids.add(mid)
         if m.get("quantization") not in KNOWN_QUANT:
             warnings.append(f"model {mid}: unknown quantization '{m.get('quantization')}'")
+        if m.get("status") is not None and m.get("status") not in KNOWN_STATUS:
+            warnings.append(f"model {mid}: unknown status '{m.get('status')}'")
         for t in m.get("tiers", []) or []:
             if t not in KNOWN_TIERS:
                 warnings.append(f"model {mid}: unknown tier '{t}'")
@@ -149,6 +161,8 @@ def validate(catalog: dict[str, list[dict]] | None = None) -> tuple[list[str], l
         for t in m.get("tiers", []) or []:
             tier_counts[t] += 1
 
+    status_counts = Counter(derived_status(m) for m in models)
+
     summary = {
         "models": len(model_ids),
         "groups": len(group_ids),
@@ -156,6 +170,7 @@ def validate(catalog: dict[str, list[dict]] | None = None) -> tuple[list[str], l
         "ternary_like": ternary_like,
         "by_quantization": dict(quant_counts),
         "by_tier": dict(tier_counts),
+        "by_status": dict(status_counts),
     }
     return errors, warnings, summary
 
@@ -164,17 +179,22 @@ def load_resolved(catalog: dict[str, list[dict]] | None = None) -> dict[str, Any
     """The AICP contract: models by id, groups with member records, profiles
     with routing bands expanded to full model/group records."""
     cat = catalog or load_catalog()
+    # Annotate every model with its derived status so the AICP contract carries it.
+    for m in cat["models"]:
+        m.setdefault("status", derived_status(m))
     models_by_id = {m["id"]: m for m in cat["models"] if m.get("id")}
     groups_by_id = {g["id"]: g for g in cat["groups"] if g.get("id")}
 
     def record(ref: str) -> dict:
+        # `record_type` is the discriminator; a group's own `kind`
+        # (moe/merged/replicated) is preserved as data (don't collide).
         if ref in models_by_id:
-            return {"kind": "model", **models_by_id[ref]}
+            return {"record_type": "model", **models_by_id[ref]}
         if ref in groups_by_id:
             g = groups_by_id[ref]
-            return {"kind": "group", **g,
+            return {"record_type": "group", **g,
                     "member_records": [models_by_id[m] for m in g.get("members", []) if m in models_by_id]}
-        return {"kind": "unresolved", "id": ref}
+        return {"record_type": "unresolved", "id": ref}
 
     resolved_profiles = []
     for p in cat["profiles"]:
@@ -211,6 +231,7 @@ def _print_summary(summary: dict) -> None:
     print(f"  ternary/bitnet-1.58: {summary['ternary_like']}/{summary['models']}")
     print(f"  by quantization: {summary['by_quantization']}")
     print(f"  by tier: {summary['by_tier']}")
+    print(f"  by status: {summary['by_status']}")
 
 
 def main(argv: list[str]) -> int:

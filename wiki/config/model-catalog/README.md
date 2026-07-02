@@ -31,6 +31,7 @@ deliberately additive and reshapeable.
   tiers: [cpu, rtx-4090, rtx-pro]  # hardware tiers this model targets
   source: "hf-org/repo"            # HuggingFace repo when known, else null
   confidence: high | medium | low  # low = uncertain handwriting reading / tentative
+  status: real | aspirational | unverified   # does this model actually EXIST?
   notes: "free text — alternatives (ou X), scribbled sizes, provenance caveats"
   # ---- optional perf dimensions (OMIT when unmeasured; absent = unknown) ----
   # Do NOT guess these — leave absent until measured/sourced. The routing layer
@@ -46,6 +47,17 @@ deliberately additive and reshapeable.
 The three perf fields are **optional and honest**: omit them rather than invent
 a number. They exist so measured values have a home and so the routing layer can
 prefer a model that fits VRAM / needs the context window when the data is present.
+
+`status` is the **reality check** for a handwriting-seeded catalog:
+`real` (confirmed to exist upstream — HF repo or famous research model),
+`aspirational` (a target/wishlist name with no known upstream yet), or
+`unverified` (default — not yet checked). When the field is absent the loader
+**derives** it honestly: a model with a non-null `source` (a real HF repo id)
+counts as `real`; everything else is `unverified`. The `unverified` set is firmed
+up by a Hugging Face existence check via the HF MCP tools (operator-approved,
+since outbound HF access is gated) — set an explicit `status` + `source` on each
+model the check confirms or refutes. Status is deliberately **not** asserted
+from memory; it is only ever set from a real source or a live check.
 
 ## Complexity bands (the routing vocabulary)
 

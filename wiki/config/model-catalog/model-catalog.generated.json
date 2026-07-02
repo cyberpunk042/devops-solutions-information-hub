@@ -24,7 +24,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": "1.5B for inline completion + 14B for chat & refactoring"
+      "notes": "1.5B for inline completion + 14B for chat & refactoring",
+      "status": "unverified"
     },
     {
       "id": "rlm-code-reasoner-8b",
@@ -41,7 +42,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "thinking-machines-interaction-1b",
@@ -57,7 +59,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "ternlm-3-8b-instruct",
@@ -74,7 +77,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": "1.58-bit"
+      "notes": "1.58-bit",
+      "status": "unverified"
     },
     {
       "id": "bge-m3",
@@ -91,7 +95,8 @@
       "source": "BAAI/bge-m3",
       "confidence": "high",
       "context_window": 8192,
-      "notes": "embedding model (8192 ctx, published)"
+      "notes": "embedding model (8192 ctx, published)",
+      "status": "real"
     },
     {
       "id": "phi-3-mini-ternary",
@@ -107,7 +112,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "bitnet-70b",
@@ -125,7 +131,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": "Instruct; a 120B variant is also noted"
+      "notes": "Instruct; a 120B variant is also noted",
+      "status": "unverified"
     },
     {
       "id": "llama3-8b-ternary",
@@ -142,7 +149,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "mistral-2b-ternary",
@@ -158,7 +166,8 @@
       ],
       "source": null,
       "confidence": "low",
-      "notes": "size digit uncertain in source"
+      "notes": "size digit uncertain in source",
+      "status": "unverified"
     },
     {
       "id": "prism-ml-ternary-bonsai-70b",
@@ -175,7 +184,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": "PrismML Ternary Bonsai line"
+      "notes": "PrismML Ternary Bonsai line",
+      "status": "unverified"
     },
     {
       "id": "deepseek-v3-ternary",
@@ -192,7 +202,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": "PT\u00b2-LLM"
+      "notes": "PT\u00b2-LLM",
+      "status": "unverified"
     },
     {
       "id": "gemma-4-litert-2b",
@@ -208,7 +219,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": "LiteRT"
+      "notes": "LiteRT",
+      "status": "unverified"
     },
     {
       "id": "spectra-trilm-3.9b",
@@ -224,7 +236,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": "TriLM = ternary"
+      "notes": "TriLM = ternary",
+      "status": "unverified"
     },
     {
       "id": "ternalm3-15b-instruct",
@@ -241,7 +254,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "bitnet-70b-132k-context",
@@ -259,7 +273,8 @@
       "source": null,
       "confidence": "medium",
       "context_window": 132000,
-      "notes": "132k context window (named in source)"
+      "notes": "132k context window (named in source)",
+      "status": "unverified"
     },
     {
       "id": "nexus-spec-1.1b",
@@ -276,7 +291,8 @@
       ],
       "source": null,
       "confidence": "low",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "deepseek-r1-ternary-8b",
@@ -293,7 +309,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": "a size was scribbled out before 8B in source"
+      "notes": "a size was scribbled out before 8B in source",
+      "status": "unverified"
     },
     {
       "id": "llama-3-tiny-3b",
@@ -309,7 +326,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "mistral-tiny-3b",
@@ -325,7 +343,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "ternarylm-132m",
@@ -341,7 +360,8 @@
       ],
       "source": null,
       "confidence": "low",
-      "notes": "CPU agent fallback (ou TRM-Recursive-Reasoner)"
+      "notes": "CPU agent fallback (ou TRM-Recursive-Reasoner)",
+      "status": "unverified"
     },
     {
       "id": "trm-recursive-reasoner",
@@ -358,7 +378,8 @@
       ],
       "source": null,
       "confidence": "low",
-      "notes": "CPU agent fallback alternative to TernaryLM-132M"
+      "notes": "CPU agent fallback alternative to TernaryLM-132M",
+      "status": "unverified"
     },
     {
       "id": "rosettafold-all-atom",
@@ -375,7 +396,8 @@
       ],
       "source": null,
       "confidence": "high",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "evo-arc-institute",
@@ -392,7 +414,8 @@
       ],
       "source": null,
       "confidence": "high",
-      "notes": "ou HyenaDNA"
+      "notes": "ou HyenaDNA",
+      "status": "unverified"
     },
     {
       "id": "hyenadna",
@@ -409,7 +432,8 @@
       ],
       "source": null,
       "confidence": "high",
-      "notes": "alternative to Evo"
+      "notes": "alternative to Evo",
+      "status": "unverified"
     },
     {
       "id": "alphafold3",
@@ -427,7 +451,8 @@
       ],
       "source": null,
       "confidence": "high",
-      "notes": "ou ESMFold ou OpenFold"
+      "notes": "ou ESMFold ou OpenFold",
+      "status": "unverified"
     },
     {
       "id": "esmfold",
@@ -444,7 +469,8 @@
       ],
       "source": null,
       "confidence": "high",
-      "notes": "alternative to AlphaFold3"
+      "notes": "alternative to AlphaFold3",
+      "status": "unverified"
     },
     {
       "id": "openfold",
@@ -461,7 +487,8 @@
       ],
       "source": null,
       "confidence": "high",
-      "notes": "alternative to AlphaFold3"
+      "notes": "alternative to AlphaFold3",
+      "status": "unverified"
     },
     {
       "id": "warp-lang",
@@ -479,7 +506,8 @@
       ],
       "source": null,
       "confidence": "high",
-      "notes": "NVIDIA Warp differentiable sim, not an LLM"
+      "notes": "NVIDIA Warp differentiable sim, not an LLM",
+      "status": "unverified"
     },
     {
       "id": "document-ternary-3b",
@@ -496,7 +524,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "recursive-ref-validator-2b",
@@ -513,7 +542,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "llama-3-thought-8b",
@@ -529,7 +559,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "openthinking-7b",
@@ -545,7 +576,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "qwen25-32b-trit-uniform",
@@ -561,7 +593,8 @@
       ],
       "source": null,
       "confidence": "low",
-      "notes": "leading token uncertain (Ent/it?)"
+      "notes": "leading token uncertain (Ent/it?)",
+      "status": "unverified"
     },
     {
       "id": "1bitllm-bitnet-b158-large",
@@ -577,7 +610,8 @@
       ],
       "source": "1bitLLM/bitnet_b1_58-large",
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "real"
     },
     {
       "id": "xinyuan-t-moe-8x7b",
@@ -594,7 +628,8 @@
       ],
       "source": null,
       "confidence": "low",
-      "notes": "mixture-of-experts architecture (8 experts x 7B); also a group model \u2014 see groups.yaml"
+      "notes": "mixture-of-experts architecture (8 experts x 7B); also a group model \u2014 see groups.yaml",
+      "status": "unverified"
     },
     {
       "id": "falcon3-10b-158bit-prequantized",
@@ -611,7 +646,8 @@
       ],
       "source": "tiiuae/Falcon3-10B-Instruct-1.58bit",
       "confidence": "medium",
-      "notes": "prequantized 6f16; ou Falcon-E-3B"
+      "notes": "prequantized 6f16; ou Falcon-E-3B",
+      "status": "real"
     },
     {
       "id": "falcon-e-3b",
@@ -628,7 +664,8 @@
       ],
       "source": null,
       "confidence": "low",
-      "notes": "alternative to Falcon3-10B-1.58bit"
+      "notes": "alternative to Falcon3-10B-1.58bit",
+      "status": "unverified"
     },
     {
       "id": "zihan-wang-coe",
@@ -644,7 +681,8 @@
       ],
       "source": null,
       "confidence": "low",
-      "notes": "reading uncertain"
+      "notes": "reading uncertain",
+      "status": "unverified"
     },
     {
       "id": "qwen25-coder-72b-158",
@@ -661,7 +699,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "bash-tiny-coder-1b",
@@ -678,7 +717,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "flex-prompt-tiny-1b",
@@ -694,7 +734,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "security-phi-3-mini",
@@ -710,7 +751,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "starcoder2-3b",
@@ -726,7 +768,8 @@
       ],
       "source": "bigcode/starcoder2-3b",
       "confidence": "high",
-      "notes": ""
+      "notes": "",
+      "status": "real"
     },
     {
       "id": "linux-kernel-tiny-1.5b",
@@ -743,7 +786,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "bitnet-math-expert-30b",
@@ -760,7 +804,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "tiny-ternary-ui-3b",
@@ -777,7 +822,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "hive-gate-7b",
@@ -794,7 +840,8 @@
       ],
       "source": null,
       "confidence": "low",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "trm-logic-validator-2b",
@@ -811,7 +858,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "owasp-ternary-3b",
@@ -828,7 +876,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "hackerlm-tiny-3b",
@@ -845,7 +894,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "llama-ternary-context-1b",
@@ -862,7 +912,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "logic-loop-8b",
@@ -879,7 +930,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "codellama-ternary-34b",
@@ -896,7 +948,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     },
     {
       "id": "mistral-large-ternary-80b",
@@ -913,7 +966,8 @@
       ],
       "source": null,
       "confidence": "medium",
-      "notes": ""
+      "notes": "",
+      "status": "unverified"
     }
   ],
   "groups": [
@@ -941,7 +995,8 @@
           ],
           "source": null,
           "confidence": "low",
-          "notes": "mixture-of-experts architecture (8 experts x 7B); also a group model \u2014 see groups.yaml"
+          "notes": "mixture-of-experts architecture (8 experts x 7B); also a group model \u2014 see groups.yaml",
+          "status": "unverified"
         }
       ]
     },
@@ -988,7 +1043,8 @@
           ],
           "source": null,
           "confidence": "low",
-          "notes": "leading token uncertain (Ent/it?)"
+          "notes": "leading token uncertain (Ent/it?)",
+          "status": "unverified"
         },
         {
           "id": "prism-ml-ternary-bonsai-70b",
@@ -1005,7 +1061,8 @@
           ],
           "source": null,
           "confidence": "medium",
-          "notes": "PrismML Ternary Bonsai line"
+          "notes": "PrismML Ternary Bonsai line",
+          "status": "unverified"
         },
         {
           "id": "1bitllm-bitnet-b158-large",
@@ -1021,7 +1078,8 @@
           ],
           "source": "1bitLLM/bitnet_b1_58-large",
           "confidence": "medium",
-          "notes": ""
+          "notes": "",
+          "status": "real"
         },
         {
           "id": "xinyuan-t-moe-8x7b",
@@ -1038,7 +1096,8 @@
           ],
           "source": null,
           "confidence": "low",
-          "notes": "mixture-of-experts architecture (8 experts x 7B); also a group model \u2014 see groups.yaml"
+          "notes": "mixture-of-experts architecture (8 experts x 7B); also a group model \u2014 see groups.yaml",
+          "status": "unverified"
         },
         {
           "id": "falcon3-10b-158bit-prequantized",
@@ -1055,7 +1114,8 @@
           ],
           "source": "tiiuae/Falcon3-10B-Instruct-1.58bit",
           "confidence": "medium",
-          "notes": "prequantized 6f16; ou Falcon-E-3B"
+          "notes": "prequantized 6f16; ou Falcon-E-3B",
+          "status": "real"
         },
         {
           "id": "falcon-e-3b",
@@ -1072,7 +1132,8 @@
           ],
           "source": null,
           "confidence": "low",
-          "notes": "alternative to Falcon3-10B-1.58bit"
+          "notes": "alternative to Falcon3-10B-1.58bit",
+          "status": "unverified"
         },
         {
           "id": "zihan-wang-coe",
@@ -1088,7 +1149,8 @@
           ],
           "source": null,
           "confidence": "low",
-          "notes": "reading uncertain"
+          "notes": "reading uncertain",
+          "status": "unverified"
         },
         {
           "id": "qwen25-coder-72b-158",
@@ -1105,7 +1167,8 @@
           ],
           "source": null,
           "confidence": "medium",
-          "notes": ""
+          "notes": "",
+          "status": "unverified"
         },
         {
           "id": "bash-tiny-coder-1b",
@@ -1122,7 +1185,8 @@
           ],
           "source": null,
           "confidence": "medium",
-          "notes": ""
+          "notes": "",
+          "status": "unverified"
         },
         {
           "id": "flex-prompt-tiny-1b",
@@ -1138,7 +1202,8 @@
           ],
           "source": null,
           "confidence": "medium",
-          "notes": ""
+          "notes": "",
+          "status": "unverified"
         },
         {
           "id": "security-phi-3-mini",
@@ -1154,7 +1219,8 @@
           ],
           "source": null,
           "confidence": "medium",
-          "notes": ""
+          "notes": "",
+          "status": "unverified"
         },
         {
           "id": "starcoder2-3b",
@@ -1170,7 +1236,8 @@
           ],
           "source": "bigcode/starcoder2-3b",
           "confidence": "high",
-          "notes": ""
+          "notes": "",
+          "status": "real"
         }
       ]
     }
@@ -1218,7 +1285,7 @@
           "band": "trivial",
           "prefer": "qwen-coder-ternary",
           "model": {
-            "kind": "model",
+            "record_type": "model",
             "id": "qwen-coder-ternary",
             "name": "Qwen-Coder Ternary",
             "family": "qwen",
@@ -1235,14 +1302,15 @@
             ],
             "source": null,
             "confidence": "medium",
-            "notes": "1.5B for inline completion + 14B for chat & refactoring"
+            "notes": "1.5B for inline completion + 14B for chat & refactoring",
+            "status": "unverified"
           }
         },
         {
           "band": "moderate",
           "prefer": "rlm-code-reasoner-8b",
           "model": {
-            "kind": "model",
+            "record_type": "model",
             "id": "rlm-code-reasoner-8b",
             "name": "RLM-Code-Reasoner-8B",
             "family": "other",
@@ -1257,14 +1325,15 @@
             ],
             "source": null,
             "confidence": "medium",
-            "notes": ""
+            "notes": "",
+            "status": "unverified"
           }
         },
         {
           "band": "hard",
           "prefer": "bitnet-70b",
           "model": {
-            "kind": "model",
+            "record_type": "model",
             "id": "bitnet-70b",
             "name": "BitNet-70B",
             "family": "bitnet",
@@ -1280,14 +1349,15 @@
             ],
             "source": null,
             "confidence": "medium",
-            "notes": "Instruct; a 120B variant is also noted"
+            "notes": "Instruct; a 120B variant is also noted",
+            "status": "unverified"
           }
         },
         {
           "band": "expert",
           "prefer": "prism-ml-ternary-bonsai-70b",
           "model": {
-            "kind": "model",
+            "record_type": "model",
             "id": "prism-ml-ternary-bonsai-70b",
             "name": "Prism-ML-Ternary-Bonsai-70B",
             "family": "other",
@@ -1302,7 +1372,8 @@
             ],
             "source": null,
             "confidence": "medium",
-            "notes": "PrismML Ternary Bonsai line"
+            "notes": "PrismML Ternary Bonsai line",
+            "status": "unverified"
           }
         }
       ]
@@ -1334,7 +1405,7 @@
           "band": "trivial",
           "prefer": "phi-3-mini-ternary",
           "model": {
-            "kind": "model",
+            "record_type": "model",
             "id": "phi-3-mini-ternary",
             "name": "Phi-3-Mini-Ternary",
             "family": "phi",
@@ -1348,14 +1419,15 @@
             ],
             "source": null,
             "confidence": "medium",
-            "notes": ""
+            "notes": "",
+            "status": "unverified"
           }
         },
         {
           "band": "simple",
           "prefer": "ternlm-3-8b-instruct",
           "model": {
-            "kind": "model",
+            "record_type": "model",
             "id": "ternlm-3-8b-instruct",
             "name": "TernLM-3-8B-Instruct",
             "family": "other",
@@ -1370,7 +1442,8 @@
             ],
             "source": null,
             "confidence": "medium",
-            "notes": "1.58-bit"
+            "notes": "1.58-bit",
+            "status": "unverified"
           }
         }
       ]
@@ -1406,7 +1479,7 @@
           "band": "simple",
           "prefer": "gemma-4-litert-2b",
           "model": {
-            "kind": "model",
+            "record_type": "model",
             "id": "gemma-4-litert-2b",
             "name": "Gemma-4-LiteRt-2B",
             "family": "gemma",
@@ -1420,14 +1493,15 @@
             ],
             "source": null,
             "confidence": "medium",
-            "notes": "LiteRT"
+            "notes": "LiteRT",
+            "status": "unverified"
           }
         },
         {
           "band": "moderate",
           "prefer": "spectra-trilm-3.9b",
           "model": {
-            "kind": "model",
+            "record_type": "model",
             "id": "spectra-trilm-3.9b",
             "name": "Spectra-TriLM-3.9B",
             "family": "other",
@@ -1441,14 +1515,15 @@
             ],
             "source": null,
             "confidence": "medium",
-            "notes": "TriLM = ternary"
+            "notes": "TriLM = ternary",
+            "status": "unverified"
           }
         },
         {
           "band": "hard",
           "prefer": "ternalm3-15b-instruct",
           "model": {
-            "kind": "model",
+            "record_type": "model",
             "id": "ternalm3-15b-instruct",
             "name": "TernaLM3-15B-Instruct",
             "family": "other",
@@ -1463,7 +1538,8 @@
             ],
             "source": null,
             "confidence": "medium",
-            "notes": ""
+            "notes": "",
+            "status": "unverified"
           }
         }
       ]
@@ -1489,7 +1565,7 @@
           "band": "hard",
           "prefer": "bitnet-70b-132k-context",
           "model": {
-            "kind": "model",
+            "record_type": "model",
             "id": "bitnet-70b-132k-context",
             "name": "BitNet-70B-132k-Context",
             "family": "bitnet",
@@ -1505,7 +1581,8 @@
             "source": null,
             "confidence": "medium",
             "context_window": 132000,
-            "notes": "132k context window (named in source)"
+            "notes": "132k context window (named in source)",
+            "status": "unverified"
           }
         }
       ]
@@ -1553,7 +1630,7 @@
           "band": "trivial",
           "prefer": "ternarylm-132m",
           "model": {
-            "kind": "model",
+            "record_type": "model",
             "id": "ternarylm-132m",
             "name": "TernaryLM-132M",
             "family": "other",
@@ -1567,14 +1644,15 @@
             ],
             "source": null,
             "confidence": "low",
-            "notes": "CPU agent fallback (ou TRM-Recursive-Reasoner)"
+            "notes": "CPU agent fallback (ou TRM-Recursive-Reasoner)",
+            "status": "unverified"
           }
         },
         {
           "band": "simple",
           "prefer": "llama-3-tiny-3b",
           "model": {
-            "kind": "model",
+            "record_type": "model",
             "id": "llama-3-tiny-3b",
             "name": "Llama-3-Tiny-3B",
             "family": "llama",
@@ -1588,14 +1666,15 @@
             ],
             "source": null,
             "confidence": "medium",
-            "notes": ""
+            "notes": "",
+            "status": "unverified"
           }
         },
         {
           "band": "moderate",
           "prefer": "deepseek-r1-ternary-8b",
           "model": {
-            "kind": "model",
+            "record_type": "model",
             "id": "deepseek-r1-ternary-8b",
             "name": "Deepseek-R1-Ternary-8B",
             "family": "deepseek",
@@ -1610,16 +1689,18 @@
             ],
             "source": null,
             "confidence": "medium",
-            "notes": "a size was scribbled out before 8B in source"
+            "notes": "a size was scribbled out before 8B in source",
+            "status": "unverified"
           }
         },
         {
           "band": "expert",
           "prefer": "mistral-ternary-3x-70b",
           "model": {
-            "kind": "replicated",
+            "record_type": "group",
             "id": "mistral-ternary-3x-70b",
             "name": "Mistral-Ternary 3x70B",
+            "kind": "replicated",
             "factor": 3,
             "members": [],
             "notes": "RTX Pro agents tier \u2014 3x a 70B ternary Mistral. Base not separately cataloged yet (distinct from mistral-large-ternary-80b).",
@@ -1660,7 +1741,7 @@
           "band": "simple",
           "prefer": "recursive-ref-validator-2b",
           "model": {
-            "kind": "model",
+            "record_type": "model",
             "id": "recursive-ref-validator-2b",
             "name": "Recursive-Ref-Validator-2B",
             "family": "other",
@@ -1675,14 +1756,15 @@
             ],
             "source": null,
             "confidence": "medium",
-            "notes": ""
+            "notes": "",
+            "status": "unverified"
           }
         },
         {
           "band": "moderate",
           "prefer": "openthinking-7b",
           "model": {
-            "kind": "model",
+            "record_type": "model",
             "id": "openthinking-7b",
             "name": "OpenThinking-7B",
             "family": "other",
@@ -1696,14 +1778,15 @@
             ],
             "source": null,
             "confidence": "medium",
-            "notes": ""
+            "notes": "",
+            "status": "unverified"
           }
         },
         {
           "band": "hard",
           "prefer": "llama-3-thought-8b",
           "model": {
-            "kind": "model",
+            "record_type": "model",
             "id": "llama-3-thought-8b",
             "name": "Llama-3-thought-8B",
             "family": "llama",
@@ -1717,7 +1800,8 @@
             ],
             "source": null,
             "confidence": "medium",
-            "notes": ""
+            "notes": "",
+            "status": "unverified"
           }
         }
       ]
@@ -1755,7 +1839,7 @@
           "band": "moderate",
           "prefer": "hyenadna",
           "model": {
-            "kind": "model",
+            "record_type": "model",
             "id": "hyenadna",
             "name": "HyenaDNA",
             "family": "other",
@@ -1770,14 +1854,15 @@
             ],
             "source": null,
             "confidence": "high",
-            "notes": "alternative to Evo"
+            "notes": "alternative to Evo",
+            "status": "unverified"
           }
         },
         {
           "band": "hard",
           "prefer": "evo-arc-institute",
           "model": {
-            "kind": "model",
+            "record_type": "model",
             "id": "evo-arc-institute",
             "name": "Evo (Arc Institute)",
             "family": "other",
@@ -1792,14 +1877,15 @@
             ],
             "source": null,
             "confidence": "high",
-            "notes": "ou HyenaDNA"
+            "notes": "ou HyenaDNA",
+            "status": "unverified"
           }
         },
         {
           "band": "expert",
           "prefer": "rosettafold-all-atom",
           "model": {
-            "kind": "model",
+            "record_type": "model",
             "id": "rosettafold-all-atom",
             "name": "RoseTTAFold All-Atom (RFAA)",
             "family": "other",
@@ -1814,7 +1900,8 @@
             ],
             "source": null,
             "confidence": "high",
-            "notes": ""
+            "notes": "",
+            "status": "unverified"
           }
         }
       ]
@@ -1853,7 +1940,7 @@
           "band": "moderate",
           "prefer": "esmfold",
           "model": {
-            "kind": "model",
+            "record_type": "model",
             "id": "esmfold",
             "name": "ESMFold",
             "family": "other",
@@ -1868,14 +1955,15 @@
             ],
             "source": null,
             "confidence": "high",
-            "notes": "alternative to AlphaFold3"
+            "notes": "alternative to AlphaFold3",
+            "status": "unverified"
           }
         },
         {
           "band": "hard",
           "prefer": "openfold",
           "model": {
-            "kind": "model",
+            "record_type": "model",
             "id": "openfold",
             "name": "OpenFold",
             "family": "other",
@@ -1890,14 +1978,15 @@
             ],
             "source": null,
             "confidence": "high",
-            "notes": "alternative to AlphaFold3"
+            "notes": "alternative to AlphaFold3",
+            "status": "unverified"
           }
         },
         {
           "band": "expert",
           "prefer": "alphafold3",
           "model": {
-            "kind": "model",
+            "record_type": "model",
             "id": "alphafold3",
             "name": "AlphaFold3",
             "family": "other",
@@ -1913,7 +2002,8 @@
             ],
             "source": null,
             "confidence": "high",
-            "notes": "ou ESMFold ou OpenFold"
+            "notes": "ou ESMFold ou OpenFold",
+            "status": "unverified"
           }
         }
       ]
@@ -1942,7 +2032,7 @@
           "band": "moderate",
           "prefer": "warp-lang",
           "model": {
-            "kind": "model",
+            "record_type": "model",
             "id": "warp-lang",
             "name": "Warp-Lang (NVIDIA)",
             "family": "other",
@@ -1958,7 +2048,8 @@
             ],
             "source": null,
             "confidence": "high",
-            "notes": "NVIDIA Warp differentiable sim, not an LLM"
+            "notes": "NVIDIA Warp differentiable sim, not an LLM",
+            "status": "unverified"
           }
         }
       ]
