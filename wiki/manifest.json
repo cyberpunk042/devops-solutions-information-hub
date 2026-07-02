@@ -1,24 +1,24 @@
 {
-  "generated": "2026-07-02T18:20:26.816667+00:00",
+  "generated": "2026-07-02T21:23:27.160955+00:00",
   "stats": {
-    "pages": 984,
+    "pages": 986,
     "domains": 16,
     "sources": 128,
     "comparisons": 14,
     "relationships": 4352,
-    "tags_unique": 3787,
+    "tags_unique": 3794,
     "layers": {
       "3": 8,
       "5": 38,
       "6": 27,
-      "2": 123,
+      "2": 125,
       "4": 90,
       "0": 1,
       "1": 94,
       "spine": 84
     },
     "maturity": {
-      "seed": 250,
+      "seed": 252,
       "growing": 352,
       "mature": 23
     }
@@ -49054,6 +49054,67 @@
       ]
     },
     {
+      "path": "runbooks/federated-destructive-action-refused.md",
+      "slug": "runbooks/federated-destructive-action-refused",
+      "title": "Operator runbook \u2014 selfdef federated destructive action refused (fail-closed federation gate)",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-07-02",
+      "updated": "2026-07-02",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "observability",
+        "metrics",
+        "responder",
+        "federation",
+        "nats",
+        "fail-closed",
+        "trust-boundary",
+        "prometheus",
+        "incident-response",
+        "selfdef",
+        "ips"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-responder",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "crates/selfdef-responder/src/lib.rs",
+          "note": "The fail-closed federation gate ([responder].act_on_federated = false) and the federated_refused counter; journal line 'refusing destructive action for a federated-origin finding'"
+        },
+        {
+          "id": "selfdef-nats-bridge-config",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "crates/selfdef-config/src/lib.rs",
+          "note": "[nats] signing_key_file + peer_keys (F-2026-111 option c, minisign envelopes) \u2014 a signature-verified federated finding bypasses the fail-closed gate; selfdef_nats_inbound_federated_verified_total counts the verified subset"
+        },
+        {
+          "id": "selfdef-findings-ledger-f111",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/review/99-findings-ledger.md",
+          "note": "F-2026-111 \u2014 remote-driven local destructive response; a compromised broker or peer could forge a finding naming a local pid/user"
+        },
+        {
+          "id": "selfdef-observability-alerts",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "modules/observability/assets/alerts/selfdef.yml.template",
+          "note": "SelfdefFederatedDestructiveActionRefused warning alert fires on increase(selfdef_responder_federated_refused_total[10m]) > 0"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "runbooks/friction-audit-immutability.md",
       "slug": "runbooks/friction-audit-immutability",
       "title": "Operator runbook \u2014 friction-audit immutability gate failure",
@@ -50224,6 +50285,66 @@
           "project": "selfdef",
           "path": "backlog/milestones/MS047-real-time-security-perimeter-engine-tetragon-kernel-fence.md",
           "note": "Catalog milestone MS047"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/responder-circuit-breaker-tripped.md",
+      "slug": "runbooks/responder-circuit-breaker-tripped",
+      "title": "Operator runbook \u2014 selfdef responder circuit breaker tripped (destructive-action rate cap)",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-07-02",
+      "updated": "2026-07-02",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "observability",
+        "metrics",
+        "responder",
+        "circuit-breaker",
+        "rate-cap",
+        "flood",
+        "prometheus",
+        "incident-response",
+        "selfdef",
+        "ips"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-responder",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "crates/selfdef-responder/src/lib.rs",
+          "note": "The GLOBAL destructive-action rate cap ([responder].max_destructive_actions_per_min) and its dedicated ratecap_tripped counter; journal line 'destructive-action rate cap reached (circuit breaker)'"
+        },
+        {
+          "id": "selfdef-metrics-handler",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "crates/selfdef-api/src/metrics.rs",
+          "note": "selfdef_responder_ratecap_tripped_total \u2014 the genuine flood-breaker counter, split from the aggregate suppressed_destructive_total per F-2026-114 so routine dedup can no longer raise this alert"
+        },
+        {
+          "id": "selfdef-findings-ledger-f114",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "docs/review/99-findings-ledger.md",
+          "note": "F-2026-114 \u2014 circuit-breaker alert previously fired on routine dedup; fixed by splitting the signal into a dedicated rate-cap counter"
+        },
+        {
+          "id": "selfdef-observability-alerts",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "modules/observability/assets/alerts/selfdef.yml.template",
+          "note": "SelfdefResponderCircuitBreakerTripped warning alert fires on increase(selfdef_responder_ratecap_tripped_total[10m]) > 0"
         }
       ],
       "layer": 2,
@@ -68537,7 +68658,7 @@
       "relationship_count": 1868
     },
     "ai-agents": {
-      "page_count": 121,
+      "page_count": 123,
       "relationship_count": 583
     },
     "ai-models": {
@@ -70351,7 +70472,8 @@
       "backlog/tasks/T023-add-per-backend-circuit-breaker-config",
       "backlog/tasks/T024-extend-build-breakers-for-per-backend-overrides",
       "domains/tools-and-platforms/aicp",
-      "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain"
+      "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain",
+      "runbooks/responder-circuit-breaker-tripped"
     ],
     "custom-models": [
       "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras"
@@ -71307,26 +71429,32 @@
       "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
       "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
       "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage",
+      "runbooks/federated-destructive-action-refused",
       "runbooks/metrics-correlator-lag",
       "runbooks/metrics-ingest-lag",
-      "runbooks/metrics-responder-lag"
+      "runbooks/metrics-responder-lag",
+      "runbooks/responder-circuit-breaker-tripped"
     ],
     "prometheus": [
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
       "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
+      "runbooks/federated-destructive-action-refused",
       "runbooks/m060-mirror-export-publish-anomalies",
       "runbooks/metrics-correlator-lag",
       "runbooks/metrics-ingest-lag",
-      "runbooks/metrics-responder-lag"
+      "runbooks/metrics-responder-lag",
+      "runbooks/responder-circuit-breaker-tripped"
     ],
     "observability": [
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
       "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
       "backlog/tasks/T029-author-routing-review-ritual-standard",
       "patterns/01_drafts/observe-fix-verify-loop",
+      "runbooks/federated-destructive-action-refused",
       "runbooks/metrics-correlator-lag",
       "runbooks/metrics-ingest-lag",
       "runbooks/metrics-responder-lag",
+      "runbooks/responder-circuit-breaker-tripped",
       "runbooks/tetragon-map-errors"
     ],
     "ritual": [
@@ -71573,6 +71701,7 @@
     ],
     "runbook": [
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
+      "runbooks/federated-destructive-action-refused",
       "runbooks/friction-audit-immutability",
       "runbooks/friction-audit-memory",
       "runbooks/friction-audit-pcie",
@@ -71594,6 +71723,7 @@
       "runbooks/perimeter-policy-load-failure",
       "runbooks/perimeter-sigkill-investigation",
       "runbooks/perimeter-tetragon-not-running",
+      "runbooks/responder-circuit-breaker-tripped",
       "runbooks/scheduler-audit-log-corruption",
       "runbooks/scheduler-backpressure-stuck-open",
       "runbooks/scheduler-force-override-investigation",
@@ -72413,6 +72543,7 @@
       "log/2026-06-06-perpetual-goal-resumed-three-repo-ci-green-out",
       "patterns/01_drafts/ms5a-state-journal-vs-enforcement-layer-separation",
       "patterns/01_drafts/paired-enforcement-primitive-five-milestone-architecture",
+      "runbooks/federated-destructive-action-refused",
       "runbooks/friction-audit-immutability",
       "runbooks/friction-audit-memory",
       "runbooks/friction-audit-pcie",
@@ -72434,6 +72565,7 @@
       "runbooks/perimeter-policy-load-failure",
       "runbooks/perimeter-sigkill-investigation",
       "runbooks/perimeter-tetragon-not-running",
+      "runbooks/responder-circuit-breaker-tripped",
       "runbooks/scheduler-audit-log-corruption",
       "runbooks/scheduler-backpressure-stuck-open",
       "runbooks/scheduler-force-override-investigation",
@@ -79954,6 +80086,7 @@
     "ips": [
       "log/2026-05-20-four-watchdog-end-to-end-production-landing",
       "log/2026-05-21-selfdef-layer-up-batch-15-milestones-promoted-to-done",
+      "runbooks/federated-destructive-action-refused",
       "runbooks/friction-audit-immutability",
       "runbooks/friction-audit-memory",
       "runbooks/friction-audit-pcie",
@@ -79973,6 +80106,7 @@
       "runbooks/perimeter-policy-load-failure",
       "runbooks/perimeter-sigkill-investigation",
       "runbooks/perimeter-tetragon-not-running",
+      "runbooks/responder-circuit-breaker-tripped",
       "runbooks/scheduler-audit-log-corruption",
       "runbooks/scheduler-backpressure-stuck-open",
       "runbooks/scheduler-not-running",
@@ -81061,6 +81195,39 @@
     "quality-assurance": [
       "patterns/03_validated/knowledge/validation-matrix-test-suite-for-context-injection"
     ],
+    "responder": [
+      "runbooks/federated-destructive-action-refused",
+      "runbooks/responder-circuit-breaker-tripped"
+    ],
+    "federation": [
+      "runbooks/federated-destructive-action-refused"
+    ],
+    "nats": [
+      "runbooks/federated-destructive-action-refused"
+    ],
+    "fail-closed": [
+      "runbooks/federated-destructive-action-refused"
+    ],
+    "trust-boundary": [
+      "runbooks/federated-destructive-action-refused"
+    ],
+    "incident-response": [
+      "runbooks/federated-destructive-action-refused",
+      "runbooks/guardian-audit-log-corruption",
+      "runbooks/guardian-console-alert-investigation",
+      "runbooks/metrics-correlator-lag",
+      "runbooks/metrics-ingest-lag",
+      "runbooks/metrics-responder-lag",
+      "runbooks/network-degraded",
+      "runbooks/perimeter-audit-log-corruption",
+      "runbooks/perimeter-sigkill-investigation",
+      "runbooks/responder-circuit-breaker-tripped",
+      "runbooks/scheduler-audit-log-corruption",
+      "runbooks/scheduler-force-override-investigation",
+      "runbooks/selfdef-watchdog-alert-finding",
+      "runbooks/storage-degraded",
+      "runbooks/tetragon-map-errors"
+    ],
     "immutability": [
       "runbooks/friction-audit-immutability"
     ],
@@ -81148,21 +81315,6 @@
       "runbooks/guardian-audit-log-corruption",
       "runbooks/perimeter-audit-log-corruption",
       "runbooks/scheduler-audit-log-corruption"
-    ],
-    "incident-response": [
-      "runbooks/guardian-audit-log-corruption",
-      "runbooks/guardian-console-alert-investigation",
-      "runbooks/metrics-correlator-lag",
-      "runbooks/metrics-ingest-lag",
-      "runbooks/metrics-responder-lag",
-      "runbooks/network-degraded",
-      "runbooks/perimeter-audit-log-corruption",
-      "runbooks/perimeter-sigkill-investigation",
-      "runbooks/scheduler-audit-log-corruption",
-      "runbooks/scheduler-force-override-investigation",
-      "runbooks/selfdef-watchdog-alert-finding",
-      "runbooks/storage-degraded",
-      "runbooks/tetragon-map-errors"
     ],
     "console-alert": [
       "runbooks/guardian-console-alert-investigation",
@@ -81273,6 +81425,12 @@
     "kernel-fence": [
       "runbooks/perimeter-tetragon-not-running",
       "runbooks/tetragon-map-errors"
+    ],
+    "rate-cap": [
+      "runbooks/responder-circuit-breaker-tripped"
+    ],
+    "flood": [
+      "runbooks/responder-circuit-breaker-tripped"
     ],
     "backpressure": [
       "runbooks/scheduler-backpressure-stuck-open"
