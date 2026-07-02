@@ -150,7 +150,7 @@ Across **six independent instances** ingested in the 2026-05-04 → 2026-05-08 a
 > - **Over-engineering smart encoding** at small scale — the engineering cost of NF4 / specialized speculation / curated preference data exceeds the savings if the workload is one-off
 > - **Single-layer optimization tunnel-vision** — improving quality-per-position at one layer while ignoring others; per the parallel Multi-Layer Compression Lesson, layers compose multiplicatively
 > - **Confusing K-Flat with cost-free** — verification cost is constant for K up to a hardware ceiling; per-token quality cost is engineering investment that pays back over many runs
-> - **Ignoring operator's actual binding constraint** — operator's M004 binding constraint is preference-pair authoring time + RTX 3090 hours, not parameter count; respect the actual constraint surface
+> - **Ignoring operator's actual binding constraint** — operator's M004 binding constraint is preference-pair authoring time + RTX 4090 hours, not parameter count; respect the actual constraint surface
 
 ## Open Questions
 

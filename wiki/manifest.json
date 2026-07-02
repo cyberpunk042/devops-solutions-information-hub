@@ -1,24 +1,24 @@
 {
-  "generated": "2026-06-10T00:49:52.347915+00:00",
+  "generated": "2026-07-02T18:20:26.816667+00:00",
   "stats": {
-    "pages": 979,
+    "pages": 984,
     "domains": 16,
     "sources": 128,
     "comparisons": 14,
     "relationships": 4352,
-    "tags_unique": 3771,
+    "tags_unique": 3787,
     "layers": {
       "3": 8,
       "5": 38,
       "6": 27,
-      "2": 118,
+      "2": 123,
       "4": 90,
       "0": 1,
       "1": 94,
       "spine": 84
     },
     "maturity": {
-      "seed": 245,
+      "seed": 250,
       "growing": 352,
       "mature": 23
     }
@@ -305,7 +305,7 @@
         "iommu",
         "amd-iommu",
         "gpu-isolation",
-        "rtx-3090",
+        "rtx-4090",
         "blackwell",
         "sandbox",
         "podman"
@@ -332,7 +332,7 @@
       "derived_from": [],
       "aliases": [
         "E103 \u2014 VFIO Isolation",
-        "E103 \u2014 VFIO Isolation: RTX 3090 Sandbox + AMD IOMMU"
+        "E103 \u2014 VFIO Isolation: RTX 4090 Sandbox + AMD IOMMU"
       ],
       "relationships": [
         {
@@ -866,7 +866,7 @@
         "vllm",
         "qwen3",
         "blackwell",
-        "rtx-3090"
+        "rtx-4090"
       ],
       "sources": [
         {
@@ -2803,7 +2803,7 @@
           "id": "unsloth-synthesis",
           "type": "wiki",
           "file": "wiki/sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md",
-          "description": "Consumer-hardware fine-tune substrate \u2014 LoRA + UD-IQ2 / Q2_K; the realistic training environment on RTX 3090"
+          "description": "Consumer-hardware fine-tune substrate \u2014 LoRA + UD-IQ2 / Q2_K; the realistic training environment on RTX 4090"
         },
         {
           "id": "dpo-paper",
@@ -2984,7 +2984,7 @@
         "aicp",
         "provider-routing",
         "ollama-cloud",
-        "rtx-3090",
+        "rtx-4090",
         "rlm-qwen3-8b",
         "qwen3-6-27b",
         "anti-vendor-lock-in",
@@ -3012,10 +3012,10 @@
           "description": "Ollama Cloud is in operator's active stack since 2026-04-23 \u2014 registered cloud-LLM tier in the AICP backend pattern (`ollama_cloud`)"
         },
         {
-          "id": "rtx-3090-ordered",
+          "id": "rtx-4090-ordered",
           "type": "notes",
-          "file": "~/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/project_rtx_3090_acquired_2026_04_27.md",
-          "description": "RTX 3090 (renewed) ordered 2026-04-27, ETA 2-3 weeks \u2014 hardware uplift unlocking local-AI tier with 24GB VRAM Ampere"
+          "file": "~/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/project_rtx_4090_acquired_2026_04_27.md",
+          "description": "RTX 4090 (renewed) ordered 2026-04-27, ETA 2-3 weeks \u2014 hardware uplift unlocking local-AI tier with 24GB VRAM Ada"
         },
         {
           "id": "rlm-qwen3-8b-live",
@@ -3035,7 +3035,7 @@
       "derived_from": [],
       "aliases": [
         "Post-Anthropic 3-Layer Stack Epic",
-        "Multica + AICP + 3090 Assembly",
+        "Multica + AICP + 4090 Assembly",
         "Three-Layer Anti-Vendor-Lock-In Stack"
       ],
       "relationships": [
@@ -5655,7 +5655,7 @@
         "opencode",
         "3-layer-validation",
         "operator-actionable",
-        "pre-3090",
+        "pre-4090",
         "mission-2026-04-28",
         "m003"
       ],
@@ -13437,6 +13437,95 @@
       ]
     },
     {
+      "path": "domains/ai-models/reference-local-model-routing-catalog.md",
+      "slug": "domains/ai-models/reference-local-model-routing-catalog",
+      "title": "Local Model Routing Catalog (task \u00d7 hardware tier)",
+      "type": "reference",
+      "domain": "ai-models",
+      "status": "processing",
+      "confidence": "medium",
+      "created": "2026-07-02",
+      "updated": "2026-07-02",
+      "last_reviewed": "",
+      "tags": [
+        "ai-models",
+        "model-routing",
+        "complexity-routing",
+        "ternary",
+        "bitnet",
+        "1bit",
+        "local-inference",
+        "moe-group",
+        "intelligence-layer",
+        "custom-model",
+        "senior-engineer-tier",
+        "hardware-tier",
+        "model-selection",
+        "cpu-inference",
+        "rtx-4090",
+        "rtx-pro",
+        "evolving"
+      ],
+      "sources": [
+        {
+          "id": "note-operator-model-routing-catalog-2026-07-02",
+          "type": "note",
+          "file": "raw/notes/2026-07-02-operator-model-routing-catalog-handwritten-verbatim.md",
+          "title": "Operator handwritten model-routing catalog (verbatim)",
+          "ingested": "2026-07-02"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Local Model Routing Catalog",
+        "Complexity-Routed Model Selection Matrix"
+      ],
+      "relationships": []
+    },
+    {
+      "path": "domains/ai-models/reference-scientific-models-dna-protein-particle.md",
+      "slug": "domains/ai-models/reference-scientific-models-dna-protein-particle",
+      "title": "Scientific Models \u2014 DNA / Protein / Particle (non-LLM)",
+      "type": "reference",
+      "domain": "ai-models",
+      "status": "processing",
+      "confidence": "high",
+      "created": "2026-07-02",
+      "updated": "2026-07-02",
+      "last_reviewed": "",
+      "tags": [
+        "ai-models",
+        "scientific-models",
+        "dna",
+        "genomics",
+        "protein-folding",
+        "structure-prediction",
+        "physics-sim",
+        "non-llm",
+        "hardware-tier",
+        "evolving"
+      ],
+      "sources": [
+        {
+          "id": "note-operator-model-routing-catalog-2026-07-02",
+          "type": "note",
+          "file": "raw/notes/2026-07-02-operator-model-routing-catalog-handwritten-verbatim.md",
+          "title": "Operator handwritten model-routing catalog (verbatim)",
+          "ingested": "2026-07-02"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Scientific Models Catalog",
+        "DNA Protein Particle Models"
+      ],
+      "relationships": []
+    },
+    {
       "path": "domains/automation/ai-driven-content-pipeline.md",
       "slug": "domains/automation/ai-driven-content-pipeline",
       "title": "AI-Driven Content Pipeline",
@@ -14275,7 +14364,7 @@
           "id": "unsloth-synthesis",
           "type": "wiki",
           "file": "wiki/sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md",
-          "description": "Consumer-hardware fine-tuning \u2014 LoRA + UD-IQ2 / Q2_K quantization; the realistic training substrate on RTX 3090"
+          "description": "Consumer-hardware fine-tuning \u2014 LoRA + UD-IQ2 / Q2_K quantization; the realistic training substrate on RTX 4090"
         },
         {
           "id": "cavekit-synthesis",
@@ -14287,7 +14376,7 @@
           "id": "2026-consumer-hardware-stack",
           "type": "wiki",
           "file": "wiki/spine/references/2026-consumer-hardware-ai-stack.md",
-          "description": "Hardware reality \u2014 RTX 3090 (24 GB VRAM, ETA mid-May 2026) is the realistic training substrate for L2-tier customizations on operator's stack"
+          "description": "Hardware reality \u2014 RTX 4090 (24 GB VRAM, ETA mid-May 2026) is the realistic training substrate for L2-tier customizations on operator's stack"
         },
         {
           "id": "feedback-do-not-undermine",
@@ -17791,7 +17880,7 @@
         "vfio-pci",
         "sandboxing",
         "sain-01",
-        "rtx-3090",
+        "rtx-4090",
         "blackwell",
         "hardware-isolation",
         "kernel",
@@ -24709,7 +24798,7 @@
           "id": "unsloth-synth",
           "type": "wiki",
           "file": "wiki/sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md",
-          "description": "Layer 1 \u2014 Unsloth UD-IQ2 / Q2_K weight quantization \u2014 ~87.5% reduction vs FP16 weights; production-deployed on consumer hardware (RTX 3090 24 GB VRAM)"
+          "description": "Layer 1 \u2014 Unsloth UD-IQ2 / Q2_K weight quantization \u2014 ~87.5% reduction vs FP16 weights; production-deployed on consumer hardware (RTX 4090 24 GB VRAM)"
         },
         {
           "id": "trust-layer-concept",
@@ -49551,6 +49640,58 @@
       "relationships": []
     },
     {
+      "path": "runbooks/metrics-correlator-lag.md",
+      "slug": "runbooks/metrics-correlator-lag",
+      "title": "Operator runbook \u2014 selfdef correlator bus lag (raw events dropped, missed detections)",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-06-09",
+      "updated": "2026-06-09",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "observability",
+        "metrics",
+        "correlator-lag",
+        "bus",
+        "prometheus",
+        "detection",
+        "incident-response",
+        "selfdef",
+        "ips"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-metrics-handler",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "crates/selfdef-api/src/metrics.rs",
+          "note": "selfdef-api Metrics: the selfdef_correlator_lag_events_total counter; the correlator subscribes to the bus broadcast and a lag means raw events were never rule-evaluated"
+        },
+        {
+          "id": "selfdef-bus-config",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "crates/selfdef-config/src/lib.rs",
+          "note": "[bus] inproc_capacity \u2014 the bounded broadcast channel depth that, when exceeded, causes a slow subscriber (here the correlator) to lag and drop events"
+        },
+        {
+          "id": "selfdef-observability-alerts",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "modules/observability/assets/alerts/selfdef.yml.template",
+          "note": "SelfdefCorrelatorBusLag warning alert fires on increase(selfdef_correlator_lag_events_total[10m]) > 0"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "runbooks/metrics-ingest-lag.md",
       "slug": "runbooks/metrics-ingest-lag",
       "title": "Operator runbook \u2014 selfdef metrics ingest lag (events dropped, /metrics under-counting)",
@@ -49594,6 +49735,58 @@
           "project": "selfdef",
           "path": "modules/observability/assets/alerts/selfdef.yml.template",
           "note": "SelfdefMetricsIngestLag warning alert fires on increase(selfdef_ingest_lag_events_total[10m]) > 0"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/metrics-responder-lag.md",
+      "slug": "runbooks/metrics-responder-lag",
+      "title": "Operator runbook \u2014 selfdef responder bus lag (findings dropped, no action fired)",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-06-09",
+      "updated": "2026-06-09",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "observability",
+        "metrics",
+        "responder-lag",
+        "bus",
+        "prometheus",
+        "response",
+        "incident-response",
+        "selfdef",
+        "ips"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-metrics-handler",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "crates/selfdef-api/src/metrics.rs",
+          "note": "selfdef-api Metrics: the selfdef_responder_lag_events_total counter; the responder subscribes to the bus broadcast and a lag means findings were dropped before any autonomous action fired"
+        },
+        {
+          "id": "selfdef-bus-config",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "crates/selfdef-config/src/lib.rs",
+          "note": "[bus] inproc_capacity \u2014 the bounded broadcast channel depth that, when exceeded, causes a slow subscriber (here the responder) to lag and drop findings"
+        },
+        {
+          "id": "selfdef-observability-alerts",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "modules/observability/assets/alerts/selfdef.yml.template",
+          "note": "SelfdefResponderBusLag warning alert fires on increase(selfdef_responder_lag_events_total[10m]) > 0"
         }
       ],
       "layer": 2,
@@ -50410,6 +50603,44 @@
           "project": "selfdef",
           "path": "crates/selfdef-api/src/storage.rs",
           "note": "selfdef-api storage probe handler (df + log-dir walk)"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/tetragon-map-errors.md",
+      "slug": "runbooks/tetragon-map-errors",
+      "title": "Operator runbook \u2014 Tetragon kernel detection source degrading (BPF map errors / socket-dropout gotcha)",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-06-10",
+      "updated": "2026-06-10",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "observability",
+        "tetragon",
+        "ebpf",
+        "kernel-fence",
+        "event-drop",
+        "meta-observability",
+        "incident-response",
+        "selfdef",
+        "ips"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-observability-alerts",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "modules/observability/assets/alerts/selfdef.yml.template",
+          "note": "SelfdefTetragonMapErrors fires on increase(tetragon_map_errors_total[10m]) > 0"
         }
       ],
       "layer": 2,
@@ -53292,7 +53523,7 @@
         {
           "id": "dflash-luce-rits",
           "type": "article",
-          "url": "https://rits.shanghai.nyu.edu/ai/luce-dflash-brings-2x-speculative-decoding-to-qwen3-6-27b-on-a-single-rtx-3090/"
+          "url": "https://rits.shanghai.nyu.edu/ai/luce-dflash-brings-2x-speculative-decoding-to-qwen3-6-27b-on-a-single-rtx-4090/"
         },
         {
           "id": "operator-dflash-framing",
@@ -59185,7 +59416,7 @@
         "paper-grade",
         "dettmers",
         "consumer-hardware",
-        "rtx-3090-substrate",
+        "rtx-4090-substrate",
         "anti-vendor-lock-in-evidence"
       ],
       "sources": [
@@ -59236,7 +59467,7 @@
           "id": "unsloth-synth",
           "type": "wiki",
           "file": "wiki/sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md",
-          "description": "Unsloth Synthesis \u2014 production deployment of UD-IQ2 / Q2_K weight quantization on consumer hardware (RTX 3090 24GB); this synthesis documents the algorithmic foundation Unsloth implements"
+          "description": "Unsloth Synthesis \u2014 production deployment of UD-IQ2 / Q2_K weight quantization on consumer hardware (RTX 4090 24GB); this synthesis documents the algorithmic foundation Unsloth implements"
         },
         {
           "id": "multi-layer-compression-lesson",
@@ -59254,7 +59485,7 @@
           "id": "custom-model-concept",
           "type": "wiki",
           "file": "wiki/domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md",
-          "description": "Custom-Tailored Model Group Concept \u2014 M002 specialist LoRA on RTX 3090 needs Q4KM-class quantization to fit 27B-class bases; this synthesis documents the substrate"
+          "description": "Custom-Tailored Model Group Concept \u2014 M002 specialist LoRA on RTX 4090 needs Q4KM-class quantization to fit 27B-class bases; this synthesis documents the substrate"
         }
       ],
       "layer": 1,
@@ -62907,7 +63138,7 @@
       "derived_from": [],
       "aliases": [
         "3-Layer Stack Learning Path",
-        "Multica + AICP + 3090 Reading Order",
+        "Multica + AICP + 4090 Reading Order",
         "Post-Anthropic Stack 2026-04-28 Path"
       ],
       "relationships": [
@@ -68306,11 +68537,11 @@
       "relationship_count": 1868
     },
     "ai-agents": {
-      "page_count": 118,
+      "page_count": 121,
       "relationship_count": 583
     },
     "ai-models": {
-      "page_count": 33,
+      "page_count": 35,
       "relationship_count": 149
     },
     "devops": {
@@ -68565,12 +68796,12 @@
       "backlog/epics/milestone-sain01/e103-vfio-isolation",
       "domains/devops/concept-vfio-gpu-isolation-amd-iommu"
     ],
-    "rtx-3090": [
+    "rtx-4090": [
       "backlog/epics/milestone-sain01/e103-vfio-isolation",
       "backlog/epics/milestone-sain01/e109-dflash-integration",
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
-      "domains/devops/concept-vfio-gpu-isolation-amd-iommu",
-      "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption"
+      "domains/ai-models/reference-local-model-routing-catalog",
+      "domains/devops/concept-vfio-gpu-isolation-amd-iommu"
     ],
     "blackwell": [
       "backlog/epics/milestone-sain01/e103-vfio-isolation",
@@ -68601,12 +68832,14 @@
       "runbooks/perimeter-policy-load-failure",
       "runbooks/perimeter-sigkill-investigation",
       "runbooks/perimeter-tetragon-not-running",
+      "runbooks/tetragon-map-errors",
       "sources/src-sain-01-sovereign-node-spec"
     ],
     "ebpf": [
       "backlog/epics/milestone-sain01/e104-tetragon-guardian-perimeter",
       "comparisons/cmp-wall-vs-write-vs-tetragon-for-perimeter",
-      "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor"
+      "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor",
+      "runbooks/tetragon-map-errors"
     ],
     "guardian": [
       "backlog/epics/milestone-sain01/e104-tetragon-guardian-perimeter",
@@ -68682,6 +68915,7 @@
       "backlog/milestones/sain-01-sovereign-node",
       "comparisons/cmp-bitnet-vs-fp16-execution-cost",
       "domains/ai-models/concept-1bit-ternary-weights",
+      "domains/ai-models/reference-local-model-routing-catalog",
       "sources/src-bitnet-b158-ternary-llm",
       "sources/src-sain-01-sovereign-node-spec",
       "sources/src-zen5-avx512-single-cycle"
@@ -68690,11 +68924,13 @@
       "backlog/epics/milestone-sain01/e106-pulse-vector-runtime",
       "comparisons/cmp-bitnet-vs-fp16-execution-cost",
       "domains/ai-models/concept-1bit-ternary-weights",
+      "domains/ai-models/reference-local-model-routing-catalog",
       "sources/src-bitnet-b158-ternary-llm"
     ],
     "1bit": [
       "backlog/epics/milestone-sain01/e106-pulse-vector-runtime",
       "domains/ai-models/concept-1bit-ternary-weights",
+      "domains/ai-models/reference-local-model-routing-catalog",
       "sources/src-bitnet-b158-ternary-llm",
       "sources/src-sain-01-sovereign-node-spec"
     ],
@@ -69496,7 +69732,8 @@
       "backlog/epics/pre-milestone/E001-local-inference-engine",
       "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier",
       "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
-      "backlog/tasks/T001-test-openai-backend"
+      "backlog/tasks/T001-test-openai-backend",
+      "domains/ai-models/reference-local-model-routing-catalog"
     ],
     "aicp": [
       "backlog/epics/pre-milestone/E001-local-inference-engine",
@@ -70161,24 +70398,28 @@
     ],
     "custom-model": [
       "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "domains/ai-models/reference-local-model-routing-catalog",
       "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
       "spine/learning-paths/custom-tailored-senior-engineer-tier-model-group-2026-05-04",
       "spine/references/second-brain-custom-model-strategy"
     ],
     "senior-engineer-tier": [
       "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "domains/ai-models/reference-local-model-routing-catalog",
       "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
       "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
       "spine/learning-paths/custom-tailored-senior-engineer-tier-model-group-2026-05-04"
     ],
     "moe-group": [
       "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "domains/ai-models/reference-local-model-routing-catalog",
       "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
       "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
       "spine/learning-paths/custom-tailored-senior-engineer-tier-model-group-2026-05-04"
     ],
     "intelligence-layer": [
       "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "domains/ai-models/reference-local-model-routing-catalog",
       "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
       "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
       "spine/learning-paths/custom-tailored-senior-engineer-tier-model-group-2026-05-04"
@@ -71066,20 +71307,27 @@
       "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
       "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
       "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage",
-      "runbooks/metrics-ingest-lag"
+      "runbooks/metrics-correlator-lag",
+      "runbooks/metrics-ingest-lag",
+      "runbooks/metrics-responder-lag"
     ],
     "prometheus": [
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
       "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
       "runbooks/m060-mirror-export-publish-anomalies",
-      "runbooks/metrics-ingest-lag"
+      "runbooks/metrics-correlator-lag",
+      "runbooks/metrics-ingest-lag",
+      "runbooks/metrics-responder-lag"
     ],
     "observability": [
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
       "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
       "backlog/tasks/T029-author-routing-review-ritual-standard",
       "patterns/01_drafts/observe-fix-verify-loop",
-      "runbooks/metrics-ingest-lag"
+      "runbooks/metrics-correlator-lag",
+      "runbooks/metrics-ingest-lag",
+      "runbooks/metrics-responder-lag",
+      "runbooks/tetragon-map-errors"
     ],
     "ritual": [
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
@@ -71336,7 +71584,9 @@
       "runbooks/guardian-not-running",
       "runbooks/guardian-socket-unreachable",
       "runbooks/m060-mirror-export-publish-anomalies",
+      "runbooks/metrics-correlator-lag",
       "runbooks/metrics-ingest-lag",
+      "runbooks/metrics-responder-lag",
       "runbooks/network-degraded",
       "runbooks/perimeter-audit-log-corruption",
       "runbooks/perimeter-extension-create",
@@ -71351,6 +71601,7 @@
       "runbooks/scheduler-weight-matrix-rotation",
       "runbooks/selfdef-watchdog-alert-finding",
       "runbooks/storage-degraded",
+      "runbooks/tetragon-map-errors",
       "runbooks/ux-coherence-failures"
     ],
     "claude-code": [
@@ -71429,7 +71680,7 @@
     "operator-actionable": [
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook"
     ],
-    "pre-3090": [
+    "pre-4090": [
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook"
     ],
     "m003": [
@@ -72029,6 +72280,8 @@
       "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles",
       "domains/ai-models/concept-1bit-ternary-weights",
       "domains/ai-models/concept-speculative-decoding-block-diffusion",
+      "domains/ai-models/reference-local-model-routing-catalog",
+      "domains/ai-models/reference-scientific-models-dna-protein-particle",
       "sources/src-27-questions-llm-selection",
       "sources/src-bitnet-b158-ternary-llm",
       "sources/src-dflash-block-diffusion-spec-dec",
@@ -72044,6 +72297,7 @@
     "cpu-inference": [
       "comparisons/cmp-bitnet-vs-fp16-execution-cost",
       "domains/ai-models/concept-1bit-ternary-weights",
+      "domains/ai-models/reference-local-model-routing-catalog",
       "sources/src-bitnet-b158-ternary-llm"
     ],
     "gpu-inference": [
@@ -72170,7 +72424,9 @@
       "runbooks/guardian-not-running",
       "runbooks/guardian-socket-unreachable",
       "runbooks/m060-mirror-export-publish-anomalies",
+      "runbooks/metrics-correlator-lag",
       "runbooks/metrics-ingest-lag",
+      "runbooks/metrics-responder-lag",
       "runbooks/network-degraded",
       "runbooks/perimeter-audit-log-corruption",
       "runbooks/perimeter-extension-create",
@@ -72185,6 +72441,7 @@
       "runbooks/scheduler-weight-matrix-rotation",
       "runbooks/selfdef-watchdog-alert-finding",
       "runbooks/storage-degraded",
+      "runbooks/tetragon-map-errors",
       "runbooks/ux-coherence-failures",
       "spine/doctrine/peace-machine-and-core-law"
     ],
@@ -73000,6 +73257,7 @@
     ],
     "model-selection": [
       "decisions/02_validated/methodology/methodology-framework-design-decisions",
+      "domains/ai-models/reference-local-model-routing-catalog",
       "sources/src-llm-architecture-gallery-raschka"
     ],
     "versioning": [
@@ -73796,6 +74054,45 @@
       "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms",
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
       "spine/references/2026-consumer-hardware-ai-stack"
+    ],
+    "model-routing": [
+      "domains/ai-models/reference-local-model-routing-catalog"
+    ],
+    "complexity-routing": [
+      "domains/ai-models/reference-local-model-routing-catalog"
+    ],
+    "hardware-tier": [
+      "domains/ai-models/reference-local-model-routing-catalog",
+      "domains/ai-models/reference-scientific-models-dna-protein-particle",
+      "spine/references/ai-infrastructure-decision-framework-2026"
+    ],
+    "rtx-pro": [
+      "domains/ai-models/reference-local-model-routing-catalog"
+    ],
+    "evolving": [
+      "domains/ai-models/reference-local-model-routing-catalog",
+      "domains/ai-models/reference-scientific-models-dna-protein-particle"
+    ],
+    "scientific-models": [
+      "domains/ai-models/reference-scientific-models-dna-protein-particle"
+    ],
+    "dna": [
+      "domains/ai-models/reference-scientific-models-dna-protein-particle"
+    ],
+    "genomics": [
+      "domains/ai-models/reference-scientific-models-dna-protein-particle"
+    ],
+    "protein-folding": [
+      "domains/ai-models/reference-scientific-models-dna-protein-particle"
+    ],
+    "structure-prediction": [
+      "domains/ai-models/reference-scientific-models-dna-protein-particle"
+    ],
+    "physics-sim": [
+      "domains/ai-models/reference-scientific-models-dna-protein-particle"
+    ],
+    "non-llm": [
+      "domains/ai-models/reference-scientific-models-dna-protein-particle"
     ],
     "content-pipeline": [
       "domains/automation/ai-driven-content-pipeline",
@@ -77578,6 +77875,9 @@
       "log/2026-04-28-session-handoff",
       "log/2026-05-04-session-handoff-pre-compaction"
     ],
+    "rtx-3090": [
+      "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption"
+    ],
     "operator-corrections": [
       "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption"
     ],
@@ -79664,7 +79964,9 @@
       "runbooks/guardian-false-positive-rollback",
       "runbooks/guardian-not-running",
       "runbooks/guardian-socket-unreachable",
+      "runbooks/metrics-correlator-lag",
       "runbooks/metrics-ingest-lag",
+      "runbooks/metrics-responder-lag",
       "runbooks/network-degraded",
       "runbooks/perimeter-audit-log-corruption",
       "runbooks/perimeter-extension-create",
@@ -79676,6 +79978,7 @@
       "runbooks/scheduler-not-running",
       "runbooks/selfdef-watchdog-alert-finding",
       "runbooks/storage-degraded",
+      "runbooks/tetragon-map-errors",
       "runbooks/ux-coherence-failures",
       "sources/src-suricata"
     ],
@@ -80707,7 +81010,8 @@
       "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality"
     ],
     "detection": [
-      "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality"
+      "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality",
+      "runbooks/metrics-correlator-lag"
     ],
     "agent-fleet": [
       "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality"
@@ -80848,14 +81152,17 @@
     "incident-response": [
       "runbooks/guardian-audit-log-corruption",
       "runbooks/guardian-console-alert-investigation",
+      "runbooks/metrics-correlator-lag",
       "runbooks/metrics-ingest-lag",
+      "runbooks/metrics-responder-lag",
       "runbooks/network-degraded",
       "runbooks/perimeter-audit-log-corruption",
       "runbooks/perimeter-sigkill-investigation",
       "runbooks/scheduler-audit-log-corruption",
       "runbooks/scheduler-force-override-investigation",
       "runbooks/selfdef-watchdog-alert-finding",
-      "runbooks/storage-degraded"
+      "runbooks/storage-degraded",
+      "runbooks/tetragon-map-errors"
     ],
     "console-alert": [
       "runbooks/guardian-console-alert-investigation",
@@ -80892,14 +81199,26 @@
     "operator-facing": [
       "runbooks/m060-mirror-export-publish-anomalies"
     ],
+    "correlator-lag": [
+      "runbooks/metrics-correlator-lag"
+    ],
+    "bus": [
+      "runbooks/metrics-correlator-lag",
+      "runbooks/metrics-ingest-lag",
+      "runbooks/metrics-responder-lag"
+    ],
     "ingest-lag": [
       "runbooks/metrics-ingest-lag"
     ],
-    "bus": [
-      "runbooks/metrics-ingest-lag"
-    ],
     "meta-observability": [
-      "runbooks/metrics-ingest-lag"
+      "runbooks/metrics-ingest-lag",
+      "runbooks/tetragon-map-errors"
+    ],
+    "responder-lag": [
+      "runbooks/metrics-responder-lag"
+    ],
+    "response": [
+      "runbooks/metrics-responder-lag"
     ],
     "internet": [
       "runbooks/network-degraded"
@@ -80952,7 +81271,8 @@
       "runbooks/perimeter-tetragon-not-running"
     ],
     "kernel-fence": [
-      "runbooks/perimeter-tetragon-not-running"
+      "runbooks/perimeter-tetragon-not-running",
+      "runbooks/tetragon-map-errors"
     ],
     "backpressure": [
       "runbooks/scheduler-backpressure-stuck-open"
@@ -81001,6 +81321,9 @@
     ],
     "log-rotate": [
       "runbooks/storage-degraded"
+    ],
+    "event-drop": [
+      "runbooks/tetragon-map-errors"
     ],
     "ux-coherence": [
       "runbooks/ux-coherence-failures"
@@ -83641,7 +83964,7 @@
     "dettmers": [
       "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms"
     ],
-    "rtx-3090-substrate": [
+    "rtx-4090-substrate": [
       "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms"
     ],
     "anti-vendor-lock-in-evidence": [
@@ -84313,9 +84636,6 @@
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "subscription": [
-      "spine/references/ai-infrastructure-decision-framework-2026"
-    ],
-    "hardware-tier": [
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "decision-matrix": [

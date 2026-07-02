@@ -264,7 +264,7 @@ Per the [RLM paper deep-dive](src-rlm-paper-deep-dive-table-1-training-recipe-si
 - **Training: prime-rl, batch 64, 300 steps, 48 H100 hours**
 - Fine-tuning Qwen3-8B with the prime-rl SFT pipeline (`uv run sft @ configs/...toml`)
 
-The 48-H100-hour number, combined with prime-rl's `single_node` deployment supporting consumer hardware down to RTX 3090 (per the Setup section), means: **a researcher with access to a multi-H100 cloud rental (~$48-100 USD on typical rates) can replicate the RLM-Qwen3-8B post-training run end-to-end**. This is the open-source path the wiki's mission cares about.
+The 48-H100-hour number, combined with prime-rl's `single_node` deployment supporting consumer hardware down to RTX 4090 (per the Setup section), means: **a researcher with access to a multi-H100 cloud rental (~$48-100 USD on typical rates) can replicate the RLM-Qwen3-8B post-training run end-to-end**. This is the open-source path the wiki's mission cares about.
 
 ## Open Questions
 
@@ -294,7 +294,7 @@ The 48-H100-hour number, combined with prime-rl's `single_node` deployment suppo
 > [!info] Where prime-rl applies for the wiki's mission
 >
 > - **Reproducing the RLM-Qwen3-8B training**: cited as the named training library in the RLM paper; recipe is 48 H100 hours
-> - **Post-training open-weight models on local + cloud GPUs**: SFT + RL in one framework; consumer GPU floor (Reverse Text on RTX 3090)
+> - **Post-training open-weight models on local + cloud GPUs**: SFT + RL in one framework; consumer GPU floor (Reverse Text on RTX 4090)
 > - **Anti-vendor-lock-in training pipeline**: Apache 2.0 + open weights + open-source SDKs throughout
 > - **Multi-node enterprise training**: SLURM + Kubernetes deployment for fleet scale
 > - **VLM training**: Qwen3-VL family supported with multi-modal docs

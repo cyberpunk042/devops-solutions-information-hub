@@ -193,7 +193,7 @@ The K-Flat insight ("verification cost is constant; draft quality is the lever")
 ## Open Questions
 
 > [!question] Should the operator's Custom-Tailored Model Group adopt DFlash for M003's inference-speed substrate?
-> DFlash open-source via vLLM means operator can deploy on any TPU/JAX-supported infrastructure. Operator's hardware: RTX 3090 (NVIDIA, no TPU). DFlash on NVIDIA: torchax proposer is in-progress per UCSD team. **Default proposal**: track DFlash NVIDIA support for adoption when GA; meanwhile, EAGLE-3 or autoregressive speculative is the substitute. Add as M003 substrate option.
+> DFlash open-source via vLLM means operator can deploy on any TPU/JAX-supported infrastructure. Operator's hardware: RTX 4090 (NVIDIA, no TPU). DFlash on NVIDIA: torchax proposer is in-progress per UCSD team. **Default proposal**: track DFlash NVIDIA support for adoption when GA; meanwhile, EAGLE-3 or autoregressive speculative is the substitute. Add as M003 substrate option.
 
 > [!question] Does the K-Flat insight ("draft quality > block size") have an analog in operator's preference-data scaling for M004?
 > Operator's M004 scales by behavioral preference fine-tuning. The convergent-pattern insight is structurally identical: **per-pair quality compounds; pair-count diminishes**. Operator-decision: prioritize hand-curated high-quality preference pairs (mirrors DFlash's quality-per-position lever) over synthetic-pair quantity (mirrors larger K).
@@ -204,7 +204,7 @@ The K-Flat insight ("verification cost is constant; draft quality is the lever")
 > [!question] How does DFlash compose with operator's L0-L4 trust opt-ins?
 > DFlash's draft model uses static on-device JAX arrays (no paged cache). At L2 trust (compressed-encrypted weights + on-GPU decypher), the draft model would also need to decrypt at runtime. Engineering question: does the dual-cache architecture compose with cypher overlay? Operator-design call when DFlash is pursued.
 
-> [!question] When does DFlash become available on consumer NVIDIA hardware (RTX 3090)?
+> [!question] When does DFlash become available on consumer NVIDIA hardware (RTX 4090)?
 > UCSD team noted "actively working on adding a torchax proposer so that DFlash works on the PyTorch serving path as well." No date. Track via vLLM repo. Operator-mission impact: when GA on NVIDIA, M003 substrate gains another option.
 
 ## Relationships

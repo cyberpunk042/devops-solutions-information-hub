@@ -27,7 +27,7 @@ tags: [synthesis, pedagogy, gpt-training, llama3, transformer-architecture, rope
 
 ## Summary
 
-Raiyan Yahya's open-source repository **"How To Train Your GPT"** is a **12-chapter, 3,671-line interactive textbook** that teaches how to build, train, and run a modern decoder-only Transformer (the same family as ChatGPT, Claude, LLaMA, Mistral) **from absolute scratch with zero ML prerequisites**. The pedagogy is explicit: every line annotated with WHAT and WHY; LLaMA-3-class architecture (RoPE + RMSNorm + SwiGLU + pre-norm); production training techniques (AdamW + cosine warmup + mixed precision + gradient accumulation); production inference techniques (KV cache + temperature + top-k/p + beam search). The 12 chapters: 0-Overview · 1-Setup · 2-Tokenization (BPE) · 3-Embeddings · 4-Positional Encoding (RoPE) · 5-Attention (THE CORE) · 6-Transformer Block · 7-Complete GPT Model (124M) · 8-Training Pipeline · 9-Inference · 10-Full Script · 11-Glossary. Each chapter includes the 4-step structure: analogy (5-year-old level) + worked example with real numbers + annotated code (every line: what + why) + diagram. **Mission relevance**: this is the **pedagogical substrate** that operator referenced via *"Its not as if I was mastering AI model creation yet... nor will I maybe but possibly my own customizations and possibly even more useful and flexible. like we teach."* — the wiki's spec-driven convergence applied to model-creation by an outside practitioner. The repo is also a candidate **constitution input** for the [Custom-Tailored Model Group's M001](../../backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05.md) data-discipline phase: the operator's senior-engineer-tier instruction data + preference data needs to teach the agent *how to reason about model architecture properly* at the same level Yahya teaches humans. **Operator caveat acknowledged**: full training of a 124M GPT from scratch (~2 hours on RTX 3090 per the repo) is NOT operator's mission path — operator's path is fine-tuning open-weight bases via LoRA + DPO/IPO. But this repo is the **understanding substrate** for choosing fine-tune vs full-training, picking a base, designing the training data, and authoring the constitution.
+Raiyan Yahya's open-source repository **"How To Train Your GPT"** is a **12-chapter, 3,671-line interactive textbook** that teaches how to build, train, and run a modern decoder-only Transformer (the same family as ChatGPT, Claude, LLaMA, Mistral) **from absolute scratch with zero ML prerequisites**. The pedagogy is explicit: every line annotated with WHAT and WHY; LLaMA-3-class architecture (RoPE + RMSNorm + SwiGLU + pre-norm); production training techniques (AdamW + cosine warmup + mixed precision + gradient accumulation); production inference techniques (KV cache + temperature + top-k/p + beam search). The 12 chapters: 0-Overview · 1-Setup · 2-Tokenization (BPE) · 3-Embeddings · 4-Positional Encoding (RoPE) · 5-Attention (THE CORE) · 6-Transformer Block · 7-Complete GPT Model (124M) · 8-Training Pipeline · 9-Inference · 10-Full Script · 11-Glossary. Each chapter includes the 4-step structure: analogy (5-year-old level) + worked example with real numbers + annotated code (every line: what + why) + diagram. **Mission relevance**: this is the **pedagogical substrate** that operator referenced via *"Its not as if I was mastering AI model creation yet... nor will I maybe but possibly my own customizations and possibly even more useful and flexible. like we teach."* — the wiki's spec-driven convergence applied to model-creation by an outside practitioner. The repo is also a candidate **constitution input** for the [Custom-Tailored Model Group's M001](../../backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05.md) data-discipline phase: the operator's senior-engineer-tier instruction data + preference data needs to teach the agent *how to reason about model architecture properly* at the same level Yahya teaches humans. **Operator caveat acknowledged**: full training of a 124M GPT from scratch (~2 hours on RTX 4090 per the repo) is NOT operator's mission path — operator's path is fine-tuning open-weight bases via LoRA + DPO/IPO. But this repo is the **understanding substrate** for choosing fine-tune vs full-training, picking a base, designing the training data, and authoring the constitution.
 
 ## Reference
 
@@ -40,7 +40,7 @@ Raiyan Yahya's open-source repository **"How To Train Your GPT"** is a **12-chap
 > | **Author posture** | *"I made this with the goal of learning something I didn't understand completely. Specifically the attention part. I use AI a lot to understand key concepts and verifying them."* |
 > | **Scope** | 12 chapters · 3,671 lines · 100% commented |
 > | **Architecture** | LLaMA-3-style (RoPE + RMSNorm + SwiGLU + pre-norm) |
-> | **Target model size** | 124M parameters; ~2 hours on RTX 3090 per repo's stated expected output |
+> | **Target model size** | 124M parameters; ~2 hours on RTX 4090 per repo's stated expected output |
 > | **Prerequisites** | Python basics only — no ML, no calculus, no linear algebra required |
 
 ## Key Insights
@@ -82,7 +82,7 @@ Raiyan Yahya's open-source repository **"How To Train Your GPT"** is a **12-chap
 
 > [!info] **Not a full-training path for operator — fine-tune is the realistic path.**
 >
-> Honest reading of repo: full training of a 124M GPT from scratch on RTX 3090 takes ~2 hours but consumes 50,000 training steps with ~45,000 tokens/sec. **Operator's mission is fine-tuning open-weight 8B-27B+ bases via LoRA**, not training from scratch. The repo's value to operator is conceptual (understand what's happening at each layer) and architectural (recognize when a base model is well-built), not directly executable.
+> Honest reading of repo: full training of a 124M GPT from scratch on RTX 4090 takes ~2 hours but consumes 50,000 training steps with ~45,000 tokens/sec. **Operator's mission is fine-tuning open-weight 8B-27B+ bases via LoRA**, not training from scratch. The repo's value to operator is conceptual (understand what's happening at each layer) and architectural (recognize when a base model is well-built), not directly executable.
 
 > [!info] **The repo's "Next Steps After Finishing" table doubles as a roadmap for operator's M002 → M005 phases.**
 >
@@ -103,7 +103,7 @@ Raiyan Yahya's open-source repository **"How To Train Your GPT"** is a **12-chap
 
 Operator's *"Its not as if I was mastering AI model creation yet."* — Yahya's repo is **the literal substrate that closes the model-creation knowledge gap** at the depth the operator needs without becoming a foundation-model researcher. The repo's positioning is: "Python developer with zero ML experience." Operator-fit: senior-engineer-tier Python developer with deep DevOps + integration experience but emerging-ML — exactly the audience.
 
-**Reading-order recommendation for the operator's pre-3090 study window**:
+**Reading-order recommendation for the operator's pre-4090 study window**:
 
 1. **Chapter 0-1** (Overview + Setup) — orient + verify GPU + venv
 2. **Chapter 5** (Attention — THE CORE, 713 lines) — the center of gravity for understanding what fine-tuning actually changes
@@ -123,7 +123,7 @@ The repo doesn't address compression or trust directly — that's outside its 12
 
 ## Open Questions
 
-> [!question] Should the operator allocate a study window to this repo before RTX 3090 arrives?
+> [!question] Should the operator allocate a study window to this repo before RTX 4090 arrives?
 > Operator-decision. ~50% of the repo (Chapters 0/1/5/8/9/11) covers the mission-critical knowledge for picking M002 base, designing M004 preference fine-tune, and architecting M003 intelligence layer. Estimated reading time: 6–10 hours. High-leverage if operator wants to author the constitution and preference data with strong understanding of the substrate.
 
 > [!question] Is the LLaMA-3-style architecture the right baseline for operator's specialist LoRA?
@@ -137,7 +137,7 @@ The repo doesn't address compression or trust directly — that's outside its 12
 
 ## Relationships
 
-- BUILDS ON: [[custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis|Custom-Tailored Model Group Concept]] — pedagogical substrate for operator's pre-3090 knowledge prep; informs M001/M002/M004 design
+- BUILDS ON: [[custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis|Custom-Tailored Model Group Concept]] — pedagogical substrate for operator's pre-4090 knowledge prep; informs M001/M002/M004 design
 - BUILDS ON: [[spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts|Spec-Driven Convergence Lesson]] — 10th-instance candidate (operator-decision); structurally instantiates the convergent pattern for ML pedagogy
 - RELATES TO: [[src-tokenization-drift-and-automated-prompt-optimization-marktechpost|Tokenization Drift Synthesis]] — Chapter 2 (Tokenization) is the architectural prerequisite for understanding tokenization drift
 - RELATES TO: [[src-unsloth-fast-lora-consumer-hardware|Unsloth Synthesis]] — operator's actual training mechanism; understanding LoRA is downstream of understanding the architecture Yahya teaches

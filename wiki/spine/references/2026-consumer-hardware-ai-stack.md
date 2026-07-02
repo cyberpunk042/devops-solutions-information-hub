@@ -360,29 +360,29 @@ Three days after the 2026-04-22 K2.6 update and one day after the 2026-04-24 loc
 
 > [!success] **The stack reached 3-layer composability.**
 >
-> Two new operator-stated facts crystallized the assembly: **RTX 3090 (renewed) ordered 2026-04-27, ETA 2-3 weeks** (Subsystem 3 hardware unlock per CONTEXT.md threshold) · **Multica adopted as the orchestrator layer**, self-hosted at `/home/jfortin/.multica/server/` (built from source, Apache 2.0). Combined with the existing harness layer (Claude Code + OpenCode) and AICP provider routing (`local`/`k2_6_local`/`k2_6_openrouter`/`ollama_cloud` backends), the operator's stack now spans **three independently-substitutable layers**: **orchestrator (Multica) × harness (10 supported CLIs) × provider (10+ via AICP routing)**. No single vendor controls more than one of the three.
+> Two new operator-stated facts crystallized the assembly: **RTX 4090 (renewed) ordered 2026-04-27, ETA 2-3 weeks** (Subsystem 3 hardware unlock per CONTEXT.md threshold) · **Multica adopted as the orchestrator layer**, self-hosted at `/home/jfortin/.multica/server/` (built from source, Apache 2.0). Combined with the existing harness layer (Claude Code + OpenCode) and AICP provider routing (`local`/`k2_6_local`/`k2_6_openrouter`/`ollama_cloud` backends), the operator's stack now spans **three independently-substitutable layers**: **orchestrator (Multica) × harness (10 supported CLIs) × provider (10+ via AICP routing)**. No single vendor controls more than one of the three.
 
 ### Three new things this addendum captures
 
 1. **Orchestrator layer is now a first-class substitutable component.** Multica auto-detects 10 harness CLIs (Claude Code · Codex · OpenClaw · OpenCode · Hermes · Gemini · Pi · Cursor Agent · Kimi · Kiro CLI) and exposes per-agent provider routing via `custom_env` (operator-validated 2026-04-28). Per-agent shaping spans 7 dimensions: `provider × custom_env × custom_args × skills × instructions × model × mcp_config`. See [[src-multica-managed-agents-platform|Multica Synthesis]] and [[adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04|Decision: Adopt Multica]] for the full architectural rationale.
 
-2. **MIT RLM-Qwen3-8B HF checkpoint is live.** [`mit-oasys/rlm-qwen3-8b-v0.1`](https://huggingface.co/mit-oasys/rlm-qwen3-8b-v0.1) (confirmed 2026-04-27). Combined with Qwen3.6-27B at UD-IQ2 quantization (per the 2026-04-25 addendum), the operator now has **two open-weight tier-0 candidates** that fit comfortably on the incoming RTX 3090 (24GB VRAM Ampere): RLM-Qwen3-8B for long-context (32K → ~3.2M effective via REPL recursion) + Qwen3.6-27B for short-context dense reasoning. Both at $0 cash (no cloud GPU rental). The [[rlm-qwen3-6-27b-fine-tune-operations-plan|RLM-Qwen3.6-27B fine-tune operations plan]] becomes Phase-2-conditional (~$300-500 one-time, only if Phase-1 routing demonstrates a real workload ceiling).
+2. **MIT RLM-Qwen3-8B HF checkpoint is live.** [`mit-oasys/rlm-qwen3-8b-v0.1`](https://huggingface.co/mit-oasys/rlm-qwen3-8b-v0.1) (confirmed 2026-04-27). Combined with Qwen3.6-27B at UD-IQ2 quantization (per the 2026-04-25 addendum), the operator now has **two open-weight tier-0 candidates** that fit comfortably on the incoming RTX 4090 (24GB VRAM Ada): RLM-Qwen3-8B for long-context (32K → ~3.2M effective via REPL recursion) + Qwen3.6-27B for short-context dense reasoning. Both at $0 cash (no cloud GPU rental). The [[rlm-qwen3-6-27b-fine-tune-operations-plan|RLM-Qwen3.6-27B fine-tune operations plan]] becomes Phase-2-conditional (~$300-500 one-time, only if Phase-1 routing demonstrates a real workload ceiling).
 
 3. **3-layer composability empirically claimed.** Per [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Anti-Vendor-Lock-In Lesson]] Evidence 10 (added 2026-04-28), the orchestrator layer is now documented + open-source + self-host capable. Combined with prior Evidence 1-9 (harness + provider + retrieval + inference paradigm + training + environment + evaluation × 4 + loss + deployment), the wiki's mission claim is empirically traceable across **3 structural composition layers**, not just 2. See [[post-anthropic-stack-3-layer-assembly-multica-aicp-3090|Post-Anthropic 3-Layer Stack Assembly Epic]] for the in-progress operational implementation.
 
-### Hardware-tier reframing (incoming RTX 3090 changes Tier 0)
+### Hardware-tier reframing (incoming RTX 4090 changes Tier 0)
 
-The 2026-04-25 addendum's "operator's RTX 2080 Ti VRAM budget" framing is **superseded for Tier 0** by the incoming 3090. Once delivered (~mid-May 2026):
+The 2026-04-25 addendum's "operator's RTX 2080 Ti VRAM budget" framing is **superseded for Tier 0** by the incoming 4090. Once delivered (~mid-May 2026):
 
-| Workload | Tier 0 placement (post-3090) |
+| Workload | Tier 0 placement (post-4090) |
 |---|---|
-| Short-context agentic coding | Local: Qwen3.6-27B at UD-IQ2 (~14-16GB) on 3090 — comfortable with headroom |
-| Long-context reasoning + RAG | Local: RLM-Qwen3-8B BF16 (~16GB) on 3090 — full precision fits with headroom |
-| Multi-agent orchestration | Multica daemon → routes to local agents (3090) AND cloud agents (Ollama Cloud / OpenRouter) per `custom_env` |
+| Short-context agentic coding | Local: Qwen3.6-27B at UD-IQ2 (~14-16GB) on 4090 — comfortable with headroom |
+| Long-context reasoning + RAG | Local: RLM-Qwen3-8B BF16 (~16GB) on 4090 — full precision fits with headroom |
+| Multi-agent orchestration | Multica daemon → routes to local agents (4090) AND cloud agents (Ollama Cloud / OpenRouter) per `custom_env` |
 | Cost-sensitive bulk inference | Cloud: Ollama Cloud Pro (flat $20/mo) — registered active stack member |
 | Frontier-edge specialty | Cloud: OpenRouter routing (per existing tier_map) — Anthropic / OpenAI / DeepSeek / GLM as cost-per-task warrants |
 
-The Tier 0 hardware floor is **24GB VRAM (Ampere)** post-delivery — meaningfully different from the 11GB Turing floor that constrained 2026-04-25's framing. K2.6 local remains sovereignty-insurance (per 2026-04-24 addendum); not a primary path.
+The Tier 0 hardware floor is **24GB VRAM (Ada)** post-delivery — meaningfully different from the 11GB Turing floor that constrained 2026-04-25's framing. K2.6 local remains sovereignty-insurance (per 2026-04-24 addendum); not a primary path.
 
 ### Curated reading order (for operators evaluating the same 3-layer pattern)
 
@@ -398,11 +398,11 @@ See [[post-anthropic-3-layer-stack-2026-04-28|Learning Path — Post-Anthropic 3
 
 1. **Trust opt-ins L0 → L4 are configurable per workload** (operator's "lever of integrations and opt-ins and configurations and possible keys or passphrases or certificat"):
 
-   | Trust opt-in | What it provides | Default for RTX 3090? |
+   | Trust opt-in | What it provides | Default for RTX 4090? |
    |---|---|---|
    | L0 — Hash integrity | SHA-256 verification | — |
    | L1 — Weights-encrypted-at-rest | Cypher on disk, decrypt at load | — |
-   | **L2 — Compressed-and-encrypted weights + KV cache + on-GPU decypher kernels (Triton)** | 80-90% space saved on large context; performance-positive | **YES — default on RTX 3090** |
+   | **L2 — Compressed-and-encrypted weights + KV cache + on-GPU decypher kernels (Triton)** | 80-90% space saved on large context; performance-positive | **YES — default on RTX 4090** |
    | L3 — NVIDIA H100/H200 CC mode (additive) | HBM encryption + attestation chain | When H100-class hardware available |
    | L4 — End-to-end FHE inference | Encrypted activations end-to-end | Niche / regulatory workloads |
 
@@ -425,7 +425,7 @@ See [[post-anthropic-3-layer-stack-2026-04-28|Learning Path — Post-Anthropic 3
 
 | Hardware | Default trust opt-in | What it delivers |
 |---|---|---|
-| **RTX 3090 (incoming)** | **L2** | Compressed-encrypted weights + KV cache, on-GPU decypher kernels via Triton; 80-90% space saved; seamless and performance-positive; no cloud dependency |
+| **RTX 4090 (incoming)** | **L2** | Compressed-encrypted weights + KV cache, on-GPU decypher kernels via Triton; 80-90% space saved; seamless and performance-positive; no cloud dependency |
 | **H100 / H200** (cloud rental or future acquisition) | **L3 (additive on top of L2)** | HBM encryption + NRAS attestation; weights decrypted only inside encrypted GPU memory after attestation gates key release |
 | **Any future hardware** | All opt-ins compose forward | Hardware-agnostic runtime contract; substitutability holds across hardware vendors |
 
@@ -446,16 +446,16 @@ Read in order:
 
 1. **Custom-model opt-ins C0 → C5 are configurable per workload** (operator's *"opt-ins and configurations and possible keys or passphrases or certificat"* extended to the model-customization stance):
 
-   | Custom-model opt-in | What it provides | Default for RTX 3090? |
+   | Custom-model opt-in | What it provides | Default for RTX 4090? |
    |---|---|---|
-   | C0 — Vendor-supplied | Use base model with runtime prompting alignment | Pre-3090 only |
+   | C0 — Vendor-supplied | Use base model with runtime prompting alignment | Pre-4090 only |
    | C1 — Wiki-fluency LoRA (E012 tactical) | Domain-fluency LoRAs for AICP routing efficiency | Optional; tactical |
-   | **C2 — Senior-engineer-tier specialist LoRA** | Operator-tier behavior in the weights | **YES — default post-3090** |
+   | **C2 — Senior-engineer-tier specialist LoRA** | Operator-tier behavior in the weights | **YES — default post-4090** |
    | C3 — Mixture-of-LoRAs across senior-engineer task surfaces | Multiple specialists routed at inference | Progressive expansion |
    | **C4 — Behavioral preference fine-tune (DPO / IPO over hack-vs-right pairs)** | The *naturally WANT to do things right* property baked in | **YES — highest-leverage** |
    | C5 — Recreated intelligence layer at I/O boundaries | Python hyperstructure: input boundary (routing + Caveman compression + spec loading + tool-use planning) + output boundary (schema gate + self-verification + methodology compliance + hallucination detection) | Composes with C2/C3/C4 |
 
-2. **Hardware fit on operator's incoming RTX 3090 (mid-May 2026)**:
+2. **Hardware fit on operator's incoming RTX 4090 (mid-May 2026)**:
 
    | Phase | Substrate | Realistic effort | Output |
    |---|---|---|---|
@@ -464,7 +464,7 @@ Read in order:
    | Phase 2 | First specialist LoRA on chosen base (Qwen3.6-27B at UD-IQ2 / RLM-Qwen3-8B / Qwen3-Coder) | 1 weekend | `v0.1-seed` deployable artifact |
    | Phase 3 | Mixture-of-LoRAs group expansion | Per-LoRA: 1 weekend | Senior-engineer-tier task-surface coverage |
    | Phase 4 | Recreated intelligence layer at I/O boundaries | Iterative | Python hyperstructure operational |
-   | Phase 5 | Behavioral preference fine-tune (DPO / IPO) | 12–48 hours on RTX 3090 OR 4–12 H100 hours rental (~$48–100/cycle) | The *naturally WANT* property empirically validated |
+   | Phase 5 | Behavioral preference fine-tune (DPO / IPO) | 12–48 hours on RTX 4090 OR 4–12 H100 hours rental (~$48–100/cycle) | The *naturally WANT* property empirically validated |
    | Phase 6 | Trust + compression composition (L2 default) | Wire L2 per Trust-Layer Epic M001 | Full 4-layer composition |
    | Phase 7 | Multi-version + ecosystem propagation | Continuous | Information-virus to sister projects |
 
@@ -476,7 +476,7 @@ Read in order:
 
 | Hardware | Default custom-model opt-in | What it delivers |
 |---|---|---|
-| **RTX 3090 (incoming)** | **C2 → C3 → C4 → C5 progressive** | Operator-tier behavior in the weights; Mixture-of-LoRAs group; behavioral preference fine-tune; recreated intelligence layer; all via consumer hardware |
+| **RTX 4090 (incoming)** | **C2 → C3 → C4 → C5 progressive** | Operator-tier behavior in the weights; Mixture-of-LoRAs group; behavioral preference fine-tune; recreated intelligence layer; all via consumer hardware |
 | **Cloud H100 (rental, optional)** | C4 larger-base option | When operator opts for larger preference-data RL training cycles (~$48–100 per cycle per RLM-Qwen3-8B precedent) |
 | **Any future hardware** | All opt-ins compose forward; operator's *core* is the durable artifact, not the hardware | Anti-vendor-lock-in extends to model-customization stance |
 

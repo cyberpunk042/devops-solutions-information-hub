@@ -172,14 +172,14 @@ Three approaches to **lossless speculative-decoding acceleration** of LLM infere
 
 **Headline speedup:** up to 6× lossless on Qwen3-8B / B200 with FlashAttention-4; 4.7× Math500; 5.2× HumanEval; ~5.1× across concurrency 1-32.
 
-**Ideal use:** SAIN-01 Logic Engine + Oracle Core code/math workloads on the Blackwell or 3090, especially when the operator's first-hand experience confirms the technique's gradient on the target workload.
+**Ideal use:** SAIN-01 Logic Engine + Oracle Core code/math workloads on the Blackwell or 4090, especially when the operator's first-hand experience confirms the technique's gradient on the target workload.
 
 ### How they map onto the SAIN-01 tier architecture
 
 | SAIN-01 tier | Hardware | Suitable workloads | Best speculative-decoding pick |
 |---|---|---|---|
 | **Conductor (Pulse)** | CPU CCD 0 | State routing, intent classification | **None** — CPU runs ternary (not speculative-decoding territory) |
-| **Logic Engine** | RTX 3090 (24GB) | Parsing, JSON, regex, code completion | **DFlash** (community writeup confirms ~2× on Qwen3.6-27B on 24GB) |
+| **Logic Engine** | RTX 4090 (24GB) | Parsing, JSON, regex, code completion | **DFlash** (community writeup confirms ~2× on Qwen3.6-27B on 24GB) |
 | **Oracle Core (code/math)** | Blackwell PRO 6000 (96GB) | Code generation, mathematical reasoning, structured output | **DFlash** (5× headline speedups apply) |
 | **Oracle Core (conversational)** | Blackwell PRO 6000 (96GB) | Free-form generation, dialogue, creative writing | **EAGLE-3** or none — all three degrade; pick maturity over speedup headroom |
 | **Audit / Logging** | host CPU | Tetragon stream parsing, audit-log append | n/a |

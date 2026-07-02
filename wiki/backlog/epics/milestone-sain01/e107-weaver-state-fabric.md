@@ -56,7 +56,7 @@ See Done When — verifiable atomic-state + sub-agent-routing checkpoints.
 - [ ] **Podman Rootless** configured: `apt-get install -y podman uidmap`; user namespace mapping verified
 - [ ] **Container storage on `tank/agents`**: Podman's graph driver mapped to `/mnt/vault/agents` via `containers.conf` or equivalent
 - [ ] **gRPC interface** running: Weaver exposes a local-only gRPC endpoint for sub-agent state queries + mutation requests; protocol buffers schema documented
-- [ ] **Sub-agent test**: launch a sandboxed Podman container (with `--device /dev/vfio/<3090_group>` to use the [[e103-vfio-isolation|VFIO 3090]]); container connects to Weaver gRPC; Weaver routes a state update; verified end-to-end
+- [ ] **Sub-agent test**: launch a sandboxed Podman container (with `--device /dev/vfio/<4090_group>` to use the [[e103-vfio-isolation|VFIO 4090]]); container connects to Weaver gRPC; Weaver routes a state update; verified end-to-end
 - [ ] **CCD locality preserved**: `taskset -p <weaver_pid>` shows mask `0xff000`; no thread migration off CCD 1 under load
 - [ ] **Auditor integration**: Weaver's Podman container launches respect Tetragon allowlist (the launched binaries match `sovereign-kernel-fence` policy); zero false-positive kills
 - [ ] **Snapshot strategy documented**: Weaver's state changes can be snapshot-rolled-back via `zfs snapshot tank/context@<timestamp>` cadence agreed with operator

@@ -44,11 +44,11 @@ One or more of:
 
 ## Why this matters
 
-The Goldilocks Scheduler is the **runtime routing layer** between requests and the hardware tiers (RTX PRO 6000 Blackwell oracle + RTX 3090 scout + Ryzen 9900X AVX-512 cortex). When the scheduler is not running:
+The Goldilocks Scheduler is the **runtime routing layer** between requests and the hardware tiers (RTX PRO 6000 Blackwell oracle + RTX 4090 scout + Ryzen 9900X AVX-512 cortex). When the scheduler is not running:
 
 - No 7-axis objective evaluation per request
 - No per-profile rule enforcement (fast vs careful vs production all degrade to first-route-available)
-- No backpressure surfaces — Blackwell VRAM / 3090 GPU / CPU PSI / RAM PSI / IO PSI / human-gate-queue thresholds are not measured or applied
+- No backpressure surfaces — Blackwell VRAM / 4090 GPU / CPU PSI / RAM PSI / IO PSI / human-gate-queue thresholds are not measured or applied
 - No decision audit log → operators lose the replay/counterfactual capability (MS048 R11393-R11398)
 
 Per the dump's Key Scheduling Law (verbatim, line 18256-18257):

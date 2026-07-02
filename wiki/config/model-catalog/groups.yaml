@@ -1,0 +1,38 @@
+# Group models — composites over models.yaml. Schema: see README.md.
+# kind: moe | merged | ensemble | replicated. `members` are models.yaml ids.
+# Seeded 2026-07-02 from the operator's handwritten catalog (Image 2).
+
+groups:
+  # MoE — mixture-of-experts (a single distributable model with expert routing).
+  - id: t-moe-8x7b
+    name: "T-MoE-8x7B (mixture-of-experts)"
+    kind: moe
+    members: [xinyuan-t-moe-8x7b]
+    notes: "8 experts x 7B, ternary. The deployable artifact is the member id."
+
+  # Replicated — N copies of the same base run together.
+  - id: mistral-ternary-3x-70b
+    name: "Mistral-Ternary 3x70B"
+    kind: replicated
+    factor: 3
+    members: []
+    notes: "RTX Pro agents tier — 3x a 70B ternary Mistral. Base not separately cataloged yet (distinct from mistral-large-ternary-80b)."
+
+  # Merged — mergekit-style base pool for mass ternary/1.58-bit merges.
+  - id: mergekit-massive-merge-pool
+    name: "Mergekit — mass AI merge pool"
+    kind: merged
+    members:
+      - qwen25-32b-trit-uniform
+      - prism-ml-ternary-bonsai-70b
+      - 1bitllm-bitnet-b158-large
+      - xinyuan-t-moe-8x7b
+      - falcon3-10b-158bit-prequantized
+      - falcon-e-3b
+      - zihan-wang-coe
+      - qwen25-coder-72b-158
+      - bash-tiny-coder-1b
+      - flex-prompt-tiny-1b
+      - security-phi-3-mini
+      - starcoder2-3b
+    notes: "Operator label: 'Mergekit: Manipulation AI massifs' — candidate bases for mass ternary/1.58-bit model merging."

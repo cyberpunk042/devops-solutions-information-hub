@@ -2,7 +2,7 @@
 title: "Post-Anthropic Stack 3-Layer Composability — Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)"
 aliases:
   - "Post-Anthropic 3-Layer Stack Epic"
-  - "Multica + AICP + 3090 Assembly"
+  - "Multica + AICP + 4090 Assembly"
   - "Three-Layer Anti-Vendor-Lock-In Stack"
 type: epic
 domain: backlog
@@ -41,10 +41,10 @@ sources:
     type: notes
     file: ~/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/project_ollama_cloud_consensus_2026_04.md
     description: "Ollama Cloud is in operator's active stack since 2026-04-23 — registered cloud-LLM tier in the AICP backend pattern (`ollama_cloud`)"
-  - id: rtx-3090-ordered
+  - id: rtx-4090-ordered
     type: notes
-    file: ~/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/project_rtx_3090_acquired_2026_04_27.md
-    description: "RTX 3090 (renewed) ordered 2026-04-27, ETA 2-3 weeks — hardware uplift unlocking local-AI tier with 24GB VRAM Ampere"
+    file: ~/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/project_rtx_4090_acquired_2026_04_27.md
+    description: "RTX 4090 (renewed) ordered 2026-04-27, ETA 2-3 weeks — hardware uplift unlocking local-AI tier with 24GB VRAM Ada"
   - id: rlm-qwen3-8b-live
     type: notes
     file: ~/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/project_rlm_qwen3_8b_hf_checkpoint_live.md
@@ -53,14 +53,14 @@ sources:
     type: external
     file: ~/devops-expert-local-ai/docs/SESSION-2026-04-24-HANDOFF.md
     description: "Authoritative AICP-side state — `local`, `k2_6_local`, `k2_6_openrouter`, `ollama_cloud` backends wired; $540→$100 routing finding measured"
-tags: [epic, p0, post-anthropic, 3-layer-stack, multica, orchestrator, harness, aicp, provider-routing, ollama-cloud, rtx-3090, rlm-qwen3-8b, qwen3-6-27b, anti-vendor-lock-in, mission-2026-04, milestone-class, in-progress]
+tags: [epic, p0, post-anthropic, 3-layer-stack, multica, orchestrator, harness, aicp, provider-routing, ollama-cloud, rtx-4090, rlm-qwen3-8b, qwen3-6-27b, anti-vendor-lock-in, mission-2026-04, milestone-class, in-progress]
 ---
 
 # Epic — Post-Anthropic Stack 3-Layer Composability (Multica + Harness + AICP)
 
 ## Summary
 
-The operator's post-Anthropic AI stack reached **3-layer composability** between 2026-04-23 and 2026-04-28. This epic captures the assembly: **Multica** as the open-source vendor-neutral orchestrator (above harness layer) · **Claude Code + OpenCode** as harness layer · **AICP** as provider routing layer · **Ollama Cloud + local Ollama (incoming) + OpenRouter + direct providers** as substitutable LLM tiers · **RTX 3090 (renewed, ordered 2026-04-27, ETA mid-May 2026)** as the hardware uplift that unlocks the local tier · **`mit-oasys/rlm-qwen3-8b-v0.1` (HF live since 2026-04-27)** as the long-context generation candidate · **Qwen3.6-27B at UD-IQ2** as the short-context dense tier. Together these compose into a stack where **no single vendor controls more than one of the three layers** (orchestrator × harness × provider) — empirical anti-vendor-lock-in at three structural layers, not just two. The wiki's [anti-vendor-lock-in lesson Evidence chain](../../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) gains a third substitution dimension. **This epic is in-progress as of 2026-04-28**: components are individually validated; integration is pending the 3090 hardware delivery + per-agent-per-harness provider configuration in Multica's UI. **Phase-1 deployment is $0-cash** (no cloud GPU rental needed); **Phase-2 fine-tune** ($300-500 one-time, conditional) is deferred until Phase-1 demonstrates a real workload ceiling. The parent [post-Anthropic-self-autonomous-stack milestone](../../milestones/post-anthropic-self-autonomous-stack.md) (originally framed at 2 layers — harness + provider) is structurally upgraded by this epic to 3 layers.
+The operator's post-Anthropic AI stack reached **3-layer composability** between 2026-04-23 and 2026-04-28. This epic captures the assembly: **Multica** as the open-source vendor-neutral orchestrator (above harness layer) · **Claude Code + OpenCode** as harness layer · **AICP** as provider routing layer · **Ollama Cloud + local Ollama (incoming) + OpenRouter + direct providers** as substitutable LLM tiers · **RTX 4090 (renewed, ordered 2026-04-27, ETA mid-May 2026)** as the hardware uplift that unlocks the local tier · **`mit-oasys/rlm-qwen3-8b-v0.1` (HF live since 2026-04-27)** as the long-context generation candidate · **Qwen3.6-27B at UD-IQ2** as the short-context dense tier. Together these compose into a stack where **no single vendor controls more than one of the three layers** (orchestrator × harness × provider) — empirical anti-vendor-lock-in at three structural layers, not just two. The wiki's [anti-vendor-lock-in lesson Evidence chain](../../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) gains a third substitution dimension. **This epic is in-progress as of 2026-04-28**: components are individually validated; integration is pending the 4090 hardware delivery + per-agent-per-harness provider configuration in Multica's UI. **Phase-1 deployment is $0-cash** (no cloud GPU rental needed); **Phase-2 fine-tune** ($300-500 one-time, conditional) is deferred until Phase-1 demonstrates a real workload ceiling. The parent [post-Anthropic-self-autonomous-stack milestone](../../milestones/post-anthropic-self-autonomous-stack.md) (originally framed at 2 layers — harness + provider) is structurally upgraded by this epic to 3 layers.
 
 ## Operator Directive (verbatim, sacrosanct)
 
@@ -70,7 +70,7 @@ The operator's post-Anthropic AI stack reached **3-layer composability** between
 
 > *"WHY DO YOU MINIZE ALL THIS >????? THIS IS A FUCKING MASSIVE MILESTONES AND EPIC I AM FUCKING TALKING TO YOU ABOUT"* (2026-04-28 — explicit milestone-class framing)
 
-> *"yes I bought one [RTX 3090 renewed], I dont have it yet... probably 2 to 3 weeks...."* (2026-04-28 — hardware delivery timing)
+> *"yes I bought one [RTX 4090 renewed], I dont have it yet... probably 2 to 3 weeks...."* (2026-04-28 — hardware delivery timing)
 
 > *"if it transform months into days"* (2026-04-28 — mission framing on cloud-vs-local tradeoffs)
 
@@ -79,7 +79,7 @@ The operator's post-Anthropic AI stack reached **3-layer composability** between
 - **3-layer composability empirically verified** — operator can issue a task in Multica, have it orchestrate a harness (Claude Code OR OpenCode), have that harness route via AICP to any provider tier (Ollama Cloud OR local Ollama OR OpenRouter), and observe the round-trip working.
 - **Per-agent provider configuration in Multica** — investigate and document HOW Multica's UI exposes per-agent env-var or config so different agents can target different LLM providers (this is currently UNVERIFIED — operator confirmed 2026-04-28 that Multica's UI doesn't show an Ollama Cloud dropdown, which makes sense because Multica orchestrates harnesses not providers; the question is HOW the harness gets its provider config when run under Multica).
 - **AICP backend integration verified under Multica orchestration** — when Multica runs Claude Code, does Claude Code's `ANTHROPIC_BASE_URL` (pointing at AICP) propagate? When Multica runs OpenCode, does OpenCode's provider config propagate?
-- **Local Ollama tier wired post-3090** — once RTX 3090 is delivered (mid-May 2026), local Ollama becomes the primary path for many workloads; AICP `local` backend points at local Ollama; Multica orchestrates harness pointing at AICP.
+- **Local Ollama tier wired post-4090** — once RTX 4090 is delivered (mid-May 2026), local Ollama becomes the primary path for many workloads; AICP `local` backend points at local Ollama; Multica orchestrates harness pointing at AICP.
 - **Anti-vendor-lock-in at 3 layers documented end-to-end** — the [anti-vendor-lock-in lesson](../../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) Evidence chain extended to include the orchestrator layer (already partially done via Multica synth and decision-matrix update; needs to be reflected in the lesson's Evidence section).
 - **Resilience proven** — when one layer fails (e.g., Ollama Cloud 503s per [GitHub #15453](https://github.com/ollama/ollama/issues/15453)), AICP failover chain routes to next backend; Multica orchestration is unaffected. The 3-layer architecture's resilience claim becomes empirical, not aspirational.
 
@@ -92,7 +92,7 @@ The operator's post-Anthropic AI stack reached **3-layer composability** between
 - [ ] OpenCode-as-harness path verified: Multica orchestrates OpenCode with operator's existing OpenCode provider config (per [OpenCode synth](../../../sources/tools-integration/src-opencode-harness-features.md)'s 75+ provider list including Ollama)
 - [ ] AICP integration verified under Multica: Claude Code's `ANTHROPIC_BASE_URL=<AICP endpoint>` works when Claude Code is run by Multica daemon
 - [ ] One-issue smoke test: assign an issue in Multica → Claude Code agent → AICP routes to Ollama Cloud → result observed in Multica's activity timeline
-- [ ] RTX 3090 received (~mid-May 2026); local Ollama installed; AICP `local` backend points at local Ollama; smoke test repeated with Multica → Claude Code → AICP → local Ollama
+- [ ] RTX 4090 received (~mid-May 2026); local Ollama installed; AICP `local` backend points at local Ollama; smoke test repeated with Multica → Claude Code → AICP → local Ollama
 - [ ] [Anti-vendor-lock-in lesson](../../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) Evidence section updated to include orchestrator layer (3-layer empirical claim)
 - [ ] Resilience smoke test: deliberately disable one provider (e.g., `ollama_cloud` AICP backend) → AICP fails over to next tier → Multica's task completes correctly via failover
 - [ ] `python3 -m tools.pipeline post` returns 0 validation errors across all epic-related artifacts
@@ -107,11 +107,11 @@ The operator's post-Anthropic AI stack reached **3-layer composability** between
 > | **Quality tier** | Skyscraper (full process — this is mission-critical infrastructure) |
 > | **Estimated modules** | 5 |
 > | **Estimated tasks** | 15-20 |
-> | **Critical-path target** | Mid-May 2026 (synchronized with RTX 3090 delivery) |
+> | **Critical-path target** | Mid-May 2026 (synchronized with RTX 4090 delivery) |
 > | **Full-completion target** | End of May 2026 |
 > | **Cash budget (Phase 1)** | **$0** — Multica is open-source self-hostable; harnesses already installed; AICP exists; Ollama Cloud already subscribed; RLM-Qwen3-8B HF download free |
 > | **Cash budget (Phase 2 conditional)** | $300-500 one-time IFF operator commits to RLM-Qwen3.6-27B fine-tune AFTER Phase-1 demonstrates real ceiling |
-> | **Hardware budget** | RTX 3090 already ordered (separate operator purchase, not part of this epic) |
+> | **Hardware budget** | RTX 4090 already ordered (separate operator purchase, not part of this epic) |
 
 ## Module Breakdown
 
@@ -120,12 +120,12 @@ The operator's post-Anthropic AI stack reached **3-layer composability** between
 | **M001 — Multica per-agent provider config investigation** | Documentation of HOW Multica's UI/API allows per-agent provider configuration. Gap: currently unknown whether Multica supports per-agent env, inherits from runtime daemon, or requires harness-side wrapper (e.g., `claude-code-router`). | Now | 3-4 |
 | **M002 — Harness-level provider wiring under Multica** | Claude Code AND OpenCode each verified to reach Ollama Cloud, AICP-routed providers, and direct providers when orchestrated by Multica. | Now | 4-5 |
 | **M003 — AICP-Multica integration smoke test** | Round-trip task: Multica → Claude Code → AICP → Ollama Cloud (or other backend) → result back to Multica. Documented as a reusable pattern. | Now | 2-3 |
-| **M004 — Local-Ollama tier post-3090** | After RTX 3090 delivery: local Ollama installed, AICP `local` backend points at it, Multica orchestrates harness → AICP → local Ollama path. Smoke test. | Mid-May 2026 | 4-5 |
+| **M004 — Local-Ollama tier post-4090** | After RTX 4090 delivery: local Ollama installed, AICP `local` backend points at it, Multica orchestrates harness → AICP → local Ollama path. Smoke test. | Mid-May 2026 | 4-5 |
 | **M005 — Anti-vendor-lock-in lesson Evidence-chain update** | Lesson's Evidence section gains 3-layer composability documentation. The wiki's mission claim is empirically traceable at 3 layers, not 2. | Phase-1 close | 2-3 |
 
 ## Dependencies
 
-- **Hardware**: RTX 3090 delivery (~mid-May 2026, ordered 2026-04-27). M004 cannot start until delivery.
+- **Hardware**: RTX 4090 delivery (~mid-May 2026, ordered 2026-04-27). M004 cannot start until delivery.
 - **External tool**: Multica installed and operational (already true — operator is on the UI as of 2026-04-28).
 - **External services**: Ollama Cloud Pro subscription active (already true — since 2026-04-23). Anthropic / OpenRouter / Moonshot direct as fallback (variable per workload).
 - **Existing AICP infrastructure**: AICP repo at `~/devops-expert-local-ai/` with `local` / `k2_6_local` / `k2_6_openrouter` / `ollama_cloud` backends already wired (per [AICP 2026-04-24 handoff](file:///home/jfortin/devops-expert-local-ai/docs/SESSION-2026-04-24-HANDOFF.md)).
@@ -165,7 +165,7 @@ Per [Saturation Lesson Hard Rule #11](../../../lessons/01_drafts/saturation-decl
 - BUILDS ON: [[src-inference-provider-landscape-2026|Inference Provider Landscape 2026]] (provider-layer survey)
 - BUILDS ON: [[ai-model-provider-harness-decision-matrix-2026|AI Model × Provider × Harness Decision Matrix 2026]] (3-axis matrix updated 2026-04-28 with orchestrator dimension)
 - BUILDS ON: [[kimi-k2-6-access-paths-openrouter-ollama-cloud-local|K2.6 Access Paths Comparison]] (provider-tier routing rules already established)
-- BUILDS ON: [[rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate|Tier-0 Candidate Comparison]] (Phase-1 routing recipe: RLM-Qwen3-8B for long context + Qwen3.6-27B for short context, both running on RTX 3090)
+- BUILDS ON: [[rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate|Tier-0 Candidate Comparison]] (Phase-1 routing recipe: RLM-Qwen3-8B for long context + Qwen3.6-27B for short context, both running on RTX 4090)
 - DEPENDS ON: [[[[E007-openrouter-deadline-de-risk|E007 — OpenRouter De-Risk]] (predecessor — proves OpenRouter path)]]
 - DEPENDS ON: [[[[E009-harness-neutrality-and-opencode-parity|E009 — Harness Neutrality]] (predecessor — proves OpenCode harness parity)]]
 - DEMONSTRATES: [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Anti-Vendor-Lock-In Lesson]] (extends Evidence chain to 3-layer composability)

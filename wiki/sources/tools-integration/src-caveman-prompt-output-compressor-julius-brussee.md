@@ -348,7 +348,7 @@ Code/commits/PRs: normal. Off: "stop caveman" / "normal mode".
 ## Open Questions
 
 > [!question] How does caveman compose with the trust-layer's cypher/decypher overlay?
-> Caveman compresses the prompt; AES-256-GCM cypher operates on the compressed bytes. The decypher kernels (Triton on GPU per the [trust-layer epic](../../backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04.md)) decrypt back to the compressed form, then the model consumes the compressed prompt. Question: does the model's tokenizer handle Wenyan-mode Classical Chinese efficiently? (Frontier models tokenize CJK; should be fine — but warrants empirical measurement on RTX 3090 in M001.)
+> Caveman compresses the prompt; AES-256-GCM cypher operates on the compressed bytes. The decypher kernels (Triton on GPU per the [trust-layer epic](../../backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04.md)) decrypt back to the compressed form, then the model consumes the compressed prompt. Question: does the model's tokenizer handle Wenyan-mode Classical Chinese efficiently? (Frontier models tokenize CJK; should be fine — but warrants empirical measurement on RTX 4090 in M001.)
 
 > [!question] Do `caveman` and `claude-mem` (anthropic memory plugin) compose, or conflict?
 > Both write/read state at the agent level. Cavemem (caveman ecosystem) is the operator-controlled memory layer; claude-mem is Anthropic's. The mode tracker emits per-turn reinforcement to keep caveman style after other plugins inject competing instructions mid-conversation — suggests caveman handles plugin coexistence by reinforcing its own behavior. Empirical test in M001 (trust-layer epic) would resolve.
@@ -357,7 +357,7 @@ Code/commits/PRs: normal. Off: "stop caveman" / "normal mode".
 > Per the README's measured numbers, average compression on similar files is 46%. The wiki's CLAUDE.md (119 lines) + AGENTS.md (178 lines) load every session — caveman-compress could meaningfully reduce per-session token cost. **Operator decision** — these are root-level docs, swap requires explicit approval per `feedback_never_auto_swap_root_docs.md`. Could be a candidate task in the trust-layer epic's M002 (Markdown Rule DSL) since the rule file format intersects.
 
 > [!question] How does Wenyan mode interact with non-Chinese-speaking model tokenizers?
-> Frontier models (Claude, GPT, Gemini) tokenize Classical Chinese — but a model fluent in Classical Chinese is required to *generate* Wenyan output. Most frontier models can read 文言文 but the generation quality varies. Empirical test on operator's preferred backends (Ollama Cloud K2.6, OpenRouter, RTX 3090 local) would resolve.
+> Frontier models (Claude, GPT, Gemini) tokenize Classical Chinese — but a model fluent in Classical Chinese is required to *generate* Wenyan output. Most frontier models can read 文言文 but the generation quality varies. Empirical test on operator's preferred backends (Ollama Cloud K2.6, OpenRouter, RTX 4090 local) would resolve.
 
 > [!question] Open SKILL.md spec status — is `npx skills` the canonical distribution for cross-agent skills?
 > Caveman ships through `npx skills` (vercel-labs/skills, 40+ agents). The wiki's [Skills Architecture Patterns](../../comparisons/skills-architecture-patterns.md) covers Claude Code / Obsidian / NotebookLM skill ecosystems but doesn't yet document `npx skills` as the cross-ecosystem distribution substrate. **Gap candidate** for a future synthesis page.

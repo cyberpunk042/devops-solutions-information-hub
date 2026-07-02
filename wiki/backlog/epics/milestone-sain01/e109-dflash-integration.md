@@ -29,14 +29,14 @@ sources:
   - id: cmp-dflash-vs-eagle3-vs-medusa
     type: wiki
     file: "wiki/comparisons/cmp-dflash-vs-eagle3-vs-medusa.md"
-tags: [epic, sain-01, dflash, speculative-decoding, block-diffusion, code-math-acceleration, vllm, qwen3, blackwell, rtx-3090]
+tags: [epic, sain-01, dflash, speculative-decoding, block-diffusion, code-math-acceleration, vllm, qwen3, blackwell, rtx-4090]
 ---
 
 # E109 — DFlash Integration
 
 ## Summary
 
-Deploy **DFlash block-diffusion speculative decoding** for code/math workloads on the Blackwell + RTX 3090 GPU tiers. DFlash (Z-Lab, arXiv:2602.06036) replaces autoregressive drafting with a block-diffusion draft model using bidirectional attention, generating K tokens per forward pass. Reported speedups: **up to 6× lossless** (2.5× over EAGLE-3); **4.7× on Math500, 5.2× on HumanEval** at concurrency 1 on Qwen3-8B/B200. The operator's first-hand framing — "3× faster on code tasks, doesn't work on creative" — matches the paper's reported math/code-vs-conversational entropy gradient. Deploy via vLLM v0.20.1+ (mandatory minimum) with pre-trained DFlash drafts from `z-lab/<Model>-DFlash` on Hugging Face. The technique is workload-conditioned: turn ON for code/math/structured-output paths in [[e108-load-balancing-profiles|Profile 2/3]]; turn OFF for free-form conversational generation (creative writing has high per-token entropy → draft acceptance degrades → speedup approaches 1×). Composes orthogonally with [[concept-1bit-ternary-weights|ternary inference on CPU]] (Pulse on CCD 0) — the two techniques stack on different tiers.
+Deploy **DFlash block-diffusion speculative decoding** for code/math workloads on the Blackwell + RTX 4090 GPU tiers. DFlash (Z-Lab, arXiv:2602.06036) replaces autoregressive drafting with a block-diffusion draft model using bidirectional attention, generating K tokens per forward pass. Reported speedups: **up to 6× lossless** (2.5× over EAGLE-3); **4.7× on Math500, 5.2× on HumanEval** at concurrency 1 on Qwen3-8B/B200. The operator's first-hand framing — "3× faster on code tasks, doesn't work on creative" — matches the paper's reported math/code-vs-conversational entropy gradient. Deploy via vLLM v0.20.1+ (mandatory minimum) with pre-trained DFlash drafts from `z-lab/<Model>-DFlash` on Hugging Face. The technique is workload-conditioned: turn ON for code/math/structured-output paths in [[e108-load-balancing-profiles|Profile 2/3]]; turn OFF for free-form conversational generation (creative writing has high per-token entropy → draft acceptance degrades → speedup approaches 1×). Composes orthogonally with [[concept-1bit-ternary-weights|ternary inference on CPU]] (Pulse on CCD 0) — the two techniques stack on different tiers.
 
 ## Operator Directive
 
@@ -57,7 +57,7 @@ See Done When — verifiable per-workload speedup checkpoints.
 - [ ] **Conversational baseline verification**: MT-Bench shows ≤2× speedup (expected to degrade per the entropy-gradient pattern); not a failure — the technique is workload-conditioned
 - [ ] **Acceptance rate logged**: vLLM exposes draft acceptance rate metrics; record for each benchmark
 - [ ] **Composes with `--kv-cache-dtype fp8`** (from [[e108-load-balancing-profiles|Profile 3]]): verify the combination works; if not, document the conflict
-- [ ] **Single-GPU fallback verified**: DFlash on RTX 3090 alone (no tensor-parallel) for ~2× on a 27B target — matches Luce DFlash community writeup
+- [ ] **Single-GPU fallback verified**: DFlash on RTX 4090 alone (no tensor-parallel) for ~2× on a 27B target — matches Luce DFlash community writeup
 - [ ] **Profile integration**: profile YAML (Profile 2 + Profile 3) documents "with DFlash" vs "without DFlash" variants; operator selects per workload type
 - [ ] **Operator runbook**: workload-selection guidance documented — turn ON for math/code/structured-output; turn OFF for free-form
 

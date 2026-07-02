@@ -74,8 +74,8 @@ Two distinct paths to operator's mission goal of a sovereignty-tier, post-Anthro
 > | **Headline empirical result** | Beats some 397B MoE on SWE-bench Pro: 53.5 vs 50.9 (agentic coding) | Approaches GPT-5 on 3/4 long-context tasks (CodeQA, BrowseComp+, OOLONG-Pairs) at 8B params |
 > | **Hardware: full precision** | ~54GB VRAM (BF16) | ~16GB VRAM (BF16) |
 > | **Hardware: quantized** | UD-IQ2 ~14-16GB (Unsloth, 2-bit, retains 26-tool-call capability) | LoRA + INT8 likely ≤8GB |
-> | **Operator's hardware (incoming RTX 3090, ETA 2-3 weeks from 2026-04-27)** | UD-IQ2 (~14-16GB): comfortable on 24GB with headroom; BF16 (~54GB): requires offload | BF16 (~16GB): comfortable fit on 24GB; full precision feasible |
-> | **Operator's hardware (current — RTX 2080 Ti 11GB until 3090 delivered)** | UD-IQ2 quantized: tight but possibly runnable; full FP fails | INT8 + LoRA: comfortable fit; BF16 also feasible |
+> | **Operator's hardware (incoming RTX 4090, ETA 2-3 weeks from 2026-04-27)** | UD-IQ2 (~14-16GB): comfortable on 24GB with headroom; BF16 (~54GB): requires offload | BF16 (~16GB): comfortable fit on 24GB; full precision feasible |
+> | **Operator's hardware (current — RTX 2080 Ti 11GB until 4090 delivered)** | UD-IQ2 quantized: tight but possibly runnable; full FP fails | INT8 + LoRA: comfortable fit; BF16 also feasible |
 > | **Inference paradigm** | Direct call: `llm.completion(prompt)` | REPL-recursive: `rlm.completion(prompt)` with sub-LM calls |
 > | **Latency profile** | Standard LM call (seconds) | Iterative loop (seconds to minutes per query, blocking) |
 > | **Tool-call capability** | Native (best-in-class for tier-0 size) | Inherited from Qwen3-8B + REPL programmatic tools |
@@ -146,7 +146,7 @@ The most ambitious move. Apply the [RLM paper's training recipe](../sources/tool
 
 ### The Phase-1 Path (REVISED 2026-04-28) — Both Routed at $0 Cash
 
-State changes since original 2026-04-27 authoring: (a) MIT released the [RLM-Qwen3-8B checkpoint](https://huggingface.co/mit-oasys/rlm-qwen3-8b-v0.1) — pull-and-run available; (b) operator ordered RTX 3090 (renewed) on 2026-04-27, ETA 2-3 weeks — 24GB VRAM comfortably runs BOTH candidates locally.
+State changes since original 2026-04-27 authoring: (a) MIT released the [RLM-Qwen3-8B checkpoint](https://huggingface.co/mit-oasys/rlm-qwen3-8b-v0.1) — pull-and-run available; (b) operator ordered RTX 4090 (renewed) on 2026-04-27, ETA 2-3 weeks — 24GB VRAM comfortably runs BOTH candidates locally.
 
 **Phase-1 default**: deploy BOTH at $0 cash, routed by context length:
 - **Long context (>32K tokens)** → `mit-oasys/rlm-qwen3-8b-v0.1` (RLM paradigm, robust at 10M+ tokens)
@@ -177,7 +177,7 @@ This is the [3-layer defense](../sources/tools-integration/src-prime-intellect-p
 > [!warning] What this comparison cannot answer
 >
 > 1. ~~**Has Hugging Face released the RLM-Qwen3-8B checkpoint?**~~ **RESOLVED 2026-04-27**: yes, live at [`mit-oasys/rlm-qwen3-8b-v0.1`](https://huggingface.co/mit-oasys/rlm-qwen3-8b-v0.1). Run with vLLM + the alexzhang13/rlm SDK out-of-box.
-> 2. **Does RTX 2080 Ti support flash-attn3 or BF16 efficiently?** Turing architecture predates Hopper; this question becomes moot once RTX 3090 is delivered (Ampere — full BF16 + flash-attn3 supported). Operator ordered RTX 3090 (renewed) on 2026-04-27, ETA 2-3 weeks. Until delivery, current 2080 Ti may need fallback paths (FP16, sm75 kernels).
+> 2. **Does RTX 2080 Ti support flash-attn3 or BF16 efficiently?** Turing architecture predates Hopper; this question becomes moot once RTX 4090 is delivered (Ada Lovelace — full BF16 + flash-attn3 supported). Operator ordered RTX 4090 (renewed) on 2026-04-27, ETA 2-3 weeks. Until delivery, current 2080 Ti may need fallback paths (FP16, sm75 kernels).
 > 3. **What are the exact OOLONG queries?** Now answered for OOLONG-Pairs (Appendix D.1 has all 20). Original OOLONG `trec_coarse` requires anonymous-author-share per the blogpost — may not be public yet.
 > 4. **What's the failure rate on operator's actual workload?** Both candidates are validated on academic benchmarks, not operator's specific tasks. Empirical validation on actual workload is the load-bearing missing data.
 
@@ -190,8 +190,8 @@ This is the [3-layer defense](../sources/tools-integration/src-prime-intellect-p
 
 > [!tip] Operator decision tree (REVISED 2026-04-28)
 >
-> 1. **Wait for RTX 3090 delivery** (2-3 weeks from 2026-04-27 — mid-May 2026). Until then, current 2080 Ti is the constraint and Phase-1 deployment is blocked on hardware.
-> 2. **Once 3090 is in hand, deploy both at $0**:
+> 1. **Wait for RTX 4090 delivery** (2-3 weeks from 2026-04-27 — mid-May 2026). Until then, current 2080 Ti is the constraint and Phase-1 deployment is blocked on hardware.
+> 2. **Once 4090 is in hand, deploy both at $0**:
 >    - Pull `mit-oasys/rlm-qwen3-8b-v0.1` from Hugging Face → AICP `local` backend (long-context regime)
 >    - Pull Qwen3.6-27B base + apply UD-IQ2 quantization → AICP secondary `local` backend (short-context regime)
 >    - Wire AICP context-length router: `>32K → RLM-Qwen3-8B; ≤32K → Qwen3.6-27B`

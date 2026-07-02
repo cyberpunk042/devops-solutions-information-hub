@@ -35,14 +35,14 @@ sources:
     type: external
     file: ~/devops-expert-local-ai/docs/SESSION-2026-04-24-HANDOFF.md
     description: "AICP authoritative state — `local`, `k2_6_local`, `k2_6_openrouter`, `ollama_cloud` backends wired"
-tags: [module, p0, smoke-test, runbook, multica, aicp, ollama-cloud, claude-code, opencode, 3-layer-validation, operator-actionable, pre-3090, mission-2026-04-28, m003]
+tags: [module, p0, smoke-test, runbook, multica, aicp, ollama-cloud, claude-code, opencode, 3-layer-validation, operator-actionable, pre-4090, mission-2026-04-28, m003]
 ---
 
 # M003 — Multica → Harness → AICP → Ollama Cloud Smoke-Test Runbook
 
 ## Summary
 
-Operator-actionable runbook for empirically validating the post-Anthropic 3-layer stack composability documented in [M001](post-anthropic-3-layer-m001-multica-per-agent-provider-config.md) and the parent [epic](../epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090.md). The runbook walks through pre-flight checks, the round-trip smoke test (Multica orchestrates Claude Code → Claude Code talks to AICP → AICP routes to Ollama Cloud → result observed in Multica's activity timeline), expected outputs at each step, and failure-mode diagnostics. **Executable on operator's existing hardware now (no 3090 dependency)** — this runbook predates the local-Ollama tier (M004, post-3090). Two test variants documented: **Variant A** (full 3-layer through AICP routing) and **Variant B** (2-layer direct, Multica → Claude Code → Ollama Cloud, bypassing AICP). Both should pass independently before claiming 3-layer composability empirically validated.
+Operator-actionable runbook for empirically validating the post-Anthropic 3-layer stack composability documented in [M001](post-anthropic-3-layer-m001-multica-per-agent-provider-config.md) and the parent [epic](../epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090.md). The runbook walks through pre-flight checks, the round-trip smoke test (Multica orchestrates Claude Code → Claude Code talks to AICP → AICP routes to Ollama Cloud → result observed in Multica's activity timeline), expected outputs at each step, and failure-mode diagnostics. **Executable on operator's existing hardware now (no 4090 dependency)** — this runbook predates the local-Ollama tier (M004, post-4090). Two test variants documented: **Variant A** (full 3-layer through AICP routing) and **Variant B** (2-layer direct, Multica → Claude Code → Ollama Cloud, bypassing AICP). Both should pass independently before claiming 3-layer composability empirically validated.
 
 ## Pre-flight Checks (verify before running smoke test)
 
@@ -184,7 +184,7 @@ If Variant B passes: **2-layer Multica + Ollama Cloud composability validated as
 - **External**: AICP repo at `~/devops-expert-local-ai/` with backends wired
 - **External**: Ollama Cloud subscription active
 - **External**: Operator-side time to run the smoke tests (estimated 30-60 minutes for both variants)
-- **Hardware**: NOT blocked by RTX 3090 — this runbook works on existing hardware (the local-Ollama tier waits for hardware in M004)
+- **Hardware**: NOT blocked by RTX 4090 — this runbook works on existing hardware (the local-Ollama tier waits for hardware in M004)
 
 ## Why This Matters
 

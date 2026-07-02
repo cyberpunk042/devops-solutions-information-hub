@@ -130,7 +130,7 @@ Cloudflare announced **AI Platform on 2026-04-16** (Ming Lu + Michelle Chen, Age
 >         return self.net(input)
 > ```
 >
-> **Mission application**: operator's senior-engineer-tier specialist LoRA (post-RTX-3090 + post-fine-tune) can be containerized via Cog and deployed to Workers AI as another routable tier alongside RTX 3090 local + cloud H100. **Anti-vendor-lock-in**: operator picks per workload class — Workers AI for cloud-edge-deployed; RTX 3090 for local; H100 cloud rental for high-VRAM.
+> **Mission application**: operator's senior-engineer-tier specialist LoRA (post-RTX-4090 + post-fine-tune) can be containerized via Cog and deployed to Workers AI as another routable tier alongside RTX 4090 local + cloud H100. **Anti-vendor-lock-in**: operator picks per workload class — Workers AI for cloud-edge-deployed; RTX 4090 for local; H100 cloud rental for high-VRAM.
 
 > [!info] **Replicate team joined Cloudflare's AI Platform team — consolidation signal in the unified-inference-layer space.**
 >
@@ -205,7 +205,7 @@ Per the [SubQuadratic + AnythingLLM Synthesis](src-subquadratic-subq-12m-context
 > AICP currently routes across operator-configured providers. Adding Cloudflare AI Gateway as one routable tier would extend operator's substitutability without abandoning AICP. Engineering cost: ~50-100 LOC AICP backend wrapper. Operator-decision per cost/benefit + anti-vendor-lock-in mission discipline.
 
 > [!question] Is BYOM via Replicate Cog the right deployment path for operator's M002 specialist LoRAs?
-> Operator-options: (a) RTX 3090 local hosting (privacy + sovereignty); (b) Workers AI via Cog (edge + automatic global distribution); (c) HuggingFace publish (community + ecosystem); (d) Multica-deployable (operator-built); (e) operator-internal only. Operator-decision per workload class. Cog adds a real option but introduces Cloudflare-platform dependency.
+> Operator-options: (a) RTX 4090 local hosting (privacy + sovereignty); (b) Workers AI via Cog (edge + automatic global distribution); (c) HuggingFace publish (community + ecosystem); (d) Multica-deployable (operator-built); (e) operator-internal only. Operator-decision per workload class. Cog adds a real option but introduces Cloudflare-platform dependency.
 
 > [!question] Does AI Gateway streaming-buffer + checkpointing address operator's M003 disconnect-resilience requirement?
 > Per the announcement: streaming buffer survives agent disconnects; combined with Agents SDK checkpointing, end users never notice. Operator's M003 (Recreated Intelligence Layer at I/O Boundaries) names disconnect-resilience implicitly. Engineering question: does AI Gateway streaming-buffer compose with operator's chosen orchestrator (Multica) and harness (Claude Code / OpenCode)?

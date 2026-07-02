@@ -48,7 +48,7 @@ See Done When — verifiable per-profile resource allocation + runtime switching
 - [ ] **Weaver routing switch implemented**: Weaver reads `/etc/sovereign/active-profile` and routes accordingly; profile switching documented (manual operator action + automated triggers for future)
 - [ ] **Profile 1 throughput test**: Pulse-only inference at 5+ tok/sec sustained for 1 hour; GPUs verified in low-power state; total power draw < 80W
 - [ ] **Profile 2 multi-agent test**: launch 3 sub-agents simultaneously per the corrected JSON; each routes to the right hardware tier; the Auditor's Tetragon policy does not flag any
-- [ ] **Profile 3 tensor-parallel test**: vLLM serves a model across both GPUs (Blackwell + 3090); throughput at fp8 KV cache exceeds single-GPU baseline by 1.5×+
+- [ ] **Profile 3 tensor-parallel test**: vLLM serves a model across both GPUs (Blackwell + 4090); throughput at fp8 KV cache exceeds single-GPU baseline by 1.5×+
 - [ ] **Profile switch test**: switch Profile 1 → Profile 2 → Profile 3 → Profile 1; each transition completes cleanly without orphaned processes
 - [ ] **Auditor compatibility**: each profile's spawned processes match the Tetragon allowlist; no false-positive kills during profile switching
 - [ ] **Documentation per profile**: operator runbook (when to pick which) ships at `docs/operator/sain01-profiles.md` (or equivalent in the wiki)
@@ -62,7 +62,7 @@ See Done When — verifiable per-profile resource allocation + runtime switching
 > | **Model** | feature-development |
 > | **Quality tier** | Skyscraper |
 > | **Estimated tasks** | 8-10 |
-> | **Dependencies** | E103 (VFIO 3090 for Profile 2/3), E104 (Tetragon allowlist must permit profile-spawned binaries), E106 (Pulse runtime for Profile 1), E107 (Weaver routes per profile), E109 (DFlash applies in Profile 2/3 for code/math) |
+> | **Dependencies** | E103 (VFIO 4090 for Profile 2/3), E104 (Tetragon allowlist must permit profile-spawned binaries), E106 (Pulse runtime for Profile 1), E107 (Weaver routes per profile), E109 (DFlash applies in Profile 2/3 for code/math) |
 > | **Feeds into** | E110 (model catalog selection happens within a profile context) |
 > | **Operator gate** | Operator picks which profile is the default; switching policy (manual vs auto-triggered) is operator decision |
 

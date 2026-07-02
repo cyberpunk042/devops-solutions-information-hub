@@ -27,13 +27,13 @@ acceptance_criteria:
   - "Friction-audit passes at boot — x8/x8 GPU lanes verified, M.2_2 empty, IOMMU groups separated"
   - "Custom Zen-5-tuned kernel 6.12+ deployed via bindeb-pkg, MOK-signed for Secure Boot"
   - "ZFS pool with three datasets (tank/models, tank/context with sync=always, tank/agents) operational"
-  - "RTX 3090 bound to vfio-pci at boot; Blackwell host-resident via nvidia driver"
+  - "RTX 4090 bound to vfio-pci at boot; Blackwell host-resident via nvidia driver"
   - "Tetragon eBPF TracingPolicy loaded; guardian-core daemon listening on Tetragon socket"
   - "Network split active — Intel 2.5GbE on VLAN 100 (mgmt), Marvell 10GbE on VLAN 200 (data, MTU 9000)"
   - "Pulse module runs bitnet.cpp ternary inference pinned to CCD 0 at 5+ tok/sec"
   - "Weaver atomic-state-write pattern verified — race-free inter-agent state handoff on tank/context"
   - "Three load-balancing profiles (Ultra-Sovereign / Asymmetric-Burst / Deep-Context-Synthesis) deployable via runtime selection"
-  - "DFlash block-diffusion speculative decoding integrated for code/math workloads on Blackwell + RTX 3090"
+  - "DFlash block-diffusion speculative decoding integrated for code/math workloads on Blackwell + RTX 4090"
   - "Model catalog deployed — at least one of {Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16, Ling-2.6-flash} resident on Blackwell"
   - "All 11 epics meet their Done When criteria"
   - "Operator confirms node reaches sovereign-deployment-ready state"
@@ -93,16 +93,16 @@ Transition from operator's planning artifacts to a fully deployable **Sovereign 
 >
 > | Epic | Focus | What It Delivers | Dependencies |
 > |------|-------|------------------|--------------|
-> | **E100: Hardware Foundation** | Iron procurement + physical assembly + PCIe topology verification | 9900X / ProArt X870E / Blackwell 96GB / 3090 24GB / 256GB DDR5 / 2× PCIe 5 NVMe / Marvell 10GbE + Intel 2.5GbE assembled and `friction-audit`-clean | None — entry point |
+> | **E100: Hardware Foundation** | Iron procurement + physical assembly + PCIe topology verification | 9900X / ProArt X870E / Blackwell 96GB / 4090 24GB / 256GB DDR5 / 2× PCIe 5 NVMe / Marvell 10GbE + Intel 2.5GbE assembled and `friction-audit`-clean | None — entry point |
 > | **E101: Sovereign OS Build** | Custom Zen-5-tuned kernel 6.12+ + Debian 13 live-build + MOK signing for Secure Boot | Bootable Sovereign OS `.iso` with `-march=znver5` kernel, identity-injected motd + os-release, ZFS-DKMS + NVIDIA 560+ drivers | E100 |
 > | **E102: ZFS Storage Layout** | Three-dataset stratification on RAID 0 NVMe + ARC tuning | `tank/models` (1M lz4) + `tank/context` (16k zstd-9 copies=2 sync=always) + `tank/agents` (128k zstd-3); ARC clamped to 128GB | E101 |
-> | **E103: VFIO Isolation** | RTX 3090 → `vfio-pci` at boot; Blackwell stays host-resident; IOMMU groups verified clean | GRUB `vfio-pci.ids=10de:2204,10de:1ad8` + AMD IOMMU pass-through; host's `nvidia-smi` shows 1 GPU only | E101 |
+> | **E103: VFIO Isolation** | RTX 4090 → `vfio-pci` at boot; Blackwell stays host-resident; IOMMU groups verified clean | GRUB `vfio-pci.ids=10de:2684,10de:22ba` + AMD IOMMU pass-through; host's `nvidia-smi` shows 1 GPU only | E101 |
 > | **E104: Tetragon + Guardian Perimeter** | eBPF TracingPolicy + `guardian-core` Python daemon + ZFS audit log | Kernel-space SIGKILL on unauthorized `sys_execve`; userspace post-kill cleanup + atomic audit append | E102 (audit log on tank/context), E103 (containers in VFIO sandbox) |
 > | **E105: Network Segregation** | Dual-NIC physical split + VLAN 100/200 routing + jumbo frames on 10GbE | Intel 2.5GbE → mgmt; Marvell 10GbE → data (MTU 9000, no default GW); OPNsense-compatible | E101 |
 > | **E106: Pulse Vector Runtime** | bitnet.cpp ternary inference + AOT Wasm compilation pinned to CCD 0 | Pulse module runs `microsoft/bitnet-b1.58-2B-4T` (or 3B) on cores 0-5, achieves ≥5 tok/sec on operator workload | E101, E102 (model weights on tank/models) |
 > | **E107: Weaver State Fabric** | Atomic-state-write pattern + four context files + gRPC sub-agent routing | Race-free state transitions on `IDENTITY.md` / `SOUL.md` / `AGENTS.md` / `CLAUDE.md`; Podman sub-agents reach Weaver via gRPC | E102 (sync=always context), E104 (Auditor watches Weaver writes) |
 > | **E108: Load-Balancing Profiles** | Three runtime profiles (Ultra-Sovereign Efficiency / Asymmetric-Burst / Deep-Context-Synthesis) | Profile YAML + orchestration switches; operator picks per workload | E106, E107, E103 |
-> | **E109: DFlash Integration** | Block-diffusion speculative decoding deployed for code/math workloads on Blackwell + 3090 | vLLM v0.20.1+ with DFlash drafts for resident model; verified 3×+ speedup on code/math benchmarks | E103 (Blackwell + 3090 ready), E108 (profile selection) |
+> | **E109: DFlash Integration** | Block-diffusion speculative decoding deployed for code/math workloads on Blackwell + 4090 | vLLM v0.20.1+ with DFlash drafts for resident model; verified 3×+ speedup on code/math benchmarks | E103 (Blackwell + 4090 ready), E108 (profile selection) |
 > | **E110: Model Catalog** | Resident-deploy at least one of {Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16, Ling-2.6-flash} on Blackwell | Model weights on `tank/models`; vLLM serves the model; quantization + runtime profile match the model's fit | E102, E108 (profile picks the model) |
 
 ## Epic Dependency Graph
@@ -143,10 +143,10 @@ E101 (Sovereign OS) ──┬──→ E102 (ZFS)                            │
 
 ## Acceptance Criteria
 
-- [ ] **Hardware**: `friction-audit` script returns 0 — x8/x8 GPU lanes verified, M.2_2 confirmed empty, IOMMU groups cleanly separated (Blackwell + 3090 in distinct groups)
+- [ ] **Hardware**: `friction-audit` script returns 0 — x8/x8 GPU lanes verified, M.2_2 confirmed empty, IOMMU groups cleanly separated (Blackwell + 4090 in distinct groups)
 - [ ] **OS Build**: Sovereign OS `.iso` boots; identity in `/etc/os-release` matches `ID=sovereign`; motd contains the operator's stated text; kernel compiled with `-march=znver5` (`uname -r` includes `znver5` suffix); ZFS-DKMS + NVIDIA modules load cleanly under MOK-signed kernel
 - [ ] **Storage**: `zpool status tank` shows healthy; three datasets present with correct `recordsize` + `compression` + `sync` + `copies` properties; `arcstat -s c` shows ARC clamped to 128GB
-- [ ] **Isolation**: `lspci -k` shows RTX 3090 + audio bound to `vfio-pci`; `nvidia-smi` reports only the Blackwell; container with `--device /dev/vfio/<group>` successfully attaches to the 3090
+- [ ] **Isolation**: `lspci -k` shows RTX 4090 + audio bound to `vfio-pci`; `nvidia-smi` reports only the Blackwell; container with `--device /dev/vfio/<group>` successfully attaches to the 4090
 - [ ] **Perimeter**: Tetragon daemon active; `TracingPolicy` loaded; test attempt of unauthorized `sys_execve` (e.g., `/bin/sh` inside a container) produces immediate `SIGKILL` + log entry in `tank/context/security_audit.log`
 - [ ] **Network**: `ip link show enp5s0` reports MTU 9000; `ip route` shows no default gateway on the Marvell interface; management traffic isolated to Intel 2.5GbE
 - [ ] **Pulse Runtime**: `taskset -c 0-5 bitnet-cli ...` runs successfully on a real model; throughput measured at ≥5 tokens/sec on operator workload representative
@@ -159,7 +159,7 @@ E101 (Sovereign OS) ──┬──→ E102 (ZFS)                            │
 
 ## Dependencies
 
-- **Hardware procurement** — Ryzen 9 9900X + ASUS ProArt X870E-Creator + NVIDIA RTX PRO 6000 Blackwell + RTX 3090 + 256GB DDR5 + 2× PCIe 5.0 NVMe + Marvell AQC113C + Intel I226-V. Procurement gated on operator action; lead time depends on Blackwell availability + budget.
+- **Hardware procurement** — Ryzen 9 9900X + ASUS ProArt X870E-Creator + NVIDIA RTX PRO 6000 Blackwell + RTX 4090 + 256GB DDR5 + 2× PCIe 5.0 NVMe + Marvell AQC113C + Intel I226-V. Procurement gated on operator action; lead time depends on Blackwell availability + budget.
 - **OpenZFS 2.2+ for proper `O_DIRECT` semantics** — older versions silently fall back to buffered; the Weaver's atomic-state-writer pattern depends on this. Pin OpenZFS ≥2.2.
 - **DFlash backend** — vLLM v0.20.1+ required; older deployments need upgrade before E109 can ship.
 - **DFlash drafts** — only ~20 target models have pre-trained drafts as of Q2 2026; the chosen Oracle Core model must be on the list OR the operator accepts EAGLE-3/MEDUSA fallback for E109.

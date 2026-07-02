@@ -166,7 +166,7 @@ Per [src-opencode-harness-features](../../sources/tools-integration/src-opencode
 - **Wiki**: [OpenCode synthesis](../../sources/tools-integration/src-opencode-harness-features.md) for OpenCode-specific config mechanism
 - **External**: research-wiki MCP server at `tools/mcp_server.py` (already running in operator's environment per `.mcp.json`)
 - **External**: claude-code-router (operator-optional install if Recipe 4 is needed)
-- **Hardware**: NOT blocked by RTX 3090 — testable on existing hardware
+- **Hardware**: NOT blocked by RTX 4090 — testable on existing hardware
 
 ## Open Questions
 

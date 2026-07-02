@@ -2,7 +2,7 @@
 title: "Learning Path — Post-Anthropic 3-Layer Stack Assembly (Multica + Harness + AICP, Session Arc 2026-04-28)"
 aliases:
   - "3-Layer Stack Learning Path"
-  - "Multica + AICP + 3090 Reading Order"
+  - "Multica + AICP + 4090 Reading Order"
   - "Post-Anthropic Stack 2026-04-28 Path"
 type: learning-path
 domain: cross-domain
@@ -33,7 +33,7 @@ tags: [learning-path, spine, post-anthropic, 3-layer-stack, multica, harness, ai
 
 ## Summary
 
-Curated reading order for the **~12 wiki artifacts** produced during the 2026-04-28 session arc that assembled the post-Anthropic 3-layer AI stack: Multica (orchestrator) × harness (Claude Code / OpenCode / others) × AICP (provider routing) × Ollama Cloud / OpenRouter / local providers × incoming RTX 3090 hardware × MIT RLM-Qwen3-8B HF checkpoint. Designed for a reader who wants to internalize the assembly efficiently — whether picking up cold tomorrow, deciding whether to adopt the same architecture, executing the smoke-test runbook, or auditing the wiki's coverage of the orchestrator-layer documentation gap that 2026-04-28 closed. Total reading time for the full path: **~2-3 hours**; the 30-minute fast-path (Goal A) covers the architectural shape without the implementation detail.
+Curated reading order for the **~12 wiki artifacts** produced during the 2026-04-28 session arc that assembled the post-Anthropic 3-layer AI stack: Multica (orchestrator) × harness (Claude Code / OpenCode / others) × AICP (provider routing) × Ollama Cloud / OpenRouter / local providers × incoming RTX 4090 hardware × MIT RLM-Qwen3-8B HF checkpoint. Designed for a reader who wants to internalize the assembly efficiently — whether picking up cold tomorrow, deciding whether to adopt the same architecture, executing the smoke-test runbook, or auditing the wiki's coverage of the orchestrator-layer documentation gap that 2026-04-28 closed. Total reading time for the full path: **~2-3 hours**; the 30-minute fast-path (Goal A) covers the architectural shape without the implementation detail.
 
 ## Prerequisites
 
@@ -113,7 +113,7 @@ For thorough internalization of the entire session arc.
 > | 9 | [M002 — Harness-Level Integration](../../backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config.md) | module | Per-harness specifics + MCP integration |
 > | 10 | [M003 — Smoke-Test Runbook](../../backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook.md) | module | Operator-actionable validation |
 > | 11 | [Decision: Adopt Multica](../../decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04.md) | decision | Architectural choice formalized |
-> | 12 | (Memory) `project_multica_self_hosted_2026_04_28.md` + `project_rtx_3090_acquired_2026_04_27.md` + `project_rlm_qwen3_8b_hf_checkpoint_live.md` + `project_ollama_cloud_consensus_2026_04.md` | project memory | Operator-specific facts (paths, hardware ETA, registered tools) |
+> | 12 | (Memory) `project_multica_self_hosted_2026_04_28.md` + `project_rtx_4090_acquired_2026_04_27.md` + `project_rlm_qwen3_8b_hf_checkpoint_live.md` + `project_ollama_cloud_consensus_2026_04.md` | project memory | Operator-specific facts (paths, hardware ETA, registered tools) |
 
 ### Goal E — Audit the Mission Claim at 3 Layers (45 minutes)
 

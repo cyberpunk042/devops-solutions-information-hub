@@ -111,8 +111,8 @@ Per [`raw/notes/2026-05-04-anythingllm-subquadratic-multi-source-ingestion-and-i
 
 ## Open Questions
 
-> [!question] Operator's RTX 3090 budget for training a Qwen-Scope-equivalent SAE on the senior-engineer-tier specialist LoRA?
-> Qwen-Scope SAEs trained on backbones up to 35B-A3B. Per-layer SAE training on RTX 3090 for a 27B-base specialist LoRA likely 12–48 hours (residual streams are smaller than full forward passes). Empirical sizing TBD by operator.
+> [!question] Operator's RTX 4090 budget for training a Qwen-Scope-equivalent SAE on the senior-engineer-tier specialist LoRA?
+> Qwen-Scope SAEs trained on backbones up to 35B-A3B. Per-layer SAE training on RTX 4090 for a 27B-base specialist LoRA likely 12–48 hours (residual streams are smaller than full forward passes). Empirical sizing TBD by operator.
 
 > [!question] Can the SAE feature dictionary itself be the "constitution" the operator's preference fine-tune trains against?
 > SASFT operationalizes this: monolinguality-score → identify features → suppress/promote via aux loss. The constitution becomes a list of (feature_id, target_activation, weight) tuples, machine-readable and version-controlled.

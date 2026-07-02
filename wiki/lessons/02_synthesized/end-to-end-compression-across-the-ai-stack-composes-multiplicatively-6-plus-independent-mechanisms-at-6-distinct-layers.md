@@ -47,7 +47,7 @@ sources:
   - id: unsloth-synth
     type: wiki
     file: wiki/sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md
-    description: "Layer 1 — Unsloth UD-IQ2 / Q2_K weight quantization — ~87.5% reduction vs FP16 weights; production-deployed on consumer hardware (RTX 3090 24 GB VRAM)"
+    description: "Layer 1 — Unsloth UD-IQ2 / Q2_K weight quantization — ~87.5% reduction vs FP16 weights; production-deployed on consumer hardware (RTX 4090 24 GB VRAM)"
   - id: trust-layer-concept
     type: wiki
     file: wiki/domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md
@@ -130,7 +130,7 @@ By mid-2026, **at least six independent practitioners** — spanning open-source
 
 > [!success]- **Evidence 6 — Unsloth UD-IQ2 / Q2_K weight quantization: ~87.5% reduction vs FP16 (production-deployed on consumer hardware)**
 >
-> Per [Synthesis — Unsloth](../../sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md): Unsloth's UD-IQ2 and Q2_K quantization schemes deliver **~87.5% size reduction vs FP16 weights** with minimal quality regression for capable base models (Qwen3.6-27B, RLM-Qwen3-8B). Production-deployed on consumer hardware including the operator's incoming RTX 3090 (24 GB VRAM). Layer-validated; vendor-published with extensive benchmark validation; the realistic substrate for the operator's [Custom-Tailored Senior-Engineer-Tier Model Group](../../domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md) M002 specialist LoRA.
+> Per [Synthesis — Unsloth](../../sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md): Unsloth's UD-IQ2 and Q2_K quantization schemes deliver **~87.5% size reduction vs FP16 weights** with minimal quality regression for capable base models (Qwen3.6-27B, RLM-Qwen3-8B). Production-deployed on consumer hardware including the operator's incoming RTX 4090 (24 GB VRAM). Layer-validated; vendor-published with extensive benchmark validation; the realistic substrate for the operator's [Custom-Tailored Senior-Engineer-Tier Model Group](../../domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md) M002 specialist LoRA.
 
 > [!success]- **Evidence 7 — KV-cache compression: Asymmetric quantization + sparsity at 50–87% at the inference-cache layer**
 >

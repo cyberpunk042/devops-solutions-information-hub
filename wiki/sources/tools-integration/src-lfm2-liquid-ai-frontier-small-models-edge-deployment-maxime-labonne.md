@@ -51,7 +51,7 @@ Maxime Labonne (Head of Pre-Training at Liquid AI) presents the full lessons fro
 
 > [!success] **Small models are not scaled-down big models — different architecture, different training, different evaluation.**
 >
-> Labonne's central thesis. Concrete evidence: **Gemma 3 270M is 63% embedding-layer parameters** (because Gemma uses distillation from a teacher with huge vocab); **Gemma 2.5 0.8B is 29% embedding**. Effective parameters for reasoning are dramatically smaller than nominal. **LFM 2 350M is only ~10% embedding** → 90% effective parameters → "more reasoning and more performance from the same memory footprint." The architectural choice (gated short-conv + GQA hybrid) was selected via **on-device profiling** on actual target hardware (AMD Ryzen Max Plus 395 + Samsung Galaxy S25 Ultra), not theoretical compute analysis. **Direct application to operator's mission**: a small-base specialist LoRA in the Mixture-of-LoRAs group should follow this pattern — pick the base by on-device profiling on RTX 3090 (since that's the production target), not by published-benchmark intuition.
+> Labonne's central thesis. Concrete evidence: **Gemma 3 270M is 63% embedding-layer parameters** (because Gemma uses distillation from a teacher with huge vocab); **Gemma 2.5 0.8B is 29% embedding**. Effective parameters for reasoning are dramatically smaller than nominal. **LFM 2 350M is only ~10% embedding** → 90% effective parameters → "more reasoning and more performance from the same memory footprint." The architectural choice (gated short-conv + GQA hybrid) was selected via **on-device profiling** on actual target hardware (AMD Ryzen Max Plus 395 + Samsung Galaxy S25 Ultra), not theoretical compute analysis. **Direct application to operator's mission**: a small-base specialist LoRA in the Mixture-of-LoRAs group should follow this pattern — pick the base by on-device profiling on RTX 4090 (since that's the production target), not by published-benchmark intuition.
 
 > [!success] **28 trillion pre-training tokens for a 350M model — post-Chinchilla scaling is empirical reality.**
 >
@@ -127,7 +127,7 @@ Then RL stage:
 
 | Mission element | LFM 2 lesson |
 |---|---|
-| Senior-engineer-tier specialist LoRAs | Pick base via on-device RTX 3090 profiling, not benchmark intuition |
+| Senior-engineer-tier specialist LoRAs | Pick base via on-device RTX 4090 profiling, not benchmark intuition |
 | Mixture-of-LoRAs across various sizes | Small specialists (LFM 2.5 350M / 1.2B) for fast routing/triage; medium for reasoning; LFM 2 24B for heavy lift |
 | Behavioral preference fine-tune (M004) | Doom-loop solution stack (DPO + RL with verifiable rewards + repetition penalty) is the empirical paradigm |
 | Recreated intelligence layer at I/O boundaries (M003) | Agentic tool-use compensates for memory-bound limits — small + tools > large + chat |

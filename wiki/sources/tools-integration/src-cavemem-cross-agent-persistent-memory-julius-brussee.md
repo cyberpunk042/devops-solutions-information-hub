@@ -235,7 +235,7 @@ Cavemem instantiates **multiple wiki principles + concepts simultaneously**:
 - RELATES TO: [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]] (cavemem composes both patterns: CLI for setup, MCP for agent-runtime — each serves a different consumer with the right interface)
 - RELATES TO: [[agentic-search-vs-vector-search|Agentic Search vs Vector Search Comparison]] (cavemem's hybrid BM25 + vector + tunable blend resolves the false binary in concrete production form)
 - COMPARES TO: [[src-context-mode|Synthesis — Context Mode (MCP Sandbox for Context Saving)]] (adjacent — both solve cross-session continuity at the MCP layer with different design choices)
-- FEEDS INTO: [[2026-consumer-hardware-ai-stack|2026 Consumer Hardware AI Stack]] (cavemem is a candidate addition to the consumer-stack memory dimension; runs locally on operator's RTX 3090 hardware with no incremental compute cost)
+- FEEDS INTO: [[2026-consumer-hardware-ai-stack|2026 Consumer Hardware AI Stack]] (cavemem is a candidate addition to the consumer-stack memory dimension; runs locally on operator's RTX 4090 hardware with no incremental compute cost)
 
 ## Backlinks
 

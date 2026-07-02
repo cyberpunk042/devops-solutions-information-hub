@@ -1,0 +1,633 @@
+# Model registry — one entry per individual model.
+# Schema: see README.md. Seeded 2026-07-02 from the operator's handwritten
+# catalog (raw/notes/2026-07-02-operator-model-routing-catalog-...-verbatim.md).
+# `confidence: low` marks tentative / uncertain-handwriting entries — kept, not
+# dropped. Add a model = append one entry. Ids are the join keys for groups/profiles.
+
+models:
+  # ---- coding / default (Image 1) ----
+  - id: qwen-coder-ternary
+    name: "Qwen-Coder Ternary"
+    family: qwen
+    params: "1.5B/14B"
+    quantization: ternary
+    roles: [coding, inline-completion, chat, refactoring]
+    tiers: [rtx-4090]
+    source: null
+    base_model: "Qwen/Qwen2.5-Coder-14B-Instruct"
+    confidence: medium
+    notes: "bases verified real on HF 2026-07-02: Qwen2.5-Coder-1.5B-Instruct (inline) + Qwen2.5-Coder-14B-Instruct (chat/refactor); ternary quant is a target"
+  - id: rlm-code-reasoner-8b
+    name: "RLM-Code-Reasoner-8B"
+    family: other
+    params: "8B"
+    quantization: unknown
+    roles: [coding, reasoning]
+    tiers: [rtx-4090]
+    source: null
+    status: aspirational
+    confidence: medium
+    notes: ""
+  - id: thinking-machines-interaction-1b
+    name: "Thinking-Machines-Interaction-1B"
+    family: other
+    params: "1B"
+    quantization: unknown
+    roles: [interaction]
+    tiers: [rtx-4090]
+    source: null
+    status: aspirational
+    confidence: medium
+    notes: ""
+
+  # ---- CPU general (Image 1) ----
+  - id: ternlm-3-8b-instruct
+    name: "TernLM-3-8B-Instruct"
+    family: other
+    params: "8B"
+    quantization: bitnet-1.58
+    roles: [chat, general]
+    tiers: [cpu]
+    source: null
+    status: aspirational
+    confidence: medium
+    notes: "1.58-bit"
+  - id: bge-m3
+    name: "BGE-M3"
+    family: other
+    params: null
+    quantization: native
+    roles: [embedding]
+    tiers: [cpu]
+    source: "BAAI/bge-m3"
+    confidence: high
+    context_window: 8192
+    notes: "embedding model (8192 ctx, published)"
+  - id: phi-3-mini-ternary
+    name: "Phi-3-Mini-Ternary"
+    family: phi
+    params: "3.8B"
+    quantization: ternary
+    roles: [general]
+    tiers: [cpu]
+    source: null
+    base_model: "microsoft/Phi-3-mini-4k-instruct"
+    confidence: medium
+    notes: "base verified real on HF 2026-07-02 (3821M); ternary quant is a target"
+
+  # ---- RTX Pro coding (Image 1) ----
+  - id: bitnet-70b
+    name: "BitNet-70B"
+    family: bitnet
+    params: "70B"
+    quantization: bitnet-1.58
+    roles: [coding, chat, instruct]
+    tiers: [rtx-pro]
+    source: null
+    confidence: low
+    status: aspirational
+    notes: "Instruct; a 120B variant is also noted. No public 70B/120B BitNet found on HF (2026-07-02) — the canonical released BitNet is microsoft-bitnet-b158-2b (2B). Treated as a target, not a shippable model."
+  - id: microsoft-bitnet-b158-2b
+    name: "microsoft/bitnet-b1.58-2B-4T"
+    family: bitnet
+    params: "2B"
+    quantization: bitnet-1.58
+    roles: [chat, general]
+    tiers: [cpu, rtx-4090]
+    source: "microsoft/bitnet-b1.58-2B-4T"
+    confidence: high
+    status: real
+    notes: "the canonical released BitNet (verified on HF 2026-07-02, 850M params, arxiv 2504.12285). The real, shippable substitute for the aspirational bitnet-70b."
+  - id: llama3-8b-ternary
+    name: "Llama3-8B-Ternary"
+    family: llama
+    params: "8B"
+    quantization: ternary
+    roles: [general, coding]
+    tiers: [rtx-pro]
+    source: null
+    base_model: "meta-llama/Llama-3.1-8B"
+    confidence: medium
+    notes: "base verified real on HF 2026-07-02 (8030M, gated); ternary quant is a target"
+  - id: mistral-2b-ternary
+    name: "Mistral-2B-Ternary"
+    family: mistral
+    params: "2B"
+    quantization: ternary
+    roles: [general]
+    tiers: [rtx-pro]
+    source: null
+    status: aspirational
+    confidence: low
+    notes: "size digit uncertain in source"
+  - id: prism-ml-ternary-bonsai-70b
+    name: "Prism-ML-Ternary-Bonsai-70B"
+    family: qwen
+    params: "70B"
+    quantization: ternary
+    roles: [general, coding]
+    tiers: [rtx-pro]
+    source: null
+    base_model: "prism-ml/Ternary-Bonsai-8B-unpacked"
+    confidence: medium
+    status: aspirational
+    notes: "prism-ml/Ternary-Bonsai is a REAL line (verified on HF 2026-07-02: 1.7B/4B/8B unpacked + gguf + mlx-2bit, Qwen3-based, ternary/1.58-bit) — but the LARGEST is 8B, not 70B. The 70B size is aspirational; base_model points at the real 8B."
+  - id: deepseek-v3-ternary
+    name: "Deepseek-V3-Ternary (PT²-LLM)"
+    family: deepseek
+    params: "685B-MoE"
+    quantization: ternary
+    roles: [general, reasoning]
+    tiers: [rtx-pro]
+    source: null
+    base_model: "deepseek-ai/DeepSeek-V3"
+    confidence: medium
+    notes: "PT²-LLM; base verified real on HF 2026-07-02 (685B MoE); ternary quant is a target"
+
+  # ---- Orchestrator CPU (Image 1) ----
+  - id: gemma-4-litert-2b
+    name: "Gemma-4-LiteRt-2B"
+    family: gemma
+    params: "2B"
+    quantization: native
+    roles: [orchestration]
+    tiers: [cpu]
+    source: null
+    base_model: "google/gemma-3-4b-it"
+    confidence: low
+    notes: "'Gemma 4' does not exist (latest is Gemma 3, verified on HF 2026-07-02: gemma-3-4b-it); no Gemma-3 2B (Gemma-2-2B was the 2B). LiteRT is Google's on-device runtime. Name is misremembered; base points at the closest real Gemma."
+  - id: spectra-trilm-3.9b
+    name: "Spectra-TriLM-3.9B"
+    family: other
+    params: "3.9B"
+    quantization: ternary
+    roles: [orchestration]
+    tiers: [cpu]
+    source: "SpectraSuite/TriLM_3.9B_Unpacked"
+    confidence: high
+    status: real
+    notes: "TriLM = ternary; verified on HF 2026-07-02 (3992M params)"
+  - id: ternalm3-15b-instruct
+    name: "TernaLM3-15B-Instruct"
+    family: other
+    params: "15B"
+    quantization: ternary
+    roles: [orchestration, instruct]
+    tiers: [cpu]
+    source: null
+    status: aspirational
+    confidence: medium
+    notes: ""
+
+  # ---- Analysis (Image 1) ----
+  - id: bitnet-70b-132k-context
+    name: "BitNet-70B-132k-Context"
+    family: bitnet
+    params: "70B"
+    quantization: bitnet-1.58
+    roles: [analysis, long-context]
+    tiers: [rtx-pro]
+    source: null
+    confidence: low
+    status: aspirational
+    context_window: 132000
+    notes: "132k context window (named in source). Same caveat as bitnet-70b — no public 70B BitNet; a long-context BitNet at this scale is a target, not a released model."
+
+  # ---- Agents / RTX 4090 (Image 1) ----
+  - id: nexus-spec-1.1b
+    name: "Nexus-Spec-1.1B"
+    family: other
+    params: "1.1B"
+    quantization: unknown
+    roles: [analysis, speculative-draft]
+    tiers: [rtx-4090]
+    source: null
+    status: aspirational
+    confidence: low
+    notes: ""
+  - id: deepseek-r1-ternary-8b
+    name: "Deepseek-R1-Ternary-8B"
+    family: deepseek
+    params: "8B"
+    quantization: ternary
+    roles: [reasoning, analysis]
+    tiers: [rtx-4090]
+    source: null
+    base_model: "deepseek-ai/DeepSeek-R1-Distill-Llama-8B"
+    confidence: medium
+    notes: "a size was scribbled out before 8B in source; base verified real on HF 2026-07-02 (8030M); ternary quant is a target"
+  - id: llama-3-tiny-3b
+    name: "Llama-3-Tiny-3B"
+    family: llama
+    params: "3B"
+    quantization: ternary
+    roles: [agent]
+    tiers: [rtx-4090]
+    source: null
+    base_model: "meta-llama/Llama-3.2-3B-Instruct"
+    confidence: medium
+    notes: "base verified real on HF 2026-07-02 (3213M, gated); ternary quant is a target"
+  - id: mistral-tiny-3b
+    name: "Mistral-Tiny-3B"
+    family: mistral
+    params: "3B"
+    quantization: ternary
+    roles: [agent]
+    tiers: [rtx-4090]
+    source: null
+    base_model: "mistralai/Ministral-8B-Instruct-2410"
+    confidence: low
+    notes: "Ministral-3B is Mistral's ~3B but API-only (not openly downloadable); Ministral-8B-Instruct-2410 is the open small Mistral (verified real on HF 2026-07-02, 8020M). ternary quant is a target"
+  - id: ternarylm-132m
+    name: "TernaryLM-132M"
+    family: other
+    params: "132M"
+    quantization: ternary
+    roles: [agent]
+    tiers: [cpu]
+    source: null
+    status: aspirational
+    confidence: low
+    notes: "CPU agent fallback (ou TRM-Recursive-Reasoner)"
+  - id: trm-recursive-reasoner
+    name: "TRM-Recursive-Reasoner"
+    family: other
+    params: null
+    quantization: unknown
+    roles: [agent, reasoning]
+    tiers: [cpu]
+    source: null
+    status: aspirational
+    confidence: low
+    notes: "CPU agent fallback alternative to TernaryLM-132M"
+
+  # ---- Scientific: DNA (Image 2) ----
+  - id: rosettafold-all-atom
+    name: "RoseTTAFold All-Atom (RFAA)"
+    family: other
+    params: null
+    quantization: native
+    roles: [dna, structure-prediction]
+    tiers: [rtx-pro]
+    source: null
+    confidence: high
+    notes: "real research tool (Baker Lab), GitHub-distributed — confirmed NOT on HF as a model repo (2026-07-02); record exact GitHub home when web access allows"
+  - id: evo-arc-institute
+    name: "Evo (Arc Institute)"
+    family: other
+    params: "7B"
+    quantization: native
+    roles: [dna, genomics]
+    tiers: [rtx-4090]
+    source: "arcinstitute/evo2_7b"
+    confidence: high
+    status: real
+    notes: "ou HyenaDNA; verified on HF 2026-07-02 (Arc Institute evo2_7b; togethercomputer/evo-1-131k-base is the earlier stripedhyena release)"
+  - id: hyenadna
+    name: "HyenaDNA"
+    family: other
+    params: null
+    quantization: native
+    roles: [dna, genomics]
+    tiers: [rtx-4090]
+    source: "LongSafari/hyenadna-medium-450k-seqlen-hf"
+    confidence: high
+    status: real
+    notes: "alternative to Evo; verified on HF 2026-07-02"
+
+  # ---- Scientific: protein (Image 2) ----
+  - id: alphafold3
+    name: "AlphaFold3"
+    family: other
+    params: null
+    quantization: native
+    roles: [protein, structure-prediction]
+    tiers: [rtx-pro, rtx-4090]
+    source: null
+    confidence: high
+    notes: "ou ESMFold ou OpenFold. Real (DeepMind), but code+weights are DeepMind-distributed — confirmed NOT an HF model repo (2026-07-02). ESMFold is the HF-loadable protein option."
+  - id: esmfold
+    name: "ESMFold"
+    family: other
+    params: null
+    quantization: native
+    roles: [protein, structure-prediction]
+    tiers: [rtx-4090]
+    source: "facebook/esmfold_v1"
+    confidence: high
+    status: real
+    notes: "alternative to AlphaFold3; verified on HF 2026-07-02 (facebook/esmfold_v1)"
+  - id: openfold
+    name: "OpenFold"
+    family: other
+    params: null
+    quantization: native
+    roles: [protein, structure-prediction]
+    tiers: [rtx-4090]
+    source: null
+    confidence: high
+    notes: "alternative to AlphaFold3. Real (AQ Laboratory), GitHub-distributed — confirmed NOT on HF as a model repo (2026-07-02)."
+
+  # ---- Scientific: particles (Image 2) ----
+  - id: warp-lang
+    name: "Warp-Lang (NVIDIA)"
+    family: other
+    params: null
+    quantization: native
+    roles: [particles, physics-sim]
+    tiers: [rtx-4090, rtx-pro]
+    source: null
+    confidence: high
+    notes: "NVIDIA Warp differentiable sim, not an LLM — a Python/CUDA library (github.com/NVIDIA/warp), not an HF model. Not HF-verifiable."
+
+  # ---- Reasoning / validation cluster (boxed group, Image 2) ----
+  - id: document-ternary-3b
+    name: "Document-Ternary-3B"
+    family: other
+    params: "3B"
+    quantization: ternary
+    roles: [document, reasoning]
+    tiers: [rtx-4090]
+    source: null
+    status: aspirational
+    confidence: medium
+    notes: ""
+  - id: recursive-ref-validator-2b
+    name: "Recursive-Ref-Validator-2B"
+    family: other
+    params: "2B"
+    quantization: ternary
+    roles: [validation, reasoning]
+    tiers: [rtx-4090]
+    source: null
+    status: aspirational
+    confidence: medium
+    notes: ""
+  - id: llama-3-thought-8b
+    name: "Llama-3-thought-8B"
+    family: llama
+    params: "8B"
+    quantization: ternary
+    roles: [reasoning]
+    tiers: [rtx-4090]
+    source: null
+    status: aspirational
+    confidence: medium
+    notes: ""
+  - id: openthinking-7b
+    name: "OpenThinking-7B"
+    family: qwen
+    params: "7B"
+    quantization: native
+    roles: [reasoning]
+    tiers: [rtx-4090]
+    source: "open-thoughts/OpenThinker-7B"
+    confidence: high
+    status: real
+    notes: "verified on HF 2026-07-02 — real name OpenThinker-7B (Qwen2.5-7B finetune, 7616M); not ternary"
+
+  # ---- Mergekit base pool (Image 2) ----
+  - id: qwen25-32b-trit-uniform
+    name: "Qwen2.5-32B-trit-uniform"
+    family: qwen
+    params: "32B"
+    quantization: ternary
+    roles: [merge-base]
+    tiers: [rtx-pro]
+    source: null
+    base_model: "Qwen/Qwen2.5-32B"
+    confidence: low
+    notes: "leading token uncertain (Ent/it?); base Qwen2.5-32B verified real on HF 2026-07-02 (32764M); trit-uniform quant is a target"
+  - id: 1bitllm-bitnet-b158-large
+    name: "1bitLLM/bitnet-b1.58-large"
+    family: bitnet
+    params: "0.7B"
+    quantization: bitnet-1.58
+    roles: [merge-base]
+    tiers: [rtx-pro]
+    source: "1bitLLM/bitnet_b1_58-large"
+    confidence: high
+    status: real
+    notes: "verified on HF 2026-07-02 (729M params, arxiv 2402.17764)"
+  - id: xinyuan-t-moe-8x7b
+    name: "Xinyuan/T-MoE-8x7B"
+    family: other
+    params: "8x7B"
+    quantization: ternary
+    roles: [merge-base, general]
+    tiers: [rtx-pro]
+    source: null
+    status: aspirational
+    confidence: low
+    notes: "mixture-of-experts architecture (8 experts x 7B); also a group model — see groups.yaml"
+  - id: falcon3-10b-158bit-prequantized
+    name: "tiiuae/Falcon3-10B-1.58bit-prequantized"
+    family: falcon
+    params: "10B"
+    quantization: bitnet-1.58
+    roles: [merge-base, general]
+    tiers: [rtx-pro]
+    source: "tiiuae/Falcon3-10B-Instruct-1.58bit"
+    confidence: high
+    status: real
+    notes: "prequantized 6f16; ou Falcon-E-3B; verified on HF 2026-07-02 (3181M params)"
+  - id: falcon-e-3b
+    name: "Falcon-E-3B"
+    family: falcon
+    params: "3B"
+    quantization: bitnet-1.58
+    roles: [merge-base, general]
+    tiers: [rtx-4090]
+    source: "tiiuae/Falcon-E-3B-Instruct"
+    confidence: high
+    status: real
+    notes: "alternative to Falcon3-10B-1.58bit; verified on HF 2026-07-02 (BitNet edge model; reported 864M params despite the '3B' name)"
+  - id: zihan-wang-coe
+    name: "Zihan Wang 314/coe"
+    family: other
+    params: null
+    quantization: unknown
+    roles: [merge-base]
+    tiers: [rtx-pro]
+    source: null
+    status: aspirational
+    confidence: low
+    notes: "reading uncertain"
+  - id: qwen25-coder-72b-158
+    name: "Qwen2.5-Coder-72B (1.58b)"
+    family: qwen
+    params: "72B"
+    quantization: bitnet-1.58
+    roles: [coding, merge-base]
+    tiers: [rtx-pro]
+    source: null
+    base_model: "Qwen/Qwen2.5-Coder-32B-Instruct"
+    confidence: low
+    status: aspirational
+    notes: "no 72B Qwen2.5-Coder exists (refuted on HF 2026-07-02) — the largest real Qwen2.5-Coder is 32B. The '72B (1.58b)' is a target; base_model points at the real 32B."
+  - id: bash-tiny-coder-1b
+    name: "Bash-Tiny-Coder-1B"
+    family: other
+    params: "1B"
+    quantization: ternary
+    roles: [coding, shell]
+    tiers: [cpu]
+    source: null
+    status: aspirational
+    confidence: medium
+    notes: ""
+  - id: flex-prompt-tiny-1b
+    name: "Flex-Prompt-Tiny-1B"
+    family: other
+    params: "1B"
+    quantization: ternary
+    roles: [prompting]
+    tiers: [cpu]
+    source: null
+    status: aspirational
+    confidence: medium
+    notes: ""
+  - id: security-phi-3-mini
+    name: "Security-Phi-3-Mini"
+    family: phi
+    params: "3.8B"
+    quantization: ternary
+    roles: [security]
+    tiers: [cpu]
+    source: null
+    base_model: "microsoft/Phi-3-mini-4k-instruct"
+    confidence: medium
+    notes: "security-tuned Phi-3-mini; base verified real on HF 2026-07-02; the ternary + security-tune is a target"
+  - id: starcoder2-3b
+    name: "StarCoder2-3B"
+    family: other
+    params: "3B"
+    quantization: native
+    roles: [coding]
+    tiers: [rtx-4090]
+    source: "bigcode/starcoder2-3b"
+    confidence: high
+    notes: ""
+
+  # ---- Specialists (right column, Image 2) ----
+  - id: linux-kernel-tiny-1.5b
+    name: "Linux-Kernel-Tiny-1.5B"
+    family: other
+    params: "1.5B"
+    quantization: ternary
+    roles: [specialist, kernel]
+    tiers: [cpu]
+    source: null
+    status: aspirational
+    confidence: medium
+    notes: ""
+  - id: bitnet-math-expert-30b
+    name: "BitNet-Math-Expert-30B"
+    family: bitnet
+    params: "30B"
+    quantization: bitnet-1.58
+    roles: [specialist, math]
+    tiers: [rtx-pro]
+    source: null
+    status: aspirational
+    confidence: medium
+    notes: ""
+  - id: tiny-ternary-ui-3b
+    name: "Tiny-Ternary-UI-3B"
+    family: other
+    params: "3B"
+    quantization: ternary
+    roles: [specialist, ui]
+    tiers: [rtx-4090]
+    source: null
+    status: aspirational
+    confidence: medium
+    notes: ""
+  - id: hive-gate-7b
+    name: "Hive-Gate-7B"
+    family: other
+    params: "7B"
+    quantization: unknown
+    roles: [specialist, coordination]
+    tiers: [rtx-4090]
+    source: null
+    status: aspirational
+    confidence: low
+    notes: ""
+  - id: trm-logic-validator-2b
+    name: "TRM-Logic-Validator-2B"
+    family: other
+    params: "2B"
+    quantization: ternary
+    roles: [specialist, logic-validation]
+    tiers: [rtx-4090]
+    source: null
+    status: aspirational
+    confidence: medium
+    notes: ""
+  - id: owasp-ternary-3b
+    name: "OWASP-Ternary-3B"
+    family: other
+    params: "3B"
+    quantization: ternary
+    roles: [specialist, security]
+    tiers: [rtx-4090]
+    source: null
+    status: aspirational
+    confidence: medium
+    notes: ""
+  - id: hackerlm-tiny-3b
+    name: "HackerLM-tiny-3B"
+    family: other
+    params: "3B"
+    quantization: ternary
+    roles: [specialist, security]
+    tiers: [rtx-4090]
+    source: null
+    status: aspirational
+    confidence: medium
+    notes: ""
+  - id: llama-ternary-context-1b
+    name: "LLaMA-Ternary-Context-1B"
+    family: llama
+    params: "1B"
+    quantization: ternary
+    roles: [specialist, long-context]
+    tiers: [cpu]
+    source: null
+    status: aspirational
+    confidence: medium
+    notes: ""
+  - id: logic-loop-8b
+    name: "Logic-Loop-8B"
+    family: other
+    params: "8B"
+    quantization: ternary
+    roles: [specialist, logic-validation]
+    tiers: [rtx-4090]
+    source: null
+    status: aspirational
+    confidence: medium
+    notes: ""
+  - id: codellama-ternary-34b
+    name: "CodeLlama-Ternary-34B"
+    family: llama
+    params: "34B"
+    quantization: ternary
+    roles: [specialist, coding]
+    tiers: [rtx-pro]
+    source: null
+    base_model: "codellama/CodeLlama-34b-Instruct-hf"
+    confidence: medium
+    notes: "base verified real on HF 2026-07-02 (33744M); ternary quant is a target"
+  - id: mistral-large-ternary-80b
+    name: "Mistral-Large-Ternary-80B"
+    family: mistral
+    params: "80B"
+    quantization: ternary
+    roles: [specialist, general]
+    tiers: [rtx-pro]
+    source: null
+    base_model: "mistralai/Mistral-Large-Instruct-2411"
+    confidence: low
+    notes: "base verified real on HF 2026-07-02 but is 123B (122610M), not 80B — the '80B' is a misremembered size; ternary quant is a target"

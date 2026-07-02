@@ -46,7 +46,7 @@ Per dump lines 18175-18205 + MS048 R11275-R11280, each backpressure surface trig
 | Surface | Response (verbatim dump) |
 |---|---|
 | Blackwell VRAM high | reduce context, evict low-value KV, switch smaller oracle |
-| 3090 busy | reduce branch width, use CPU classifiers |
+| 4090 busy | reduce branch width, use CPU classifiers |
 | CPU pressure high | defer background indexing/evals |
 | RAM pressure high | hibernate branches, compact memory |
 | IO pressure high | delay cold scans, avoid large snapshots |

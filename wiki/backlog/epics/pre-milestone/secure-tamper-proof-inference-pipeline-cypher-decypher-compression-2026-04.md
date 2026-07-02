@@ -66,7 +66,7 @@ tags: [epic, p0, security, tamper-proof, cypher, decypher, compression, caveman,
 
 ## Summary
 
-Operator-authored 2026-04-30: build the **trust / confidential-compute layer** of the post-Anthropic stack — a model that runs on a shared GPU without being tampered with, while remaining seamless, blazing fast, transparent, and performance-positive. The pipeline composes **compression (Caveman + UD-IQ2/Q2_K weight quantization + KV-cache compression)** with **encryption (cypher of weights and context at rest, decypher on-GPU via Triton kernels)** to deliver an empirically measured **80–90% space-saved envelope on large-context workloads**. The runtime contract is declared in **Markdown rules**, executed by **Python in isolated mode** (Pyodide/WASM, Firecracker, E2B, or RLM's LocalREPL). The inference layer is **RLM-script-oriented** — `rlm.completion()` operates on the compressed-encrypted form as the REPL variable, with lazy decypher inside the REPL when accessed. **Configurable opt-ins L0 → L4** (hash integrity → weights-encrypted-at-rest → compressed-encrypted-with-on-GPU-decypher → NVIDIA CC mode → end-to-end FHE) compose forward; the operator's default stance on the incoming RTX 3090 is **L2**, with **L3 additive** when H100-class hardware arrives. This epic delivers the 4th substitutable layer (trust) of the wiki's anti-vendor-lock-in mission on top of the 3-layer orchestrator × harness × provider stack.
+Operator-authored 2026-04-30: build the **trust / confidential-compute layer** of the post-Anthropic stack — a model that runs on a shared GPU without being tampered with, while remaining seamless, blazing fast, transparent, and performance-positive. The pipeline composes **compression (Caveman + UD-IQ2/Q2_K weight quantization + KV-cache compression)** with **encryption (cypher of weights and context at rest, decypher on-GPU via Triton kernels)** to deliver an empirically measured **80–90% space-saved envelope on large-context workloads**. The runtime contract is declared in **Markdown rules**, executed by **Python in isolated mode** (Pyodide/WASM, Firecracker, E2B, or RLM's LocalREPL). The inference layer is **RLM-script-oriented** — `rlm.completion()` operates on the compressed-encrypted form as the REPL variable, with lazy decypher inside the REPL when accessed. **Configurable opt-ins L0 → L4** (hash integrity → weights-encrypted-at-rest → compressed-encrypted-with-on-GPU-decypher → NVIDIA CC mode → end-to-end FHE) compose forward; the operator's default stance on the incoming RTX 4090 is **L2**, with **L3 additive** when H100-class hardware arrives. This epic delivers the 4th substitutable layer (trust) of the wiki's anti-vendor-lock-in mission on top of the 3-layer orchestrator × harness × provider stack.
 
 ## Operator Directive (verbatim, sacrosanct)
 
@@ -88,10 +88,10 @@ Operator-authored 2026-04-30: build the **trust / confidential-compute layer** o
 
 ## Goals
 
-- **L2 default delivered on RTX 3090** — compressed-encrypted weights + KV cache + on-GPU decypher kernels via Triton; runs natively on the operator's incoming hardware (mid-May 2026); no cloud dependency.
+- **L2 default delivered on RTX 4090** — compressed-encrypted weights + KV cache + on-GPU decypher kernels via Triton; runs natively on the operator's incoming hardware (mid-May 2026); no cloud dependency.
 - **80–90% space-saved envelope empirically measured** on a large-context workload, with composition math reproducible: Caveman (~75% prompt) × UD-IQ2/Q2_K (~87.5% weights) × KV-cache compression (~50–87%) × cypher overlay (+0% space).
 - **Seamless / blazing-fast / transparent / performance-positive** — operator-asserted operational properties empirically validated. Net I/O reduction from compression > GPU compute overhead from decypher = performance-positive on large context.
-- **Configurable opt-ins L0 → L4** — operator picks per workload; L2 is default on RTX 3090, L3 additive when H100/H200 arrives, L4 (FHE) available for niche high-sensitivity / low-throughput workloads.
+- **Configurable opt-ins L0 → L4** — operator picks per workload; L2 is default on RTX 4090, L3 additive when H100/H200 arrives, L4 (FHE) available for niche high-sensitivity / low-throughput workloads.
 - **Auth surface — all four** — symmetric key file · passphrase-derived key · certificate-bound key · HSM-managed key, all configurable under the same runtime contract.
 - **Markdown rule DSL operational** — runtime contract declared in Markdown (parallels CLAUDE.md + `.claude/rules/`), enforced by Python in isolated mode.
 - **RLM substrate integrated** — `rlm.completion()` operates with compressed-encrypted context as the REPL variable, lazy decypher inside the REPL when accessed.
@@ -99,7 +99,7 @@ Operator-authored 2026-04-30: build the **trust / confidential-compute layer** o
 
 ## Done When
 
-- [ ] Operator confirms the L2 default works on RTX 3090 — compressed-encrypted weights load correctly, decypher kernels run on GPU, output equivalence vs baseline (pre-cypher) demonstrated
+- [ ] Operator confirms the L2 default works on RTX 4090 — compressed-encrypted weights load correctly, decypher kernels run on GPU, output equivalence vs baseline (pre-cypher) demonstrated
 - [ ] Empirical 80–90% space-saved measured on large-context workload (specific workload TBD; large-context = ≥32K tokens)
 - [ ] Performance benchmark: tokens/sec on L2-stack ≥ tokens/sec on baseline (operator's "blazing fast" / "increase performance" assertion empirically validated, not just neutral)
 - [ ] Markdown rule DSL designed, documented, and enforced
@@ -120,9 +120,9 @@ Operator-authored 2026-04-30: build the **trust / confidential-compute layer** o
 > | **Quality tier** | Skyscraper (full process — mission-critical 4th-layer infrastructure) |
 > | **Estimated modules** | 6 (M001–M006) |
 > | **Estimated tasks** | 20–25 |
-> | **Critical-path target** | L2 default working on RTX 3090 within ~4 weeks of 3090 delivery (mid-May → mid-June 2026) |
+> | **Critical-path target** | L2 default working on RTX 4090 within ~4 weeks of 4090 delivery (mid-May → mid-June 2026) |
 > | **L3 additive target** | When operator commits to H100/H200 workload (cloud rental or hardware) — operator-decided, not date-bound |
-> | **Cash budget (L2 path)** | $0 — Caveman is open source; UD-IQ2/Q2_K quantization is open-source (Unsloth); AES-256-GCM via Python `cryptography` library; Triton via OpenAI; RLM via mit-oasys; all run on RTX 3090 |
+> | **Cash budget (L2 path)** | $0 — Caveman is open source; UD-IQ2/Q2_K quantization is open-source (Unsloth); AES-256-GCM via Python `cryptography` library; Triton via OpenAI; RLM via mit-oasys; all run on RTX 4090 |
 > | **Cash budget (L3 additive)** | Cloud rental ~$3-10/hr per H100 OR purchase ~$30-40K per H100 — operator-decision per workload |
 
 ## Candidate Module Breakdown
@@ -131,7 +131,7 @@ Operator-authored 2026-04-30: build the **trust / confidential-compute layer** o
 
 | Module (candidate) | Delivers | Phase | Est. Tasks |
 |---|---|---|---|
-| **M001 — L2 Reference Pipeline on RTX 3090** | Compress (Caveman + Q2_K + KV-cache) + cypher (AES-256-GCM) + decypher kernels (Triton on GPU). End-to-end working pipeline with one model checkpoint. | Phase 1 — post-3090 (mid-May 2026 onward) | 5–7 |
+| **M001 — L2 Reference Pipeline on RTX 4090** | Compress (Caveman + Q2_K + KV-cache) + cypher (AES-256-GCM) + decypher kernels (Triton on GPU). End-to-end working pipeline with one model checkpoint. | Phase 1 — post-4090 (mid-May 2026 onward) | 5–7 |
 | **M002 — Markdown Rule DSL** | Runtime contract declared in Markdown (input rules, output rules, key-binding rules, attestation requirements). Parallels CLAUDE.md + `.claude/rules/`. Schema + validator. | Phase 1 | 3–4 |
 | **M003 — RLM Substrate Integration** | `rlm.completion()` wired to consume compressed-encrypted context as the REPL variable. Lazy decypher inside the REPL when accessed. Python isolation via RLM's LocalREPL + cloud sandbox path. | Phase 1 | 3–4 |
 | **M004 — Auth Surface Plumbing** | Symmetric key file · passphrase-derived key · certificate-bound key · HSM-managed key. Unified config; runtime selects auth surface per workload. | Phase 1 | 3 |
@@ -140,7 +140,7 @@ Operator-authored 2026-04-30: build the **trust / confidential-compute layer** o
 
 ## Dependencies
 
-- **Hardware (M001–M004)**: RTX 3090 delivery (~mid-May 2026, ordered 2026-04-27). M001 critical path begins on delivery.
+- **Hardware (M001–M004)**: RTX 4090 delivery (~mid-May 2026, ordered 2026-04-27). M001 critical path begins on delivery.
 - **Hardware (M005)**: H100/H200 access — operator-decision, cloud-rental or acquisition.
 - **External tools (open-source, all wired before epic starts)**: Caveman (`JuliusBrussee/caveman`), Unsloth (UD-IQ2 / Q2_K quantization), Triton (OpenAI, Python-on-GPU kernels), RLM SDK (`alexzhang13/rlm`), Python `cryptography` library (AES-256-GCM).
 - **Existing AICP infrastructure**: AICP `local` backend will route to L2 pipeline once M001 is functional.
@@ -181,7 +181,7 @@ All have published documentation; all are individually substitutable. **No singl
 - BUILDS ON: [[src-rlm-recursive-language-models-mit-oasys|Synthesis — RLM (Recursive Language Models)]] — script-orientation substrate
 - BUILDS ON: [[model-markdown-as-iac|Model — Markdown as IaC]] — Markdown-rules precedent
 - BUILDS ON: [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Anti-Vendor-Lock-In Lesson]] — adds the 4th substitutable layer to the empirical evidence chain
-- BUILDS ON: [[2026-consumer-hardware-ai-stack|2026 Consumer Hardware AI Stack]] — RTX 3090 incoming hardware reality
+- BUILDS ON: [[2026-consumer-hardware-ai-stack|2026 Consumer Hardware AI Stack]] — RTX 4090 incoming hardware reality
 - BUILDS ON: [[src-unsloth-fast-lora-consumer-hardware|Unsloth Synthesis]] — UD-IQ2 / Q2_K weight quantization (compression layer)
 - DEPENDS ON: [[post-anthropic-stack-3-layer-assembly-multica-aicp-3090|Epic — Post-Anthropic 3-Layer Stack Assembly]] — provides the orchestrator × harness × provider layers underneath this trust layer
 - DEMONSTRATES: [[infrastructure-over-instructions-for-process-enforcement|Principle 1 — Infrastructure Over Instructions]] — tamper-resistance must be infrastructure (cypher + decypher + attestation), not prose policy
