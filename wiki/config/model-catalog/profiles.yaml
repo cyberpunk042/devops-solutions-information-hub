@@ -1,0 +1,82 @@
+# Routing profiles — named task x hardware-tier model selections.
+# Schema: see README.md. `selections.<tier>` are ordered model/group ids.
+# This is the complexity-routing surface AICP consumes. Seeded 2026-07-02.
+
+profiles:
+  - id: default-coding
+    name: "Default (coding)"
+    task: coding
+    selections:
+      rtx-4090: [qwen-coder-ternary, rlm-code-reasoner-8b, thinking-machines-interaction-1b]
+      rtx-pro:  [bitnet-70b, llama3-8b-ternary, mistral-2b-ternary, prism-ml-ternary-bonsai-70b, deepseek-v3-ternary]
+    notes: "Qwen-Coder: 1.5B inline completion + 14B chat/refactoring"
+
+  - id: cpu-general
+    name: "CPU general"
+    task: general
+    selections:
+      cpu: [ternlm-3-8b-instruct, bge-m3, phi-3-mini-ternary]
+    notes: "BGE-M3 is the embedding model on this tier"
+
+  - id: orchestrator-cpu
+    name: "Orchestrator (CPU)"
+    task: orchestration
+    selections:
+      cpu: [gemma-4-litert-2b, spectra-trilm-3.9b, ternalm3-15b-instruct]
+    notes: ""
+
+  - id: analysis
+    name: "Analysis"
+    task: analysis
+    selections:
+      rtx-pro: [bitnet-70b-132k-context]
+    notes: "long-context analysis on RTX Pro"
+
+  - id: agents
+    name: "Agents"
+    task: agents
+    selections:
+      cpu:      [ternarylm-132m, trm-recursive-reasoner]
+      rtx-4090: [llama-3-tiny-3b, mistral-tiny-3b, nexus-spec-1.1b, deepseek-r1-ternary-8b]
+      rtx-pro:  [mistral-ternary-3x-70b]
+    notes: "CPU fallback: TernaryLM-132M ou TRM-Recursive-Reasoner. rtx-pro entry is a group (replicated 3x70B)."
+
+  - id: reasoning-validation
+    name: "Reasoning / validation"
+    task: reasoning
+    selections:
+      rtx-4090: [document-ternary-3b, recursive-ref-validator-2b, llama-3-thought-8b, openthinking-7b]
+    notes: "the boxed reasoning/validation cluster"
+
+  - id: dna
+    name: "DNA / genomics"
+    task: dna
+    selections:
+      rtx-4090: [evo-arc-institute, hyenadna]
+      rtx-pro:  [rosettafold-all-atom]
+    notes: "4090: Evo ou HyenaDNA; RTX Pro: RoseTTAFold All-Atom"
+
+  - id: protein
+    name: "Protein folding"
+    task: protein
+    selections:
+      rtx-4090: [alphafold3, esmfold, openfold]
+      rtx-pro:  [alphafold3]
+    notes: "AlphaFold3 ou ESMFold ou OpenFold"
+
+  - id: particles
+    name: "Particle / physics sim"
+    task: particles
+    selections:
+      rtx-4090: [warp-lang]
+      rtx-pro:  [warp-lang]
+    notes: "NVIDIA Warp differentiable sim (not an LLM)"
+
+  - id: specialists
+    name: "Specialist models"
+    task: specialist
+    selections:
+      cpu:      [linux-kernel-tiny-1.5b, llama-ternary-context-1b]
+      rtx-4090: [tiny-ternary-ui-3b, hive-gate-7b, trm-logic-validator-2b, owasp-ternary-3b, hackerlm-tiny-3b, logic-loop-8b]
+      rtx-pro:  [bitnet-math-expert-30b, codellama-ternary-34b, mistral-large-ternary-80b]
+    notes: "specialty routing: kernel, math, ui, coordination, logic-validation, security, long-context, code, large-general"

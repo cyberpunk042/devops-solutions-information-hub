@@ -31,6 +31,15 @@ tags: [ai-models, model-routing, complexity-routing, ternary, bitnet, 1bit, loca
 > local-inference landscape moves. Verbatim source:
 > `raw/notes/2026-07-02-operator-model-routing-catalog-handwritten-verbatim.md`.
 
+> [!note] Machine-readable source of truth
+> This page is the human narrative. The **structured, extensible registry** that
+> holds the fleet — **models**, **group models** (MoE / merged / replicated),
+> and **routing profiles** — lives as config in
+> [`wiki/config/model-catalog/`](../../config/model-catalog/README.md). Adding a
+> model is a one-line data edit there; `tools/validate_model_catalog.py` checks
+> every group member and profile selection resolves. Current fleet: **54 models
+> (37 ternary/BitNet), 3 group models, 10 profiles.**
+
 ## Summary
 
 A complexity-routed **model selection matrix** for $0 local inference: which
