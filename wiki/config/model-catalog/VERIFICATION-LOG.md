@@ -91,3 +91,27 @@ absence):** `hive-gate-7b`, `hackerlm-tiny-3b`, `nexus-spec-1.1b`,
 **Bucket 3 (not HF-loadable models):** `rosettafold-all-atom`, `alphafold3`,
 `openfold` (GitHub/DeepMind code), `warp-lang` (NVIDIA Python lib) — record their
 real home, not an HF id.
+
+## 2026-07-02 — third pass (more bucket-1 bases)
+
+Six more `-ternary` entries base-backed to confirmed-real upstreams:
+
+| catalog id | verified base (HF) | note |
+|---|---|---|
+| deepseek-v3-ternary | `deepseek-ai/DeepSeek-V3` | 685B MoE |
+| qwen-coder-ternary | `Qwen/Qwen2.5-Coder-14B-Instruct` (+1.5B inline) | both coder sizes real |
+| llama-3-tiny-3b | `meta-llama/Llama-3.2-3B-Instruct` | 3213M, gated |
+| gemma-4-litert-2b | `google/gemma-3-4b-it` | **"Gemma 4" doesn't exist — latest is Gemma 3; no Gemma-3 2B (Gemma-2-2B was the 2B). Name misremembered.** |
+| mistral-tiny-3b | `mistralai/Ministral-8B-Instruct-2410` | Ministral-3B is API-only; 8B is the open small Mistral |
+| qwen25-coder-72b-158 → **aspirational** | base `Qwen/Qwen2.5-Coder-32B-Instruct` | **no 72B Qwen coder exists — 32B is the largest real** |
+
+Fleet now: **11 real · 3 aspirational · 41 unverified**, of which **13 are
+base-backed**. Bucket 2 remaining is the clearly-coined names
+(`hive-gate-7b`, `hackerlm-tiny-3b`, `prism-ml-ternary-bonsai-70b`, `nexus-spec-1.1b`,
+`trm-*`, `logic-loop-8b`, `tiny-ternary-ui-3b`, `ternalm3-*`, `ternlm-3-*`,
+`rlm-code-reasoner-8b`, `thinking-machines-interaction-1b`, `document-ternary-3b`,
+`recursive-ref-validator-2b`, `bitnet-math-expert-30b`, `linux-kernel-tiny-1.5b`,
+`llama-ternary-context-1b`, `bash-tiny-coder-1b`, `flex-prompt-tiny-1b`,
+`owasp-ternary-3b`, `ternarylm-132m`, `zihan-wang-coe`, `xinyuan-t-moe-8x7b`,
+`llama-3-thought-8b`, `mistral-2b-ternary`) — these need a HF *search* to confirm
+absence before flipping to `aspirational`.

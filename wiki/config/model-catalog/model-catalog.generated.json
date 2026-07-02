@@ -23,8 +23,9 @@
         "rtx-4090"
       ],
       "source": null,
+      "base_model": "Qwen/Qwen2.5-Coder-14B-Instruct",
       "confidence": "medium",
-      "notes": "1.5B for inline completion + 14B for chat & refactoring",
+      "notes": "bases verified real on HF 2026-07-02: Qwen2.5-Coder-1.5B-Instruct (inline) + Qwen2.5-Coder-14B-Instruct (chat/refactor); ternary quant is a target",
       "status": "unverified"
     },
     {
@@ -212,7 +213,7 @@
       "id": "deepseek-v3-ternary",
       "name": "Deepseek-V3-Ternary (PT\u00b2-LLM)",
       "family": "deepseek",
-      "params": null,
+      "params": "685B-MoE",
       "quantization": "ternary",
       "roles": [
         "general",
@@ -222,8 +223,9 @@
         "rtx-pro"
       ],
       "source": null,
+      "base_model": "deepseek-ai/DeepSeek-V3",
       "confidence": "medium",
-      "notes": "PT\u00b2-LLM",
+      "notes": "PT\u00b2-LLM; base verified real on HF 2026-07-02 (685B MoE); ternary quant is a target",
       "status": "unverified"
     },
     {
@@ -239,8 +241,9 @@
         "cpu"
       ],
       "source": null,
-      "confidence": "medium",
-      "notes": "LiteRT",
+      "base_model": "google/gemma-3-4b-it",
+      "confidence": "low",
+      "notes": "'Gemma 4' does not exist (latest is Gemma 3, verified on HF 2026-07-02: gemma-3-4b-it); no Gemma-3 2B (Gemma-2-2B was the 2B). LiteRT is Google's on-device runtime. Name is misremembered; base points at the closest real Gemma.",
       "status": "unverified"
     },
     {
@@ -347,8 +350,9 @@
         "rtx-4090"
       ],
       "source": null,
+      "base_model": "meta-llama/Llama-3.2-3B-Instruct",
       "confidence": "medium",
-      "notes": "",
+      "notes": "base verified real on HF 2026-07-02 (3213M, gated); ternary quant is a target",
       "status": "unverified"
     },
     {
@@ -364,8 +368,9 @@
         "rtx-4090"
       ],
       "source": null,
-      "confidence": "medium",
-      "notes": "",
+      "base_model": "mistralai/Ministral-8B-Instruct-2410",
+      "confidence": "low",
+      "notes": "Ministral-3B is Mistral's ~3B but API-only (not openly downloadable); Ministral-8B-Instruct-2410 is the open small Mistral (verified real on HF 2026-07-02, 8020M). ternary quant is a target",
       "status": "unverified"
     },
     {
@@ -721,9 +726,10 @@
         "rtx-pro"
       ],
       "source": null,
-      "confidence": "medium",
-      "notes": "",
-      "status": "unverified"
+      "base_model": "Qwen/Qwen2.5-Coder-32B-Instruct",
+      "confidence": "low",
+      "status": "aspirational",
+      "notes": "no 72B Qwen2.5-Coder exists (refuted on HF 2026-07-02) \u2014 the largest real Qwen2.5-Coder is 32B. The '72B (1.58b)' is a target; base_model points at the real 32B."
     },
     {
       "id": "bash-tiny-coder-1b",
@@ -1193,9 +1199,10 @@
             "rtx-pro"
           ],
           "source": null,
-          "confidence": "medium",
-          "notes": "",
-          "status": "unverified"
+          "base_model": "Qwen/Qwen2.5-Coder-32B-Instruct",
+          "confidence": "low",
+          "status": "aspirational",
+          "notes": "no 72B Qwen2.5-Coder exists (refuted on HF 2026-07-02) \u2014 the largest real Qwen2.5-Coder is 32B. The '72B (1.58b)' is a target; base_model points at the real 32B."
         },
         {
           "id": "bash-tiny-coder-1b",
@@ -1329,8 +1336,9 @@
               "rtx-4090"
             ],
             "source": null,
+            "base_model": "Qwen/Qwen2.5-Coder-14B-Instruct",
             "confidence": "medium",
-            "notes": "1.5B for inline completion + 14B for chat & refactoring",
+            "notes": "bases verified real on HF 2026-07-02: Qwen2.5-Coder-1.5B-Instruct (inline) + Qwen2.5-Coder-14B-Instruct (chat/refactor); ternary quant is a target",
             "status": "unverified"
           }
         },
@@ -1521,8 +1529,9 @@
               "cpu"
             ],
             "source": null,
-            "confidence": "medium",
-            "notes": "LiteRT",
+            "base_model": "google/gemma-3-4b-it",
+            "confidence": "low",
+            "notes": "'Gemma 4' does not exist (latest is Gemma 3, verified on HF 2026-07-02: gemma-3-4b-it); no Gemma-3 2B (Gemma-2-2B was the 2B). LiteRT is Google's on-device runtime. Name is misremembered; base points at the closest real Gemma.",
             "status": "unverified"
           }
         },
@@ -1694,8 +1703,9 @@
               "rtx-4090"
             ],
             "source": null,
+            "base_model": "meta-llama/Llama-3.2-3B-Instruct",
             "confidence": "medium",
-            "notes": "",
+            "notes": "base verified real on HF 2026-07-02 (3213M, gated); ternary quant is a target",
             "status": "unverified"
           }
         },
