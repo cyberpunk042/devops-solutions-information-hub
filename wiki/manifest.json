@@ -1,24 +1,24 @@
 {
-  "generated": "2026-06-10T00:49:52.347915+00:00",
+  "generated": "2026-07-02T15:05:27.302735+00:00",
   "stats": {
-    "pages": 979,
+    "pages": 983,
     "domains": 16,
     "sources": 128,
     "comparisons": 14,
     "relationships": 4352,
-    "tags_unique": 3771,
+    "tags_unique": 3780,
     "layers": {
       "3": 8,
       "5": 38,
       "6": 27,
-      "2": 118,
+      "2": 122,
       "4": 90,
       "0": 1,
       "1": 94,
       "spine": 84
     },
     "maturity": {
-      "seed": 245,
+      "seed": 249,
       "growing": 352,
       "mature": 23
     }
@@ -13435,6 +13435,51 @@
           "target": "Claude Code"
         }
       ]
+    },
+    {
+      "path": "domains/ai-models/reference-local-model-routing-catalog.md",
+      "slug": "domains/ai-models/reference-local-model-routing-catalog",
+      "title": "Local Model Routing Catalog (task \u00d7 hardware tier)",
+      "type": "reference",
+      "domain": "ai-models",
+      "status": "processing",
+      "confidence": "medium",
+      "created": "2026-07-02",
+      "updated": "2026-07-02",
+      "last_reviewed": "",
+      "tags": [
+        "ai-models",
+        "model-routing",
+        "complexity-routing",
+        "ternary",
+        "bitnet",
+        "1bit",
+        "local-inference",
+        "aicp",
+        "hardware-tier",
+        "model-selection",
+        "cpu-inference",
+        "rtx-4090",
+        "rtx-pro",
+        "evolving"
+      ],
+      "sources": [
+        {
+          "id": "note-operator-model-routing-catalog-2026-07-02",
+          "type": "note",
+          "file": "raw/notes/2026-07-02-operator-model-routing-catalog-handwritten-verbatim.md",
+          "title": "Operator handwritten model-routing catalog (verbatim)",
+          "ingested": "2026-07-02"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Local Model Routing Catalog",
+        "Complexity-Routed Model Selection Matrix"
+      ],
+      "relationships": []
     },
     {
       "path": "domains/automation/ai-driven-content-pipeline.md",
@@ -49551,6 +49596,58 @@
       "relationships": []
     },
     {
+      "path": "runbooks/metrics-correlator-lag.md",
+      "slug": "runbooks/metrics-correlator-lag",
+      "title": "Operator runbook \u2014 selfdef correlator bus lag (raw events dropped, missed detections)",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-06-09",
+      "updated": "2026-06-09",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "observability",
+        "metrics",
+        "correlator-lag",
+        "bus",
+        "prometheus",
+        "detection",
+        "incident-response",
+        "selfdef",
+        "ips"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-metrics-handler",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "crates/selfdef-api/src/metrics.rs",
+          "note": "selfdef-api Metrics: the selfdef_correlator_lag_events_total counter; the correlator subscribes to the bus broadcast and a lag means raw events were never rule-evaluated"
+        },
+        {
+          "id": "selfdef-bus-config",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "crates/selfdef-config/src/lib.rs",
+          "note": "[bus] inproc_capacity \u2014 the bounded broadcast channel depth that, when exceeded, causes a slow subscriber (here the correlator) to lag and drop events"
+        },
+        {
+          "id": "selfdef-observability-alerts",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "modules/observability/assets/alerts/selfdef.yml.template",
+          "note": "SelfdefCorrelatorBusLag warning alert fires on increase(selfdef_correlator_lag_events_total[10m]) > 0"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "runbooks/metrics-ingest-lag.md",
       "slug": "runbooks/metrics-ingest-lag",
       "title": "Operator runbook \u2014 selfdef metrics ingest lag (events dropped, /metrics under-counting)",
@@ -49594,6 +49691,58 @@
           "project": "selfdef",
           "path": "modules/observability/assets/alerts/selfdef.yml.template",
           "note": "SelfdefMetricsIngestLag warning alert fires on increase(selfdef_ingest_lag_events_total[10m]) > 0"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/metrics-responder-lag.md",
+      "slug": "runbooks/metrics-responder-lag",
+      "title": "Operator runbook \u2014 selfdef responder bus lag (findings dropped, no action fired)",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-06-09",
+      "updated": "2026-06-09",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "observability",
+        "metrics",
+        "responder-lag",
+        "bus",
+        "prometheus",
+        "response",
+        "incident-response",
+        "selfdef",
+        "ips"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-metrics-handler",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "crates/selfdef-api/src/metrics.rs",
+          "note": "selfdef-api Metrics: the selfdef_responder_lag_events_total counter; the responder subscribes to the bus broadcast and a lag means findings were dropped before any autonomous action fired"
+        },
+        {
+          "id": "selfdef-bus-config",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "crates/selfdef-config/src/lib.rs",
+          "note": "[bus] inproc_capacity \u2014 the bounded broadcast channel depth that, when exceeded, causes a slow subscriber (here the responder) to lag and drop findings"
+        },
+        {
+          "id": "selfdef-observability-alerts",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "modules/observability/assets/alerts/selfdef.yml.template",
+          "note": "SelfdefResponderBusLag warning alert fires on increase(selfdef_responder_lag_events_total[10m]) > 0"
         }
       ],
       "layer": 2,
@@ -50410,6 +50559,44 @@
           "project": "selfdef",
           "path": "crates/selfdef-api/src/storage.rs",
           "note": "selfdef-api storage probe handler (df + log-dir walk)"
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "runbooks/tetragon-map-errors.md",
+      "slug": "runbooks/tetragon-map-errors",
+      "title": "Operator runbook \u2014 Tetragon kernel detection source degrading (BPF map errors / socket-dropout gotcha)",
+      "type": "reference",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-06-10",
+      "updated": "2026-06-10",
+      "last_reviewed": "",
+      "tags": [
+        "runbook",
+        "observability",
+        "tetragon",
+        "ebpf",
+        "kernel-fence",
+        "event-drop",
+        "meta-observability",
+        "incident-response",
+        "selfdef",
+        "ips"
+      ],
+      "sources": [
+        {
+          "id": "selfdef-observability-alerts",
+          "type": "internal",
+          "project": "selfdef",
+          "path": "modules/observability/assets/alerts/selfdef.yml.template",
+          "note": "SelfdefTetragonMapErrors fires on increase(tetragon_map_errors_total[10m]) > 0"
         }
       ],
       "layer": 2,
@@ -68306,11 +68493,11 @@
       "relationship_count": 1868
     },
     "ai-agents": {
-      "page_count": 118,
+      "page_count": 121,
       "relationship_count": 583
     },
     "ai-models": {
-      "page_count": 33,
+      "page_count": 34,
       "relationship_count": 149
     },
     "devops": {
@@ -68601,12 +68788,14 @@
       "runbooks/perimeter-policy-load-failure",
       "runbooks/perimeter-sigkill-investigation",
       "runbooks/perimeter-tetragon-not-running",
+      "runbooks/tetragon-map-errors",
       "sources/src-sain-01-sovereign-node-spec"
     ],
     "ebpf": [
       "backlog/epics/milestone-sain01/e104-tetragon-guardian-perimeter",
       "comparisons/cmp-wall-vs-write-vs-tetragon-for-perimeter",
-      "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor"
+      "domains/ai-agents/concept-srp-trinity-pulse-weaver-auditor",
+      "runbooks/tetragon-map-errors"
     ],
     "guardian": [
       "backlog/epics/milestone-sain01/e104-tetragon-guardian-perimeter",
@@ -68682,6 +68871,7 @@
       "backlog/milestones/sain-01-sovereign-node",
       "comparisons/cmp-bitnet-vs-fp16-execution-cost",
       "domains/ai-models/concept-1bit-ternary-weights",
+      "domains/ai-models/reference-local-model-routing-catalog",
       "sources/src-bitnet-b158-ternary-llm",
       "sources/src-sain-01-sovereign-node-spec",
       "sources/src-zen5-avx512-single-cycle"
@@ -68690,11 +68880,13 @@
       "backlog/epics/milestone-sain01/e106-pulse-vector-runtime",
       "comparisons/cmp-bitnet-vs-fp16-execution-cost",
       "domains/ai-models/concept-1bit-ternary-weights",
+      "domains/ai-models/reference-local-model-routing-catalog",
       "sources/src-bitnet-b158-ternary-llm"
     ],
     "1bit": [
       "backlog/epics/milestone-sain01/e106-pulse-vector-runtime",
       "domains/ai-models/concept-1bit-ternary-weights",
+      "domains/ai-models/reference-local-model-routing-catalog",
       "sources/src-bitnet-b158-ternary-llm",
       "sources/src-sain-01-sovereign-node-spec"
     ],
@@ -69496,7 +69688,8 @@
       "backlog/epics/pre-milestone/E001-local-inference-engine",
       "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier",
       "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
-      "backlog/tasks/T001-test-openai-backend"
+      "backlog/tasks/T001-test-openai-backend",
+      "domains/ai-models/reference-local-model-routing-catalog"
     ],
     "aicp": [
       "backlog/epics/pre-milestone/E001-local-inference-engine",
@@ -69535,6 +69728,7 @@
       "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
       "decisions/01_drafts/skills-as-primary-extension-pattern",
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations",
+      "domains/ai-models/reference-local-model-routing-catalog",
       "domains/cross-domain/mcp-runtime-signaling",
       "domains/devops/four-project-ecosystem",
       "domains/tools-and-platforms/aicp",
@@ -71066,20 +71260,27 @@
       "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
       "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
       "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage",
-      "runbooks/metrics-ingest-lag"
+      "runbooks/metrics-correlator-lag",
+      "runbooks/metrics-ingest-lag",
+      "runbooks/metrics-responder-lag"
     ],
     "prometheus": [
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
       "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
       "runbooks/m060-mirror-export-publish-anomalies",
-      "runbooks/metrics-ingest-lag"
+      "runbooks/metrics-correlator-lag",
+      "runbooks/metrics-ingest-lag",
+      "runbooks/metrics-responder-lag"
     ],
     "observability": [
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
       "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
       "backlog/tasks/T029-author-routing-review-ritual-standard",
       "patterns/01_drafts/observe-fix-verify-loop",
-      "runbooks/metrics-ingest-lag"
+      "runbooks/metrics-correlator-lag",
+      "runbooks/metrics-ingest-lag",
+      "runbooks/metrics-responder-lag",
+      "runbooks/tetragon-map-errors"
     ],
     "ritual": [
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
@@ -71336,7 +71537,9 @@
       "runbooks/guardian-not-running",
       "runbooks/guardian-socket-unreachable",
       "runbooks/m060-mirror-export-publish-anomalies",
+      "runbooks/metrics-correlator-lag",
       "runbooks/metrics-ingest-lag",
+      "runbooks/metrics-responder-lag",
       "runbooks/network-degraded",
       "runbooks/perimeter-audit-log-corruption",
       "runbooks/perimeter-extension-create",
@@ -71351,6 +71554,7 @@
       "runbooks/scheduler-weight-matrix-rotation",
       "runbooks/selfdef-watchdog-alert-finding",
       "runbooks/storage-degraded",
+      "runbooks/tetragon-map-errors",
       "runbooks/ux-coherence-failures"
     ],
     "claude-code": [
@@ -72029,6 +72233,7 @@
       "decisions/01_drafts/strategic-response-to-anthropic-programmatic-credit-pool-via-per-project-assistant-profiles",
       "domains/ai-models/concept-1bit-ternary-weights",
       "domains/ai-models/concept-speculative-decoding-block-diffusion",
+      "domains/ai-models/reference-local-model-routing-catalog",
       "sources/src-27-questions-llm-selection",
       "sources/src-bitnet-b158-ternary-llm",
       "sources/src-dflash-block-diffusion-spec-dec",
@@ -72044,6 +72249,7 @@
     "cpu-inference": [
       "comparisons/cmp-bitnet-vs-fp16-execution-cost",
       "domains/ai-models/concept-1bit-ternary-weights",
+      "domains/ai-models/reference-local-model-routing-catalog",
       "sources/src-bitnet-b158-ternary-llm"
     ],
     "gpu-inference": [
@@ -72170,7 +72376,9 @@
       "runbooks/guardian-not-running",
       "runbooks/guardian-socket-unreachable",
       "runbooks/m060-mirror-export-publish-anomalies",
+      "runbooks/metrics-correlator-lag",
       "runbooks/metrics-ingest-lag",
+      "runbooks/metrics-responder-lag",
       "runbooks/network-degraded",
       "runbooks/perimeter-audit-log-corruption",
       "runbooks/perimeter-extension-create",
@@ -72185,6 +72393,7 @@
       "runbooks/scheduler-weight-matrix-rotation",
       "runbooks/selfdef-watchdog-alert-finding",
       "runbooks/storage-degraded",
+      "runbooks/tetragon-map-errors",
       "runbooks/ux-coherence-failures",
       "spine/doctrine/peace-machine-and-core-law"
     ],
@@ -73000,6 +73209,7 @@
     ],
     "model-selection": [
       "decisions/02_validated/methodology/methodology-framework-design-decisions",
+      "domains/ai-models/reference-local-model-routing-catalog",
       "sources/src-llm-architecture-gallery-raschka"
     ],
     "versioning": [
@@ -73796,6 +74006,25 @@
       "sources/tools-integration/src-quantization-280gb-model-on-laptop-outliers-as-central-villain-and-five-algorithms",
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
       "spine/references/2026-consumer-hardware-ai-stack"
+    ],
+    "model-routing": [
+      "domains/ai-models/reference-local-model-routing-catalog"
+    ],
+    "complexity-routing": [
+      "domains/ai-models/reference-local-model-routing-catalog"
+    ],
+    "hardware-tier": [
+      "domains/ai-models/reference-local-model-routing-catalog",
+      "spine/references/ai-infrastructure-decision-framework-2026"
+    ],
+    "rtx-4090": [
+      "domains/ai-models/reference-local-model-routing-catalog"
+    ],
+    "rtx-pro": [
+      "domains/ai-models/reference-local-model-routing-catalog"
+    ],
+    "evolving": [
+      "domains/ai-models/reference-local-model-routing-catalog"
     ],
     "content-pipeline": [
       "domains/automation/ai-driven-content-pipeline",
@@ -79664,7 +79893,9 @@
       "runbooks/guardian-false-positive-rollback",
       "runbooks/guardian-not-running",
       "runbooks/guardian-socket-unreachable",
+      "runbooks/metrics-correlator-lag",
       "runbooks/metrics-ingest-lag",
+      "runbooks/metrics-responder-lag",
       "runbooks/network-degraded",
       "runbooks/perimeter-audit-log-corruption",
       "runbooks/perimeter-extension-create",
@@ -79676,6 +79907,7 @@
       "runbooks/scheduler-not-running",
       "runbooks/selfdef-watchdog-alert-finding",
       "runbooks/storage-degraded",
+      "runbooks/tetragon-map-errors",
       "runbooks/ux-coherence-failures",
       "sources/src-suricata"
     ],
@@ -80707,7 +80939,8 @@
       "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality"
     ],
     "detection": [
-      "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality"
+      "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality",
+      "runbooks/metrics-correlator-lag"
     ],
     "agent-fleet": [
       "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality"
@@ -80848,14 +81081,17 @@
     "incident-response": [
       "runbooks/guardian-audit-log-corruption",
       "runbooks/guardian-console-alert-investigation",
+      "runbooks/metrics-correlator-lag",
       "runbooks/metrics-ingest-lag",
+      "runbooks/metrics-responder-lag",
       "runbooks/network-degraded",
       "runbooks/perimeter-audit-log-corruption",
       "runbooks/perimeter-sigkill-investigation",
       "runbooks/scheduler-audit-log-corruption",
       "runbooks/scheduler-force-override-investigation",
       "runbooks/selfdef-watchdog-alert-finding",
-      "runbooks/storage-degraded"
+      "runbooks/storage-degraded",
+      "runbooks/tetragon-map-errors"
     ],
     "console-alert": [
       "runbooks/guardian-console-alert-investigation",
@@ -80892,14 +81128,26 @@
     "operator-facing": [
       "runbooks/m060-mirror-export-publish-anomalies"
     ],
+    "correlator-lag": [
+      "runbooks/metrics-correlator-lag"
+    ],
+    "bus": [
+      "runbooks/metrics-correlator-lag",
+      "runbooks/metrics-ingest-lag",
+      "runbooks/metrics-responder-lag"
+    ],
     "ingest-lag": [
       "runbooks/metrics-ingest-lag"
     ],
-    "bus": [
-      "runbooks/metrics-ingest-lag"
-    ],
     "meta-observability": [
-      "runbooks/metrics-ingest-lag"
+      "runbooks/metrics-ingest-lag",
+      "runbooks/tetragon-map-errors"
+    ],
+    "responder-lag": [
+      "runbooks/metrics-responder-lag"
+    ],
+    "response": [
+      "runbooks/metrics-responder-lag"
     ],
     "internet": [
       "runbooks/network-degraded"
@@ -80952,7 +81200,8 @@
       "runbooks/perimeter-tetragon-not-running"
     ],
     "kernel-fence": [
-      "runbooks/perimeter-tetragon-not-running"
+      "runbooks/perimeter-tetragon-not-running",
+      "runbooks/tetragon-map-errors"
     ],
     "backpressure": [
       "runbooks/scheduler-backpressure-stuck-open"
@@ -81001,6 +81250,9 @@
     ],
     "log-rotate": [
       "runbooks/storage-degraded"
+    ],
+    "event-drop": [
+      "runbooks/tetragon-map-errors"
     ],
     "ux-coherence": [
       "runbooks/ux-coherence-failures"
@@ -84313,9 +84565,6 @@
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "subscription": [
-      "spine/references/ai-infrastructure-decision-framework-2026"
-    ],
-    "hardware-tier": [
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "decision-matrix": [
