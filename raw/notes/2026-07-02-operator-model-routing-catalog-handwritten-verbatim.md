@@ -8,8 +8,11 @@
 > This is an **evolving, tentative** catalog (crossings-out, `ou` = "or"
 > alternatives, hardware-tier splits). Transcribed as faithfully as the
 > handwriting allows; `[?]` marks an uncertain reading — do NOT treat any
-> entry as canonical/fixed. Domain: AICP-style local-inference model routing
-> (complexity-routed, ternary/BitNet-1.58-bit weighted).
+> entry as canonical/fixed. Domain: local-inference model routing for the
+> operator's Custom-Tailored Model Group mission ("Group of MoE models of various
+> sizes and needs" + profiles + intelligence layer, 2026-05-04); ternary/BitNet-
+> 1.58-bit weighted. (Earlier draft mislabeled this "AICP" — the operator never
+> said AICP; corrected to the actual mission this catalog serves.)
 
 ## Image 1 — workload × hardware-tier routing
 

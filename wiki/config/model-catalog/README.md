@@ -1,7 +1,8 @@
 # Model Catalog — flexible registry for a large, evolving model fleet
 
-> Config-driven registry for the **tons of models** the local-inference layer
-> (AICP) supports. Built to **stay flexible**: adding a model, a group, or a
+> Config-driven registry for the **tons of models** the operator's
+> **Custom-Tailored Model Group** ("Group of MoE models of various sizes and
+> needs", 2026-05-04 mission) supports. Built to **stay flexible**: adding a model, a group, or a
 > routing profile is a small data edit here — never a prose rewrite. Seeded
 > 2026-07-02 from the operator's handwritten catalog
 > (`raw/notes/2026-07-02-operator-model-routing-catalog-handwritten-verbatim.md`).
@@ -17,7 +18,7 @@ deliberately additive and reshapeable.
 |---|---|---|
 | `models.yaml` | **Model** | One entry per individual model. `quantization` is a first-class field because most of the fleet is **ternary / BitNet-1.58** — the thing that makes 70B–120B run locally. |
 | `groups.yaml` | **Group model** | Composite models: `moe` (mixture-of-experts), `merged` (mergekit-style base pools), `ensemble`, `replicated` (N× the same base). Members reference `models.yaml` ids. |
-| `profiles.yaml` | **Profile** | A named routing selection: for a task, which model(s) on which hardware tier. This is the complexity-routing surface AICP consumes. Selections reference model + group ids. |
+| `profiles.yaml` | **Profile** | A named routing selection: for a task, which model(s) on which hardware tier. This is the input-boundary **intelligence-layer routing** surface of the model-group mission. Selections reference model + group ids. |
 
 ## Model schema (`models.yaml`)
 
@@ -113,8 +114,8 @@ per-profile `routing` overrides it with the operator's actual choices.
 `selections` says *what is available* on each tier; `routing` says *which model
 fires at which task-complexity*. A `routing` entry's `prefer` must be a model or
 group id that also appears in this profile's `selections`. Bands may be sparse
-(list only the ones this profile distinguishes); AICP rounds a task's complexity
-score to the nearest defined band at or below it.
+(list only the ones this profile distinguishes); the intelligence-layer router
+rounds a task's complexity score to the nearest defined band at or below it.
 
 ## How to extend (the flexibility contract)
 
@@ -124,12 +125,14 @@ score to the nearest defined band at or below it.
 - **A model is uncertain / tentative** → `confidence: low` + a `notes` caveat. Never drop it; the catalog is a living surface (`"everything evolves and everything is flexible"`).
 - Ids are the join keys. Keep them stable; groups and profiles resolve models by id.
 
-## Consuming the catalog (AICP contract)
+## Consuming the catalog (intelligence-layer contract)
 
 `tools/model_catalog.py` is the shared loader/resolver. It reads the three
 YAMLs, checks referential integrity, and produces a single **resolved** object
-(profiles with their `routing` bands expanded to full model records). AICP —
-the complexity-routed local-inference layer — consumes that resolved form:
+(profiles with their `routing` bands expanded to full model records). The
+**input-boundary intelligence layer** of the model-group mission (whatever
+router the operator wires — Multica / a Python router / etc.) consumes that
+resolved form:
 
 ```
 python3 -m tools.model_catalog validate           # referential-integrity gate
@@ -138,7 +141,7 @@ python3 -m tools.model_catalog export [OUT.json]   # write the resolved JSON con
 
 `export` writes `wiki/config/model-catalog/model-catalog.generated.json` by
 default (a stable machine contract: `{models, groups, profiles}` with routing
-resolved). AICP pulls that JSON (or imports `tools.model_catalog.load_resolved()`
+resolved). The router pulls that JSON (or imports `tools.model_catalog.load_resolved()`
 directly when co-located). The generated JSON is a build artifact — regenerate it
 after edits; the YAMLs are the source of truth.
 

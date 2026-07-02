@@ -17,7 +17,7 @@ sources:
     file: raw/notes/2026-07-02-operator-model-routing-catalog-handwritten-verbatim.md
     title: Operator handwritten model-routing catalog (verbatim)
     ingested: 2026-07-02
-tags: [ai-models, model-routing, complexity-routing, ternary, bitnet, 1bit, local-inference, aicp, hardware-tier, model-selection, cpu-inference, rtx-4090, rtx-pro, evolving]
+tags: [ai-models, model-routing, complexity-routing, ternary, bitnet, 1bit, local-inference, moe-group, intelligence-layer, custom-model, senior-engineer-tier, hardware-tier, model-selection, cpu-inference, rtx-4090, rtx-pro, evolving]
 ---
 
 # Local Model Routing Catalog (task × hardware tier)
@@ -49,14 +49,18 @@ tags: [ai-models, model-routing, complexity-routing, ternary, bitnet, 1bit, loca
 
 ## Summary
 
-A complexity-routed **model selection matrix** for $0 local inference: which
-local model to run for a given **task type** (coding, chat, analysis, agents,
-orchestration, plus scientific and specialist workloads) on a given **hardware
-tier** (CPU · RTX 4090 · RTX Pro). The catalog is weighted heavily toward
-**ternary / BitNet-1.58-bit** quantized weights, which is what makes 70B–120B
-models tractable on consumer/prosumer GPUs and even CPU. It is the concrete
-routing table AICP (the complexity-routed local-inference project) implements;
-the wiki holds it as evolving knowledge so the structure flexes as models change.
+A **model selection matrix** for local inference: which local model to run for a
+given **task type** (coding, chat, analysis, agents, orchestration, plus
+scientific and specialist workloads) on a given **hardware tier** (CPU · RTX 4090
+· RTX Pro). The catalog is weighted heavily toward **ternary / BitNet-1.58-bit**
+quantized weights, which is what makes 70B–120B models tractable on
+consumer/prosumer GPUs and even CPU. It is the concrete **"Group of MoE models of
+various sizes and needs" + routing profiles** that instantiate the operator's
+[Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer]
+mission (2026-05-04): the group of models this catalog names, and the profiles
+that route them, are the model-group and input-boundary intelligence-layer of
+that mission. The wiki holds it as evolving knowledge so the structure flexes as
+models change.
 
 ## Routing by task × hardware tier (Image 1)
 
@@ -131,4 +135,5 @@ Candidate bases for `mergekit`-style ternary/1.58-bit merges:
 
 - BUILDS ON [[concept-1bit-ternary-weights]] — ternary/BitNet weights are what make the 70B–120B tiers here runnable locally.
 - RELATES TO [[local-llm-quantization]] — the quantization techniques (MLX, GGUF, prequantized 1.58-bit) behind these model entries.
-- FEEDS INTO AICP (complexity-routed local inference) — this is the routing table AICP implements to hit the $0 local-inference target.
+- FEEDS INTO [[custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis|Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer]] — this catalog is the concrete "Group of MoE models of various sizes and needs" + the input-boundary routing profiles of that mission.
+- RELATES TO [[custom-tailored-senior-engineer-tier-model-group-2026-05-04|Custom-Tailored Model Group — Learning Path]] — the model group + intelligence-layer arc this catalog serves.

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-02T16:53:16.807248+00:00",
+  "generated": "2026-07-02T17:01:57.692800+00:00",
   "stats": {
     "pages": 983,
     "domains": 16,
@@ -13455,7 +13455,10 @@
         "bitnet",
         "1bit",
         "local-inference",
-        "aicp",
+        "moe-group",
+        "intelligence-layer",
+        "custom-model",
+        "senior-engineer-tier",
         "hardware-tier",
         "model-selection",
         "cpu-inference",
@@ -69728,7 +69731,6 @@
       "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
       "decisions/01_drafts/skills-as-primary-extension-pattern",
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations",
-      "domains/ai-models/reference-local-model-routing-catalog",
       "domains/cross-domain/mcp-runtime-signaling",
       "domains/devops/four-project-ecosystem",
       "domains/tools-and-platforms/aicp",
@@ -70355,24 +70357,28 @@
     ],
     "custom-model": [
       "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "domains/ai-models/reference-local-model-routing-catalog",
       "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
       "spine/learning-paths/custom-tailored-senior-engineer-tier-model-group-2026-05-04",
       "spine/references/second-brain-custom-model-strategy"
     ],
     "senior-engineer-tier": [
       "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "domains/ai-models/reference-local-model-routing-catalog",
       "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
       "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
       "spine/learning-paths/custom-tailored-senior-engineer-tier-model-group-2026-05-04"
     ],
     "moe-group": [
       "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "domains/ai-models/reference-local-model-routing-catalog",
       "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
       "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
       "spine/learning-paths/custom-tailored-senior-engineer-tier-model-group-2026-05-04"
     ],
     "intelligence-layer": [
       "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "domains/ai-models/reference-local-model-routing-catalog",
       "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
       "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
       "spine/learning-paths/custom-tailored-senior-engineer-tier-model-group-2026-05-04"

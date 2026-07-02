@@ -10,7 +10,8 @@ single source of logic:
                            dangling group member / profile selection /
                            ``routing.prefer``; warns (never fails) on unknown
                            enum values so the catalog stays extensible.
-  * ``load_resolved()``  — the machine contract AICP consumes: profiles with
+  * ``load_resolved()``  — the machine contract the model-group's
+                           intelligence-layer router consumes: profiles with
                            their ``routing`` bands expanded to full model
                            records and groups resolved to their members.
   * ``export(path)``     — write the resolved contract as JSON.
@@ -178,10 +179,10 @@ def validate(catalog: dict[str, list[dict]] | None = None) -> tuple[list[str], l
 
 
 def load_resolved(catalog: dict[str, list[dict]] | None = None) -> dict[str, Any]:
-    """The AICP contract: models by id, groups with member records, profiles
-    with routing bands expanded to full model/group records."""
+    """The intelligence-layer routing contract: models by id, groups with member
+    records, profiles with routing bands expanded to full model/group records."""
     cat = catalog or load_catalog()
-    # Annotate every model with its derived status so the AICP contract carries it.
+    # Annotate every model with its derived status so the routing contract carries it.
     for m in cat["models"]:
         m.setdefault("status", derived_status(m))
     models_by_id = {m["id"]: m for m in cat["models"] if m.get("id")}
