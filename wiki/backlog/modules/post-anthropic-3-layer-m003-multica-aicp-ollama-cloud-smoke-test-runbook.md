@@ -188,7 +188,7 @@ If Variant B passes: **2-layer Multica + Ollama Cloud composability validated as
 
 ## Why This Matters
 
-This module is **the empirical verification gate** for the parent epic's "3-layer composability achieved" claim. Per [Saturation Lesson](../../lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work.md) and [Principle 4](../../lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md), the architecture documentation is aspirational until operator runs the round-trip and confirms each layer participated. **This runbook IS that verification gate.** Once Variant A passes, the [anti-vendor-lock-in lesson Evidence 10](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) graduates from "documented" to "operator-validated" — same pattern as the wiki's prior P4 verifications.
+This module is **the empirical verification gate** for the parent epic's "3-layer composability achieved" claim. Per [Saturation Lesson](../../lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work.md) and [Principle 4](../../lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md), the architecture documentation is aspirational until operator runs the round-trip and confirms each layer participated. **This runbook IS that verification gate.** Once Variant A passes, the [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|anti-vendor-lock-in lesson Evidence 10]] graduates from "documented" to "operator-validated" — same pattern as the wiki's prior P4 verifications.
 
 ## Relationships
 

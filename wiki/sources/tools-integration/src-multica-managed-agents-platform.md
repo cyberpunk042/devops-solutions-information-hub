@@ -111,7 +111,7 @@ Multica ([multica-ai/multica](https://github.com/multica-ai/multica), Apache 2.0
 
 6. **Code execution stays local.** Per Multica's FAQ: *"Agent execution happens on your machine (local daemon) or your own cloud infrastructure. Code never passes through Multica servers. The platform only coordinates task state and broadcasts events."* Multica is a **coordinator**, not a code-running middleman. This is structurally important for the wiki's data-sovereignty claims.
 
-7. **Vendor-neutrality is structurally enforced**, not just claimed. Apache 2.0 license + 10-harness auto-detection + self-host option + BYO LLM provider (the harness layer's responsibility) = no single vendor can lock the operator at the orchestrator layer. The wiki's [anti-vendor-lock-in lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) Evidence-chain gains a new layer.
+7. **Vendor-neutrality is structurally enforced**, not just claimed. Apache 2.0 license + 10-harness auto-detection + self-host option + BYO LLM provider (the harness layer's responsibility) = no single vendor can lock the operator at the orchestrator layer. The wiki's [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|anti-vendor-lock-in lesson]] Evidence-chain gains a new layer.
 
 8. **The 10-harness list is comprehensive against the wiki's harness landscape.** Per [agentic-coding-harness-landscape-2026](src-agentic-coding-harness-landscape-2026.md), the wiki documents 11+ harnesses. Multica supports 10 of them. Notable absences from Multica's auto-detect list: Aider, Cline, Continue, Crush, Goose. Most of the wiki-documented "Tier 1" harnesses (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, OpenClaw) are covered.
 
@@ -151,7 +151,7 @@ Operator-side install touches **one binary** + **one daemon process** + (optiona
 
 ## Mission Alignment — The Third Substitution Layer
 
-Per the [anti-vendor-lock-in lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md), the wiki's mission claim is empirical when every stack layer has direct paper evidence demonstrating substitutability. Multica adds a layer the lesson's existing 9-layer evidence chain (generation × 3 / retrieval / inference paradigm / training framework / environment library / evaluation × 4 / loss objective / + deployment validation) had not covered: **orchestrator**.
+Per the [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|anti-vendor-lock-in lesson]], the wiki's mission claim is empirical when every stack layer has direct paper evidence demonstrating substitutability. Multica adds a layer the lesson's existing 9-layer evidence chain (generation × 3 / retrieval / inference paradigm / training framework / environment library / evaluation × 4 / loss objective / + deployment validation) had not covered: **orchestrator**.
 
 > [!success] **Three substitution dimensions composable**
 >

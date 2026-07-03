@@ -210,7 +210,7 @@ The wiki's mission ([feedback_mission_framing.md](file:///home/jfortin/.claude/p
 > - Provider commercial tier: free · paid-base · paid-pro · enterprise
 > - Speed-vs-cost tradeoff: per-token-faster · flat-rate-slower-but-budget-predictable
 >
-> **Operator-mission application**: the [Goldilocks Protocol](../04_principles/hypothesis/goldilocks-protocol.md) applies at the provider economics level — operator picks per workload class:
+> **Operator-mission application**: the [[goldilocks-protocol|Goldilocks Protocol]] applies at the provider economics level — operator picks per workload class:
 >
 > | Workload class | Optimal provider × billing |
 > |---|---|

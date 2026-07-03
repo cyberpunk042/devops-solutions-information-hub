@@ -217,7 +217,7 @@ Per the operator-authored [tamper-proof-model concept](../../domains/cross-domai
 | **KV cache** | Asymmetric quantization + sparsity | 50–87% | Compose with caveman; not in caveman repo |
 | **Encryption overlay** | AES-256-GCM on compressed form | +0% space | Composes; cypher rides on the compressed bytes |
 
-**Caveman delivers the prompt-layer 80–90% directly via Wenyan mode** — the operator's number is empirically attainable at one layer alone. Stacking caveman + UD-IQ2 + KV-cache compression compounds the savings. The cypher/decypher overlay then operates on the already-compressed forms with no additional space cost. **The operator's 80–90% envelope is empirically defensible.** This synthesis is the prompt-layer slice's evidence in the [anti-vendor-lock-in lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) Evidence 11's substitution-axis table.
+**Caveman delivers the prompt-layer 80–90% directly via Wenyan mode** — the operator's number is empirically attainable at one layer alone. Stacking caveman + UD-IQ2 + KV-cache compression compounds the savings. The cypher/decypher overlay then operates on the already-compressed forms with no additional space cost. **The operator's 80–90% envelope is empirically defensible.** This synthesis is the prompt-layer slice's evidence in the [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|anti-vendor-lock-in lesson]] Evidence 11's substitution-axis table.
 
 ## Compression Mechanism — Detailed View
 

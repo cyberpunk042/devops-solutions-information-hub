@@ -90,7 +90,7 @@ The arXiv 2601.02872 v1 paper PDF (6 Jan 2026; 28 pages with Appendix; 2226-line
 | **Three findings (validated empirically)** | (1) Long-context optimization > parameter scaling · (2) Effective context << claimed context · (3) Thinking paradigm requires native training |
 | **Future work** | "Critique-of-Critique" recursive verification (cf. DeepSeekMath-V2 meta-verification) |
 | **Confidence** | high — full paper PDF read (lines 1-2226) including all 5 tables, all 3 findings with their empirical anchors, full 11×25 task taxonomy, all 5 construction strategies, all 5 quality dimensions, all 7 appendices (task definitions A · annotation guidelines B · annotator statistics C · inference parameters D · truncation length E) |
-| **Mission relevance** | Critical — Step 1 dependency for [RLM-Qwen3.6-27B operations plan](../../domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan.md); Evidence 6 (evaluation layer) for [anti-vendor-lock-in lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) |
+| **Mission relevance** | Critical — Step 1 dependency for [RLM-Qwen3.6-27B operations plan](../../domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan.md); Evidence 6 (evaluation layer) for [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence\|anti-vendor-lock-in lesson]] |
 
 ## Key Insights
 
@@ -413,7 +413,7 @@ This matrix is the most comprehensive long-context evaluation publicly available
 >
 > **The operations plan's Step 1 is no longer aspirational** — it's executable as written. P4 (Declarations Aspirational Until Verified) applied at the dataset-acquisition layer.
 
-> [!success] **Evidence 6 of [anti-vendor-lock-in lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) is anchored at full Layer 1 on the LongBench Pro side**
+> [!success] **Evidence 6 of [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|anti-vendor-lock-in lesson]] is anchored at full Layer 1 on the LongBench Pro side**
 >
 > The lesson's Evidence 6 cites the 4 RLM Table 1 benchmarks as "public, released with evaluation harnesses, reproducible." This synth grounds the LongBench Pro side at full PDF depth: 1,500 samples, 11×25 task taxonomy, public dataset URL, complete annotation methodology, 99.3% attribute correctness audit, 46-model evaluation table, Pass@N + Best-of-N upper-bound analyses.
 >

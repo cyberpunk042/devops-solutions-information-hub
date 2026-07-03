@@ -113,7 +113,7 @@ This compounds the existing feedback memory set (file-type · research-not-abstr
 
 ### EDIT — augmentations to existing pages
 
-5. **EDIT** — [Anti-Vendor-Lock-In Lesson](../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) — Evidence 11 added (4-layer empirical claim with 6 substitution axes within trust layer)
+5. **EDIT** — [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Anti-Vendor-Lock-In Lesson]] — Evidence 11 added (4-layer empirical claim with 6 substitution axes within trust layer)
 6. **EDIT** — [Post-Anthropic 3-Layer Epic](../backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090.md) — EXTENDED-2026-04-30 annotation pointing to trust-layer epic; the two epics compose
 7. **EDIT** — [Post-Anthropic Self-Autonomous Stack Milestone](../backlog/milestones/post-anthropic-self-autonomous-stack.md) — trust-layer epic added to `epics:` list; 2 new acceptance criteria for 4th-layer property
 8. **EDIT** — [AI Decision Matrix 2026](../spine/references/ai-model-provider-harness-decision-matrix-2026.md) — Trust / Confidential-Compute Layer section added; matrix is now 4-axis (Trust × Orchestrator × Harness × Provider); quarterly review triggers extended

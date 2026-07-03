@@ -201,7 +201,7 @@ That's 35 substantive reads (well above the operator's "20-30+ request" threshol
 
 ## The bug — verified diagnosis from project's own evidence
 
-**Verified location**: the bug lives at Layer 2 of [model-quality-failure-prevention.md](wiki/spine/models/quality/model-quality-failure-prevention.md)'s 3-layer defense:
+**Verified location**: the bug lives at Layer 2 of [[model-quality-failure-prevention]]'s 3-layer defense:
 
 | Layer | Mechanism | Compliance | Coverage of THIS bug |
 |---|---|---|---|
@@ -209,7 +209,7 @@ That's 35 substantive reads (well above the operator's "20-30+ request" threshol
 | **2 — Teaching** | **CLAUDE.md / .claude/rules / skills** | **~60%** | **← bug lives here. Quantified failure mode of instruction-layer enforcement.** |
 | 3 — Review | Human gates at boundaries | 100% when engaged | YES — operator catch-and-correct, working empirically every session |
 
-**Verified mechanism gap**: per [model-skills-commands-hooks.md](wiki/spine/models/agent-config/model-skills-commands-hooks.md), Claude Code exposes 26 lifecycle events × 7 categories. The categories are: Session, Tool, Permission, Subagent, Task, System, Compaction. **There is no Response category.** No `PreEmit`/`PreResponse` event. The agent's response-composition step — where "answer from internalized summary" vs "tool-call Read first then answer" gets decided — is unreachable by hooks.
+**Verified mechanism gap**: per [[model-skills-commands-hooks]], Claude Code exposes 26 lifecycle events × 7 categories. The categories are: Session, Tool, Permission, Subagent, Task, System, Compaction. **There is no Response category.** No `PreEmit`/`PreResponse` event. The agent's response-composition step — where "answer from internalized summary" vs "tool-call Read first then answer" gets decided — is unreachable by hooks.
 
 **Verified named lesson**: [wiki/lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents.md](wiki/lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents.md) — already validated. The wiki teaches it. The agent doesn't reliably practice it. Recurs because it's at Layer 2.
 
@@ -236,9 +236,9 @@ The fix path per P4 itself: pair every declaration with a verification gate, OR 
 | # | Action | Approval needed | Comment |
 |---|---|---|---|
 | **A** | Build first skill at `.claude/skills/answer-from-spine/SKILL.md` — description-matches knowledge-question shapes; body MUSTs reading relevant spine page before answering | Yes — adds new mechanism to brain config | Closes ~60-70% of the Layer-2 gap. Operator's verbatim 2026-04-24 ratifies skills as a designed layer ("skills = 70% deterministic"). |
-| **B** | Fix the P4 instance in [model-claude-code.md](wiki/spine/models/agent-config/model-claude-code.md) — update the "Real instance" callout to verified reality (9 commands, 0 skills, 4 hooks) | Yes — spine model page edit | Eliminates one cross-layer P4 instance the wiki currently exhibits in its own teaching. |
+| **B** | Fix the P4 instance in [[model-claude-code]] — update the "Real instance" callout to verified reality (9 commands, 0 skills, 4 hooks) | Yes — spine model page edit | Eliminates one cross-layer P4 instance the wiki currently exhibits in its own teaching. |
 | **C** | Strengthen UserPromptSubmit hook to detect knowledge-question keyword shapes and inject pointer to relevant spine page | Yes — settings.json hook addition | More pointed Layer-2 teaching at prompt-arrival time. Doesn't reach 100% but better than ambient session-start reminder. |
-| **D** | Add Evidence 6 to [self-reference-drift lesson](wiki/lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings.md) — this session's surface-answer + the second P4 instance found in spine | Borderline — adding evidence to a validated lesson; the lesson explicitly invites further evidence on Open Question 2 | Closes another instance of the lesson's recurring failure mode. Pipeline post required after. |
+| **D** | Add Evidence 6 to [[self-reference-drift-wiki-must-practice-its-own-teachings\|self-reference-drift lesson]] — this session's surface-answer + the second P4 instance found in spine | Borderline — adding evidence to a validated lesson; the lesson explicitly invites further evidence on Open Question 2 | Closes another instance of the lesson's recurring failure mode. Pipeline post required after. |
 | **E** | Operate from the regathered context on actual mission/wiki/whatever work you direct | None — your direction sets the work | The session-by-session catch-and-correct is the working Layer-3 mechanism. Discipline is exercised by doing well, not by adding more brain mechanisms. |
 
 ## State at log time
@@ -250,7 +250,7 @@ The fix path per P4 itself: pair every declaration with a verification gate, OR 
 
 ## Mission anchor — T-0
 
-**2026-04-27 is today.** Per [aicp-session-handoff](file:///home/jfortin/devops-expert-local-ai/docs/SESSION-2026-04-24-HANDOFF.md): mission Stage 5 (80%+ Claude reduction) is reachable on smart cloud-tier routing alone — `Ollama Cloud Pro $27 + OpenRouter for client work ~$60 + local sovereignty fallback` — dropping cloud spend $540 → ~$100 CAD/mo (80% reduction) without hardware investment. The wiki's contribution side is in place per the [2026-04-25 ingestion handoff](wiki/log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch.md): Qwen3.6-27B documented as tier-0 candidate at the spine layer; AICP E008-E012 milestone impacts tracked.
+**2026-04-27 is today.** Per [aicp-session-handoff](file:///home/jfortin/devops-expert-local-ai/docs/SESSION-2026-04-24-HANDOFF.md): mission Stage 5 (80%+ Claude reduction) is reachable on smart cloud-tier routing alone — `Ollama Cloud Pro $27 + OpenRouter for client work ~$60 + local sovereignty fallback` — dropping cloud spend $540 → ~$100 CAD/mo (80% reduction) without hardware investment. The wiki's contribution side is in place per the [[2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch|2026-04-25 ingestion handoff]]: Qwen3.6-27B documented as tier-0 candidate at the spine layer; AICP E008-E012 milestone impacts tracked.
 
 ## Relationships
 

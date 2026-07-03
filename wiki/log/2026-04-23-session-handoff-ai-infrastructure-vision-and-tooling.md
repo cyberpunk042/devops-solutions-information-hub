@@ -257,10 +257,10 @@ cat wiki/log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling.md
 ```
 
 Then read in this order if unfamiliar:
-1. [ai-infrastructure-decision-framework-2026.md](wiki/spine/references/ai-infrastructure-decision-framework-2026.md) — the vision
-2. [ai-model-provider-harness-decision-matrix-2026.md](wiki/spine/references/ai-model-provider-harness-decision-matrix-2026.md) — the lookup
-3. [src-opencode-harness-features.md](wiki/sources/tools-integration/src-opencode-harness-features.md) — what the operator just activated
-4. [local-training-playbook-2026.md](wiki/spine/references/local-training-playbook-2026.md) — training answers
+1. [[ai-infrastructure-decision-framework-2026]] — the vision
+2. [[ai-model-provider-harness-decision-matrix-2026]] — the lookup
+3. [[src-opencode-harness-features]] — what the operator just activated
+4. [[local-training-playbook-2026]] — training answers
 
 ## Known issues to watch for
 

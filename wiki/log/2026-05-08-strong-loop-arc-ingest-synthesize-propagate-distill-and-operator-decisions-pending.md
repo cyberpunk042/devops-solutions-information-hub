@@ -82,9 +82,9 @@ Multi-iteration strong-loop arc spanning the ingest+synthesize+propagate+distill
 
 | Lesson | Update |
 |---|---|
-| [Multi-Layer Compression Lesson](../lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers.md) | +Evidence 13 (DFlash) +Evidence 14 (Skill Chaining cross-layer) |
-| [Anti-Vendor-Lock-In Lesson](../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) | +Orchestration-pattern axis (Phil Schmid quartet) within Evidence 10 +TPU v5p in Evidence 11 hardware-vendor row |
-| [Spec-Driven Convergence Lesson](../lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md) | +9th instance (Skill Chaining V1→V2) +operator's 11-impact-area doctrine denotation (sacrosanct verbatim) |
+| [[end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers\|Multi-Layer Compression Lesson]] | +Evidence 13 (DFlash) +Evidence 14 (Skill Chaining cross-layer) |
+| [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence\|Anti-Vendor-Lock-In Lesson]] | +Orchestration-pattern axis (Phil Schmid quartet) within Evidence 10 +TPU v5p in Evidence 11 hardware-vendor row |
+| [[spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts\|Spec-Driven Convergence Lesson]] | +9th instance (Skill Chaining V1→V2) +operator's 11-impact-area doctrine denotation (sacrosanct verbatim) |
 
 ### Concept page updates
 

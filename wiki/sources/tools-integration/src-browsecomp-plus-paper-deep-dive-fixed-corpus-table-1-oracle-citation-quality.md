@@ -88,7 +88,7 @@ The arXiv 2508.06600 v1 paper PDF (8 Aug 2025; 26 pages with Appendix; 1334-line
 | **Cheapest run (Table 8)** | **Gemini 2.5 Flash + Qwen3-Embed-8B = $41.29** |
 | **Released** | Yes — benchmark data + evaluation scripts + baselines all public |
 | **Confidence** | high — full paper PDF read (lines 1-1334) including all 8 tables, 5 ablation studies, all 7 appendices (prompts, labelling UI, problematic cases, hard-negative-mining prompts, evaluation prompts, API cost table); raw is the actual paper, not the abstract page |
-| **Mission relevance** | Critical — Evidence 2 in the [anti-vendor-lock-in lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) (the retrieval-layer empirical anchor) traces specifically to this paper's Table 1 |
+| **Mission relevance** | Critical — Evidence 2 in the [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence\|anti-vendor-lock-in lesson]] (the retrieval-layer empirical anchor) traces specifically to this paper's Table 1 |
 
 ## Key Insights
 
@@ -377,7 +377,7 @@ Patterns:
 
 ### Why This Matters for the Wiki's Mission
 
-> [!success] **The retriever-layer empirical anchor for the [anti-vendor-lock-in lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md)** is now grounded at full Layer-1 PDF depth
+> [!success] **The retriever-layer empirical anchor for the [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|anti-vendor-lock-in lesson]]** is now grounded at full Layer-1 PDF depth
 >
 > The lesson's Evidence 2 cites **+14 absolute points on BrowseComp+** from BM25 → Qwen3-Embedding-8B with the same generation model (GPT-5). This synth shows that finding is structurally robust:
 > - It holds for **every proprietary LLM tested** (+14 to +21 points for gpt-5/o3/gpt-4.1/Sonnet/Opus/Gemini Pro+Flash)

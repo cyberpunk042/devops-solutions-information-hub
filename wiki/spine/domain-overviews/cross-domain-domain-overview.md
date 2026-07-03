@@ -85,12 +85,12 @@ All concept pages assigned maturity. All styled with callout vocabulary.
 
 ## Key Pages
 
-1. **[Methodology Framework](../../domains/cross-domain/methodology-framework.md)** — The meta-system for defining, selecting, and composing methodology models across the ecosystem.
-2. **[Skyscraper, Pyramid, Mountain](../../domains/cross-domain/skyscraper-pyramid-mountain.md)** — Architectural quality analogy: three structural states of a codebase (fragile, solid, organic).
-3. **[Plan Execute Review Cycle](../../patterns/plan-execute-review-cycle.md)** — The most-validated pattern in the wiki. Four independent instances across OpenFleet, harness engineering, Claude Code, and the research pipeline.
-4. **[Deterministic Shell LLM Core](../../patterns/deterministic-shell-llm-core.md)** — Use deterministic state machines for coordination, reserve LLM calls for reasoning.
+1. **[[methodology-framework|Methodology Framework]]** — The meta-system for defining, selecting, and composing methodology models across the ecosystem.
+2. **[[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]]** — Architectural quality analogy: three structural states of a codebase (fragile, solid, organic).
+3. **[[plan-execute-review-cycle|Plan Execute Review Cycle]]** — The most-validated pattern in the wiki. Four independent instances across OpenFleet, harness engineering, Claude Code, and the research pipeline.
+4. **[[deterministic-shell-llm-core|Deterministic Shell LLM Core]]** — Use deterministic state machines for coordination, reserve LLM calls for reasoning.
 5. **[Skills Architecture Patterns](../../comparisons/skills-architecture-patterns.md)** — Cross-ecosystem synthesis across Claude Code, Obsidian, and NotebookLM.
-6. **[Decision: MCP vs CLI for Tool Integration](../../decisions/mcp-vs-cli-for-tool-integration.md)** — CLI + Skills beats MCP for token efficiency in interactive contexts.
+6. **[[mcp-vs-cli-for-tool-integration|Decision: MCP vs CLI for Tool Integration]]** — CLI + Skills beats MCP for token efficiency in interactive contexts.
 
 ## FAQ
 

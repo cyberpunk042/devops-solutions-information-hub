@@ -102,7 +102,7 @@ Post-compaction continuation of the 2026-05-04 day-arc. Operator opened a new st
 
 4. **EDIT** — [Post-Anthropic Milestone](../backlog/milestones/post-anthropic-self-autonomous-stack.md) — added new epic to `epics:` list + 3 EXTENDED 2026-05-04 acceptance criteria
 5. **EDIT** — [Second-Brain Custom Model Strategy](../spine/references/second-brain-custom-model-strategy.md) — 2026-05-04 addendum: senior-engineer-tier + behavioral-alignment + recreated intelligence layer + multi-version + composition; 6-dimension extension table; strategic-tier phased-rollout reshape
-6. **EDIT** — [Anti-Vendor-Lock-In Lesson](../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) — candidate Evidence 12 (custom-model-customization layer); 8-axis substitution table; Option A vs Option B layer-count operator-decision pending M006
+6. **EDIT** — [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Anti-Vendor-Lock-In Lesson]] — candidate Evidence 12 (custom-model-customization layer); 8-axis substitution table; Option A vs Option B layer-count operator-decision pending M006
 
 ### Raw provenance
 

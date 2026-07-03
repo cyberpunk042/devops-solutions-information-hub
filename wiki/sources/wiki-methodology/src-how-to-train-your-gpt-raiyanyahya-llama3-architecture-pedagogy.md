@@ -56,7 +56,7 @@ Raiyan Yahya's open-source repository **"How To Train Your GPT"** is a **12-chap
 > | **SwiGLU** (swish-gated linear unit) | PaLM, LLaMA, Gemini | Learns which information to pass or block; gating mechanism beats ReLU/GeLU on most tasks |
 > | **Pre-Norm** | GPT-3 onward | Stable training at 100+ layers; mandatory for modern depth |
 > | **AdamW** | GPT-3+ | Better generalization than vanilla Adam; modern standard |
-> | **BPE** (Byte Pair Encoding) | GPT-2/3/4 | Handles any text including unseen words and emoji; tokenization-drift concern (per [Tokenization Drift Synthesis](src-tokenization-drift-and-automated-prompt-optimization-marktechpost.md)) applies |
+> | **BPE** (Byte Pair Encoding) | GPT-2/3/4 | Handles any text including unseen words and emoji; tokenization-drift concern (per [[src-tokenization-drift-and-automated-prompt-optimization-marktechpost\|Tokenization Drift Synthesis]]) applies |
 > | **Weight Tying** | GPT-2/3 | Saves 30% parameters and improves training signal |
 > | **Mixed Precision** (bf16/fp16) | All production LLMs | 2× speed, half memory, same quality |
 >
@@ -64,7 +64,7 @@ Raiyan Yahya's open-source repository **"How To Train Your GPT"** is a **12-chap
 
 > [!success] **The pedagogy IS the spec-driven convergence applied to model authoring.**
 >
-> Per [Spec-Driven Agentic Build Convergence Lesson](../../lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md): structured artifacts authored before any code; verification checklist per chapter; progress tracking per chapter; closed-loop sync ("if you find a bug, a typo, or something unclear in the code or the chapters" → fix the chapter first, then the code). Yahya's repo IS this pattern applied to a model-training tutorial:
+> Per [[spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts|Spec-Driven Agentic Build Convergence Lesson]]: structured artifacts authored before any code; verification checklist per chapter; progress tracking per chapter; closed-loop sync ("if you find a bug, a typo, or something unclear in the code or the chapters" → fix the chapter first, then the code). Yahya's repo IS this pattern applied to a model-training tutorial:
 >
 > | Spec-driven element | How Yahya's repo instantiates it |
 > |---|---|
@@ -90,7 +90,7 @@ Raiyan Yahya's open-source repository **"How To Train Your GPT"** is a **12-chap
 > |---|---|
 > | Bigger model (`num_layers` 12 → 24) | M002 — pick a 27B+ base for the senior-engineer-tier specialist |
 > | More data (BookCorpus, C4, The Pile) | M001 — operator-curated wiki + sister-projects + raw/notes corpus |
-> | Flash Attention | Already shipped in Qwen3.6-27B + RLM-Qwen3-8B + LFM 2; sparse-attention candidate per [SubQuadratic synthesis](src-subquadratic-subq-12m-context-sparse-attention-and-anythingllm-breakthrough-leads.md) |
+> | Flash Attention | Already shipped in Qwen3.6-27B + RLM-Qwen3-8B + LFM 2; sparse-attention candidate per [[src-subquadratic-subq-12m-context-sparse-attention-and-anythingllm-breakthrough-leads\|SubQuadratic synthesis]] |
 > | Grouped Query Attention | Already shipped in modern bases including LFM 2 |
 > | **LoRA fine-tuning** | **M002 — the operator's actual training mechanism** |
 > | **RLHF / DPO** | **M004 — behavioral preference fine-tune; the highest-leverage module** |

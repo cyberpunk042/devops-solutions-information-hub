@@ -381,7 +381,7 @@ Global rollback if the plan fails irrecoverably partway through (per-step rollba
 
 ## Mission Framing
 
-This plan is a worked example of step 6 ("close gaps systematically") of the [anti-vendor-lock-in lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md)'s How-to-Apply. The lesson's gap analysis identified open-source paper evidence at every stack layer; this plan converts the *generation (tier-0 recursive)* layer's hypothetical from "paper evidence at 8B" to "operator-validated evidence at 27B" — provided execution succeeds.
+This plan is a worked example of step 6 ("close gaps systematically") of the [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|anti-vendor-lock-in lesson]]'s How-to-Apply. The lesson's gap analysis identified open-source paper evidence at every stack layer; this plan converts the *generation (tier-0 recursive)* layer's hypothetical from "paper evidence at 8B" to "operator-validated evidence at 27B" — provided execution succeeds.
 
 By [Principle 4](../../lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md), the tier-0 candidate comparison's "Composition Path" is **aspirational until infrastructure verifies it**. This operations plan IS that infrastructure (deterministic steps + validation gates + rollback paths). Executing the plan is what demotes the claim from aspirational to empirical. **Until executed, the plan itself is at `seed` maturity** — its very existence is the verification gate that the composition path is *concretely actionable*, not vaporware.
 

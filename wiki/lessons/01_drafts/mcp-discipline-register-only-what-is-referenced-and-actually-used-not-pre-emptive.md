@@ -138,7 +138,7 @@ Operator-doctrinal directive (2026-05-05, verbatim sacrosanct): *"MCP we must no
 > [!question] Should removed MCPs be archived or deleted entirely?
 > Archive is the safer default (the implementation may have non-trivial code; deletion loses that). **Default proposal**: move to `tools/mcp_server_archived/` with a header documenting removal date + reason; if the implementation never resurfaces in 6 months, delete entirely.
 
-> [!question] How does this lesson compose with the [Multi-Layer Compression Lesson](end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers.md)?
+> [!question] How does this lesson compose with the [[end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers|Multi-Layer Compression Lesson]]?
 > Compression operates on REGISTERED content (compressed prompts, compressed weights, etc.). MCP discipline operates on CATALOG content (what's registered to be compressible at all). **Sister disciplines**: compression maximizes leverage of what's registered; MCP discipline minimizes pre-emptive registration. Both compound at the structured-context layer.
 
 ## Self-Check — Am I About to Make This Mistake?

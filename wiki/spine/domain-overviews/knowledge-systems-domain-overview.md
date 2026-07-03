@@ -81,12 +81,12 @@ All pages assigned maturity. All styled with callout vocabulary. All have standa
 
 ## Key Pages
 
-1. **[LLM Wiki Pattern](../../domains/knowledge-systems/llm-wiki-pattern.md)** — The origin. Karpathy's three-operation model (Ingest, Query, Lint) and the "Obsidian is the IDE, LLM is the programmer, wiki is the codebase" framing.
-2. **[Wiki Ingestion Pipeline](../../domains/knowledge-systems/wiki-ingestion-pipeline.md)** — The operational implementation of the LLM Wiki Pattern. How raw sources become interlinked pages, including batch ingestion and entity extraction.
-3. **[Knowledge Evolution Pipeline](../../domains/knowledge-systems/knowledge-evolution-pipeline.md)** — How pages promote from seed to canonical: scoring algorithm, evolution candidates, review workflow.
-4. **[Second Brain Architecture](../../domains/knowledge-systems/second-brain-architecture.md)** — The PKM architecture this wiki implements: externalized thinking from Forte, Karpathy, and Luhmann.
-5. **[LightRAG](../../domains/knowledge-systems/lightrag.md)** — The graph-based RAG layer that extends the wiki into a queryable knowledge graph. Production-deployed in OpenFleet.
-6. **[Wiki Knowledge Graph](../../domains/knowledge-systems/wiki-knowledge-graph.md)** — The typed-relationship extension to flat wikilinks. Entity extraction, graph traversal, scaling path beyond 200 pages.
+1. **[[llm-wiki-pattern|LLM Wiki Pattern]]** — The origin. Karpathy's three-operation model (Ingest, Query, Lint) and the "Obsidian is the IDE, LLM is the programmer, wiki is the codebase" framing.
+2. **[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]** — The operational implementation of the LLM Wiki Pattern. How raw sources become interlinked pages, including batch ingestion and entity extraction.
+3. **[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]** — How pages promote from seed to canonical: scoring algorithm, evolution candidates, review workflow.
+4. **[[second-brain-architecture|Second Brain Architecture]]** — The PKM architecture this wiki implements: externalized thinking from Forte, Karpathy, and Luhmann.
+5. **[[lightrag|LightRAG]]** — The graph-based RAG layer that extends the wiki into a queryable knowledge graph. Production-deployed in OpenFleet.
+6. **[[wiki-knowledge-graph|Wiki Knowledge Graph]]** — The typed-relationship extension to flat wikilinks. Entity extraction, graph traversal, scaling path beyond 200 pages.
 
 ## FAQ
 

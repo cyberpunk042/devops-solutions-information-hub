@@ -105,7 +105,7 @@ Cloudflare announced **Markdown for Agents** on 2026-02-12 (Celso Martinho + Wil
 > | KV-cache compression | Inference cache | 50-87% | Server-runtime |
 > | **Cloudflare Markdown for Agents** | **Content source** | **80%** | **Server-source-edge** (NEW axis) |
 >
-> **Composition holds**: a fetch from a Cloudflare-fronted site with Markdown for Agents enabled, run through Caveman compression, sent to a senior-engineer-tier specialist LoRA at UD-IQ2 with KV-cache compression, communicating via RecursiveMAS-style latent transfer, all under L2 trust = **multi-axis compounding compression** across server-source × prompt × weights × cache × inter-agent layers. Each axis is independently substitutable per the [Anti-Vendor-Lock-In Lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md).
+> **Composition holds**: a fetch from a Cloudflare-fronted site with Markdown for Agents enabled, run through Caveman compression, sent to a senior-engineer-tier specialist LoRA at UD-IQ2 with KV-cache compression, communicating via RecursiveMAS-style latent transfer, all under L2 trust = **multi-axis compounding compression** across server-source × prompt × weights × cache × inter-agent layers. Each axis is independently substitutable per the [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Anti-Vendor-Lock-In Lesson]].
 
 > [!success] **Content negotiation as the activation pattern — zero cost, transparent to existing pipelines.**
 >
@@ -125,7 +125,7 @@ Cloudflare announced **Markdown for Agents** on 2026-02-12 (Celso Martinho + Wil
 > | **Markdown body** | Document body, with headers / footers / navigation / scripts / styles **stripped during pre-processing** | Always present |
 > | **JSON-LD code block** | `<script type="application/ld+json">` blocks preserved at end as fenced ``` json ``` | Emitted only when source HTML contains JSON-LD |
 >
-> JSON-LD preservation matters for **structured-data extraction** without per-site parsing logic. Combined with `x-markdown-tokens` header for context-budget decisions: the response is **machine-parseable end-to-end**. This is content-engineering at the source side — the operator's [Spec-Driven Convergence Lesson](../../lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md) at the **content-source level**: structured artifacts the agent consumes, with consistent predictable structure.
+> JSON-LD preservation matters for **structured-data extraction** without per-site parsing logic. Combined with `x-markdown-tokens` header for context-budget decisions: the response is **machine-parseable end-to-end**. This is content-engineering at the source side — the operator's [[spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts|Spec-Driven Convergence Lesson]] at the **content-source level**: structured artifacts the agent consumes, with consistent predictable structure.
 
 > [!success] **Content Signals — declarative consent layer parallels operator's L0-L4 trust opt-ins.**
 >
@@ -265,11 +265,11 @@ OUTPUT │ Strands intent-based tools (96% reduction in      │
        └──────────────────────────────────────────────────┘
 ```
 
-**No single layer's compression dominates.** Each is operator-substitutable per [Anti-Vendor-Lock-In](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md). End-to-end compression compounds — the empirical mission claim is now spread across 6+ paper-evidenced layers with operator-controllable substitution at each.
+**No single layer's compression dominates.** Each is operator-substitutable per [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Anti-Vendor-Lock-In]]. End-to-end compression compounds — the empirical mission claim is now spread across 6+ paper-evidenced layers with operator-controllable substitution at each.
 
 ### Connection to Spec-Driven Convergence + llms.txt Pattern
 
-Cloudflare's developer docs reference `llms.txt` and `llms-full.txt` patterns at the bottom of every page (see the dev-doc raw): *"Cloudflare Fundamentals llms.txt · Cloudflare Fundamentals llms-full.txt · Cloudflare Docs llms.txt · Cloudflare Docs llms-full.txt"*. These are **website-wide structured-context indices** — single-file documentation indexes the agent can fetch to discover all available pages before exploring further. Per [Spec-Driven Convergence Lesson](../../lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md): structured artifacts the agent reads before any work. The `llms.txt` pattern is the **website-discovery-spec** equivalent. **Mission-relevant**: the wiki could publish its own `llms.txt` for sister-project consumers (per the [Open Question in Firecrawl synthesis](src-firecrawl-web-scraper-for-ai-agents.md) about deprecated Firecrawl `/llmstxt` and potential wiki self-publication).
+Cloudflare's developer docs reference `llms.txt` and `llms-full.txt` patterns at the bottom of every page (see the dev-doc raw): *"Cloudflare Fundamentals llms.txt · Cloudflare Fundamentals llms-full.txt · Cloudflare Docs llms.txt · Cloudflare Docs llms-full.txt"*. These are **website-wide structured-context indices** — single-file documentation indexes the agent can fetch to discover all available pages before exploring further. Per [[spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts|Spec-Driven Convergence Lesson]]: structured artifacts the agent reads before any work. The `llms.txt` pattern is the **website-discovery-spec** equivalent. **Mission-relevant**: the wiki could publish its own `llms.txt` for sister-project consumers (per the [Open Question in Firecrawl synthesis](src-firecrawl-web-scraper-for-ai-agents.md) about deprecated Firecrawl `/llmstxt` and potential wiki self-publication).
 
 ### Connection to OpenClaw / OpenArms Sister-Project Risk (Indirect)
 

@@ -47,7 +47,7 @@ Multi-arc session handoff captured before incoming compaction. Three substantive
 | Local commits ahead of origin | 10 |
 | Active hooks | 4 wired (pre-webfetch · pre-bash · session-start · post-compact) |
 | Super-Model Compliance | Tier 4/4 (Hub Integration) |
-| Mission claim | **4-layer empirical** (trust × orchestrator × harness × provider) per [Anti-Vendor-Lock-In Lesson Evidence 11](../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) |
+| Mission claim | **4-layer empirical** (trust × orchestrator × harness × provider) per [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence\|Anti-Vendor-Lock-In Lesson Evidence 11]] |
 | Methodology convergence | **8-instance Layer-4 lesson** documented (Fowler SPDD · Six-File · BMAD · OpenSpec · Spec-Kit · AI-DLC · Karpathy · Cavekit v4) |
 | Caveman ecosystem | **3 of 3 ingested** (caveman 2026-04-30 · cavemem 2026-05-04 · cavekit 2026-05-04) |
 
