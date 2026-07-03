@@ -106,7 +106,7 @@ Operator-authored 2026-04-30: build the **trust / confidential-compute layer** o
 - [ ] RLM substrate integrates with the compressed-encrypted context variable
 - [ ] All four auth surfaces (key file / passphrase / cert / HSM) supported under unified config
 - [ ] L3 additive path verified (when H100/H200 hardware is rented or acquired) — NVIDIA CC mode + attestation gates key release; L2 compression continues to apply on top
-- [ ] [Anti-vendor-lock-in lesson](../../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) Evidence chain extended to 4 layers
+- [ ] [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Anti-vendor-lock-in lesson]] Evidence chain extended to 4 layers
 - [ ] [Post-Anthropic milestone](../../milestones/post-anthropic-self-autonomous-stack.md) acceptance criteria amended to include 4th-layer property
 - [ ] `python3 -m tools.pipeline post` returns 0 validation errors across all epic-related artifacts
 
@@ -136,7 +136,7 @@ Operator-authored 2026-04-30: build the **trust / confidential-compute layer** o
 | **M003 — RLM Substrate Integration** | `rlm.completion()` wired to consume compressed-encrypted context as the REPL variable. Lazy decypher inside the REPL when accessed. Python isolation via RLM's LocalREPL + cloud sandbox path. | Phase 1 | 3–4 |
 | **M004 — Auth Surface Plumbing** | Symmetric key file · passphrase-derived key · certificate-bound key · HSM-managed key. Unified config; runtime selects auth surface per workload. | Phase 1 | 3 |
 | **M005 — L3 Additive (NVIDIA CC Mode)** | Hardware-gated: when H100/H200 is available (cloud rental or acquisition), wire NVIDIA CC mode + NRAS/RIM attestation + key-release gating. L2 compression continues underneath. | Phase 2 — operator-triggered | 3–4 |
-| **M006 — Empirical Validation + Wiki Mission Update** | Measure 80–90% space-saved envelope on large-context workload; benchmark performance vs baseline (target: positive); update [anti-vendor-lock-in lesson](../../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) Evidence chain to 4 layers; amend [post-Anthropic milestone](../../milestones/post-anthropic-self-autonomous-stack.md) acceptance criteria. | Phase 1 close | 3–4 |
+| **M006 — Empirical Validation + Wiki Mission Update** | Measure 80–90% space-saved envelope on large-context workload; benchmark performance vs baseline (target: positive); update [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence\|anti-vendor-lock-in lesson]] Evidence chain to 4 layers; amend [post-Anthropic milestone](../../milestones/post-anthropic-self-autonomous-stack.md) acceptance criteria. | Phase 1 close | 3–4 |
 
 ## Dependencies
 
@@ -148,7 +148,7 @@ Operator-authored 2026-04-30: build the **trust / confidential-compute layer** o
 
 ## Mission Framing — The 4th Substitutable Layer
 
-The wiki's [anti-vendor-lock-in lesson](../../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) establishes that the mission claim is empirical only when every stack layer has paper evidence demonstrating substitutability. The post-Anthropic 3-layer epic delivers this for orchestrator × harness × provider. **This epic delivers the 4th layer: trust / confidential-compute.**
+The wiki's [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|anti-vendor-lock-in lesson]] establishes that the mission claim is empirical only when every stack layer has paper evidence demonstrating substitutability. The post-Anthropic 3-layer epic delivers this for orchestrator × harness × provider. **This epic delivers the 4th layer: trust / confidential-compute.**
 
 Substitutable axes within the trust layer:
 - **Hardware vendor**: NVIDIA (H100/H200/Blackwell CC mode) · AMD (SEV-SNP CPU + GPU passthrough) · Intel (TDX) · open-hardware (RISC-V Keystone, when production-ready)

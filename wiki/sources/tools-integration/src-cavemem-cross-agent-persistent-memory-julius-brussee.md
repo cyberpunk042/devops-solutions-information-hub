@@ -82,13 +82,13 @@ Cavemem ([JuliusBrussee/cavemem](https://github.com/JuliusBrussee/cavemem), MIT)
 | **Token-savings target** | ≥30% average · ≥40% at `full` · ≥55% at `ultra` (per docs) |
 | **Auto-management** | Worker auto-spawns on first hook, self-exits when idle. No daemon on write path; hooks succeed even if worker is down (BM25 keeps working). |
 | **Confidence** | high — README + CLAUDE.md + 11 deep-fetched files (architecture · compression spec · MCP contract · development workflow · lexicon JSON) read at L1 depth |
-| **Mission relevance** | Critical — cavemem operationalizes the cross-session memory layer of the [2026 spec-driven convergent pattern](../../lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md), and parallels the operator's trust-layer compression-at-rest mechanism at the memory layer (different scale, same shape) |
+| **Mission relevance** | Critical — cavemem operationalizes the cross-session memory layer of the [[spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts\|2026 spec-driven convergent pattern]], and parallels the operator's trust-layer compression-at-rest mechanism at the memory layer (different scale, same shape) |
 
 ## Key Insights
 
 > [!success] **Cross-agent persistent memory solves the named failure mode of AI coding assistants.**
 >
-> Per [JS Mastery's framing](src-jsmastery-six-file-context-system-agentic-build.md): *"The first few hours feel incredible, and then a week later, the agent has forgotten every decision you've made. One new feature breaks three others."* Cavemem's hooks capture observations at session boundaries; the SQLite store keeps them; agents query their own history at the start of new sessions via 4 MCP tools. **The memory persists across sessions AND across IDEs** (Claude Code session today, Cursor session tomorrow, OpenCode next week — same memory, queryable from any). This IS the cross-agent persistence the convergent pattern's `progress-tracker.md` does in-tree, but at the agent-runtime layer.
+> Per [[src-jsmastery-six-file-context-system-agentic-build|JS Mastery's framing]]: *"The first few hours feel incredible, and then a week later, the agent has forgotten every decision you've made. One new feature breaks three others."* Cavemem's hooks capture observations at session boundaries; the SQLite store keeps them; agents query their own history at the start of new sessions via 4 MCP tools. **The memory persists across sessions AND across IDEs** (Claude Code session today, Cursor session tomorrow, OpenCode next week — same memory, queryable from any). This IS the cross-agent persistence the convergent pattern's `progress-tracker.md` does in-tree, but at the agent-runtime layer.
 
 > [!success] **Compression-at-rest with technical-token preservation parallels the operator's trust-layer concept.**
 >
@@ -172,7 +172,7 @@ Dependency direction: `config → compress → storage → { core · embedding }
 
 For the operator's stack, this matters because:
 - The [trust-layer epic](../../backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04.md)'s 80–90% combined envelope already includes Caveman as the prompt-layer compression substrate. Cavemem extends that envelope to the cross-session memory dimension at no incremental tooling cost.
-- The [Six-File Context System](src-jsmastery-six-file-context-system-agentic-build.md)'s `progress-tracker.md` is the in-tree per-project version of what cavemem does at the agent-runtime layer. They compose: the project keeps progress-tracker in version control; cavemem keeps cross-session observations as a runtime memory layer accessible across IDEs.
+- The [[src-jsmastery-six-file-context-system-agentic-build|Six-File Context System]]'s `progress-tracker.md` is the in-tree per-project version of what cavemem does at the agent-runtime layer. They compose: the project keeps progress-tracker in version control; cavemem keeps cross-session observations as a runtime memory layer accessible across IDEs.
 
 ## Mission Alignment
 
@@ -186,7 +186,7 @@ Cavemem instantiates **multiple wiki principles + concepts simultaneously**:
 | [CLI tools beat MCP for token efficiency lesson](../../lessons/03_validated/tools-architecture/cli-tools-beat-mcp-for-token-efficiency.md) | Compose both: CLI for non-token paths, MCP for agent paths with progressive disclosure |
 | [P1 — Infrastructure Over Instructions](../../lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement.md) | Compression invariant enforced at the package boundary (`MemoryStore.addObservation`), not at the prose-rule layer. Privacy enforced at write boundary, not via prose policy. |
 | [P2 — Structured Context Governs Behavior](../../lessons/04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content.md) | The 4 MCP tools are structured context — schemas + return shapes — that the agent's runtime understands programmatically |
-| [Spec-Driven Convergence Lesson](../../lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md) | Cavemem's CLAUDE.md is itself a Six-File-style context file: project identity · non-negotiable rules · architectural rules · layout · workflow · gates · extension points |
+| [[spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts\|Spec-Driven Convergence Lesson]] | Cavemem's CLAUDE.md is itself a Six-File-style context file: project identity · non-negotiable rules · architectural rules · layout · workflow · gates · extension points |
 
 **Trust-layer alignment** (operator's 2026-04-30 concept): cavemem's compression-at-rest with technical-substance preservation is structurally the same shape as the trust-layer's cypher+decypher with technical-token preservation. Different layer (memory vs weights/context); same mechanism (compress + preserve invariants + retrieve on demand). Both prove the operator's "seamless · blazing-fast · transparent · performance-positive" properties are achievable when the compression layer respects technical substance.
 

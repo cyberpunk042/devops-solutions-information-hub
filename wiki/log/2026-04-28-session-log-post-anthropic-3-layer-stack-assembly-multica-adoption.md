@@ -97,7 +97,7 @@ These compound the existing feedback memory set: file-type checking · research-
 
 1. **NEW — [Multica Synthesis](../sources/tools-integration/src-multica-managed-agents-platform.md)** — Layer-1 source for the orchestrator layer
 2. **EDIT — [AI Decision Matrix 2026](../spine/references/ai-model-provider-harness-decision-matrix-2026.md)** — orchestrator dimension added (3-axis matrix)
-3. **EDIT — [Anti-Vendor-Lock-In Lesson](../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md)** — Evidence 10 added (orchestrator-layer empirical)
+3. **EDIT — [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Anti-Vendor-Lock-In Lesson]]** — Evidence 10 added (orchestrator-layer empirical)
 4. **EDIT — [RLM-Qwen3.6-27B Operations Plan](../domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan.md)** — Phase-1 vs Phase-2 framing reflecting RLM-Qwen3-8B HF live + 3090 incoming
 5. **EDIT — [Tier-0 Candidate Comparison](../comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate.md)** — Phase-1 routing path is default; cloud fine-tune is conditional
 6. **NEW — [Epic — Post-Anthropic 3-Layer Stack Assembly](../backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090.md)** — milestone-class assembly captured

@@ -97,7 +97,7 @@ At the end of the document, a single table summarizes harness → contract compl
 ### Step 4 — Cross-link
 
 ```bash
-$EDITOR CLAUDE.md       # add a link: "See [harness-contract.md](wiki/spine/standards/harness-contract.md)"
+$EDITOR CLAUDE.md       # add a link: "See [[harness-contract]]"
 $EDITOR AGENTS.md       # same
 $EDITOR wiki/backlog/milestones/post-anthropic-self-autonomous-stack.md
 ```

@@ -97,7 +97,7 @@ Operator-named ingestion arc 2026-05-04: three new sources (Fowler/Thoughtworks 
 
 1. **NEW** — [Synthesis — Fowler SPDD](../sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd.md) — Layer-1 (~210 lines, full ratio)
 2. **NEW** — [Synthesis — JS Mastery Six-File Context System](../sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build.md) — Layer-1 (~280 lines, full ratio)
-3. **NEW** — [Layer-4 Lesson — Spec-Driven Agentic Build Is the 2026 Convergent Pattern](../lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md) — captures 7-instance convergence as durable Layer-4 knowledge
+3. **NEW** — [[spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts|Layer-4 Lesson — Spec-Driven Agentic Build Is the 2026 Convergent Pattern]] — captures 7-instance convergence as durable Layer-4 knowledge
 4. **NEW** — This session log — continuity capture
 
 ### Raw provenance (untracked)
@@ -130,7 +130,7 @@ Operator-named ingestion arc 2026-05-04: three new sources (Fowler/Thoughtworks 
 
 > [!success] **The wiki is one of the 7+ instances**
 >
-> Per the [convergence lesson's open question](../lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md) — the wiki's own structure mirrors the Six-File Context System pattern:
+> Per the [[spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts|convergence lesson's open question]] — the wiki's own structure mirrors the Six-File Context System pattern:
 >
 > | Six-File Context (JS Mastery) | Wiki's own pattern |
 > |---|---|

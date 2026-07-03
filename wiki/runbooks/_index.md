@@ -26,7 +26,7 @@ tags: [index, runbook, operator-facing, selfdef, sovereign-os, friction-audit, p
 
 ## Summary
 
-Operator-facing runbook navigation home for the selfdef + sovereign-os production-progression arc. Each runbook is anchored to a specific SDD section + verbatim source dump line range, walks the operator from "summary line says FAIL" to "root cause + fix", and lists sister runbooks under § Relationships. The runbook set covers the four-watchdog enforcement trio (friction-audit, perimeter, guardian, scheduler) plus cross-cutting surfaces (network, storage, M060 mirror-export, metrics ingest-lag, UX-coherence), a doctrine citation index (Peace Machine + Core Law), and the detection-watchdog alert-finding procedure. The section tables below are the authoritative list; this summary avoids a hardcoded count that would drift as runbooks are added.
+Operator-facing runbook navigation home for the selfdef + sovereign-os production-progression arc. Each runbook is anchored to a specific SDD section + verbatim source dump line range, walks the operator from "summary line says FAIL" to "root cause + fix", and lists sister runbooks under § Relationships. The runbook set covers the four-watchdog enforcement quartet (friction-audit, perimeter, guardian, scheduler) plus cross-cutting surfaces (network, storage, M060 mirror-export, metrics ingest-lag, UX-coherence), a doctrine citation index (Peace Machine + Core Law), and the detection-watchdog alert-finding procedure. The section tables below are the authoritative list; this summary avoids a hardcoded count that would drift as runbooks are added.
 
 ## When to use this
 

@@ -63,7 +63,7 @@ This learning path navigates the operator-authored 2026-05-04 mission arc: **a c
 Before starting this path, you should have read OR be prepared to read in parallel:
 - [CLAUDE.md](../../CLAUDE.md) — project's operational program (always loaded in Claude Code sessions)
 - [AGENTS.md](../../AGENTS.md) — universal cross-tool context
-- [Anti-Vendor-Lock-In Lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) — at least Evidence 1, 8, 11 (mission claim baseline)
+- [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Anti-Vendor-Lock-In Lesson]] — at least Evidence 1, 8, 11 (mission claim baseline)
 - [Trust-Layer Concept](../../domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md) — composes with this arc
 
 If pre-4090 (which is the operator's stack as of 2026-05-04, 4090 ETA mid-May 2026): treat this learning path as **future-state architecture** — Phase 0 toolchain bootstrap is hardware-blocked.
@@ -104,7 +104,7 @@ The arc is navigable in 7 goals (A–G), totaling ~90 minutes for full internali
 
 **Read in this order:**
 
-1. **[Anti-Vendor-Lock-In Lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md)** § Summary + Evidence 1 + Evidence 8 + Evidence 10 + Evidence 11 (the 4-layer empirical baseline before this arc).
+1. **[[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Anti-Vendor-Lock-In Lesson]]** § Summary + Evidence 1 + Evidence 8 + Evidence 10 + Evidence 11 (the 4-layer empirical baseline before this arc).
 2. **Evidence 12 (the new candidate)** — the 8 substitution axes within the custom-model layer (open-weight base · fine-tune method · training framework · preference-data source · behavioral-constitution authoring · composition mechanism · evaluation gate · distribution channel).
 3. The **Option A vs Option B** layer-count framing — operator-decision in M006 of the epic.
 
@@ -140,7 +140,7 @@ The arc is navigable in 7 goals (A–G), totaling ~90 minutes for full internali
 
 **Read in this order:**
 
-1. **[Spec-Driven Agentic Build Convergence Lesson](../../lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md)** § Summary + the 8 evidence instances + the wiki self-application open question.
+1. **[[spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts|Spec-Driven Agentic Build Convergence Lesson]]** § Summary + the 8 evidence instances + the wiki self-application open question.
 2. **[Custom-Tailored Model Group Concept § Connection to Spec-Driven Convergence](../../domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md)** — the table mapping spec-driven elements to model-creation instantiations (preference data + instruction data + constitution as version-controlled specs; verification checklist per LoRA; closed-loop sync rule applied to deviations).
 
 **Self-check after Goal F:** what's the closed-loop sync rule applied to model creation? (Answer: when the model deviates from operator standards, *fix the preference data first, re-train, then update downstream*. The preference data is the spec; the weights are the code.)

@@ -41,7 +41,7 @@ Curated reading order for the **~12 wiki artifacts** produced during the 2026-04
 >
 > | Prerequisite | Why |
 > |---|---|
-> | Familiarity with [Anti-Vendor-Lock-In Lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) Evidence 1-9 | Evidence 10 (orchestrator layer) builds on these |
+> | Familiarity with [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence\|Anti-Vendor-Lock-In Lesson]] Evidence 1-9 | Evidence 10 (orchestrator layer) builds on these |
 > | Familiarity with [4 governing principles](../../lessons/04_principles/hypothesis/) | The 3-layer stack maps directly to P1 (Infrastructure>Instructions), P3 (Goldilocks), P4 (Declarations Aspirational) |
 > | Optional: skim [RLM thread learning-path](rlm-thread-evidence-chain-2026-04-27.md) | Same session-arc-pattern from 2026-04-27 — comparable shape |
 > | Optional: AICP authoritative state at `~/devops-expert-local-ai/docs/SESSION-2026-04-24-HANDOFF.md` | The AICP-side context the 3-layer stack composes with |
@@ -58,7 +58,7 @@ For a reader who wants the headline architecture + key decisions without the imp
 > |---|---|---|---|
 > | 1 | [Multica Synthesis](../../sources/tools-integration/src-multica-managed-agents-platform.md) — Summary + Reference Card + Operator-Validated section | The new orchestrator layer; the canonical source. The "Operator-Validated Per-Agent Shaping (2026-04-28)" section is load-bearing. | 10 min |
 > | 2 | [Decision: Adopt Multica](../../decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04.md) — Decision matrix + Rationale | Why Multica chosen, alternatives rejected, the 5 properties grounding the decision | 10 min |
-> | 3 | [Anti-Vendor-Lock-In Lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) Evidence 10 only | Mission alignment — 3-layer composability is anti-vendor-lock-in at three structural layers, not two | 10 min |
+> | 3 | [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence\|Anti-Vendor-Lock-In Lesson]] Evidence 10 only | Mission alignment — 3-layer composability is anti-vendor-lock-in at three structural layers, not two | 10 min |
 >
 > **Outcome**: you can articulate (a) what the 3-layer stack is, (b) why Multica was chosen at the orchestrator layer, (c) how it advances the anti-vendor-lock-in mission claim.
 
@@ -73,7 +73,7 @@ For an operator (or fleet PM) deciding whether the 3-layer pattern fits their ow
 > | 1 | [Decision: Adopt Multica](../../decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04.md) | Full Decision Matrix + Alternatives + Reversibility |
 > | 2 | [Multica Synthesis](../../sources/tools-integration/src-multica-managed-agents-platform.md) | Architecture + Operator-Validated Per-Agent Shaping (the 7 dimensions) |
 > | 3 | [AI Model × Provider × Harness Decision Matrix 2026](../references/ai-model-provider-harness-decision-matrix-2026.md) § Orchestrator Layer | 3-axis matrix update (orchestrator × harness × provider) |
-> | 4 | [Anti-Vendor-Lock-In Lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) Evidence 10 | Mission framing |
+> | 4 | [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence\|Anti-Vendor-Lock-In Lesson]] Evidence 10 | Mission framing |
 > | 5 | [Tier-0 Candidate Comparison](../../comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate.md) — Phase-1 Path section | Concrete model + hardware fit alongside the 3-layer architecture |
 >
 > **Outcome**: you can answer for your own stack: should I adopt Multica? With what alternatives? At what cost? With what migration risk if reversed?
@@ -104,7 +104,7 @@ For thorough internalization of the entire session arc.
 > |---|---|---|---|
 > | 1 | [Multica Synthesis](../../sources/tools-integration/src-multica-managed-agents-platform.md) | source-synthesis | The Layer-1 anchor |
 > | 2 | [AI Decision Matrix 2026](../references/ai-model-provider-harness-decision-matrix-2026.md) § Orchestrator Layer (added 2026-04-28) | reference (spine) | 3-axis matrix update |
-> | 3 | [Anti-Vendor-Lock-In Lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) Evidence 10 | lesson | Mission-claim extension to 3-layer empirical |
+> | 3 | [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence\|Anti-Vendor-Lock-In Lesson]] Evidence 10 | lesson | Mission-claim extension to 3-layer empirical |
 > | 4 | [Tier-0 Candidate Comparison](../../comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate.md) — Phase-1 Path section (revised 2026-04-28) | comparison | Concrete model selection within the 3-layer architecture |
 > | 5 | [RLM-Qwen3.6-27B Operations Plan](../../domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan.md) Phase-1 vs Phase-2 framing (revised 2026-04-28) | operations-plan | The deferred fine-tune option, properly Phase-2-conditional |
 > | 6 | [Epic — Post-Anthropic 3-Layer Stack Assembly](../../backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090.md) | epic | The milestone-class assembly framing |
@@ -123,7 +123,7 @@ For a reader auditing the wiki's anti-vendor-lock-in claim with the new orchestr
 >
 > | # | Read | Why |
 > |---|---|---|
-> | 1 | [Anti-Vendor-Lock-In Lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) — Insight + Evidence 1-10 | The mission claim with all 10 evidence items including the new orchestrator layer |
+> | 1 | [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence\|Anti-Vendor-Lock-In Lesson]] — Insight + Evidence 1-10 | The mission claim with all 10 evidence items including the new orchestrator layer |
 > | 2 | [Multica Synthesis](../../sources/tools-integration/src-multica-managed-agents-platform.md) — Mission Alignment section | Three substitution dimensions composable; Apache 2.0 + 10 harnesses + self-host = no single-vendor multi-layer control |
 > | 3 | [AI Decision Matrix 2026](../references/ai-model-provider-harness-decision-matrix-2026.md) § Orchestrator Layer + Lock-in Risk table | Per-layer lock-in risk assessment |
 > | 4 | [Decision: Adopt Multica](../../decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04.md) — Reversibility section | Honest scoping of what's preserved vs migrated vs lost on reversal |
@@ -132,7 +132,7 @@ For a reader auditing the wiki's anti-vendor-lock-in claim with the new orchestr
 
 > [!success]- **EXTENDED 2026-04-30 — 4th-layer extension via the Trust-Layer Learning Path**
 >
-> This 3-layer path is now followed by the [Trust-Layer Learning Path (2026-04-30)](trust-layer-tamper-proof-inference-2026-04-30.md), which adds a fourth substitutable layer (trust / confidential-compute) with cypher + decypher + compression composed for **80–90% space saved on large context**, seamless and performance-positive. The two paths compose: this 3-layer path delivers the substrate (orchestrator × harness × provider); the trust-layer path delivers the security stance and compression-encryption pipeline that runs *on top of* whichever orchestrator × harness × provider triple is selected. Per [anti-vendor-lock-in lesson Evidence 11](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md), the mission claim now extends to 4 structural layers, not 3.
+> This 3-layer path is now followed by the [Trust-Layer Learning Path (2026-04-30)](trust-layer-tamper-proof-inference-2026-04-30.md), which adds a fourth substitutable layer (trust / confidential-compute) with cypher + decypher + compression composed for **80–90% space saved on large context**, seamless and performance-positive. The two paths compose: this 3-layer path delivers the substrate (orchestrator × harness × provider); the trust-layer path delivers the security stance and compression-encryption pipeline that runs *on top of* whichever orchestrator × harness × provider triple is selected. Per [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|anti-vendor-lock-in lesson Evidence 11]], the mission claim now extends to 4 structural layers, not 3.
 
 ## Outcomes
 

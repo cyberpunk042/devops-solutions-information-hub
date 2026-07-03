@@ -50,7 +50,7 @@ Curated reading order for the **~13 wiki artifacts** produced during the 2026-04
 >
 > | Prerequisite | Why |
 > |---|---|
-> | Familiarity with [Anti-Vendor-Lock-In Lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) Evidence 1–10 | Evidence 11 (trust layer) builds on these; the 4-layer claim composes cleanly with the prior 3-layer claim |
+> | Familiarity with [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence\|Anti-Vendor-Lock-In Lesson]] Evidence 1–10 | Evidence 11 (trust layer) builds on these; the 4-layer claim composes cleanly with the prior 3-layer claim |
 > | Familiarity with the [Post-Anthropic 3-Layer Stack Learning Path](post-anthropic-3-layer-stack-2026-04-28.md) | The 4th layer extends that assembly — same structural pattern at one layer up |
 > | Familiarity with [4 governing principles](../../lessons/04_principles/hypothesis/) | The trust layer maps to P1 (Infrastructure > Instructions for tamper-resistance), P4 (Declarations Aspirational Until Verified for security claims) |
 > | Optional: skim [RLM Synthesis](../../sources/tools-integration/src-rlm-recursive-language-models-mit-oasys.md) | RLM is the script-orientation substrate the trust layer composes with |
@@ -68,7 +68,7 @@ For a reader who wants the headline architecture + the 80–90% composition math
 > |---|---|---|---|
 > | 1 | [Concept — Secure Tamper-Proof Model on Shared GPU](../../domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md) — Summary + Verbatim Directive + Operational Properties + Key Insights | Operator-authored design ground truth; 80–90% composition math; L0–L4 opt-ins | 15 min |
 > | 2 | [Synthesis — Caveman](../../sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee.md) — Reference Card + Wenyan-Full row | The prompt-layer empirical anchor — 80–90% character reduction at a single layer | 5 min |
-> | 3 | [Anti-Vendor-Lock-In Lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) Evidence 11 only | Mission alignment — 4-layer empirical claim with 6 substitution axes within the trust layer | 10 min |
+> | 3 | [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence\|Anti-Vendor-Lock-In Lesson]] Evidence 11 only | Mission alignment — 4-layer empirical claim with 6 substitution axes within the trust layer | 10 min |
 >
 > **Outcome**: you can articulate (a) what the 4th (trust) layer is, (b) the 80–90% composition math composed of caveman + UD-IQ2 + KV-cache + cypher overlay, (c) how it advances the anti-vendor-lock-in mission claim from 3 to 4 layers.
 
@@ -113,7 +113,7 @@ For an evaluator auditing whether the wiki's 4-layer claim is empirically defens
 >
 > | # | Read | Focus on |
 > |---|---|---|
-> | 1 | [Anti-Vendor-Lock-In Lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) — Evidence 1–11 in order | The full 4-layer empirical claim; each layer with its substitution axes |
+> | 1 | [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence\|Anti-Vendor-Lock-In Lesson]] — Evidence 1–11 in order | The full 4-layer empirical claim; each layer with its substitution axes |
 > | 2 | [Concept page](../../domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md) — Mission Alignment section | The 4th layer's structural framing |
 > | 3 | [Caveman Synthesis](../../sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee.md) — Mission Alignment + Compression-Substrate slot | The compression-substrate paper evidence |
 > | 4 | [AI Infrastructure Decision Framework 2026](../references/ai-infrastructure-decision-framework-2026.md) § Resilience Playbook | 4-layer substitution map operationalized |
@@ -145,7 +145,7 @@ For a future agent or operator picking up the methodology lesson from this arc.
 
 ### Augmented in this arc (6 existing-page edits)
 
-5. [Anti-Vendor-Lock-In Lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) — Evidence 11 added
+5. [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Anti-Vendor-Lock-In Lesson]] — Evidence 11 added
 6. [Post-Anthropic 3-Layer Stack Epic](../../backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090.md) — EXTENDED-2026-04-30 cross-reference
 7. [Post-Anthropic Self-Autonomous Stack Milestone](../../backlog/milestones/post-anthropic-self-autonomous-stack.md) — trust-layer epic added; 2 new acceptance criteria
 8. [AI Decision Matrix 2026](../references/ai-model-provider-harness-decision-matrix-2026.md) — 4-axis Trust × Orchestrator × Harness × Provider section

@@ -224,7 +224,7 @@ The Goldilocks identity profile is the most concrete instance of CLAUDE.md-as-Ia
 
 ### Empirical Convergence — 8+ Independent Practitioners Instantiate This Model (added 2026-05-04)
 
-> [!success] **Markdown-as-IaC is the underlying substrate of the [2026 Spec-Driven Agentic Build Convergence](../../../lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md) — paper-evidenced at 7+ independent instances.**
+> [!success] **Markdown-as-IaC is the underlying substrate of the [[spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts|2026 Spec-Driven Agentic Build Convergence]] — paper-evidenced at 7+ independent instances.**
 >
 > | Instance | Markdown-as-IaC artifact |
 > |---|---|
@@ -238,7 +238,7 @@ The Goldilocks identity profile is the most concrete instance of CLAUDE.md-as-Ia
 > | [Cavekit v4 (Julius Brussee)](../../../sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee.md) | **Most distilled instance**: SPEC.md + 3 commands + 2 skills · §-addressable sections · backprop reflex turns bugs into permanent §V invariants |
 > | **+ this wiki itself** | CLAUDE.md + AGENTS.md + .claude/rules/ + wiki/backlog/modules/ — the 9th instance and the substrate this model formalizes |
 >
-> Empirical convergence at this density (7+ independent practitioners, multiple scales, multiple vocabularies) is the strongest empirical anchor for Markdown-as-IaC's mission claim. Per [the convergence lesson](../../../lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md): the question is not *whether* to instantiate Markdown-as-IaC for production-grade AI-assisted builds, but *which instance* fits the workload class.
+> Empirical convergence at this density (7+ independent practitioners, multiple scales, multiple vocabularies) is the strongest empirical anchor for Markdown-as-IaC's mission claim. Per [[spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts|the convergence lesson]]: the question is not *whether* to instantiate Markdown-as-IaC for production-grade AI-assisted builds, but *which instance* fits the workload class.
 
 ## Open Questions
 

@@ -112,10 +112,10 @@ Empirical evidence: P1 quantified gap (prose ~25%, hooks ~100%) confirmed per ax
 **Add to existing Relationships:**
 
 ```markdown
-- **EXTENDED BY** [Pattern — Comprehensive Agent-Action-Emission Pipeline 13-Gate Composition](../../../patterns/01_drafts/comprehensive-agent-action-emission-pipeline-13-gate-composition-architecture.md) — multi-axis hook composition specification (2026-05-08)
-- **EXTENDED BY** [Lesson — Documentation As Substitute For Discipline](../../../lessons/01_drafts/documentation-as-substitute-for-discipline-the-meta-pattern.md) — meta-frame for skills/commands/hooks aspirational-vs-operational gap
-- **EXTENDED BY** [Lesson — Stress-Testing as Validation](../../../lessons/01_drafts/stress-testing-as-validation-the-only-way-to-surface-aspirational-vs-operational-gaps.md) — promotion-mechanism for hook implementations
-- **CASE STUDY** [Strategic Coverage Validation log 2026-05-08](../../../log/2026-05-08-strategic-coverage-validation-180-pain-points-to-17-solution-pieces.md) — empirical demonstration of multi-axis composition addressing 180 pain-points
+- **EXTENDED BY** [[comprehensive-agent-action-emission-pipeline-13-gate-composition-architecture|Pattern — Comprehensive Agent-Action-Emission Pipeline 13-Gate Composition]] — multi-axis hook composition specification (2026-05-08)
+- **EXTENDED BY** [[documentation-as-substitute-for-discipline-the-meta-pattern|Lesson — Documentation As Substitute For Discipline]] — meta-frame for skills/commands/hooks aspirational-vs-operational gap
+- **EXTENDED BY** [[stress-testing-as-validation-the-only-way-to-surface-aspirational-vs-operational-gaps|Lesson — Stress-Testing as Validation]] — promotion-mechanism for hook implementations
+- **CASE STUDY** [[2026-05-08-strategic-coverage-validation-180-pain-points-to-17-solution-pieces|Strategic Coverage Validation log 2026-05-08]] — empirical demonstration of multi-axis composition addressing 180 pain-points
 ```
 
 **Diff scope**: ~5 lines added. Bidirectional cross-references — model is now linked from the 17 sibling pieces' Relationships sections AND links back.

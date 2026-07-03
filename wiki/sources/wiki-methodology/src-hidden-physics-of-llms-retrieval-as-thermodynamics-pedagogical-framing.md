@@ -185,7 +185,7 @@ Pedagogical YouTube video reframing LLM behavior through **statistical-physics a
 > Yes — analogies break at edges. Specifically: (a) LLM landscapes are HIGH-DIMENSIONAL (millions to billions of dims); physics intuitions from 3D landscapes mislead about exploration cost in high-dim space; (b) softmax is a normalization, not literally a partition function (the temperature analogy holds; the energy interpretation is loose); (c) "ball rolling" suggests deterministic dynamics — actual generation is sampling, which is closer to thermal Brownian motion. **Practitioner caveat**: use the framing for intuition, not for rigorous derivation.
 
 > [!question] How does the framing apply to multi-agent systems (subagent patterns) and inter-agent latent transfer (RecursiveMAS)?
-> Each agent has its own landscape; inter-agent latent transfer (RecursiveMAS) is one agent placing a ball in another agent's landscape via shared latent representation. Pattern 4 (Teams) per [Phil Schmid Subagent Patterns Synthesis](src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams.md) creates a multi-landscape topology where agents drop balls in each other's landscapes. The framing extends naturally.
+> Each agent has its own landscape; inter-agent latent transfer (RecursiveMAS) is one agent placing a ball in another agent's landscape via shared latent representation. Pattern 4 (Teams) per [[src-philschmid-four-subagents-patterns-2026-inline-fanout-pool-teams|Phil Schmid Subagent Patterns Synthesis]] creates a multi-landscape topology where agents drop balls in each other's landscapes. The framing extends naturally.
 
 ## Relationships
 

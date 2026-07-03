@@ -94,13 +94,13 @@ Multica's adoption is grounded in five concrete properties verified against Mult
 
 1. **Apache 2.0 license** — verified from `.goreleaser.yml` in the source tree. Operator can fork, patch, or extend without licensing concerns. Mission-aligned (anti-vendor-lock-in via open-source).
 
-2. **10 harness CLIs auto-detected** — `claude`, `codex`, `openclaw`, `opencode`, `hermes`, `gemini`, `pi`, `cursor-agent`, `kimi`, `kiro-cli`. Covers the operator's current toolset (Claude Code + OpenCode) plus 8 additional options as the operator's stack evolves. Per [agentic-coding-harness-landscape-2026](../sources/tools-integration/src-agentic-coding-harness-landscape-2026.md), Multica supports 10 of the 11+ wiki-tracked harnesses.
+2. **10 harness CLIs auto-detected** — `claude`, `codex`, `openclaw`, `opencode`, `hermes`, `gemini`, `pi`, `cursor-agent`, `kimi`, `kiro-cli`. Covers the operator's current toolset (Claude Code + OpenCode) plus 8 additional options as the operator's stack evolves. Per [[src-agentic-coding-harness-landscape-2026|agentic-coding-harness-landscape-2026]], Multica supports 10 of the 11+ wiki-tracked harnesses.
 
 3. **Per-agent provider routing via `custom_env`** — operator-validated 2026-04-28: *"Injected into the agent process at launch (e.g. ANTHROPIC_API_KEY, ANTHROPIC_BASE_URL)"*. This is the mechanism that makes AICP / Ollama Cloud / Anthropic-direct routing per-agent rather than per-process-tree. Plus `custom_args` for CLI flag tuning + `skills` for capability composition + `mcp_config` for MCP integration (Claude Code only) = **7 per-agent shaping dimensions**.
 
 4. **Self-host capability + operator's source-level access** — operator runs at `/home/jfortin/.multica/server/`, built from source, with `.env` operator-written. Plaintext-DB caveat from Multica's docs is mitigated for self-host (operator owns the filesystem). If a future use case requires extending Multica itself, operator can patch the daemon directly rather than waiting on upstream.
 
-5. **3-layer composability achieved** — per [anti-vendor-lock-in lesson Evidence 10](../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md): Multica × harness × provider gives three independently-substitutable layers. Per [Principle 4 (Declarations Aspirational Until Verified)](../lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md), the substitution claim at each layer is verified by operator-validated working integration, not just declared.
+5. **3-layer composability achieved** — per [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|anti-vendor-lock-in lesson Evidence 10]]: Multica × harness × provider gives three independently-substitutable layers. Per [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4 (Declarations Aspirational Until Verified)]], the substitution claim at each layer is verified by operator-validated working integration, not just declared.
 
 ## Reversibility
 
@@ -110,16 +110,16 @@ Multica's adoption is grounded in five concrete properties verified against Mult
 - **What requires migration**: Multica's database (issue history, agent definitions, skill bundles, activity timelines) — this becomes operator's data even when Multica is self-hosted, but the schema is Multica-specific. Migration to a different orchestrator means re-creating agents, re-attaching skills, re-defining workflows.
 - **What's lost**: the multi-runtime auto-detection convention; the agent-as-teammate UX in board view; integrated WebSocket progress streaming. These are Multica-specific abstractions.
 
-**Mitigation for reversibility**: keep agent definitions documented externally (in this wiki, e.g., per-agent recipes per [M001](../backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config.md)) so reconstruction is mechanical. Skills SHOULD be authored as portable bundles (SKILL.md + config + templates) that can move between orchestrators. Don't depend on Multica-specific features that have no equivalent elsewhere.
+**Mitigation for reversibility**: keep agent definitions documented externally (in this wiki, e.g., per-agent recipes per [[post-anthropic-3-layer-m001-multica-per-agent-provider-config|M001]]) so reconstruction is mechanical. Skills SHOULD be authored as portable bundles (SKILL.md + config + templates) that can move between orchestrators. Don't depend on Multica-specific features that have no equivalent elsewhere.
 
 ## Dependencies
 
 This decision affects:
 
-- **[Post-Anthropic Stack 3-Layer Composability Epic](../backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090.md)** — this decision IS the epic's foundational architectural choice
-- **[Anti-Vendor-Lock-In Lesson](../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md)** Evidence 10 — empirical content
-- **[AI Model × Provider × Harness Decision Matrix 2026](../spine/references/ai-model-provider-harness-decision-matrix-2026.md)** — orchestrator dimension added 2026-04-28
-- **[K2.6 Access Paths Comparison](../comparisons/kimi-k2-6-access-paths-openrouter-ollama-cloud-local.md)** — composes through Multica's per-agent `custom_env` for K2.6-specific routing
+- **[[post-anthropic-stack-3-layer-assembly-multica-aicp-3090|Post-Anthropic Stack 3-Layer Composability Epic]]** — this decision IS the epic's foundational architectural choice
+- **[[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Anti-Vendor-Lock-In Lesson]]** Evidence 10 — empirical content
+- **[[ai-model-provider-harness-decision-matrix-2026|AI Model × Provider × Harness Decision Matrix 2026]]** — orchestrator dimension added 2026-04-28
+- **[[kimi-k2-6-access-paths-openrouter-ollama-cloud-local|K2.6 Access Paths Comparison]]** — composes through Multica's per-agent `custom_env` for K2.6-specific routing
 - **AICP integration** (operator's repo at `~/devops-expert-local-ai/`) — AICP's backend pattern remains unchanged; Multica orchestrates harnesses that talk to AICP. AICP-side does NOT need to change to accommodate Multica.
 - **Future M002 / M003 / M004** modules — implementation modules under the parent epic implement this decision concretely.
 
@@ -153,7 +153,7 @@ This decision affects:
 >   └─ Kimi CLI     ─→  AICP routing  ─→  Moonshot direct | OpenRouter
 > ```
 >
-> See [anti-vendor-lock-in lesson Evidence 11](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) for the 4-layer empirical claim, and the [Trust-Layer Learning Path](../../spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30.md) for the curated reading order.
+> See [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|anti-vendor-lock-in lesson Evidence 11]] for the 4-layer empirical claim, and the [Trust-Layer Learning Path](../../spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30.md) for the curated reading order.
 
 ## Relationships
 

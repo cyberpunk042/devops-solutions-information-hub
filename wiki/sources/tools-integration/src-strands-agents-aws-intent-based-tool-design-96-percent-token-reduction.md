@@ -77,7 +77,7 @@ The key insight is that the model is NOT the variable — same model, same task,
 
 ### Connection to Spec-Driven Convergence
 
-Per [Spec-Driven Agentic Build Convergence Lesson](../../lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md): structured artifacts authored before any code make AI output predictable. Strands Agents extends this insight from *spec artifacts* to *tool artifacts*: tools are first-class artifacts the agent reads at every invocation, and their design (intent-named vs endpoint-mapped) is the difference between predictable execution and combinatorial reasoning explosion.
+Per [[spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts|Spec-Driven Agentic Build Convergence Lesson]]: structured artifacts authored before any code make AI output predictable. Strands Agents extends this insight from *spec artifacts* to *tool artifacts*: tools are first-class artifacts the agent reads at every invocation, and their design (intent-named vs endpoint-mapped) is the difference between predictable execution and combinatorial reasoning explosion.
 
 ### Connection to Custom-Model Mission (operator-relevant)
 

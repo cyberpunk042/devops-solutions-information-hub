@@ -101,7 +101,7 @@ MarkTechPost 2026-05-03 article by Arham Islam explains **tokenization drift** â
 
 ### Connection to Spec-Driven Convergence (8-instance lesson)
 
-Per [Spec-Driven Agentic Build Convergence Lesson](../../lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md): structured artifacts authored before any code; closed-loop sync rule (fix the prompt first, then the code). Tokenization drift is the **mechanism failure** that spec-driven discipline prevents:
+Per [[spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts|Spec-Driven Agentic Build Convergence Lesson]]: structured artifacts authored before any code; closed-loop sync rule (fix the prompt first, then the code). Tokenization drift is the **mechanism failure** that spec-driven discipline prevents:
 
 | Spec-driven element | What tokenization drift adds |
 |---|---|

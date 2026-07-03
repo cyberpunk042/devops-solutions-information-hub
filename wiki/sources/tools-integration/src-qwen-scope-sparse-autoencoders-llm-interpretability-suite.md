@@ -121,7 +121,7 @@ Per [`raw/notes/2026-05-04-anythingllm-subquadratic-multi-source-ingestion-and-i
 > Compatible: SAE operates on plaintext residuals AFTER decypher inside the GPU's encrypted memory at L3 trust. Operator inspects with SAE weights inside the TEE; provider cannot inspect without operator's key. The interior-langue translation is operator-controllable end-to-end.
 
 > [!question] Is the Qwen3.5-27B-instruct SAE the most relevant for the senior-engineer-tier specialist LoRA?
-> Qwen3.5-27B is the only base trained on the instruct variant in this release — meaning the SAE features include instruction-following representations. For a senior-engineer-tier LoRA over Qwen3.6-27B (per [Anti-Vendor-Lock-In Evidence 1](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md)), Qwen3.5-27B SAEs are the closest commercial reference. Operator may train a fresh SAE for Qwen3.6-27B base.
+> Qwen3.5-27B is the only base trained on the instruct variant in this release — meaning the SAE features include instruction-following representations. For a senior-engineer-tier LoRA over Qwen3.6-27B (per [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Anti-Vendor-Lock-In Evidence 1]]), Qwen3.5-27B SAEs are the closest commercial reference. Operator may train a fresh SAE for Qwen3.6-27B base.
 
 ## Relationships
 

@@ -229,7 +229,7 @@ Projected cost impact at operator's volume (15-30M output tokens/month): switchi
 > | **Harness** | Claude Code · Codex · OpenCode · OpenClaw · Cursor · Gemini CLI · Hermes · Pi · Kimi CLI · Kiro CLI · Aider · Cline · Continue · Crush · Goose · ... | Medium (some harnesses are vendor-tied: Claude Code → Anthropic ecosystem; Cursor → Cursor Inc.) | High via [harness landscape](../../sources/tools-integration/src-agentic-coding-harness-landscape-2026.md) coverage |
 > | **Provider × Model** | (the existing Master Matrix above) | Variable — see Master Matrix mission column | High via OpenRouter + Ollama Cloud + direct + local |
 >
-> **Anti-vendor-lock-in is now empirical at three layers, not two.** Per [anti-vendor-lock-in lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) Evidence chain, this closes the orchestrator-layer documentation gap. No single vendor controls more than one of the three dimensions in the operator's current stack.
+> **Anti-vendor-lock-in is now empirical at three layers, not two.** Per [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|anti-vendor-lock-in lesson]] Evidence chain, this closes the orchestrator-layer documentation gap. No single vendor controls more than one of the three dimensions in the operator's current stack.
 
 ### Orchestrator selection (2026-04-28)
 
@@ -305,7 +305,7 @@ Multica (orchestrator)
   └─ Kimi CLI     ─→  AICP routing  ─→  Moonshot direct | OpenRouter
 ```
 
-**Four composable substitution layers**: trust (L0–L4 opt-ins) × orchestrator (Multica) × harness (10 supported) × provider (AICP backend pattern). Each layer is independently swappable. Per [anti-vendor-lock-in lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) Evidence 11, this closes the trust-layer documentation gap.
+**Four composable substitution layers**: trust (L0–L4 opt-ins) × orchestrator (Multica) × harness (10 supported) × provider (AICP backend pattern). Each layer is independently swappable. Per [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|anti-vendor-lock-in lesson]] Evidence 11, this closes the trust-layer documentation gap.
 
 ### Quarterly review trigger added (2026-04-30)
 
@@ -320,7 +320,7 @@ When re-validating this matrix, also check:
 
 > [!abstract] **The matrix is now potentially 5-axis: Custom-Model × Trust × Orchestrator × Harness × Provider** (operator-decision pending in [Custom-Tailored Model Group Epic](../../backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05.md) M006)
 >
-> The 2026-05-04 operator-authored [Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Concept](../../domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md) and [Epic](../../backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05.md) introduce a **candidate fifth substitutable dimension**: the operator-authored model tier sits above the four existing layers (vendor-supplied vs operator-authored). Per [Anti-Vendor-Lock-In Evidence 12](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md), 8 substitution axes within the layer are independently controllable: open-weight base · fine-tune method (LoRA / full / DPO / IPO / KTO) · training framework · preference-data source · behavioral-constitution authoring · composition mechanism (Mixture-of-LoRAs / TIES / MoE-base+LoRA) · evaluation gate · distribution channel.
+> The 2026-05-04 operator-authored [Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Concept](../../domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md) and [Epic](../../backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05.md) introduce a **candidate fifth substitutable dimension**: the operator-authored model tier sits above the four existing layers (vendor-supplied vs operator-authored). Per [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Anti-Vendor-Lock-In Evidence 12]], 8 substitution axes within the layer are independently controllable: open-weight base · fine-tune method (LoRA / full / DPO / IPO / KTO) · training framework · preference-data source · behavioral-constitution authoring · composition mechanism (Mixture-of-LoRAs / TIES / MoE-base+LoRA) · evaluation gate · distribution channel.
 >
 > | Custom-model opt-in | What it provides | Realistic effort | Hardware / runtime |
 > |---|---|---|---|

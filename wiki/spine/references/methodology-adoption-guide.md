@@ -358,7 +358,7 @@ Track BOTH dimensions independently. Readiness = is it defined? Progress = is it
 
 > [!success] **For any production-grade AI-assisted build in 2026, instantiate one of the 7+ documented spec-driven instances**
 >
-> Per [the convergence lesson (Layer 4)](../../lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md), at least 8 independent practitioners have converged on the same core pattern: treat prompts/specs/contexts as version-controlled first-class artifacts, not ad-hoc chat. Pick the instance by workload class:
+> Per [[spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts|the convergence lesson (Layer 4)]], at least 8 independent practitioners have converged on the same core pattern: treat prompts/specs/contexts as version-controlled first-class artifacts, not ad-hoc chat. Pick the instance by workload class:
 >
 > | Scale | Recommended instance |
 > |---|---|

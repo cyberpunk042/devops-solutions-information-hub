@@ -197,7 +197,7 @@ Authored [RLM-thread learning-path (artifact #12)](../spine/learning-paths/rlm-t
 
 ### Phase 8 — Meta-Distillation (artifact 13)
 
-Authored [anti-vendor-lock-in lesson (artifact #13)](../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) — distilled the session's meta-finding into a Layer-4 evolved-knowledge artifact at `01_drafts/seed` maturity. Specializes [Principle 4](../lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md) from per-declaration verification to **mission-level claim verification**: a mission claim with paper evidence at EVERY stack layer is empirical; partial coverage = aspirational.
+Authored [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|anti-vendor-lock-in lesson (artifact #13)]] — distilled the session's meta-finding into a Layer-4 evolved-knowledge artifact at `01_drafts/seed` maturity. Specializes [Principle 4](../lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md) from per-declaration verification to **mission-level claim verification**: a mission claim with paper evidence at EVERY stack layer is empirical; partial coverage = aspirational.
 
 ### Phase 9 — Final Handoff (this artifact, #14)
 
@@ -221,7 +221,7 @@ This document. The arc's authoritative end-state capture.
 | 10 | [2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission.md](2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission.md) | note (session) | growing | Mid-session handoff at the 10-artifact natural punctuation point (this session-end handoff supersedes it) |
 | 11 | [self-reference-drift-wiki-must-practice-its-own-teachings.md](../lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings.md) | lesson (edit) | growing | Evidence 6 added — positive empirical observation balancing Evidence 5's negative |
 | 12 | [rlm-thread-evidence-chain-2026-04-27.md](../spine/learning-paths/rlm-thread-evidence-chain-2026-04-27.md) | learning-path | seed | Curated reading order for the RLM thread; 4 sub-paths by goal |
-| 13 | [anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md](../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) | lesson | seed (01_drafts) | Layer-4 evolved-knowledge distillation — mission-claim-verification specializes Principle 4 |
+| 13 | [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence]] | lesson | seed (01_drafts) | Layer-4 evolved-knowledge distillation — mission-claim-verification specializes Principle 4 |
 | 14 | (this document) | note (session) | growing | Authoritative session-end handoff — supersedes #10 as the definitive end-state |
 
 ## The 9-Layer Open-Source Stack — Empirically Validated End-to-End
@@ -241,7 +241,7 @@ Every layer of the post-Anthropic stack now has direct paper-citable empirical e
 | 9 | **Loss objective** | IPO (DPPO-Binary TV) + Kimi-K2.5 KL | Default in prime-rl since 2026-03-02; cited papers arxiv:2602.04879 + 2602.02276 | [src-prime-intellect-prime-rl](../sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale.md) |
 | **+** | **Deployment validation** | AICP routing | $540 → $100 CAD/mo (operator-measured 80% reduction) without hardware investment | AICP handoff at `~/devops-expert-local-ai/docs/SESSION-2026-04-24-HANDOFF.md` |
 
-This is the empirical case the [anti-vendor-lock-in lesson (artifact #13)](../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) distills into the meta-finding: **mission-level claims become empirical when every stack layer has paper evidence; without per-layer evidence they remain aspirational.**
+This is the empirical case the [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|anti-vendor-lock-in lesson (artifact #13)]] distills into the meta-finding: **mission-level claims become empirical when every stack layer has paper evidence; without per-layer evidence they remain aspirational.**
 
 ## Brain-Refactor Empirical Validation (Live Observations This Session)
 
@@ -398,7 +398,7 @@ Context approached saturation as the arc reached natural saturation. Both ended 
 - BUILDS ON: [[2026-04-25-regather-systemic-bug-investigation-and-second-p4-instance|2026-04-25 Regather Log (#1)]] — this session continued the regather pattern productively
 - BUILDS ON: [[2026-04-24-session-handoff-brain-refactor-rules-and-hooks|2026-04-24 Brain Refactor Handoff]] — operates within and validates the rules+hooks layer that handoff established
 - DEMONSTRATES: [[infrastructure-over-instructions-for-process-enforcement|Principle 1]] — pre-bash hook caught reflexive truncation mid-session, validating structural enforcement at tool-call boundary
-- DEMONSTRATES: [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4]] — every claim in the 13 artifacts traces to a paper / repo / synthesis with inline citation; the meta-finding distilled in the [anti-vendor-lock-in lesson](../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) generalizes P4 to mission-class claims
+- DEMONSTRATES: [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4]] — every claim in the 13 artifacts traces to a paper / repo / synthesis with inline citation; the meta-finding distilled in the [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|anti-vendor-lock-in lesson]] generalizes P4 to mission-class claims
 - DEMONSTRATES: [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]] — this session's discipline (regather first, ingest properly, validate cleanly, cite specifically) IS what the wiki teaches
 - DEMONSTRATES: [[self-reference-drift-wiki-must-practice-its-own-teachings|Self-Reference Drift]] Evidence 6 — positive empirical observation balancing Evidence 5
 - FEEDS INTO: [[2026-consumer-hardware-ai-stack|2026 Consumer Hardware AI Stack]] — the RLM thread extends the existing tier-0 candidate analysis
