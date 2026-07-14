@@ -40,6 +40,9 @@ tags:
 
 # Synthesis — SAIN-01 Sovereign AI Node Master Specification
 
+> **SDD-993 update (2026-07-13, sovereign-os):** the dual-GPU layout below is superseded by a **three-card** build — **RTX PRO 6000 Blackwell Max-Q 96 GB (~300 W)** primary (Oracle) + **RTX 5090 32 GB (~350 W)** new internal secondary (PCIEX16_2 x8) + **RTX 4090 24 GB** displaced to an **OcuLink eGPU** (chipset M.2, PCIe 4.0 x4; Logic Engine card + DSpark draft). VFIO of the 4090 is now **opt-in** (host-resident by default). The **M.2_2-must-stay-empty** rule still holds (now shared with the 5090's PCIEX16_2). The verified-facts + hallucination map below remain valid for the architectural threads; layer this hardware update on top.
+
+
 ## Summary
 
 SAIN-01 is the operator's planned **bare-metal AI orchestration workstation** built on Debian 13 (Trixie) + a custom Zen-5-tuned Linux kernel, anchored by an AMD Ryzen 9 9900X CPU (single-cycle 512-bit AVX-512 datapath) and an asymmetric dual-GPU layout (NVIDIA RTX PRO 6000 Blackwell 96GB + RTX 4090 24GB). Storage is ZFS-on-NVMe with three tiered datasets (`tank/models` 1M-recordsize for weights, `tank/context` 16k+`sync=always` for state files, `tank/agents` 128k for runtime cache). The RTX 4090 is bound to `vfio-pci` at boot as an isolated sandbox; the Blackwell stays host-resident for primary inference. Security is enforced at kernel level via Tetragon eBPF (`sys_execve` allowlist → SIGKILL) with a native Python supervisor (`guardian-core`) acting as autonomous circuit breaker. Network is physically segregated: Intel 2.5GbE for management traffic, Marvell AQC113C 10GbE for model-weight ingestion. The architecture realizes a software "Trinity" (Pulse / Weaver / Auditor) mapped to physical hardware boundaries — CCD 0 for vector pipeline, CCD 1 for state engine, kernel-level eBPF for the immutable gate. Twelve hallucinations were identified in the source material; this synthesis separates them from the verified threads.

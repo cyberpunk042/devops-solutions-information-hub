@@ -34,6 +34,9 @@ tags: [epic, sain-01, hardware, pcie, mok, secure-boot, friction-audit]
 
 # E100 — Hardware Foundation
 
+> **SDD-993 topology update (2026-07-13, sovereign-os):** the SAIN-01 GPU substrate is now **three cards**, all installed — **RTX PRO 6000 Blackwell Max-Q 96 GB (~300 W, the Max-Q edition — NOT the 600 W workstation card)** primary in PCIEX16_1 x8; **RTX 5090 32 GB (~350 W)** new internal secondary in PCIEX16_2 x8 (took the 4090's vacated internal slot); **RTX 4090 24 GB** moved OUT to an **OcuLink eGPU** on a chipset M.2 (PCIe 4.0 x4). The two internal cards still run **x8/x8** and **M.2_2 must remain empty** (shares lanes with PCIEX16_2 / the 5090). IOMMU-group separation now spans PRO 6000 + 5090 (+ the 4090 eGPU). The body below predates the 5090 and treats the 4090 as the internal secondary — read it with this update layered on top.
+
+
 ## Summary
 
 Procure, assemble, and verify the physical hardware substrate for SAIN-01. The platform is deterministic: **AMD Ryzen 9 9900X** (12C/24T, dual-CCD, single-cycle 512-bit AVX-512), **ASUS ProArt X870E-Creator** motherboard, **NVIDIA RTX PRO 6000 Blackwell** (96 GB) + **NVIDIA RTX 4090** (24 GB) in PCIEX16_1 + PCIEX16_2 slots respectively, **256 GB DDR5** (initial 128 GB acceptable; expand later), **2× PCIe 5.0 NVMe** in M.2_1 + a *second* M.2 slot that is NOT M.2_2, **Marvell AQC113C 10GbE** + **Intel I226-V 2.5GbE** on the board. The critical platform constraint: **M.2_2 must remain unpopulated** — populating it triggers PCIe-lane bifurcation that drops PCIEX16_2 to x4, destroying the x8/x8 GPU symmetry the rest of the milestone depends on. This epic ends when the `friction-audit` script (delivered by E101) passes at boot: x8/x8 lane symmetry verified, IOMMU groups clean (Blackwell + 4090 in distinct groups), `cppc` preferred-CCD identified, MOK key generated for Secure Boot signing.

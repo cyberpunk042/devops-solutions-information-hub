@@ -61,7 +61,7 @@ tags: [milestone, sain-01, sovereign-os, hardware, kernel, zfs, vfio, tetragon, 
 
 > **GPU topology update (SDD-993, operator hardware change 2026-07-13):** the SAIN-01
 > is now a **three-GPU build, all cards installed**:
-> - **RTX PRO 6000 Blackwell 96 GB (~600 W)** — **primary / main Oracle Core**, internal
+> - **RTX PRO 6000 Blackwell Max-Q 96 GB (~300 W — the Max-Q edition, NOT the 600 W workstation card)** — **primary / main Oracle Core**, internal
 >   PCIEX16_1 x8 (host-resident). Procured + installed (the "not yet procured" note below
 >   is superseded).
 > - **RTX 5090 32 GB (TUF-RTX5090-O32G-GAMING, ~350 W)** — **new internal secondary**,
