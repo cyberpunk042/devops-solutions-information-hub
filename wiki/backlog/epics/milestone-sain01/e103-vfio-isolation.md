@@ -31,7 +31,7 @@ tags: [epic, sain-01, vfio, iommu, amd-iommu, gpu-isolation, rtx-4090, blackwell
 
 # E103 — VFIO Isolation
 
-> **SDD-993 update (2026-07-13, sovereign-os):** VFIO isolation of the **RTX 4090 is now OPT-IN**, not the default. The operator works locally on bare metal most of the time, so all GPUs are **host-resident by default**; the `vfio-pci` sandbox is a config choice (`role: vfio`). The 4090 is now an **OcuLink eGPU** (chipset M.2, PCIe 4.0 x4), still the Logic Engine card and the DSpark draft target. A **new RTX 5090** is the internal secondary (PCIEX16_2 x8; not VFIO-bound). The Oracle stays on the PRO 6000 Max-Q. The GRUB `vfio-pci.ids` binding below applies only when the operator opts the 4090 into the sandbox.
+> **SDD-993 update (2026-07-13, sovereign-os):** VFIO isolation of the **RTX 4090 is now OPT-IN**, not the default. The operator works locally on bare metal most of the time, so all GPUs are **host-resident by default**; the `vfio-pci` sandbox is a config choice (`role: vfio`). The 4090 is now an **OcuLink eGPU** (chipset M.2, PCIe 4.0 x4) — the **DSpark speculative-decode draft** target. Per operator directive 2026-07-14 (D-022) the **Logic Engine tier runs on the new RTX 5090** internal secondary (PCIEX16_2 x8; not VFIO-bound — more bandwidth than the eGPU). The Oracle stays on the PRO 6000 Max-Q. The GRUB `vfio-pci.ids` binding below applies only when the operator opts the 4090 into the sandbox.
 
 
 ## Summary
