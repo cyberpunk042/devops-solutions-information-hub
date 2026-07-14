@@ -29,6 +29,9 @@ tags: [runbook, friction-audit, pcie, hardware-integrity, sain-01, selfdef, ips,
 
 # Operator runbook — friction-audit PCIe gate failure
 
+> **GPU topology update (2026-07-13, sovereign-os):** the two internal x8/x8 GPUs are now the **RTX PRO 6000 Max-Q (PCIEX16_1)** + the **RTX 5090 (PCIEX16_2)** — the RTX 4090 moved to an **OcuLink eGPU** on a chipset M.2. The **M.2_2-must-stay-empty** invariant below is UNCHANGED and still the primary thing this runbook checks (M.2_2 shares lanes with PCIEX16_2 / the 5090). (Details in the sovereign-os topology reconcile, docs/sdd/ 993.)
+
+
 ## Summary
 
 Operator runbook for **friction-audit PCIe gate failure**.  Anchored to: Source dump §5.1 — Native Guard Script Architecture friction-audit lines 338-353 PCIe gate; SDD-027 friction-audit-system specification. Also references: Catalog milestone MS046 (240 requirements + 26 modules + 10 epics).

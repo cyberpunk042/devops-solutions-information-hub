@@ -59,6 +59,23 @@ tags: [milestone, sain-01, sovereign-os, hardware, kernel, zfs, vfio, tetragon, 
 
 # Milestone — SAIN-01 Sovereign AI Node
 
+> **GPU topology update (SDD-993, operator hardware change 2026-07-13):** the SAIN-01
+> is now a **three-GPU build, all cards installed**:
+> - **RTX PRO 6000 Blackwell Max-Q 96 GB (~300 W — the Max-Q edition, NOT the 600 W workstation card)** — **primary / main Oracle Core**, internal
+>   PCIEX16_1 x8 (host-resident). Procured + installed (the "not yet procured" note below
+>   is superseded).
+> - **RTX 5090 32 GB (TUF-RTX5090-O32G-GAMING, ~350 W)** — **new internal secondary**,
+>   PCIEX16_2 x8 (Blackwell GB202, 512-bit — same FP4/NVFP4 family as the PRO 6000). It
+>   took the RTX 4090's vacated internal slot.
+> - **RTX 4090 24 GB (~350 W)** — moved OUT to an **OcuLink eGPU** (OcuLink-to-M.2 adapter
+>   on a **chipset M.2 slot**, PCIe 4.0 x4); host-resident by default, VFIO sandbox is opt-in.
+>
+> Two internal cards (PRO 6000 + 5090) ⇒ **x8/x8 bifurcation stands** and **M.2_2 MUST
+> remain empty** (it shares lanes with PCIEX16_2 / the 5090); the OcuLink adapter is on a
+> chipset M.2, NOT M.2_2. One primary + **two secondaries** (5090 internal + 4090 eGPU).
+> Canonical: `cyberpunk042/sovereign-os` `docs/sdd/993-*.md` + decision **D-021**. The epic
+> tables below describe the original 2-GPU spec and stay as the build-history record.
+
 ## Summary
 
 Transition from operator's planning artifacts to a fully deployable **Sovereign AI Node (SAIN-01)** — a bare-metal AMD Zen 5 + dual-NVIDIA workstation running a custom-tuned Debian 13 (Trixie) host with ZFS-stratified storage, VFIO-isolated dual GPUs, kernel-level Tetragon eBPF perimeter, and a software architecture realizing the [[concept-srp-trinity-pulse-weaver-auditor|SRP Trinity]] (Pulse / Weaver / Auditor). This milestone covers eleven epics across hardware, OS build, storage, isolation, network, runtime, state-fabric, profiles, acceleration, and model catalog. Each epic owns one operational domain. The deliverable is a node that survives the `friction-audit` script at boot and runs the Conductor / Logic Engine / Oracle Core tiers on the right hardware substrate per the L1-L3 layers of the wiki. This is **not** a research deliverable; it is a build specification that another agent or operator session can execute end-to-end.

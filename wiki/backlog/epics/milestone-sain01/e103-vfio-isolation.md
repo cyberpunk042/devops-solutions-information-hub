@@ -31,6 +31,9 @@ tags: [epic, sain-01, vfio, iommu, amd-iommu, gpu-isolation, rtx-4090, blackwell
 
 # E103 — VFIO Isolation
 
+> **SDD-993 update (2026-07-13, sovereign-os):** VFIO isolation of the **RTX 4090 is now OPT-IN**, not the default. The operator works locally on bare metal most of the time, so all GPUs are **host-resident by default**; the `vfio-pci` sandbox is a config choice (`role: vfio`). The 4090 is now an **OcuLink eGPU** (chipset M.2, PCIe 4.0 x4) — the **DSpark speculative-decode draft** target. Per operator directive 2026-07-14 (D-022) the **Logic Engine tier runs on the new RTX 5090** internal secondary (PCIEX16_2 x8; not VFIO-bound — more bandwidth than the eGPU). The Oracle stays on the PRO 6000 Max-Q. The GRUB `vfio-pci.ids` binding below applies only when the operator opts the 4090 into the sandbox.
+
+
 ## Summary
 
 Configure **VFIO passthrough of the RTX 4090** at boot via GRUB kernel parameters, so the secondary GPU is **invisible to the host** and reserved as the [[concept-srp-trinity-pulse-weaver-auditor|Weaver]]'s sandbox substrate. The Blackwell stays host-resident under the NVIDIA driver for the Oracle Core's primary inference. The mechanism: GRUB parameters `amd_iommu=on iommu=pt vfio-pci.ids=10de:2684,10de:22ba` bind `vfio-pci` to the 4090 (GPU `10de:2684` + audio companion `10de:22ba`) at boot, before `nvidia.ko` enumerates devices. Verifies clean IOMMU group separation (Blackwell + 4090 in distinct groups; confirmed at E100). The end-state is that sandboxed Podman containers can attach to the 4090 via `--device /dev/vfio/<group_id>` while the host's `nvidia-smi` reports only the Blackwell. The L1/L2 grounding (see [[concept-vfio-gpu-isolation-amd-iommu|VFIO GPU isolation concept]]) covers the IOMMU-group-must-separate constraint, the MOK-signing interaction with Secure Boot, and the "all-or-nothing device binding" reality.
