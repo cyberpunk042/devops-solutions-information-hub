@@ -33,14 +33,14 @@ Usage:
 
 Examples:
     # Standard task add:
-    python -m tools.cross_project_task root-ghostproxy \\
+    python -m tools.cross_project_task root-modules \\
         --slug pre-publish-readiness \\
         --title "Pre-publish readiness review" \\
         --priority P1 \\
         --content-file /tmp/task-body.md
 
     # Auto-allocates next task ID; from stdin:
-    echo "Body" | python -m tools.cross_project_task root-ghostproxy \\
+    echo "Body" | python -m tools.cross_project_task root-modules \\
         --slug minor-task --title "Minor task"
 
 Boundary: this tool ONLY writes to <target>/wiki/backlog/tasks/<TaskID>-<slug>.md
@@ -169,7 +169,7 @@ def main():
         description="Operator-granted cross-project task channel. Writes to "
         "<target>/wiki/backlog/tasks/<TaskID>-<slug>.md.",
     )
-    p.add_argument("target", help="sister-project name (e.g., 'root-ghostproxy') or alias")
+    p.add_argument("target", help="sister-project name (e.g., 'root-modules') or alias")
     p.add_argument("--slug", required=True, help="filename slug (alnum + hyphens)")
     p.add_argument("--title", required=True, help="task title")
     p.add_argument("--task-id", help="task ID (e.g., T066); auto-allocated if omitted")

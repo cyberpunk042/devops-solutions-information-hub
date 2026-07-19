@@ -1,12 +1,12 @@
 {
-  "generated": "2026-07-02T21:23:27.160955+00:00",
+  "generated": "2026-07-19T19:40:39.362678+00:00",
   "stats": {
     "pages": 986,
     "domains": 16,
     "sources": 128,
     "comparisons": 14,
     "relationships": 4352,
-    "tags_unique": 3794,
+    "tags_unique": 3795,
     "layers": {
       "3": 8,
       "5": 38,
@@ -20767,9 +20767,9 @@
       ]
     },
     {
-      "path": "ecosystem/project_profiles/root-ghostproxy/identity-profile.md",
-      "slug": "ecosystem/project_profiles/root-ghostproxy/identity-profile",
-      "title": "root-ghostproxy \u2014 Identity Profile",
+      "path": "ecosystem/project_profiles/root-modules/identity-profile.md",
+      "slug": "ecosystem/project_profiles/root-modules/identity-profile",
+      "title": "root-modules \u2014 Identity Profile",
       "type": "reference",
       "domain": "cross-domain",
       "status": "synthesized",
@@ -20780,7 +20780,7 @@
       "tags": [
         "ecosystem",
         "project-profile",
-        "root-ghostproxy",
+        "root-modules",
         "identity",
         "goldilocks",
         "type-root",
@@ -20790,10 +20790,10 @@
       ],
       "sources": [
         {
-          "id": "root-ghostproxy-readme",
+          "id": "root-modules-readme",
           "type": "file",
           "file": "/root/README.md",
-          "description": "root-ghostproxy README on this machine (ghostproxy host) \u2014 install.sh + ~/.claude/settings.json + hooks + opencode bridge architecture"
+          "description": "root-modules README on this machine (ghostproxy host) \u2014 install.sh + ~/.claude/settings.json + hooks + opencode bridge architecture"
         },
         {
           "id": "operator-directive-2026-05-04-root-prep",
@@ -20805,14 +20805,14 @@
           "id": "operator-directive-2026-05-04-pain-point",
           "type": "directive",
           "file": "raw/notes/2026-05-04-custom-tailored-model-group-moe-intelligence-layer-and-root-ghostproxy-pain-point.md",
-          "description": "Operator's original framing of root-ghostproxy as 'IPS + system AI safety setup project' with suricata/polarproxy as modules"
+          "description": "Operator's original framing of root-modules as 'IPS + system AI safety setup project' with suricata/polarproxy as modules"
         }
       ],
       "layer": "",
       "maturity": "seed",
       "derived_from": [],
       "aliases": [
-        "root-ghostproxy \u2014 Identity Profile"
+        "root-modules \u2014 Identity Profile"
       ],
       "relationships": [
         {
@@ -69468,7 +69468,7 @@
       "ecosystem/project_profiles/openarms/identity-profile",
       "ecosystem/project_profiles/openfleet/identity-profile",
       "ecosystem/project_profiles/research-wiki/identity-profile",
-      "ecosystem/project_profiles/root-ghostproxy/identity-profile",
+      "ecosystem/project_profiles/root-modules/identity-profile",
       "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property",
       "lessons/04_principles/hypothesis/right-process-for-right-context-the-goldilocks-imperative",
       "log/2026-05-20-avx-plus-plus-dump-tail-backward-sweep-review",
@@ -69493,7 +69493,7 @@
       "ecosystem/project_profiles/openarms/identity-profile",
       "ecosystem/project_profiles/openfleet/identity-profile",
       "ecosystem/project_profiles/research-wiki/identity-profile",
-      "ecosystem/project_profiles/root-ghostproxy/identity-profile",
+      "ecosystem/project_profiles/root-modules/identity-profile",
       "spine/goldilocks-flow"
     ],
     "routing": [
@@ -69944,7 +69944,7 @@
       "ecosystem/project_profiles/openarms/identity-profile",
       "ecosystem/project_profiles/openfleet/identity-profile",
       "ecosystem/project_profiles/research-wiki/identity-profile",
-      "ecosystem/project_profiles/root-ghostproxy/identity-profile",
+      "ecosystem/project_profiles/root-modules/identity-profile",
       "ecosystem/two-ultimate-solutions-canonical-index",
       "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
       "lessons/03_validated/methodology-quality/bug-vs-systemic-bug-nuance-systemic-bugs-live-at-the-meta-level-harness-ecosystem-brain-files",
@@ -70770,7 +70770,6 @@
       "domains/cross-domain/cascade-candidate-root-ghostproxy-rollout-resequence-after-operator-correction-rgp-really-bad-2026-05-16",
       "domains/cross-domain/cascade-candidate-root-ghostproxy-scope-clarification-selfdef-boundary-2026-05-16",
       "domains/cross-domain/cascade-candidate-root-ghostproxy-state-divergence-upstream-already-advanced-2026-05-16",
-      "ecosystem/project_profiles/root-ghostproxy/identity-profile",
       "log/2026-05-04-new-machine-context-load-and-adaptation-findings",
       "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
       "log/2026-05-08-sister-project-investigation-kickoff-spec-root-ghostproxy-foundational-triplet-adaptation",
@@ -70807,11 +70806,11 @@
     ],
     "type-root": [
       "backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05",
-      "ecosystem/project_profiles/root-ghostproxy/identity-profile"
+      "ecosystem/project_profiles/root-modules/identity-profile"
     ],
     "group-operating-system-setup": [
       "backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05",
-      "ecosystem/project_profiles/root-ghostproxy/identity-profile"
+      "ecosystem/project_profiles/root-modules/identity-profile"
     ],
     "pre-milestone": [
       "backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05"
@@ -75109,7 +75108,7 @@
     ],
     "seed": [
       "domains/knowledge-systems/pkm-theory/knowledge-evolution-pipeline",
-      "ecosystem/project_profiles/root-ghostproxy/identity-profile"
+      "ecosystem/project_profiles/root-modules/identity-profile"
     ],
     "growing": [
       "domains/knowledge-systems/pkm-theory/knowledge-evolution-pipeline"
@@ -75448,15 +75447,18 @@
       "ecosystem/project_profiles/openarms/identity-profile",
       "ecosystem/project_profiles/openfleet/identity-profile",
       "ecosystem/project_profiles/research-wiki/identity-profile",
-      "ecosystem/project_profiles/root-ghostproxy/identity-profile"
+      "ecosystem/project_profiles/root-modules/identity-profile"
     ],
     "self-referential": [
       "ecosystem/project_profiles/research-wiki/identity-profile",
       "lessons/03_validated/knowledge-systems/knowledge-systems-is-foundational-domain",
       "lessons/03_validated/methodology-quality/standards-must-preach-by-example"
     ],
+    "root-modules": [
+      "ecosystem/project_profiles/root-modules/identity-profile"
+    ],
     "sfif-pre-infrastructure": [
-      "ecosystem/project_profiles/root-ghostproxy/identity-profile"
+      "ecosystem/project_profiles/root-modules/identity-profile"
     ],
     "index": [
       "ecosystem/two-ultimate-solutions-canonical-index",
@@ -88960,6 +88962,12 @@
       "target": "root-ghostproxy operating-principles.md Principle #11 anti-pattern \"verbal-only\" entry",
       "referenced_by": [
         "Lesson \u2014 Verbal acknowledgment is not a fix: every bug-fix must produce a structural artefact (rule, file, hook, code)"
+      ]
+    },
+    {
+      "target": "root-ghostproxy \u2014 Identity Profile",
+      "referenced_by": [
+        "Milestone: Post-Anthropic Self-Autonomous AI Stack"
       ]
     },
     {

@@ -191,8 +191,8 @@ projects:
   # Existing 5 entries above don't carry type/group yet — operator may
   # backfill. Defaults treat both as unspecified.
   # ---------------------------------------------------------------------------
-  root-ghostproxy:
-    description: "Root-level operating-system AI safety + IaC. Hardens Claude Code + opencode at the OS level via ~/.claude/settings.json + 5 hooks (policy-block, malware-block, leak-detector, integrity, session-start, session-summary) + opencode bridge plugin. Planned modules: suricata (IPS), polarproxy (TLS inspection). type=root because it configures the OS, regardless of which user installs it. Currently at SFIF Foundation tier (install.sh + base hooks). SFIF Infrastructure + Features pending — see epic root-ghostproxy-sfif-rollout-and-second-brain-integration."
+  root-modules:
+    description: "Renamed from root-ghostproxy 2026-07-19 (operator: 'at first and by default a root or home folder upgrader, evolver and secondly you can install supplementary modules like the ghostproxy combo' — 'ghostproxy' now names the network-inspection module combo). Root-level operating-system AI safety + IaC. Hardens Claude Code + opencode at the OS level via ~/.claude/settings.json + 5 hooks (policy-block, malware-block, leak-detector, integrity, session-start, session-summary) + opencode bridge plugin. Planned modules: suricata (IPS), polarproxy (TLS inspection). type=root because it configures the OS, regardless of which user installs it. Currently at SFIF Foundation tier (install.sh + base hooks). SFIF Infrastructure + Features pending — see epic root-ghostproxy-sfif-rollout-and-second-brain-integration."
     type: root                            # NEW value — project SETS UP an OS / system-level config (scope, not path)
     group: operating-system-setup          # NEW dimension — purpose-class clustering
     path: ~/                              # repo root IS the home dir per /root README ("git init'd at $HOME"). On root user, ~/ = /root. On any user, ~/ = $HOME (the .git is at $HOME/.git).
@@ -201,11 +201,11 @@ projects:
     remote:
       type: github
       owner: cyberpunk042                 # PRESUMED (matches other sisters); operator confirms before remote-fallback ops
-      repo: root-ghostproxy
+      repo: root-modules
       default_branch: main
-      url: https://github.com/cyberpunk042/root-ghostproxy
+      url: https://github.com/cyberpunk042/root-modules
     aliases:
-      - root-ghostproxy
+      - root-ghostproxy   # pre-2026-07-19 project name, retained so the old name keeps resolving
     layout:
       # PRE-SFIF-INFRASTRUCTURE state as of 2026-05-04. Currently populated:
       #   .claude/settings.json + hooks/*.sh + integrity.py    — security envelope (Foundation)

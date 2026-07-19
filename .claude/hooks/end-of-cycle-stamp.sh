@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Stop hook — emit end-of-cycle status stamp via systemMessage for the
 # second-brain project, wherever it lives on disk. Adapted from the parallel
-# root-ghostproxy hook pattern (see /root/.claude/hooks/end-of-cycle-stamp.sh)
+# root-modules hook pattern (see /root/.claude/hooks/end-of-cycle-stamp.sh)
 # to second-brain's data model (no tools.cycle/state — uses gateway/stats/
 # file-scan instead).
 #

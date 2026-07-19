@@ -614,4 +614,4 @@ Validated experience from operating Claude Code in this ecosystem.
 [[src-aidlc-cc-plugin-claude-code-port|Synthesis — ijin/aidlc-cc-plugin: Community Claude Code Port of AWS AI-DLC (Grain of Salt)]]
 [[three-permission-modes-think-edit-act|Three Permission Modes (Think / Edit / Act) — Operator-Selected AI Authority Tiers]]
 [[three-layer-agent-context-architecture|Three-Layer Agent Context Architecture]]
-[[identity-profile|root-ghostproxy — Identity Profile]]
+[[identity-profile|root-modules — Identity Profile]]

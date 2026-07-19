@@ -11,7 +11,7 @@
 # Remediation: directive injected via additionalContext directs agent to /orient,
 #              which loads project-specific intel deterministically.
 # Adopted: 2026-05-05 per operator directive on opt-in feature transcension from
-#          root-ghostproxy. See wiki/patterns/03_validated/architecture/
+#          root-modules. See wiki/patterns/03_validated/architecture/
 #          session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report.md.
 
 import json

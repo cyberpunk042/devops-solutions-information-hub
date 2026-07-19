@@ -265,4 +265,4 @@ The phase progression (POC → MVP → Staging → Production) also maps to SFIF
 [[src-aidlc-aws-driven-development-lifecycle|Synthesis — AWS AI-DLC: AI-Driven Development Lifecycle (Methodology, Not a Tool)]]
 [[root-ghostproxy-m003-foundation-hardening|root-ghostproxy M003 — Foundation Hardening]]
 [[root-ghostproxy-m004-infrastructure-tooling|root-ghostproxy M004 — Infrastructure Tooling]]
-[[identity-profile|root-ghostproxy — Identity Profile]]
+[[identity-profile|root-modules — Identity Profile]]

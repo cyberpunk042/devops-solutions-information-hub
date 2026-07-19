@@ -1,7 +1,7 @@
 ---
-title: "root-ghostproxy — Identity Profile"
+title: "root-modules — Identity Profile"
 aliases:
-  - "root-ghostproxy — Identity Profile"
+  - "root-modules — Identity Profile"
 type: reference
 domain: cross-domain
 status: synthesized
@@ -10,10 +10,10 @@ maturity: seed
 created: 2026-05-04
 updated: 2026-05-04
 sources:
-  - id: root-ghostproxy-readme
+  - id: root-modules-readme
     type: file
     file: /root/README.md
-    description: "root-ghostproxy README on this machine (ghostproxy host) — install.sh + ~/.claude/settings.json + hooks + opencode bridge architecture"
+    description: "root-modules README on this machine (ghostproxy host) — install.sh + ~/.claude/settings.json + hooks + opencode bridge architecture"
   - id: operator-directive-2026-05-04-root-prep
     type: directive
     file: raw/notes/2026-05-04-prepare-root-ghostproxy-as-sister-type-root-group-operating-system-setup.md
@@ -21,19 +21,21 @@ sources:
   - id: operator-directive-2026-05-04-pain-point
     type: directive
     file: raw/notes/2026-05-04-custom-tailored-model-group-moe-intelligence-layer-and-root-ghostproxy-pain-point.md
-    description: "Operator's original framing of root-ghostproxy as 'IPS + system AI safety setup project' with suricata/polarproxy as modules"
-tags: [ecosystem, project-profile, root-ghostproxy, identity, goldilocks, type-root, group-operating-system-setup, sfif-pre-infrastructure, seed]
+    description: "Operator's original framing of root-modules as 'IPS + system AI safety setup project' with suricata/polarproxy as modules"
+tags: [ecosystem, project-profile, root-modules, identity, goldilocks, type-root, group-operating-system-setup, sfif-pre-infrastructure, seed]
 ---
 
-# root-ghostproxy — Identity Profile
+# root-modules — Identity Profile
+
+> **Renamed 2026-07-19**: `root-ghostproxy` → `root-modules`, per operator directive (verbatim): *"root-ghostproxy has just been renamed into root-modules. lets update the repo as such. its at first and by default a root or home folder upgrader, evolver and secondly you can install supplementary modules like the ghostproxy combo."* "Ghostproxy" now names the network-inspection module combo (bridge + Suricata + PolarProxy), not the project. The `root-ghostproxy` alias is retained in `sister-projects.yaml`. Historical raw-notes/epic filenames below keep the old name.
 
 ## Summary
 
-The second brain's understanding of root-ghostproxy as an ecosystem member. root-ghostproxy is a **type=root, group=operating-system-setup** IaC project that hardens the Claude Code + opencode AI agent runtime at the operating-system layer. Its install footprint is `$HOME/.claude/settings.json` + a deny-list of ~150 patterns + 5 hook scripts (`policy-block.sh`, `malware-block.sh`, `leak-detector.sh`, `session-start.sh`, `session-summary.sh`) + `integrity.py` shared module + an opencode bridge plugin. Currently at SFIF Foundation tier (install.sh works, base policy fires); pre-Infrastructure on every other dimension. Planned features: suricata IPS module, polarproxy TLS inspection module. **Not yet a connected sister** — second-brain integration is a future-session work stream, gated on the project authoring its own AGENTS.md first.
+The second brain's understanding of root-modules as an ecosystem member. root-modules is a **type=root, group=operating-system-setup** IaC project that hardens the Claude Code + opencode AI agent runtime at the operating-system layer. Its install footprint is `$HOME/.claude/settings.json` + a deny-list of ~150 patterns + 5 hook scripts (`policy-block.sh`, `malware-block.sh`, `leak-detector.sh`, `session-start.sh`, `session-summary.sh`) + `integrity.py` shared module + an opencode bridge plugin. Currently at SFIF Foundation tier (install.sh works, base policy fires); pre-Infrastructure on every other dimension. Planned features: suricata IPS module, polarproxy TLS inspection module. **Not yet a connected sister** — second-brain integration is a future-session work stream, gated on the project authoring its own AGENTS.md first.
 
 ## Identity (Goldilocks)
 
-> [!info] root-ghostproxy Identity Profile
+> [!info] root-modules Identity Profile
 >
 > Per [[execution-mode-is-consumer-property-not-project-property|Consumer-Property Doctrine]] (2026-04-15), rows marked **Stable** / **State** are project fields; rows marked **Consumer/Task** are defaults the consumer may override at connect time. Per operator directive 2026-05-04 (`raw/notes/2026-05-04-prepare-root-ghostproxy-as-sister-type-root-group-operating-system-setup.md`), this profile introduces two new dimension values — **Type=root** and **Group=operating-system-setup** — both Stable.
 >
@@ -69,7 +71,7 @@ Type captures *what the project does*, not *where its files live*.
 
 A new dimension introduced this directive. Distinct from `domain` (technology axis) and from `type` (scope axis): **group** is the **intent axis** — what purpose-class does this project belong to.
 
-| Dimension | Question it answers | root-ghostproxy value |
+| Dimension | Question it answers | root-modules value |
 |---|---|---|
 | Type | What is this at the scope level? | `root` — OS / system-level setup |
 | Domain | What technology stack? | Infrastructure (IaC: Bash + Python + TS) |
@@ -79,7 +81,7 @@ Future projects sharing this group (potential): container-runtime-setup, network
 
 ## What Makes This Profile Distinct
 
-| Property | root-ghostproxy | Compared to other sisters |
+| Property | root-modules | Compared to other sisters |
 |---|---|---|
 | Repo location | `$HOME` itself (git init at the home directory) | All others sit at `$HOME/<projectname>` |
 | Install side-effects | Writes to `$HOME/.claude/`, `$HOME/.config/opencode/` | Others are self-contained in their own dir |
@@ -90,7 +92,7 @@ Future projects sharing this group (potential): container-runtime-setup, network
 
 ## Current State (file-by-file, as of 2026-05-04 on ghostproxy host)
 
-> [!info] Files currently in the root-ghostproxy repo
+> [!info] Files currently in the root-modules repo
 >
 > | File | Stage | Purpose |
 > |---|---|---|
@@ -111,7 +113,7 @@ Future projects sharing this group (potential): container-runtime-setup, network
 >
 > NOT yet present (Infrastructure / Features pending): wiki/, backlog/, log/, AGENTS.md, CLAUDE.md, methodology layer, suricata module, polarproxy module, project-internal tooling.
 
-## What the Brain Knows About root-ghostproxy (and what it doesn't)
+## What the Brain Knows About root-modules (and what it doesn't)
 
 > [!success] **Confirmed (loaded into context this session)**
 > - Architecture per `/root/README.md` — read in full this session
@@ -124,7 +126,7 @@ Future projects sharing this group (potential): container-runtime-setup, network
 > - GitHub remote owner — presumed `cyberpunk042` to match other sisters; not confirmed by operator
 > - Canonical install user — typically `root` based on this machine, but project supports any user
 > - Suricata + polarproxy module specs — operator named them as planned modules but no design yet
-> - Whether `wiki_dir: wiki` is the right convention or root-ghostproxy will use a different layout (operator decision at SFIF Infrastructure stage)
+> - Whether `wiki_dir: wiki` is the right convention or root-modules will use a different layout (operator decision at SFIF Infrastructure stage)
 
 ## Future-Session Work Plan (NOT this preparation session)
 
@@ -135,8 +137,8 @@ Two parallel work streams once the operator authorizes work inside `/root`:
 | Step | Outcome |
 |---|---|
 | Authorize `auto_connect` flip OR run explicit `--connect-project` | Operator decision |
-| Run `python3 -m tools.setup --connect-project <root-ghostproxy-path>` from the second brain | Installs research-wiki MCP entry into root-ghostproxy's `.mcp.json`, adds gateway/view forwarders to `tools/`, adds `## Second Brain Connection` block to AGENTS.md |
-| **Dependency:** AGENTS.md must exist in root-ghostproxy first | Stream 2 Scaffold output |
+| Run `python3 -m tools.setup --connect-project <root-modules-path>` from the second brain | Installs research-wiki MCP entry into root-modules's `.mcp.json`, adds gateway/view forwarders to `tools/`, adds `## Second Brain Connection` block to AGENTS.md |
+| **Dependency:** AGENTS.md must exist in root-modules first | Stream 2 Scaffold output |
 
 ### Stream 2 — Pure SFIF project base
 
@@ -157,11 +159,11 @@ Per [[model-sfif-architecture|Model — SFIF and Architecture]] — the four sta
 > |-----------|-------|
 > | **Operator directive** | `raw/notes/2026-05-04-prepare-root-ghostproxy-as-sister-type-root-group-operating-system-setup.md` |
 > | **SFIF model (the build framework)** | [[model-sfif-architecture\|Model — SFIF and Architecture]] |
-> | **Sister-projects registry entry** | `wiki/config/sister-projects.yaml` → `root-ghostproxy:` |
+> | **Sister-projects registry entry** | `wiki/config/sister-projects.yaml` → `root-modules:` |
 > | **Goldilocks identity protocol** | [[project-self-identification-protocol\|Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Ecosystem context** | [[four-project-ecosystem\|Four-Project Ecosystem]] (now five with root-ghostproxy when integrated) |
+> | **Ecosystem context** | [[four-project-ecosystem\|Four-Project Ecosystem]] (now five with root-modules when integrated) |
 > | **SFIF rollout epic** | `wiki/backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05.md` |
-> | **Original framing of root-ghostproxy** | `raw/notes/2026-05-04-custom-tailored-model-group-moe-intelligence-layer-and-root-ghostproxy-pain-point.md` |
+> | **Original framing of root-modules** | `raw/notes/2026-05-04-custom-tailored-model-group-moe-intelligence-layer-and-root-ghostproxy-pain-point.md` |
 
 ## Relationships
 
@@ -180,4 +182,3 @@ Per [[model-sfif-architecture|Model — SFIF and Architecture]] — the four sta
 [[model-claude-code|Model — Claude Code]]
 [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
 [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
-[[post-anthropic-self-autonomous-stack|Milestone: Post-Anthropic Self-Autonomous AI Stack]]

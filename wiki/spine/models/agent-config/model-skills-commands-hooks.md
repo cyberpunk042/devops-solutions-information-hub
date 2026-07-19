@@ -453,4 +453,4 @@ The 7-level framework also validates the architectural choice to use a wiki + wi
 [[three-layer-agent-context-architecture|Three-Layer Agent Context Architecture]]
 [[2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis|Top-Layer Routing Refactor — Gap Analysis (CLAUDE.md + Loading + Hook Enforcement)]]
 [[root-ghostproxy-m001-author-claude-md-and-agents-md|root-ghostproxy M001 — Author CLAUDE.md + AGENTS.md]]
-[[identity-profile|root-ghostproxy — Identity Profile]]
+[[identity-profile|root-modules — Identity Profile]]
