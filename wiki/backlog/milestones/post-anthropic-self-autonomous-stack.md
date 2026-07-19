@@ -184,7 +184,7 @@ This milestone delivers the *deadline-absorbed* state. The next natural phase ta
 [[Multi-Layer Compression Lesson]]
 [[Quality-per-Position Lesson]]
 [[Trust-Layer Concept]]
-[[identity-profile|root-ghostproxy — Identity Profile]]
+[[root-ghostproxy — Identity Profile]]
 [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4 — Declarations Aspirational Until Verified]]
 [[E007-openrouter-deadline-de-risk|E007 — OpenRouter Deadline De-Risk (Claude Code CLI → K2.6)]]
 [[E008-local-k2-6-offline-frontier-tier|E008 — Local K2.6 Offline Frontier Tier (KTransformers on /dev/sdd)]]

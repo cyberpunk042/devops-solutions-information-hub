@@ -29,14 +29,14 @@ Usage:
 
 Examples:
     # From content file:
-    python -m tools.cross_project_note root-ghostproxy \\
+    python -m tools.cross_project_note root-modules \\
         --slug pre-publish-handoff \\
         --title "Pre-publish requirements + post-publish checkout scripts" \\
         --type handoff \\
         --content-file /tmp/handoff-body.md
 
     # From stdin:
-    echo "## Body" | python -m tools.cross_project_note root-ghostproxy \\
+    echo "## Body" | python -m tools.cross_project_note root-modules \\
         --slug minor-update --title "Minor update" --type note
 
 Boundary: this tool ONLY writes to <target>/wiki/log/. It does NOT modify
@@ -111,7 +111,7 @@ def main():
         description="Operator-granted cross-project note channel. Writes to "
         "<target>/wiki/log/<date>-from-second-brain-<slug>.md.",
     )
-    p.add_argument("target", help="sister-project name (e.g., 'root-ghostproxy') or alias")
+    p.add_argument("target", help="sister-project name (e.g., 'root-modules') or alias")
     p.add_argument("--slug", required=True, help="filename slug (alnum + hyphens)")
     p.add_argument("--title", required=True, help="note title")
     p.add_argument(

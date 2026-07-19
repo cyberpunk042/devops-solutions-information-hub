@@ -274,4 +274,4 @@ The four-project ecosystem is a personal devops infrastructure built by a single
 [[task-type-artifact-matrix|Task Type Artifact Matrix]]
 [[the-wiki-is-a-hub-not-a-silo|The Wiki Is a Hub, Not a Silo]]
 [[identity-profile|devops-control-plane — Identity Profile]]
-[[identity-profile|root-ghostproxy — Identity Profile]]
+[[identity-profile|root-modules — Identity Profile]]

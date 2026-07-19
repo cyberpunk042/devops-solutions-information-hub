@@ -253,4 +253,4 @@ The Goldilocks Framework should adhere to recognized standards where applicable:
 [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]
 [[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]
 [[the-wiki-is-a-hub-not-a-silo|The Wiki Is a Hub, Not a Silo]]
-[[identity-profile|root-ghostproxy — Identity Profile]]
+[[identity-profile|root-modules — Identity Profile]]

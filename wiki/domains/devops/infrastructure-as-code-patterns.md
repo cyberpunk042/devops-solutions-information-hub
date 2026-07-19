@@ -175,4 +175,4 @@ The same two-tier pattern appears in devops-control-plane: stacks/*.yml (always 
 [[wsl2-development-patterns|WSL2 Development Patterns]]
 [[concept-zfs-tiered-storage-llm-inference|ZFS Tiered Storage for LLM Inference]]
 [[identity-profile|devops-control-plane — Identity Profile]]
-[[identity-profile|root-ghostproxy — Identity Profile]]
+[[identity-profile|root-modules — Identity Profile]]
